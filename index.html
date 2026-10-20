@@ -693,7 +693,8 @@
                     </span>
                 </div>
 
-                <div class="bg-slate-950/90 px-2.5 py-2 rounded-xl border border-slate-700 text-left sm:text-center min-h-0 flex items-center justify-center shadow-inner">
+                <div class="bg-slate-950/90 px-2.5 py-2 rounded-xl border border-slate-700 text-left sm:text-center min-h-0 flex flex-col items-center justify-center shadow-inner gap-2">
+                    <img id="quiz-question-image" alt="題目圖片" class="hidden max-h-28 sm:max-h-36 w-auto max-w-full object-contain rounded-lg bg-white/95 p-1 border border-slate-600" />
                     <h3 id="quiz-question-text" class="text-sm sm:text-base font-black text-white break-words leading-snug w-full">
                         題目載入中...
                     </h3>
@@ -2290,7 +2291,8 @@
             return {
                 question: qText,
                 options: opts,
-                correctAnswer: item.answer
+                correctAnswer: item.answer,
+                image: item.image || null
             };
         }
 
@@ -2669,6 +2671,18 @@
 
             const qTextEl = document.getElementById('quiz-question-text');
             if (qTextEl) qTextEl.innerText = currentQuestionObj.question;
+
+            const qImgEl = document.getElementById('quiz-question-image');
+            if (qImgEl) {
+                const src = currentQuestionObj && currentQuestionObj.image ? currentQuestionObj.image : '';
+                if (src) {
+                    qImgEl.src = src;
+                    qImgEl.classList.remove('hidden');
+                } else {
+                    qImgEl.removeAttribute('src');
+                    qImgEl.classList.add('hidden');
+                }
+            }
 
             const optionsGrid = document.getElementById('quiz-options-grid');
             if (optionsGrid) {
