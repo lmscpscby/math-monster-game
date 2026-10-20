@@ -806,19 +806,75 @@
     <script src="數學試題庫.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
     <script>
-        // 老師 Google Sheet 上報：貼上 Apps Script 網頁應用程式 /exec URL；空白則不上報
+        // 老師 Google Sheet 上報 + 跨裝置帳戶：Apps Script /exec URL（改 Code 後必須重新部署新版本）
         const SHEET_REPORT_URL = 'https://script.google.com/macros/s/AKfycbxJBh6MNQYM8s-bhyW3VOoCo8cHhJDtAZfyRQTI2L5HWnMq_7byk-FKgzVR1RxJbvQ3yg/exec';
+
+        // 僅記憶體保存（唔寫入 localStorage），供 cloud save 驗證
+        let activePassword = null;
+        let activeUserKey = null;
+
+        function profileForCloud(user) {
+            if (!user) return {};
+            const p = Object.assign({}, user);
+            delete p.password;
+            delete p._pwd;
+            return p;
+        }
+
+        async function callBridge(payload) {
+            if (!SHEET_REPORT_URL) throw new Error('no_sheet_url');
+            const res = await fetch(SHEET_REPORT_URL, {
+                method: 'POST',
+                redirect: 'follow',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload || {})
+            });
+            const text = await res.text();
+            try {
+                return JSON.parse(text);
+            } catch (e) {
+                throw new Error('bad_bridge_json');
+            }
+        }
 
         function reportToTeacherSheet(payload) {
             if (!SHEET_REPORT_URL) return;
-            try {
-                fetch(SHEET_REPORT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify(payload || {})
-                }).catch(function () {});
-            } catch (e) { /* silent */ }
+            const body = Object.assign({ action: 'report' }, payload || {});
+            // 可讀 fetch 優先；失敗則 no-cors 打後備（唔阻遊戲）
+            callBridge(body).catch(function () {
+                try {
+                    fetch(SHEET_REPORT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'text/plain' },
+                        body: JSON.stringify(body)
+                    }).catch(function () {});
+                } catch (e) { /* silent */ }
+            });
+        }
+
+        function cloudSaveCurrentUser() {
+            if (!SHEET_REPORT_URL || !currentUser || !activePassword || !activeUserKey) return;
+            callBridge({
+                action: 'save',
+                key: activeUserKey,
+                password: activePassword,
+                profile: profileForCloud(currentUser)
+            }).catch(function () {
+                try {
+                    fetch(SHEET_REPORT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'text/plain' },
+                        body: JSON.stringify({
+                            action: 'save',
+                            key: activeUserKey,
+                            password: activePassword,
+                            profile: profileForCloud(currentUser)
+                        })
+                    }).catch(function () {});
+                } catch (e) {}
+            });
         }
 
         function buildStudentReportExtra(extra) {
@@ -1313,7 +1369,7 @@
             localStorage.setItem('math_monster_users', JSON.stringify(db));
         }
 
-        function handleRegister(e) {
+        async function handleRegister(e) {
             e.preventDefault();
             const school = document.getElementById('reg-school').value.trim();
             const className = document.getElementById('reg-class').value.trim();
@@ -1351,12 +1407,38 @@
                 ]
             };
 
+            // 先寫本地快取
             db[userKey] = newUser;
             saveUsersDatabase(db);
-            loginUserSuccess(newUser);
+
+            // 再登記雲端（跨裝置）
+            if (SHEET_REPORT_URL) {
+                errDiv.innerText = "正在同步雲端帳戶…";
+                try {
+                    const res = await callBridge({
+                        action: 'register',
+                        key: userKey,
+                        password: password,
+                        profile: profileForCloud(newUser)
+                    });
+                    if (res && res.ok) {
+                        errDiv.innerText = "";
+                    } else if (res && res.error === 'exists') {
+                        errDiv.innerText = "雲端已有此別號；將用本地帳戶登入。若要跨裝置，請改用原密碼／原帳號登入。";
+                    } else {
+                        errDiv.innerText = "雲端註冊未成功，本地仍可玩；換裝置請稍後再試。";
+                    }
+                } catch (err) {
+                    errDiv.innerText = "未能連接雲端（本地已建立）。換裝置同步需老師完成 Apps Script 部署。";
+                }
+            }
+
+            activePassword = password;
+            activeUserKey = userKey;
+            loginUserSuccess(newUser, password);
         }
 
-        function handleLogin(e) {
+        async function handleLogin(e) {
             e.preventDefault();
             const errDiv = document.getElementById('login-error');
             const db = getUsersDatabase();
@@ -1364,10 +1446,12 @@
             const password = document.getElementById('login-password').value;
 
             let matchedUser = null;
+            let userKey = null;
+            let nicknameHint = '';
 
             if (mode === 'nickname') {
-                const nickname = document.getElementById('login-nickname').value.trim();
-                const userKey = `user_${nickname}`;
+                nicknameHint = document.getElementById('login-nickname').value.trim();
+                userKey = `user_${nicknameHint}`;
                 if (db[userKey] && db[userKey].password === password) {
                     matchedUser = db[userKey];
                 }
@@ -1380,7 +1464,49 @@
                     let u = db[k];
                     if (u.school === school && u.className === className && u.classNo == classNo && u.password === password) {
                         matchedUser = u;
+                        userKey = k;
+                        nicknameHint = u.nickname;
                         break;
+                    }
+                }
+            }
+
+            // 雲端優先（跨裝置）：用別名 key 登入
+            if (SHEET_REPORT_URL && userKey && password) {
+                errDiv.innerText = "正在向雲端驗證…";
+                try {
+                    const res = await callBridge({
+                        action: 'login',
+                        key: userKey,
+                        password: password
+                    });
+                    if (res && res.ok && res.profile) {
+                        const cloudProfile = Object.assign({}, res.profile);
+                        // 本地仍保留密碼以便離線；雲端 profile 無 password
+                        cloudProfile.password = password;
+                        if (!cloudProfile.nickname && nicknameHint) cloudProfile.nickname = nicknameHint;
+                        db[userKey] = cloudProfile;
+                        saveUsersDatabase(db);
+                        activePassword = password;
+                        activeUserKey = userKey;
+                        errDiv.innerText = "";
+                        loginUserSuccess(cloudProfile, password);
+                        return;
+                    }
+                    if (res && (res.error === 'bad_password' || res.error === 'not_found')) {
+                        // 雲端拒絕時，若本地吻合仍可離線登入
+                        if (!matchedUser) {
+                            errDiv.innerText = res.error === 'bad_password'
+                                ? "雲端密碼不正確。"
+                                : "雲端未找到此帳戶。請先在本機註冊，或用首次註冊嘅別名。";
+                            return;
+                        }
+                    }
+                } catch (err) {
+                    // 網絡／CORS：退回本地
+                    if (!matchedUser) {
+                        errDiv.innerText = "未能連接雲端。請用首次註冊嘅同一瀏覽器，或待老師完成 Apps Script 部署。";
+                        return;
                     }
                 }
             }
@@ -1390,7 +1516,10 @@
                 return;
             }
 
-            loginUserSuccess(matchedUser);
+            activePassword = password;
+            activeUserKey = userKey || `user_${matchedUser.nickname}`;
+            errDiv.innerText = "";
+            loginUserSuccess(matchedUser, password);
         }
 
         function parseGradeFromClass(className) {
@@ -1403,16 +1532,20 @@
             return 'G6';
         }
 
-        function loginUserSuccess(userObj) {
+        function loginUserSuccess(userObj, passwordOpt) {
             currentUser = userObj;
 
             if (currentUser.rankScore === undefined) currentUser.rankScore = 0;
+            if (!Array.isArray(currentUser.ownedMonsters)) currentUser.ownedMonsters = [];
 
             currentUser.ownedMonsters.forEach(m => {
                 if (m.level === undefined) m.level = 1;
                 if (m.level > 40) m.level = 40;
                 if (m.exp === undefined) m.exp = 0;
             });
+
+            if (passwordOpt) activePassword = passwordOpt;
+            if (!activeUserKey && currentUser.nickname) activeUserKey = `user_${currentUser.nickname}`;
 
             localStorage.setItem('math_monster_active_session', currentUser.nickname);
 
@@ -1437,6 +1570,8 @@
 
         function logout() {
             currentUser = null;
+            activePassword = null;
+            activeUserKey = null;
             localStorage.removeItem('math_monster_active_session');
             document.getElementById('auth-modal-overlay').classList.remove('hidden');
             document.getElementById('logout-btn').classList.add('hidden');
@@ -1452,6 +1587,7 @@
             saveUsersDatabase(db);
             updateUserDashboardUI();
             renderLeaderboard();
+            cloudSaveCurrentUser();
         }
 
         function updateUserDashboardUI() {
