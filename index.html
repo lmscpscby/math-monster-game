@@ -806,6 +806,55 @@
     <script src="數學試題庫.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
     <script>
+        // 老師 Google Sheet 上報：貼上 Apps Script 網頁應用程式 /exec URL；空白則不上報
+        const SHEET_REPORT_URL = '';
+
+        function reportToTeacherSheet(payload) {
+            if (!SHEET_REPORT_URL) return;
+            try {
+                fetch(SHEET_REPORT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload || {})
+                }).catch(function () {});
+            } catch (e) { /* silent */ }
+        }
+
+        function buildStudentReportExtra(extra) {
+            const u = currentUser || {};
+            const monsters = Array.isArray(u.ownedMonsters) ? u.ownedMonsters.length : 0;
+            let grade = '';
+            try {
+                if (typeof selectedGrade !== 'undefined' && selectedGrade) grade = selectedGrade;
+                else if (u.className && typeof parseGradeFromClass === 'function') grade = parseGradeFromClass(u.className);
+            } catch (e) {}
+            return Object.assign({
+                school: u.school || '',
+                className: u.className || '',
+                name: u.nickname || '',
+                alias: u.nickname || '',
+                gold: u.gold != null ? u.gold : '',
+                score: u.rankScore != null ? u.rankScore : '',
+                expPacks: u.expPacks != null ? u.expPacks : '',
+                monsters: monsters,
+                grade: grade || ''
+            }, extra || {});
+        }
+
+        function currentBattleUnitLabel() {
+            try {
+                const units = (typeof GRADE_UNITS !== 'undefined' && GRADE_UNITS[selectedGrade]) ? GRADE_UNITS[selectedGrade] : [];
+                if (typeof pendingStrandId !== 'undefined' && pendingStrandId) {
+                    const found = units.find(function (x) { return x.id === pendingStrandId; });
+                    if (found) return found.name;
+                    return String(pendingStrandId);
+                }
+                if (isRankedMode) return '排位賽';
+            } catch (e) {}
+            return '';
+        }
+
         const BEAST_IMAGES = {
             cover: '封面.jpg',
             sh1: '青龍.jpg',
@@ -1376,6 +1425,14 @@
             selectGrade(parseGradeFromClass(currentUser.className));
             renderLeaderboard();
             playSFX(523.25, 'triangle', 0.2);
+            reportToTeacherSheet(buildStudentReportExtra({
+                mode: '系統',
+                unit: '',
+                result: '登入',
+                correct: '',
+                totalQuestions: '',
+                goldDelta: ''
+            }));
         }
 
         function logout() {
@@ -2049,8 +2106,7 @@
                     showSkillPopup('player-skill-popup', `接力登場！`);
                 } else {
                     clearInterval(bossTimer);
-                    alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
-                    exitBattle();
+                    handleDefeat();
                     return;
                 }
             }
@@ -2497,6 +2553,7 @@
             if (!currentQuestionObj) return;
 
             if (userAns === currentQuestionObj.correctAnswer) {
+                quizScore++;
                 playSFX(1046.5, 'sine', 0.2);
 
                 const elemMult = getElementAdvantageMultiplier(activePlayerMonster.element, activeEnemy.element);
@@ -2543,8 +2600,7 @@
                         showSkillPopup('player-skill-popup', `接力登場！`);
                     } else {
                         clearInterval(bossTimer);
-                        alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
-                        exitBattle();
+                        handleDefeat();
                         return;
                     }
                 }
@@ -2568,7 +2624,29 @@
 
             saveCurrentUserData();
 
+            reportToTeacherSheet(buildStudentReportExtra({
+                mode: isRankedMode ? '排位' : '冒險',
+                unit: currentBattleUnitLabel(),
+                result: '勝利',
+                correct: quizScore,
+                totalQuestions: currentQuizIndex,
+                goldDelta: goldReward
+            }));
+
             alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
+            exitBattle();
+        }
+
+        function handleDefeat() {
+            reportToTeacherSheet(buildStudentReportExtra({
+                mode: isRankedMode ? '排位' : '冒險',
+                unit: currentBattleUnitLabel(),
+                result: '失敗',
+                correct: quizScore,
+                totalQuestions: currentQuizIndex,
+                goldDelta: 0
+            }));
+            alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
             exitBattle();
         }
 
