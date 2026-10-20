@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Monster Gacha Game - 數理怪獸抽卡大冒險</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Outfit', sans-serif;
+            user-select: none;
+            background: linear-gradient(135deg, #1e1b4b 0%, #311b92 35%, #4a148c 70%, #0f172a 100%);
+            background-attachment: fixed;
+            color: #f8fafc;
+        }
+
+        .glass-panel {
+            background: rgba(30, 27, 75, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.25s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: rgba(236, 72, 153, 0.6);
+            box-shadow: 0 12px 30px -5px rgba(236, 72, 153, 0.4);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #ec4899, #8b5cf6);
+            border-radius: 9999px;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.7)); }
+            50% { filter: drop-shadow(0 0 35px rgba(245, 158, 11, 0.95)); }
+        }
+
+        .mythic-glow {
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        /* 山海經怪獸抽中閃光效果動畫 */
+        @keyframes shanhai-flash {
+            0% { filter: drop-shadow(0 0 5px #f59e0b) brightness(1); transform: scale(0.95); }
+            50% { filter: drop-shadow(0 0 45px #fbbf24) brightness(1.8); transform: scale(1.08); }
+            100% { filter: drop-shadow(0 0 20px #f59e0b) brightness(1.2); transform: scale(1); }
+        }
+        .gacha-shanhai-flash {
+            animation: shanhai-flash 0.8s ease-in-out infinite alternate;
+            border-color: #f59e0b !important;
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.8) !important;
+        }
+
+        @keyframes monster-shake {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            20% { transform: translateX(-12px) rotate(-4deg); }
+            40% { transform: translateX(12px) rotate(4deg); }
+            60% { transform: translateX(-8px) rotate(-2deg); }
+            80% { transform: translateX(8px) rotate(2deg); }
+        }
+        .animate-shake {
+            animation: monster-shake 0.45s ease-in-out;
+        }
+
+        @keyframes monster-hurt-flash {
+            0%, 100% { filter: none; opacity: 1; }
+            50% { filter: drop-shadow(0 0 25px rgba(244, 63, 94, 0.9)) brightness(2); opacity: 0.4; }
+        }
+        .animate-hurt {
+            animation: monster-hurt-flash 0.5s ease-in-out;
+        }
+
+        @keyframes float-skill-text {
+            0% { opacity: 0; transform: translateY(15px) scale(0.7); }
+            30% { opacity: 1; transform: translateY(-10px) scale(1.2); }
+            70% { opacity: 1; transform: translateY(-25px) scale(1.0); }
+            100% { opacity: 0; transform: translateY(-40px) scale(0.9); }
+        }
+        .animate-skill-popup {
+            animation: float-skill-text 1.2s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
+
+    <!-- 背景音樂 HTML5 Audio 標籤 -->
+    <audio id="bgm-audio" loop preload="metadata">
+        <source src="背景音樂_輕量.mp3" type="audio/mpeg">
+        <source src="背景音樂.mp3" type="audio/mpeg">
+        <source src="背景音樂.wav" type="audio/wav">
+        <source src="背景音樂.m4a" type="audio/mp4">
+    </audio>
+
+    <!-- AUTH MODAL OVERLAY -->
+    <div id="auth-modal-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-xl p-4 transition-all duration-300">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-pink-500/30 relative overflow-hidden">
+            <div class="text-center mb-6">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-600 text-white text-3xl mb-3 shadow-lg shadow-pink-500/30">
+                    <i class="fa-solid font-bold fa-square-root-variable"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-200 to-indigo-300">
+                    數理怪獸抽卡大冒險
+                </h1>
+                <p class="text-xs md:text-sm text-slate-300 mt-1">請登入或註冊帳號以開始遊戲</p>
+            </div>
+
+            <div class="flex bg-slate-900/80 p-1 rounded-xl mb-6 border border-slate-700/50">
+                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="flex-1 py-2 text-sm font-bold rounded-lg transition-all bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md">
+                    <i class="fa-solid fa-right-to-bracket mr-1.5"></i>帳號登入
+                </button>
+                <button id="tab-btn-register" onclick="switchAuthTab('register')" class="flex-1 py-2 text-sm font-bold rounded-lg transition-all text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-user-plus mr-1.5"></i>學生註冊
+                </button>
+            </div>
+
+            <form id="form-login" onsubmit="handleLogin(event)" class="space-y-4">
+                <div class="flex items-center justify-between text-xs text-slate-300 px-1">
+                    <span>登入方式：</span>
+                    <div class="space-x-3">
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input type="radio" name="login-mode" value="nickname" checked onchange="toggleLoginMode('nickname')" class="text-pink-600 focus:ring-0">
+                            <span class="ml-1 text-slate-200">個人別號</span>
+                        </label>
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input type="radio" name="login-mode" value="school" onchange="toggleLoginMode('school')" class="text-pink-600 focus:ring-0">
+                            <span class="ml-1 text-slate-200">學校/班別</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="login-mode-nickname" class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname)</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-user absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+                            <input type="text" id="login-nickname" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="請輸入個人別號">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="login-mode-school" class="space-y-3 hidden">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱</label>
+                        <input type="text" id="login-school" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="例如: 培正小學">
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">班別</label>
+                            <input type="text" id="login-class" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="例如: 5A">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">班號</label>
+                            <input type="number" id="login-class-no" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="例如: 12">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">密碼</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-lock absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+                        <input type="password" id="login-password" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="請輸入密碼">
+                    </div>
+                </div>
+
+                <div id="login-error" class="text-rose-400 text-xs text-center min-h-[1rem]"></div>
+
+                <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 hover:from-pink-500 hover:to-indigo-500 text-white font-black rounded-xl shadow-lg shadow-pink-600/30 active:scale-[0.98] transition-all flex items-center justify-center">
+                    <span>登入冒險</span>
+                    <i class="fa-solid fa-arrow-right-to-bracket ml-2"></i>
+                </button>
+            </form>
+
+            <form id="form-register" onsubmit="handleRegister(event)" class="space-y-3 hidden">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱 <span class="text-rose-400">*</span></label>
+                    <input type="text" id="reg-school" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="全稱或簡稱 (例如: 培正小學)">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">班別 <span class="text-rose-400">*</span></label>
+                        <input type="text" id="reg-class" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="如 5A 或 6B">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">班號 <span class="text-rose-400">*</span></label>
+                        <input type="number" id="reg-class-no" required min="1" max="50" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="如 18">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname) <span class="text-rose-400">*</span></label>
+                    <input type="text" id="reg-nickname" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="用於顯示與快捷登入">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">設定密碼 <span class="text-rose-400">*</span></label>
+                    <input type="password" id="reg-password" required minlength="4" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="至少 4 位數">
+                </div>
+
+                <div id="reg-error" class="text-rose-400 text-xs text-center min-h-[1rem]"></div>
+
+                <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/30 active:scale-[0.98] transition-all flex items-center justify-center">
+                    <span>建立帳號並登入</span>
+                    <i class="fa-solid fa-user-check ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- HEADER NAVBAR -->
+    <header class="sticky top-0 z-30 glass-panel border-b border-purple-500/20 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-3 cursor-pointer hover:opacity-90 transition-opacity" onclick="switchView('home')">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-xl font-black text-white shadow-md shadow-pink-500/30">
+                    <i class="fa-solid fa-dragon"></i>
+                </div>
+                <div>
+                    <h1 class="font-black text-lg md:text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-200 to-indigo-200">
+                        數理怪獸大冒險
+                    </h1>
+                    <p class="text-[10px] text-pink-300/80 hidden sm:block">Math Monster Gacha RPG</p>
+                </div>
+            </div>
+
+            <div id="player-dashboard" class="flex flex-wrap items-center justify-end gap-2 sm:gap-3 min-w-0 flex-1 basis-full sm:basis-auto sm:flex-initial">
+                <div class="flex items-center space-x-2 bg-purple-950/60 px-3 py-1.5 rounded-xl border border-purple-500/30 min-w-0 max-w-[46vw] sm:max-w-[14rem]">
+                    <div class="w-8 h-8 shrink-0 rounded-lg bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold text-sm">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <div class="text-xs min-w-0">
+                        <div id="user-display-name" class="font-bold text-slate-100 truncate">未登入</div>
+                        <div id="user-display-school" class="text-[10px] text-pink-200/70 truncate hidden sm:block">訪客模式</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <div class="flex items-center space-x-1.5 bg-amber-500/20 border border-amber-400/40 px-3 py-1.5 rounded-xl text-amber-300 font-extrabold text-xs sm:text-sm">
+                        <i class="fa-solid fa-coins text-amber-400"></i>
+                        <span id="user-gold">0</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5 bg-purple-500/20 border border-purple-400/40 px-3 py-1.5 rounded-xl text-purple-300 font-extrabold text-xs sm:text-sm">
+                        <i class="fa-solid fa-trophy text-amber-300"></i>
+                        <span id="user-rank-score">0</span>
+                        <span class="text-[10px] text-purple-200 hidden md:inline">積分</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5 bg-emerald-500/20 border border-emerald-400/40 px-3 py-1.5 rounded-xl text-emerald-300 font-extrabold text-xs sm:text-sm">
+                        <i class="fa-solid fa-box-open"></i>
+                        <span id="user-exp-packs">0</span>
+                        <span class="text-[10px] text-emerald-300 hidden md:inline">EXP包</span>
+                    </div>
+                </div>
+
+                <button onclick="toggleElementChartModal()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-black flex items-center space-x-1 transition-all" title="屬性相克表">
+                    <i class="fa-solid fa-bolt text-yellow-400"></i>
+                    <span class="hidden md:inline">屬性相克</span>
+                </button>
+
+                <button onclick="toggleFullScreen()" id="fullscreen-btn" class="w-9 h-9 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-500/40 text-slate-200 flex items-center justify-center transition-colors" title="全畫面 toggle">
+                    <i class="fa-solid fa-expand" id="fullscreen-icon"></i>
+                </button>
+
+                <button onclick="toggleAudio()" id="bgm-btn" class="w-9 h-9 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-500/40 text-slate-200 flex items-center justify-center transition-colors" title="切換背景音樂">
+                    <i class="fa-solid fa-volume-xmark" id="bgm-icon"></i>
+                </button>
+
+                <button onclick="logout()" id="logout-btn" class="hidden w-9 h-9 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/40 text-rose-300 items-center justify-center transition-colors" title="登出">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 relative space-y-6">
+
+        <!-- VIEW 1: HOME MENU -->
+        <section id="view-home" class="space-y-6">
+            <div class="relative rounded-3xl overflow-hidden glass-panel border-2 border-pink-500/30 shadow-2xl group bg-gradient-to-r from-purple-950 via-slate-950 to-indigo-950">
+                <div class="w-full h-56 md:h-72 overflow-hidden relative flex items-center justify-center bg-slate-950/80 p-2">
+                    <img id="main-cover-img" src="" alt="山海數學之戰" class="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-102">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
+                </div>
+                
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h2 class="text-xl sm:text-3xl md:text-5xl font-black break-words bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-amber-200 to-indigo-200">
+                            歡迎來到數理怪獸世界
+                        </h2>
+                        <p class="text-slate-200 max-w-2xl text-xs md:text-sm mt-1 leading-relaxed">
+                            排位賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）！冒險模式 BOSS 隨機登場，小數題目完整保留小數點！
+                        </p>
+                    </div>
+                    <button onclick="switchView('adventure')" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white font-black text-sm rounded-2xl shadow-xl shadow-pink-500/30 flex items-center space-x-2 active:scale-95 transition-all">
+                        <i class="fa-solid fa-play"></i>
+                        <span>開始冒險</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <button onclick="switchView('adventure')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-indigo-400">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <span class="text-xs bg-indigo-500/30 text-indigo-200 font-bold px-3 py-1 rounded-full">動態多題型</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors">數學冒險</h3>
+                        <p class="text-xs text-slate-300 mt-1">小一至小六多元化試題！每次換題自動抽換完全不同的題型風格！</p>
+                    </div>
+                </button>
+
+                <button onclick="switchView('ranked')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-purple-400">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-ranking-star"></i>
+                        </div>
+                        <span class="text-xs bg-purple-500/30 text-purple-200 font-bold px-3 py-1 rounded-full">4關屬性雙BOSS</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-purple-300 transition-colors">排位賽模式</h3>
+                        <p class="text-xs text-slate-300 mt-1">10LV(水) / 20LV(火) / 30LV(草) / 40LV(雷) 雙 BOSS 固定連戰！</p>
+                    </div>
+                </button>
+
+                <button onclick="switchView('gacha')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-amber-400">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <span class="text-xs bg-amber-500/30 text-amber-200 font-bold px-3 py-1 rounded-full">十連保底山海經</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-amber-300 transition-colors">怪獸抽卡機</h3>
+                        <p class="text-xs text-slate-300 mt-1">單抽200元，十連抽2000元！十連抽必得1個山海經怪獸卡！</p>
+                    </div>
+                </button>
+
+                <button onclick="switchView('monsters')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-emerald-400">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <span class="text-xs bg-emerald-500/30 text-emerald-200 font-bold px-3 py-1 rounded-full">養成系統</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-emerald-300 transition-colors">怪獸圖鑑與隊伍</h3>
+                        <p class="text-xs text-slate-300 mt-1">查看怪獸等級與屬性，培育最終形態（30LV）戰力再突破！</p>
+                    </div>
+                </button>
+
+                <button onclick="switchView('pvp')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-pink-400">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-swords"></i>
+                        </div>
+                        <span class="text-xs bg-pink-500/30 text-pink-200 font-bold px-3 py-1 rounded-full">500金幣賭注</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-pink-300 transition-colors">PVP 對決擂台</h3>
+                        <p class="text-xs text-slate-300 mt-1">進行陣容屬性克制較量，勝者獨得 500 金幣獎勵！</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- VIEW: RANKED MODE -->
+        <section id="view-ranked" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+                </button>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl border-2 border-purple-500/40 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <div class="flex flex-col sm:flex-row sm:items-center flex-wrap gap-2 mb-1 min-w-0">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-black break-words bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-200 to-amber-300">
+                            🏆 全服年級排位爭霸賽 (4大屬性雙 BOSS 連戰)
+                        </h2>
+                        <span id="ranked-user-grade-badge" class="shrink-0 self-start sm:self-auto px-3 py-1 bg-pink-500/30 border border-pink-400/40 text-pink-200 text-xs font-black rounded-full">
+                            小六專屬 (鎖定)
+                        </span>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-200 mt-1">
+                        排位賽分 4 關：<b>10LV(水系)</b>、<b>20LV(火系)</b>、<b>30LV(草系)</b>、<b>40LV(雷系)</b>！每關皆由 2 隻對應屬性巨型 BOSS 駐守！
+                    </p>
+                </div>
+                <div class="bg-purple-900/60 p-4 rounded-2xl border border-purple-400/30 text-center min-w-[200px]">
+                    <div class="text-xs text-purple-200 font-bold">目前個人積分</div>
+                    <div id="ranked-current-score" class="text-3xl font-black text-amber-300 my-1">0</div>
+                    <div id="ranked-current-rank" class="text-xs text-pink-300 font-bold">段位: 數理新秀</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 space-y-4">
+                    <h3 class="font-extrabold text-base sm:text-lg text-purple-200 flex flex-wrap items-center gap-x-2 gap-y-1 break-words">
+                        <i class="fa-solid fa-skull-crossbones shrink-0 text-pink-400"></i><span>選擇排位賽關卡 (固定對應屬性雙 BOSS)</span>
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- 10LV 水系 -->
+                        <div class="glass-card p-5 rounded-3xl border border-blue-500/40 flex flex-col justify-between bg-blue-950/20">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-black bg-blue-500/30 text-blue-300 px-3 py-1 rounded-full">Boss Lv.10 (水系)</span>
+                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+100 積分</span>
+                                </div>
+                                <h4 class="font-black text-lg text-white">10LV 水系雙BOSS關卡</h4>
+                                <p class="text-xs text-slate-300 mt-1">守護者：深淵冥甲巨龜 & 霜獄滅世冰龍！</p>
+                            </div>
+                            <button onclick="startRankedBattle(10, 100)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-xs rounded-xl shadow-lg">
+                                開始水系雙BOSS挑戰 (3隻怪獸)
+                            </button>
+                        </div>
+
+                        <!-- 20LV 火系 -->
+                        <div class="glass-card p-5 rounded-3xl border border-rose-500/40 flex flex-col justify-between bg-rose-950/20">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-black bg-rose-500/30 text-rose-300 px-3 py-1 rounded-full">Boss Lv.20 (火系)</span>
+                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+300 積分</span>
+                                </div>
+                                <h4 class="font-black text-lg text-white">20LV 火系雙BOSS關卡</h4>
+                                <p class="text-xs text-slate-300 mt-1">守護者：熔岩毀滅炎豬 & 焚天烈獄凰鳥！</p>
+                            </div>
+                            <button onclick="startRankedBattle(20, 300)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black text-xs rounded-xl shadow-lg">
+                                開始火系雙BOSS挑戰 (3隻怪獸)
+                            </button>
+                        </div>
+
+                        <!-- 30LV 草系 -->
+                        <div class="glass-card p-5 rounded-3xl border border-emerald-500/40 flex flex-col justify-between bg-emerald-950/20">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-black bg-emerald-500/30 text-emerald-300 px-3 py-1 rounded-full">Boss Lv.30 (草系)</span>
+                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+600 積分</span>
+                                </div>
+                                <h4 class="font-black text-lg text-white">30LV 草系雙BOSS關卡</h4>
+                                <p class="text-xs text-slate-300 mt-1">守護者：腐殖食人樹牛 & 劇毒蝕骨萬足蟲！</p>
+                            </div>
+                            <button onclick="startRankedBattle(30, 600)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs rounded-xl shadow-lg">
+                                開始草系雙BOSS挑戰 (3隻怪獸)
+                            </button>
+                        </div>
+
+                        <!-- 40LV 雷系 -->
+                        <div class="glass-card p-5 rounded-3xl border border-amber-500/40 bg-amber-950/20 mythic-glow flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-black bg-amber-500/30 text-amber-300 px-3 py-1 rounded-full">Boss Lv.40 (雷系 MAX)</span>
+                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+1200 積分</span>
+                                </div>
+                                <h4 class="font-black text-lg text-white">40LV 雷系極限雙BOSS決戰</h4>
+                                <p class="text-xs text-slate-300 mt-1">守護者：九頭狂雷蛇皇 & 滅世雷霆天龍！</p>
+                            </div>
+                            <button onclick="startRankedBattle(40, 1200)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black text-xs rounded-xl shadow-lg">
+                                挑戰雷系極限雙BOSS (3隻怪獸)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-5 rounded-3xl border border-purple-500/30 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-black text-base text-amber-300 flex items-center">
+                            <i class="fa-solid fa-crown mr-1.5 text-amber-400"></i>年級排行榜
+                        </h3>
+                        <span id="leaderboard-grade-display" class="bg-slate-900 border border-purple-500/40 text-xs text-amber-300 font-bold px-3 py-1 rounded-xl">
+                            小六榜單
+                        </span>
+                    </div>
+
+                    <div id="ranked-leaderboard-list" class="space-y-2 max-h-[380px] overflow-y-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: GACHA SYSTEM -->
+        <section id="view-gacha" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+                </button>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 border-2 border-amber-500/30">
+                <div>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-amber-300 break-words">怪獸祈願召喚機</h2>
+                    <p class="text-xs md:text-sm text-slate-200 mt-1">單抽 **200 元**，十抽 **2000 元**。**十連抽必得 1 個山海經怪獸卡**！抽中山海經怪獸將觸發黃金閃光效果！</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button onclick="drawGacha(1)" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl shadow-lg shadow-amber-500/30 active:scale-95 transition-all flex items-center">
+                        <i class="fa-solid fa-gem mr-2"></i>單抽 (200元)
+                    </button>
+                    <button onclick="drawGacha(10)" class="px-6 py-3 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black rounded-xl shadow-lg shadow-pink-600/30 active:scale-95 transition-all flex items-center">
+                        <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>十連抽 (2000元)
+                    </button>
+                </div>
+            </div>
+
+            <div id="gacha-display-area" class="min-h-[350px] glass-panel rounded-3xl p-8 flex flex-col items-center justify-center relative overflow-hidden border border-purple-500/30">
+                <div id="gacha-idle-state" class="text-center space-y-4">
+                    <div class="w-28 h-28 mx-auto rounded-3xl bg-purple-900/60 border border-amber-400/40 flex items-center justify-center text-5xl text-amber-300 mythic-glow">
+                        <i class="fa-solid fa-box-archive"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm font-semibold">按下上方按鈕開始召喚怪獸！</p>
+                </div>
+
+                <div id="gacha-results-grid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: MONSTER COLLECTION & EXP NURTURING -->
+        <section id="view-monsters" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+                </button>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-panel p-5 rounded-3xl border border-emerald-500/30">
+                <div>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-black text-emerald-300 break-words">怪獸圖鑑與進化養成</h2>
+                    <p class="text-xs text-slate-300 mt-0.5">點擊卡牌可放大預覽！進化系怪獸進化至 30LV 最終形態，4圍數值凌駕同級山海經神獸！</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterMonsters('all')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-600 text-white shadow-md">全部</button>
+                    <button onclick="filterMonsters('elemental')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">火/水/草/雷進化系</button>
+                    <button onclick="filterMonsters('mythic')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">山海經神獸</button>
+                </div>
+            </div>
+
+            <div id="monster-collection-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            </div>
+        </section>
+
+        <!-- VIEW 4: MATHEMATICS ADVENTURE STAGES -->
+        <section id="view-adventure" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+                </button>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl border border-indigo-500/30">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-black text-indigo-300 mb-1 break-words">選擇數學冒險單元<br class="sm:hidden"> (2隻怪獸登場，BOSS等級動態匹配)</h2>
+                <p class="text-xs text-slate-300">選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！</p>
+            </div>
+
+            <div class="flex overflow-x-auto space-x-2 pb-2">
+                <button id="grade-btn-G1" onclick="selectGrade('G1')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小一 (G1)</button>
+                <button id="grade-btn-G2" onclick="selectGrade('G2')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小二 (G2)</button>
+                <button id="grade-btn-G3" onclick="selectGrade('G3')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小三 (G3)</button>
+                <button id="grade-btn-G4" onclick="selectGrade('G4')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小四 (G4)</button>
+                <button id="grade-btn-G5" onclick="selectGrade('G5')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小五 (G5)</button>
+                <button id="grade-btn-G6" onclick="selectGrade('G6')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小六 (G6)</button>
+            </div>
+
+            <div id="strand-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            </div>
+        </section>
+
+        <!-- VIEW 5: BATTLE ARENA (Pokémon-style: arena top, quiz bottom) -->
+        <section id="view-battle" class="hidden space-y-2">
+            <div class="glass-panel px-3 py-2 rounded-2xl flex flex-wrap items-center justify-between gap-2 border border-pink-500/30">
+                <div class="flex items-center gap-2 min-w-0">
+                    <button onclick="exitBattle()" class="shrink-0 px-2.5 py-1 bg-slate-900/80 hover:bg-slate-800 text-slate-300 rounded-xl text-xs font-bold transition-all border border-slate-700">
+                        <i class="fa-solid fa-arrow-left mr-1"></i>退出
+                    </button>
+                    <span id="battle-strand-tag" class="px-2 py-0.5 bg-pink-500/30 text-pink-200 text-[10px] sm:text-xs font-bold rounded-lg border border-pink-500/30 truncate max-w-[40vw] sm:max-w-none">單元挑戰</span>
+                    <h3 id="battle-title" class="font-extrabold text-white text-sm hidden md:inline">數學關卡挑戰</h3>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <div id="boss-attack-timer-badge" class="text-[10px] sm:text-xs font-black text-rose-300 bg-rose-500/20 border border-rose-400/30 px-2 py-1 rounded-xl animate-pulse">
+                        ⚠️ <span class="hidden sm:inline">Boss 襲擊倒數: </span><span id="boss-timer-num">10</span>s
+                    </div>
+                    <div class="flex items-center space-x-1.5 bg-emerald-500/20 border border-emerald-500/30 px-2 py-1 rounded-xl text-emerald-300 font-bold text-[10px] sm:text-xs">
+                        <i class="fa-solid fa-infinity"></i>
+                        <span id="battle-boss-progress">BOSS 1/1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arena: 2-row grid — enemy UR, player LL; both sprites fully inside -->
+            <div id="pokemon-battle-arena" class="relative w-full rounded-2xl border-2 border-pink-500/40 bg-gradient-to-b from-slate-950 via-purple-950/80 to-slate-950 p-2 sm:p-3 overflow-hidden h-[32vh] md:h-[36vh] max-h-[340px] min-h-[220px] grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 shadow-xl">
+                <div class="absolute inset-0 bg-[radial-gradient(#ec4899_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none"></div>
+
+                <!-- Row1 Col1: empty -->
+                <div class="relative z-0 min-h-0"></div>
+
+                <!-- Row1 Col2: enemy nameplate ABOVE sprite, right-aligned -->
+                <div class="relative z-10 min-h-0 h-full overflow-hidden flex flex-col items-end justify-start gap-1">
+                    <div class="w-full max-w-[13rem] sm:max-w-[15rem] shrink-0 bg-slate-900/95 border border-slate-700/80 rounded-xl px-2 py-1 shadow-xl backdrop-blur-md">
+                        <div class="flex justify-between items-center gap-1 mb-0.5 min-w-0">
+                            <div class="flex items-center space-x-1 min-w-0">
+                                <span id="enemy-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-blue-500 text-white">水</span>
+                                <span id="enemy-name" class="font-black text-[10px] sm:text-xs text-rose-300 truncate">關卡守護獸</span>
+                            </div>
+                            <span id="enemy-level-tag" class="shrink-0 text-[9px] bg-rose-500/20 text-rose-300 px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
+                        </div>
+                        <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden p-0.5 border border-slate-800">
+                            <div id="enemy-hp-bar" class="bg-gradient-to-r from-rose-500 via-pink-500 to-red-600 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+                        </div>
+                        <div class="text-[9px] text-slate-400 mt-0.5 flex justify-between font-mono">
+                            <span>HP</span>
+                            <span id="enemy-hp-text">100 / 100</span>
+                        </div>
+                    </div>
+                    <div class="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 max-h-[calc(100%-3.25rem)] aspect-square shrink min-h-0 flex items-center justify-center">
+                        <div class="absolute bottom-0 w-16 sm:w-24 h-2.5 bg-rose-500/25 rounded-full blur-md"></div>
+                        <div id="enemy-skill-popup" class="absolute top-0 left-0 right-0 text-center pointer-events-none z-20 hidden">
+                            <span class="inline-block px-2 py-0.5 bg-amber-400 text-slate-950 font-black text-[10px] rounded-full shadow-lg border border-amber-200 animate-skill-popup"></span>
+                        </div>
+                        <div id="enemy-svg-container" class="w-full h-full relative transition-transform duration-300 max-h-full overflow-hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Row2 Col1: player sprite + nameplate BESIDE (avoids vertical overflow) -->
+                <div class="relative z-10 min-h-0 h-full overflow-hidden flex flex-row items-end justify-start gap-2">
+                    <div class="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 max-h-full aspect-square shrink-0 flex items-center justify-center">
+                        <div class="absolute bottom-0 w-16 sm:w-24 h-2.5 bg-pink-500/30 rounded-full blur-md"></div>
+                        <div id="player-skill-popup" class="absolute top-0 left-0 right-0 text-center pointer-events-none z-20 hidden">
+                            <span class="inline-block px-2 py-0.5 bg-pink-600 text-white font-black text-[10px] rounded-full shadow-lg border border-pink-300 animate-skill-popup"></span>
+                        </div>
+                        <div id="player-svg-container" class="w-full h-full relative transition-transform duration-300 max-h-full overflow-hidden"></div>
+                    </div>
+                    <div class="w-full max-w-[12rem] sm:max-w-[14rem] shrink min-w-0 mb-0.5 bg-slate-900/95 border border-slate-700/80 rounded-xl px-2 py-1 shadow-xl backdrop-blur-md">
+                        <div class="flex justify-between items-center gap-1 mb-0.5 min-w-0">
+                            <div class="flex items-center space-x-1 min-w-0">
+                                <span id="player-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-red-500 text-white">火</span>
+                                <span id="player-monster-name" class="font-black text-[10px] sm:text-xs text-pink-300 truncate">己方怪獸</span>
+                            </div>
+                            <span id="player-team-slot-badge" class="shrink-0 text-[9px] bg-pink-500/20 text-pink-300 px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
+                        </div>
+                        <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden p-0.5 border border-slate-800">
+                            <div id="player-hp-bar" class="bg-gradient-to-r from-emerald-500 via-teal-400 to-indigo-500 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+                        </div>
+                        <div class="text-[9px] text-slate-400 mt-0.5 flex justify-between font-mono">
+                            <span>HP</span>
+                            <span id="player-hp-text">100 / 100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row2 Col2: empty -->
+                <div class="relative z-0 min-h-0"></div>
+            </div>
+
+            <!-- Command-style quiz panel (full width under arena) -->
+            <div id="battle-question-section" class="glass-panel p-2.5 sm:p-3 rounded-2xl border-2 border-pink-500/40 space-y-2 w-full flex flex-col shadow-xl">
+                <div class="flex flex-wrap justify-between items-center gap-1">
+                    <span class="text-xs font-bold text-pink-300 bg-pink-500/20 px-2.5 py-0.5 rounded-full border border-pink-500/30">
+                        題目 <span id="quiz-current-num">1</span>
+                    </span>
+                    <span id="battle-combo" class="text-[10px] sm:text-xs font-extrabold text-amber-300 flex items-center">
+                        <i class="fa-solid fa-fire-flame-curved mr-1 text-amber-400"></i><span class="hidden sm:inline">無時限決戰：直到擊敗 Boss 或全滅！</span><span class="sm:hidden">決戰至勝／全滅</span>
+                    </span>
+                </div>
+
+                <div class="bg-slate-950/90 px-2.5 py-2 rounded-xl border border-slate-700 text-left sm:text-center min-h-0 flex items-center justify-center shadow-inner">
+                    <h3 id="quiz-question-text" class="text-sm sm:text-base font-black text-white break-words leading-snug w-full">
+                        題目載入中...
+                    </h3>
+                </div>
+
+                <div id="quiz-options-grid" class="grid grid-cols-2 gap-1.5 sm:gap-2">
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 6: PVP LOBBY -->
+        <section id="view-pvp" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+                </button>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-4 border border-pink-500/30">
+                <div>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-black text-pink-300 break-words">PVP 玩家對決擂台<br class="sm:hidden"> (500金幣賭注)</h2>
+                    <p class="text-xs text-slate-300 mt-1">創建或加入房間，勝者將直接奪取輸家 500 金幣獎勵！</p>
+                </div>
+                <div class="flex space-x-3">
+                    <button onclick="createPvpRoom('public')" class="px-4 py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all">
+                        <i class="fa-solid fa-plus mr-1.5"></i>創建公開房間
+                    </button>
+                    <button onclick="createPvpRoom('private')" class="px-4 py-2.5 bg-purple-950 hover:bg-purple-900 border border-purple-500/40 text-slate-200 font-bold text-xs rounded-xl transition-all">
+                        <i class="fa-solid fa-key mr-1.5"></i>創建私人房間
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pvp-rooms-list">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CARD ZOOM MODAL -->
+    <div id="card-zoom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-6 space-y-4 border-2 border-amber-400 relative text-center">
+            <button onclick="closeCardZoomModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <div id="zoom-card-content"></div>
+        </div>
+    </div>
+
+    <!-- ELEMENT CHART MODAL (屬性相克表) -->
+    <div id="element-chart-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 space-y-4 border-2 border-amber-400 relative">
+            <button onclick="toggleElementChartModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <div class="text-center">
+                <h3 class="text-xl font-black text-amber-300 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-shield-halved"></i> 屬性相克表
+                </h3>
+                <p class="text-xs text-slate-300 mt-1">傷害加成：克制屬性可造成 1.5 倍傷害，被克制僅 0.7 倍傷害！</p>
+            </div>
+            <div class="space-y-3 bg-slate-900/80 p-4 rounded-2xl border border-slate-700 text-xs">
+                <div class="flex items-center justify-between bg-red-950/40 p-2.5 rounded-xl border border-red-500/30">
+                    <span class="font-bold text-red-400 flex items-center gap-1.5"><i class="fa-solid fa-fire"></i> 火系</span>
+                    <span class="text-slate-200">克制 <b class="text-emerald-400">草系</b> ｜ 被 <b class="text-blue-400">水系</b> 克制 ｜ 對 <b class="text-yellow-400">雷系</b> 持平</span>
+                </div>
+                <div class="flex items-center justify-between bg-blue-950/40 p-2.5 rounded-xl border border-blue-500/30">
+                    <span class="font-bold text-blue-400 flex items-center gap-1.5"><i class="fa-solid fa-droplet"></i> 水系</span>
+                    <span class="text-slate-200">克制 <b class="text-red-400">火系</b> ｜ 被 <b class="text-emerald-400">草系</b> & <b class="text-yellow-400">雷系</b> 克制</span>
+                </div>
+                <div class="flex items-center justify-between bg-emerald-950/40 p-2.5 rounded-xl border border-emerald-500/30">
+                    <span class="font-bold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-leaf"></i> 草系</span>
+                    <span class="text-slate-200">克制 <b class="text-blue-400">水系</b> & <b class="text-yellow-400">雷系</b> ｜ 被 <b class="text-red-400">火系</b> 克制</span>
+                </div>
+                <div class="flex items-center justify-between bg-yellow-950/40 p-2.5 rounded-xl border border-yellow-500/30">
+                    <span class="font-bold text-yellow-400 flex items-center gap-1.5"><i class="fa-solid fa-bolt"></i> 雷系</span>
+                    <span class="text-slate-200">克制 <b class="text-blue-400">水系</b> ｜ 被 <b class="text-emerald-400">草系</b> 克制 ｜ 對 <b class="text-red-400">火系</b> 持平</span>
+                </div>
+            </div>
+            <button onclick="toggleElementChartModal()" class="w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs">
+                理解並關閉
+            </button>
+        </div>
+    </div>
+
+    <!-- TEAM SELECTION MODAL -->
+    <div id="team-select-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 hidden">
+        <div class="glass-panel w-full max-w-2xl rounded-3xl p-6 space-y-4 border border-pink-500/30">
+            <div class="flex justify-between items-center border-b border-purple-500/20 pb-3">
+                <h3 id="team-select-modal-title" class="font-extrabold text-lg text-white">選擇出戰怪獸陣容</h3>
+                <button onclick="closeTeamSelectModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            
+            <div id="team-selection-slots" class="grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800">
+            </div>
+
+            <div class="text-xs font-semibold text-slate-300">點擊下方擁有怪獸加入/替換陣容（怪獸上帶有等級標籤）：</div>
+            
+            <div id="team-available-monsters" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2.5 max-h-60 overflow-y-auto p-1">
+            </div>
+
+            <div class="pt-3 border-t border-purple-500/20 flex justify-end space-x-3">
+                <button onclick="closeTeamSelectModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl">取消</button>
+                <button onclick="startBattleWithSelectedTeam()" class="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg">進入戰鬥</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-purple-500/20 py-4 text-center text-xs text-slate-400 bg-slate-950/40">
+        Math Monster Gacha Game &copy; 2026 - 全能數理怪獸養成冒險平台
+    </footer>
+
+    <!-- Word 數學試題庫（G5/G6）；file:// 可用 -->
+    <script src="數學試題庫.js"></script>
+    <!-- JAVASCRIPT GAME LOGIC -->
+    <script>
+        const BEAST_IMAGES = {
+            cover: '封面.jpg',
+            sh1: '青龍.jpg',
+            sh2: '帝江.jpg',
+            sh3: 'image_2.jpg',
+            sh4: 'image_3.jpg',
+            sh5: '九尾狐.jpg',
+            sh6: 'image_5.jpg',
+            boss_turtle: '龜.jpg',
+            boss_dragon: '冰龍.jpg',
+            boss_pig: '豬.jpg',
+            boss_bird: '火鳥.jpg',
+            boss_cow: '草牛.jpg',
+            boss_bug: '草虫.jpg',
+            boss_hydra: '9頭蛇.jpeg',
+            boss_thunder_dragon: '雷龍.jpeg',
+            fire_baby: '火寶寶.png',
+            fire_demon: '火惡魔.png',
+            water_turtle: '水滴龜.png',
+            water_lizard: '溪流蜥.png',
+            water_croc: '瀑布巨鱷.png',
+            water_dragon: '蒼穹海王龍.png',
+            grass_sprout: '萌芽獸.png',
+            grass_bud: '花蕾獸.png',
+            grass_flower_dragon: '花龍獸.png',
+            grass_tree_dragon: '樹木龍獸.png',
+            thunder_dragon_baby: '雷電幼龍.jpeg',
+            thunder_fox: '迅雷電狐.jpeg',
+            thunder_beast: '轟雷巨獸.jpeg',
+            thunder_god_horse: '雷神·雷煌馬.jpeg'
+        };
+
+        const EVIL_BOSSES = [
+            { id: 'boss_turtle', name: '深淵冥甲巨龜', element: 'water', imgKey: 'boss_turtle', hp: 200, atk: 40, def: 50, spd: 40 },
+            { id: 'boss_dragon', name: '霜獄滅世冰龍', element: 'water', imgKey: 'boss_dragon', hp: 250, atk: 60, def: 55, spd: 50 },
+            { id: 'boss_pig', name: '熔岩毀滅炎豬', element: 'fire', imgKey: 'boss_pig', hp: 220, atk: 55, def: 40, spd: 45 },
+            { id: 'boss_bird', name: '焚天烈獄凰鳥', element: 'fire', imgKey: 'boss_bird', hp: 210, atk: 65, def: 35, spd: 60 },
+            { id: 'boss_cow', name: '腐殖食人樹牛', element: 'grass', imgKey: 'boss_cow', hp: 260, atk: 45, def: 60, spd: 35 },
+            { id: 'boss_bug', name: '劇毒蝕骨萬足蟲', element: 'grass', imgKey: 'boss_bug', hp: 190, atk: 50, def: 45, spd: 55 },
+            { id: 'boss_hydra', name: '九頭狂雷蛇皇', element: 'thunder', imgKey: 'boss_hydra', hp: 300, atk: 70, def: 60, spd: 65 },
+            { id: 'boss_thunder_dragon', name: '滅世雷霆天龍', element: 'thunder', imgKey: 'boss_thunder_dragon', hp: 350, atk: 80, def: 70, spd: 70 }
+        ];
+
+        // 排位賽 4 關指定 BOSS 對應表
+        const RANKED_STAGE_BOSSES = {
+            10: [
+                EVIL_BOSSES.find(b => b.id === 'boss_turtle'),  // 10LV 水系 BOSS 1
+                EVIL_BOSSES.find(b => b.id === 'boss_dragon')   // 10LV 水系 BOSS 2
+            ],
+            20: [
+                EVIL_BOSSES.find(b => b.id === 'boss_pig'),     // 20LV 火系 BOSS 1
+                EVIL_BOSSES.find(b => b.id === 'boss_bird')    // 20LV 火系 BOSS 2
+            ],
+            30: [
+                EVIL_BOSSES.find(b => b.id === 'boss_cow'),     // 30LV 草系 BOSS 1
+                EVIL_BOSSES.find(b => b.id === 'boss_bug')     // 30LV 草系 BOSS 2
+            ],
+            40: [
+                EVIL_BOSSES.find(b => b.id === 'boss_hydra'),   // 40LV 雷系 BOSS 1
+                EVIL_BOSSES.find(b => b.id === 'boss_thunder_dragon') // 40LV 雷系 BOSS 2
+            ]
+        };
+
+        const SHANHAIJING_BEASTS = [
+            { id: 'sh1', name: '青龍', element: 'water', title: '東方水域神獸 (水)', color: '#3b82f6', hp: 220, atk: 110, def: 90, spd: 105, skillText: '神龍怒濤暴擊！', imgKey: 'sh1', desc: '東方四象之首，掌控浩瀚水系之力。' },
+            { id: 'sh2', name: '帝江', element: 'water', title: '混沌空間神獸 (水)', color: '#f43f5e', hp: 180, atk: 95, def: 75, spd: 130, skillText: '混沌虛空閃躍！', imgKey: 'sh2', desc: '狀如黃囊，六足四翼，掌握水與虛空。' },
+            { id: 'sh3', name: '燭龍', element: 'fire', title: '日夜烈陽神獸 (火)', color: '#dc2626', hp: 260, atk: 125, def: 100, spd: 80, skillText: '燭照萬里之怒！', imgKey: 'sh3', desc: '睜眼為晝，閉眼為夜，掌控烈焰天火。' },
+            { id: 'sh4', name: '饕餮', element: 'fire', title: '吞噬上古獸 (火)', color: '#ea580c', hp: 300, atk: 115, def: 110, spd: 60, skillText: '噬天吞地巨口！', imgKey: 'sh4', desc: '羊身人面，腹中蘊藏無盡火核。' },
+            { id: 'sh5', name: '九尾狐', element: 'grass', title: '青丘幻空妖狐 (草)', color: '#fbbf24', hp: 160, atk: 105, def: 70, spd: 120, skillText: '九尾魅惑幻影！', imgKey: 'sh5', desc: '青丘靈狐，操縱草木靈氣與幻術。' },
+            { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' }
+        ];
+
+        const ELEMENTAL_EVO_FAMILIES = {
+            'fire_base': {
+                familyId: 'fire_base',
+                element: 'fire',
+                color: '#ef4444',
+                stages: [
+                    { minLv: 1, name: '火寶寶', skillText: '幼火噴吐！', hp: 60, atk: 35, def: 20, spd: 55, imgKey: 'fire_baby' },
+                    { minLv: 10, name: '火惡魔', skillText: '地獄烈焰爆破！', hp: 200, atk: 130, def: 85, spd: 100, imgKey: 'fire_demon' }
+                ]
+            },
+            'water_base': {
+                familyId: 'water_base',
+                element: 'water',
+                color: '#3b82f6',
+                stages: [
+                    { minLv: 1, name: '水滴龜', skillText: '水滴射擊！', hp: 70, atk: 25, def: 35, spd: 40, imgKey: 'water_turtle' },
+                    { minLv: 10, name: '溪流蜥', skillText: '溪流激浪！', hp: 110, atk: 55, def: 60, spd: 65, imgKey: 'water_lizard' },
+                    { minLv: 20, name: '瀑布巨鱷', skillText: '瀑布撕咬！', hp: 180, atk: 95, def: 110, spd: 70, imgKey: 'water_croc' },
+                    { minLv: 30, name: '蒼穹海王龍', skillText: '海王怒濤咆哮！', hp: 250, atk: 140, def: 125, spd: 110, imgKey: 'water_dragon' }
+                ]
+            },
+            'grass_base': {
+                familyId: 'grass_base',
+                element: 'grass',
+                color: '#22c55e',
+                stages: [
+                    { minLv: 1, name: '萌芽獸', skillText: '嫩芽撞擊！', hp: 65, atk: 28, def: 30, spd: 45, imgKey: 'grass_sprout' },
+                    { minLv: 10, name: '花蕾獸', skillText: '花粉風暴！', hp: 105, atk: 50, def: 55, spd: 60, imgKey: 'grass_bud' },
+                    { minLv: 20, name: '花龍獸', skillText: '藤蔓劇毒鞭打！', hp: 170, atk: 90, def: 95, spd: 85, imgKey: 'grass_flower_dragon' },
+                    { minLv: 30, name: '樹木龍獸', skillText: '森羅萬象毀滅穿刺！', hp: 240, atk: 135, def: 120, spd: 100, imgKey: 'grass_tree_dragon' }
+                ]
+            },
+            'thunder_base': {
+                familyId: 'thunder_base',
+                element: 'thunder',
+                color: '#eab308',
+                stages: [
+                    { minLv: 1, name: '雷電幼龍', skillText: '幼雷放電！', hp: 68, atk: 32, def: 22, spd: 60, imgKey: 'thunder_dragon_baby' },
+                    { minLv: 10, name: '迅雷電狐', skillText: '電光疾衝！', hp: 112, atk: 60, def: 50, spd: 90, imgKey: 'thunder_fox' },
+                    { minLv: 20, name: '轟雷巨獸', skillText: '萬丈轟雷！', hp: 185, atk: 105, def: 85, spd: 105, imgKey: 'thunder_beast' },
+                    { minLv: 30, name: '雷神·雷煌馬', skillText: '雷神敕令·天罰！', hp: 255, atk: 145, def: 115, spd: 130, imgKey: 'thunder_god_horse' }
+                ]
+            }
+        };
+
+        const GRADE_UNITS = {
+            'G1': [
+                { id: 'g1_u1', name: '20 以內的數與數數' },
+                { id: 'g1_u2', name: '20 以內的加法與減法' },
+                { id: 'g1_u3', name: '100 以內的數' },
+                { id: 'g1_u4', name: '基本硬幣的認識與應用' },
+                { id: 'g1_u5', name: '長度（非標準單位、厘米 cm）' },
+                { id: 'g1_u6', name: '時間（時鐘的認識、整點與半點）' }
+            ],
+            'G2': [
+                { id: 'g2_u1', name: '100 以內的加減混合計算及應用題' },
+                { id: 'g2_u2', name: '乘法概念（2、5、10、3、4、6 乘法表）' },
+                { id: 'g2_u3', name: '基本除法概念及計算' },
+                { id: 'g2_u4', name: '香港貨幣計算（元、角）' },
+                { id: 'g2_u5', name: '長度與距離（米 m）' },
+                { id: 'g2_u6', name: '重量（克 g、千克 kg）' },
+                { id: 'g2_u7', name: '時間（分、5分鐘間隔計算）' }
+            ],
+            'G3': [
+                { id: 'g3_u1', name: '萬以內的數（五位數）' },
+                { id: 'g3_u2', name: '加減乘除四則計算及混合應用題' },
+                { id: 'g3_u3', name: '分數的基本概念' },
+                { id: 'g3_u4', name: '長度（毫米 mm、公里 km）' },
+                { id: 'g3_u5', name: '容量（升 L、毫升 mL）' },
+                { id: 'g3_u6', name: '時間與日曆（秒、24小時制）' }
+            ],
+            'G4': [
+                { id: 'g4_u1', name: '大數（百萬、億）' },
+                { id: 'g4_u2', name: '乘法與除法的直式進階計算' },
+                { id: 'g4_u3', name: '因數與倍數、公因數與公倍數（HCF/LCM）' },
+                { id: 'g4_u4', name: '同分母分數加減法與帶分數操作' },
+                { id: 'g4_u5', name: '周長（正方形、長方形及不規則圖形）' },
+                { id: 'g4_u6', name: '面積（cm²、m² 面積公式）' }
+            ],
+            'G5': [
+                { id: 'g5_u1', name: '質數與合數' },
+                { id: 'g5_u2', name: '異分母分數的加法與減法' },
+                { id: 'g5_u3', name: '分數乘法與除法' },
+                { id: 'g5_u4', name: '小數的概念、加減乘除計算與四捨五入' },
+                { id: 'g5_u5', name: '平面圖形面積（平行四邊形、三角形、梯形）' },
+                { id: 'g5_u6', name: '正方體與長方體體積（cm³、m³）' },
+                { id: 'g5_u7', name: '立體圖形的截面與性質' },
+                { id: 'g5_u8', name: '代數符號與簡易代數式' }
+            ],
+            'G6': [
+                { id: 'g6_u1', name: '百分數的應用（折扣、加減與比較）' },
+                { id: 'g6_u2', name: '分數、小數與百分數的互化' },
+                { id: 'g6_u3', name: '速率（m/s, km/h 換算與計算）' },
+                { id: 'g6_u4', name: '圓周長與圓面積計算' },
+                { id: 'g6_u5', name: '排水法測量不規則物件體積（量杯、水缸）' },
+                { id: 'g6_u6', name: '折線圖與統計數據分析及誤用' },
+                { id: 'g6_u7', name: '時間間隔、開始與結束時間計算' },
+                { id: 'g6_u8', name: '簡易方程及應用題' }
+            ]
+        };
+
+        let currentUser = null;
+        let selectedGrade = 'G1';
+        let activeStrand = null;
+        let bossTimer = null;
+        let bossAttackCountdown = 10;
+        let selectedBattleTeam = [];
+        let maxAllowedTeamSize = 3;
+        let currentMonsterIndex = 0;
+        
+        let rankedBossQueue = [];
+        let currentBossStageIndex = 0;
+        
+        let activeEnemy = null;
+        let activePlayerMonster = null;
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let isRankedMode = false;
+        let currentRankedBonus = 100;
+        let usedQuestionsMap = new Set();
+        let usedWordQuestionIds = new Set();
+        let lastQuestionTypeIndex = -1;
+
+        function getElementAdvantageMultiplier(atkElem, defElem) {
+            if (atkElem === 'fire') {
+                if (defElem === 'grass') return 1.5;
+                if (defElem === 'water') return 0.7;
+            } else if (atkElem === 'water') {
+                if (defElem === 'fire') return 1.5;
+                if (defElem === 'grass' || defElem === 'thunder') return 0.7;
+            } else if (atkElem === 'grass') {
+                if (defElem === 'water' || defElem === 'thunder') return 1.5;
+                if (defElem === 'fire') return 0.7;
+            } else if (atkElem === 'thunder') {
+                if (defElem === 'water') return 1.5;
+                if (defElem === 'grass') return 0.7;
+            }
+            return 1.0;
+        }
+
+        function toggleElementChartModal() {
+            const modal = document.getElementById('element-chart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function toggleFullScreen() {
+            const icon = document.getElementById('fullscreen-icon');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().then(() => {
+                    icon.className = "fa-solid fa-compress";
+                }).catch(err => console.log(err));
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen().then(() => {
+                        icon.className = "fa-solid fa-expand";
+                    });
+                }
+            }
+        }
+
+        function getRequiredExpForNextLevel(level) {
+            return Math.floor(100 * Math.pow(1.15, level - 1));
+        }
+
+        function getMonsterRuntimeData(monsterId, level = 1, isRankedBoss = false) {
+            const boss = EVIL_BOSSES.find(b => b.id === monsterId);
+            if (boss) {
+                const lvlFactor = 1 + (level - 1) * 0.12;
+                let hp = Math.floor((boss.hp || 200) * lvlFactor);
+                let atk = Math.floor((boss.atk || 50) * lvlFactor);
+                let def = Math.floor((boss.def || 40) * lvlFactor);
+                let spd = Math.floor((boss.spd || 45) * lvlFactor);
+
+                if (isRankedBoss) {
+                    hp += 80; atk += 70; def += 60; spd += 50;
+                }
+
+                return {
+                    id: boss.id,
+                    name: boss.name,
+                    element: boss.element || 'water',
+                    title: '強大關卡Boss',
+                    color: '#f43f5e',
+                    isMythic: false,
+                    level: level,
+                    hp, atk, def, spd,
+                    skillText: '深淵重擊！',
+                    imgKey: boss.imgKey,
+                    desc: '守護關卡的極強魔王！'
+                };
+            }
+
+            const mythic = SHANHAIJING_BEASTS.find(b => b.id === monsterId);
+            if (mythic) {
+                const lvlFactor = 1 + (level - 1) * 0.12;
+                let hp = Math.floor(mythic.hp * lvlFactor);
+                let atk = Math.floor(mythic.atk * lvlFactor);
+                let def = Math.floor(mythic.def * lvlFactor);
+                let spd = Math.floor(mythic.spd * lvlFactor);
+
+                if (isRankedBoss) {
+                    hp += 80; atk += 70; def += 60; spd += 50;
+                }
+
+                return {
+                    id: mythic.id,
+                    name: mythic.name,
+                    element: mythic.element || 'water',
+                    title: mythic.title || '上古神獸',
+                    color: mythic.color || '#3b82f6',
+                    isMythic: true,
+                    level: level,
+                    hp, atk, def, spd,
+                    skillText: mythic.skillText || '神獸衝擊！',
+                    imgKey: mythic.imgKey,
+                    desc: mythic.desc || '山海經靈獸'
+                };
+            }
+
+            const family = ELEMENTAL_EVO_FAMILIES[monsterId];
+            if (family) {
+                let currentStage = family.stages[0];
+                for (let stage of family.stages) {
+                    if (level >= stage.minLv) {
+                        currentStage = stage;
+                    }
+                }
+
+                let lvlFactor = 1 + (level - 1) * 0.12;
+                let bonusEvo4s = 0;
+                if (level >= 30) {
+                    lvlFactor = 1 + (level - 1) * 0.18;
+                    bonusEvo4s = 38;
+                }
+
+                let hp = Math.floor(currentStage.hp * lvlFactor) + bonusEvo4s;
+                let atk = Math.floor(currentStage.atk * lvlFactor) + bonusEvo4s;
+                let def = Math.floor(currentStage.def * lvlFactor) + bonusEvo4s;
+                let spd = Math.floor(currentStage.spd * lvlFactor) + bonusEvo4s;
+
+                if (isRankedBoss) {
+                    hp += 80; atk += 70; def += 60; spd += 50;
+                }
+
+                const elemName = family.element === 'fire' ? '烈焰系' : family.element === 'water' ? '流水系' : family.element === 'grass' ? '森木系' : '雷電系';
+
+                return {
+                    id: family.familyId,
+                    name: currentStage.name,
+                    element: family.element || 'fire',
+                    title: level >= 30 ? '🔥 終極突破巨龍' : `${elemName}進化怪獸`,
+                    color: family.color || '#ef4444',
+                    isMythic: false,
+                    level: level,
+                    hp, atk, def, spd,
+                    skillText: currentStage.skillText || ' elemental attack',
+                    imgKey: currentStage.imgKey
+                };
+            }
+
+            return {
+                id: monsterId || 'fire_base',
+                name: '冒險怪獸',
+                element: 'fire',
+                title: '初階怪獸',
+                color: '#ef4444',
+                isMythic: false,
+                level: level,
+                hp: 100, atk: 50, def: 30, spd: 40,
+                skillText: '普通攻擊',
+                imgKey: 'fire_baby'
+            };
+        }
+
+        /* 1. 指向同資料夾中的「背景音樂」音訊檔 */
+        let audioCtx = null;
+        let isAudioPlaying = false;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function toggleAudio() {
+            initAudio();
+            const audio = document.getElementById('bgm-audio');
+            const icon = document.getElementById('bgm-icon');
+
+            if (isAudioPlaying) {
+                audio.pause();
+                isAudioPlaying = false;
+                icon.className = "fa-solid fa-volume-xmark";
+            } else {
+                audio.play().then(() => {
+                    isAudioPlaying = true;
+                    icon.className = "fa-solid fa-volume-high text-pink-300 animate-pulse";
+                }).catch(err => {
+                    console.error("音樂播放失敗:", err);
+                    alert("音樂播放失敗，請確認資料夾內是否有『背景音樂_輕量.mp3』或『背景音樂.mp3』！");
+                });
+            }
+        }
+
+        function playSFX(freq, type = 'sine', duration = 0.15) {
+            if (!audioCtx) return;
+            try {
+                let osc = audioCtx.createOscillator();
+                let gain = audioCtx.createGain();
+                osc.type = type;
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch(e){}
+        }
+
+        function switchAuthTab(tab) {
+            const loginForm = document.getElementById('form-login');
+            const regForm = document.getElementById('form-register');
+            const loginBtn = document.getElementById('tab-btn-login');
+            const regBtn = document.getElementById('tab-btn-register');
+
+            if (tab === 'login') {
+                loginForm.classList.remove('hidden');
+                regForm.classList.add('hidden');
+                loginBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md";
+                regBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all text-slate-400 hover:text-white";
+            } else {
+                loginForm.classList.add('hidden');
+                regForm.classList.remove('hidden');
+                regBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all bg-emerald-600 text-white shadow-md";
+                loginBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all text-slate-400 hover:text-white";
+            }
+        }
+
+        function toggleLoginMode(mode) {
+            const nickBox = document.getElementById('login-mode-nickname');
+            const schoolBox = document.getElementById('login-mode-school');
+            if (mode === 'nickname') {
+                nickBox.classList.remove('hidden');
+                schoolBox.classList.add('hidden');
+            } else {
+                nickBox.classList.add('hidden');
+                schoolBox.classList.remove('hidden');
+            }
+        }
+
+        function getUsersDatabase() {
+            const db = JSON.parse(localStorage.getItem('math_monster_users') || '{}');
+            if (!db['user_mr to']) {
+                db['user_mr to'] = {
+                    school: '中央管理處',
+                    className: '6A',
+                    classNo: 1,
+                    nickname: 'mr to',
+                    password: '3056',
+                    gold: 99999,
+                    expPacks: 999,
+                    rankScore: 2500,
+                    isAdmin: true,
+                    ownedMonsters: [
+                        { id: 'fire_base', level: 35, exp: 0 },
+                        { id: 'water_base', level: 35, exp: 0 },
+                        { id: 'grass_base', level: 35, exp: 0 },
+                        { id: 'thunder_base', level: 35, exp: 0 },
+                        { id: 'sh1', level: 40, exp: 0 },
+                        { id: 'sh2', level: 40, exp: 0 },
+                        { id: 'sh3', level: 40, exp: 0 }
+                    ]
+                };
+                localStorage.setItem('math_monster_users', JSON.stringify(db));
+            }
+            return db;
+        }
+
+        function saveUsersDatabase(db) {
+            localStorage.setItem('math_monster_users', JSON.stringify(db));
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const school = document.getElementById('reg-school').value.trim();
+            const className = document.getElementById('reg-class').value.trim();
+            const classNo = document.getElementById('reg-class-no').value.trim();
+            const nickname = document.getElementById('reg-nickname').value.trim();
+            const password = document.getElementById('reg-password').value.trim();
+            const errDiv = document.getElementById('reg-error');
+
+            if (!school || !className || !classNo || !nickname || !password) {
+                errDiv.innerText = "請填寫所有必填欄位！";
+                return;
+            }
+
+            const db = getUsersDatabase();
+            const userKey = `user_${nickname}`;
+            if (db[userKey]) {
+                errDiv.innerText = "此個人別號已被使用，請更換別號！";
+                return;
+            }
+
+            const newUser = {
+                school,
+                className,
+                classNo,
+                nickname,
+                password,
+                gold: 1000,
+                expPacks: 2,
+                rankScore: 0,
+                ownedMonsters: [
+                    { id: 'fire_base', level: 1, exp: 0 },
+                    { id: 'water_base', level: 1, exp: 0 },
+                    { id: 'grass_base', level: 1, exp: 0 },
+                    { id: 'thunder_base', level: 1, exp: 0 }
+                ]
+            };
+
+            db[userKey] = newUser;
+            saveUsersDatabase(db);
+            loginUserSuccess(newUser);
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const errDiv = document.getElementById('login-error');
+            const db = getUsersDatabase();
+            const mode = document.querySelector('input[name="login-mode"]:checked').value;
+            const password = document.getElementById('login-password').value;
+
+            let matchedUser = null;
+
+            if (mode === 'nickname') {
+                const nickname = document.getElementById('login-nickname').value.trim();
+                const userKey = `user_${nickname}`;
+                if (db[userKey] && db[userKey].password === password) {
+                    matchedUser = db[userKey];
+                }
+            } else {
+                const school = document.getElementById('login-school').value.trim();
+                const className = document.getElementById('login-class').value.trim();
+                const classNo = document.getElementById('login-class-no').value.trim();
+
+                for (let k in db) {
+                    let u = db[k];
+                    if (u.school === school && u.className === className && u.classNo == classNo && u.password === password) {
+                        matchedUser = u;
+                        break;
+                    }
+                }
+            }
+
+            if (!matchedUser) {
+                errDiv.innerText = "登入失敗！請檢查密碼或用戶資訊。";
+                return;
+            }
+
+            loginUserSuccess(matchedUser);
+        }
+
+        function parseGradeFromClass(className) {
+            if (!className) return 'G6';
+            if (className.includes('1') || className.includes('一')) return 'G1';
+            if (className.includes('2') || className.includes('二')) return 'G2';
+            if (className.includes('3') || className.includes('三')) return 'G3';
+            if (className.includes('4') || className.includes('四')) return 'G4';
+            if (className.includes('5') || className.includes('五')) return 'G5';
+            return 'G6';
+        }
+
+        function loginUserSuccess(userObj) {
+            currentUser = userObj;
+
+            if (currentUser.rankScore === undefined) currentUser.rankScore = 0;
+
+            currentUser.ownedMonsters.forEach(m => {
+                if (m.level === undefined) m.level = 1;
+                if (m.level > 40) m.level = 40;
+                if (m.exp === undefined) m.exp = 0;
+            });
+
+            localStorage.setItem('math_monster_active_session', currentUser.nickname);
+
+            document.getElementById('auth-modal-overlay').classList.add('hidden');
+            document.getElementById('logout-btn').classList.remove('hidden');
+            document.getElementById('logout-btn').classList.add('flex');
+
+            updateUserDashboardUI();
+            renderMonsterCollection();
+            selectGrade(parseGradeFromClass(currentUser.className));
+            renderLeaderboard();
+            playSFX(523.25, 'triangle', 0.2);
+        }
+
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('math_monster_active_session');
+            document.getElementById('auth-modal-overlay').classList.remove('hidden');
+            document.getElementById('logout-btn').classList.add('hidden');
+            document.getElementById('logout-btn').classList.remove('flex');
+            document.getElementById('user-display-name').innerText = "未登入";
+            document.getElementById('user-display-school').innerText = "訪客模式";
+        }
+
+        function saveCurrentUserData() {
+            if (!currentUser) return;
+            const db = getUsersDatabase();
+            db[`user_${currentUser.nickname}`] = currentUser;
+            saveUsersDatabase(db);
+            updateUserDashboardUI();
+            renderLeaderboard();
+        }
+
+        function updateUserDashboardUI() {
+            if (!currentUser) return;
+            const userGrade = parseGradeFromClass(currentUser.className);
+            const gradeTextMap = { 'G1':'小一', 'G2':'小二', 'G3':'小三', 'G4':'小四', 'G5':'小五', 'G6':'小六' };
+
+            document.getElementById('user-display-name').innerText = currentUser.nickname + (currentUser.isAdmin ? ' (管理員)' : '');
+            document.getElementById('user-display-school').innerText = `${currentUser.school} (${currentUser.className}-${currentUser.classNo}號)`;
+            document.getElementById('user-gold').innerText = currentUser.gold;
+            document.getElementById('user-exp-packs').innerText = currentUser.expPacks;
+            document.getElementById('user-rank-score').innerText = currentUser.rankScore;
+            
+            document.getElementById('ranked-current-score').innerText = currentUser.rankScore;
+            document.getElementById('ranked-current-rank').innerText = getRankTitle(currentUser.rankScore);
+            document.getElementById('ranked-user-grade-badge').innerText = `${gradeTextMap[userGrade]}專屬排位 (鎖定)`;
+            document.getElementById('leaderboard-grade-display').innerText = `${gradeTextMap[userGrade]}榜單`;
+        }
+
+        function getRankTitle(score) {
+            if (score >= 3000) return '🏆 數理神話霸主';
+            if (score >= 1500) return '💎 王者大師';
+            if (score >= 800) return '🥇 鑽石學者';
+            if (score >= 300) return '🥈 黃金精英';
+            return '🥉 數理新秀';
+        }
+
+        window.onload = function() {
+            document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            const activeSessionNick = localStorage.getItem('math_monster_active_session');
+            const db = getUsersDatabase();
+            if (activeSessionNick && db[`user_${activeSessionNick}`]) {
+                loginUserSuccess(db[`user_${activeSessionNick}`]);
+            }
+
+            document.addEventListener('click', function unlockAudio() {
+                initAudio();
+                document.removeEventListener('click', unlockAudio);
+            }, { once: true });
+        };
+
+        function renderMonsterElement(imgKey, nameStr) {
+            const imgSrc = BEAST_IMAGES[imgKey];
+            if (imgSrc) {
+                return `<img src="${imgSrc}" alt="${nameStr || '怪獸'}" class="w-full h-full object-contain rounded-2xl border-2 border-amber-400/80 shadow-md bg-slate-950/40">`;
+            }
+            return `<div class="w-full h-full rounded-2xl bg-purple-900 border border-amber-400 flex items-center justify-center font-bold text-xs text-amber-300 p-2 text-center">${nameStr || '魔王Boss'}</div>`;
+        }
+
+        function openCardZoomModal(monsterId, level) {
+            const runtimeData = getMonsterRuntimeData(monsterId, level);
+            const content = document.getElementById('zoom-card-content');
+            const elemText = runtimeData.element === 'fire' ? '🔥 火系' : runtimeData.element === 'water' ? '💧 水系' : runtimeData.element === 'grass' ? '🌿 草系' : '⚡ 雷系';
+            
+            content.innerHTML = `
+                <div class="text-xs font-black px-3 py-1 bg-amber-500/30 text-amber-300 rounded-full inline-block mb-2">
+                    ${runtimeData.title} (${elemText})
+                </div>
+                <div class="w-48 h-48 mx-auto my-3">
+                    ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                </div>
+                <h3 class="text-2xl font-black text-white">${runtimeData.name} (Lv.${runtimeData.level})</h3>
+                <p class="text-xs text-slate-300 my-2">${runtimeData.desc || '數理極限卡牌，強大屬性戰力！'}</p>
+                <div class="grid grid-cols-4 gap-2 bg-slate-900/90 p-3 rounded-2xl text-center text-xs font-mono border border-slate-700">
+                    <div><span class="text-rose-400 font-bold block">HP</span><span class="text-white font-black">${runtimeData.hp}</span></div>
+                    <div><span class="text-amber-400 font-bold block">ATK</span><span class="text-white font-black">${runtimeData.atk}</span></div>
+                    <div><span class="text-blue-400 font-bold block">DEF</span><span class="text-white font-black">${runtimeData.def}</span></div>
+                    <div><span class="text-emerald-400 font-bold block">SPD</span><span class="text-white font-black">${runtimeData.spd}</span></div>
+                </div>
+                <div class="mt-4 text-xs text-amber-300 font-bold">技能: ${runtimeData.skillText}</div>
+            `;
+            document.getElementById('card-zoom-modal').classList.remove('hidden');
+        }
+
+        function closeCardZoomModal() {
+            document.getElementById('card-zoom-modal').classList.add('hidden');
+        }
+
+        function switchView(viewName) {
+            if (!currentUser) {
+                document.getElementById('auth-modal-overlay').classList.remove('hidden');
+                return;
+            }
+
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'battle', 'pvp', 'ranked'];
+            views.forEach(v => {
+                const el = document.getElementById(`view-${v}`);
+                if (el) el.classList.add('hidden');
+            });
+            document.getElementById(`view-${viewName}`).classList.remove('hidden');
+
+            if (viewName === 'monsters') renderMonsterCollection();
+            if (viewName === 'pvp') renderPvpRooms();
+            if (viewName === 'ranked') renderLeaderboard();
+        }
+
+        function drawGacha(count) {
+            if (!currentUser) return;
+            const singleCost = 200;
+            const cost = count * singleCost;
+
+            if (currentUser.gold < cost) {
+                alert(`金幣不足！需要 ${cost} 金幣。請先進行數學冒險關卡或排位賽賺取金幣！`);
+                return;
+            }
+
+            currentUser.gold -= cost;
+            const results = [];
+            let convertedExpCount = 0;
+
+            const poolables = [
+                { id: 'fire_base', isMythic: false },
+                { id: 'water_base', isMythic: false },
+                { id: 'grass_base', isMythic: false },
+                { id: 'thunder_base', isMythic: false }
+            ];
+
+            let guaranteedMythicPos = -1;
+            if (count === 10) {
+                guaranteedMythicPos = Math.floor(Math.random() * 10);
+            }
+
+            for (let i = 0; i < count; i++) {
+                const rand = Math.random();
+                let drawnItemData;
+
+                if (i === guaranteedMythicPos || rand < 0.10) {
+                    const beast = SHANHAIJING_BEASTS[Math.floor(Math.random() * SHANHAIJING_BEASTS.length)];
+                    drawnItemData = getMonsterRuntimeData(beast.id, 1);
+                } else {
+                    const baseItem = poolables[Math.floor(Math.random() * poolables.length)];
+                    drawnItemData = getMonsterRuntimeData(baseItem.id, 1);
+                }
+
+                const exists = currentUser.ownedMonsters.some(m => m.id === drawnItemData.id);
+                if (exists) {
+                    currentUser.expPacks += 5;
+                    convertedExpCount += 5;
+                    drawnItemData.isDuplicate = true;
+                } else {
+                    currentUser.ownedMonsters.push({
+                        id: drawnItemData.id,
+                        level: 1,
+                        exp: 0
+                    });
+                    drawnItemData.isDuplicate = false;
+                }
+                results.push(drawnItemData);
+            }
+
+            saveCurrentUserData();
+            renderGachaResults(results, convertedExpCount);
+            playSFX(880, 'sine', 0.3);
+        }
+
+        function renderGachaResults(results, convertedExp) {
+            document.getElementById('gacha-idle-state').classList.add('hidden');
+            const grid = document.getElementById('gacha-results-grid');
+            grid.classList.remove('hidden');
+            grid.innerHTML = '';
+
+            results.forEach(item => {
+                const card = document.createElement('div');
+                card.className = `glass-card p-4 rounded-2xl text-center border relative flex flex-col items-center cursor-pointer ${item.isMythic ? 'border-amber-400 mythic-glow gacha-shanhai-flash' : 'border-purple-500/30'}`;
+                card.onclick = () => openCardZoomModal(item.id, item.level);
+                card.innerHTML = `
+                    <div class="w-20 h-20 my-2">
+                        ${renderMonsterElement(item.imgKey, item.name)}
+                    </div>
+                    <div class="font-extrabold text-xs text-white mt-1">${item.name}</div>
+                    ${item.isMythic ? '<span class="text-[10px] bg-amber-500/40 text-amber-200 font-bold px-2 py-0.5 rounded mt-1 shadow">✨ 山海經神獸</span>' : ''}
+                    ${item.isDuplicate ? '<span class="text-[10px] bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded mt-1">+5 EXP包 (重複)</span>' : '<span class="text-[10px] bg-pink-500/30 text-pink-200 font-bold px-2 py-0.5 rounded mt-1">NEW 新獲得</span>'}
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        let currentFilter = 'all';
+
+        function filterMonsters(filter) {
+            currentFilter = filter;
+            renderMonsterCollection();
+        }
+
+        function renderMonsterCollection() {
+            if (!currentUser) return;
+            const container = document.getElementById('monster-collection-grid');
+            container.innerHTML = '';
+
+            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'];
+
+            allList.forEach(mId => {
+                const owned = currentUser.ownedMonsters.find(om => om.id === mId);
+                const monLevel = owned ? Math.min(40, (owned.level || 1)) : 1;
+                const runtimeData = getMonsterRuntimeData(mId, monLevel);
+
+                if (currentFilter === 'elemental' && runtimeData.isMythic) return;
+                if (currentFilter === 'mythic' && !runtimeData.isMythic) return;
+
+                const monExp = owned ? (owned.exp || 0) : 0;
+                const reqExp = getRequiredExpForNextLevel(monLevel);
+                const expPct = monLevel >= 40 ? 100 : Math.min(100, Math.floor((monExp / reqExp) * 100));
+
+                const card = document.createElement('div');
+                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : owned ? 'border-pink-500/40 opacity-100' : 'border-slate-800 opacity-40 grayscale'}`;
+
+                const elemBadge = runtimeData.element === 'fire' ? 'bg-red-500 text-white' : runtimeData.element === 'water' ? 'bg-blue-500 text-white' : runtimeData.element === 'grass' ? 'bg-emerald-500 text-white' : 'bg-yellow-500 text-slate-950';
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[10px] font-black px-2 py-0.5 rounded ${elemBadge}">
+                                ${runtimeData.element.toUpperCase()}
+                            </span>
+                            <span class="text-[10px] font-extrabold text-amber-300">
+                                Lv. ${monLevel} ${monLevel >= 40 ? '(MAX)' : ''}
+                            </span>
+                        </div>
+
+                        <div onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})" class="w-28 h-28 mx-auto my-2 overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-transform" title="點擊放大觀看">
+                            ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                        </div>
+
+                        <div class="font-black text-sm text-white text-center cursor-pointer" onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})">
+                            ${runtimeData.name} <i class="fa-solid fa-magnifying-glass-plus text-xs text-amber-300 ml-1"></i>
+                        </div>
+
+                        <div class="grid grid-cols-4 gap-1 my-2 bg-slate-900/90 p-1.5 rounded-2xl text-center text-[9px] font-mono border border-slate-800">
+                            <div>
+                                <div class="text-rose-400 font-bold">HP</div>
+                                <div class="text-white font-bold">${runtimeData.hp}</div>
+                            </div>
+                            <div>
+                                <div class="text-amber-400 font-bold">ATK</div>
+                                <div class="text-white font-bold">${runtimeData.atk}</div>
+                            </div>
+                            <div>
+                                <div class="text-blue-400 font-bold">DEF</div>
+                                <div class="text-white font-bold">${runtimeData.def}</div>
+                            </div>
+                            <div>
+                                <div class="text-emerald-400 font-bold">SPD</div>
+                                <div class="text-white font-bold">${runtimeData.spd}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    ${owned ? `
+                        <div class="space-y-2 mt-2 pt-2 border-t border-purple-500/20">
+                            <div>
+                                <div class="flex justify-between text-[10px] text-slate-300 mb-1">
+                                    <span>EXP: ${monLevel >= 40 ? '已達等級上限' : `${monExp} / ${reqExp}`}</span>
+                                    <span>${expPct}%</span>
+                                </div>
+                                <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+                                    <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full transition-all duration-300" style="width: ${expPct}%;"></div>
+                                </div>
+                            </div>
+
+                            <button onclick="feedExpPack('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="w-full py-2 bg-gradient-to-r ${monLevel >= 40 ? 'from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed' : 'from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center">
+                                <i class="fa-solid fa-box-open mr-1.5"></i>${monLevel >= 40 ? '已達到最高 40LV' : '餵養EXP包 (+100經驗)'}
+                            </button>
+                        </div>
+                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">未解鎖 (祈願召喚獲得)</div>`}
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function feedExpPack(monsterId) {
+            if (!currentUser) return;
+            if (currentUser.expPacks < 1) {
+                alert('EXP包不足！請完成數學冒險關卡獲取經驗包。');
+                return;
+            }
+
+            const mon = currentUser.ownedMonsters.find(m => m.id === monsterId);
+            if (!mon) return;
+
+            if (mon.level >= 40) {
+                alert('該怪獸已達到最高等級 40LV！');
+                return;
+            }
+
+            const prevRuntime = getMonsterRuntimeData(mon.id, mon.level);
+
+            currentUser.expPacks -= 1;
+            mon.exp += 100;
+
+            let req = getRequiredExpForNextLevel(mon.level);
+            let leveledUp = false;
+
+            while (mon.exp >= req && mon.level < 40) {
+                mon.exp -= req;
+                mon.level += 1;
+                leveledUp = true;
+                req = getRequiredExpForNextLevel(mon.level);
+            }
+
+            if (mon.level >= 40) mon.exp = 0;
+
+            const newRuntime = getMonsterRuntimeData(mon.id, mon.level);
+
+            saveCurrentUserData();
+            renderMonsterCollection();
+
+            if (prevRuntime.name !== newRuntime.name) {
+                alert(`✨ 恭喜！【${prevRuntime.name}】成功進化為【${newRuntime.name}】！解鎖極限數理四圍！`);
+                playSFX(1200, 'triangle', 0.6);
+            } else if (leveledUp) {
+                playSFX(1046.5, 'triangle', 0.4);
+            } else {
+                playSFX(523.25, 'sine', 0.15);
+            }
+        }
+
+        function selectGrade(grade) {
+            selectedGrade = grade;
+
+            ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'].forEach(g => {
+                const btn = document.getElementById(`grade-btn-${g}`);
+                if (btn) {
+                    if (g === grade) {
+                        btn.className = "grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-pink-600 to-purple-900 text-white shadow-lg ring-2 ring-pink-400";
+                    } else {
+                        btn.className = "grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30";
+                    }
+                }
+            });
+
+            renderStrandsGrid();
+        }
+
+        function renderStrandsGrid() {
+            const grid = document.getElementById('strand-cards-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            const units = GRADE_UNITS[selectedGrade] || [];
+
+            units.forEach((u, idx) => {
+                const card = document.createElement('div');
+                card.className = "glass-card p-5 rounded-3xl flex flex-col justify-between border border-purple-500/30 hover:border-pink-500/50";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs bg-pink-500/30 text-pink-200 font-black px-2.5 py-0.5 rounded-full">單元 ${idx + 1}</span>
+                            <span class="text-[10px] text-emerald-300 font-bold"><i class="fa-solid fa-list-check mr-1"></i>專屬單元試題</span>
+                        </div>
+                        <h4 class="font-extrabold text-base text-white">${u.name}</h4>
+                    </div>
+                    <button onclick="openTeamSelect('${u.id}', false)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black text-xs rounded-xl shadow-lg transition-all">
+                        選擇陣容並挑戰 (可選2隻)
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function startRankedBattle(bossLv, bonusScore) {
+            isRankedMode = true;
+            currentRankedBonus = bonusScore;
+
+            const userGrade = parseGradeFromClass(currentUser.className);
+            selectedGrade = userGrade;
+
+            const stageBosses = RANKED_STAGE_BOSSES[bossLv] || RANKED_STAGE_BOSSES[10];
+
+            rankedBossQueue = [
+                { ...stageBosses[0], level: bossLv },
+                { ...stageBosses[1], level: bossLv }
+            ];
+
+            openTeamSelect('ranked_mode', true, bossLv);
+        }
+
+        function renderLeaderboard() {
+            const container = document.getElementById('ranked-leaderboard-list');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const targetGrade = currentUser ? parseGradeFromClass(currentUser.className) : 'G6';
+
+            const db = getUsersDatabase();
+            const users = Object.values(db)
+                .filter(u => parseGradeFromClass(u.className) === targetGrade)
+                .sort((a, b) => (b.rankScore || 0) - (a.rankScore || 0));
+
+            if (users.length === 0) {
+                container.innerHTML = `<div class="text-center text-xs text-slate-400 py-6">該年級暫無排位紀錄</div>`;
+                return;
+            }
+
+            users.forEach((u, idx) => {
+                const item = document.createElement('div');
+                item.className = `p-3 rounded-2xl border flex items-center justify-between ${idx === 0 ? 'bg-amber-500/20 border-amber-400/50' : idx === 1 ? 'bg-slate-300/20 border-slate-300/50' : idx === 2 ? 'bg-amber-700/20 border-amber-600/50' : 'bg-slate-900/60 border-slate-800'}`;
+                item.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <span class="w-6 font-black text-center text-sm ${idx === 0 ? 'text-amber-300 text-base' : 'text-slate-400'}">${idx + 1}</span>
+                        <div>
+                            <div class="font-extrabold text-xs text-white">${u.nickname}</div>
+                            <div class="text-[10px] text-slate-400">${u.school || '個人學員'} (${u.className || '小六'})</div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-black text-xs text-amber-300">${u.rankScore || 0} 分</div>
+                        <div class="text-[9px] text-purple-200">${getRankTitle(u.rankScore || 0)}</div>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        let pendingStrandId = null;
+        let pendingBossLv = 10;
+
+        function openTeamSelect(strandId, isRanked = false, bossLv = 10) {
+            pendingStrandId = strandId;
+            isRankedMode = isRanked;
+            pendingBossLv = bossLv;
+            maxAllowedTeamSize = isRanked ? 3 : 2;
+
+            document.getElementById('team-select-modal-title').innerText = isRanked ? '選擇 3 隻出戰怪獸陣容 (排位賽)' : '選擇 2 隻出戰怪獸陣容 (數學冒險)';
+
+            selectedBattleTeam = [];
+            for (let om of currentUser.ownedMonsters) {
+                if (selectedBattleTeam.length < maxAllowedTeamSize) {
+                    selectedBattleTeam.push(om.id);
+                }
+            }
+
+            renderTeamSelectModal();
+            document.getElementById('team-select-modal').classList.remove('hidden');
+        }
+
+        function closeTeamSelectModal() {
+            document.getElementById('team-select-modal').classList.add('hidden');
+        }
+
+        function renderTeamSelectModal() {
+            const slotsContainer = document.getElementById('team-selection-slots');
+            slotsContainer.innerHTML = '';
+            slotsContainer.className = maxAllowedTeamSize === 2 
+                ? 'grid grid-cols-2 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800'
+                : 'grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800';
+
+            for (let i = 0; i < maxAllowedTeamSize; i++) {
+                const monId = selectedBattleTeam[i];
+                const slot = document.createElement('div');
+                slot.className = "bg-slate-950 p-2 rounded-xl text-center border border-slate-700 flex flex-col items-center justify-between min-h-[90px]";
+
+                if (monId) {
+                    const om = currentUser.ownedMonsters.find(m => m.id === monId);
+                    const monLevel = om ? om.level : 1;
+                    const runtimeData = getMonsterRuntimeData(monId, monLevel);
+                    slot.innerHTML = `
+                        <div class="text-[9px] text-pink-300 font-bold">位置 ${i+1} (Lv.${monLevel})</div>
+                        <div class="w-12 h-12 my-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
+                        <div class="text-[10px] font-black text-white truncate w-full">${runtimeData.name}</div>
+                        <button onclick="removeFromTeam(${i})" class="text-[9px] text-rose-400 hover:text-rose-300 mt-1">移除</button>
+                    `;
+                } else {
+                    slot.innerHTML = `
+                        <div class="text-[9px] text-slate-500 font-bold">位置 ${i+1}</div>
+                        <div class="w-12 h-12 my-1 border border-dashed border-slate-700 rounded-xl flex items-center justify-center text-slate-600 text-xs"><i class="fa-solid fa-plus"></i></div>
+                        <div class="text-[10px] text-slate-500">未選擇</div>
+                    `;
+                }
+                slotsContainer.appendChild(slot);
+            }
+
+            const availContainer = document.getElementById('team-available-monsters');
+            availContainer.innerHTML = '';
+
+            currentUser.ownedMonsters.forEach(om => {
+                const monLevel = om.level || 1;
+                const runtimeData = getMonsterRuntimeData(om.id, monLevel);
+                const isSelected = selectedBattleTeam.includes(om.id);
+
+                const item = document.createElement('div');
+                item.className = `p-2 rounded-xl text-center border cursor-pointer transition-all relative ${isSelected ? 'border-amber-400 bg-amber-500/20' : 'border-slate-800 bg-slate-900/90 hover:border-slate-600'}`;
+                item.onclick = () => toggleSelectMonsterForTeam(om.id);
+                item.innerHTML = `
+                    <span class="absolute top-1 right-1 bg-amber-500 text-slate-950 text-[8px] font-black px-1 rounded">Lv.${monLevel}</span>
+                    <div class="w-10 h-10 mx-auto mt-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
+                    <div class="text-[9px] font-bold text-white truncate mt-1">${runtimeData.name}</div>
+                `;
+                availContainer.appendChild(item);
+            });
+        }
+
+        function toggleSelectMonsterForTeam(monId) {
+            const idx = selectedBattleTeam.indexOf(monId);
+            if (idx >= 0) {
+                selectedBattleTeam.splice(idx, 1);
+            } else {
+                if (selectedBattleTeam.length >= maxAllowedTeamSize) {
+                    selectedBattleTeam.shift();
+                }
+                selectedBattleTeam.push(monId);
+            }
+            renderTeamSelectModal();
+        }
+
+        function removeFromTeam(index) {
+            selectedBattleTeam.splice(index, 1);
+            renderTeamSelectModal();
+        }
+
+        function startBattleWithSelectedTeam() {
+            if (!currentUser) {
+                alert('數據異常，請先重新登入！');
+                return;
+            }
+
+            if (!currentUser.ownedMonsters || currentUser.ownedMonsters.length === 0) {
+                alert('你目前沒有任何怪獸，請先到抽卡機召喚怪獸卡！');
+                return;
+            }
+
+            if (selectedBattleTeam.length === 0) {
+                selectedBattleTeam.push(currentUser.ownedMonsters[0].id);
+            }
+
+            closeTeamSelectModal();
+            
+            currentMonsterIndex = 0;
+            loadPlayerActiveMonster();
+
+            if (isRankedMode) {
+                currentBossStageIndex = 0;
+                setupRankedBossEnemy(0);
+            } else {
+                const p1Level = activePlayerMonster ? activePlayerMonster.level : 1;
+                const randomBossConfig = EVIL_BOSSES[Math.floor(Math.random() * EVIL_BOSSES.length)];
+                
+                const bossRuntime = getMonsterRuntimeData(randomBossConfig.id, p1Level, true);
+
+                activeEnemy = {
+                    name: `守護魔王·${randomBossConfig.name}`,
+                    element: randomBossConfig.element,
+                    level: p1Level,
+                    hp: bossRuntime.hp,
+                    maxHp: bossRuntime.hp,
+                    atk: bossRuntime.atk,
+                    imgKey: randomBossConfig.imgKey,
+                    isBoss: true
+                };
+            }
+
+            currentQuizIndex = 0;
+            quizScore = 0;
+            
+            /* 2. 重置同一場戰鬥的題目紀錄，防止同場對決出現相同題目 */
+            usedQuestionsMap.clear();
+            usedWordQuestionIds.clear();
+            lastQuestionTypeIndex = -1;
+
+            switchView('battle');
+            updateBattleUI();
+            nextBattleQuestion();
+            resetBossTimer();
+        }
+
+        function setupRankedBossEnemy(stageIdx) {
+            const bossConfig = rankedBossQueue[stageIdx] || EVIL_BOSSES[0];
+            const bossRuntime = getMonsterRuntimeData(bossConfig.id, bossConfig.level || 10, true);
+
+            activeEnemy = {
+                name: `[BOSS ${stageIdx + 1}/2] ${bossConfig.name}`,
+                element: bossConfig.element,
+                level: bossConfig.level || 10,
+                hp: bossRuntime.hp,
+                maxHp: bossRuntime.hp,
+                atk: bossRuntime.atk,
+                imgKey: bossConfig.imgKey,
+                isBoss: true
+            };
+        }
+
+        function loadPlayerActiveMonster() {
+            const monId = selectedBattleTeam[currentMonsterIndex] || (currentUser.ownedMonsters[0] ? currentUser.ownedMonsters[0].id : 'fire_base');
+            const om = currentUser.ownedMonsters.find(m => m.id === monId) || { id: monId, level: 1, exp: 0 };
+            const runtimeData = getMonsterRuntimeData(monId, om ? om.level : 1);
+
+            activePlayerMonster = {
+                ...runtimeData,
+                currentHp: runtimeData.hp,
+                maxHp: runtimeData.hp
+            };
+        }
+
+        function updateBattleUI() {
+            if (!activePlayerMonster || !activeEnemy) return;
+
+            document.getElementById('enemy-name').innerText = activeEnemy.name;
+            document.getElementById('enemy-level-tag').innerText = `Boss Lv.${activeEnemy.level}`;
+            document.getElementById('enemy-hp-text').innerText = `${Math.max(0, activeEnemy.hp)} / ${activeEnemy.maxHp}`;
+            const enemyHpPct = Math.max(0, Math.min(100, (activeEnemy.hp / activeEnemy.maxHp) * 100));
+            document.getElementById('enemy-hp-bar').style.width = `${enemyHpPct}%`;
+            document.getElementById('enemy-svg-container').innerHTML = renderMonsterElement(activeEnemy.imgKey, activeEnemy.name);
+
+            const enemyElemBadge = document.getElementById('enemy-elem-badge');
+            enemyElemBadge.innerText = (activeEnemy.element || 'water').toUpperCase();
+            enemyElemBadge.className = `px-1.5 py-0.5 text-[9px] rounded font-black ${activeEnemy.element === 'fire' ? 'bg-red-500 text-white' : activeEnemy.element === 'water' ? 'bg-blue-500 text-white' : activeEnemy.element === 'grass' ? 'bg-emerald-500 text-white' : 'bg-yellow-500 text-slate-950'}`;
+
+            document.getElementById('player-monster-name').innerText = `${activePlayerMonster.name} (Lv.${activePlayerMonster.level})`;
+            document.getElementById('player-hp-text').innerText = `${Math.max(0, activePlayerMonster.currentHp)} / ${activePlayerMonster.maxHp}`;
+            const playerHpPct = Math.max(0, Math.min(100, (activePlayerMonster.currentHp / activePlayerMonster.maxHp) * 100));
+            document.getElementById('player-hp-bar').style.width = `${playerHpPct}%`;
+            document.getElementById('player-svg-container').innerHTML = renderMonsterElement(activePlayerMonster.imgKey, activePlayerMonster.name);
+
+            const playerElemBadge = document.getElementById('player-elem-badge');
+            playerElemBadge.innerText = (activePlayerMonster.element || 'fire').toUpperCase();
+            playerElemBadge.className = `px-1.5 py-0.5 text-[9px] rounded font-black ${activePlayerMonster.element === 'fire' ? 'bg-red-500 text-white' : activePlayerMonster.element === 'water' ? 'bg-blue-500 text-white' : activePlayerMonster.element === 'grass' ? 'bg-emerald-500 text-white' : 'bg-yellow-500 text-slate-950'}`;
+
+            document.getElementById('player-team-slot-badge').innerText = `第 ${currentMonsterIndex + 1} / ${selectedBattleTeam.length} 隻登場`;
+            document.getElementById('battle-boss-progress').innerText = isRankedMode ? `BOSS ${currentBossStageIndex + 1}/2` : `BOSS 1/1`;
+        }
+
+        function resetBossTimer() {
+            clearInterval(bossTimer);
+            bossAttackCountdown = 10;
+            const timerBadge = document.getElementById('boss-timer-num');
+            if (timerBadge) timerBadge.innerText = bossAttackCountdown;
+
+            bossTimer = setInterval(() => {
+                bossAttackCountdown--;
+                if (timerBadge) timerBadge.innerText = bossAttackCountdown;
+
+                if (bossAttackCountdown <= 0) {
+                    bossTimerAttack();
+                    bossAttackCountdown = 10;
+                }
+            }, 1000);
+        }
+
+        function bossTimerAttack() {
+            if (!activePlayerMonster || !activeEnemy) return;
+
+            const elemMult = getElementAdvantageMultiplier(activeEnemy.element, activePlayerMonster.element);
+            const dmg = Math.max(5, Math.floor((activeEnemy.atk - activePlayerMonster.def * 0.15) * elemMult));
+            activePlayerMonster.currentHp -= dmg;
+
+            triggerHurtEffect('player-svg-container');
+            showSkillPopup('enemy-skill-popup', `Boss襲擊 -${dmg} HP!`);
+
+            if (activePlayerMonster.currentHp <= 0) {
+                currentMonsterIndex++;
+                if (currentMonsterIndex < selectedBattleTeam.length) {
+                    loadPlayerActiveMonster();
+                    showSkillPopup('player-skill-popup', `接力登場！`);
+                } else {
+                    clearInterval(bossTimer);
+                    alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
+                    exitBattle();
+                    return;
+                }
+            }
+
+            updateBattleUI();
+        }
+
+        /**
+         * 2. 動態題目生成與防重複判斷（加強版本）
+         */
+        function gradeNumFromSelected() {
+            if (selectedGrade === 'G5') return 5;
+            if (selectedGrade === 'G6') return 6;
+            const m = String(selectedGrade || '').match(/(\d)/);
+            return m ? parseInt(m[1], 10) : null;
+        }
+
+        function pickWordBankQuestion() {
+            const bank = (typeof window !== 'undefined' && window.WORD_QUESTION_BANK) ? window.WORD_QUESTION_BANK : null;
+            if (!bank || !bank.length) return null;
+            const g = gradeNumFromSelected();
+            if (g !== 5 && g !== 6) return null;
+
+            const pool = bank.filter(q => q.grade === g);
+            if (!pool.length) return null;
+
+            let candidates = pool.filter(q => !usedWordQuestionIds.has(q.id));
+            if (!candidates.length) {
+                // round exhausted — allow reuse but still avoid last few if possible
+                candidates = pool.slice();
+                usedWordQuestionIds.clear();
+            }
+
+            const item = candidates[Math.floor(Math.random() * candidates.length)];
+            usedWordQuestionIds.add(item.id);
+
+            const opts = Array.isArray(item.options) ? item.options.slice() : [];
+            // reshuffle each time for randomness
+            for (let i = opts.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
+            }
+            const qText = (item.topic ? `【${item.topic}】` : '') + (item.question || '');
+            usedQuestionsMap.add(qText);
+            return {
+                question: qText,
+                options: opts,
+                correctAnswer: item.answer
+            };
+        }
+
+        function generateDynamicQuestion() {
+            // G5/G6：優先抽 Word 試題庫隨機題
+            const fromBank = pickWordBankQuestion();
+            if (fromBank && fromBank.options && fromBank.options.length >= 2 && fromBank.correctAnswer != null) {
+                return fromBank;
+            }
+
+            const units = GRADE_UNITS[selectedGrade] || GRADE_UNITS['G1'];
+            let currentUnitObj = units[0];
+
+            if (isRankedMode) {
+                currentUnitObj = units[Math.floor(Math.random() * units.length)];
+            } else {
+                const found = units.find(u => u.id === pendingStrandId);
+                if (found) currentUnitObj = found;
+                else currentUnitObj = units[Math.floor(Math.random() * units.length)];
+            }
+
+            let qText = "";
+            let correctAns = "";
+            let attemptCount = 0;
+            let options = [];
+
+            const unitId = currentUnitObj.id;
+
+            do {
+                attemptCount++;
+                options = [];
+
+                // ==================== P1 (小一) 題庫 ====================
+                if (unitId === 'g1_u1') { // 20 以內的數與數數
+                    let n = Math.floor(Math.random() * 15) + 3;
+                    let mode = Math.floor(Math.random() * 2);
+                    if (mode === 0) {
+                        qText = `【${currentUnitObj.name}】數字 ${n} 後面的一個數是多少？`;
+                        correctAns = String(n + 1);
+                        options = [String(n + 1), String(n - 1), String(n + 2), String(n + 3)];
+                    } else {
+                        qText = `【${currentUnitObj.name}】數字 ${n} 前面的一個數是多少？`;
+                        correctAns = String(n - 1);
+                        options = [String(n - 1), String(n + 1), String(n - 2), String(n)];
+                    }
+                }
+                else if (unitId === 'g1_u2') { // 20 以內的加法與減法
+                    let isAdd = Math.random() > 0.5;
+                    if (isAdd) {
+                        let a = Math.floor(Math.random() * 9) + 1;
+                        let b = Math.floor(Math.random() * (19 - a)) + 1;
+                        qText = `【${currentUnitObj.name}】計算：${a} + ${b} = ?`;
+                        correctAns = String(a + b);
+                        options = [String(a + b), String(a + b + 1), String(a + b - 1), String(a + b + 2)];
+                    } else {
+                        let a = Math.floor(Math.random() * 15) + 5;
+                        let b = Math.floor(Math.random() * a) + 1;
+                        qText = `【${currentUnitObj.name}】計算：${a} - ${b} = ?`;
+                        correctAns = String(a - b);
+                        options = [String(a - b), String(a - b + 1), String(a - b - 1), String(a - b + 2)];
+                    }
+                }
+                else if (unitId === 'g1_u3') { // 100 以內的數
+                    let tens = Math.floor(Math.random() * 8) + 2;
+                    let ones = Math.floor(Math.random() * 9) + 1;
+                    qText = `【${currentUnitObj.name}】${tens} 個十和 ${ones} 個一合起來是多少？`;
+                    correctAns = String(tens * 10 + ones);
+                    options = [String(tens * 10 + ones), String(ones * 10 + tens), String(tens + ones), String(tens * 10)];
+                }
+                else if (unitId === 'g1_u4') { // 基本硬幣的認識與應用
+                    let coins = [1, 2, 5, 10];
+                    let c1 = coins[Math.floor(Math.random() * coins.length)];
+                    let c2 = coins[Math.floor(Math.random() * coins.length)];
+                    qText = `【${currentUnitObj.name}】小明有 1 個 $${c1} 硬幣和 1 個 $${c2} 硬幣，合共有多少元？`;
+                    correctAns = `$${c1 + c2}`;
+                    options = [`$${c1 + c2}`, `$${c1 + c2 + 1}`, `$${c1 + c2 + 2}`, `$${c1 + c2 + 5}`];
+                }
+                else if (unitId === 'g1_u5') { // 長度（非標準單位、厘米 cm）
+                    let len = Math.floor(Math.random() * 10) + 2;
+                    let diff = Math.floor(Math.random() * 3) + 1;
+                    qText = `【${currentUnitObj.name}】鉛筆長 ${len} 厘米，橡皮擦長 ${diff} 厘米，鉛筆比橡皮擦長多少厘米？`;
+                    correctAns = `${len - diff} 厘米`;
+                    options = [`${len - diff} 厘米`, `${len + diff} 厘米`, `${len} 厘米`, `${diff} 厘米` ];
+                }
+                else if (unitId === 'g1_u6') { // 時間（時鐘的認識、整點與半點）
+                    let hour = Math.floor(Math.random() * 11) + 1;
+                    let isHalf = Math.random() > 0.5;
+                    if (isHalf) {
+                        qText = `【${currentUnitObj.name}】當時針指向 ${hour} 與 ${hour + 1} 之間，分針指向 6 時，是幾點？`;
+                        correctAns = `${hour} 時 30 分 (半)`;
+                        options = [`${hour} 時 30 分 (半)`, `${hour} 時正`, `${hour + 1} 時正`, `${hour} 時 15 分` ];
+                    } else {
+                        qText = `【${currentUnitObj.name}】當時針指向 ${hour}，分針指向 12 時，是幾點？`;
+                        correctAns = `${hour} 時正`;
+                        options = [`${hour} 時正`, `${hour} 時 30 分`, `${hour + 1} 時正`, `${hour - 1} 時正` ];
+                    }
+                }
+
+                // ==================== P2 (小二) 題庫 ====================
+                else if (unitId === 'g2_u1') { // 100 以內的加減混合計算及應用題
+                    let a = Math.floor(Math.random() * 30) + 20;
+                    let b = Math.floor(Math.random() * 20) + 10;
+                    let c = Math.floor(Math.random() * 15) + 5;
+                    qText = `【${currentUnitObj.name}】計算：${a} + ${b} - ${c} = ?`;
+                    correctAns = String(a + b - c);
+                    options = [String(a + b - c), String(a + b + c), String(a - b + c), String(a + b - c + 2)];
+                }
+                else if (unitId === 'g2_u2') { // 乘法概念
+                    let tables = [2, 3, 4, 5, 6, 10];
+                    let t = tables[Math.floor(Math.random() * tables.length)];
+                    let n = Math.floor(Math.random() * 8) + 2;
+                    qText = `【${currentUnitObj.name}】計算乘法：${t} × ${n} = ?`;
+                    correctAns = String(t * n);
+                    options = [String(t * n), String(t * n + t), String(t * n - t), String(t * n + 1)];
+                }
+                else if (unitId === 'g2_u3') { // 基本除法概念及計算
+                    let divisor = Math.floor(Math.random() * 5) + 2;
+                    let quot = Math.floor(Math.random() * 8) + 2;
+                    let dividend = divisor * quot;
+                    qText = `【${currentUnitObj.name}】把 ${dividend} 個蘋果平分給 ${divisor} 人，每人得到多少個？ (${dividend} ÷ ${divisor})`;
+                    correctAns = String(quot);
+                    options = [String(quot), String(quot + 1), String(quot - 1), String(quot + 2)];
+                }
+                else if (unitId === 'g2_u4') { // 香港貨幣計算（元、角）
+                    let yuan = Math.floor(Math.random() * 20) + 5;
+                    let jiao = (Math.floor(Math.random() * 8) + 1) * 10;
+                    qText = `【${currentUnitObj.name}】買一本筆記本付了 $${yuan} 及 ${jiao}角，合共是多少元多少角？`;
+                    correctAns = `$${yuan} 元 ${jiao/10} 角`;
+                    options = [`$${yuan} 元 ${jiao/10} 角`, `$${yuan + 1} 元`, `$${yuan} 元 ${jiao} 角`, `$${yuan - 1} 元 5 角`];
+                }
+                else if (unitId === 'g2_u5') { // 長度與距離（米 m）
+                    let m1 = Math.floor(Math.random() * 10) + 2;
+                    let m2 = Math.floor(Math.random() * 10) + 2;
+                    qText = `【${currentUnitObj.name}】花園長 ${m1} 米 (m)，走廊長 ${m2} 米 (m)，兩者共長多少米？`;
+                    correctAns = `${m1 + m2} 米`;
+                    options = [`${m1 + m2} 米`, `${m1 * m2} 米`, `${Math.abs(m1 - m2)} 米`, `${m1 + m2 + 2} 米` ];
+                }
+                else if (unitId === 'g2_u6') { // 重量（克 g、千克 kg）
+                    let kg = Math.floor(Math.random() * 5) + 2;
+                    qText = `【${currentUnitObj.name}】請問 ${kg} 千克 (kg) 等於多少克 (g)？`;
+                    correctAns = `${kg * 1000} 克`;
+                    options = [`${kg * 1000} 克`, `${kg * 100} 克`, `${kg * 10} 克`, `${kg * 10000} 克` ];
+                }
+                else if (unitId === 'g2_u7') { // 時間（分、5分鐘間隔計算）
+                    let mins = (Math.floor(Math.random() * 11) + 1) * 5;
+                    qText = `【${currentUnitObj.name}】當分針從數字 12 走到數字 ${mins/5} 時，代表經過了多少分鐘？`;
+                    correctAns = `${mins} 分鐘`;
+                    options = [`${mins} 分鐘`, `${mins/5} 分鐘`, `${mins + 5} 分鐘`, `${mins - 5} 分鐘` ];
+                }
+
+                // ==================== P3 (小三) 題庫 ====================
+                else if (unitId === 'g3_u1') { // 萬以內的數（五位數）
+                    let num = Math.floor(Math.random() * 8000) + 1000;
+                    qText = `【${currentUnitObj.name}】數字 ${num} 中的千位數字是多少？`;
+                    correctAns = String(Math.floor(num / 1000));
+                    options = [String(Math.floor(num / 1000)), String(Math.floor((num % 1000) / 100)), String(Math.floor((num % 100) / 10)), String(num % 10)];
+                }
+                else if (unitId === 'g3_u2') { // 加減乘除四則計算及混合應用題
+                    let a = Math.floor(Math.random() * 20) + 10;
+                    let b = Math.floor(Math.random() * 5) + 2;
+                    let c = Math.floor(Math.random() * 5) + 2;
+                    qText = `【${currentUnitObj.name}】計算四則混合：${a} + ${b} × ${c} = ?`;
+                    correctAns = String(a + b * c);
+                    options = [String(a + b * c), String((a + b) * c), String(a + b + c), String(a * b + c)];
+                }
+                else if (unitId === 'g3_u3') { // 分數的基本概念
+                    let denom = Math.floor(Math.random() * 6) + 4;
+                    let num = Math.floor(Math.random() * (denom - 1)) + 1;
+                    qText = `【${currentUnitObj.name}】一個蛋糕分成 ${denom} 等份，吃了 ${num} 塊，還剩下整個蛋糕的幾分之幾？`;
+                    correctAns = `${denom - num}/${denom}`;
+                    options = [`${denom - num}/${denom}`, `${num}/${denom}`, `1/${denom}`, `${denom}/${denom}` ];
+                }
+                else if (unitId === 'g3_u4') { // 長度（毫米 mm、公里 km）
+                    let km = Math.floor(Math.random() * 5) + 2;
+                    qText = `【${currentUnitObj.name}】請問 ${km} 公里 (km) 等於多少米 (m)？`;
+                    correctAns = `${km * 1000} 米`;
+                    options = [`${km * 1000} 米`, `${km * 100} 米`, `${km * 10} 米`, `${km * 10000} 米` ];
+                }
+                else if (unitId === 'g3_u5') { // 容量（升 L、毫升 mL）
+                    let L = Math.floor(Math.random() * 4) + 2;
+                    qText = `【${currentUnitObj.name}】一瓶果汁有 ${L} 升 (L)，即是多少毫升 (mL)？`;
+                    correctAns = `${L * 1000} 毫升`;
+                    options = [`${L * 1000} 毫升`, `${L * 100} 毫升`, `${L * 10} 毫升`, `${L * 500} 毫升` ];
+                }
+                else if (unitId === 'g3_u6') { // 時間與日曆（秒、24小時制）
+                    let h24 = Math.floor(Math.random() * 8) + 13;
+                    qText = `【${currentUnitObj.name}】24 小時制的 ${h24}:00 換算成 12 小時制是下午幾點？`;
+                    correctAns = `下午 ${h24 - 12} 時`;
+                    options = [`下午 ${h24 - 12} 時`, `下午 ${h24 - 10} 時`, `上午 ${h24 - 12} 時`, `下午 ${h24 - 11} 時` ];
+                }
+
+                // ==================== P4 (小四) 題庫 ====================
+                else if (unitId === 'g4_u1') { // 大數（百萬、億）
+                    qText = `【${currentUnitObj.name}】一億 (100,000,000) 一共有多少個零 (0)？`;
+                    correctAns = "8 個";
+                    options = ["8 個", "6 個", "7 個", "9 個"];
+                }
+                else if (unitId === 'g4_u2') { // 乘法與除法的直式進階計算
+                    let a = Math.floor(Math.random() * 40) + 11;
+                    let b = Math.floor(Math.random() * 20) + 11;
+                    qText = `【${currentUnitObj.name}】直式乘法計算：${a} × ${b} = ?`;
+                    correctAns = String(a * b);
+                    options = [String(a * b), String(a * b + 10), String(a * b - 10), String(a * b + 100)];
+                }
+                else if (unitId === 'g4_u3') { // 因數與倍數、公因數與公倍數（HCF/LCM）
+                    let type = Math.floor(Math.random() * 2);
+                    if (type === 0) {
+                        qText = `【${currentUnitObj.name}】求 12 與 18 的最大公因數 (H.C.F.)？`;
+                        correctAns = "6";
+                        options = ["6", "3", "2", "36"];
+                    } else {
+                        qText = `【${currentUnitObj.name}】求 6 與 8 的最小公倍數 (L.C.M.)？`;
+                        correctAns = "24";
+                        options = ["24", "48", "12", "16"];
+                    }
+                }
+                else if (unitId === 'g4_u4') { // 同分母分數加減法與帶分數操作
+                    let a = Math.floor(Math.random() * 3) + 1;
+                    let b = Math.floor(Math.random() * 3) + 1;
+                    qText = `【${currentUnitObj.name}】計算同分母分數：(${a}/7) + (${b}/7) = ?`;
+                    correctAns = `${a + b}/7`;
+                    options = [`${a + b}/7`, `${a + b}/14`, `${a * b}/7`, `${a + b + 1}/7` ];
+                }
+                else if (unitId === 'g4_u5') { // 周長
+                    let l = Math.floor(Math.random() * 8) + 3;
+                    let w = Math.floor(Math.random() * 5) + 2;
+                    qText = `【${currentUnitObj.name}】長方形長 ${l} cm、寬 ${w} cm，周長是多少 cm？`;
+                    correctAns = String((l + w) * 2);
+                    options = [String((l + w) * 2), String(l * w), String(l + w), String((l + w) * 2 + 2)];
+                }
+                else if (unitId === 'g4_u6') { // 面積
+                    let side = Math.floor(Math.random() * 7) + 3;
+                    qText = `【${currentUnitObj.name}】正方形邊長為 ${side} cm，面積是多少 cm²？`;
+                    correctAns = String(side * side);
+                    options = [String(side * side), String(side * 4), String(side * side + side), String(side * 2)];
+                }
+
+                // ==================== P5 (小五) 題庫 ====================
+                else if (unitId === 'g5_u1') {
+                    let primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
+                    let chosen = primes[Math.floor(Math.random() * primes.length)];
+                    qText = `【${currentUnitObj.name}】下列哪一個數是「質數」？`;
+                    correctAns = String(chosen);
+                    options = [String(chosen), String(chosen + 1), String(chosen + 3), String(chosen + 5)];
+                }
+                else if (unitId === 'g5_u2') {
+                    let a = Math.floor(Math.random() * 3) + 1;
+                    qText = `【${currentUnitObj.name}】計算：1/2 + 1/3 = ?`;
+                    correctAns = "5/6";
+                    options = ["5/6", "2/5", "1/6", "5/5"];
+                }
+                else if (unitId === 'g5_u3') {
+                    let a = Math.floor(Math.random() * 4) + 2;
+                    qText = `【${currentUnitObj.name}】計算：(2/5) × ${a * 5} = ?`;
+                    correctAns = String(a * 2);
+                    options = [String(a * 2), String(a * 5), String(a), String(a * 2 + 1)];
+                }
+                else if (unitId === 'g5_u4') {
+                    let a = (Math.floor(Math.random() * 80) + 10) / 10; 
+                    let b = (Math.floor(Math.random() * 50) + 10) / 10; 
+                    let ans = (a + b).toFixed(1);
+                    qText = `【${currentUnitObj.name}】小數加法：${a.toFixed(1)} + ${b.toFixed(1)} = ?`;
+                    correctAns = String(ans);
+                    options = [String(ans), (parseFloat(ans) + 0.2).toFixed(1), (parseFloat(ans) - 0.3).toFixed(1), (parseFloat(ans) + 1.0).toFixed(1)];
+                }
+                else if (unitId === 'g5_u5') {
+                    let base = Math.floor(Math.random() * 6) + 4;
+                    let height = Math.floor(Math.random() * 5) + 3;
+                    qText = `【${currentUnitObj.name}】平行四邊形底長 ${base} cm、高 ${height} cm，面積是多少 cm²？`;
+                    correctAns = String(base * height);
+                    options = [String(base * height), String((base * height) / 2), String((base + height) * 2), String(base * height + 2)];
+                }
+                else if (unitId === 'g5_u6') {
+                    let l = Math.floor(Math.random() * 5) + 3;
+                    let w = Math.floor(Math.random() * 4) + 2;
+                    let h = Math.floor(Math.random() * 4) + 2;
+                    let vol = l * w * h;
+                    qText = `【${currentUnitObj.name}】長方體長 ${l} cm、寬 ${w} cm、高 ${h} cm，體積是多少 cm³？`;
+                    correctAns = String(vol);
+                    options = [String(vol), String(l + w + h), String((l + w) * h), String(vol + 10)];
+                }
+                else if (unitId === 'g5_u7') {
+                    qText = `【${currentUnitObj.name}】將「三角柱」沿着平行於底面的方向切開，切出的截面是甚麼形狀？`;
+                    correctAns = "三角形";
+                    options = ["三角形", "長方形", "正方形", "圓形"];
+                }
+                else if (unitId === 'g5_u8') {
+                    let a = Math.floor(Math.random() * 8) + 2;
+                    qText = `【${currentUnitObj.name}】已知每盒蛋撻有 ${a} 個，y 盒蛋撻共有多少個？`;
+                    correctAns = `${a}y 個`;
+                    options = [`${a}y 個`, `y + ${a} 個`, `y / ${a} 個`, `${a} + y 個` ];
+                }
+
+                // ==================== P6 (小六) 題庫 ====================
+                else if (unitId === 'g6_u1') {
+                    let pct = (Math.floor(Math.random() * 4) + 1) * 5;
+                    let orig = 200;
+                    qText = `【${currentUnitObj.name}】某玩具原價 $${orig}，現以 ${100 - pct}% 折扣（減價 ${pct}%）發售，現售價是多少元？`;
+                    correctAns = String(orig * (100 - pct) / 100);
+                    options = [String(orig * (100 - pct) / 100), String(orig - pct), String(orig * pct / 100), String(orig + pct)];
+                }
+                else if (unitId === 'g6_u2') {
+                    qText = `【${currentUnitObj.name}】將分數 3/4 化為百分數是？`;
+                    correctAns = "75%";
+                    options = ["75%", "34%", "0.75%", "7.5%"];
+                }
+                else if (unitId === 'g6_u3') {
+                    qText = `【${currentUnitObj.name}】芷欣跑 300 米需時 50 秒，她跑步的平均速率是多少 m/s？`;
+                    correctAns = "6 m/s";
+                    options = ["6 m/s", "5 m/s", "60 m/s", "15 m/s"];
+                }
+                else if (unitId === 'g6_u4') {
+                    qText = `【${currentUnitObj.name}】已知圓的直徑為 10 cm，圓周率以 3.14 計算，圓周長是多少 cm？`;
+                    correctAns = "31.4 cm";
+                    options = ["31.4 cm", "15.7 cm", "78.5 cm", "62.8 cm"];
+                }
+                else if (unitId === 'g6_u5') {
+                    qText = `【${currentUnitObj.name}】下列哪一種物件「適合」利用排水法來找出它的體積？`;
+                    correctAns = "玻璃彈珠 (波子)";
+                    options = ["玻璃彈珠 (波子)", "乒乓球 (會浮於水)", "紙巾 (會吸水溶化)", "方糖 (會溶於水)"];
+                }
+                else if (unitId === 'g6_u6') {
+                    qText = `【${currentUnitObj.name}】比較兩幅統計折線圖時，若感覺下降幅度受誤導，最常見的原因是什麼？`;
+                    correctAns = "兩圖縱軸每格代表的數量不相同";
+                    options = [
+                        "兩圖縱軸每格代表的數量不相同",
+                        "圖表顏色不同",
+                        "橫軸年份字體不同",
+                        "圖標標題長短不一"
+                    ];
+                }
+                else if (unitId === 'g6_u7') {
+                    qText = `【${currentUnitObj.name}】現在時間是上午 10 時 15 分，4 小時 10 分鐘前是多少時間？`;
+                    correctAns = "上午 6 時 5 分";
+                    options = ["上午 6 時 5 分", "上午 6 時 25 分", "下午 2 時 5 分", "下午 2 時 25 分"];
+                }
+                else if (unitId === 'g6_u8') {
+                    let x = Math.floor(Math.random() * 10) + 2;
+                    let b = Math.floor(Math.random() * 15) + 5;
+                    let sum = x + b;
+                    qText = `【${currentUnitObj.name}】解方程：x + ${b} = ${sum}，求 x 的值？`;
+                    correctAns = String(x);
+                    options = [String(x), String(x + 2), String(sum), String(b)];
+                }
+
+                // 備用生成
+                else {
+                    let a = Math.floor(Math.random() * 20) + 5;
+                    let b = Math.floor(Math.random() * 10) + 2;
+                    qText = `【${currentUnitObj.name}】基礎數理計算：${a} + ${b} = ?`;
+                    correctAns = String(a + b);
+                    options = [String(a + b), String(a + b + 1), String(a + b - 1), String(a + b + 2)];
+                }
+
+            } while (usedQuestionsMap.has(qText) && attemptCount < 50);
+
+            usedQuestionsMap.add(qText);
+
+            const shuffled = [...options].sort(() => Math.random() - 0.5);
+
+            return {
+                question: qText,
+                options: shuffled,
+                correctAnswer: correctAns
+            };
+        }
+
+        let currentQuestionObj = null;
+
+        function nextBattleQuestion() {
+            currentQuizIndex++;
+            const numEl = document.getElementById('quiz-current-num');
+            if (numEl) numEl.innerText = currentQuizIndex;
+
+            currentQuestionObj = generateDynamicQuestion();
+
+            const qTextEl = document.getElementById('quiz-question-text');
+            if (qTextEl) qTextEl.innerText = currentQuestionObj.question;
+
+            const optionsGrid = document.getElementById('quiz-options-grid');
+            if (optionsGrid) {
+                optionsGrid.innerHTML = '';
+                currentQuestionObj.options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = "px-2 py-2 sm:px-3 sm:py-2.5 bg-slate-900/95 hover:bg-purple-800/90 border-2 border-purple-400/40 rounded-xl text-white font-extrabold text-sm sm:text-base transition-all active:scale-95 shadow-md leading-snug text-left whitespace-normal break-words flex items-center justify-center min-h-[2.5rem] sm:min-h-[2.75rem]";
+                    btn.innerText = opt;
+                    btn.onclick = () => handleAnswerSubmit(opt);
+                    optionsGrid.appendChild(btn);
+                });
+            }
+
+            resetBossTimer();
+        }
+
+        function handleAnswerSubmit(userAns) {
+            if (!currentQuestionObj) return;
+
+            if (userAns === currentQuestionObj.correctAnswer) {
+                playSFX(1046.5, 'sine', 0.2);
+
+                const elemMult = getElementAdvantageMultiplier(activePlayerMonster.element, activeEnemy.element);
+                const rawDmg = Math.floor(activePlayerMonster.atk * 1.8);
+                const dmg = Math.floor(rawDmg * elemMult);
+                activeEnemy.hp -= dmg;
+
+                triggerHurtEffect('enemy-svg-container');
+                let skillDesc = `${activePlayerMonster.skillText} -${dmg} HP!`;
+                if (elemMult > 1.0) skillDesc += ` (屬性克制 1.5倍!)`;
+                else if (elemMult < 1.0) skillDesc += ` (屬性被克 0.7倍)`;
+                showSkillPopup('player-skill-popup', skillDesc);
+
+                if (activeEnemy.hp <= 0) {
+                    if (isRankedMode && currentBossStageIndex === 0) {
+                        currentBossStageIndex = 1;
+                        setupRankedBossEnemy(1);
+                        showSkillPopup('enemy-skill-popup', '⚠️ 第二隻 BOSS 登場！');
+                        updateBattleUI();
+                        nextBattleQuestion();
+                        return;
+                    } else {
+                        clearInterval(bossTimer);
+                        setTimeout(() => {
+                            handleVictory();
+                        }, 500);
+                        return;
+                    }
+                }
+            } else {
+                playSFX(220, 'sawtooth', 0.3);
+
+                const elemMult = getElementAdvantageMultiplier(activeEnemy.element, activePlayerMonster.element);
+                const dmg = Math.max(10, Math.floor(activeEnemy.atk * elemMult));
+                activePlayerMonster.currentHp -= dmg;
+
+                triggerHurtEffect('player-svg-container');
+                showSkillPopup('enemy-skill-popup', `答錯受到反擊 -${dmg} HP!`);
+
+                if (activePlayerMonster.currentHp <= 0) {
+                    currentMonsterIndex++;
+                    if (currentMonsterIndex < selectedBattleTeam.length) {
+                        loadPlayerActiveMonster();
+                        showSkillPopup('player-skill-popup', `接力登場！`);
+                    } else {
+                        clearInterval(bossTimer);
+                        alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
+                        exitBattle();
+                        return;
+                    }
+                }
+            }
+
+            updateBattleUI();
+            nextBattleQuestion();
+        }
+
+        function handleVictory() {
+            let goldReward = 150;
+            let expPackReward = 2;
+
+            if (isRankedMode) {
+                goldReward = 300;
+                currentUser.rankScore += currentRankedBonus;
+            }
+
+            currentUser.gold += goldReward;
+            currentUser.expPacks += expPackReward;
+
+            saveCurrentUserData();
+
+            alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
+            exitBattle();
+        }
+
+        function triggerHurtEffect(containerId) {
+            const el = document.getElementById(containerId);
+            if (el) {
+                el.classList.add('animate-hurt');
+                setTimeout(() => el.classList.remove('animate-hurt'), 500);
+            }
+        }
+
+        function showSkillPopup(popupId, text) {
+            const el = document.getElementById(popupId);
+            if (!el) return;
+            const span = el.querySelector('span');
+            if (span) span.innerText = text;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 1200);
+        }
+
+        function exitBattle() {
+            clearInterval(bossTimer);
+            switchView(isRankedMode ? 'ranked' : 'adventure');
+        }
+
+        function renderPvpRooms() {
+            const list = document.getElementById('pvp-rooms-list');
+            if (!list) return;
+            list.innerHTML = `
+                <div class="glass-card p-5 rounded-3xl border border-pink-500/30 flex justify-between items-center">
+                    <div>
+                        <div class="text-xs text-pink-300 font-bold">房號 #1024 (公開)</div>
+                        <div class="font-black text-white text-base mt-0.5">挑戰者擂台 · 賭注 500 金幣</div>
+                        <div class="text-[10px] text-slate-400">房主: 數理達人 (小六)</div>
+                    </div>
+                    <button onclick="alert('PVP 房間匹配中，請等待對方加入！')" class="px-4 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-bold text-xs rounded-xl shadow-md">
+                        加入對決
+                    </button>
+                </div>
+            `;
+        }
+
+        function createPvpRoom(type) {
+            if (currentUser.gold < 500) {
+                alert('金幣不足 500！無法入場 PVP 賭注擂台。');
+                return;
+            }
+            alert(`已成功創建 ${type === 'public' ? '公開' : '私人'} PVP 房間！等待玩家加入對決中...`);
+        }
+    </script>
+</body>
+</html>
