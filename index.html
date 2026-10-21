@@ -814,6 +814,105 @@
         let activePassword = null;
         let activeUserKey = null;
 
+        let lastCloudProfile = null;
+        let cloudSaveInFlight = false;
+        let cloudSaveTimer = null;
+
+        function showSyncToast(msg) {
+            try {
+                if (!msg) return;
+                var el = document.getElementById('cloud-sync-toast');
+                if (!el) {
+                    el = document.createElement('div');
+                    el.id = 'cloud-sync-toast';
+                    el.style.cssText = 'position:fixed;bottom:1.25rem;left:50%;transform:translateX(-50%);z-index:9999;max-width:90vw;padding:0.65rem 1rem;border-radius:0.9rem;background:rgba(15,23,42,0.95);border:1px solid rgba(168,85,247,0.45);color:#e2e8f0;font-size:0.75rem;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.35);pointer-events:none;opacity:0;transition:opacity .2s ease';
+                    document.body.appendChild(el);
+                }
+                el.textContent = msg;
+                el.style.opacity = '1';
+                clearTimeout(el._hideTimer);
+                el._hideTimer = setTimeout(function () { el.style.opacity = '0'; }, 4200);
+            } catch (e) {}
+        }
+
+        function stampUpdatedAt(profile) {
+            if (!profile || typeof profile !== 'object') return profile;
+            profile.updatedAt = new Date().toISOString();
+            return profile;
+        }
+
+        function parseUpdatedAt(p) {
+            if (!p || !p.updatedAt) return 0;
+            var t = Date.parse(p.updatedAt);
+            return isFinite(t) ? t : 0;
+        }
+
+        function mergeOwnedMonsters(listA, listB) {
+            var map = {};
+            function take(list) {
+                (Array.isArray(list) ? list : []).forEach(function (m) {
+                    if (!m || m.id == null) return;
+                    var id = String(m.id);
+                    var level = Math.max(0, Math.floor(Number(m.level) || 1));
+                    var exp = Math.max(0, Math.floor(Number(m.exp) || 0));
+                    var prev = map[id];
+                    if (!prev) {
+                        map[id] = Object.assign({}, m, { level: level, exp: exp });
+                        return;
+                    }
+                    var pl = Math.max(0, Math.floor(Number(prev.level) || 1));
+                    var pe = Math.max(0, Math.floor(Number(prev.exp) || 0));
+                    if (level > pl || (level === pl && exp > pe)) {
+                        map[id] = Object.assign({}, prev, m, { level: level, exp: exp });
+                    } else {
+                        map[id] = Object.assign({}, m, prev, { level: pl, exp: pe });
+                    }
+                });
+            }
+            take(listA);
+            take(listB);
+            return Object.keys(map).map(function (k) { return map[k]; });
+        }
+
+        /** 兩份存檔：金幣／EXP包／積分取較大；怪獸按 id 保留較高等級／經驗；其餘欄位偏向較新 updatedAt */
+        function mergeProgressProfiles(localP, cloudP) {
+            var local = localP && typeof localP === 'object' ? localP : {};
+            var cloud = cloudP && typeof cloudP === 'object' ? cloudP : {};
+            var localNewer = parseUpdatedAt(local) >= parseUpdatedAt(cloud);
+            var base = Object.assign({}, localNewer ? cloud : local, localNewer ? local : cloud);
+            base.gold = Math.max(
+                Math.max(0, Math.floor(Number(local.gold) || 0)),
+                Math.max(0, Math.floor(Number(cloud.gold) || 0))
+            );
+            base.expPacks = Math.max(
+                Math.max(0, Math.floor(Number(local.expPacks) || 0)),
+                Math.max(0, Math.floor(Number(cloud.expPacks) || 0))
+            );
+            base.rankScore = Math.max(
+                Math.max(0, Math.floor(Number(local.rankScore) || 0)),
+                Math.max(0, Math.floor(Number(cloud.rankScore) || 0))
+            );
+            base.ownedMonsters = mergeOwnedMonsters(local.ownedMonsters, cloud.ownedMonsters);
+            return base;
+        }
+
+        function profilesProgressDiffer(a, b) {
+            if (!a || !b) return !!(a || b);
+            if (Math.floor(Number(a.gold) || 0) !== Math.floor(Number(b.gold) || 0)) return true;
+            if (Math.floor(Number(a.expPacks) || 0) !== Math.floor(Number(b.expPacks) || 0)) return true;
+            if (Math.floor(Number(a.rankScore) || 0) !== Math.floor(Number(b.rankScore) || 0)) return true;
+            var am = Array.isArray(a.ownedMonsters) ? a.ownedMonsters : [];
+            var bm = Array.isArray(b.ownedMonsters) ? b.ownedMonsters : [];
+            if (am.length !== bm.length) return true;
+            function keyOf(list) {
+                return list.map(function (m) {
+                    return String(m.id) + ':' + Math.floor(Number(m.level) || 1) + ':' + Math.floor(Number(m.exp) || 0);
+                }).sort().join('|');
+            }
+            return keyOf(am) !== keyOf(bm);
+        }
+
+
         function profileForCloud(user) {
             if (!user) return {};
             const p = Object.assign({}, user);
@@ -854,7 +953,10 @@
             });
         }
 
-        /** 合併雲端回傳的金幣／EXP包（老師待發放）到 currentUser；唔覆蓋本地怪獸進度 */
+        /**
+         * 套用雲端回傳 profile（login／save 後老師發放等）。
+         * save 回傳：金幣／EXP 以伺服器為準（已含 pending grants）；怪獸／積分若有亦同步。
+         */
         function mergeCloudProfileIntoCurrentUser(profile, meta) {
             if (!currentUser || !profile || typeof profile !== 'object') return false;
             let changed = false;
@@ -866,6 +968,16 @@
                 currentUser.expPacks = Math.max(0, Math.floor(Number(profile.expPacks) || 0));
                 changed = true;
             }
+            if (profile.rankScore != null && Number(profile.rankScore) !== Number(currentUser.rankScore)) {
+                currentUser.rankScore = Math.max(0, Math.floor(Number(profile.rankScore) || 0));
+                changed = true;
+            }
+            if (Array.isArray(profile.ownedMonsters)) {
+                currentUser.ownedMonsters = mergeOwnedMonsters(profile.ownedMonsters, []);
+                changed = true;
+            }
+            if (profile.updatedAt) currentUser.updatedAt = profile.updatedAt;
+            try { lastCloudProfile = Object.assign({}, profileForCloud(Object.assign({}, currentUser, profile))); } catch (e) {}
             if (changed) {
                 try {
                     const db = getUsersDatabase();
@@ -874,10 +986,12 @@
                 } catch (e) {}
                 try { updateUserDashboardUI(); } catch (e) {}
                 try { renderLeaderboard(); } catch (e) {}
+                try { renderMonsterCollection(); } catch (e) {}
                 const g = meta && meta.grantedGold ? Number(meta.grantedGold) : 0;
                 const x = meta && meta.grantedExp ? Number(meta.grantedExp) : 0;
                 if (g > 0 || x > 0) {
                     try { console.log('[老師發放] +金幣', g, '+EXP包', x); } catch (e) {}
+                    showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
                 }
             }
             return changed;
@@ -885,16 +999,19 @@
 
         function cloudSaveCurrentUser() {
             if (!SHEET_REPORT_URL || !currentUser || !activePassword || !activeUserKey) return;
-            callBridge({
-                action: 'save',
-                key: activeUserKey,
-                password: activePassword,
-                profile: profileForCloud(currentUser)
-            }).then(function (res) {
-                if (res && res.ok && res.profile) {
-                    mergeCloudProfileIntoCurrentUser(res.profile, res);
-                }
-            }).catch(function () {
+            if (cloudSaveTimer) clearTimeout(cloudSaveTimer);
+            cloudSaveTimer = setTimeout(function () {
+                cloudSaveTimer = null;
+                cloudSaveCurrentUserNow();
+            }, 700);
+        }
+
+        function cloudSaveCurrentUserNow() {
+            if (!SHEET_REPORT_URL || !currentUser || !activePassword || !activeUserKey) return;
+            if (cloudSaveInFlight) return;
+            cloudSaveInFlight = true;
+
+            function fallbackNoCorsSave(profileObj) {
                 try {
                     fetch(SHEET_REPORT_URL, {
                         method: 'POST',
@@ -904,10 +1021,80 @@
                             action: 'save',
                             key: activeUserKey,
                             password: activePassword,
-                            profile: profileForCloud(currentUser)
+                            profile: profileForCloud(profileObj)
                         })
                     }).catch(function () {});
                 } catch (e) {}
+            }
+
+            function applyMergedLocally(merged) {
+                var pwd = currentUser.password || activePassword;
+                var nick = currentUser.nickname;
+                Object.keys(merged).forEach(function (k) {
+                    if (k === 'password' || k === '_pwd') return;
+                    currentUser[k] = merged[k];
+                });
+                if (pwd) currentUser.password = pwd;
+                if (nick) currentUser.nickname = nick;
+                stampUpdatedAt(currentUser);
+                try {
+                    var db = getUsersDatabase();
+                    db['user_' + currentUser.nickname] = currentUser;
+                    saveUsersDatabase(db);
+                } catch (e) {}
+                try { updateUserDashboardUI(); } catch (e) {}
+            }
+
+            function postSave(profileObj) {
+                return callBridge({
+                    action: 'save',
+                    key: activeUserKey,
+                    password: activePassword,
+                    profile: profileForCloud(profileObj)
+                }).then(function (res) {
+                    if (res && res.ok && res.profile) {
+                        mergeCloudProfileIntoCurrentUser(res.profile, res);
+                    }
+                });
+            }
+
+            // 先 login 拉最新雲端 → max／怪獸合併 → 再 save，避免舊本機蓋掉另一部機進度
+            callBridge({
+                action: 'login',
+                key: activeUserKey,
+                password: activePassword
+            }).then(function (loginRes) {
+                var merged = profileForCloud(currentUser);
+                if (loginRes && loginRes.ok && loginRes.profile) {
+                    var cloud = loginRes.profile;
+                    lastCloudProfile = Object.assign({}, cloud);
+                    var g = loginRes.grantedGold ? Number(loginRes.grantedGold) : 0;
+                    var x = loginRes.grantedExp ? Number(loginRes.grantedExp) : 0;
+                    if (g > 0 || x > 0) {
+                        showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
+                    }
+                    var localTs = parseUpdatedAt(currentUser);
+                    var cloudTs = parseUpdatedAt(cloud);
+                    // 雲端較新時仍做進度 max 合併，唔會用較舊本機單一欄位蓋掉雲端
+                    merged = mergeProgressProfiles(currentUser, cloud);
+                    if (cloudTs > localTs && !profilesProgressDiffer(currentUser, merged)) {
+                        // 本機無更新進度：保留雲端其餘欄位（已在 merge 內處理）
+                    }
+                } else if (lastCloudProfile) {
+                    merged = mergeProgressProfiles(currentUser, lastCloudProfile);
+                }
+                applyMergedLocally(merged);
+                return postSave(currentUser);
+            }).catch(function () {
+                var merged = lastCloudProfile
+                    ? mergeProgressProfiles(currentUser, lastCloudProfile)
+                    : profileForCloud(currentUser);
+                applyMergedLocally(merged);
+                return postSave(currentUser).catch(function () {
+                    fallbackNoCorsSave(currentUser);
+                });
+            }).finally(function () {
+                cloudSaveInFlight = false;
             });
         }
 
@@ -1433,6 +1620,7 @@
                 gold: 1000,
                 expPacks: 2,
                 rankScore: 0,
+                updatedAt: new Date().toISOString(),
                 ownedMonsters: [
                     { id: 'fire_base', level: 1, exp: 0 },
                     { id: 'water_base', level: 1, exp: 0 },
@@ -1519,15 +1707,27 @@
                         // 本地仍保留密碼以便離線；雲端 profile 無 password
                         cloudProfile.password = password;
                         if (!cloudProfile.nickname && nicknameHint) cloudProfile.nickname = nicknameHint;
+                        // 登入：雲端為金幣／EXP／積分／怪獸權威來源
+                        const localBefore = matchedUser || db[userKey] || null;
+                        let differNote = '';
+                        if (localBefore && profilesProgressDiffer(localBefore, cloudProfile)) {
+                            differNote = '已載入雲端存檔（本機與雲端不同，以雲端為準）。';
+                        }
+                        lastCloudProfile = Object.assign({}, cloudProfile);
+                        delete lastCloudProfile.password;
                         db[userKey] = cloudProfile;
                         saveUsersDatabase(db);
                         activePassword = password;
                         activeUserKey = userKey;
                         const g = res.grantedGold ? Number(res.grantedGold) : 0;
                         const x = res.grantedExp ? Number(res.grantedExp) : 0;
-                        errDiv.innerText = (g > 0 || x > 0)
-                            ? `登入成功！老師發放：金幣 +${g}，EXP包 +${x}`
-                            : "";
+                        if (g > 0 || x > 0) {
+                            errDiv.innerText = `登入成功！老師發放：金幣 +${g}，EXP包 +${x}`;
+                            showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
+                        } else {
+                            errDiv.innerText = differNote || '';
+                            if (differNote) showSyncToast(differNote);
+                        }
                         loginUserSuccess(cloudProfile, password);
                         return;
                     }
@@ -1610,6 +1810,7 @@
             currentUser = null;
             activePassword = null;
             activeUserKey = null;
+            lastCloudProfile = null;
             localStorage.removeItem('math_monster_active_session');
             document.getElementById('auth-modal-overlay').classList.remove('hidden');
             document.getElementById('logout-btn').classList.add('hidden');
