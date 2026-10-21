@@ -694,7 +694,7 @@
                 </div>
 
                 <div class="bg-slate-950/90 px-2.5 py-2 rounded-xl border border-slate-700 text-left sm:text-center min-h-0 flex flex-col items-center justify-center shadow-inner gap-2">
-                    <img id="quiz-question-image" alt="題目圖片" class="hidden max-h-28 sm:max-h-36 w-auto max-w-full object-contain rounded-lg bg-white/95 p-1 border border-slate-600" />
+                    <img id="quiz-question-image" alt="題目圖片" class="hidden max-h-40 sm:max-h-56 md:max-h-64 w-auto max-w-full object-contain rounded-lg bg-white/95 p-1 border border-slate-600" />
                     <h3 id="quiz-question-text" class="text-sm sm:text-base font-black text-white break-words leading-snug w-full">
                         題目載入中...
                     </h3>
@@ -2286,7 +2286,7 @@
                 const j = Math.floor(Math.random() * (i + 1));
                 const tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
             }
-            const qText = (item.topic ? `【${item.topic}】` : '') + (item.question || '');
+            const qText = String(item.question || '').replace(/^【[^】]{0,80}】\s*/, '');
             usedQuestionsMap.add(qText);
             return {
                 question: qText,
@@ -2670,11 +2670,12 @@
             currentQuestionObj = generateDynamicQuestion();
 
             const qTextEl = document.getElementById('quiz-question-text');
-            if (qTextEl) qTextEl.innerText = currentQuestionObj.question;
+            if (qTextEl) qTextEl.innerText = String(currentQuestionObj.question || '').replace(/^【[^】]{0,80}】\s*/, '');
 
             const qImgEl = document.getElementById('quiz-question-image');
             if (qImgEl) {
                 const src = currentQuestionObj && currentQuestionObj.image ? currentQuestionObj.image : '';
+                qImgEl.onerror = () => { qImgEl.removeAttribute('src'); qImgEl.classList.add('hidden'); };
                 if (src) {
                     qImgEl.src = src;
                     qImgEl.classList.remove('hidden');
