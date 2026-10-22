@@ -523,10 +523,10 @@
                     <p class="text-xs md:text-sm text-slate-200 mt-1">單抽 **200 元**，十抽 **2000 元**。**十連抽必得 1 個山海經怪獸卡**！抽中山海經怪獸將觸發黃金閃光效果！</p>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <button onclick="drawGacha(1)" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl shadow-lg shadow-amber-500/30 active:scale-95 transition-all flex items-center">
+                    <button id="btn-gacha-1" onclick="drawGacha(1)" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl shadow-lg shadow-amber-500/30 active:scale-95 transition-all flex items-center">
                         <i class="fa-solid fa-gem mr-2"></i>單抽 (200元)
                     </button>
-                    <button onclick="drawGacha(10)" class="px-6 py-3 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black rounded-xl shadow-lg shadow-pink-600/30 active:scale-95 transition-all flex items-center">
+                    <button id="btn-gacha-10" onclick="drawGacha(10)" class="px-6 py-3 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black rounded-xl shadow-lg shadow-pink-600/30 active:scale-95 transition-all flex items-center">
                         <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>十連抽 (2000元)
                     </button>
                 </div>
@@ -1326,6 +1326,11 @@
         let usedQuestionsMap = new Set();
         let usedWordQuestionIds = new Set();
         let lastQuestionTypeIndex = -1;
+        /** 防刷：答題／結算／抽卡一次過鎖 */
+        let isAnswerLocked = false;
+        let battleSettled = false;
+        let battleRewardGranted = false;
+        let gachaBusy = false;
 
         function getElementAdvantageMultiplier(atkElem, defElem) {
             if (atkElem === 'fire') {
@@ -1924,7 +1929,7 @@
         }
 
         function drawGacha(count) {
-            if (!currentUser) return;
+            if (!currentUser || gachaBusy) return;
             const singleCost = 200;
             const cost = count * singleCost;
 
@@ -1932,6 +1937,12 @@
                 alert(`金幣不足！需要 ${cost} 金幣。請先進行數學冒險關卡或排位賽賺取金幣！`);
                 return;
             }
+
+            gachaBusy = true;
+            ['btn-gacha-1', 'btn-gacha-10'].forEach(id => {
+                const b = document.getElementById(id);
+                if (b) { b.disabled = true; b.classList.add('opacity-60', 'pointer-events-none'); }
+            });
 
             currentUser.gold -= cost;
             const results = [];
@@ -1980,6 +1991,11 @@
             saveCurrentUserData();
             renderGachaResults(results, convertedExpCount);
             playSFX(880, 'sine', 0.3);
+            gachaBusy = false;
+            ['btn-gacha-1', 'btn-gacha-10'].forEach(id => {
+                const b = document.getElementById(id);
+                if (b) { b.disabled = false; b.classList.remove('opacity-60', 'pointer-events-none'); }
+            });
         }
 
         function renderGachaResults(results, convertedExp) {
@@ -2379,6 +2395,9 @@
 
             currentQuizIndex = 0;
             quizScore = 0;
+            isAnswerLocked = false;
+            battleSettled = false;
+            battleRewardGranted = false;
             
             /* 2. 重置同一場戰鬥的題目紀錄，防止同場對決出現相同題目 */
             usedQuestionsMap.clear();
@@ -2465,6 +2484,7 @@
         }
 
         function bossTimerAttack() {
+            if (battleSettled || isAnswerLocked) return;
             if (!activePlayerMonster || !activeEnemy) return;
 
             const elemMult = getElementAdvantageMultiplier(activeEnemy.element, activePlayerMonster.element);
@@ -2901,6 +2921,8 @@
         let currentQuestionObj = null;
 
         function nextBattleQuestion() {
+            if (battleSettled) return;
+            isAnswerLocked = false;
             currentQuizIndex++;
             const numEl = document.getElementById('quiz-current-num');
             if (numEl) numEl.innerText = currentQuizIndex;
@@ -2938,8 +2960,20 @@
             resetBossTimer();
         }
 
+        function disableQuizOptionButtons() {
+            const optionsGrid = document.getElementById('quiz-options-grid');
+            if (!optionsGrid) return;
+            optionsGrid.querySelectorAll('button').forEach(btn => {
+                btn.disabled = true;
+                btn.onclick = null;
+                btn.classList.add('opacity-60', 'pointer-events-none');
+            });
+        }
+
         function handleAnswerSubmit(userAns) {
-            if (!currentQuestionObj) return;
+            if (!currentQuestionObj || isAnswerLocked || battleSettled) return;
+            isAnswerLocked = true;
+            disableQuizOptionButtons();
 
             if (userAns === currentQuestionObj.correctAnswer) {
                 quizScore++;
@@ -2966,6 +3000,10 @@
                         return;
                     } else {
                         clearInterval(bossTimer);
+                        if (battleSettled) return;
+                        battleSettled = true;
+                        const optionsGrid = document.getElementById('quiz-options-grid');
+                        if (optionsGrid) optionsGrid.innerHTML = '';
                         setTimeout(() => {
                             handleVictory();
                         }, 500);
@@ -3000,6 +3038,14 @@
         }
 
         function handleVictory() {
+            if (battleRewardGranted) return;
+            battleRewardGranted = true;
+            battleSettled = true;
+            isAnswerLocked = true;
+            clearInterval(bossTimer);
+            const optionsGrid = document.getElementById('quiz-options-grid');
+            if (optionsGrid) optionsGrid.innerHTML = '';
+
             let goldReward = 150;
             let expPackReward = 2;
 
@@ -3027,6 +3073,14 @@
         }
 
         function handleDefeat() {
+            // 失敗唔發獎，但仍鎖結算，避免重複彈窗／報表
+            if (battleSettled) return;
+            battleSettled = true;
+            isAnswerLocked = true;
+            clearInterval(bossTimer);
+            const optionsGrid = document.getElementById('quiz-options-grid');
+            if (optionsGrid) optionsGrid.innerHTML = '';
+
             reportToTeacherSheet(buildStudentReportExtra({
                 mode: isRankedMode ? '排位' : '冒險',
                 unit: currentBattleUnitLabel(),
