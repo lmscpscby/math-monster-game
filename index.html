@@ -122,6 +122,10 @@
         <source src="背景音樂.wav" type="audio/wav">
         <source src="背景音樂.m4a" type="audio/mp4">
     </audio>
+    <!-- 戰鬥專用 BGM（進戰鬥時切換；靜音掣同時控制；來源 OpenGameArt Boss Battle，已壓縮） -->
+    <audio id="battle-bgm-audio" loop preload="metadata">
+        <source src="背景音樂_戰鬥.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- AUTH MODAL OVERLAY -->
     <div id="auth-modal-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-xl p-4 transition-all duration-300">
@@ -380,18 +384,7 @@
                     </div>
                 </button>
 
-                <button onclick="switchView('pvp')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-pink-400">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-swords"></i>
-                        </div>
-                        <span class="text-xs bg-pink-500/30 text-pink-200 font-bold px-3 py-1 rounded-full">500金幣賭注</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white group-hover:text-pink-300 transition-colors">PVP 對決擂台</h3>
-                        <p class="text-xs text-slate-300 mt-1">進行陣容屬性克制較量，勝者獨得 500 金幣獎勵！</p>
-                    </div>
-                </button>
+                <!-- PVP 對決擂台：已停用 -->
             </div>
         </section>
 
@@ -705,32 +698,7 @@
             </div>
         </section>
 
-        <!-- VIEW 6: PVP LOBBY -->
-        <section id="view-pvp" class="hidden space-y-6">
-            <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
-                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
-                </button>
-            </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-4 border border-pink-500/30">
-                <div>
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-black text-pink-300 break-words">PVP 玩家對決擂台<br class="sm:hidden"> (500金幣賭注)</h2>
-                    <p class="text-xs text-slate-300 mt-1">創建或加入房間，勝者將直接奪取輸家 500 金幣獎勵！</p>
-                </div>
-                <div class="flex space-x-3">
-                    <button onclick="createPvpRoom('public')" class="px-4 py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all">
-                        <i class="fa-solid fa-plus mr-1.5"></i>創建公開房間
-                    </button>
-                    <button onclick="createPvpRoom('private')" class="px-4 py-2.5 bg-purple-950 hover:bg-purple-900 border border-purple-500/40 text-slate-200 font-bold text-xs rounded-xl transition-all">
-                        <i class="fa-solid fa-key mr-1.5"></i>創建私人房間
-                    </button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pvp-rooms-list">
-            </div>
-        </section>
+        <!-- VIEW 6: PVP LOBBY — 已停用 -->
 
     </main>
 
@@ -874,25 +842,69 @@
             return Object.keys(map).map(function (k) { return map[k]; });
         }
 
-        /** 兩份存檔：金幣／EXP包／積分取較大；怪獸按 id 保留較高等級／經驗；其餘欄位偏向較新 updatedAt */
-        function mergeProgressProfiles(localP, cloudP) {
+        /** 空／幾乎空白存檔（避免登入時用空雲端蓋掉本機） */
+        function isSparseProgressProfile(p) {
+            if (!p || typeof p !== 'object') return true;
+            var gold = Math.max(0, Math.floor(Number(p.gold) || 0));
+            var packs = Math.max(0, Math.floor(Number(p.expPacks) || 0));
+            var monsters = Array.isArray(p.ownedMonsters) ? p.ownedMonsters.length : 0;
+            var rank = Math.max(0, Math.floor(Number(p.rankScore) || 0));
+            return gold === 0 && packs === 0 && monsters === 0 && rank === 0;
+        }
+
+        /**
+         * 兩份存檔合併：
+         * - 金幣／EXP包：以較新 updatedAt 為準（避免消費後被舊雲端 Math.max「回血」）
+         * - 積分：取較大（只升唔跌）
+         * - 怪獸：按 id 保留較高等級／經驗
+         * - 其餘欄位偏向較新 updatedAt
+         * grantsGold／grantsExp：老師剛發放、已寫入 cloud 數值時唔好重複加；若合併選咗本機，就要補加。
+         */
+        function mergeProgressProfiles(localP, cloudP, opts) {
             var local = localP && typeof localP === 'object' ? localP : {};
             var cloud = cloudP && typeof cloudP === 'object' ? cloudP : {};
-            var localNewer = parseUpdatedAt(local) >= parseUpdatedAt(cloud);
+            opts = opts || {};
+            var grantG = Math.max(0, Math.floor(Number(opts.grantedGold) || 0));
+            var grantX = Math.max(0, Math.floor(Number(opts.grantedExp) || 0));
+
+            // 空雲端唔好蓋本機；空本機就用雲端
+            if (isSparseProgressProfile(cloud) && !isSparseProgressProfile(local)) {
+                cloud = {};
+            }
+            if (isSparseProgressProfile(local) && !isSparseProgressProfile(cloud)) {
+                local = {};
+            }
+
+            var localTs = parseUpdatedAt(local);
+            var cloudTs = parseUpdatedAt(cloud);
+            var localNewer = localTs >= cloudTs;
+            // 兩邊都無 timestamp：保守用本機（剛消費過）
+            if (!localTs && !cloudTs) localNewer = true;
+
             var base = Object.assign({}, localNewer ? cloud : local, localNewer ? local : cloud);
-            base.gold = Math.max(
-                Math.max(0, Math.floor(Number(local.gold) || 0)),
-                Math.max(0, Math.floor(Number(cloud.gold) || 0))
-            );
-            base.expPacks = Math.max(
-                Math.max(0, Math.floor(Number(local.expPacks) || 0)),
-                Math.max(0, Math.floor(Number(cloud.expPacks) || 0))
-            );
+
+            var localGold = Math.max(0, Math.floor(Number(local.gold) || 0));
+            var cloudGold = Math.max(0, Math.floor(Number(cloud.gold) || 0));
+            var localPacks = Math.max(0, Math.floor(Number(local.expPacks) || 0));
+            var cloudPacks = Math.max(0, Math.floor(Number(cloud.expPacks) || 0));
+
+            // 老師發放已加喺 cloud 數值；若最終用本機，要補上 grants
+            if (localNewer) {
+                base.gold = localGold + grantG;
+                base.expPacks = localPacks + grantX;
+            } else {
+                base.gold = cloudGold;
+                base.expPacks = cloudPacks;
+            }
+            if (!isFinite(base.gold) || base.gold < 0) base.gold = 0;
+            if (!isFinite(base.expPacks) || base.expPacks < 0) base.expPacks = 0;
+
             base.rankScore = Math.max(
                 Math.max(0, Math.floor(Number(local.rankScore) || 0)),
                 Math.max(0, Math.floor(Number(cloud.rankScore) || 0))
             );
             base.ownedMonsters = mergeOwnedMonsters(local.ownedMonsters, cloud.ownedMonsters);
+            stampUpdatedAt(base);
             return base;
         }
 
@@ -955,28 +967,33 @@
 
         /**
          * 套用雲端回傳 profile（login／save 後老師發放等）。
-         * save 回傳：金幣／EXP 以伺服器為準（已含 pending grants）；怪獸／積分若有亦同步。
+         * save 回傳已含 pending grants。唔用空 profile 清零；金幣／EXP 以伺服器為準（剛 save 過）。
          */
         function mergeCloudProfileIntoCurrentUser(profile, meta) {
             if (!currentUser || !profile || typeof profile !== 'object') return false;
+            if (isSparseProgressProfile(profile) && !isSparseProgressProfile(currentUser)) {
+                // 空雲端回傳唔好蓋本機
+                return false;
+            }
             let changed = false;
             if (profile.gold != null && Number(profile.gold) !== Number(currentUser.gold)) {
-                currentUser.gold = Math.max(0, Math.floor(Number(profile.gold) || 0));
-                changed = true;
+                var g = Math.floor(Number(profile.gold));
+                if (isFinite(g) && g >= 0) { currentUser.gold = g; changed = true; }
             }
             if (profile.expPacks != null && Number(profile.expPacks) !== Number(currentUser.expPacks)) {
-                currentUser.expPacks = Math.max(0, Math.floor(Number(profile.expPacks) || 0));
-                changed = true;
+                var x = Math.floor(Number(profile.expPacks));
+                if (isFinite(x) && x >= 0) { currentUser.expPacks = x; changed = true; }
             }
             if (profile.rankScore != null && Number(profile.rankScore) !== Number(currentUser.rankScore)) {
                 currentUser.rankScore = Math.max(0, Math.floor(Number(profile.rankScore) || 0));
                 changed = true;
             }
-            if (Array.isArray(profile.ownedMonsters)) {
-                currentUser.ownedMonsters = mergeOwnedMonsters(profile.ownedMonsters, []);
+            if (Array.isArray(profile.ownedMonsters) && profile.ownedMonsters.length) {
+                currentUser.ownedMonsters = mergeOwnedMonsters(profile.ownedMonsters, currentUser.ownedMonsters || []);
                 changed = true;
             }
             if (profile.updatedAt) currentUser.updatedAt = profile.updatedAt;
+            else stampUpdatedAt(currentUser);
             try { lastCloudProfile = Object.assign({}, profileForCloud(Object.assign({}, currentUser, profile))); } catch (e) {}
             if (changed) {
                 try {
@@ -1073,13 +1090,8 @@
                     if (g > 0 || x > 0) {
                         showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
                     }
-                    var localTs = parseUpdatedAt(currentUser);
-                    var cloudTs = parseUpdatedAt(cloud);
-                    // 雲端較新時仍做進度 max 合併，唔會用較舊本機單一欄位蓋掉雲端
-                    merged = mergeProgressProfiles(currentUser, cloud);
-                    if (cloudTs > localTs && !profilesProgressDiffer(currentUser, merged)) {
-                        // 本機無更新進度：保留雲端其餘欄位（已在 merge 內處理）
-                    }
+                    // 金幣／EXP 用 updatedAt；老師 grants 經 opts 補上（若選本機）
+                    merged = mergeProgressProfiles(currentUser, cloud, { grantedGold: g, grantedExp: x });
                 } else if (lastCloudProfile) {
                     merged = mergeProgressProfiles(currentUser, lastCloudProfile);
                 }
@@ -1496,22 +1508,60 @@
             }
         }
 
+        let battleBgmActive = false;
+
+        function getMenuBgmEl() { return document.getElementById('bgm-audio'); }
+        function getBattleBgmEl() { return document.getElementById('battle-bgm-audio'); }
+
+        function setBgmIconPlaying(playing) {
+            const icon = document.getElementById('bgm-icon');
+            if (!icon) return;
+            icon.className = playing
+                ? "fa-solid fa-volume-high text-pink-300 animate-pulse"
+                : "fa-solid fa-volume-xmark";
+        }
+
+        function startBattleBgm() {
+            battleBgmActive = true;
+            const menu = getMenuBgmEl();
+            const battle = getBattleBgmEl();
+            if (menu) { try { menu.pause(); } catch (e) {} }
+            if (!isAudioPlaying) return;
+            if (battle) {
+                battle.currentTime = 0;
+                battle.play().catch(function () {});
+            }
+        }
+
+        function stopBattleBgm() {
+            const wasBattle = battleBgmActive;
+            battleBgmActive = false;
+            const battle = getBattleBgmEl();
+            if (battle) { try { battle.pause(); battle.currentTime = 0; } catch (e) {} }
+            if (!isAudioPlaying || !wasBattle) return;
+            const menu = getMenuBgmEl();
+            if (menu) menu.play().catch(function () {});
+        }
+
         function toggleAudio() {
             initAudio();
-            const audio = document.getElementById('bgm-audio');
-            const icon = document.getElementById('bgm-icon');
+            const menu = getMenuBgmEl();
+            const battle = getBattleBgmEl();
+            const active = (battleBgmActive && battle) ? battle : menu;
 
             if (isAudioPlaying) {
-                audio.pause();
+                if (menu) menu.pause();
+                if (battle) battle.pause();
                 isAudioPlaying = false;
-                icon.className = "fa-solid fa-volume-xmark";
+                setBgmIconPlaying(false);
             } else {
-                audio.play().then(() => {
+                if (!active) return;
+                active.play().then(() => {
                     isAudioPlaying = true;
-                    icon.className = "fa-solid fa-volume-high text-pink-300 animate-pulse";
+                    setBgmIconPlaying(true);
                 }).catch(err => {
                     console.error("音樂播放失敗:", err);
-                    alert("音樂播放失敗，請確認資料夾內是否有『背景音樂_輕量.mp3』或『背景音樂.mp3』！");
+                    alert("音樂播放失敗，請確認資料夾內是否有『背景音樂_輕量.mp3』／『背景音樂_戰鬥.mp3』！");
                 });
             }
         }
@@ -1708,15 +1758,28 @@
                         password: password
                     });
                     if (res && res.ok && res.profile) {
-                        const cloudProfile = Object.assign({}, res.profile);
-                        // 本地仍保留密碼以便離線；雲端 profile 無 password
+                        const cloudRaw = Object.assign({}, res.profile);
+                        const localBefore = matchedUser || db[userKey] || null;
+                        const g = res.grantedGold ? Number(res.grantedGold) : 0;
+                        const x = res.grantedExp ? Number(res.grantedExp) : 0;
+                        // 合併本機／雲端（金幣／EXP 跟較新 updatedAt；空雲端唔蓋本機）
+                        let cloudProfile = mergeProgressProfiles(localBefore || {}, cloudRaw, {
+                            grantedGold: g,
+                            grantedExp: x
+                        });
                         cloudProfile.password = password;
                         if (!cloudProfile.nickname && nicknameHint) cloudProfile.nickname = nicknameHint;
-                        // 登入：雲端為金幣／EXP／積分／怪獸權威來源
-                        const localBefore = matchedUser || db[userKey] || null;
+                        // 保留學校班別等身份欄（雲端可能缺）
+                        if (localBefore) {
+                            ['school', 'className', 'classNo', 'nickname', 'isAdmin'].forEach(function (k) {
+                                if ((cloudProfile[k] == null || cloudProfile[k] === '') && localBefore[k] != null) {
+                                    cloudProfile[k] = localBefore[k];
+                                }
+                            });
+                        }
                         let differNote = '';
                         if (localBefore && profilesProgressDiffer(localBefore, cloudProfile)) {
-                            differNote = '已載入雲端存檔（本機與雲端不同，以雲端為準）。';
+                            differNote = '已合併雲端／本機存檔（金幣／EXP 以較新時間為準）。';
                         }
                         lastCloudProfile = Object.assign({}, cloudProfile);
                         delete lastCloudProfile.password;
@@ -1724,8 +1787,6 @@
                         saveUsersDatabase(db);
                         activePassword = password;
                         activeUserKey = userKey;
-                        const g = res.grantedGold ? Number(res.grantedGold) : 0;
-                        const x = res.grantedExp ? Number(res.grantedExp) : 0;
                         if (g > 0 || x > 0) {
                             errDiv.innerText = `登入成功！老師發放：金幣 +${g}，EXP包 +${x}`;
                             showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
@@ -1734,6 +1795,8 @@
                             if (differNote) showSyncToast(differNote);
                         }
                         loginUserSuccess(cloudProfile, password);
+                        // 合併後推返雲端，避免另一部機仲係舊數
+                        try { cloudSaveCurrentUser(); } catch (e) {}
                         return;
                     }
                     if (res && (res.error === 'bad_password' || res.error === 'not_found')) {
@@ -1826,6 +1889,12 @@
 
         function saveCurrentUserData() {
             if (!currentUser) return;
+            // 每次本機進度變更都打戳，合併時先以較新為準（消費後唔好被舊雲端回血）
+            stampUpdatedAt(currentUser);
+            if (!isFinite(Number(currentUser.gold)) || Number(currentUser.gold) < 0) currentUser.gold = 0;
+            if (!isFinite(Number(currentUser.expPacks)) || Number(currentUser.expPacks) < 0) currentUser.expPacks = 0;
+            currentUser.gold = Math.floor(Number(currentUser.gold) || 0);
+            currentUser.expPacks = Math.floor(Number(currentUser.expPacks) || 0);
             const db = getUsersDatabase();
             db[`user_${currentUser.nickname}`] = currentUser;
             saveUsersDatabase(db);
@@ -1916,15 +1985,22 @@
                 return;
             }
 
-            const views = ['home', 'gacha', 'monsters', 'adventure', 'battle', 'pvp', 'ranked'];
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'battle', 'ranked'];
             views.forEach(v => {
                 const el = document.getElementById(`view-${v}`);
                 if (el) el.classList.add('hidden');
             });
-            document.getElementById(`view-${viewName}`).classList.remove('hidden');
+            const target = document.getElementById(`view-${viewName}`);
+            if (target) target.classList.remove('hidden');
+
+            // 進出戰鬥切換 BGM
+            if (viewName === 'battle') {
+                try { startBattleBgm(); } catch (e) {}
+            } else {
+                try { stopBattleBgm(); } catch (e) {}
+            }
 
             if (viewName === 'monsters') renderMonsterCollection();
-            if (viewName === 'pvp') renderPvpRooms();
             if (viewName === 'ranked') renderLeaderboard();
         }
 
@@ -2105,6 +2181,9 @@
                             <button onclick="feedExpPack('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="w-full py-2 bg-gradient-to-r ${monLevel >= 40 ? 'from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed' : 'from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center">
                                 <i class="fa-solid fa-box-open mr-1.5"></i>${monLevel >= 40 ? '已達到最高 40LV' : '餵養EXP包 (+100經驗)'}
                             </button>
+                            <button onclick="feedExpPackMax('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="w-full py-2 bg-gradient-to-r ${monLevel >= 40 ? 'from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed' : 'from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center">
+                                <i class="fa-solid fa-angles-up mr-1.5"></i>${monLevel >= 40 ? '已滿級' : '一鍵升級（用盡可升嘅EXP包）'}
+                            </button>
                         </div>
                     ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">未解鎖 (祈願召喚獲得)</div>`}
                 `;
@@ -2112,8 +2191,10 @@
             });
         }
 
+        let feedExpBusy = false;
+
         function feedExpPack(monsterId) {
-            if (!currentUser) return;
+            if (!currentUser || feedExpBusy) return;
             if (currentUser.expPacks < 1) {
                 alert('EXP包不足！請完成數學冒險關卡獲取經驗包。');
                 return;
@@ -2156,6 +2237,84 @@
                 playSFX(1046.5, 'triangle', 0.4);
             } else {
                 playSFX(523.25, 'sine', 0.15);
+            }
+        }
+
+        /** 一鍵升級：連續餵 EXP 包直到不夠包或滿級 40 */
+        function feedExpPackMax(monsterId) {
+            if (!currentUser || feedExpBusy) return;
+            if (currentUser.expPacks < 1) {
+                alert('EXP包不足！請完成數學冒險關卡獲取經驗包。');
+                return;
+            }
+            const mon = currentUser.ownedMonsters.find(m => m.id === monsterId);
+            if (!mon) return;
+            if (mon.level >= 40) {
+                alert('該怪獸已達到最高等級 40LV！');
+                return;
+            }
+
+            // 預覽：模擬會用幾多包、升到幾級
+            const packsAvail = Math.max(0, Math.floor(Number(currentUser.expPacks) || 0));
+            let simLevel = mon.level;
+            let simExp = mon.exp;
+            let simPacks = 0;
+            while (simPacks < packsAvail && simLevel < 40) {
+                simPacks += 1;
+                simExp += 100;
+                let req = getRequiredExpForNextLevel(simLevel);
+                while (simExp >= req && simLevel < 40) {
+                    simExp -= req;
+                    simLevel += 1;
+                    req = getRequiredExpForNextLevel(simLevel);
+                }
+                if (simLevel >= 40) break;
+            }
+            const preview = `將用約 ${simPacks} 包 EXP 包，等級 ${mon.level} → ${simLevel}（可用 ${packsAvail} 包）。確定一鍵升級？`;
+            if (!confirm(preview)) return;
+
+            feedExpBusy = true;
+            try {
+                const prevRuntime = getMonsterRuntimeData(mon.id, mon.level);
+                const startLevel = mon.level;
+                let packsUsed = 0;
+
+                while (currentUser.expPacks >= 1 && mon.level < 40) {
+                    currentUser.expPacks -= 1;
+                    packsUsed += 1;
+                    mon.exp += 100;
+                    let req = getRequiredExpForNextLevel(mon.level);
+                    while (mon.exp >= req && mon.level < 40) {
+                        mon.exp -= req;
+                        mon.level += 1;
+                        req = getRequiredExpForNextLevel(mon.level);
+                    }
+                    if (mon.level >= 40) {
+                        mon.exp = 0;
+                        break;
+                    }
+                    // 安全上限：唔好超過可用包
+                    if (packsUsed >= packsAvail) break;
+                }
+
+                const newRuntime = getMonsterRuntimeData(mon.id, mon.level);
+                const levelsGained = mon.level - startLevel;
+                saveCurrentUserData();
+                renderMonsterCollection();
+
+                let msg = `一鍵升級完成！\n用咗 ${packsUsed} 包 EXP，等級 ${startLevel} → ${mon.level}`;
+                if (levelsGained <= 0) msg += '（經驗已增加，未夠升下一級）';
+                if (prevRuntime.name !== newRuntime.name) {
+                    msg += `\n✨ 【${prevRuntime.name}】進化為【${newRuntime.name}】！`;
+                    playSFX(1200, 'triangle', 0.6);
+                } else if (levelsGained > 0) {
+                    playSFX(1046.5, 'triangle', 0.4);
+                } else {
+                    playSFX(523.25, 'sine', 0.15);
+                }
+                alert(msg);
+            } finally {
+                feedExpBusy = false;
             }
         }
 
@@ -2488,11 +2647,14 @@
             if (!activePlayerMonster || !activeEnemy) return;
 
             const elemMult = getElementAdvantageMultiplier(activeEnemy.element, activePlayerMonster.element);
-            const dmg = Math.max(5, Math.floor((activeEnemy.atk - activePlayerMonster.def * 0.15) * elemMult));
+            // 超時同樣有足夠懲罰（約最大 HP 18%）
+            const hpChunk = Math.floor((activePlayerMonster.maxHp || 100) * 0.18);
+            const bossPart = Math.max(8, Math.floor((activeEnemy.atk - activePlayerMonster.def * 0.1) * elemMult));
+            const dmg = Math.max(hpChunk, bossPart);
             activePlayerMonster.currentHp -= dmg;
 
             triggerHurtEffect('player-svg-container');
-            showSkillPopup('enemy-skill-popup', `Boss襲擊 -${dmg} HP!`);
+            showSkillPopup('enemy-skill-popup', `超時遭 Boss 襲擊 -${dmg} HP!`);
 
             if (activePlayerMonster.currentHp <= 0) {
                 currentMonsterIndex++;
@@ -2519,27 +2681,70 @@
             return m ? parseInt(m[1], 10) : null;
         }
 
+        /** 題幹是否提及圖／表但實際冇 image（降權／剔除） */
+        function questionRefsMissingImage(q) {
+            if (!q || q.image) return false;
+            const t = String(q.question || '');
+            return /下圖|上圖|如圖|下表|上表|看圖|見圖/.test(t);
+        }
+
+        function questionStemLen(q) {
+            return String((q && q.question) || '').replace(/^【[^】]{0,80}】\s*/, '').length;
+        }
+
+        /** 戰鬥抽題：優先有圖；其次短純文字（≤55字）；剔超長同「有圖字冇圖檔」 */
+        function filterBattleQuestionPool(pool) {
+            const SHORT_MAX = 55;
+            const withImg = [];
+            const shortOk = [];
+            for (let i = 0; i < pool.length; i++) {
+                const q = pool[i];
+                if (!q) continue;
+                if (questionRefsMissingImage(q)) continue;
+                if (q.image) {
+                    withImg.push(q);
+                    continue;
+                }
+                if (questionStemLen(q) <= SHORT_MAX) shortOk.push(q);
+            }
+            // 有圖優先；不夠再用短題；再不夠先放寬到 80 字（仍剔缺圖引用）
+            if (withImg.length + shortOk.length >= 8) return withImg.concat(shortOk);
+            const medium = [];
+            for (let i = 0; i < pool.length; i++) {
+                const q = pool[i];
+                if (!q || q.image || questionRefsMissingImage(q)) continue;
+                if (questionStemLen(q) <= 80) medium.push(q);
+            }
+            const preferred = withImg.concat(shortOk.length ? shortOk : medium);
+            return preferred.length ? preferred : pool.filter(q => q && !questionRefsMissingImage(q));
+        }
+
         function pickWordBankQuestion() {
             const bank = (typeof window !== 'undefined' && window.WORD_QUESTION_BANK) ? window.WORD_QUESTION_BANK : null;
             if (!bank || !bank.length) return null;
             const g = gradeNumFromSelected();
             if (g !== 5 && g !== 6) return null;
 
-            const pool = bank.filter(q => q.grade === g);
+            const pool = filterBattleQuestionPool(bank.filter(q => q.grade === g));
             if (!pool.length) return null;
 
             let candidates = pool.filter(q => !usedWordQuestionIds.has(q.id));
             if (!candidates.length) {
-                // round exhausted — allow reuse but still avoid last few if possible
                 candidates = pool.slice();
                 usedWordQuestionIds.clear();
             }
 
-            const item = candidates[Math.floor(Math.random() * candidates.length)];
+            // 有圖題加權：約 55% 機會優先抽有圖（若有）
+            const imgCands = candidates.filter(q => q.image);
+            let item;
+            if (imgCands.length && Math.random() < 0.55) {
+                item = imgCands[Math.floor(Math.random() * imgCands.length)];
+            } else {
+                item = candidates[Math.floor(Math.random() * candidates.length)];
+            }
             usedWordQuestionIds.add(item.id);
 
             const opts = Array.isArray(item.options) ? item.options.slice() : [];
-            // reshuffle each time for randomness
             for (let i = opts.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 const tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
@@ -2981,7 +3186,10 @@
 
                 const elemMult = getElementAdvantageMultiplier(activePlayerMonster.element, activeEnemy.element);
                 const rawDmg = Math.floor(activePlayerMonster.atk * 1.8);
-                const dmg = Math.floor(rawDmg * elemMult);
+                let dmg = Math.floor(rawDmg * elemMult);
+                // 單次傷害上限：約 BOSS 最大 HP 28%，高 ATK 都要答啱幾題先穩贏
+                const hitCap = Math.max(45, Math.floor((activeEnemy.maxHp || 200) * 0.28));
+                dmg = Math.min(dmg, hitCap);
                 activeEnemy.hp -= dmg;
 
                 triggerHurtEffect('enemy-svg-container');
@@ -3014,7 +3222,11 @@
                 playSFX(220, 'sawtooth', 0.3);
 
                 const elemMult = getElementAdvantageMultiplier(activeEnemy.element, activePlayerMonster.element);
-                const dmg = Math.max(10, Math.floor(activeEnemy.atk * elemMult));
+                // 答錯必須痛：約玩家最大 HP 22–28%，再加 BOSS 攻擊，高等級亂答會很快全滅
+                const pct = 0.22 + Math.min(0.08, (activePlayerMonster.level || 1) * 0.0015);
+                const hpChunk = Math.floor((activePlayerMonster.maxHp || 100) * pct);
+                const bossPart = Math.max(12, Math.floor(activeEnemy.atk * elemMult * 1.15));
+                const dmg = Math.max(hpChunk, bossPart);
                 activePlayerMonster.currentHp -= dmg;
 
                 triggerHurtEffect('player-svg-container');
@@ -3115,30 +3327,7 @@
             switchView(isRankedMode ? 'ranked' : 'adventure');
         }
 
-        function renderPvpRooms() {
-            const list = document.getElementById('pvp-rooms-list');
-            if (!list) return;
-            list.innerHTML = `
-                <div class="glass-card p-5 rounded-3xl border border-pink-500/30 flex justify-between items-center">
-                    <div>
-                        <div class="text-xs text-pink-300 font-bold">房號 #1024 (公開)</div>
-                        <div class="font-black text-white text-base mt-0.5">挑戰者擂台 · 賭注 500 金幣</div>
-                        <div class="text-[10px] text-slate-400">房主: 數理達人 (小六)</div>
-                    </div>
-                    <button onclick="alert('PVP 房間匹配中，請等待對方加入！')" class="px-4 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-bold text-xs rounded-xl shadow-md">
-                        加入對決
-                    </button>
-                </div>
-            `;
-        }
-
-        function createPvpRoom(type) {
-            if (currentUser.gold < 500) {
-                alert('金幣不足 500！無法入場 PVP 賭注擂台。');
-                return;
-            }
-            alert(`已成功創建 ${type === 'public' ? '公開' : '私人'} PVP 房間！等待玩家加入對決中...`);
-        }
+        /* PVP 對決擂台：已停用（入口／房間邏輯已移除） */
     </script>
 </body>
 </html>
