@@ -1215,10 +1215,21 @@
             if (!isFinite(base.gold) || base.gold < 0) base.gold = 0;
             if (!isFinite(base.expPacks) || base.expPacks < 0) base.expPacks = 0;
 
-            base.rankScore = Math.max(
-                Math.max(0, Math.floor(Number(local.rankScore) || 0)),
-                Math.max(0, Math.floor(Number(cloud.rankScore) || 0))
-            );
+            // 積分：同 epoch 取 max；雲端 epoch 較高＝季節重置，跟雲端（唔好本機舊分救返）
+            var localEp = Math.max(0, Math.floor(Number(local.leaderboardEpoch) || 0));
+            var cloudEp = Math.max(0, Math.floor(Number(cloud.leaderboardEpoch) || 0));
+            var localRank = Math.max(0, Math.floor(Number(local.rankScore) || 0));
+            var cloudRank = Math.max(0, Math.floor(Number(cloud.rankScore) || 0));
+            if (cloudEp > localEp) {
+                base.rankScore = cloudRank;
+                base.leaderboardEpoch = cloudEp;
+            } else if (localEp > cloudEp) {
+                base.rankScore = localRank;
+                base.leaderboardEpoch = localEp;
+            } else {
+                base.rankScore = Math.max(localRank, cloudRank);
+                base.leaderboardEpoch = Math.max(localEp, cloudEp);
+            }
             base.ownedMonsters = mergeOwnedMonsters(local.ownedMonsters, cloud.ownedMonsters);
             stampUpdatedAt(base);
             return base;
@@ -1229,6 +1240,7 @@
             if (Math.floor(Number(a.gold) || 0) !== Math.floor(Number(b.gold) || 0)) return true;
             if (Math.floor(Number(a.expPacks) || 0) !== Math.floor(Number(b.expPacks) || 0)) return true;
             if (Math.floor(Number(a.rankScore) || 0) !== Math.floor(Number(b.rankScore) || 0)) return true;
+            if (Math.floor(Number(a.leaderboardEpoch) || 0) !== Math.floor(Number(b.leaderboardEpoch) || 0)) return true;
             var am = Array.isArray(a.ownedMonsters) ? a.ownedMonsters : [];
             var bm = Array.isArray(b.ownedMonsters) ? b.ownedMonsters : [];
             if (am.length !== bm.length) return true;
@@ -1283,7 +1295,7 @@
 
         /**
          * 套用雲端回傳 profile（login／save 後老師發放等）。
-         * 經 mergeProgressProfiles：積分取 max；金幣／EXP 跟較新 updatedAt（唔好用舊雲端蓋掉勝利獎勵）。
+         * 經 mergeProgressProfiles：積分同 epoch 取 max，雲端 epoch 較高則跟雲端（季節重置）；金幣／EXP 跟較新 updatedAt。
          * grants 經 opts 補上。唔用空 profile 清零。
          */
         function mergeCloudProfileIntoCurrentUser(profile, meta) {
@@ -1298,17 +1310,28 @@
                 gold: currentUser.gold,
                 expPacks: currentUser.expPacks,
                 rankScore: currentUser.rankScore,
+                leaderboardEpoch: currentUser.leaderboardEpoch,
                 updatedAt: currentUser.updatedAt
             };
             var merged = mergeProgressProfiles(currentUser, profile, {
                 grantedGold: grantG,
                 grantedExp: grantX
             });
-            // 再保險：積分只升唔跌
-            merged.rankScore = Math.max(
-                Math.max(0, Math.floor(Number(before.rankScore) || 0)),
-                Math.max(0, Math.floor(Number(merged.rankScore) || 0))
-            );
+            // 再保險：同 epoch 積分只升唔跌；雲端 epoch 較高＝重置，唔好本機舊分救返
+            var beforeEp = Math.max(0, Math.floor(Number(before.leaderboardEpoch) || 0));
+            var mergedEp = Math.max(0, Math.floor(Number(merged.leaderboardEpoch) || 0));
+            if (mergedEp > beforeEp) {
+                // keep merged.rankScore / leaderboardEpoch from merge (cloud reset)
+            } else if (beforeEp > mergedEp) {
+                merged.rankScore = Math.max(0, Math.floor(Number(before.rankScore) || 0));
+                merged.leaderboardEpoch = beforeEp;
+            } else {
+                merged.rankScore = Math.max(
+                    Math.max(0, Math.floor(Number(before.rankScore) || 0)),
+                    Math.max(0, Math.floor(Number(merged.rankScore) || 0))
+                );
+                merged.leaderboardEpoch = Math.max(beforeEp, mergedEp);
+            }
             var changed = profilesProgressDiffer(before, merged)
                 || String(before.updatedAt || '') !== String(merged.updatedAt || '');
             var goldBefore = Math.max(0, Math.floor(Number(before.gold) || 0));
@@ -1928,6 +1951,7 @@
                     gold: 99999,
                     expPacks: 999,
                     rankScore: 2500,
+                    leaderboardEpoch: 1,
                     isAdmin: true,
                     ownedMonsters: [
                         { id: 'fire_base', level: 35, exp: 0 },
@@ -1978,6 +2002,7 @@
                 gold: 1000,
                 expPacks: 2,
                 rankScore: 0,
+                leaderboardEpoch: 1,
                 updatedAt: new Date().toISOString(),
                 ownedMonsters: [
                     { id: 'fire_base', level: 1, exp: 0 },
@@ -2172,6 +2197,7 @@
                 currentUser.isAdmin = true;
             }
             if (currentUser.rankScore === undefined) currentUser.rankScore = 0;
+            if (currentUser.leaderboardEpoch === undefined || currentUser.leaderboardEpoch === null) currentUser.leaderboardEpoch = 0;
             if (!Array.isArray(currentUser.ownedMonsters)) currentUser.ownedMonsters = [];
 
             currentUser.ownedMonsters.forEach(m => {
