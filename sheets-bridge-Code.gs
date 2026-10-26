@@ -95,17 +95,22 @@ function parseNonNegInt(v) {
 }
 
 /**
- * Read F/G pending grants, add into profile, clear F/G, write D+E.
+ * Read F/G pending grants, add into profile.
+ * options.writeAlways: true → always write D+E (accountSave)；
+ * false → 只喺有發放時先寫入同清 F/G（accountLogin 零發放唔好改 updatedAt／重寫列）。
  * Returns { profile, grantedGold, grantedExp }.
  */
-function applyPendingGrants(sheet, row, profile) {
+function applyPendingGrants(sheet, row, profile, options) {
+  options = options || {};
+  var writeAlways = !!options.writeAlways;
   var p = profile && typeof profile === 'object' ? profile : {};
   var addGold = parseNonNegInt(sheet.getRange(row, 6).getValue());
   var addExp = parseNonNegInt(sheet.getRange(row, 7).getValue());
+  var hasGrants = addGold > 0 || addExp > 0;
 
-  var gold = parseNonNegInt(p.gold);
-  var packs = parseNonNegInt(p.expPacks);
   // allow zero base (new users); treat missing as 0
+  var gold;
+  var packs;
   if (p.gold == null || p.gold === '') gold = 0;
   else gold = Math.max(0, Math.floor(Number(p.gold) || 0));
   if (p.expPacks == null || p.expPacks === '') packs = 0;
@@ -116,14 +121,19 @@ function applyPendingGrants(sheet, row, profile) {
 
   p.gold = gold;
   p.expPacks = packs;
-  // 發放後打時間戳，客戶端合併先以較新為準
-  p.updatedAt = new Date().toISOString();
 
-  sheet.getRange(row, 4).setValue(JSON.stringify(p));
-  sheet.getRange(row, 5).setValue(nowHK());
-  if (addGold > 0 || addExp > 0) {
-    sheet.getRange(row, 6).setValue('');
-    sheet.getRange(row, 7).setValue('');
+  // 只喺真正發放時先 bump updatedAt；零發放 login 唔好令舊金幣看起來「較新」
+  if (hasGrants) {
+    p.updatedAt = new Date().toISOString();
+  }
+
+  if (writeAlways || hasGrants) {
+    sheet.getRange(row, 4).setValue(JSON.stringify(p));
+    sheet.getRange(row, 5).setValue(nowHK());
+    if (hasGrants) {
+      sheet.getRange(row, 6).setValue('');
+      sheet.getRange(row, 7).setValue('');
+    }
   }
 
   return { profile: p, grantedGold: addGold, grantedExp: addExp };
@@ -161,7 +171,8 @@ function accountLogin(data) {
   var profile = {};
   try { profile = JSON.parse(json); } catch (e) { profile = {}; }
 
-  var applied = applyPendingGrants(sheet, row, profile);
+  // 零發放唔重寫列／唔 bump updatedAt（避免蓋掉學生勝利金幣）
+  var applied = applyPendingGrants(sheet, row, profile, { writeAlways: false });
   return jsonOut({
     ok: true,
     action: 'login',
@@ -189,8 +200,8 @@ function accountSave(data) {
   // 確保有 updatedAt（客戶端合併用）
   if (!profile.updatedAt) profile.updatedAt = new Date().toISOString();
 
-  // 先寫入學生送來嘅存檔，再套用老師待發放（避免覆蓋發放）
-  var applied = applyPendingGrants(sheet, row, profile);
+  // 套用老師待發放後一律寫入學生送來嘅存檔（writeAlways）
+  var applied = applyPendingGrants(sheet, row, profile, { writeAlways: true });
   return jsonOut({
     ok: true,
     action: 'save',

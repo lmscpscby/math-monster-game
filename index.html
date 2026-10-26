@@ -1056,7 +1056,8 @@
 
         /**
          * 兩份存檔合併：
-         * - 金幣／EXP包：以較新 updatedAt 為準（避免消費後被舊雲端 Math.max「回血」）
+         * - 金幣／EXP包：以較新 updatedAt 為準（避免消費後被舊雲端 Math.max「回血」）；
+         *   若雲端 stamp 較新但金幣同 EXP 都低過本機 → 當過期／中毒 stamp，經濟跟本機
          * - 積分：取較大（只升唔跌）
          * - 怪獸：按 id 保留較高等級／經驗
          * - 其餘欄位偏向較新 updatedAt
@@ -1083,15 +1084,22 @@
             // 兩邊都無 timestamp：保守用本機（剛消費過）
             if (!localTs && !cloudTs) localNewer = true;
 
-            var base = Object.assign({}, localNewer ? cloud : local, localNewer ? local : cloud);
-
             var localGold = Math.max(0, Math.floor(Number(local.gold) || 0));
             var cloudGold = Math.max(0, Math.floor(Number(cloud.gold) || 0));
             var localPacks = Math.max(0, Math.floor(Number(local.expPacks) || 0));
             var cloudPacks = Math.max(0, Math.floor(Number(cloud.expPacks) || 0));
 
+            // 金幣／EXP：跟較新 updatedAt；但若雲端 stamp 較新而金幣同 EXP 包都低過本機，
+            // 當係中毒／過期 stamp（例如舊版 login 零發放都刷新 updatedAt），經濟欄改跟本機。
+            var economyLocalNewer = localNewer;
+            if (!economyLocalNewer && cloudGold < localGold && cloudPacks < localPacks) {
+                economyLocalNewer = true;
+            }
+
+            var base = Object.assign({}, localNewer ? cloud : local, localNewer ? local : cloud);
+
             // 老師發放已加喺 cloud 數值；若最終用本機，要補上 grants
-            if (localNewer) {
+            if (economyLocalNewer) {
                 base.gold = localGold + grantG;
                 base.expPacks = localPacks + grantX;
             } else {
@@ -1197,6 +1205,17 @@
             );
             var changed = profilesProgressDiffer(before, merged)
                 || String(before.updatedAt || '') !== String(merged.updatedAt || '');
+            var goldBefore = Math.max(0, Math.floor(Number(before.gold) || 0));
+            var packsBefore = Math.max(0, Math.floor(Number(before.expPacks) || 0));
+            var goldAfter = Math.max(0, Math.floor(Number(merged.gold) || 0));
+            var packsAfter = Math.max(0, Math.floor(Number(merged.expPacks) || 0));
+            // 唔好把金幣／EXP 下降當「較新」：保留原本 updatedAt，避免之後再被舊雲端蓋
+            if ((goldAfter < goldBefore || packsAfter < packsBefore) && before.updatedAt) {
+                merged.updatedAt = before.updatedAt;
+            } else if (goldAfter === goldBefore && packsAfter === packsBefore && before.updatedAt) {
+                // 經濟無變：保留本機時間戳，唔因 merge 亂 stamp
+                merged.updatedAt = before.updatedAt;
+            }
             var pwd = currentUser.password || activePassword;
             var nick = currentUser.nickname;
             Object.keys(merged).forEach(function (k) {
@@ -1258,51 +1277,6 @@
                 } catch (e) {}
             }
 
-            function applyMergedLocally(merged) {
-                var localSnapshot = {
-                    gold: currentUser.gold,
-                    expPacks: currentUser.expPacks,
-                    rankScore: currentUser.rankScore,
-                    updatedAt: currentUser.updatedAt,
-                    ownedMonsters: currentUser.ownedMonsters
-                };
-                // 若合併期間本機又有更新（例如勝利獎勵），再同最新本機合併一次
-                if (parseUpdatedAt(localSnapshot) > parseUpdatedAt(merged)
-                    || Math.max(0, Math.floor(Number(localSnapshot.rankScore) || 0))
-                        > Math.max(0, Math.floor(Number(merged.rankScore) || 0))) {
-                    merged = mergeProgressProfiles(localSnapshot, merged);
-                } else {
-                    // 積分永遠 max；金幣／EXP 若本機較新唔好被舊合併結果蓋掉
-                    merged.rankScore = Math.max(
-                        Math.max(0, Math.floor(Number(localSnapshot.rankScore) || 0)),
-                        Math.max(0, Math.floor(Number(merged.rankScore) || 0))
-                    );
-                    if (parseUpdatedAt(localSnapshot) > parseUpdatedAt(merged)) {
-                        merged.gold = Math.max(0, Math.floor(Number(localSnapshot.gold) || 0));
-                        merged.expPacks = Math.max(0, Math.floor(Number(localSnapshot.expPacks) || 0));
-                        merged.updatedAt = localSnapshot.updatedAt;
-                        if (Array.isArray(localSnapshot.ownedMonsters)) {
-                            merged.ownedMonsters = mergeOwnedMonsters(localSnapshot.ownedMonsters, merged.ownedMonsters);
-                        }
-                    }
-                }
-                var pwd = currentUser.password || activePassword;
-                var nick = currentUser.nickname;
-                Object.keys(merged).forEach(function (k) {
-                    if (k === 'password' || k === '_pwd') return;
-                    currentUser[k] = merged[k];
-                });
-                if (pwd) currentUser.password = pwd;
-                if (nick) currentUser.nickname = nick;
-                stampUpdatedAt(currentUser);
-                try {
-                    var db = getUsersDatabase();
-                    db['user_' + currentUser.nickname] = currentUser;
-                    saveUsersDatabase(db);
-                } catch (e) {}
-                try { updateUserDashboardUI(); } catch (e) {}
-            }
-
             function postSave(profileObj) {
                 return callBridge({
                     action: 'save',
@@ -1311,44 +1285,17 @@
                     profile: profileForCloud(profileObj)
                 }).then(function (res) {
                     if (res && res.ok && res.profile) {
-                        // 用完整 mergeProgressProfiles，唔好盲覆寫本機勝利獎勵
+                        // 只合併老師發放等回傳；mergeProgressProfiles 防舊雲端蓋新本機
                         mergeCloudProfileIntoCurrentUser(res.profile, res);
                     }
                 });
             }
 
-            // 先 login 拉最新雲端 → max／怪獸合併 → 再 save，避免舊本機蓋掉另一部機進度
-            callBridge({
-                action: 'login',
-                key: activeUserKey,
-                password: activePassword
-            }).then(function (loginRes) {
-                // 合併時用「而家」本機（可能已含勝利獎勵），唔好用過時 localAtStart 覆蓋
-                var localNow = currentUser;
-                var merged = profileForCloud(localNow);
-                if (loginRes && loginRes.ok && loginRes.profile) {
-                    var cloud = loginRes.profile;
-                    lastCloudProfile = Object.assign({}, cloud);
-                    var g = loginRes.grantedGold ? Number(loginRes.grantedGold) : 0;
-                    var x = loginRes.grantedExp ? Number(loginRes.grantedExp) : 0;
-                    if (g > 0 || x > 0) {
-                        showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
-                    }
-                    // 金幣／EXP 用 updatedAt；老師 grants 經 opts 補上（若選本機）
-                    merged = mergeProgressProfiles(localNow, cloud, { grantedGold: g, grantedExp: x });
-                } else if (lastCloudProfile) {
-                    merged = mergeProgressProfiles(localNow, lastCloudProfile);
-                }
-                applyMergedLocally(merged);
-                return postSave(currentUser);
-            }).catch(function () {
-                var merged = lastCloudProfile
-                    ? mergeProgressProfiles(currentUser, lastCloudProfile)
-                    : profileForCloud(currentUser);
-                applyMergedLocally(merged);
-                return postSave(currentUser).catch(function () {
-                    fallbackNoCorsSave(currentUser);
-                });
+            // 直接 save，唔先 login。舊版 login 零發放都會刷新 updatedAt，
+            // 令舊金幣看起來較新，再經 merge 蓋掉勝利獎勵。
+            // login→merge 只留喺真正登入／還原 session。
+            postSave(currentUser).catch(function () {
+                fallbackNoCorsSave(currentUser);
             }).finally(function () {
                 cloudSaveInFlight = false;
                 if (cloudSavePending) {
