@@ -985,6 +985,7 @@
 
         let lastCloudProfile = null;
         let cloudSaveInFlight = false;
+        let cloudSavePending = false;
         let cloudSaveTimer = null;
 
         function showSyncToast(msg) {
@@ -1168,7 +1169,8 @@
 
         /**
          * 套用雲端回傳 profile（login／save 後老師發放等）。
-         * save 回傳已含 pending grants。唔用空 profile 清零；金幣／EXP 以伺服器為準（剛 save 過）。
+         * 經 mergeProgressProfiles：積分取 max；金幣／EXP 跟較新 updatedAt（唔好用舊雲端蓋掉勝利獎勵）。
+         * grants 經 opts 補上。唔用空 profile 清零。
          */
         function mergeCloudProfileIntoCurrentUser(profile, meta) {
             if (!currentUser || !profile || typeof profile !== 'object') return false;
@@ -1176,26 +1178,34 @@
                 // 空雲端回傳唔好蓋本機
                 return false;
             }
-            let changed = false;
-            if (profile.gold != null && Number(profile.gold) !== Number(currentUser.gold)) {
-                var g = Math.floor(Number(profile.gold));
-                if (isFinite(g) && g >= 0) { currentUser.gold = g; changed = true; }
-            }
-            if (profile.expPacks != null && Number(profile.expPacks) !== Number(currentUser.expPacks)) {
-                var x = Math.floor(Number(profile.expPacks));
-                if (isFinite(x) && x >= 0) { currentUser.expPacks = x; changed = true; }
-            }
-            if (profile.rankScore != null && Number(profile.rankScore) !== Number(currentUser.rankScore)) {
-                currentUser.rankScore = Math.max(0, Math.floor(Number(profile.rankScore) || 0));
-                changed = true;
-            }
-            if (Array.isArray(profile.ownedMonsters) && profile.ownedMonsters.length) {
-                currentUser.ownedMonsters = mergeOwnedMonsters(profile.ownedMonsters, currentUser.ownedMonsters || []);
-                changed = true;
-            }
-            if (profile.updatedAt) currentUser.updatedAt = profile.updatedAt;
-            else stampUpdatedAt(currentUser);
-            try { lastCloudProfile = Object.assign({}, profileForCloud(Object.assign({}, currentUser, profile))); } catch (e) {}
+            var grantG = meta && meta.grantedGold ? Number(meta.grantedGold) : 0;
+            var grantX = meta && meta.grantedExp ? Number(meta.grantedExp) : 0;
+            var before = {
+                gold: currentUser.gold,
+                expPacks: currentUser.expPacks,
+                rankScore: currentUser.rankScore,
+                updatedAt: currentUser.updatedAt
+            };
+            var merged = mergeProgressProfiles(currentUser, profile, {
+                grantedGold: grantG,
+                grantedExp: grantX
+            });
+            // 再保險：積分只升唔跌
+            merged.rankScore = Math.max(
+                Math.max(0, Math.floor(Number(before.rankScore) || 0)),
+                Math.max(0, Math.floor(Number(merged.rankScore) || 0))
+            );
+            var changed = profilesProgressDiffer(before, merged)
+                || String(before.updatedAt || '') !== String(merged.updatedAt || '');
+            var pwd = currentUser.password || activePassword;
+            var nick = currentUser.nickname;
+            Object.keys(merged).forEach(function (k) {
+                if (k === 'password' || k === '_pwd') return;
+                currentUser[k] = merged[k];
+            });
+            if (pwd) currentUser.password = pwd;
+            if (nick) currentUser.nickname = nick;
+            try { lastCloudProfile = Object.assign({}, profileForCloud(currentUser)); } catch (e) {}
             if (changed) {
                 try {
                     const db = getUsersDatabase();
@@ -1205,11 +1215,9 @@
                 try { updateUserDashboardUI(); } catch (e) {}
                 try { renderLeaderboard(); } catch (e) {}
                 try { renderMonsterCollection(); } catch (e) {}
-                const g = meta && meta.grantedGold ? Number(meta.grantedGold) : 0;
-                const x = meta && meta.grantedExp ? Number(meta.grantedExp) : 0;
-                if (g > 0 || x > 0) {
-                    try { console.log('[老師發放] +金幣', g, '+EXP包', x); } catch (e) {}
-                    showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
+                if (grantG > 0 || grantX > 0) {
+                    try { console.log('[老師發放] +金幣', grantG, '+EXP包', grantX); } catch (e) {}
+                    showSyncToast('老師發放：金幣 +' + grantG + '，EXP包 +' + grantX);
                 }
             }
             return changed;
@@ -1226,8 +1234,13 @@
 
         function cloudSaveCurrentUserNow() {
             if (!SHEET_REPORT_URL || !currentUser || !activePassword || !activeUserKey) return;
-            if (cloudSaveInFlight) return;
+            if (cloudSaveInFlight) {
+                // 進行中唔丟棄：勝利／消費後嘅最新進度要排隊再上傳
+                cloudSavePending = true;
+                return;
+            }
             cloudSaveInFlight = true;
+            cloudSavePending = false;
 
             function fallbackNoCorsSave(profileObj) {
                 try {
@@ -1246,6 +1259,33 @@
             }
 
             function applyMergedLocally(merged) {
+                var localSnapshot = {
+                    gold: currentUser.gold,
+                    expPacks: currentUser.expPacks,
+                    rankScore: currentUser.rankScore,
+                    updatedAt: currentUser.updatedAt,
+                    ownedMonsters: currentUser.ownedMonsters
+                };
+                // 若合併期間本機又有更新（例如勝利獎勵），再同最新本機合併一次
+                if (parseUpdatedAt(localSnapshot) > parseUpdatedAt(merged)
+                    || Math.max(0, Math.floor(Number(localSnapshot.rankScore) || 0))
+                        > Math.max(0, Math.floor(Number(merged.rankScore) || 0))) {
+                    merged = mergeProgressProfiles(localSnapshot, merged);
+                } else {
+                    // 積分永遠 max；金幣／EXP 若本機較新唔好被舊合併結果蓋掉
+                    merged.rankScore = Math.max(
+                        Math.max(0, Math.floor(Number(localSnapshot.rankScore) || 0)),
+                        Math.max(0, Math.floor(Number(merged.rankScore) || 0))
+                    );
+                    if (parseUpdatedAt(localSnapshot) > parseUpdatedAt(merged)) {
+                        merged.gold = Math.max(0, Math.floor(Number(localSnapshot.gold) || 0));
+                        merged.expPacks = Math.max(0, Math.floor(Number(localSnapshot.expPacks) || 0));
+                        merged.updatedAt = localSnapshot.updatedAt;
+                        if (Array.isArray(localSnapshot.ownedMonsters)) {
+                            merged.ownedMonsters = mergeOwnedMonsters(localSnapshot.ownedMonsters, merged.ownedMonsters);
+                        }
+                    }
+                }
                 var pwd = currentUser.password || activePassword;
                 var nick = currentUser.nickname;
                 Object.keys(merged).forEach(function (k) {
@@ -1271,6 +1311,7 @@
                     profile: profileForCloud(profileObj)
                 }).then(function (res) {
                     if (res && res.ok && res.profile) {
+                        // 用完整 mergeProgressProfiles，唔好盲覆寫本機勝利獎勵
                         mergeCloudProfileIntoCurrentUser(res.profile, res);
                     }
                 });
@@ -1282,7 +1323,9 @@
                 key: activeUserKey,
                 password: activePassword
             }).then(function (loginRes) {
-                var merged = profileForCloud(currentUser);
+                // 合併時用「而家」本機（可能已含勝利獎勵），唔好用過時 localAtStart 覆蓋
+                var localNow = currentUser;
+                var merged = profileForCloud(localNow);
                 if (loginRes && loginRes.ok && loginRes.profile) {
                     var cloud = loginRes.profile;
                     lastCloudProfile = Object.assign({}, cloud);
@@ -1292,9 +1335,9 @@
                         showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
                     }
                     // 金幣／EXP 用 updatedAt；老師 grants 經 opts 補上（若選本機）
-                    merged = mergeProgressProfiles(currentUser, cloud, { grantedGold: g, grantedExp: x });
+                    merged = mergeProgressProfiles(localNow, cloud, { grantedGold: g, grantedExp: x });
                 } else if (lastCloudProfile) {
-                    merged = mergeProgressProfiles(currentUser, lastCloudProfile);
+                    merged = mergeProgressProfiles(localNow, lastCloudProfile);
                 }
                 applyMergedLocally(merged);
                 return postSave(currentUser);
@@ -1308,6 +1351,11 @@
                 });
             }).finally(function () {
                 cloudSaveInFlight = false;
+                if (cloudSavePending) {
+                    cloudSavePending = false;
+                    // 立即再傳最新本機（含勝利獎勵）；唔經 debounce 以免再被丟棄
+                    cloudSaveCurrentUserNow();
+                }
             });
         }
 
@@ -2124,8 +2172,10 @@
             stampUpdatedAt(currentUser);
             if (!isFinite(Number(currentUser.gold)) || Number(currentUser.gold) < 0) currentUser.gold = 0;
             if (!isFinite(Number(currentUser.expPacks)) || Number(currentUser.expPacks) < 0) currentUser.expPacks = 0;
+            if (!isFinite(Number(currentUser.rankScore)) || Number(currentUser.rankScore) < 0) currentUser.rankScore = 0;
             currentUser.gold = Math.floor(Number(currentUser.gold) || 0);
             currentUser.expPacks = Math.floor(Number(currentUser.expPacks) || 0);
+            currentUser.rankScore = Math.floor(Number(currentUser.rankScore) || 0);
             const db = getUsersDatabase();
             db[`user_${currentUser.nickname}`] = currentUser;
             saveUsersDatabase(db);
@@ -3639,11 +3689,16 @@
 
             if (isRankedMode) {
                 goldReward = 300;
-                currentUser.rankScore += currentRankedBonus;
+                currentUser.rankScore = Math.max(0, Math.floor(Number(currentUser.rankScore) || 0)) + Math.max(0, Math.floor(Number(currentRankedBonus) || 0));
             }
 
-            currentUser.gold += goldReward;
-            currentUser.expPacks += expPackReward;
+            currentUser.gold = Math.max(0, Math.floor(Number(currentUser.gold) || 0)) + goldReward;
+            currentUser.expPacks = Math.max(0, Math.floor(Number(currentUser.expPacks) || 0)) + expPackReward;
+            if (!isFinite(Number(currentUser.rankScore)) || Number(currentUser.rankScore) < 0) {
+                currentUser.rankScore = 0;
+            } else {
+                currentUser.rankScore = Math.floor(Number(currentUser.rankScore) || 0);
+            }
 
             saveCurrentUserData();
 
