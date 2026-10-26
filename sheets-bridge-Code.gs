@@ -238,6 +238,15 @@ function progressReport(data) {
 }
 
 
+/** 正規化班別：去空白、大寫 → 1A–6D */
+function normalizeClassName(className) {
+  var s = String(className || '').toUpperCase().replace(/\s+/g, '');
+  s = s.replace(/[Ａ-Ｚ]/g, function (ch) { return String.fromCharCode(ch.charCodeAt(0) - 65248); });
+  s = s.replace(/[０-９]/g, function (ch) { return String.fromCharCode(ch.charCodeAt(0) - 65248); });
+  var m = s.match(/([1-6])([A-D])/);
+  return m ? (m[1] + m[2]) : String(className || '').trim();
+}
+
 /** 班別 → 年級（與前端 parseGradeFromClass 一致） */
 function parseGradeFromClass(className) {
   var s = String(className || '');
@@ -348,7 +357,8 @@ function playerStats(data) {
     if (!key) continue;
     totalAccounts++;
     var entry = publicEntryFromProfile(values[i][2], values[i][3], values[i][4]);
-    var klass = entry.className || '未填班別';
+    var klass = normalizeClassName(entry.className) || entry.className || '未填班別';
+    if (!klass) klass = '未填班別';
     var grade = entry.grade || 'G6';
     byClass[klass] = (byClass[klass] || 0) + 1;
     byGrade[grade] = (byGrade[grade] || 0) + 1;
