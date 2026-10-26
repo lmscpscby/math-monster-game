@@ -2005,8 +2005,13 @@
             document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
             const activeSessionNick = localStorage.getItem('math_monster_active_session');
             const db = getUsersDatabase();
-            if (activeSessionNick && db[`user_${activeSessionNick}`]) {
-                loginUserSuccess(db[`user_${activeSessionNick}`]);
+            const sessionKey = activeSessionNick ? `user_${activeSessionNick}` : '';
+            if (activeSessionNick && db[sessionKey]) {
+                // 自動還原 session 時一併帶返本機密碼／帳戶鍵，管理員統計同雲端 sync 先用得
+                activeUserKey = sessionKey;
+                const savedPwd = db[sessionKey].password || null;
+                if (savedPwd) activePassword = savedPwd;
+                loginUserSuccess(db[sessionKey], savedPwd || undefined);
             }
 
             document.addEventListener('click', function unlockAudio() {
