@@ -318,9 +318,9 @@ function authenticateAccount(key, password) {
 function isAdminProfile(profile, key) {
   if (profile && profile.isAdmin === true) return true;
   var nick = String((profile && (profile.nickname || profile.displayName || profile.alias)) || '').trim().toLowerCase();
-  if (nick === 'mr to') return true;
+  if (nick === 'mr to' || nick === 'yin') return true;
   var k = String(key || '').trim().toLowerCase();
-  if (k === 'user_mr to' || k === 'user_mrto') return true;
+  if (k === 'user_mr to' || k === 'user_mrto' || k === 'user_yin') return true;
   return false;
 }
 

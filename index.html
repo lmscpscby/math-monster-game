@@ -1831,8 +1831,8 @@
                             });
                             if (localBefore.isAdmin) cloudProfile.isAdmin = true;
                         }
-                        // 內建管理員別名兼容（本機 seed 帳戶）
-                        if (String(cloudProfile.nickname || '').trim().toLowerCase() === 'mr to') {
+                        // 內建管理員別名兼容（mr to／yin）
+                        if (isBuiltInAdmin(cloudProfile.nickname || nicknameHint, userKey)) {
                             cloudProfile.isAdmin = true;
                         }
                         let differNote = '';
@@ -1896,10 +1896,19 @@
             return 'G6';
         }
 
+
+        function isBuiltInAdmin(nickname, userKey) {
+            var nick = String(nickname || '').trim().toLowerCase();
+            var key = String(userKey || '').trim().toLowerCase();
+            if (nick === 'mr to' || nick === 'yin') return true;
+            if (key === 'user_mr to' || key === 'user_mrto' || key === 'user_yin') return true;
+            return false;
+        }
+
         function loginUserSuccess(userObj, passwordOpt) {
             currentUser = userObj;
 
-            if (String(currentUser.nickname || '').trim().toLowerCase() === 'mr to') {
+            if (isBuiltInAdmin(currentUser.nickname, activeUserKey || ('user_' + (currentUser.nickname || '')))) {
                 currentUser.isAdmin = true;
             }
             if (currentUser.rankScore === undefined) currentUser.rankScore = 0;
