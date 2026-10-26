@@ -111,6 +111,112 @@
         .animate-skill-popup {
             animation: float-skill-text 1.2s ease-out forwards;
         }
+
+        /* ===== Elemental attack VFX (水/火/草/雷) ===== */
+        #battle-vfx-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 30;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .battle-vfx-burst {
+            position: absolute;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .battle-vfx-flash {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 140px;
+            height: 140px;
+            margin: -70px 0 0 -70px;
+            border-radius: 9999px;
+            opacity: 0;
+            animation: battle-vfx-flash-pop 0.55s ease-out forwards;
+            mix-blend-mode: screen;
+        }
+        .battle-vfx-burst[data-element="water"] .battle-vfx-flash {
+            background: radial-gradient(circle, rgba(96,165,250,0.95) 0%, rgba(37,99,235,0.45) 45%, transparent 70%);
+            box-shadow: 0 0 40px rgba(59,130,246,0.8);
+        }
+        .battle-vfx-burst[data-element="fire"] .battle-vfx-flash {
+            background: radial-gradient(circle, rgba(251,146,60,0.95) 0%, rgba(239,68,68,0.5) 45%, transparent 70%);
+            box-shadow: 0 0 40px rgba(249,115,22,0.85);
+        }
+        .battle-vfx-burst[data-element="grass"] .battle-vfx-flash {
+            background: radial-gradient(circle, rgba(74,222,128,0.95) 0%, rgba(22,163,74,0.5) 45%, transparent 70%);
+            box-shadow: 0 0 40px rgba(34,197,94,0.8);
+        }
+        .battle-vfx-burst[data-element="thunder"] .battle-vfx-flash {
+            background: radial-gradient(circle, rgba(254,240,138,0.98) 0%, rgba(250,204,21,0.55) 40%, transparent 70%);
+            box-shadow: 0 0 48px rgba(250,204,21,0.9);
+        }
+        @keyframes battle-vfx-flash-pop {
+            0% { opacity: 0; transform: scale(0.35); }
+            25% { opacity: 1; transform: scale(1.15); }
+            100% { opacity: 0; transform: scale(1.55); }
+        }
+        .battle-vfx-sheet {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            image-rendering: auto;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.35));
+            opacity: 0.95;
+            animation-timing-function: steps(1);
+            animation-fill-mode: forwards;
+        }
+        .battle-vfx-burst[data-element="fire"] .battle-vfx-sheet {
+            width: 96px; height: 160px; margin: -80px 0 0 -48px;
+            background-image: url('vfx/fire.png');
+            animation: battle-vfx-sheet-fire 0.6s steps(12) forwards;
+        }
+        .battle-vfx-burst[data-element="water"] .battle-vfx-sheet {
+            width: 160px; height: 96px; margin: -48px 0 0 -80px;
+            background-image: url('vfx/water.png');
+            animation: battle-vfx-sheet-water 0.65s steps(12) forwards;
+        }
+        .battle-vfx-burst[data-element="grass"] .battle-vfx-sheet {
+            width: 128px; height: 128px; margin: -64px 0 0 -64px;
+            background-image: url('vfx/grass.png');
+            animation: battle-vfx-sheet-grass 0.6s steps(12) forwards;
+        }
+        .battle-vfx-burst[data-element="thunder"] .battle-vfx-sheet {
+            width: 128px; height: 160px; margin: -80px 0 0 -64px;
+            background-image: url('vfx/thunder.png');
+            animation: battle-vfx-sheet-thunder 0.55s steps(10) forwards;
+        }
+        @keyframes battle-vfx-sheet-fire {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1152px 0; opacity: 0.15; }
+        }
+        @keyframes battle-vfx-sheet-water {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1920px 0; opacity: 0.15; }
+        }
+        @keyframes battle-vfx-sheet-grass {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1536px 0; opacity: 0.15; }
+        }
+        @keyframes battle-vfx-sheet-thunder {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1280px 0; opacity: 0.1; }
+        }
+        .battle-vfx-particles {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 180px;
+            height: 180px;
+            margin: -90px 0 0 -90px;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
@@ -706,6 +812,8 @@
             <!-- Arena: 2-row grid — enemy UR, player LL; both sprites fully inside -->
             <div id="pokemon-battle-arena" class="relative w-full rounded-2xl border-2 border-pink-500/40 bg-gradient-to-b from-slate-950 via-purple-950/80 to-slate-950 p-2 sm:p-3 overflow-hidden h-[32vh] md:h-[36vh] max-h-[340px] min-h-[220px] grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 shadow-xl">
                 <div class="absolute inset-0 bg-[radial-gradient(#ec4899_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none"></div>
+                <!-- Elemental attack VFX overlay (does not block clicks) -->
+                <div id="battle-vfx-layer" aria-hidden="true"></div>
 
                 <!-- Row1 Col1: empty -->
                 <div class="relative z-0 min-h-0"></div>
@@ -2919,6 +3027,7 @@
             activePlayerMonster.currentHp -= dmg;
 
             triggerHurtEffect('player-svg-container');
+            playElementAttackVfx(activeEnemy.element, 'player');
             showSkillPopup('enemy-skill-popup', `超時遭 Boss 襲擊 -${dmg} HP!`);
 
             if (activePlayerMonster.currentHp <= 0) {
@@ -3458,6 +3567,7 @@
                 activeEnemy.hp -= dmg;
 
                 triggerHurtEffect('enemy-svg-container');
+                playElementAttackVfx(activePlayerMonster.element, 'enemy');
                 let skillDesc = `${activePlayerMonster.skillText} -${dmg} HP!`;
                 if (elemMult > 1.0) skillDesc += ` (屬性克制 1.5倍!)`;
                 else if (elemMult < 1.0) skillDesc += ` (屬性被克 0.7倍)`;
@@ -3495,6 +3605,7 @@
                 activePlayerMonster.currentHp -= dmg;
 
                 triggerHurtEffect('player-svg-container');
+                playElementAttackVfx(activeEnemy.element, 'player');
                 showSkillPopup('enemy-skill-popup', `答錯受到反擊 -${dmg} HP!`);
 
                 if (activePlayerMonster.currentHp <= 0) {
@@ -3568,6 +3679,122 @@
             }));
             alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
             exitBattle();
+        }
+
+
+        /**
+         * Play a short elemental attack burst over the hit sprite.
+         * @param {string} element - water|fire|grass|thunder
+         * @param {'enemy'|'player'} targetSide
+         */
+        function playElementAttackVfx(element, targetSide) {
+            const layer = document.getElementById('battle-vfx-layer');
+            const arena = document.getElementById('pokemon-battle-arena');
+            const targetId = targetSide === 'enemy' ? 'enemy-svg-container' : 'player-svg-container';
+            const target = document.getElementById(targetId);
+            if (!layer || !arena || !target) return;
+
+            const el = String(element || 'fire').toLowerCase();
+            const known = (el === 'water' || el === 'fire' || el === 'grass' || el === 'thunder') ? el : 'fire';
+
+            const arenaRect = arena.getBoundingClientRect();
+            const targetRect = target.getBoundingClientRect();
+            const cx = targetRect.left - arenaRect.left + targetRect.width / 2;
+            const cy = targetRect.top - arenaRect.top + targetRect.height / 2;
+
+            const burst = document.createElement('div');
+            burst.className = 'battle-vfx-burst';
+            burst.dataset.element = known;
+            burst.style.left = `${cx}px`;
+            burst.style.top = `${cy}px`;
+
+            const flash = document.createElement('div');
+            flash.className = 'battle-vfx-flash';
+            burst.appendChild(flash);
+
+            const sheet = document.createElement('div');
+            sheet.className = 'battle-vfx-sheet';
+            burst.appendChild(sheet);
+
+            // Extra canvas particles for readability on dark arena
+            const canvas = document.createElement('canvas');
+            canvas.className = 'battle-vfx-particles';
+            canvas.width = 180;
+            canvas.height = 180;
+            burst.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+            const colors = {
+                water: ['#93c5fd', '#3b82f6', '#e0f2fe'],
+                fire: ['#fdba74', '#f97316', '#fecaca'],
+                grass: ['#86efac', '#22c55e', '#d9f99d'],
+                thunder: ['#fef08a', '#facc15', '#ffffff']
+            }[known];
+            const parts = [];
+            for (let i = 0; i < 22; i++) {
+                const ang = Math.random() * Math.PI * 2;
+                const spd = 1.2 + Math.random() * 3.2;
+                parts.push({
+                    x: 90, y: 90,
+                    vx: Math.cos(ang) * spd,
+                    vy: Math.sin(ang) * spd - (known === 'fire' ? 1.2 : 0),
+                    r: 2 + Math.random() * 3.5,
+                    life: 1,
+                    color: colors[i % colors.length],
+                    leaf: known === 'grass'
+                });
+            }
+            const start = performance.now();
+            const duration = 650;
+            function tick(now) {
+                const t = Math.min(1, (now - start) / duration);
+                ctx.clearRect(0, 0, 180, 180);
+                for (const p of parts) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (known === 'fire') p.vy -= 0.04;
+                    if (known === 'water') p.vy += 0.05;
+                    p.life = 1 - t;
+                    ctx.globalAlpha = Math.max(0, p.life);
+                    ctx.fillStyle = p.color;
+                    if (p.leaf) {
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(t * 4 + p.vx);
+                        ctx.beginPath();
+                        ctx.ellipse(0, 0, p.r * 1.6, p.r * 0.7, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    } else if (known === 'thunder') {
+                        ctx.fillRect(p.x - 1, p.y - p.r * 2, 2, p.r * 4);
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r * (1 - t * 0.4), 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+                // thunder bolt stroke
+                if (known === 'thunder' && t < 0.55) {
+                    ctx.globalAlpha = 1 - t * 1.4;
+                    ctx.strokeStyle = '#fef9c3';
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.moveTo(90, 20);
+                    ctx.lineTo(100, 70);
+                    ctx.lineTo(78, 85);
+                    ctx.lineTo(95, 150);
+                    ctx.stroke();
+                    ctx.strokeStyle = '#ffffff';
+                    ctx.lineWidth = 1.5;
+                    ctx.stroke();
+                }
+                if (t < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+
+            layer.appendChild(burst);
+            setTimeout(() => {
+                if (burst.parentNode) burst.parentNode.removeChild(burst);
+            }, 800);
         }
 
         function triggerHurtEffect(containerId) {
