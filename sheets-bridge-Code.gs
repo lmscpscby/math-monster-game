@@ -17,7 +17,7 @@ function doGet() {
   return jsonOut({
     ok: true,
     service: 'math-monster-bridge',
-    features: ['report', 'account-sync', 'pending-grants']
+    features: ['report', 'account-sync', 'pending-grants', 'leaderboard', 'playerStats']
   });
 }
 
@@ -30,6 +30,8 @@ function doPost(e) {
     if (action === 'register') return accountRegister(data);
     if (action === 'login') return accountLogin(data);
     if (action === 'save') return accountSave(data);
+    if (action === 'leaderboard') return leaderboardList(data);
+    if (action === 'playerStats') return playerStats(data);
     if (action === 'report' || !data.action) return progressReport(data);
 
     return jsonOut({ ok: false, error: 'unknown_action' });
@@ -233,4 +235,132 @@ function progressReport(data) {
   else ov.appendRow(row);
 
   return jsonOut({ ok: true, action: 'report' });
+}
+
+
+/** 班別 → 年級（與前端 parseGradeFromClass 一致） */
+function parseGradeFromClass(className) {
+  var s = String(className || '');
+  if (!s) return 'G6';
+  if (s.indexOf('1') >= 0 || s.indexOf('一') >= 0) return 'G1';
+  if (s.indexOf('2') >= 0 || s.indexOf('二') >= 0) return 'G2';
+  if (s.indexOf('3') >= 0 || s.indexOf('三') >= 0) return 'G3';
+  if (s.indexOf('4') >= 0 || s.indexOf('四') >= 0) return 'G4';
+  if (s.indexOf('5') >= 0 || s.indexOf('五') >= 0) return 'G5';
+  return 'G6';
+}
+
+/** 由帳戶 D 欄 JSON 抽出公開榜資料（唔回傳密碼雜湊） */
+function publicEntryFromProfile(displayName, profileJson, updatedAtCell) {
+  var p = {};
+  try { p = JSON.parse(String(profileJson || '{}')); } catch (e) { p = {}; }
+  if (!p || typeof p !== 'object') p = {};
+  var nickname = String(p.nickname || p.displayName || p.alias || displayName || '').trim();
+  if (!nickname) nickname = String(displayName || '冒險者').trim() || '冒險者';
+  return {
+    nickname: nickname,
+    school: String(p.school || ''),
+    className: String(p.className || p.class || ''),
+    classNo: p.classNo != null ? p.classNo : '',
+    rankScore: Math.max(0, Math.floor(Number(p.rankScore) || 0)),
+    updatedAt: String(p.updatedAt || updatedAtCell || ''),
+    grade: parseGradeFromClass(p.className || p.class || '')
+  };
+}
+
+/**
+ * 全服／年級排行榜（公開讀，只回暱稱／班／積分）
+ * POST { action:'leaderboard', grade:'G6' }  // grade 可選；空＝全部
+ */
+function leaderboardList(data) {
+  var gradeFilter = String((data && data.grade) || '').trim().toUpperCase();
+  var sheet = accountsSheet();
+  var values = sheet.getDataRange().getValues();
+  var list = [];
+  for (var i = 1; i < values.length; i++) {
+    var key = String(values[i][0] || '').trim();
+    if (!key) continue;
+    var entry = publicEntryFromProfile(values[i][2], values[i][3], values[i][4]);
+    if (gradeFilter && entry.grade !== gradeFilter) continue;
+    list.push(entry);
+  }
+  list.sort(function (a, b) {
+    if (b.rankScore !== a.rankScore) return b.rankScore - a.rankScore;
+    return String(a.nickname).localeCompare(String(b.nickname), 'zh');
+  });
+  // 上限 200，避免回傳過大
+  if (list.length > 200) list = list.slice(0, 200);
+  return jsonOut({
+    ok: true,
+    action: 'leaderboard',
+    grade: gradeFilter || 'ALL',
+    count: list.length,
+    entries: list
+  });
+}
+
+/** 驗證帳戶密碼；成功回傳 { row, profile }，失敗回 null */
+function authenticateAccount(key, password) {
+  key = String(key || '').trim();
+  password = String(password || '');
+  if (!key || !password) return null;
+  var sheet = accountsSheet();
+  var row = findAccountRow(sheet, key);
+  if (row < 0) return null;
+  var hash = String(sheet.getRange(row, 2).getValue());
+  if (hash !== sha256(password)) return null;
+  var json = String(sheet.getRange(row, 4).getValue() || '{}');
+  var profile = {};
+  try { profile = JSON.parse(json); } catch (e) { profile = {}; }
+  return { sheet: sheet, row: row, profile: profile || {} };
+}
+
+function isAdminProfile(profile, key) {
+  if (profile && profile.isAdmin === true) return true;
+  var nick = String((profile && (profile.nickname || profile.displayName || profile.alias)) || '').trim().toLowerCase();
+  if (nick === 'mr to') return true;
+  var k = String(key || '').trim().toLowerCase();
+  if (k === 'user_mr to' || k === 'user_mrto') return true;
+  return false;
+}
+
+/**
+ * 管理員：參加人數統計（要帳戶 key+password，且 isAdmin）
+ * POST { action:'playerStats', key, password }
+ * 只回聚合數，唔回個人敏感欄。
+ */
+function playerStats(data) {
+  var auth = authenticateAccount(data && data.key, data && data.password);
+  if (!auth) return jsonOut({ ok: false, error: 'auth_failed' });
+  if (!isAdminProfile(auth.profile, data.key)) {
+    return jsonOut({ ok: false, error: 'forbidden' });
+  }
+
+  var sheet = auth.sheet;
+  var values = sheet.getDataRange().getValues();
+  var totalAccounts = 0;
+  var byClass = {};
+  var byGrade = {};
+  var withRankScore = 0;
+
+  for (var i = 1; i < values.length; i++) {
+    var key = String(values[i][0] || '').trim();
+    if (!key) continue;
+    totalAccounts++;
+    var entry = publicEntryFromProfile(values[i][2], values[i][3], values[i][4]);
+    var klass = entry.className || '未填班別';
+    var grade = entry.grade || 'G6';
+    byClass[klass] = (byClass[klass] || 0) + 1;
+    byGrade[grade] = (byGrade[grade] || 0) + 1;
+    if (entry.rankScore > 0) withRankScore++;
+  }
+
+  return jsonOut({
+    ok: true,
+    action: 'playerStats',
+    totalAccounts: totalAccounts,
+    byClass: byClass,
+    byGrade: byGrade,
+    withRankScore: withRankScore
+  });
 }

@@ -385,6 +385,58 @@
                 </button>
 
                 <!-- PVP 對決擂台：已停用 -->
+
+                <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-rose-400">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-chart-user"></i>
+                        </div>
+                        <span class="text-xs bg-rose-500/30 text-rose-200 font-bold px-3 py-1 rounded-full">管理員</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-white group-hover:text-rose-300 transition-colors">參加人數統計</h3>
+                        <p class="text-xs text-slate-300 mt-1">睇全服註冊人數、按班／年級分佈同排位參與度。</p>
+                    </div>
+                </button>
+            </div>
+
+            <div id="admin-stats-panel" class="hidden glass-panel p-5 rounded-3xl border border-rose-500/40 space-y-4">
+                <div class="flex items-center justify-between gap-3 flex-wrap">
+                    <h3 class="font-black text-base text-rose-300 flex items-center">
+                        <i class="fa-solid fa-chart-pie mr-1.5"></i>管理員：遊戲參加統計
+                    </h3>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="loadAdminPlayerStats()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-200 text-xs font-bold">
+                            <i class="fa-solid fa-rotate mr-1"></i>重新整理
+                        </button>
+                        <button type="button" onclick="closeAdminStatsPanel()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold">關閉</button>
+                    </div>
+                </div>
+                <div id="admin-stats-status" class="text-xs text-slate-400">載入中…</div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div class="bg-slate-900/70 border border-rose-500/30 rounded-2xl p-4">
+                        <div class="text-[10px] text-rose-200/80 font-bold">帳戶總數</div>
+                        <div id="admin-stat-total" class="text-2xl font-black text-white mt-1">—</div>
+                    </div>
+                    <div class="bg-slate-900/70 border border-amber-500/30 rounded-2xl p-4">
+                        <div class="text-[10px] text-amber-200/80 font-bold">有排位積分</div>
+                        <div id="admin-stat-ranked" class="text-2xl font-black text-amber-300 mt-1">—</div>
+                    </div>
+                    <div class="bg-slate-900/70 border border-purple-500/30 rounded-2xl p-4">
+                        <div class="text-[10px] text-purple-200/80 font-bold">年級／班別組數</div>
+                        <div id="admin-stat-groups" class="text-2xl font-black text-purple-200 mt-1">—</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="text-xs font-black text-slate-300 mb-2">按年級</h4>
+                        <div id="admin-stats-by-grade" class="space-y-1.5 max-h-48 overflow-y-auto text-xs"></div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-black text-slate-300 mb-2">按班別</h4>
+                        <div id="admin-stats-by-class" class="space-y-1.5 max-h-48 overflow-y-auto text-xs"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -496,6 +548,7 @@
                         </span>
                     </div>
 
+                    <div id="ranked-leaderboard-status" class="text-[10px] text-slate-400 min-h-[1rem]"></div>
                     <div id="ranked-leaderboard-list" class="space-y-2 max-h-[380px] overflow-y-auto">
                     </div>
                 </div>
@@ -1776,6 +1829,11 @@
                                     cloudProfile[k] = localBefore[k];
                                 }
                             });
+                            if (localBefore.isAdmin) cloudProfile.isAdmin = true;
+                        }
+                        // 內建管理員別名兼容（本機 seed 帳戶）
+                        if (String(cloudProfile.nickname || '').trim().toLowerCase() === 'mr to') {
+                            cloudProfile.isAdmin = true;
                         }
                         let differNote = '';
                         if (localBefore && profilesProgressDiffer(localBefore, cloudProfile)) {
@@ -1841,6 +1899,9 @@
         function loginUserSuccess(userObj, passwordOpt) {
             currentUser = userObj;
 
+            if (String(currentUser.nickname || '').trim().toLowerCase() === 'mr to') {
+                currentUser.isAdmin = true;
+            }
             if (currentUser.rankScore === undefined) currentUser.rankScore = 0;
             if (!Array.isArray(currentUser.ownedMonsters)) currentUser.ownedMonsters = [];
 
@@ -1860,6 +1921,7 @@
             document.getElementById('logout-btn').classList.add('flex');
 
             updateUserDashboardUI();
+            updateAdminUiVisibility();
             renderMonsterCollection();
             selectGrade(parseGradeFromClass(currentUser.className));
             renderLeaderboard();
@@ -1885,6 +1947,8 @@
             document.getElementById('logout-btn').classList.remove('flex');
             document.getElementById('user-display-name').innerText = "未登入";
             document.getElementById('user-display-school').innerText = "訪客模式";
+            updateAdminUiVisibility();
+            closeAdminStatsPanel();
         }
 
         function saveCurrentUserData() {
@@ -2002,6 +2066,7 @@
 
             if (viewName === 'monsters') renderMonsterCollection();
             if (viewName === 'ranked') renderLeaderboard();
+            if (viewName === 'home') updateAdminUiVisibility();
         }
 
         function drawGacha(count) {
@@ -2378,41 +2443,172 @@
             openTeamSelect('ranked_mode', true, bossLv);
         }
 
-        function renderLeaderboard() {
-            const container = document.getElementById('ranked-leaderboard-list');
-            if (!container) return;
+        let leaderboardRequestId = 0;
+
+        function paintLeaderboardEntries(container, users) {
             container.innerHTML = '';
-
-            const targetGrade = currentUser ? parseGradeFromClass(currentUser.className) : 'G6';
-
-            const db = getUsersDatabase();
-            const users = Object.values(db)
-                .filter(u => parseGradeFromClass(u.className) === targetGrade)
-                .sort((a, b) => (b.rankScore || 0) - (a.rankScore || 0));
-
-            if (users.length === 0) {
+            if (!users || users.length === 0) {
                 container.innerHTML = `<div class="text-center text-xs text-slate-400 py-6">該年級暫無排位紀錄</div>`;
                 return;
             }
-
             users.forEach((u, idx) => {
                 const item = document.createElement('div');
                 item.className = `p-3 rounded-2xl border flex items-center justify-between ${idx === 0 ? 'bg-amber-500/20 border-amber-400/50' : idx === 1 ? 'bg-slate-300/20 border-slate-300/50' : idx === 2 ? 'bg-amber-700/20 border-amber-600/50' : 'bg-slate-900/60 border-slate-800'}`;
+                const nick = (u.nickname || '冒險者').replace(/[<>&]/g, '');
+                const school = (u.school || '個人學員').replace(/[<>&]/g, '');
+                const klass = (u.className || '—').replace(/[<>&]/g, '');
+                const score = Math.max(0, Math.floor(Number(u.rankScore) || 0));
                 item.innerHTML = `
                     <div class="flex items-center space-x-3">
                         <span class="w-6 font-black text-center text-sm ${idx === 0 ? 'text-amber-300 text-base' : 'text-slate-400'}">${idx + 1}</span>
                         <div>
-                            <div class="font-extrabold text-xs text-white">${u.nickname}</div>
-                            <div class="text-[10px] text-slate-400">${u.school || '個人學員'} (${u.className || '小六'})</div>
+                            <div class="font-extrabold text-xs text-white">${nick}</div>
+                            <div class="text-[10px] text-slate-400">${school} (${klass})</div>
                         </div>
                     </div>
                     <div class="text-right">
-                        <div class="font-black text-xs text-amber-300">${u.rankScore || 0} 分</div>
-                        <div class="text-[9px] text-purple-200">${getRankTitle(u.rankScore || 0)}</div>
+                        <div class="font-black text-xs text-amber-300">${score} 分</div>
+                        <div class="text-[9px] text-purple-200">${getRankTitle(score)}</div>
                     </div>
                 `;
                 container.appendChild(item);
             });
+        }
+
+        function localLeaderboardUsers(targetGrade) {
+            const db = getUsersDatabase();
+            return Object.values(db)
+                .filter(u => parseGradeFromClass(u.className) === targetGrade)
+                .sort((a, b) => (b.rankScore || 0) - (a.rankScore || 0));
+        }
+
+        async function renderLeaderboard() {
+            const container = document.getElementById('ranked-leaderboard-list');
+            const statusEl = document.getElementById('ranked-leaderboard-status');
+            if (!container) return;
+            const targetGrade = currentUser ? parseGradeFromClass(currentUser.className) : 'G6';
+            const reqId = ++leaderboardRequestId;
+
+            if (statusEl) statusEl.innerText = '正在載入全服榜…';
+            container.innerHTML = `<div class="text-center text-xs text-slate-400 py-6"><i class="fa-solid fa-spinner fa-spin mr-1"></i>載入排行榜…</div>`;
+
+            // 有雲端就拉全服；失敗先用本機並提示
+            if (SHEET_REPORT_URL) {
+                try {
+                    const data = await callBridge({ action: 'leaderboard', grade: targetGrade });
+                    if (reqId !== leaderboardRequestId) return;
+                    if (data && data.ok && Array.isArray(data.entries)) {
+                        paintLeaderboardEntries(container, data.entries);
+                        if (statusEl) {
+                            statusEl.innerText = data.entries.length
+                                ? `全服同年級榜 · 共 ${data.entries.length} 人`
+                                : '全服同年級暫無紀錄';
+                        }
+                        return;
+                    }
+                    throw new Error((data && data.error) || 'leaderboard_failed');
+                } catch (err) {
+                    if (reqId !== leaderboardRequestId) return;
+                    const localUsers = localLeaderboardUsers(targetGrade);
+                    paintLeaderboardEntries(container, localUsers);
+                    if (statusEl) statusEl.innerText = '未能載入全服榜，暫顯示本機紀錄';
+                    return;
+                }
+            }
+
+            const localUsers = localLeaderboardUsers(targetGrade);
+            paintLeaderboardEntries(container, localUsers);
+            if (statusEl) statusEl.innerText = '本機榜（未設定雲端）';
+        }
+
+        function updateAdminUiVisibility() {
+            const card = document.getElementById('admin-stats-card');
+            const panel = document.getElementById('admin-stats-panel');
+            const isAdmin = !!(currentUser && currentUser.isAdmin);
+            if (card) {
+                if (isAdmin) card.classList.remove('hidden');
+                else card.classList.add('hidden');
+            }
+            if (panel && !isAdmin) panel.classList.add('hidden');
+        }
+
+        function openAdminStatsPanel() {
+            if (!currentUser || !currentUser.isAdmin) return;
+            const panel = document.getElementById('admin-stats-panel');
+            if (panel) panel.classList.remove('hidden');
+            loadAdminPlayerStats();
+        }
+
+        function closeAdminStatsPanel() {
+            const panel = document.getElementById('admin-stats-panel');
+            if (panel) panel.classList.add('hidden');
+        }
+
+        function renderAdminStatBars(containerId, mapObj, labelMap) {
+            const el = document.getElementById(containerId);
+            if (!el) return;
+            el.innerHTML = '';
+            const entries = Object.keys(mapObj || {}).map(function (k) {
+                return { key: k, n: Math.max(0, Math.floor(Number(mapObj[k]) || 0)) };
+            }).sort(function (a, b) { return b.n - a.n || String(a.key).localeCompare(String(b.key), 'zh'); });
+            if (!entries.length) {
+                el.innerHTML = '<div class="text-slate-500">暫無資料</div>';
+                return;
+            }
+            const maxN = Math.max.apply(null, entries.map(function (e) { return e.n; })) || 1;
+            entries.forEach(function (e) {
+                const label = (labelMap && labelMap[e.key]) ? labelMap[e.key] : e.key;
+                const pct = Math.round((e.n / maxN) * 100);
+                const row = document.createElement('div');
+                row.className = 'bg-slate-900/60 border border-slate-700/60 rounded-xl px-3 py-2';
+                row.innerHTML = '<div class="flex justify-between mb-1"><span class="font-bold text-slate-200">' +
+                    String(label).replace(/[<>&]/g, '') + '</span><span class="text-rose-200 font-black">' + e.n +
+                    '</span></div><div class="h-1.5 rounded-full bg-slate-800 overflow-hidden"><div class="h-full bg-gradient-to-r from-rose-500 to-amber-400" style="width:' + pct + '%"></div></div>';
+                el.appendChild(row);
+            });
+        }
+
+        async function loadAdminPlayerStats() {
+            const statusEl = document.getElementById('admin-stats-status');
+            if (!currentUser || !currentUser.isAdmin) {
+                if (statusEl) statusEl.innerText = '需要管理員登入';
+                return;
+            }
+            if (!SHEET_REPORT_URL) {
+                if (statusEl) statusEl.innerText = '未設定雲端橋接';
+                return;
+            }
+            if (!activePassword || !activeUserKey) {
+                if (statusEl) statusEl.innerText = '請重新登入管理員帳戶後再試';
+                return;
+            }
+            if (statusEl) statusEl.innerText = '正在向雲端讀取參加人數…';
+            try {
+                const data = await callBridge({
+                    action: 'playerStats',
+                    key: activeUserKey,
+                    password: activePassword
+                });
+                if (!data || !data.ok) {
+                    throw new Error((data && data.error) || 'stats_failed');
+                }
+                const total = Math.max(0, Math.floor(Number(data.totalAccounts) || 0));
+                const ranked = Math.max(0, Math.floor(Number(data.withRankScore) || 0));
+                const byGrade = data.byGrade || {};
+                const byClass = data.byClass || {};
+                const gEl = document.getElementById('admin-stat-total');
+                const rEl = document.getElementById('admin-stat-ranked');
+                const groupsEl = document.getElementById('admin-stat-groups');
+                if (gEl) gEl.innerText = String(total);
+                if (rEl) rEl.innerText = String(ranked);
+                if (groupsEl) groupsEl.innerText = String(Object.keys(byGrade).length) + ' / ' + String(Object.keys(byClass).length);
+                const gradeTextMap = { 'G1':'小一', 'G2':'小二', 'G3':'小三', 'G4':'小四', 'G5':'小五', 'G6':'小六' };
+                renderAdminStatBars('admin-stats-by-grade', byGrade, gradeTextMap);
+                renderAdminStatBars('admin-stats-by-class', byClass, null);
+                if (statusEl) statusEl.innerText = '更新時間：' + new Date().toLocaleString('zh-HK', { timeZone: 'Asia/Hong_Kong' }) + '（香港時間）';
+            } catch (err) {
+                if (statusEl) statusEl.innerText = '載入失敗：' + (err && err.message ? err.message : '未知錯誤') + '（請確認 Apps Script 已部署新版本）';
+            }
         }
 
         let pendingStrandId = null;
