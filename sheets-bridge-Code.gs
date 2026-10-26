@@ -2,8 +2,9 @@
  * 數理怪獸橋接：進度上報 + 跨裝置帳戶同步 + 老師待發放（加金幣／加EXP包）
  * Spreadsheet: 數理怪獸｜老師跟進示範
  *
- * 帳戶欄：A帳戶鍵 B密碼雜湊 C顯示名 D存檔JSON E最後更新 F加金幣 G加EXP包
+ * 帳戶欄：A帳戶鍵 B密碼雜湊 C顯示名 D存檔JSON E最後更新 F加金幣 G加EXP包 H班別 I班號
  * 老師喺 F／G 填正整數；學生下次 login 或 save 會自動加到 profile 並清空 F／G。
+ * 學生總覽／戰鬥紀錄：班號同暱稱分欄（D=班號 E=暱稱）。
  *
  * 部署：網頁應用程式／執行身分：我／對象：任何人
  * 每次改 Code 後要「管理部署 → 編輯 → 新版本」
@@ -63,10 +64,10 @@ function accountsSheet() {
   return sheet;
 }
 
-/** Ensure A–G headers exist (idempotent). */
+/** Ensure A–I headers exist (idempotent; extends past G without wiping data). */
 function ensureAccountHeaders(sheet) {
   if (!sheet) return;
-  var headers = ['帳戶鍵', '密碼雜湊', '顯示名', '存檔JSON', '最後更新', '加金幣', '加EXP包'];
+  var headers = ['帳戶鍵', '密碼雜湊', '顯示名', '存檔JSON', '最後更新', '加金幣', '加EXP包', '班別', '班號'];
   var range = sheet.getRange(1, 1, 1, headers.length);
   var current = range.getValues()[0];
   var needWrite = false;
@@ -77,6 +78,16 @@ function ensureAccountHeaders(sheet) {
     }
   }
   if (needWrite) range.setValues([headers]);
+}
+
+/** Write profile.className / classNo into columns H / I. */
+function writeClassColumns(sheet, row, profile) {
+  if (!sheet || row < 1) return;
+  var p = profile && typeof profile === 'object' ? profile : {};
+  var klass = p.className != null ? p.className : (p.class != null ? p.class : '');
+  var classNo = p.classNo != null ? p.classNo : '';
+  sheet.getRange(row, 8).setValue(klass);
+  sheet.getRange(row, 9).setValue(classNo);
 }
 
 function findAccountRow(sheet, key) {
@@ -130,6 +141,7 @@ function applyPendingGrants(sheet, row, profile, options) {
   if (writeAlways || hasGrants) {
     sheet.getRange(row, 4).setValue(JSON.stringify(p));
     sheet.getRange(row, 5).setValue(nowHK());
+    writeClassColumns(sheet, row, p);
     if (hasGrants) {
       sheet.getRange(row, 6).setValue('');
       sheet.getRange(row, 7).setValue('');
@@ -150,8 +162,18 @@ function accountRegister(data) {
 
   var hash = sha256(password);
   var json = JSON.stringify(profile);
-  // A–G：新戶 F/G 留空
-  sheet.appendRow([key, hash, profile.displayName || profile.alias || key, json, nowHK(), '', '']);
+  // A–I：新戶 F/G 留空；H/I 寫班別／班號
+  sheet.appendRow([
+    key,
+    hash,
+    profile.displayName || profile.alias || key,
+    json,
+    nowHK(),
+    '',
+    '',
+    profile.className != null ? profile.className : (profile.class || ''),
+    profile.classNo != null ? profile.classNo : ''
+  ]);
   return jsonOut({ ok: true, action: 'register', profile: profile });
 }
 
@@ -200,8 +222,10 @@ function accountSave(data) {
   // 確保有 updatedAt（客戶端合併用）
   if (!profile.updatedAt) profile.updatedAt = new Date().toISOString();
 
-  // 套用老師待發放後一律寫入學生送來嘅存檔（writeAlways）
+  // 套用老師待發放後一律寫入學生送來嘅存檔（writeAlways）；H/I 亦由 applyPendingGrants 寫
   var applied = applyPendingGrants(sheet, row, profile, { writeAlways: true });
+  // 再保險：即使 grants 路徑未觸發，亦寫入班別／班號
+  writeClassColumns(sheet, row, applied.profile);
   return jsonOut({
     ok: true,
     action: 'save',
@@ -216,6 +240,7 @@ function progressReport(data) {
   var now = nowHK();
   var school = data.school || '';
   var klass = data.className || data.class || '';
+  var classNo = data.classNo != null ? data.classNo : '';
   var name = data.name || data.alias || '';
   var gold = data.gold != null ? data.gold : '';
   var score = data.score != null ? data.score : '';
@@ -229,19 +254,25 @@ function progressReport(data) {
   var grade = data.grade || '';
   var goldDelta = data.goldDelta != null ? data.goldDelta : '';
 
+  // 戰鬥紀錄：時間,學校,班別,班號,暱稱,模式,年級,單元,結果,答對,金幣變化
   ss.getSheetByName(LOG).appendRow([
-    now, school, klass, name, mode, grade, unit, result, correct, goldDelta
+    now, school, klass, classNo, name, mode, grade, unit, result, correct, goldDelta
   ]);
 
   var ov = ss.getSheetByName(OVERVIEW);
   var values = ov.getDataRange().getValues();
+  // 匹配：學校+班別+暱稱（B,C,E；舊列 D 班號可能空）
   var key = [school, klass, name].join('|');
   var found = -1;
   for (var i = 1; i < values.length; i++) {
-    var rowKey = [values[i][1], values[i][2], values[i][3]].join('|');
+    var nickCol = values[i][4]; // E 暱稱（欄位移後）
+    // 若 E 空而 D 有字，可能係未移位嘅舊列（D=暱稱）
+    if (nickCol === '' || nickCol == null) nickCol = values[i][3];
+    var rowKey = [values[i][1], values[i][2], nickCol].join('|');
     if (rowKey === key) { found = i + 1; break; }
   }
-  var row = [now, school, klass, name, gold, score, expPacks, monsters, unit, result, correct, totalQ];
+  // 學生總覽：最後更新,學校,班別,班號,暱稱,金幣,積分,EXP包,怪獸數,最近單元,最近結果,答對題數,累計答題
+  var row = [now, school, klass, classNo, name, gold, score, expPacks, monsters, unit, result, correct, totalQ];
   if (found > 0) ov.getRange(found, 1, 1, row.length).setValues([row]);
   else ov.appendRow(row);
 
