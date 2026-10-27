@@ -2510,7 +2510,7 @@
                 const rand = Math.random();
                 let drawnItemData;
 
-                if (i === guaranteedMythicPos || rand < 0.10) {
+                if (i === guaranteedMythicPos || rand < 0.03) {
                     const beast = SHANHAIJING_BEASTS[Math.floor(Math.random() * SHANHAIJING_BEASTS.length)];
                     drawnItemData = getMonsterRuntimeData(beast.id, 1);
                 } else {
