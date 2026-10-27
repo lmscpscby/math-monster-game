@@ -544,8 +544,8 @@
         /* Nameplates: enemy top-half, player bottom-half — clear centre stage/VFX */
         #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-enemy {
             position: static;
-            width: min(11.5rem, 36vw);
-            max-width: 12rem;
+            width: min(13.5rem, 40vw);
+            max-width: 14.5rem;
             flex: 0 1 auto;
             align-self: flex-start; /* 對齊敵方頭像上半 */
             margin-top: 0.35rem; /* 跟 cluster 下移微調，唔遮中央 VFX */
@@ -555,8 +555,8 @@
 
         #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-player {
             position: static;
-            width: min(11.5rem, 36vw);
-            max-width: 12rem;
+            width: min(13.5rem, 40vw);
+            max-width: 14.5rem;
             flex: 0 1 auto;
             align-self: flex-end; /* 對齊我方頭像下半 */
             margin-bottom: 0.15rem;
@@ -598,8 +598,29 @@
         }
 
         #pokemon-battle-arena.neon-stage.poke-stage .neon-nameplate {
+            position: relative;
             max-width: 100%;
             pointer-events: none;
+            padding-right: 0.35rem;
+        }
+
+        #pokemon-battle-arena.neon-stage.poke-stage .neon-name-corner {
+            position: absolute;
+            top: 0.2rem;
+            right: 0.25rem;
+            z-index: 2;
+            max-width: 46%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.15;
+            pointer-events: none;
+        }
+
+        #pokemon-battle-arena.neon-stage.poke-stage #enemy-name,
+        #pokemon-battle-arena.neon-stage.poke-stage #player-monster-name {
+            pointer-events: auto;
+            cursor: help;
         }
 
         /* Stage ring stays centre-clear for VFX between diagonal clusters */
@@ -613,7 +634,8 @@
         @media (max-width: 420px) {
             #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-enemy,
             #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-player {
-                width: min(9.5rem, 34vw);
+                width: min(11.5rem, 38vw);
+                max-width: 12.5rem;
             }
             #pokemon-battle-arena.neon-stage.poke-stage .neon-sprite-enemy {
                 width: clamp(8rem, 44vw, 12.5rem);
@@ -1293,12 +1315,10 @@
                 <div class="neon-cluster-enemy">
                     <div class="neon-hud-enemy neon-sprite-col">
                         <div class="neon-nameplate neon-nameplate-boss w-full rounded-xl px-2 py-1">
-                            <div class="flex justify-between items-center gap-1 mb-0.5 min-w-0">
-                                <div class="flex items-center space-x-1 min-w-0">
-                                    <span id="enemy-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-blue-500 text-white">水</span>
-                                    <span id="enemy-name" class="font-black text-[10px] sm:text-xs truncate">關卡守護獸</span>
-                                </div>
-                                <span id="enemy-level-tag" class="shrink-0 text-[9px] px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
+                            <span id="enemy-level-tag" class="neon-name-corner shrink-0 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
+                            <div class="flex items-center gap-1 mb-0.5 min-w-0 pr-14 sm:pr-16">
+                                <span id="enemy-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-blue-500 text-white">水</span>
+                                <span id="enemy-name" class="font-black text-[9px] sm:text-[11px] truncate" title="關卡守護獸">關卡守護獸</span>
                             </div>
                             <div class="neon-hp-track w-full">
                                 <div id="enemy-hp-bar" class="h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
@@ -1333,12 +1353,10 @@
                     </div>
                     <div class="neon-hud-player neon-sprite-col">
                         <div class="neon-nameplate w-full rounded-xl px-2 py-1">
-                            <div class="flex justify-between items-center gap-1 mb-0.5 min-w-0">
-                                <div class="flex items-center space-x-1 min-w-0">
-                                    <span id="player-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-red-500 text-white">火</span>
-                                    <span id="player-monster-name" class="font-black text-[10px] sm:text-xs truncate">己方怪獸</span>
-                                </div>
-                                <span id="player-team-slot-badge" class="shrink-0 text-[9px] px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
+                            <span id="player-team-slot-badge" class="neon-name-corner shrink-0 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
+                            <div class="flex items-center gap-1 mb-0.5 min-w-0 pr-14 sm:pr-16">
+                                <span id="player-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-red-500 text-white">火</span>
+                                <span id="player-monster-name" class="font-black text-[9px] sm:text-[11px] truncate" title="己方怪獸">己方怪獸</span>
                             </div>
                             <div class="neon-hp-track w-full">
                                 <div id="player-hp-bar" class="h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
@@ -3959,10 +3977,23 @@
             };
         }
 
+        function shortDisplayName(fullName, maxChars = 8) {
+            const name = String(fullName || '').trim();
+            if (name.length <= maxChars) return name;
+            return `${name.slice(0, Math.max(1, maxChars - 1))}…`;
+        }
+
+        function setNameplateLabel(el, fullName) {
+            if (!el) return;
+            const full = String(fullName || '').trim() || '—';
+            el.textContent = shortDisplayName(full, 8);
+            el.setAttribute('title', full);
+        }
+
         function updateBattleUI() {
             if (!activePlayerMonster || !activeEnemy) return;
 
-            document.getElementById('enemy-name').innerText = activeEnemy.name;
+            setNameplateLabel(document.getElementById('enemy-name'), activeEnemy.name);
             document.getElementById('enemy-level-tag').innerText = `Boss Lv.${activeEnemy.level}`;
             document.getElementById('enemy-hp-text').innerText = `${Math.max(0, activeEnemy.hp)} / ${activeEnemy.maxHp}`;
             const enemyHpPct = Math.max(0, Math.min(100, (activeEnemy.hp / activeEnemy.maxHp) * 100));
@@ -3973,7 +4004,7 @@
             enemyElemBadge.innerText = getElementZh(activeEnemy.element || 'water');
             enemyElemBadge.className = `shrink-0 px-1.5 py-0.5 text-[9px] rounded font-black ${getElementBadgeClass(activeEnemy.element || 'water')}`;
 
-            document.getElementById('player-monster-name').innerText = `${activePlayerMonster.name} (Lv.${activePlayerMonster.level})`;
+            setNameplateLabel(document.getElementById('player-monster-name'), activePlayerMonster.name);
             document.getElementById('player-hp-text').innerText = `${Math.max(0, activePlayerMonster.currentHp)} / ${activePlayerMonster.maxHp}`;
             const playerHpPct = Math.max(0, Math.min(100, (activePlayerMonster.currentHp / activePlayerMonster.maxHp) * 100));
             document.getElementById('player-hp-bar').style.width = `${playerHpPct}%`;
@@ -3983,7 +4014,7 @@
             playerElemBadge.innerText = getElementZh(activePlayerMonster.element || 'fire');
             playerElemBadge.className = `shrink-0 px-1.5 py-0.5 text-[9px] rounded font-black ${getElementBadgeClass(activePlayerMonster.element || 'fire')}`;
 
-            document.getElementById('player-team-slot-badge').innerText = `第 ${currentMonsterIndex + 1} / ${selectedBattleTeam.length} 隻登場`;
+            document.getElementById('player-team-slot-badge').innerText = `Lv.${activePlayerMonster.level} · 第 ${currentMonsterIndex + 1}/${selectedBattleTeam.length}`;
             document.getElementById('battle-boss-progress').innerText = isRankedMode ? `BOSS ${currentBossStageIndex + 1}/2` : `BOSS 1/1`;
         }
 
