@@ -1499,7 +1499,23 @@
             thunder_dragon_baby: '雷電幼龍.jpeg',
             thunder_fox: '迅雷電狐.jpeg',
             thunder_beast: '轟雷巨獸.jpeg',
-            thunder_god_horse: '雷神·雷煌馬.jpeg'
+            thunder_god_horse: '雷神·雷煌馬.jpeg',
+            // 新系列：格鬥／岩石／念力／聖光
+            fight_rookie: 'assets/monsters/fire/fight_rookie.png',
+            fight_kicker: 'assets/monsters/fire/fight_kicker.png',
+            fight_grappler: 'assets/monsters/fire/fight_grappler.png',
+            boss_obsidian: 'assets/monsters/fire/boss_obsidian.png',
+            rock_pebble: 'assets/monsters/grass/rock_pebble.png',
+            rock_guard: 'assets/monsters/grass/rock_guard.png',
+            rock_titan: 'assets/monsters/grass/rock_titan.png',
+            psy_chick: 'assets/monsters/water/psy_chick.png',
+            psy_eagle: 'assets/monsters/water/psy_eagle.png',
+            aura_master: 'assets/monsters/water/aura_master.png',
+            mythic_psy_envoy: 'assets/monsters/water/mythic_psy_envoy.png',
+            holy_chick: 'assets/monsters/thunder/holy_chick.png',
+            holy_hunter: 'assets/monsters/thunder/holy_hunter.png',
+            holy_envoy: 'assets/monsters/thunder/holy_envoy.png',
+            mythic_holy_beast: 'assets/monsters/thunder/mythic_holy_beast.png'
         };
 
         const EVIL_BOSSES = [
@@ -1510,7 +1526,8 @@
             { id: 'boss_cow', name: '腐殖食人樹牛', element: 'grass', imgKey: 'boss_cow', hp: 260, atk: 45, def: 60, spd: 35 },
             { id: 'boss_bug', name: '劇毒蝕骨萬足蟲', element: 'grass', imgKey: 'boss_bug', hp: 190, atk: 50, def: 45, spd: 55 },
             { id: 'boss_hydra', name: '九頭狂雷蛇皇', element: 'thunder', imgKey: 'boss_hydra', hp: 300, atk: 70, def: 60, spd: 65 },
-            { id: 'boss_thunder_dragon', name: '滅世雷霆天龍', element: 'thunder', imgKey: 'boss_thunder_dragon', hp: 350, atk: 80, def: 70, spd: 70 }
+            { id: 'boss_thunder_dragon', name: '滅世雷霆天龍', element: 'thunder', imgKey: 'boss_thunder_dragon', hp: 350, atk: 80, def: 70, spd: 70 },
+            { id: 'boss_obsidian', name: '黑曜石巨獸', element: 'fire', imgKey: 'boss_obsidian', hp: 280, atk: 68, def: 75, spd: 45 }
         ];
 
         // 排位賽 4 關指定 BOSS 對應表
@@ -1539,7 +1556,9 @@
             { id: 'sh3', name: '燭龍', element: 'fire', title: '日夜烈陽神獸 (火)', color: '#dc2626', hp: 260, atk: 125, def: 100, spd: 80, skillText: '燭照萬里之怒！', imgKey: 'sh3', desc: '睜眼為晝，閉眼為夜，掌控烈焰天火。' },
             { id: 'sh4', name: '饕餮', element: 'fire', title: '吞噬上古獸 (火)', color: '#ea580c', hp: 300, atk: 115, def: 110, spd: 60, skillText: '噬天吞地巨口！', imgKey: 'sh4', desc: '羊身人面，腹中蘊藏無盡火核。' },
             { id: 'sh5', name: '九尾狐', element: 'grass', title: '青丘幻空妖狐 (草)', color: '#fbbf24', hp: 160, atk: 105, def: 70, spd: 120, skillText: '九尾魅惑幻影！', imgKey: 'sh5', desc: '青丘靈狐，操縱草木靈氣與幻術。' },
-            { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' }
+            { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' },
+            { id: 'sh7', name: '天界念力神使', element: 'water', title: '天界念力神獸 (水)', color: '#6366f1', hp: 210, atk: 118, def: 95, spd: 100, skillText: '天界念力衝擊！', imgKey: 'mythic_psy_envoy', desc: '以澄澈靈氣貫穿蒼穹，操縱念力與流水。' },
+            { id: 'sh8', name: '輝光聖獸', element: 'thunder', title: '輝光聖域神獸 (雷)', color: '#facc15', hp: 240, atk: 120, def: 105, spd: 90, skillText: '輝光聖裁雷擊！', imgKey: 'mythic_holy_beast', desc: '聖光凝結成獸，降下淨化雷霆。' }
         ];
 
         const ELEMENTAL_EVO_FAMILIES = {
@@ -1583,6 +1602,46 @@
                     { minLv: 10, name: '迅雷電狐', skillText: '電光疾衝！', hp: 112, atk: 60, def: 50, spd: 90, imgKey: 'thunder_fox' },
                     { minLv: 20, name: '轟雷巨獸', skillText: '萬丈轟雷！', hp: 185, atk: 105, def: 85, spd: 105, imgKey: 'thunder_beast' },
                     { minLv: 30, name: '雷神·雷煌馬', skillText: '雷神敕令·天罰！', hp: 255, atk: 145, def: 115, spd: 130, imgKey: 'thunder_god_horse' }
+                ]
+            },
+            'fight_base': {
+                familyId: 'fight_base',
+                element: 'fire',
+                color: '#f97316',
+                stages: [
+                    { minLv: 1, name: '菜鳥鬥士', skillText: '熱血直拳！', hp: 65, atk: 38, def: 22, spd: 50, imgKey: 'fight_rookie' },
+                    { minLv: 10, name: '業餘踢擊者', skillText: '烈焰迴旋踢！', hp: 120, atk: 75, def: 55, spd: 85, imgKey: 'fight_kicker' },
+                    { minLv: 20, name: '重量級擒拿者', skillText: '熔岩鎖喉摔！', hp: 210, atk: 135, def: 95, spd: 95, imgKey: 'fight_grappler' }
+                ]
+            },
+            'rock_base': {
+                familyId: 'rock_base',
+                element: 'grass',
+                color: '#78716c',
+                stages: [
+                    { minLv: 1, name: '礫石幼崽', skillText: '碎石滾動！', hp: 80, atk: 22, def: 40, spd: 30, imgKey: 'rock_pebble' },
+                    { minLv: 10, name: '巨石守衛', skillText: '岩壁守護猛擊！', hp: 140, atk: 50, def: 85, spd: 40, imgKey: 'rock_guard' },
+                    { minLv: 20, name: '裂地泰坦', skillText: '裂地岩崩！', hp: 260, atk: 95, def: 140, spd: 50, imgKey: 'rock_titan' }
+                ]
+            },
+            'psy_base': {
+                familyId: 'psy_base',
+                element: 'water',
+                color: '#818cf8',
+                stages: [
+                    { minLv: 1, name: '念力幼雛', skillText: '微光念波！', hp: 60, atk: 30, def: 25, spd: 55, imgKey: 'psy_chick' },
+                    { minLv: 10, name: '念力魔鷹', skillText: '靈鷹念力俯衝！', hp: 115, atk: 70, def: 55, spd: 95, imgKey: 'psy_eagle' },
+                    { minLv: 20, name: '靈氣宗師', skillText: '靈氣渦流震盪！', hp: 195, atk: 125, def: 90, spd: 110, imgKey: 'aura_master' }
+                ]
+            },
+            'holy_base': {
+                familyId: 'holy_base',
+                element: 'thunder',
+                color: '#fde047',
+                stages: [
+                    { minLv: 1, name: '天使幼雛', skillText: '聖光羽擊！', hp: 62, atk: 30, def: 28, spd: 52, imgKey: 'holy_chick' },
+                    { minLv: 10, name: '聖光獵手', skillText: '聖箭雷閃！', hp: 118, atk: 72, def: 58, spd: 88, imgKey: 'holy_hunter' },
+                    { minLv: 20, name: '天界神使', skillText: '天界雷光裁決！', hp: 200, atk: 130, def: 95, spd: 115, imgKey: 'holy_envoy' }
                 ]
             }
         };
@@ -2395,7 +2454,11 @@
                 { id: 'fire_base', isMythic: false },
                 { id: 'water_base', isMythic: false },
                 { id: 'grass_base', isMythic: false },
-                { id: 'thunder_base', isMythic: false }
+                { id: 'thunder_base', isMythic: false },
+                { id: 'fight_base', isMythic: false },
+                { id: 'rock_base', isMythic: false },
+                { id: 'psy_base', isMythic: false },
+                { id: 'holy_base', isMythic: false }
             ];
 
             let guaranteedMythicPos = -1;
@@ -2475,7 +2538,7 @@
             const container = document.getElementById('monster-collection-grid');
             container.innerHTML = '';
 
-            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'];
+            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6', 'sh7', 'sh8'];
 
             allList.forEach(mId => {
                 const owned = currentUser.ownedMonsters.find(om => om.id === mId);
