@@ -904,7 +904,7 @@
                 
                 <div class="flex items-center gap-2">
                     <div id="boss-attack-timer-badge" class="text-[10px] sm:text-xs font-black text-rose-300 bg-rose-500/20 border border-rose-400/30 px-2 py-1 rounded-xl animate-pulse">
-                        ⚠️ <span class="hidden sm:inline">Boss 襲擊倒數: </span><span id="boss-timer-num">10</span>s
+                        ⚠️ <span class="hidden sm:inline">Boss 襲擊倒數: </span><span id="boss-timer-num">20</span>s
                     </div>
                     <div class="flex items-center space-x-1.5 bg-emerald-500/20 border border-emerald-500/30 px-2 py-1 rounded-xl text-emerald-300 font-bold text-[10px] sm:text-xs">
                         <i class="fa-solid fa-infinity"></i>
@@ -987,7 +987,7 @@
                         題目 <span id="quiz-current-num">1</span>
                     </span>
                     <span id="battle-combo" class="text-[10px] sm:text-xs font-extrabold text-amber-300 flex items-center">
-                        <i class="fa-solid fa-fire-flame-curved mr-1 text-amber-400"></i><span class="hidden sm:inline">無時限決戰：直到擊敗 Boss 或全滅！</span><span class="sm:hidden">決戰至勝／全滅</span>
+                        <i class="fa-solid fa-fire-flame-curved mr-1 text-amber-400"></i><span class="hidden sm:inline">答題無完場時限；每 20 秒唔答 Boss 會襲擊</span><span class="sm:hidden">無完場限；每20s襲擊</span>
                     </span>
                 </div>
 
@@ -1690,7 +1690,7 @@
         let selectedGrade = 'G1';
         let activeStrand = null;
         let bossTimer = null;
-        let bossAttackCountdown = 10;
+        let bossAttackCountdown = 20;
         let selectedBattleTeam = [];
         let maxAllowedTeamSize = 3;
         let currentMonsterIndex = 0;
@@ -3233,7 +3233,7 @@
 
         function resetBossTimer() {
             clearInterval(bossTimer);
-            bossAttackCountdown = 10;
+            bossAttackCountdown = 20;
             const timerBadge = document.getElementById('boss-timer-num');
             if (timerBadge) timerBadge.innerText = bossAttackCountdown;
 
@@ -3243,7 +3243,7 @@
 
                 if (bossAttackCountdown <= 0) {
                     bossTimerAttack();
-                    bossAttackCountdown = 10;
+                    bossAttackCountdown = 20;
                 }
             }, 1000);
         }
