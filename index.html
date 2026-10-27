@@ -517,37 +517,50 @@
 
         #pokemon-battle-arena.neon-stage.poke-stage .neon-cluster-enemy {
             position: absolute;
-            top: 0.35rem;
-            right: 0.35rem;
+            top: 0.25rem;
+            right: 0.25rem;
             z-index: 12;
             display: flex;
             flex-direction: row;
-            align-items: flex-start;
-            gap: 0.45rem;
-            max-width: calc(100% - 0.7rem);
+            align-items: flex-start; /* 名牌對齊頭像上半 */
+            gap: 0.3rem;
+            max-width: calc(100% - 0.5rem);
             pointer-events: none;
         }
 
         #pokemon-battle-arena.neon-stage.poke-stage .neon-cluster-player {
             position: absolute;
-            bottom: 0.35rem;
-            left: 0.35rem;
+            bottom: 0.25rem;
+            left: 0.25rem;
             z-index: 12;
             display: flex;
             flex-direction: row;
-            align-items: flex-end;
-            gap: 0.45rem;
-            max-width: calc(100% - 0.7rem);
+            align-items: flex-end; /* 名牌對齊頭像下半 */
+            gap: 0.3rem;
+            max-width: calc(100% - 0.5rem);
             pointer-events: none;
         }
 
-        #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-enemy,
+        /* Nameplates: enemy top-half, player bottom-half — clear centre stage/VFX */
+        #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-enemy {
+            position: static;
+            width: min(11.5rem, 36vw);
+            max-width: 12rem;
+            flex: 0 1 auto;
+            align-self: flex-start; /* 對齊敵方頭像上半 */
+            margin-top: 0.15rem;
+            margin-right: -0.15rem; /* 略向右貼頭像（名牌在左） */
+            pointer-events: none;
+        }
+
         #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-player {
             position: static;
             width: min(11.5rem, 36vw);
             max-width: 12rem;
             flex: 0 1 auto;
-            align-self: center;
+            align-self: flex-end; /* 對齊我方頭像下半 */
+            margin-bottom: 0.15rem;
+            margin-left: -0.15rem; /* 略向左貼頭像（名牌在右） */
             pointer-events: none;
         }
 
@@ -592,8 +605,9 @@
         /* Stage ring stays centre-clear for VFX between diagonal clusters */
         #pokemon-battle-arena.neon-stage.poke-stage #battle-stage-ring {
             top: 52%;
-            width: min(48%, 220px);
-            opacity: 0.75;
+            width: min(44%, 200px);
+            opacity: 0.7;
+            z-index: 1;
         }
 
         @media (max-width: 420px) {
