@@ -274,6 +274,242 @@
             margin: -90px 0 0 -90px;
             pointer-events: none;
         }
+
+        /* ===== Neon Stage battle UI (A) — visual only; IDs preserved ===== */
+        :root {
+            --bg-deep: #0B0614;
+            --bg-mid: #1A0B2E;
+            --bg-glow: #2E1065;
+            --neon-pink: #EC4899;
+            --neon-magenta: #FF2D95;
+            --neon-violet: #BF00FF;
+            --neon-purple-soft: #8B5CF6;
+            --gold-hi: #FFD700;
+            --gold: #D4AF37;
+            --gold-lo: #B8860B;
+            --glass-panel: rgba(15, 23, 42, 0.92);
+            --glass-border: rgba(255, 215, 0, 0.55);
+            --hp-player-from: #00E5FF;
+            --hp-player-to: #00B8D4;
+            --hp-boss-from: #FF1744;
+            --hp-boss-to: #FF6D00;
+            --hp-track: #020617;
+            --text-player-name: #FFC2E2;
+            --text-boss-name: #FDA4AF;
+            --text-muted: #94A3B8;
+            --badge-boss-bg: rgba(255, 45, 149, 0.25);
+        }
+
+        #pokemon-battle-arena.neon-stage {
+            background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 52%, #12081f 100%);
+            border-color: rgba(236, 72, 153, 0.55);
+            box-shadow:
+                0 0 0 1px rgba(191, 0, 255, 0.28),
+                0 0 22px rgba(236, 72, 153, 0.32),
+                0 14px 36px rgba(0, 0, 0, 0.5);
+        }
+
+        #pokemon-battle-arena.neon-stage .neon-dotgrid {
+            z-index: 0;
+            background-image:
+                radial-gradient(rgba(236, 72, 153, 0.95) 1px, transparent 1px),
+                radial-gradient(rgba(191, 0, 255, 0.6) 1px, transparent 1px);
+            background-size: 16px 16px, 22px 22px;
+            background-position: 0 0, 8px 8px;
+            opacity: 0.22;
+        }
+
+        /* z: bg/dotgrid 0 < stage-ring 5 < sprites/HUD 10 < vfx 30 */
+        #battle-stage-ring {
+            position: absolute;
+            left: 50%;
+            top: 56%;
+            transform: translate(-50%, -50%);
+            width: min(68%, 260px);
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 5;
+            background:
+                radial-gradient(circle at center,
+                    transparent 0 38%,
+                    rgba(191, 0, 255, 0.08) 42%,
+                    transparent 46%,
+                    rgba(236, 72, 153, 0.14) 50%,
+                    transparent 54%),
+                conic-gradient(from 20deg,
+                    rgba(236, 72, 153, 0.05),
+                    rgba(191, 0, 255, 0.55),
+                    rgba(255, 45, 149, 0.4),
+                    rgba(139, 92, 246, 0.5),
+                    rgba(0, 229, 255, 0.15),
+                    rgba(191, 0, 255, 0.55),
+                    rgba(236, 72, 153, 0.05));
+            -webkit-mask-image: radial-gradient(circle, transparent 0 36%, #000 42% 58%, transparent 64%);
+            mask-image: radial-gradient(circle, transparent 0 36%, #000 42% 58%, transparent 64%);
+            box-shadow:
+                0 0 18px rgba(191, 0, 255, 0.45),
+                0 0 36px rgba(236, 72, 153, 0.28),
+                inset 0 0 16px rgba(191, 0, 255, 0.25);
+            opacity: 0.9;
+        }
+
+        #battle-stage-ring::before {
+            content: '';
+            position: absolute;
+            inset: 12%;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 45, 149, 0.55);
+            box-shadow:
+                0 0 10px rgba(255, 45, 149, 0.5),
+                inset 0 0 8px rgba(191, 0, 255, 0.35);
+            pointer-events: none;
+        }
+
+        #battle-stage-ring::after {
+            content: '';
+            position: absolute;
+            inset: 22%;
+            border-radius: 50%;
+            border: 1px dashed rgba(255, 215, 0, 0.35);
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        #pokemon-battle-arena.neon-stage .neon-nameplate {
+            background: var(--glass-panel);
+            border: 1px solid var(--glass-border);
+            box-shadow:
+                0 0 12px rgba(236, 72, 153, 0.28),
+                0 6px 18px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 215, 0, 0.18);
+            backdrop-filter: blur(10px);
+            max-width: min(15rem, 42vw);
+        }
+
+        #pokemon-battle-arena.neon-stage .neon-nameplate-boss {
+            border-color: rgba(255, 215, 0, 0.5);
+            box-shadow:
+                0 0 14px rgba(255, 45, 149, 0.3),
+                0 6px 18px rgba(0, 0, 0, 0.45),
+                inset 0 0 0 1px rgba(255, 23, 68, 0.18);
+            clip-path: polygon(
+                0% 10%, 3% 0%, 97% 0%, 100% 10%,
+                100% 90%, 97% 100%, 3% 100%, 0% 90%
+            );
+        }
+
+        #pokemon-battle-arena.neon-stage .neon-hp-track {
+            background: var(--hp-track);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            height: 12px;
+            border-radius: 9999px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        #pokemon-battle-arena.neon-stage #player-hp-bar {
+            background: linear-gradient(90deg, var(--hp-player-from), var(--hp-player-to)) !important;
+            box-shadow: 0 0 8px rgba(0, 229, 255, 0.55);
+        }
+
+        #pokemon-battle-arena.neon-stage #enemy-hp-bar {
+            background: linear-gradient(90deg, var(--hp-boss-from), var(--hp-boss-to)) !important;
+            box-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
+        }
+
+        #pokemon-battle-arena.neon-stage #player-monster-name {
+            color: var(--text-player-name);
+        }
+
+        #pokemon-battle-arena.neon-stage #enemy-name {
+            color: var(--text-boss-name);
+        }
+
+        #pokemon-battle-arena.neon-stage #player-hp-text,
+        #pokemon-battle-arena.neon-stage #enemy-hp-text {
+            color: var(--text-muted);
+        }
+
+        #pokemon-battle-arena.neon-stage #enemy-level-tag {
+            background: var(--badge-boss-bg);
+            color: #FFB3D9;
+            border: 1px solid rgba(255, 45, 149, 0.55);
+            box-shadow: 0 0 8px rgba(255, 45, 149, 0.4);
+            letter-spacing: 0.03em;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        #pokemon-battle-arena.neon-stage #player-team-slot-badge {
+            background: rgba(0, 229, 255, 0.12);
+            color: #67E8F9;
+            border: 1px solid rgba(0, 229, 255, 0.35);
+        }
+
+        .neon-avatar-frame {
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .neon-avatar-frame > #player-svg-container,
+        .neon-avatar-frame > #enemy-svg-container {
+            border-radius: 50%;
+        }
+
+        .neon-avatar-player::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+            border: 2.5px solid var(--gold-hi);
+            box-shadow:
+                0 0 12px rgba(255, 215, 0, 0.55),
+                0 0 2px rgba(212, 175, 55, 0.9),
+                inset 0 0 10px rgba(255, 215, 0, 0.2);
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.25), transparent 45%);
+        }
+
+        .neon-avatar-player::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            bottom: -2px;
+            height: 18px;
+            pointer-events: none;
+            z-index: 2;
+            background: radial-gradient(ellipse at center, rgba(0, 229, 255, 0.35), transparent 70%);
+            filter: blur(2px);
+        }
+
+        .neon-avatar-boss::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+            border: 2.5px solid var(--gold);
+            box-shadow:
+                0 0 14px rgba(255, 45, 149, 0.45),
+                0 0 2px rgba(255, 215, 0, 0.8),
+                inset 0 0 10px rgba(255, 23, 68, 0.2);
+            /* spiked / thorn feel via multi-shadow points */
+            filter: drop-shadow(0 -3px 0 rgba(212, 175, 55, 0.7))
+                    drop-shadow(3px -2px 0 rgba(212, 175, 55, 0.55))
+                    drop-shadow(-3px -2px 0 rgba(212, 175, 55, 0.55))
+                    drop-shadow(4px 2px 0 rgba(184, 134, 11, 0.45))
+                    drop-shadow(-4px 2px 0 rgba(184, 134, 11, 0.45));
+        }
+
+        #pokemon-battle-arena.neon-stage .neon-sprite-col {
+            z-index: 10;
+        }
+
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
@@ -930,9 +1166,11 @@
                 </div>
             </div>
 
-            <!-- Arena: 2-row grid — enemy UR, player LL; both sprites fully inside -->
-            <div id="pokemon-battle-arena" class="relative w-full rounded-2xl border-2 border-pink-500/40 bg-gradient-to-b from-slate-950 via-purple-950/80 to-slate-950 p-2 sm:p-3 overflow-hidden h-[32vh] md:h-[36vh] max-h-[340px] min-h-[220px] grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 shadow-xl">
-                <div class="absolute inset-0 bg-[radial-gradient(#ec4899_1px,transparent_1px)] [background-size:16px_16px] opacity-15 pointer-events-none"></div>
+            <!-- Arena: Neon Stage A — enemy UR, player LL; visual restyle only -->
+            <div id="pokemon-battle-arena" class="neon-stage relative w-full rounded-2xl border-2 border-pink-500/40 p-2 sm:p-3 overflow-hidden h-[32vh] md:h-[36vh] max-h-[340px] min-h-[220px] grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-1 shadow-xl">
+                <div class="neon-dotgrid absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+                <!-- C5 neon stage ring (decorative; under sprites, over bg) -->
+                <div id="battle-stage-ring" aria-hidden="true"></div>
                 <!-- Elemental attack VFX overlay (does not block clicks) -->
                 <div id="battle-vfx-layer" aria-hidden="true"></div>
 
@@ -940,53 +1178,53 @@
                 <div class="relative z-0 min-h-0"></div>
 
                 <!-- Row1 Col2: enemy nameplate ABOVE sprite, right-aligned -->
-                <div class="relative z-10 min-h-0 h-full overflow-hidden flex flex-col items-end justify-start gap-1">
-                    <div class="w-full max-w-[13rem] sm:max-w-[15rem] shrink-0 bg-slate-900/95 border border-slate-700/80 rounded-xl px-2 py-1 shadow-xl backdrop-blur-md">
+                <div class="neon-sprite-col relative z-10 min-h-0 h-full overflow-hidden flex flex-col items-end justify-start gap-1 pr-0.5">
+                    <div class="neon-nameplate neon-nameplate-boss w-full max-w-[13rem] sm:max-w-[15rem] shrink-0 rounded-xl px-2 py-1">
                         <div class="flex justify-between items-center gap-1 mb-0.5 min-w-0">
                             <div class="flex items-center space-x-1 min-w-0">
                                 <span id="enemy-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-blue-500 text-white">水</span>
-                                <span id="enemy-name" class="font-black text-[10px] sm:text-xs text-rose-300 truncate">關卡守護獸</span>
+                                <span id="enemy-name" class="font-black text-[10px] sm:text-xs truncate">關卡守護獸</span>
                             </div>
-                            <span id="enemy-level-tag" class="shrink-0 text-[9px] bg-rose-500/20 text-rose-300 px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
+                            <span id="enemy-level-tag" class="shrink-0 text-[9px] px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
                         </div>
-                        <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden p-0.5 border border-slate-800">
-                            <div id="enemy-hp-bar" class="bg-gradient-to-r from-rose-500 via-pink-500 to-red-600 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+                        <div class="neon-hp-track w-full">
+                            <div id="enemy-hp-bar" class="h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
                         </div>
-                        <div class="text-[9px] text-slate-400 mt-0.5 flex justify-between font-mono">
+                        <div class="text-[9px] mt-0.5 flex justify-between font-mono">
                             <span>HP</span>
                             <span id="enemy-hp-text">100 / 100</span>
                         </div>
                     </div>
-                    <div class="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 max-h-[calc(100%-3.25rem)] aspect-square shrink min-h-0 flex items-center justify-center">
+                    <div class="neon-avatar-frame neon-avatar-boss relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 max-h-[calc(100%-3.25rem)] aspect-square shrink min-h-0 flex items-center justify-center overflow-visible">
                         <div class="absolute bottom-0 w-16 sm:w-24 h-2.5 bg-rose-500/25 rounded-full blur-md"></div>
                         <div id="enemy-skill-popup" class="absolute top-0 left-0 right-0 text-center pointer-events-none z-20 hidden">
                             <span class="inline-block px-2 py-0.5 bg-amber-400 text-slate-950 font-black text-[10px] rounded-full shadow-lg border border-amber-200 animate-skill-popup"></span>
                         </div>
-                        <div id="enemy-svg-container" class="w-full h-full relative transition-transform duration-300 max-h-full overflow-hidden"></div>
+                        <div id="enemy-svg-container" class="w-full h-full relative transition-transform duration-300 max-h-full overflow-hidden rounded-full"></div>
                     </div>
                 </div>
 
                 <!-- Row2 Col1: player sprite + nameplate BESIDE (avoids vertical overflow) -->
-                <div class="relative z-10 min-h-0 h-full overflow-hidden flex flex-row items-end justify-start gap-2">
-                    <div class="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 max-h-full aspect-square shrink-0 flex items-center justify-center">
-                        <div class="absolute bottom-0 w-16 sm:w-24 h-2.5 bg-pink-500/30 rounded-full blur-md"></div>
+                <div class="neon-sprite-col relative z-10 min-h-0 h-full overflow-hidden flex flex-row items-end justify-start gap-2 pl-0.5">
+                    <div class="neon-avatar-frame neon-avatar-player relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 max-h-full aspect-square shrink-0 flex items-center justify-center overflow-visible">
+                        <div class="absolute bottom-0 w-16 sm:w-24 h-2.5 bg-cyan-400/30 rounded-full blur-md"></div>
                         <div id="player-skill-popup" class="absolute top-0 left-0 right-0 text-center pointer-events-none z-20 hidden">
                             <span class="inline-block px-2 py-0.5 bg-pink-600 text-white font-black text-[10px] rounded-full shadow-lg border border-pink-300 animate-skill-popup"></span>
                         </div>
-                        <div id="player-svg-container" class="w-full h-full relative transition-transform duration-300 max-h-full overflow-hidden"></div>
+                        <div id="player-svg-container" class="w-full h-full relative transition-transform duration-300 max-h-full overflow-hidden rounded-full"></div>
                     </div>
-                    <div class="w-full max-w-[12rem] sm:max-w-[14rem] shrink min-w-0 mb-0.5 bg-slate-900/95 border border-slate-700/80 rounded-xl px-2 py-1 shadow-xl backdrop-blur-md">
+                    <div class="neon-nameplate w-full max-w-[12rem] sm:max-w-[14rem] shrink min-w-0 mb-0.5 rounded-xl px-2 py-1">
                         <div class="flex justify-between items-center gap-1 mb-0.5 min-w-0">
                             <div class="flex items-center space-x-1 min-w-0">
                                 <span id="player-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-red-500 text-white">火</span>
-                                <span id="player-monster-name" class="font-black text-[10px] sm:text-xs text-pink-300 truncate">己方怪獸</span>
+                                <span id="player-monster-name" class="font-black text-[10px] sm:text-xs truncate">己方怪獸</span>
                             </div>
-                            <span id="player-team-slot-badge" class="shrink-0 text-[9px] bg-pink-500/20 text-pink-300 px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
+                            <span id="player-team-slot-badge" class="shrink-0 text-[9px] px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
                         </div>
-                        <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden p-0.5 border border-slate-800">
-                            <div id="player-hp-bar" class="bg-gradient-to-r from-emerald-500 via-teal-400 to-indigo-500 h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+                        <div class="neon-hp-track w-full">
+                            <div id="player-hp-bar" class="h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
                         </div>
-                        <div class="text-[9px] text-slate-400 mt-0.5 flex justify-between font-mono">
+                        <div class="text-[9px] mt-0.5 flex justify-between font-mono">
                             <span>HP</span>
                             <span id="player-hp-text">100 / 100</span>
                         </div>
