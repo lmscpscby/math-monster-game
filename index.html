@@ -517,7 +517,7 @@
 
         #pokemon-battle-arena.neon-stage.poke-stage .neon-cluster-enemy {
             position: absolute;
-            top: 0.25rem;
+            top: 1.75rem; /* 略下移，敵我頭像垂直中線更接近 */
             right: 0.25rem;
             z-index: 12;
             display: flex;
@@ -548,7 +548,7 @@
             max-width: 12rem;
             flex: 0 1 auto;
             align-self: flex-start; /* 對齊敵方頭像上半 */
-            margin-top: 0.15rem;
+            margin-top: 0.35rem; /* 跟 cluster 下移微調，唔遮中央 VFX */
             margin-right: -0.15rem; /* 略向右貼頭像（名牌在左） */
             pointer-events: none;
         }
@@ -567,9 +567,9 @@
         #pokemon-battle-arena.neon-stage.poke-stage .neon-sprite-enemy {
             position: static;
             z-index: 10;
-            width: clamp(11rem, 44vw, 19rem);
-            height: clamp(11rem, 44vw, 19rem);
-            max-height: min(82%, 19rem);
+            width: clamp(9.5rem, 40vw, 16.5rem);
+            height: clamp(9.5rem, 40vw, 16.5rem);
+            max-height: min(76%, 16.5rem);
             flex: 0 0 auto;
             display: flex;
             align-items: center;
@@ -616,8 +616,8 @@
                 width: min(9.5rem, 34vw);
             }
             #pokemon-battle-arena.neon-stage.poke-stage .neon-sprite-enemy {
-                width: clamp(9rem, 48vw, 14rem);
-                height: clamp(9rem, 48vw, 14rem);
+                width: clamp(8rem, 44vw, 12.5rem);
+                height: clamp(8rem, 44vw, 12.5rem);
             }
             #pokemon-battle-arena.neon-stage.poke-stage .neon-sprite-player {
                 width: clamp(8rem, 44vw, 12.5rem);
