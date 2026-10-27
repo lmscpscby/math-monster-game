@@ -188,82 +188,54 @@
             animation-timing-function: steps(1);
             animation-fill-mode: forwards;
         }
-        .battle-vfx-burst[data-element="fire"] .battle-vfx-sheet {
+        /* 八屬：單幀 512 透明底 + scale/fade（同 fire） */
+        .battle-vfx-burst[data-element="fire"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="water"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="grass"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="thunder"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="fight"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="rock"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="psy"] .battle-vfx-sheet,
+        .battle-vfx-burst[data-element="holy"] .battle-vfx-sheet {
             width: 220px; height: 220px; margin: -110px 0 0 -110px;
-            background-image: url('vfx/fire_attack_vfx_512.png');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            animation: battle-vfx-sheet-fire 0.65s ease-out forwards;
+            animation: battle-vfx-sheet-single 0.65s ease-out forwards;
+        }
+        .battle-vfx-burst[data-element="fire"] .battle-vfx-sheet {
+            background-image: url('vfx/fire_attack_vfx_512.png');
         }
         .battle-vfx-burst[data-element="water"] .battle-vfx-sheet {
-            width: 160px; height: 96px; margin: -48px 0 0 -80px;
-            background-image: url('vfx/water.png');
-            animation: battle-vfx-sheet-water 0.65s steps(12) forwards;
+            background-image: url('vfx/water_attack_vfx_512.png');
         }
         .battle-vfx-burst[data-element="grass"] .battle-vfx-sheet {
-            width: 128px; height: 128px; margin: -64px 0 0 -64px;
-            background-image: url('vfx/grass.png');
-            animation: battle-vfx-sheet-grass 0.6s steps(12) forwards;
+            background-image: url('vfx/grass_attack_vfx_512.png');
         }
         .battle-vfx-burst[data-element="thunder"] .battle-vfx-sheet {
-            width: 128px; height: 160px; margin: -80px 0 0 -64px;
-            background-image: url('vfx/thunder.png');
-            animation: battle-vfx-sheet-thunder 0.55s steps(10) forwards;
+            background-image: url('vfx/thunder_attack_vfx_512.png');
         }
-        /* 八屬性各有專用 sprite sheet */
         .battle-vfx-burst[data-element="fight"] .battle-vfx-sheet {
-            width: 128px; height: 128px; margin: -64px 0 0 -64px;
-            background-image: url('vfx/fight.png');
-            animation: battle-vfx-sheet-fight 0.6s steps(12) forwards;
+            background-image: url('vfx/fight_attack_vfx_512.png');
         }
         .battle-vfx-burst[data-element="rock"] .battle-vfx-sheet {
-            width: 128px; height: 128px; margin: -64px 0 0 -64px;
-            background-image: url('vfx/rock.png');
-            animation: battle-vfx-sheet-rock 0.6s steps(12) forwards;
+            background-image: url('vfx/rock_attack_vfx_512.png');
         }
         .battle-vfx-burst[data-element="psy"] .battle-vfx-sheet {
-            width: 128px; height: 128px; margin: -64px 0 0 -64px;
-            background-image: url('vfx/psy.png');
-            animation: battle-vfx-sheet-psy 0.62s steps(12) forwards;
+            background-image: url('vfx/psy_attack_vfx_512.png');
         }
         .battle-vfx-burst[data-element="holy"] .battle-vfx-sheet {
-            width: 128px; height: 160px; margin: -80px 0 0 -64px;
-            background-image: url('vfx/holy.png');
-            animation: battle-vfx-sheet-holy 0.6s steps(12) forwards;
+            background-image: url('vfx/holy_attack_vfx_512.png');
+        }
+        @keyframes battle-vfx-sheet-single {
+            0% { transform: scale(0.35) rotate(-10deg); opacity: 0; }
+            22% { transform: scale(1.12) rotate(3deg); opacity: 1; }
+            100% { transform: scale(1.4) rotate(12deg); opacity: 0; }
         }
         @keyframes battle-vfx-sheet-fire {
             0% { transform: scale(0.35) rotate(-10deg); opacity: 0; }
             22% { transform: scale(1.12) rotate(3deg); opacity: 1; }
             100% { transform: scale(1.4) rotate(12deg); opacity: 0; }
-        }
-        @keyframes battle-vfx-sheet-water {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1920px 0; opacity: 0.15; }
-        }
-        @keyframes battle-vfx-sheet-grass {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1536px 0; opacity: 0.15; }
-        }
-        @keyframes battle-vfx-sheet-thunder {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1280px 0; opacity: 0.1; }
-        }
-        @keyframes battle-vfx-sheet-fight {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1536px 0; opacity: 0.15; }
-        }
-        @keyframes battle-vfx-sheet-rock {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1536px 0; opacity: 0.15; }
-        }
-        @keyframes battle-vfx-sheet-psy {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1536px 0; opacity: 0.15; }
-        }
-        @keyframes battle-vfx-sheet-holy {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1536px 0; opacity: 0.12; }
         }
         .battle-vfx-particles {
             position: absolute;

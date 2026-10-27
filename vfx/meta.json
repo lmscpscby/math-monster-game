@@ -9,52 +9,66 @@
     "legacySheet": "fire.png"
   },
   "water": {
-    "file": "water.png",
-    "frames": 12,
-    "fw": 160,
-    "fh": 96,
-    "durationMs": 650
+    "file": "water_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "water.png"
   },
   "grass": {
-    "file": "grass.png",
-    "frames": 12,
-    "fw": 128,
-    "fh": 128,
-    "durationMs": 600
+    "file": "grass_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "grass.png"
   },
   "thunder": {
-    "file": "thunder.png",
-    "frames": 10,
-    "fw": 128,
-    "fh": 160,
-    "durationMs": 550
+    "file": "thunder_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "thunder.png"
   },
   "fight": {
-    "file": "fight.png",
-    "frames": 12,
-    "fw": 128,
-    "fh": 128,
-    "durationMs": 600
+    "file": "fight_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "fight.png"
   },
   "rock": {
-    "file": "rock.png",
-    "frames": 12,
-    "fw": 128,
-    "fh": 128,
-    "durationMs": 600
+    "file": "rock_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "rock.png"
   },
   "psy": {
-    "file": "psy.png",
-    "frames": 12,
-    "fw": 128,
-    "fh": 128,
-    "durationMs": 620
+    "file": "psy_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "psy.png"
   },
   "holy": {
-    "file": "holy.png",
-    "frames": 12,
-    "fw": 128,
-    "fh": 160,
-    "durationMs": 600
+    "file": "holy_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "holy.png"
   }
 }
