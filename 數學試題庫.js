@@ -74269,5 +74269,4020 @@ window.WORD_QUESTION_BANK = [
     "source": "第二版 2 下 B 單元七 第 20 課 正方形和長方形",
     "kind": "short_answer",
     "image": "q-images/2DB_L20_Q08.png"
+  },
+  {
+    "id": "3A_L01_Q01",
+    "grade": 3,
+    "question": "算柱所表示的數是 ________。",
+    "options": [
+      "25317",
+      "25136",
+      "71352",
+      "63152"
+    ],
+    "answer": "25317",
+    "unitKey": "five_digit_numbers",
+    "topic": "五位數",
+    "source": "第二版 3 上 A 單元一 第 1 課 五位數",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L01_Q01.png"
+  },
+  {
+    "id": "3A_L01_Q02",
+    "grade": 3,
+    "question": "在這個數中，「________」在萬位，表示 ________。",
+    "options": [
+      "2；20000",
+      "5；50000",
+      "3；30000",
+      "1；10000"
+    ],
+    "answer": "2；20000",
+    "unitKey": "five_digit_numbers",
+    "topic": "五位數",
+    "source": "第二版 3 上 A 單元一 第 1 課 五位數",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L01_Q02.png"
+  },
+  {
+    "id": "3A_L01_Q03",
+    "grade": 3,
+    "question": "下面算柱所表示的數是甚麼？",
+    "options": [
+      "3459",
+      "9543",
+      "34509",
+      "90543"
+    ],
+    "answer": "34509",
+    "unitKey": "five_digit_numbers",
+    "topic": "五位數",
+    "source": "第二版 3 上 A 單元一 第 1 課 五位數",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L01_Q03.png"
+  },
+  {
+    "id": "3A_L01_Q04",
+    "grade": 3,
+    "question": "以下哪個數讀作「三萬零一十七」？",
+    "options": [
+      "31700",
+      "30170",
+      "30107",
+      "30017"
+    ],
+    "answer": "30017",
+    "unitKey": "five_digit_numbers",
+    "topic": "五位數",
+    "source": "第二版 3 上 A 單元一 第 1 課 五位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L01_Q05",
+    "grade": 3,
+    "question": "23083，23084，_________，23086，23087",
+    "options": [
+      "230850",
+      "23085",
+      "11542.5",
+      "2308.5"
+    ],
+    "answer": "23085",
+    "unitKey": "five_digit_numbers",
+    "topic": "五位數",
+    "source": "第二版 3 上 A 單元一 第 1 課 五位數",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L01_Q06",
+    "grade": 3,
+    "question": "56972，56971，56970，56969，_________",
+    "options": [
+      "5696.8",
+      "28484",
+      "56968",
+      "569680"
+    ],
+    "answer": "56968",
+    "unitKey": "five_digit_numbers",
+    "topic": "五位數",
+    "source": "第二版 3 上 A 單元一 第 1 課 五位數",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L02_Q01",
+    "grade": 3,
+    "question": "選出正確的答案。",
+    "options": [
+      "3740 < 32357",
+      "3740 > 32357"
+    ],
+    "answer": "3740 < 32357",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L02_Q02",
+    "grade": 3,
+    "question": "選出正確的答案。",
+    "options": [
+      "56271 < 13245",
+      "56271 > 13245"
+    ],
+    "answer": "56271 > 13245",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L02_Q03",
+    "grade": 3,
+    "question": "以下哪組數是由大至小排列？",
+    "options": [
+      "50372 > 12459 > 34281",
+      "50372 > 34281 > 12459",
+      "34281 > 50372 > 12459",
+      "12459 > 50372 > 34281"
+    ],
+    "answer": "50372 > 34281 > 12459",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L02_Q04",
+    "grade": 3,
+    "question": "以下哪組數是由小至大排列？",
+    "options": [
+      "67248 < 62105 < 6937",
+      "62105 < 67248 < 6937",
+      "6937 < 62105 < 67248",
+      "6937 < 67248 < 62105"
+    ],
+    "answer": "6937 < 62105 < 67248",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L02_Q05",
+    "grade": 3,
+    "question": "利用下面的數卡，排出最小的五位數是 ________。",
+    "options": [
+      "2457.8",
+      "12289",
+      "245780",
+      "24578"
+    ],
+    "answer": "24578",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "short_answer",
+    "image": "q-images/3A_L02_Q05.png"
+  },
+  {
+    "id": "3A_L02_Q06",
+    "grade": 3,
+    "question": "利用下面的數卡，排出最大的五位數是 ________。",
+    "options": [
+      "43771",
+      "875420",
+      "8754.2",
+      "87542"
+    ],
+    "answer": "87542",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "short_answer",
+    "image": "q-images/3A_L02_Q06.png"
+  },
+  {
+    "id": "3A_L02_Q07",
+    "grade": 3,
+    "question": "利用下面的數卡，排出最小的五位偶數是________。",
+    "options": [
+      "1049.6",
+      "10496",
+      "5248",
+      "104960"
+    ],
+    "answer": "10496",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "short_answer",
+    "image": "q-images/3A_L02_Q07.png"
+  },
+  {
+    "id": "3A_L02_Q08",
+    "grade": 3,
+    "question": "利用下面的數卡，排出最大的五位奇數是 ________。",
+    "options": [
+      "96401",
+      "9640.1",
+      "48200.5",
+      "964010"
+    ],
+    "answer": "96401",
+    "unitKey": "compare_numbers",
+    "topic": "比較數的大小",
+    "source": "第二版 3 上 A 單元一 第 2 課 比較數的大小",
+    "kind": "short_answer",
+    "image": "q-images/3A_L02_Q08.png"
+  },
+  {
+    "id": "3A_L03_Q01",
+    "grade": 3,
+    "question": "5 + 5 + 5 + 5 = 5 × ______",
+    "options": [
+      "5",
+      "4",
+      "8",
+      "3"
+    ],
+    "answer": "4",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q02",
+    "grade": 3,
+    "question": "7 + 7 + 7 + 7 + 7 = 7 × ______",
+    "options": [
+      "10",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "5",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q03",
+    "grade": 3,
+    "question": "8 × 2 = 2 × ______",
+    "options": [
+      "8",
+      "16",
+      "7",
+      "9"
+    ],
+    "answer": "8",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q04",
+    "grade": 3,
+    "question": "3 × 9 = ______ × 3",
+    "options": [
+      "8",
+      "10",
+      "18",
+      "9"
+    ],
+    "answer": "9",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q05",
+    "grade": 3,
+    "question": "20 × 4 = ______",
+    "options": [
+      "160",
+      "80",
+      "79",
+      "81"
+    ],
+    "answer": "80",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q06",
+    "grade": 3,
+    "question": "40 × 3 = ______",
+    "options": [
+      "120",
+      "12",
+      "60",
+      "1200"
+    ],
+    "answer": "120",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q07",
+    "grade": 3,
+    "question": "13 × 2 = ______",
+    "options": [
+      "27",
+      "26",
+      "25",
+      "52"
+    ],
+    "answer": "26",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q08",
+    "grade": 3,
+    "question": "31 × 3 = ______",
+    "options": [
+      "92",
+      "93",
+      "186",
+      "94"
+    ],
+    "answer": "93",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q09",
+    "grade": 3,
+    "question": "18 × 5 = ______",
+    "options": [
+      "89",
+      "91",
+      "90",
+      "180"
+    ],
+    "answer": "90",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L03_Q10",
+    "grade": 3,
+    "question": "34 × 7 = ______",
+    "options": [
+      "2380",
+      "238",
+      "119",
+      "23.8"
+    ],
+    "answer": "238",
+    "unitKey": "multiplication_1",
+    "topic": "乘法（一）",
+    "source": "第二版 3 上 A 單元二 第 3 課 乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L04_Q01",
+    "grade": 3,
+    "question": "300 × 2 = _______",
+    "options": [
+      "600",
+      "60",
+      "6000",
+      "300"
+    ],
+    "answer": "600",
+    "unitKey": "multiplication_2",
+    "topic": "乘法（二）",
+    "source": "第二版 3 上 A 單元二 第 4 課 乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L04_Q02",
+    "grade": 3,
+    "question": "400 × 5 = _______",
+    "options": [
+      "1000",
+      "2000",
+      "200",
+      "20000"
+    ],
+    "answer": "2000",
+    "unitKey": "multiplication_2",
+    "topic": "乘法（二）",
+    "source": "第二版 3 上 A 單元二 第 4 課 乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L04_Q03",
+    "grade": 3,
+    "question": "213 × 3 = _______",
+    "options": [
+      "63.9",
+      "319.5",
+      "639",
+      "6390"
+    ],
+    "answer": "639",
+    "unitKey": "multiplication_2",
+    "topic": "乘法（二）",
+    "source": "第二版 3 上 A 單元二 第 4 課 乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L04_Q04",
+    "grade": 3,
+    "question": "102 × 4 = _______",
+    "options": [
+      "40.8",
+      "204",
+      "4080",
+      "408"
+    ],
+    "answer": "408",
+    "unitKey": "multiplication_2",
+    "topic": "乘法（二）",
+    "source": "第二版 3 上 A 單元二 第 4 課 乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L04_Q05",
+    "grade": 3,
+    "question": "163 × 5 = ______",
+    "options": [
+      "815",
+      "8150",
+      "407.5",
+      "81.5"
+    ],
+    "answer": "815",
+    "unitKey": "multiplication_2",
+    "topic": "乘法（二）",
+    "source": "第二版 3 上 A 單元二 第 4 課 乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L04_Q06",
+    "grade": 3,
+    "question": "581 × 6 = ______",
+    "options": [
+      "3486",
+      "1743",
+      "348.6",
+      "34860"
+    ],
+    "answer": "3486",
+    "unitKey": "multiplication_2",
+    "topic": "乘法（二）",
+    "source": "第二版 3 上 A 單元二 第 4 課 乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q01",
+    "grade": 3,
+    "question": "4 × 2 × 6 = ______",
+    "options": [
+      "49",
+      "48",
+      "96",
+      "47"
+    ],
+    "answer": "48",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q02",
+    "grade": 3,
+    "question": "5 × 6 × 7 = ______",
+    "options": [
+      "2100",
+      "210",
+      "105",
+      "21"
+    ],
+    "answer": "210",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q03",
+    "grade": 3,
+    "question": "15 × 3 × 5 = ______",
+    "options": [
+      "112.5",
+      "22.5",
+      "2250",
+      "225"
+    ],
+    "answer": "225",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q04",
+    "grade": 3,
+    "question": "22 × 4 × 5 = ______",
+    "options": [
+      "4400",
+      "220",
+      "44",
+      "440"
+    ],
+    "answer": "440",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q05",
+    "grade": 3,
+    "question": "9 × 5 × 2 = ______",
+    "options": [
+      "89",
+      "91",
+      "90",
+      "180"
+    ],
+    "answer": "90",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q06",
+    "grade": 3,
+    "question": "6 × 4 × 5 = ______",
+    "options": [
+      "1200",
+      "120",
+      "60",
+      "12"
+    ],
+    "answer": "120",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q07",
+    "grade": 3,
+    "question": "3 × 25 × 4 = ______",
+    "options": [
+      "300",
+      "3000",
+      "150",
+      "30"
+    ],
+    "answer": "300",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q08",
+    "grade": 3,
+    "question": "7 × 25 × 2 = ______",
+    "options": [
+      "35",
+      "3500",
+      "350",
+      "175"
+    ],
+    "answer": "350",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q09",
+    "grade": 3,
+    "question": "子瑜買了下圖的朱古力 4 瓶，共得朱古力 ______ 粒。",
+    "options": [
+      "90",
+      "180",
+      "1800",
+      "18"
+    ],
+    "answer": "180",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer",
+    "image": "q-images/3A_L05_Q09.png"
+  },
+  {
+    "id": "3A_L05_Q10",
+    "grade": 3,
+    "question": "演奏廳 A 可容納觀眾 185 個，演奏廳 B 可容納的觀眾人數是演奏廳 A 的 4 倍。演奏廳 B 可容納觀眾 ______ 個。",
+    "options": [
+      "370",
+      "740",
+      "7400",
+      "74"
+    ],
+    "answer": "740",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L05_Q11",
+    "grade": 3,
+    "question": "劉小姐和 5 個同事每人買了一個下圖的布偶送給孤兒院的兒童，她們共需付 ______ 元。",
+    "options": [
+      "141",
+      "14100",
+      "705",
+      "1410"
+    ],
+    "answer": "1410",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer",
+    "image": "q-images/3A_L05_Q11.png"
+  },
+  {
+    "id": "3A_L05_Q12",
+    "grade": 3,
+    "question": "文具店有曲別針 6 袋，每袋有 5 盒，每盒有 100 個。文具店共有曲別針 _______ 個。",
+    "options": [
+      "300",
+      "30000",
+      "3000",
+      "1500"
+    ],
+    "answer": "3000",
+    "unitKey": "multiplication_3",
+    "topic": "乘法（三）",
+    "source": "第二版 3 上 A 單元二 第 5 課 乘法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L06_Q01",
+    "grade": 3,
+    "question": "牙簽長 ______ mm。",
+    "options": [
+      "65",
+      "64",
+      "66",
+      "130"
+    ],
+    "answer": "65",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer",
+    "image": "q-images/3A_L06_Q01.png"
+  },
+  {
+    "id": "3A_L06_Q02",
+    "grade": 3,
+    "question": "膠叉長 ______ 毫米。",
+    "options": [
+      "122",
+      "12.2",
+      "1220",
+      "61"
+    ],
+    "answer": "122",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer",
+    "image": "q-images/3A_L06_Q02.png"
+  },
+  {
+    "id": "3A_L06_Q03",
+    "grade": 3,
+    "question": "膠匙長 ______ 毫米。",
+    "options": [
+      "10.5",
+      "1050",
+      "52.5",
+      "105"
+    ],
+    "answer": "105",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer",
+    "image": "q-images/3A_L06_Q03.png"
+  },
+  {
+    "id": "3A_L06_Q04",
+    "grade": 3,
+    "question": "膠叉比膠匙 __________。",
+    "options": [
+      "長 15 毫米",
+      "長 17 毫米",
+      "短 15 毫米",
+      "短 17 毫米"
+    ],
+    "answer": "長 17 毫米",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L06_Q04.png"
+  },
+  {
+    "id": "3A_L06_Q05",
+    "grade": 3,
+    "question": "2 厘米 = ______ 毫米",
+    "options": [
+      "20",
+      "19",
+      "21",
+      "40"
+    ],
+    "answer": "20",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L06_Q06",
+    "grade": 3,
+    "question": "4 厘米 5 毫米 = ______ 毫米",
+    "options": [
+      "44",
+      "45",
+      "90",
+      "46"
+    ],
+    "answer": "45",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L06_Q07",
+    "grade": 3,
+    "question": "8 cm = ______ mm",
+    "options": [
+      "79",
+      "81",
+      "160",
+      "80"
+    ],
+    "answer": "80",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L06_Q08",
+    "grade": 3,
+    "question": "9 cm 2 mm = ______ mm",
+    "options": [
+      "93",
+      "91",
+      "184",
+      "92"
+    ],
+    "answer": "92",
+    "unitKey": "millimetre",
+    "topic": "毫米",
+    "source": "第二版 3 上 A 單元三 第 6 課 毫米",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L07_Q01",
+    "grade": 3,
+    "question": "診所和希兒家相距 ______ km。",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "6"
+    ],
+    "answer": "3",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "short_answer",
+    "image": "q-images/3A_L07_Q01.png"
+  },
+  {
+    "id": "3A_L07_Q02",
+    "grade": 3,
+    "question": "距離希兒家最近的是 ___________。",
+    "options": [
+      "沙灘",
+      "診所",
+      "公園",
+      "商場",
+      "e. 酒店"
+    ],
+    "answer": "商場",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L07_Q02.png"
+  },
+  {
+    "id": "3A_L07_Q03",
+    "grade": 3,
+    "question": "希兒家和公園相距 _______ m。",
+    "options": [
+      "20000",
+      "2000",
+      "200",
+      "1000"
+    ],
+    "answer": "2000",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "short_answer",
+    "image": "q-images/3A_L07_Q03.png"
+  },
+  {
+    "id": "3A_L07_Q04",
+    "grade": 3,
+    "question": "希兒家和酒店的距離比希兒家和公園的距離 _______。",
+    "options": [
+      "遠",
+      "近"
+    ],
+    "answer": "遠",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L07_Q04.png"
+  },
+  {
+    "id": "3A_L07_Q05",
+    "grade": 3,
+    "question": "3 公里 = _______ 米",
+    "options": [
+      "3000",
+      "300",
+      "1500",
+      "30000"
+    ],
+    "answer": "3000",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L07_Q06",
+    "grade": 3,
+    "question": "2 km 500 m = _______ m",
+    "options": [
+      "1250",
+      "250",
+      "25000",
+      "2500"
+    ],
+    "answer": "2500",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L07_Q07",
+    "grade": 3,
+    "question": "6 公里 312 米 = _______ 米",
+    "options": [
+      "63120",
+      "6312",
+      "3156",
+      "631.2"
+    ],
+    "answer": "6312",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L07_Q08",
+    "grade": 3,
+    "question": "12 km = _______ m",
+    "options": [
+      "1200",
+      "12000",
+      "6000",
+      "120000"
+    ],
+    "answer": "12000",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3A_L07_Q09",
+    "grade": 3,
+    "question": "學生證厚約 ________。",
+    "options": [
+      "2 mm",
+      "2 cm",
+      "2 m",
+      "2 km"
+    ],
+    "answer": "2 mm",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L07_Q10",
+    "grade": 3,
+    "question": "數學課本長 ________。",
+    "options": [
+      "29 mm",
+      "29 cm",
+      "29 m",
+      "29 km"
+    ],
+    "answer": "29 cm",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L07_Q11",
+    "grade": 3,
+    "question": "西區海底隧道全長約 ________。",
+    "options": [
+      "2 mm",
+      "2 cm",
+      "2 m",
+      "2 km"
+    ],
+    "answer": "2 km",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L07_Q12",
+    "grade": 3,
+    "question": "學校走廊長約 ________。",
+    "options": [
+      "40 mm",
+      "40 cm",
+      "40 m",
+      "40 km"
+    ],
+    "answer": "40 m",
+    "unitKey": "kilometre",
+    "topic": "公里",
+    "source": "第二版 3 上 A 單元三 第 7 課 公里",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L08_Q01",
+    "grade": 3,
+    "question": "時間過了多少秒？",
+    "options": [
+      "20",
+      "40",
+      "21",
+      "19"
+    ],
+    "answer": "20",
+    "unitKey": "seconds",
+    "topic": "秒",
+    "source": "第二版 3 上 A 單元四 第 8 課 秒",
+    "kind": "short_answer",
+    "image": "q-images/3A_L08_Q01.png"
+  },
+  {
+    "id": "3A_L08_Q02",
+    "grade": 3,
+    "question": "時間過了多少秒？",
+    "options": [
+      "35",
+      "33",
+      "34",
+      "68"
+    ],
+    "answer": "34",
+    "unitKey": "seconds",
+    "topic": "秒",
+    "source": "第二版 3 上 A 單元四 第 8 課 秒",
+    "kind": "short_answer",
+    "image": "q-images/3A_L08_Q02.png"
+  },
+  {
+    "id": "3A_L08_Q03",
+    "grade": 3,
+    "question": "時間過了多少秒？",
+    "options": [
+      "9",
+      "10",
+      "8",
+      "18"
+    ],
+    "answer": "9",
+    "unitKey": "seconds",
+    "topic": "秒",
+    "source": "第二版 3 上 A 單元四 第 8 課 秒",
+    "kind": "short_answer",
+    "image": "q-images/3A_L08_Q03.png"
+  },
+  {
+    "id": "3A_L08_Q04",
+    "grade": 3,
+    "question": "時間過了多少秒？",
+    "options": [
+      "42",
+      "41",
+      "84",
+      "43"
+    ],
+    "answer": "42",
+    "unitKey": "seconds",
+    "topic": "秒",
+    "source": "第二版 3 上 A 單元四 第 8 課 秒",
+    "kind": "short_answer",
+    "image": "q-images/3A_L08_Q04.png"
+  },
+  {
+    "id": "3A_L09_Q01",
+    "grade": 3,
+    "question": "時間過了多少小時？",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "2"
+    ],
+    "answer": "3",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q01.png"
+  },
+  {
+    "id": "3A_L09_Q02",
+    "grade": 3,
+    "question": "時間過了多少小時？",
+    "options": [
+      "8",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": "4",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q02.png"
+  },
+  {
+    "id": "3A_L09_Q03",
+    "grade": 3,
+    "question": "時間過了多少小時？",
+    "options": [
+      "11",
+      "20",
+      "9",
+      "10"
+    ],
+    "answer": "10",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q03.png"
+  },
+  {
+    "id": "3A_L09_Q04",
+    "grade": 3,
+    "question": "時間過了多少小時？",
+    "options": [
+      "8",
+      "7",
+      "16",
+      "9"
+    ],
+    "answer": "8",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q04.png"
+  },
+  {
+    "id": "3A_L09_Q05",
+    "grade": 3,
+    "question": "結束時間是 6 時 ______ 分。",
+    "options": [
+      "40",
+      "80",
+      "41",
+      "39"
+    ],
+    "answer": "40",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q05.png"
+  },
+  {
+    "id": "3A_L09_Q06",
+    "grade": 3,
+    "question": "結束時間是 4 時 ______ 分。",
+    "options": [
+      "18",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": "9",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q06.png"
+  },
+  {
+    "id": "3A_L09_Q07",
+    "grade": 3,
+    "question": "結束時間是 __________ 。",
+    "options": [
+      "上午 8 時 18 分",
+      "上午 9 時 18 分",
+      "下午 8 時 18 分",
+      "下午 9 時 18 分"
+    ],
+    "answer": "下午 9 時 18 分",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L09_Q07.png"
+  },
+  {
+    "id": "3A_L09_Q08",
+    "grade": 3,
+    "question": "結束時間是 __________ 。",
+    "options": [
+      "上午 1 時 37 分",
+      "上午 2 時 37 分",
+      "下午 1 時 37 分",
+      "下午 2 時 37 分"
+    ],
+    "answer": "下午 2 時 37 分",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L09_Q08.png"
+  },
+  {
+    "id": "3A_L09_Q09",
+    "grade": 3,
+    "question": "開始時間是 3 時 ______ 分。",
+    "options": [
+      "30",
+      "60",
+      "31",
+      "29"
+    ],
+    "answer": "30",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q09.png"
+  },
+  {
+    "id": "3A_L09_Q10",
+    "grade": 3,
+    "question": "開始時間是 10 時 ______ 分。",
+    "options": [
+      "104",
+      "51",
+      "53",
+      "52"
+    ],
+    "answer": "52",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q10.png"
+  },
+  {
+    "id": "3A_L09_Q11",
+    "grade": 3,
+    "question": "開始時間是 4 時 ______ 分。",
+    "options": [
+      "40",
+      "21",
+      "19",
+      "20"
+    ],
+    "answer": "20",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q11.png"
+  },
+  {
+    "id": "3A_L09_Q12",
+    "grade": 3,
+    "question": "開始時間是 9 時 ______ 分。",
+    "options": [
+      "68",
+      "34",
+      "35",
+      "33"
+    ],
+    "answer": "34",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "short_answer",
+    "image": "q-images/3A_L09_Q12.png"
+  },
+  {
+    "id": "3A_L09_Q13",
+    "grade": 3,
+    "question": "開始時間是幾時幾分？",
+    "options": [
+      "上午 6 時",
+      "上午 7 時",
+      "下午 1 時",
+      "下午 3 時"
+    ],
+    "answer": "上午 7 時",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L09_Q13.png"
+  },
+  {
+    "id": "3A_L09_Q14",
+    "grade": 3,
+    "question": "開始時間是幾時幾分？",
+    "options": [
+      "上午 7 時 18 分",
+      "上午 9 時 18 分",
+      "下午 7 時 18 分",
+      "下午 11 時 18 分"
+    ],
+    "answer": "上午 9 時 18 分",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L09_Q14.png"
+  },
+  {
+    "id": "3A_L09_Q15",
+    "grade": 3,
+    "question": "開始時間是幾時幾分？",
+    "options": [
+      "上午 12 時 15 分",
+      "上午 11 時 25 分",
+      "上午 11 時 35 分",
+      "下午 12 時 15 分"
+    ],
+    "answer": "上午 11 時 25 分",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L09_Q15.png"
+  },
+  {
+    "id": "3A_L09_Q16",
+    "grade": 3,
+    "question": "開始時間是幾時幾分？",
+    "options": [
+      "下午 6 時 48 分",
+      "下午 7 時 12 分",
+      "下午 7 時 48 分",
+      "上午 7 時 56 分"
+    ],
+    "answer": "下午 6 時 48 分",
+    "unitKey": "activity_time",
+    "topic": "活動時間",
+    "source": "第二版 3 上 A 單元四 第 9 課 活動時間",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L09_Q16.png"
+  },
+  {
+    "id": "3A_L10_Q01",
+    "grade": 3,
+    "question": "用「24 小時報時制」表示「上午 9 時」。",
+    "options": [
+      "9:0",
+      "9:00",
+      "09:00",
+      "90:00"
+    ],
+    "answer": "09:00",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L10_Q02",
+    "grade": 3,
+    "question": "用「24 小時報時制」表示「下午 4 時 25 分」。",
+    "options": [
+      "04:25",
+      "4:25",
+      "14:25",
+      "16:25"
+    ],
+    "answer": "16:25",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3A_L10_Q03",
+    "grade": 3,
+    "question": "用「12 小時報時制」表示以下數字鐘顯示的時間。",
+    "options": [
+      "上午 7 時 50 分",
+      "上午 7 時 54 分",
+      "下午 7 時 50 分",
+      "下午 7 時 54 分"
+    ],
+    "answer": "上午 7 時 54 分",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L10_Q03.png"
+  },
+  {
+    "id": "3A_L10_Q04",
+    "grade": 3,
+    "question": "用「12 小時報時制」表示以下數字鐘顯示的時間。",
+    "options": [
+      "上午 8 時 13 分",
+      "上午 8 時 18 分",
+      "下午 8 時 13 分",
+      "下午 8 時 18 分"
+    ],
+    "answer": "下午 8 時 13 分",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L10_Q04.png"
+  },
+  {
+    "id": "3A_L10_Q05",
+    "grade": 3,
+    "question": "看看哥哥一天的活動，用「24 小時報時制」表示以下時間。時間是 _____：30。",
+    "options": [
+      "22",
+      "12",
+      "11",
+      "10"
+    ],
+    "answer": "11",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "short_answer",
+    "image": "q-images/3A_L10_Q05.png"
+  },
+  {
+    "id": "3A_L10_Q06",
+    "grade": 3,
+    "question": "看看哥哥一天的活動，用「24 小時報時制」表示以下時間，時間是 _____：08。",
+    "options": [
+      "19",
+      "40",
+      "20",
+      "21"
+    ],
+    "answer": "20",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "short_answer",
+    "image": "q-images/3A_L10_Q06.png"
+  },
+  {
+    "id": "3A_L10_Q07",
+    "grade": 3,
+    "question": "以下是穿梭巴士由總站開出的時間表。穿梭巴士在星期日 ________ 由總站開出。",
+    "options": [
+      "上午 7 時 5 分",
+      "下午 7 時 5 分",
+      "上午 9 時 5 分",
+      "下午 9 時 5 分"
+    ],
+    "answer": "下午 7 時 5 分",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L10_Q07.png"
+  },
+  {
+    "id": "3A_L10_Q08",
+    "grade": 3,
+    "question": "以下是穿梭巴士由總站開出的時間表。如果今天是星期四，最後一班穿梭巴士在 __________ 由總站開出。",
+    "options": [
+      "上午 9 時 45 分",
+      "上午 11 時 45 分",
+      "下午 9 時 45 分",
+      "下午 11 時 45 分"
+    ],
+    "answer": "下午 9 時 45 分",
+    "unitKey": "hour_24_time",
+    "topic": "24小時報時制",
+    "source": "第二版 3 上 A 單元四 第 10 課 24小時報時制",
+    "kind": "multiple_choice",
+    "image": "q-images/3A_L10_Q08.png"
+  },
+  {
+    "id": "3B_L11_Q01",
+    "grade": 3,
+    "question": "12 ÷ 3 = ________",
+    "options": [
+      "4",
+      "5",
+      "8",
+      "3"
+    ],
+    "answer": "4",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q02",
+    "grade": 3,
+    "question": "21 ÷ 4 =________",
+    "options": [
+      "10…1",
+      "5…1",
+      "4…1",
+      "6…1"
+    ],
+    "answer": "5…1",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q03",
+    "grade": 3,
+    "question": "48 ÷ 7 =________",
+    "options": [
+      "6…6",
+      "7…6",
+      "5…6",
+      "12…6"
+    ],
+    "answer": "6…6",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q04",
+    "grade": 3,
+    "question": "45 ÷ 9 =________",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q05",
+    "grade": 3,
+    "question": "70 ÷ 7 =________",
+    "options": [
+      "10",
+      "20",
+      "11",
+      "9"
+    ],
+    "answer": "10",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q06",
+    "grade": 3,
+    "question": "26 ÷ 2 =________",
+    "options": [
+      "12",
+      "14",
+      "26",
+      "13"
+    ],
+    "answer": "13",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q07",
+    "grade": 3,
+    "question": "85 ÷ 4 =________",
+    "options": [
+      "21…1",
+      "22…1",
+      "20…1",
+      "42…1"
+    ],
+    "answer": "21…1",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q08",
+    "grade": 3,
+    "question": "67 ÷ 3 =_________",
+    "options": [
+      "22…1",
+      "21…1",
+      "44…1",
+      "23…1"
+    ],
+    "answer": "22…1",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q09",
+    "grade": 3,
+    "question": "72 ÷ 6 =________",
+    "options": [
+      "13",
+      "24",
+      "11",
+      "12"
+    ],
+    "answer": "12",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L11_Q10",
+    "grade": 3,
+    "question": "85 ÷ 3 =_________",
+    "options": [
+      "56…1",
+      "27…1",
+      "28…1",
+      "29…1"
+    ],
+    "answer": "28…1",
+    "unitKey": "division_1",
+    "topic": "除法（一）",
+    "source": "第二版 3 上 B 單元五 第 11 課 除法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L12_Q01",
+    "grade": 3,
+    "question": "600 ÷ 3 =________",
+    "options": [
+      "2000",
+      "20",
+      "100",
+      "200"
+    ],
+    "answer": "200",
+    "unitKey": "division_2",
+    "topic": "除法（二）",
+    "source": "第二版 3 上 B 單元五 第 12 課 除法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L12_Q02",
+    "grade": 3,
+    "question": "469 ÷ 2 =________",
+    "options": [
+      "2340…1",
+      "23.4…1",
+      "234…1",
+      "117…1"
+    ],
+    "answer": "234…1",
+    "unitKey": "division_2",
+    "topic": "除法（二）",
+    "source": "第二版 3 上 B 單元五 第 12 課 除法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L12_Q05",
+    "grade": 3,
+    "question": "255 ÷ 5 =________",
+    "options": [
+      "52",
+      "102",
+      "51",
+      "50"
+    ],
+    "answer": "51",
+    "unitKey": "division_2",
+    "topic": "除法（二）",
+    "source": "第二版 3 上 B 單元五 第 12 課 除法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L12_Q06",
+    "grade": 3,
+    "question": "789 ÷ 7 =________",
+    "options": [
+      "11.2…5",
+      "56…5",
+      "1120…5",
+      "112…5"
+    ],
+    "answer": "112…5",
+    "unitKey": "division_2",
+    "topic": "除法（二）",
+    "source": "第二版 3 上 B 單元五 第 12 課 除法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L12_Q09",
+    "grade": 3,
+    "question": "768 ÷ 3 =________",
+    "options": [
+      "2560",
+      "256",
+      "25.6",
+      "128"
+    ],
+    "answer": "256",
+    "unitKey": "division_2",
+    "topic": "除法（二）",
+    "source": "第二版 3 上 B 單元五 第 12 課 除法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L12_Q10",
+    "grade": 3,
+    "question": "555 ÷ 4 =________",
+    "options": [
+      "69…3",
+      "1380…3",
+      "13.8…3",
+      "138…3"
+    ],
+    "answer": "138…3",
+    "unitKey": "division_2",
+    "topic": "除法（二）",
+    "source": "第二版 3 上 B 單元五 第 12 課 除法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q01",
+    "grade": 3,
+    "question": "30 ÷ 3 ÷ 5 =________",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "2",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q02",
+    "grade": 3,
+    "question": "400 ÷ 4 ÷ 4 =________",
+    "options": [
+      "50",
+      "26",
+      "24",
+      "25"
+    ],
+    "answer": "25",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q03",
+    "grade": 3,
+    "question": "72 ÷ 2 ÷ 3 =________",
+    "options": [
+      "12",
+      "11",
+      "24",
+      "13"
+    ],
+    "answer": "12",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q04",
+    "grade": 3,
+    "question": "702 ÷ 6 ÷ 9 =________",
+    "options": [
+      "13",
+      "12",
+      "14",
+      "26"
+    ],
+    "answer": "13",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q05",
+    "grade": 3,
+    "question": "老師把 36 個學生每 3 個分成一組，共可分成 ________ 組。",
+    "options": [
+      "13",
+      "24",
+      "11",
+      "12"
+    ],
+    "answer": "12",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q06",
+    "grade": 3,
+    "question": "工廠職員把 822 枝雪條每 6 枝包裝成一盒，這些雪條共可包裝成 ________ 盒。",
+    "options": [
+      "13.7",
+      "1370",
+      "68.5",
+      "137"
+    ],
+    "answer": "137",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L13_Q07",
+    "grade": 3,
+    "question": "把 93 條圍巾平均放在 8 個紙袋，每個紙袋有圍巾 _______ 條，還餘圍巾 _______ 條。",
+    "options": [
+      "11，3",
+      "11，5",
+      "12，3",
+      "12，5"
+    ],
+    "answer": "11，5",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L13_Q08",
+    "grade": 3,
+    "question": "黃小姐有 142 元，她最多可買原子筆 _______ 枝，還餘 _______ 元。",
+    "options": [
+      "20，2",
+      "20，5",
+      "21，2",
+      "21，5"
+    ],
+    "answer": "20，2",
+    "unitKey": "division_3",
+    "topic": "除法（三）",
+    "source": "第二版 3 上 B 單元五 第 13 課 除法（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L13_Q08.png"
+  },
+  {
+    "id": "3B_L14_Q01",
+    "grade": 3,
+    "question": "信希售出 5 疊數量相同的慈善獎券，共 75 張。每疊慈善獎券有 ________ 張。",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "30"
+    ],
+    "answer": "15",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L14_Q02",
+    "grade": 3,
+    "question": "朗行有圖書 48 本，家聰有的數量是朗行的 2 倍，家聰有圖書 ________ 本。",
+    "options": [
+      "95",
+      "192",
+      "96",
+      "97"
+    ],
+    "answer": "96",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L14_Q03",
+    "grade": 3,
+    "question": "每排橙汁有 6 盒，108 排橙汁共有 ________ 盒。",
+    "options": [
+      "648",
+      "6480",
+      "324",
+      "64.8"
+    ],
+    "answer": "648",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L14_Q04",
+    "grade": 3,
+    "question": "水果店店員把 135 個蘋果平均分成 3 箱，每箱有蘋果 _________ 個。",
+    "options": [
+      "90",
+      "46",
+      "44",
+      "45"
+    ],
+    "answer": "45",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L14_Q05",
+    "grade": 3,
+    "question": "老師把 155 個學生平均分成 9 組。每組有學生 _______ 個，還餘學生 _______ 個。",
+    "options": [
+      "18，7",
+      "18，2",
+      "17，7",
+      "17，2"
+    ],
+    "answer": "17，2",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L14_Q06",
+    "grade": 3,
+    "question": "雜貨店店員把 98 個膠盒每 5 個分成一份。這些膠盒可分成 _______ 份，還餘膠盒 _______ 個。",
+    "options": [
+      "19，2",
+      "19，3",
+      "20，2",
+      "20，3"
+    ],
+    "answer": "19，3",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L14_Q07",
+    "grade": 3,
+    "question": "陳小姐有 70 元。陳小姐最多可買下圖的餅乾 11 包。如果陳小姐想多買一包餅乾，最少還欠 ________ 元。",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": "2",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "short_answer",
+    "image": "q-images/3B_L14_Q07.png"
+  },
+  {
+    "id": "3B_L14_Q08",
+    "grade": 3,
+    "question": "153 份三文治每 8 份一盒，最少要 20 個盒。若每盒都放滿 8 份，最少要添加三文治 ______ 份。",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "14"
+    ],
+    "answer": "7",
+    "unitKey": "mult_div_word_problems",
+    "topic": "乘除應用題",
+    "source": "第二版 3 上 B 單元五 第 14 課 乘除應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L15_Q04",
+    "grade": 3,
+    "question": "下圖中，兩條灰色線段互相平行，P 和 Q 相距 3 cm，R 和 S 相距 ________ cm。",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "3"
+    ],
+    "answer": "3",
+    "unitKey": "parallel_lines",
+    "topic": "平行線",
+    "source": "第二版 3 上 B 單元六 第 15 課 平行線",
+    "kind": "short_answer",
+    "image": "q-images/3B_L15_Q04.png"
+  },
+  {
+    "id": "3B_L16_Q03",
+    "grade": 3,
+    "question": "看看下面的平行四邊形，DC 長 _______ cm。",
+    "options": [
+      "8",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": "4",
+    "unitKey": "parallelograms_trapezoids",
+    "topic": "平行四邊形和梯形",
+    "source": "第二版 3 上 B 單元六 第 16 課 平行四邊形和梯形",
+    "kind": "short_answer",
+    "image": "q-images/3B_L16_Q03.png"
+  },
+  {
+    "id": "3B_L16_Q04",
+    "grade": 3,
+    "question": "看看下面的平行四邊形。平行四邊形有多少對長度相等的對邊？",
+    "options": [
+      "一對",
+      "兩對",
+      "四對"
+    ],
+    "answer": "兩對",
+    "unitKey": "parallelograms_trapezoids",
+    "topic": "平行四邊形和梯形",
+    "source": "第二版 3 上 B 單元六 第 16 課 平行四邊形和梯形",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L16_Q04.png"
+  },
+  {
+    "id": "3B_L16_Q07",
+    "grade": 3,
+    "question": "看看下面的梯形。AB 和 DC ______ 互相平行。",
+    "options": [
+      "是",
+      "不是"
+    ],
+    "answer": "不是",
+    "unitKey": "parallelograms_trapezoids",
+    "topic": "平行四邊形和梯形",
+    "source": "第二版 3 上 B 單元六 第 16 課 平行四邊形和梯形",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L16_Q07.png"
+  },
+  {
+    "id": "3B_L16_Q08",
+    "grade": 3,
+    "question": "看看下面的梯形。梯形只有 ______ 對對邊平行。",
+    "options": [
+      "一",
+      "兩",
+      "四"
+    ],
+    "answer": "一",
+    "unitKey": "parallelograms_trapezoids",
+    "topic": "平行四邊形和梯形",
+    "source": "第二版 3 上 B 單元六 第 16 課 平行四邊形和梯形",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L16_Q08.png"
+  },
+  {
+    "id": "3B_L16_Q12",
+    "grade": 3,
+    "question": "所有正方形和長方形皆是 __________。",
+    "options": [
+      "梯形",
+      "平行四邊形"
+    ],
+    "answer": "平行四邊形",
+    "unitKey": "parallelograms_trapezoids",
+    "topic": "平行四邊形和梯形",
+    "source": "第二版 3 上 B 單元六 第 16 課 平行四邊形和梯形",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L18_Q05",
+    "grade": 3,
+    "question": "依下面各天平，選出正確的答案。",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "9"
+    ],
+    "answer": "9",
+    "unitKey": "weight_intro",
+    "topic": "重量的認識",
+    "source": "第二版 3 上 B 單元七 第 18 課 重量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L18_Q05.png"
+  },
+  {
+    "id": "3B_L18_Q06",
+    "grade": 3,
+    "question": "依下面各天平，選出正確的答案。",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "9"
+    ],
+    "answer": "3",
+    "unitKey": "weight_intro",
+    "topic": "重量的認識",
+    "source": "第二版 3 上 B 單元七 第 18 課 重量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L18_Q06.png"
+  },
+  {
+    "id": "3B_L18_Q07",
+    "grade": 3,
+    "question": "依下面各天平，選出正確的答案。",
+    "options": [
+      "重 3 塊",
+      "重 6 塊",
+      "輕 3 塊",
+      "輕 6 塊"
+    ],
+    "answer": "重 6 塊",
+    "unitKey": "weight_intro",
+    "topic": "重量的認識",
+    "source": "第二版 3 上 B 單元七 第 18 課 重量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L18_Q07.png"
+  },
+  {
+    "id": "3B_L19_Q01",
+    "grade": 3,
+    "question": "依下面的天平，選出正確的答案。",
+    "options": [
+      "10 克",
+      "40 克",
+      "50 克",
+      "60 克"
+    ],
+    "answer": "60 克",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q01.png"
+  },
+  {
+    "id": "3B_L19_Q02",
+    "grade": 3,
+    "question": "依下面的天平，選出正確的答案。",
+    "options": [
+      "60 克",
+      "150 克",
+      "200 克",
+      "250 克"
+    ],
+    "answer": "250 克",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q02.png"
+  },
+  {
+    "id": "3B_L19_Q03",
+    "grade": 3,
+    "question": "依下面的天平，選出正確的答案。",
+    "options": [
+      "54 g",
+      "57 g",
+      "120 g",
+      "300 g"
+    ],
+    "answer": "57 g",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q03.png"
+  },
+  {
+    "id": "3B_L19_Q04",
+    "grade": 3,
+    "question": "依下面的天平，選出正確的答案。",
+    "options": [
+      "57 g",
+      "243 g",
+      "253 g",
+      "300 g"
+    ],
+    "answer": "243 g",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q04.png"
+  },
+  {
+    "id": "3B_L19_Q05",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "160 g",
+      "170 g",
+      "180 g",
+      "190 g"
+    ],
+    "answer": "180 g",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q05.png"
+  },
+  {
+    "id": "3B_L19_Q06",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "300 g",
+      "310 g",
+      "320 g",
+      "330 g"
+    ],
+    "answer": "320 g",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q06.png"
+  },
+  {
+    "id": "3B_L19_Q07",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "220 克",
+      "240 克",
+      "300 克",
+      "380 克"
+    ],
+    "answer": "300 克",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q07.png"
+  },
+  {
+    "id": "3B_L19_Q08",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "30 克",
+      "50 克",
+      "110 克",
+      "130 克"
+    ],
+    "answer": "50 克",
+    "unitKey": "grams",
+    "topic": "克",
+    "source": "第二版 3 上 B 單元七 第 19 課 克",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L19_Q08.png"
+  },
+  {
+    "id": "3B_L20_Q01",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "1 kg",
+      "2 kg",
+      "3 kg",
+      "4 kg"
+    ],
+    "answer": "1 kg",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L20_Q01.png"
+  },
+  {
+    "id": "3B_L20_Q02",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "1 kg",
+      "2 kg",
+      "3 kg",
+      "4 kg"
+    ],
+    "answer": "3 kg",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L20_Q02.png"
+  },
+  {
+    "id": "3B_L20_Q03",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "1 公斤",
+      "2 公斤",
+      "3 公斤",
+      "4 公斤"
+    ],
+    "answer": "2 公斤",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L20_Q03.png"
+  },
+  {
+    "id": "3B_L20_Q04",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "20 公斤",
+      "25 公斤",
+      "26 公斤",
+      "30 公斤"
+    ],
+    "answer": "26 公斤",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L20_Q04.png"
+  },
+  {
+    "id": "3B_L20_Q05",
+    "grade": 3,
+    "question": "2 kg = ________ g",
+    "options": [
+      "200",
+      "2000",
+      "20000",
+      "1000"
+    ],
+    "answer": "2000",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L20_Q06",
+    "grade": 3,
+    "question": "5 公斤 200 克 = ________ 克",
+    "options": [
+      "520",
+      "52000",
+      "2600",
+      "5200"
+    ],
+    "answer": "5200",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3B_L20_Q07",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "1 kg 60 g",
+      "1 kg 80 g",
+      "1 kg 600 g",
+      "1 kg 800 g"
+    ],
+    "answer": "1 kg 800 g",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L20_Q07.png"
+  },
+  {
+    "id": "3B_L20_Q08",
+    "grade": 3,
+    "question": "依圖意，選出正確的答案。",
+    "options": [
+      "1050 克",
+      "1060 克",
+      "1500 克",
+      "1600 克"
+    ],
+    "answer": "1500 克",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice",
+    "image": "q-images/3B_L20_Q08.png"
+  },
+  {
+    "id": "3B_L20_Q09",
+    "grade": 3,
+    "question": "下面哪個量度工具最適合用來量度一塊膠擦的重量？",
+    "options": [
+      "天平和砝碼",
+      "座枱磅",
+      "浴室磅"
+    ],
+    "answer": "天平和砝碼",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L20_Q10",
+    "grade": 3,
+    "question": "下面哪個量度工具最適合用來量度爸爸的重量？",
+    "options": [
+      "天平和砝碼",
+      "座枱磅",
+      "浴室磅"
+    ],
+    "answer": "浴室磅",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L20_Q11",
+    "grade": 3,
+    "question": "一個乒乓球重約 3 _______。",
+    "options": [
+      "g",
+      "kg"
+    ],
+    "answer": "g",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3B_L20_Q12",
+    "grade": 3,
+    "question": "一個書架重約 4 _______。",
+    "options": [
+      "g",
+      "kg"
+    ],
+    "answer": "kg",
+    "unitKey": "kilograms",
+    "topic": "公斤",
+    "source": "第二版 3 上 B 單元七 第 20 課 公斤",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DA_L01_Q01",
+    "grade": 3,
+    "question": "2709 + 4580 = _______",
+    "options": [
+      "7289",
+      "728.9",
+      "3644.5",
+      "72890"
+    ],
+    "answer": "7289",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L01_Q02",
+    "grade": 3,
+    "question": "7690 – 3409 = _______",
+    "options": [
+      "4281",
+      "428.1",
+      "2140.5",
+      "42810"
+    ],
+    "answer": "4281",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L01_Q03",
+    "grade": 3,
+    "question": "3078 – 1963 =",
+    "options": [
+      "1115",
+      "1915",
+      "2115",
+      "2915"
+    ],
+    "answer": "1115",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DA_L01_Q04",
+    "grade": 3,
+    "question": "以下哪道算式最適合用來估算 4352 + 2768 的結果？",
+    "options": [
+      "5000 + 3000",
+      "5000 + 2000",
+      "4000 + 3000",
+      "4000 + 2000"
+    ],
+    "answer": "4000 + 3000",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DA_L01_Q09",
+    "grade": 3,
+    "question": "圖書館有中文故事書 4937 本和英文故事書 1209 本，中文故事書比英文故事書多 _______ 本。",
+    "options": [
+      "372.8",
+      "37280",
+      "3728",
+      "1864"
+    ],
+    "answer": "3728",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L01_Q10",
+    "grade": 3,
+    "question": "凍肉店原有牛丸 684 粒，店主再購入牛丸 1330 粒後，凍肉店現有牛丸 _______ 粒。",
+    "options": [
+      "201.4",
+      "1007",
+      "2014",
+      "20140"
+    ],
+    "answer": "2014",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L01_Q11",
+    "grade": 3,
+    "question": "馬拉松比賽有男參賽者 3250 個和女參賽者 1955 個，其中 865 個戴帽子，沒有戴帽子的參賽者有 _______ 個。",
+    "options": [
+      "43400",
+      "434",
+      "4340",
+      "2170"
+    ],
+    "answer": "4340",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L01_Q12",
+    "grade": 3,
+    "question": "爸爸有 1000 元，他購買果籃兩個後，還餘 _______ 元。",
+    "options": [
+      "39",
+      "41",
+      "80",
+      "40"
+    ],
+    "answer": "40",
+    "unitKey": "addition_and_subtraction",
+    "topic": "加法和減法",
+    "source": "第二版 3 下 A 單元一 第 1 課 加法和減法",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L01_Q12.png"
+  },
+  {
+    "id": "3DA_L02_Q03",
+    "grade": 3,
+    "question": "不用計算，290 + (184 – 52) 和 290 + 184 – 52 的結果相同嗎？",
+    "options": [
+      "相同",
+      "不相同"
+    ],
+    "answer": "相同",
+    "unitKey": "parentheses",
+    "topic": "圓括號",
+    "source": "第二版 3 下 A 單元一 第 2 課 圓括號",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DA_L02_Q04",
+    "grade": 3,
+    "question": "不用計算，3045 – (798 – 602) 和 3045 – 798 – 602的結果相同嗎？",
+    "options": [
+      "相同",
+      "不相同"
+    ],
+    "answer": "不相同",
+    "unitKey": "parentheses",
+    "topic": "圓括號",
+    "source": "第二版 3 下 A 單元一 第 2 課 圓括號",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DA_L02_Q05",
+    "grade": 3,
+    "question": "圖書角有以下三種圖書。圖書角共有英文圖書和中文圖書 _______ 本。",
+    "options": [
+      "29.6",
+      "148",
+      "296",
+      "2960"
+    ],
+    "answer": "296",
+    "unitKey": "parentheses",
+    "topic": "圓括號",
+    "source": "第二版 3 下 A 單元一 第 2 課 圓括號",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L02_Q05.png"
+  },
+  {
+    "id": "3DA_L02_Q06",
+    "grade": 3,
+    "question": "數學比賽分為兩個回合，3A 班在第一回合取得 293 分，第二回合的得分比第一回合少 36 分。3A 班兩個回合共取得 _______ 分。",
+    "options": [
+      "55",
+      "550",
+      "5500",
+      "275"
+    ],
+    "answer": "550",
+    "unitKey": "parentheses",
+    "topic": "圓括號",
+    "source": "第二版 3 下 A 單元一 第 2 課 圓括號",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L02_Q07",
+    "grade": 3,
+    "question": "凍肉店今天售出魚丸 206 粒，其中下午售出 152 粒，其餘的在上午售出。下午比上午多售出魚丸 _______ 粒。",
+    "options": [
+      "97",
+      "98",
+      "99",
+      "196"
+    ],
+    "answer": "98",
+    "unitKey": "parentheses",
+    "topic": "圓括號",
+    "source": "第二版 3 下 A 單元一 第 2 課 圓括號",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L02_Q08",
+    "grade": 3,
+    "question": "柏翹的八達通卡內原有儲值 100 元，他在便利店用卡購買一盒牛奶和一個甜筒後，他的八達通卡還餘幾元幾角？",
+    "options": [
+      "68 元 9 角",
+      "78 元 9 角",
+      "82 元 1 角",
+      "95 元 3 角"
+    ],
+    "answer": "68 元 9 角",
+    "unitKey": "parentheses",
+    "topic": "圓括號",
+    "source": "第二版 3 下 A 單元一 第 2 課 圓括號",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L02_Q08.png"
+  },
+  {
+    "id": "3DA_L03_Q01",
+    "grade": 3,
+    "question": "嘉欣原有 30 元，她買汽水用去 11 元 9 角，買果汁用去 12 元 7 角，還餘幾元幾角？",
+    "options": [
+      "5 元 4 角",
+      "6 元 6 角",
+      "18 元 1 角",
+      "24 元 6 角"
+    ],
+    "answer": "5 元 4 角",
+    "unitKey": "add_sub_mixed_word_problems",
+    "topic": "加減混合應用題",
+    "source": "第二版 3 下 A 單元一 第 3 課 加減混合應用題",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DA_L03_Q02",
+    "grade": 3,
+    "question": "每條項鏈售 3825 元，媽媽付 8000 元買了項鏈兩條，應找回 _______ 元。",
+    "options": [
+      "3500",
+      "350",
+      "35",
+      "175"
+    ],
+    "answer": "350",
+    "unitKey": "add_sub_mixed_word_problems",
+    "topic": "加減混合應用題",
+    "source": "第二版 3 下 A 單元一 第 3 課 加減混合應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L03_Q03",
+    "grade": 3,
+    "question": "飲品店上星期售出珍珠奶茶 1168 杯，水果茶比珍珠奶茶少售出 579 杯。飲品店上星期共售出珍珠奶茶和水果茶 _______ 杯。",
+    "options": [
+      "1757",
+      "878.5",
+      "17570",
+      "175.7"
+    ],
+    "answer": "1757",
+    "unitKey": "add_sub_mixed_word_problems",
+    "topic": "加減混合應用題",
+    "source": "第二版 3 下 A 單元一 第 3 課 加減混合應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L03_Q04",
+    "grade": 3,
+    "question": "慈善機構昨天派發了白米 850 袋，今天比昨天多派發 260 袋。慈善機構這兩天共派發白米 _______ 袋。",
+    "options": [
+      "196",
+      "980",
+      "1960",
+      "19600"
+    ],
+    "answer": "1960",
+    "unitKey": "add_sub_mixed_word_problems",
+    "topic": "加減混合應用題",
+    "source": "第二版 3 下 A 單元一 第 3 課 加減混合應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L04_Q05",
+    "grade": 3,
+    "question": "每包牛奶糖有 11 粒，每包果汁糖有 25 粒。家中有牛奶糖 4 包和果汁糖一包，即共有糖果 ______ 粒。",
+    "options": [
+      "69",
+      "70",
+      "68",
+      "138"
+    ],
+    "answer": "69",
+    "unitKey": "mult_add_mixed",
+    "topic": "乘加混合運算",
+    "source": "第二版 3 下 A 單元二 第 4 課 乘加混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L04_Q06",
+    "grade": 3,
+    "question": "店員把一箱芒果分成 25 份，每份有 3 個，還餘 2 個。一箱芒果有 ______ 個。",
+    "options": [
+      "77",
+      "154",
+      "78",
+      "76"
+    ],
+    "answer": "77",
+    "unitKey": "mult_add_mixed",
+    "topic": "乘加混合運算",
+    "source": "第二版 3 下 A 單元二 第 4 課 乘加混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L04_Q07",
+    "grade": 3,
+    "question": "推銷員每天工作 8 小時，每小時的薪金是 79 元，另每天都有交通津貼 20 元。推銷員每天可得薪金和交通津貼 ______ 元。",
+    "options": [
+      "326",
+      "652",
+      "6520",
+      "65.2"
+    ],
+    "answer": "652",
+    "unitKey": "mult_add_mixed",
+    "topic": "乘加混合運算",
+    "source": "第二版 3 下 A 單元二 第 4 課 乘加混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L04_Q08",
+    "grade": 3,
+    "question": "3D 班有男生 14 個和女生 13 個。老師派給 3D 班學生每人 4 張手工紙，他共派了手工紙 ______ 張。",
+    "options": [
+      "54",
+      "10.8",
+      "1080",
+      "108"
+    ],
+    "answer": "108",
+    "unitKey": "mult_add_mixed",
+    "topic": "乘加混合運算",
+    "source": "第二版 3 下 A 單元二 第 4 課 乘加混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L05_Q05",
+    "grade": 3,
+    "question": "每盒棉花棒有 250 根。家中原有棉花棒 3 盒，用去 128 根後，還餘棉花棒 ______ 根。",
+    "options": [
+      "622",
+      "6220",
+      "62.2",
+      "311"
+    ],
+    "answer": "622",
+    "unitKey": "mult_sub_mixed",
+    "topic": "乘減混合運算",
+    "source": "第二版 3 下 A 單元二 第 5 課 乘減混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L05_Q06",
+    "grade": 3,
+    "question": "中文默書的滿分是 100 分，每個錯字扣 5 分。可欣中文默書寫錯了 4 個字，她的中文默書得 ______ 分。",
+    "options": [
+      "79",
+      "80",
+      "160",
+      "81"
+    ],
+    "answer": "80",
+    "unitKey": "mult_sub_mixed",
+    "topic": "乘減混合運算",
+    "source": "第二版 3 下 A 單元二 第 5 課 乘減混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L05_Q07",
+    "grade": 3,
+    "question": "每隻餐叉比每把餐刀便宜 2 元。媽媽買了餐叉 7 隻，共需付 ______ 元。",
+    "options": [
+      "83",
+      "85",
+      "168",
+      "84"
+    ],
+    "answer": "84",
+    "unitKey": "mult_sub_mixed",
+    "topic": "乘減混合運算",
+    "source": "第二版 3 下 A 單元二 第 5 課 乘減混合運算",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L05_Q07.png"
+  },
+  {
+    "id": "3DA_L05_Q08",
+    "grade": 3,
+    "question": "時裝店有一箱短褲。店員把這些短褲平均分成 8 疊，每疊有 10 條。時裝店售出一些短褲後，還餘短褲 59 條，時裝店售出短褲 ______ 條。",
+    "options": [
+      "42",
+      "20",
+      "22",
+      "21"
+    ],
+    "answer": "21",
+    "unitKey": "mult_sub_mixed",
+    "topic": "乘減混合運算",
+    "source": "第二版 3 下 A 單元二 第 5 課 乘減混合運算",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L06_Q01",
+    "grade": 3,
+    "question": "每包貼紙有 28 張。思晴有貼紙 4 包，她把其中 30 張貼紙送給朋友後，還餘貼紙 ______ 張。",
+    "options": [
+      "164",
+      "81",
+      "82",
+      "83"
+    ],
+    "answer": "82",
+    "unitKey": "four_operations_word_problems",
+    "topic": "四則應用題",
+    "source": "第二版 3 下 A 單元二 第 6 課 四則應用題",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DA_L06_Q02",
+    "grade": 3,
+    "question": "一盒襪子有白色、黑色和灰色三種顏色，數量如下表所示。時裝店有襪子 65 盒，即共有襪子 _______ 雙。",
+    "options": [
+      "3900",
+      "39",
+      "390",
+      "195"
+    ],
+    "answer": "390",
+    "unitKey": "four_operations_word_problems",
+    "topic": "四則應用題",
+    "source": "第二版 3 下 A 單元二 第 6 課 四則應用題",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L06_Q02.png"
+  },
+  {
+    "id": "3DA_L06_Q03",
+    "grade": 3,
+    "question": "黃太太和林太太到便利店購物。黃太太買雪糕 6 杯和甜筒 1 個，共需付 ______ 元。",
+    "options": [
+      "66",
+      "65",
+      "67",
+      "132"
+    ],
+    "answer": "66",
+    "unitKey": "four_operations_word_problems",
+    "topic": "四則應用題",
+    "source": "第二版 3 下 A 單元二 第 6 課 四則應用題",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L06_Q03.png"
+  },
+  {
+    "id": "3DA_L06_Q04",
+    "grade": 3,
+    "question": "黃太太和林太太到便利店購物。林太太付 100 元買雪糕 1 杯和甜筒 7 個，應找回 ______ 元。",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "14"
+    ],
+    "answer": "7",
+    "unitKey": "four_operations_word_problems",
+    "topic": "四則應用題",
+    "source": "第二版 3 下 A 單元二 第 6 課 四則應用題",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L06_Q04.png"
+  },
+  {
+    "id": "3DA_L07_Q01",
+    "grade": 3,
+    "question": "以下圖形是不是三角形？",
+    "options": [
+      "是",
+      "不是"
+    ],
+    "answer": "是",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L07_Q01.png"
+  },
+  {
+    "id": "3DA_L07_Q02",
+    "grade": 3,
+    "question": "以下圖形是不是三角形？",
+    "options": [
+      "是",
+      "不是"
+    ],
+    "answer": "不是",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L07_Q02.png"
+  },
+  {
+    "id": "3DA_L07_Q03",
+    "grade": 3,
+    "question": "下圖是一個 ________。",
+    "options": [
+      "長方形",
+      "三角形",
+      "正方形"
+    ],
+    "answer": "三角形",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L07_Q03.png"
+  },
+  {
+    "id": "3DA_L07_Q04",
+    "grade": 3,
+    "question": "下圖有 ______ 條邊。",
+    "options": [
+      "6",
+      "2",
+      "4",
+      "3"
+    ],
+    "answer": "3",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L07_Q04.png"
+  },
+  {
+    "id": "3DA_L07_Q07",
+    "grade": 3,
+    "question": "下圖是一個 ( 等邊 / 不等邊 ) 三角形。",
+    "options": [
+      "等邊",
+      "不等邊"
+    ],
+    "answer": "等邊",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L07_Q07.png"
+  },
+  {
+    "id": "3DA_L07_Q08",
+    "grade": 3,
+    "question": "以下三角形有 ______ 條邊的長度相等。",
+    "options": [
+      "3",
+      "2",
+      "6",
+      "4"
+    ],
+    "answer": "3",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L07_Q08.png"
+  },
+  {
+    "id": "3DA_L07_Q11",
+    "grade": 3,
+    "question": "看看下面的等腰直角三角形，這個三角形有 ______ 個直角。",
+    "options": [
+      "0.5",
+      "2",
+      "0",
+      "1"
+    ],
+    "answer": "1",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L07_Q11.png"
+  },
+  {
+    "id": "3DA_L07_Q12",
+    "grade": 3,
+    "question": "看看下面的等腰直角三角形，這個三角形有 ______ 條邊的長度相等。",
+    "options": [
+      "4",
+      "2",
+      "1",
+      "3"
+    ],
+    "answer": "2",
+    "unitKey": "triangles_1",
+    "topic": "三角形（一）",
+    "source": "第二版 3 下 A 單元三 第 7 課 三角形（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L07_Q12.png"
+  },
+  {
+    "id": "3DA_L08_Q03",
+    "grade": 3,
+    "question": "觀察下面的平面圖形，選出所有代表等邊三角形的英文字母。",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "A",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q03.png"
+  },
+  {
+    "id": "3DA_L08_Q06",
+    "grade": 3,
+    "question": "圖二由 3 個 _________ 組成。",
+    "options": [
+      "等腰三角形",
+      "等邊三角形",
+      "不等邊三角形"
+    ],
+    "answer": "等腰三角形",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q06.png"
+  },
+  {
+    "id": "3DA_L08_Q07",
+    "grade": 3,
+    "question": "觀察下面的平面圖形，選出所有代表等腰直角三角形的英文字母。",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "E",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q07.png"
+  },
+  {
+    "id": "3DA_L08_Q13",
+    "grade": 3,
+    "question": "用以下幾何條，能不能圍成三角形？",
+    "options": [
+      "能",
+      "不能"
+    ],
+    "answer": "能",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q13.png"
+  },
+  {
+    "id": "3DA_L08_Q14",
+    "grade": 3,
+    "question": "用以下幾何條，能不能圍成三角形？",
+    "options": [
+      "能",
+      "不能"
+    ],
+    "answer": "不能",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q14.png"
+  },
+  {
+    "id": "3DA_L08_Q15",
+    "grade": 3,
+    "question": "觀察以下各線段，樂兒用線段 Q、R 和 S ( 能 / 不能 ) 圍成三角形。",
+    "options": [
+      "能",
+      "不能"
+    ],
+    "answer": "能",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q15.png"
+  },
+  {
+    "id": "3DA_L08_Q16",
+    "grade": 3,
+    "question": "觀察以下各線段，詠嘉用線段 P、Q 和 ( R / S ) 能圍成三角形。",
+    "options": [
+      "R",
+      "S"
+    ],
+    "answer": "R",
+    "unitKey": "triangles_2",
+    "topic": "三角形（二）",
+    "source": "第二版 3 下 A 單元三 第 8 課 三角形（二）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L08_Q16.png"
+  },
+  {
+    "id": "3DA_L09_Q01",
+    "grade": 3,
+    "question": "利用以下的幾何條可以製作出等邊三角形嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "making_triangles",
+    "topic": "製作三角形",
+    "source": "第二版 3 下 A 單元三 第 9 課 製作三角形",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L09_Q01.png"
+  },
+  {
+    "id": "3DA_L09_Q02",
+    "grade": 3,
+    "question": "利用以下的幾何條可以製作出等腰三角形嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "making_triangles",
+    "topic": "製作三角形",
+    "source": "第二版 3 下 A 單元三 第 9 課 製作三角形",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L09_Q02.png"
+  },
+  {
+    "id": "3DA_L09_Q03",
+    "grade": 3,
+    "question": "家希把下面的三角形紙沿虛線剪開，可得到 4 個 _______。",
+    "options": [
+      "等邊三角形",
+      "直角三角形",
+      "等腰直角三角形"
+    ],
+    "answer": "等邊三角形",
+    "unitKey": "making_triangles",
+    "topic": "製作三角形",
+    "source": "第二版 3 下 A 單元三 第 9 課 製作三角形",
+    "kind": "multiple_choice",
+    "image": "q-images/3DA_L09_Q03.png"
+  },
+  {
+    "id": "3DA_L09_Q04",
+    "grade": 3,
+    "question": "朗行把下面的長方形紙沿虛線剪開，可得到 ______ 個直角三角形。",
+    "options": [
+      "3",
+      "8",
+      "5",
+      "4"
+    ],
+    "answer": "4",
+    "unitKey": "making_triangles",
+    "topic": "製作三角形",
+    "source": "第二版 3 下 A 單元三 第 9 課 製作三角形",
+    "kind": "short_answer",
+    "image": "q-images/3DA_L09_Q04.png"
+  },
+  {
+    "id": "3DB_L11_Q01",
+    "grade": 3,
+    "question": "以下分數的分子是 ______ 。",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "2"
+    ],
+    "answer": "3",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q01.png"
+  },
+  {
+    "id": "3DB_L11_Q05",
+    "grade": 3,
+    "question": "7／7 = ______",
+    "options": [
+      "0.5",
+      "1",
+      "2",
+      "0"
+    ],
+    "answer": "1",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q05.png"
+  },
+  {
+    "id": "3DB_L11_Q06",
+    "grade": 3,
+    "question": "1 = ______／4",
+    "options": [
+      "3",
+      "5",
+      "8",
+      "4"
+    ],
+    "answer": "4",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q06.png"
+  },
+  {
+    "id": "3DB_L11_Q07",
+    "grade": 3,
+    "question": "1 = 18／______",
+    "options": [
+      "36",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": "18",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q07.png"
+  },
+  {
+    "id": "3DB_L11_Q08",
+    "grade": 3,
+    "question": "______／21 = 1",
+    "options": [
+      "20",
+      "42",
+      "21",
+      "22"
+    ],
+    "answer": "21",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q08.png"
+  },
+  {
+    "id": "3DB_L11_Q09",
+    "grade": 3,
+    "question": "以下兩個圖都表示同一個整體。依陰影部分，方格內的數是 ______。",
+    "options": [
+      "5",
+      "7",
+      "12",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q09.png"
+  },
+  {
+    "id": "3DB_L11_Q10",
+    "grade": 3,
+    "question": "以下兩個圖都表示同一個整體。依陰影部分，方格內的數是 ______。",
+    "options": [
+      "1",
+      "4",
+      "2",
+      "3"
+    ],
+    "answer": "2",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q10.png"
+  },
+  {
+    "id": "3DB_L11_Q11",
+    "grade": 3,
+    "question": "以下兩個圖都表示同一個整體。依陰影部分，方格內的數是 ______。",
+    "options": [
+      "10",
+      "9",
+      "20",
+      "11"
+    ],
+    "answer": "10",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q11.png"
+  },
+  {
+    "id": "3DB_L11_Q12",
+    "grade": 3,
+    "question": "以下兩個圖都表示同一個整體。依陰影部分，方格內的數是 ______。",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "8"
+    ],
+    "answer": "4",
+    "unitKey": "fractions_intro_1",
+    "topic": "分數的認識（一）",
+    "source": "第二版 3 下 B 單元四 第 11 課 分數的認識（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L11_Q12.png"
+  },
+  {
+    "id": "3DB_L12_Q05",
+    "grade": 3,
+    "question": "12 的 1／6 是 ______。",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "answer": "2",
+    "unitKey": "fractions_intro_2",
+    "topic": "分數的認識（二）",
+    "source": "第二版 3 下 B 單元四 第 12 課 分數的認識（二）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L12_Q05.png"
+  },
+  {
+    "id": "3DB_L12_Q06",
+    "grade": 3,
+    "question": "12 的 2／3 是 ______。",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "16"
+    ],
+    "answer": "8",
+    "unitKey": "fractions_intro_2",
+    "topic": "分數的認識（二）",
+    "source": "第二版 3 下 B 單元四 第 12 課 分數的認識（二）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L12_Q06.png"
+  },
+  {
+    "id": "3DB_L12_Q07",
+    "grade": 3,
+    "question": "8 的 1／2 是 ______。",
+    "options": [
+      "3",
+      "4",
+      "8",
+      "5"
+    ],
+    "answer": "4",
+    "unitKey": "fractions_intro_2",
+    "topic": "分數的認識（二）",
+    "source": "第二版 3 下 B 單元四 第 12 課 分數的認識（二）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L12_Q07.png"
+  },
+  {
+    "id": "3DB_L12_Q08",
+    "grade": 3,
+    "question": "8 的 3／4 是 ______。",
+    "options": [
+      "5",
+      "7",
+      "12",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "fractions_intro_2",
+    "topic": "分數的認識（二）",
+    "source": "第二版 3 下 B 單元四 第 12 課 分數的認識（二）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L12_Q08.png"
+  },
+  {
+    "id": "3DB_L15_Q03",
+    "grade": 3,
+    "question": "杯子 A 的容量比杯子 B 的 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "小",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q03.png"
+  },
+  {
+    "id": "3DB_L15_Q04",
+    "grade": 3,
+    "question": "飯碗 ( A / B / C ) 的容量最小。",
+    "options": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": "C",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q04.png"
+  },
+  {
+    "id": "3DB_L15_Q05",
+    "grade": 3,
+    "question": "杯子 A 的容量比杯子 B 的 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "小",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q05.png"
+  },
+  {
+    "id": "3DB_L15_Q06",
+    "grade": 3,
+    "question": "杯子 C 的容量比杯子 D 的 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "大",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q06.png"
+  },
+  {
+    "id": "3DB_L15_Q07",
+    "grade": 3,
+    "question": "杯子 E 的容量比瓶子 F 的 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "小",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q07.png"
+  },
+  {
+    "id": "3DB_L15_Q08",
+    "grade": 3,
+    "question": "瓶子 G 的容量比飯碗 H 的 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "小",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q08.png"
+  },
+  {
+    "id": "3DB_L15_Q09",
+    "grade": 3,
+    "question": "水壺 A 的容量是 ______ 個杯。",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "3",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L15_Q09.png"
+  },
+  {
+    "id": "3DB_L15_Q10",
+    "grade": 3,
+    "question": "水壺 B 容量 ______ 杯，比水壺 A 大 ______ 杯。",
+    "options": [
+      "3；2",
+      "3；1",
+      "4；2",
+      "4；1"
+    ],
+    "answer": "4；1",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q10.png"
+  },
+  {
+    "id": "3DB_L15_Q11",
+    "grade": 3,
+    "question": "水桶 A 的容量是 ______ 個瓶。",
+    "options": [
+      "7",
+      "14",
+      "8",
+      "6"
+    ],
+    "answer": "7",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L15_Q11.png"
+  },
+  {
+    "id": "3DB_L15_Q12",
+    "grade": 3,
+    "question": "水桶 A 比水桶 B（大／小）______ 個瓶。",
+    "options": [
+      "大；2",
+      "大；3",
+      "小；2",
+      "小；3"
+    ],
+    "answer": "大；2",
+    "unitKey": "capacity_intro",
+    "topic": "容量的認識",
+    "source": "第二版 3 下 B 單元五 第 15 課 容量的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L15_Q12.png"
+  },
+  {
+    "id": "3DB_L16_Q01",
+    "grade": 3,
+    "question": "下圖有漂白水 ________ L。",
+    "options": [
+      "3",
+      "8",
+      "5",
+      "4"
+    ],
+    "answer": "4",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L16_Q01.png"
+  },
+  {
+    "id": "3DB_L16_Q02",
+    "grade": 3,
+    "question": "信希把瓶子注滿水,，然後把瓶子的水全部倒進量杯。瓶子的容量是 ________ L。",
+    "options": [
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L16_Q02.png"
+  },
+  {
+    "id": "3DB_L16_Q04",
+    "grade": 3,
+    "question": "嘉晴把水壺注滿水，然後把水壺的水全部倒進升盒。水壺的容量 ( 小於 / 等於 / 大於 ) 1 升。",
+    "options": [
+      "小於",
+      "等於",
+      "大於"
+    ],
+    "answer": "大於",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L16_Q04.png"
+  },
+  {
+    "id": "3DB_L16_Q05",
+    "grade": 3,
+    "question": "有太陽油 ________ mL。",
+    "options": [
+      "90",
+      "180",
+      "89",
+      "91"
+    ],
+    "answer": "90",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L16_Q05.png"
+  },
+  {
+    "id": "3DB_L16_Q06",
+    "grade": 3,
+    "question": "有花生油 ________ 毫升。",
+    "options": [
+      "900",
+      "90",
+      "450",
+      "9000"
+    ],
+    "answer": "900",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L16_Q06.png"
+  },
+  {
+    "id": "3DB_L16_Q07",
+    "grade": 3,
+    "question": "3L = ________ mL",
+    "options": [
+      "30000",
+      "300",
+      "3000",
+      "1500"
+    ],
+    "answer": "3000",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DB_L16_Q08",
+    "grade": 3,
+    "question": "信希把茶杯注滿水，然後把茶杯的水全部倒進量杯。茶杯的容量是 ________ 毫升。",
+    "options": [
+      "20",
+      "200",
+      "100",
+      "2000"
+    ],
+    "answer": "200",
+    "unitKey": "litres_millilitres",
+    "topic": "升和毫升",
+    "source": "第二版 3 下 B 單元五 第 16 課 升和毫升",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L16_Q08.png"
+  },
+  {
+    "id": "3DB_L17_Q01",
+    "grade": 3,
+    "question": "子賢把杯子注滿水，然後把杯子的水全部倒進量杯。杯子的容量是 ________ 毫升。",
+    "options": [
+      "61",
+      "59",
+      "120",
+      "60"
+    ],
+    "answer": "60",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L17_Q01.png"
+  },
+  {
+    "id": "3DB_L17_Q02",
+    "grade": 3,
+    "question": "子賢把以下各容器注滿水，然後把各容器的水分別全部倒進量杯。玻璃瓶的容量是 ________ mL。",
+    "options": [
+      "15000",
+      "750",
+      "1500",
+      "150"
+    ],
+    "answer": "1500",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L17_Q02.png"
+  },
+  {
+    "id": "3DB_L17_Q03",
+    "grade": 3,
+    "question": "子賢把以下各容器注滿水，然後把各容器的水分別全部倒進量杯。茶壺的容量是 ________ mL。",
+    "options": [
+      "80",
+      "800",
+      "8000",
+      "400"
+    ],
+    "answer": "800",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L17_Q03.png"
+  },
+  {
+    "id": "3DB_L17_Q04",
+    "grade": 3,
+    "question": "子賢把以下各容器注滿水，然後把各容器的水分別全部倒進量杯。玻璃瓶的容量比茶壺的 ( 大 / 小 ) _________ mL。",
+    "options": [
+      "大；600",
+      "大；700",
+      "小；600",
+      "小；700"
+    ],
+    "answer": "大；700",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L17_Q04.png"
+  },
+  {
+    "id": "3DB_L17_Q05",
+    "grade": 3,
+    "question": "3 L 500 mL = ________ mL",
+    "options": [
+      "3500",
+      "1750",
+      "350",
+      "35000"
+    ],
+    "answer": "3500",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "short_answer"
+  },
+  {
+    "id": "3DB_L17_Q06",
+    "grade": 3,
+    "question": "心研把水壺注滿水，然後把水壺的水全部倒進量杯。水壺的容量是 ________ 毫升。",
+    "options": [
+      "2250",
+      "1125",
+      "225",
+      "22500"
+    ],
+    "answer": "2250",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L17_Q06.png"
+  },
+  {
+    "id": "3DB_L17_Q07",
+    "grade": 3,
+    "question": "一個玻璃杯的容量是 250 ( L / mL )。",
+    "options": [
+      "L",
+      "mL"
+    ],
+    "answer": "mL",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DB_L17_Q08",
+    "grade": 3,
+    "question": "一瓶花生油的容量是 1 ( 升 / 毫升 )。",
+    "options": [
+      "升",
+      "毫升"
+    ],
+    "answer": "升",
+    "unitKey": "measuring",
+    "topic": "量度活動",
+    "source": "第二版 3 下 B 單元五 第 17 課 量度活動",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "3DB_L18_Q01",
+    "grade": 3,
+    "question": "最多學生最喜愛的奧運項目是 ______，有 ______ 人。",
+    "options": [
+      "籃球；10",
+      "籃球；9",
+      "跳水；10",
+      "跳水；6"
+    ],
+    "answer": "籃球；9",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L18_Q01.png"
+  },
+  {
+    "id": "3DB_L18_Q02",
+    "grade": 3,
+    "question": "最少學生最喜愛的奧運項目是 ______，只有 ______ 人。",
+    "options": [
+      "羽毛球；6",
+      "羽毛球；4",
+      "田徑；6",
+      "田徑；4"
+    ],
+    "answer": "田徑；4",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L18_Q02.png"
+  },
+  {
+    "id": "3DB_L18_Q03",
+    "grade": 3,
+    "question": "最喜愛羽毛球的人數比最喜愛足球的（多／少）______ 人。",
+    "options": [
+      "多；1",
+      "多；2",
+      "少；1",
+      "少；2"
+    ],
+    "answer": "少；1",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L18_Q03.png"
+  },
+  {
+    "id": "3DB_L18_Q04",
+    "grade": 3,
+    "question": "統計當天沒有學生缺席。三甲班共有學生 ______ 人。",
+    "options": [
+      "30",
+      "31",
+      "29",
+      "60"
+    ],
+    "answer": "30",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L18_Q04.png"
+  },
+  {
+    "id": "3DB_L18_Q05",
+    "grade": 3,
+    "question": "星期一售出豆奶 ______ 盒。",
+    "options": [
+      "21",
+      "40",
+      "20",
+      "19"
+    ],
+    "answer": "20",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L18_Q05.png"
+  },
+  {
+    "id": "3DB_L18_Q06",
+    "grade": 3,
+    "question": "星期 ______ 售出豆奶最多，有 ______ 盒。",
+    "options": [
+      "一；20",
+      "三；15",
+      "五；50",
+      "二；20"
+    ],
+    "answer": "五；50",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L18_Q06.png"
+  },
+  {
+    "id": "3DB_L18_Q07",
+    "grade": 3,
+    "question": "小食店因停電休息一天，這天是星期幾？",
+    "options": [
+      "星期一",
+      "星期二",
+      "星期三",
+      "星期四"
+    ],
+    "answer": "星期二",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/3DB_L18_Q07.png"
+  },
+  {
+    "id": "3DB_L18_Q08",
+    "grade": 3,
+    "question": "小食店過去五天共售出豆奶 ______ 盒。",
+    "options": [
+      "10.5",
+      "105",
+      "1050",
+      "52.5"
+    ],
+    "answer": "105",
+    "unitKey": "bar_chart_1",
+    "topic": "棒形圖（一）",
+    "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/3DB_L18_Q08.png"
   }
 ];
