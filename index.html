@@ -1546,13 +1546,101 @@
             return gold === 0 && packs === 0 && monsters === 0 && rank === 0;
         }
 
+        /** 註冊起步檔：四隻 Lv1 基礎怪＋金幣≤1000＋rank0（老師清戶後重新 register 常見） */
+        function isStarterLikeProgressProfile(p) {
+            if (!p || typeof p !== 'object') return false;
+            if (isSparseProgressProfile(p)) return true;
+            var gold = Math.max(0, Math.floor(Number(p.gold) || 0));
+            var packs = Math.max(0, Math.floor(Number(p.expPacks) || 0));
+            var rank = Math.max(0, Math.floor(Number(p.rankScore) || 0));
+            var monsters = Array.isArray(p.ownedMonsters) ? p.ownedMonsters : [];
+            if (gold > 1000 || packs > 2 || rank > 0) return false;
+            if (monsters.length === 0 || monsters.length > 4) return false;
+            var baseIds = { fire_base: 1, water_base: 1, grass_base: 1, thunder_base: 1 };
+            for (var i = 0; i < monsters.length; i++) {
+                var m = monsters[i];
+                if (!m || !baseIds[String(m.id)]) return false;
+                if (Math.max(1, Math.floor(Number(m.level) || 1)) > 1) return false;
+                if (Math.max(0, Math.floor(Number(m.exp) || 0)) > 0) return false;
+            }
+            return true;
+        }
+
+        /** a 明顯比 b 更「富」（舊本機進度 vs 重置後起步） */
+        function isRicherProgressThan(a, b) {
+            a = a && typeof a === 'object' ? a : {};
+            b = b && typeof b === 'object' ? b : {};
+            var ag = Math.max(0, Math.floor(Number(a.gold) || 0));
+            var bg = Math.max(0, Math.floor(Number(b.gold) || 0));
+            var ar = Math.max(0, Math.floor(Number(a.rankScore) || 0));
+            var br = Math.max(0, Math.floor(Number(b.rankScore) || 0));
+            var am = Array.isArray(a.ownedMonsters) ? a.ownedMonsters : [];
+            var bm = Array.isArray(b.ownedMonsters) ? b.ownedMonsters : [];
+            var aMax = 0;
+            am.forEach(function (m) {
+                aMax = Math.max(aMax, Math.max(1, Math.floor(Number(m && m.level) || 1)));
+            });
+            if (ar > br) return true;
+            if (am.length > bm.length) return true;
+            if (ag > bg + 50) return true;
+            if (aMax > 1 && isStarterLikeProgressProfile(b)) return true;
+            return false;
+        }
+
+        function progressEpochOf(p) {
+            if (!p || typeof p !== 'object') return 0;
+            return Math.max(
+                0,
+                Math.floor(Number(p.progressEpoch) || 0),
+                Math.floor(Number(p.accountEpoch) || 0)
+            );
+        }
+
+        /**
+         * 雲端帳戶已刪／重置：清本機對應戶（保留內建 admin 種子），必要時清 session。
+         */
+        function clearLocalUserAccount(userKey, opts) {
+            opts = opts || {};
+            if (!userKey) return false;
+            var db = getUsersDatabase();
+            if (!db[userKey]) return false;
+            var nick = db[userKey].nickname || String(userKey).replace(/^user_/, '');
+            if (isBuiltInAdmin(nick, userKey) && !opts.forceAdmin) {
+                return false;
+            }
+            delete db[userKey];
+            saveUsersDatabase(db);
+            try {
+                var sess = localStorage.getItem('math_monster_active_session');
+                if (sess && (sess === nick || ('user_' + sess) === userKey)) {
+                    localStorage.removeItem('math_monster_active_session');
+                }
+            } catch (e) {}
+            return true;
+        }
+
+        function handleCloudAccountGone(message) {
+            var key = activeUserKey;
+            var nick = currentUser && currentUser.nickname;
+            try {
+                if (key) clearLocalUserAccount(key);
+                else if (nick) clearLocalUserAccount('user_' + nick);
+            } catch (e) {}
+            try { logout(); } catch (e) {}
+            try {
+                var errLogin = document.getElementById('login-error');
+                if (errLogin) errLogin.innerText = message || '帳戶已重置，請重新註冊。';
+            } catch (e) {}
+            try { showSyncToast(message || '帳戶已重置，請重新註冊。'); } catch (e) {}
+        }
+
         /**
          * 兩份存檔合併：
          * - 金幣／EXP包：以較新 updatedAt 為準（避免消費後被舊雲端 Math.max「回血」）；
          *   若雲端 stamp 較新但金幣同 EXP 都低過本機 → 當過期／中毒 stamp，經濟跟本機
-         * - 積分：取較大（只升唔跌）
+         * - 積分：取較大（只升唔跌）；雲端 leaderboardEpoch 較高＝季節重置跟雲端
          * - 怪獸：按 id 保留較高等級／經驗
-         * - 其餘欄位偏向較新 updatedAt
+         * - preferCloudProgress／progressEpoch／起步雲端 vs 富本機：跟雲端（老師清戶後）
          * grantsGold／grantsExp：老師剛發放、已寫入 cloud 數值時唔好重複加；若合併選咗本機，就要補加。
          */
         function mergeProgressProfiles(localP, cloudP, opts) {
@@ -1562,7 +1650,38 @@
             var grantG = Math.max(0, Math.floor(Number(opts.grantedGold) || 0));
             var grantX = Math.max(0, Math.floor(Number(opts.grantedExp) || 0));
 
-            // 空雲端唔好蓋本機；空本機就用雲端
+            var cloudEpProg = progressEpochOf(cloud);
+            var localEpProg = progressEpochOf(local);
+            var preferCloud = !!(opts.preferCloudProgress || cloud.wiped || (cloudEpProg > localEpProg));
+            // 老師清戶後學生重新 register：雲端係起步、本機明顯更富 → 跟雲端，唔好本機救返
+            if (!preferCloud && isStarterLikeProgressProfile(cloud) && isRicherProgressThan(local, cloud) && !isStarterLikeProgressProfile(local)) {
+                preferCloud = true;
+            }
+
+            if (preferCloud) {
+                var baseCloud = Object.assign({}, local, cloud);
+                ['school', 'className', 'classNo', 'nickname', 'isAdmin', 'password', '_pwd'].forEach(function (k) {
+                    if ((baseCloud[k] == null || baseCloud[k] === '') && local[k] != null && local[k] !== '') {
+                        baseCloud[k] = local[k];
+                    }
+                });
+                baseCloud.gold = Math.max(0, Math.floor(Number(cloud.gold) || 0));
+                baseCloud.expPacks = Math.max(0, Math.floor(Number(cloud.expPacks) || 0));
+                baseCloud.rankScore = Math.max(0, Math.floor(Number(cloud.rankScore) || 0));
+                baseCloud.leaderboardEpoch = Math.max(0, Math.floor(Number(cloud.leaderboardEpoch) || 0));
+                baseCloud.ownedMonsters = migrateLegacyMythicOwned(
+                    Array.isArray(cloud.ownedMonsters) ? cloud.ownedMonsters.map(function (m) { return Object.assign({}, m); }) : []
+                );
+                if (cloudEpProg > 0) {
+                    baseCloud.progressEpoch = cloudEpProg;
+                    if (cloud.accountEpoch != null) baseCloud.accountEpoch = Math.max(0, Math.floor(Number(cloud.accountEpoch) || 0));
+                }
+                // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
+                stampUpdatedAt(baseCloud);
+                return baseCloud;
+            }
+
+            // 空雲端唔好蓋本機；空本機就用雲端（真正空白，唔包括起步檔）
             if (isSparseProgressProfile(cloud) && !isSparseProgressProfile(local)) {
                 cloud = {};
             }
@@ -1617,6 +1736,9 @@
                 base.leaderboardEpoch = Math.max(localEp, cloudEp);
             }
             base.ownedMonsters = migrateLegacyMythicOwned(mergeOwnedMonsters(local.ownedMonsters, cloud.ownedMonsters));
+            if (cloudEpProg || localEpProg) {
+                base.progressEpoch = Math.max(cloudEpProg, localEpProg);
+            }
             stampUpdatedAt(base);
             return base;
         }
@@ -1802,6 +1924,8 @@
                     if (res && res.ok && res.profile) {
                         // 只合併老師發放等回傳；mergeProgressProfiles 防舊雲端蓋新本機
                         mergeCloudProfileIntoCurrentUser(res.profile, res);
+                    } else if (res && res.error === 'not_found') {
+                        handleCloudAccountGone('帳戶已於雲端重置／刪除，請重新註冊。');
                     }
                 });
             }
@@ -2498,8 +2622,28 @@
             const db = getUsersDatabase();
             const userKey = `user_${nickname}`;
             if (db[userKey]) {
-                errDiv.innerText = "此個人別號已被使用，請更換別號！";
-                return;
+                // 本機仲有舊檔但雲端已刪／重置 → 清本機後允許重新註冊
+                if (SHEET_REPORT_URL) {
+                    try {
+                        const chk = await callBridge({
+                            action: 'login',
+                            key: userKey,
+                            password: password
+                        });
+                        if (chk && chk.error === 'not_found') {
+                            clearLocalUserAccount(userKey);
+                        } else {
+                            errDiv.innerText = "此個人別號已被使用，請更換別號！";
+                            return;
+                        }
+                    } catch (e) {
+                        errDiv.innerText = "此個人別號已被使用，請更換別號！";
+                        return;
+                    }
+                } else {
+                    errDiv.innerText = "此個人別號已被使用，請更換別號！";
+                    return;
+                }
             }
 
             const newUser = {
@@ -2599,10 +2743,11 @@
                         const localBefore = matchedUser || db[userKey] || null;
                         const g = res.grantedGold ? Number(res.grantedGold) : 0;
                         const x = res.grantedExp ? Number(res.grantedExp) : 0;
-                        // 合併本機／雲端（金幣／EXP 跟較新 updatedAt；空雲端唔蓋本機）
+                        // 合併本機／雲端；起步雲端＋富本機 → preferCloud（防重置後本機救返）
                         let cloudProfile = mergeProgressProfiles(localBefore || {}, cloudRaw, {
                             grantedGold: g,
-                            grantedExp: x
+                            grantedExp: x,
+                            preferCloudProgress: !!(cloudRaw && (cloudRaw.wiped || progressEpochOf(cloudRaw) > progressEpochOf(localBefore || {})))
                         });
                         cloudProfile.password = password;
                         if (!cloudProfile.nickname && nicknameHint) cloudProfile.nickname = nicknameHint;
@@ -2641,14 +2786,17 @@
                         try { cloudSaveCurrentUser(); } catch (e) {}
                         return;
                     }
-                    if (res && (res.error === 'bad_password' || res.error === 'not_found')) {
-                        // 雲端拒絕時，若本地吻合仍可離線登入
-                        if (!matchedUser) {
-                            errDiv.innerText = res.error === 'bad_password'
-                                ? "雲端密碼不正確。"
-                                : "雲端未找到此帳戶。請先在本機註冊，或用首次註冊嘅別名。";
-                            return;
-                        }
+                    if (res && res.error === 'not_found') {
+                        // 雲端已刪／重置：清本機舊檔，拒絕用 localStorage 復活
+                        clearLocalUserAccount(userKey);
+                        matchedUser = null;
+                        errDiv.innerText = "帳戶已重置，請重新註冊。";
+                        try { showSyncToast('帳戶已重置，請重新註冊。'); } catch (e) {}
+                        return;
+                    }
+                    if (res && res.error === 'bad_password') {
+                        errDiv.innerText = "雲端密碼不正確。";
+                        return;
                     }
                 } catch (err) {
                     // 網絡／CORS：退回本地
@@ -2805,11 +2953,79 @@
             const db = getUsersDatabase();
             const sessionKey = activeSessionNick ? `user_${activeSessionNick}` : '';
             if (activeSessionNick && db[sessionKey]) {
-                // 自動還原 session 時一併帶返本機密碼／帳戶鍵，管理員統計同雲端 sync 先用得
+                // 自動還原 session 時一併帶返本機密碼／帳戶鍵
                 activeUserKey = sessionKey;
                 const savedPwd = db[sessionKey].password || null;
                 if (savedPwd) activePassword = savedPwd;
-                loginUserSuccess(db[sessionKey], savedPwd || undefined);
+                const localSessionUser = db[sessionKey];
+
+                function restoreLocalSession() {
+                    loginUserSuccess(localSessionUser, savedPwd || undefined);
+                }
+
+                if (SHEET_REPORT_URL && savedPwd) {
+                    // 雲端可連：先驗證；not_found／bad_password 清本機＋session，唔好復活舊進度
+                    callBridge({
+                        action: 'login',
+                        key: sessionKey,
+                        password: savedPwd
+                    }).then(function (res) {
+                        if (res && res.ok && res.profile) {
+                            const cloudRaw = Object.assign({}, res.profile);
+                            const g = res.grantedGold ? Number(res.grantedGold) : 0;
+                            const x = res.grantedExp ? Number(res.grantedExp) : 0;
+                            let merged = mergeProgressProfiles(localSessionUser || {}, cloudRaw, {
+                                grantedGold: g,
+                                grantedExp: x,
+                                preferCloudProgress: !!(cloudRaw.wiped || progressEpochOf(cloudRaw) > progressEpochOf(localSessionUser || {}))
+                            });
+                            merged.password = savedPwd;
+                            if (!merged.nickname && activeSessionNick) merged.nickname = activeSessionNick;
+                            ['school', 'className', 'classNo', 'nickname', 'isAdmin'].forEach(function (k) {
+                                if ((merged[k] == null || merged[k] === '') && localSessionUser[k] != null) {
+                                    merged[k] = localSessionUser[k];
+                                }
+                            });
+                            if (isBuiltInAdmin(merged.nickname || activeSessionNick, sessionKey)) {
+                                merged.isAdmin = true;
+                            }
+                            const db2 = getUsersDatabase();
+                            db2[sessionKey] = merged;
+                            saveUsersDatabase(db2);
+                            activePassword = savedPwd;
+                            activeUserKey = sessionKey;
+                            loginUserSuccess(merged, savedPwd);
+                            if (g > 0 || x > 0) {
+                                try { showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x); } catch (e) {}
+                            }
+                            return;
+                        }
+                        if (res && (res.error === 'not_found' || res.error === 'bad_password')) {
+                            clearLocalUserAccount(sessionKey);
+                            activePassword = null;
+                            activeUserKey = null;
+                            try {
+                                var errLogin = document.getElementById('login-error');
+                                if (errLogin) {
+                                    errLogin.innerText = res.error === 'not_found'
+                                        ? '帳戶已重置，請重新註冊。'
+                                        : '雲端密碼不正確，請重新登入。';
+                                }
+                            } catch (e) {}
+                            try {
+                                document.getElementById('auth-modal-overlay').classList.remove('hidden');
+                            } catch (e) {}
+                            return;
+                        }
+                        // 其他回傳：暫用本機
+                        restoreLocalSession();
+                    }).catch(function () {
+                        // 網絡失敗：暫用本機離線（save 若 not_found 會再清）
+                        restoreLocalSession();
+                    });
+                } else {
+                    restoreLocalSession();
+                }
             }
 
             document.addEventListener('click', function unlockAudio() {
