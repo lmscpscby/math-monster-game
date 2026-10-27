@@ -1,10 +1,12 @@
 {
   "fire": {
-    "file": "fire.png",
-    "frames": 12,
-    "fw": 96,
-    "fh": 160,
-    "durationMs": 600
+    "file": "fire_attack_vfx_512.png",
+    "frames": 1,
+    "fw": 512,
+    "fh": 512,
+    "durationMs": 650,
+    "mode": "single-scale-fade",
+    "legacySheet": "fire.png"
   },
   "water": {
     "file": "water.png",

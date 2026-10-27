@@ -36,3 +36,4 @@ Also researched (not bundled, size/fit):
 
 Runtime also draws a short canvas particle flash per element so the hit
 stays readable even if a sheet fails to load.
+fire: Canva design DAHZK_ILFFE (數理怪獸_火攻擊特效_512) → fire_attack_vfx_512.png (512×512 RGBA single-frame, scale/fade). Legacy sheet fire.png kept.

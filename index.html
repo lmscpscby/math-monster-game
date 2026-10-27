@@ -189,9 +189,12 @@
             animation-fill-mode: forwards;
         }
         .battle-vfx-burst[data-element="fire"] .battle-vfx-sheet {
-            width: 96px; height: 160px; margin: -80px 0 0 -48px;
-            background-image: url('vfx/fire.png');
-            animation: battle-vfx-sheet-fire 0.6s steps(12) forwards;
+            width: 220px; height: 220px; margin: -110px 0 0 -110px;
+            background-image: url('vfx/fire_attack_vfx_512.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: battle-vfx-sheet-fire 0.65s ease-out forwards;
         }
         .battle-vfx-burst[data-element="water"] .battle-vfx-sheet {
             width: 160px; height: 96px; margin: -48px 0 0 -80px;
@@ -230,8 +233,9 @@
             animation: battle-vfx-sheet-holy 0.6s steps(12) forwards;
         }
         @keyframes battle-vfx-sheet-fire {
-            from { background-position: 0 0; opacity: 1; }
-            to { background-position: -1152px 0; opacity: 0.15; }
+            0% { transform: scale(0.35) rotate(-10deg); opacity: 0; }
+            22% { transform: scale(1.12) rotate(3deg); opacity: 1; }
+            100% { transform: scale(1.4) rotate(12deg); opacity: 0; }
         }
         @keyframes battle-vfx-sheet-water {
             from { background-position: 0 0; opacity: 1; }
