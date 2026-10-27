@@ -1,7 +1,8 @@
 Battle elemental VFX assets
 ===========================
 
-Used by playElementAttackVfx() in index.html for 水/火/草/雷 attack bursts.
+Used by playElementAttackVfx() in index.html for all eight elemental attack bursts
+(水／火／草／雷／格鬥／岩石／念力／聖光).
 
 Files
 -----
@@ -9,6 +10,10 @@ Files
 - water.png            — Water splash frames
 - grass.png            — Leaf burst frames (procedural)
 - thunder.png          — Lightning bolt frames (procedural)
+- fight.png            — Orange impact / punch shockwave (procedural)
+- rock.png             — Grey-brown rubble scatter (procedural)
+- psy.png              — Indigo psychic rings / ripples (procedural)
+- holy.png             — Gold-white holy pillar / cross rays (procedural)
 - meta.json            — Frame counts / cell sizes for the sprite sheets
 
 Licenses & sources
@@ -21,7 +26,7 @@ Licenses & sources
    - fire.png / water.png are sprite sheets derived from Juice Box fire/water
      sequences (white keyed to transparency; resized for mobile).
 
-2) grass.png / thunder.png
+2) grass.png / thunder.png / fight.png / rock.png / psy.png / holy.png
    - Original procedural sprite sheets made for this educational game
      (no third-party pixels). Treat as CC0 for this project.
 

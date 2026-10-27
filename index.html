@@ -208,29 +208,26 @@
             background-image: url('vfx/thunder.png');
             animation: battle-vfx-sheet-thunder 0.55s steps(10) forwards;
         }
-        /* 新屬性複用既有 sprite sheet，避免缺檔 crash */
+        /* 八屬性各有專用 sprite sheet */
         .battle-vfx-burst[data-element="fight"] .battle-vfx-sheet {
-            width: 96px; height: 160px; margin: -80px 0 0 -48px;
-            background-image: url('vfx/fire.png');
-            animation: battle-vfx-sheet-fire 0.6s steps(12) forwards;
+            width: 128px; height: 128px; margin: -64px 0 0 -64px;
+            background-image: url('vfx/fight.png');
+            animation: battle-vfx-sheet-fight 0.6s steps(12) forwards;
         }
         .battle-vfx-burst[data-element="rock"] .battle-vfx-sheet {
             width: 128px; height: 128px; margin: -64px 0 0 -64px;
-            background-image: url('vfx/grass.png');
-            animation: battle-vfx-sheet-grass 0.6s steps(12) forwards;
-            filter: grayscale(0.55) contrast(1.15) drop-shadow(0 0 8px rgba(168,162,158,0.5));
+            background-image: url('vfx/rock.png');
+            animation: battle-vfx-sheet-rock 0.6s steps(12) forwards;
         }
         .battle-vfx-burst[data-element="psy"] .battle-vfx-sheet {
-            width: 160px; height: 96px; margin: -48px 0 0 -80px;
-            background-image: url('vfx/water.png');
-            animation: battle-vfx-sheet-water 0.65s steps(12) forwards;
-            filter: hue-rotate(60deg) saturate(1.2) drop-shadow(0 0 8px rgba(129,140,248,0.5));
+            width: 128px; height: 128px; margin: -64px 0 0 -64px;
+            background-image: url('vfx/psy.png');
+            animation: battle-vfx-sheet-psy 0.62s steps(12) forwards;
         }
         .battle-vfx-burst[data-element="holy"] .battle-vfx-sheet {
             width: 128px; height: 160px; margin: -80px 0 0 -64px;
-            background-image: url('vfx/thunder.png');
-            animation: battle-vfx-sheet-thunder 0.55s steps(10) forwards;
-            filter: saturate(1.35) brightness(1.1) drop-shadow(0 0 10px rgba(253,224,71,0.6));
+            background-image: url('vfx/holy.png');
+            animation: battle-vfx-sheet-holy 0.6s steps(12) forwards;
         }
         @keyframes battle-vfx-sheet-fire {
             from { background-position: 0 0; opacity: 1; }
@@ -247,6 +244,22 @@
         @keyframes battle-vfx-sheet-thunder {
             from { background-position: 0 0; opacity: 1; }
             to { background-position: -1280px 0; opacity: 0.1; }
+        }
+        @keyframes battle-vfx-sheet-fight {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1536px 0; opacity: 0.15; }
+        }
+        @keyframes battle-vfx-sheet-rock {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1536px 0; opacity: 0.15; }
+        }
+        @keyframes battle-vfx-sheet-psy {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1536px 0; opacity: 0.15; }
+        }
+        @keyframes battle-vfx-sheet-holy {
+            from { background-position: 0 0; opacity: 1; }
+            to { background-position: -1536px 0; opacity: 0.12; }
         }
         .battle-vfx-particles {
             position: absolute;
@@ -4146,12 +4159,16 @@
                 const spd = 1.2 + Math.random() * 3.2;
                 parts.push({
                     x: 90, y: 90,
-                    vx: Math.cos(ang) * spd,
-                    vy: Math.sin(ang) * spd - (known === 'fire' ? 1.2 : 0),
+                    vx: Math.cos(ang) * spd * (known === 'fight' ? 1.25 : 1),
+                    vy: Math.sin(ang) * spd
+                        - (known === 'fire' ? 1.2 : 0)
+                        - (known === 'holy' ? 1.4 : 0)
+                        + (known === 'rock' ? 0.4 : 0),
                     r: 2 + Math.random() * 3.5,
                     life: 1,
                     color: colors[i % colors.length],
-                    leaf: known === 'grass'
+                    leaf: known === 'grass',
+                    kind: known
                 });
             }
             const start = performance.now();
@@ -4164,9 +4181,12 @@
                     p.y += p.vy;
                     if (known === 'fire') p.vy -= 0.04;
                     if (known === 'water') p.vy += 0.05;
+                    if (known === 'rock') p.vy += 0.08;
+                    if (known === 'holy') p.vy -= 0.05;
                     p.life = 1 - t;
                     ctx.globalAlpha = Math.max(0, p.life);
                     ctx.fillStyle = p.color;
+                    ctx.strokeStyle = p.color;
                     if (p.leaf) {
                         ctx.save();
                         ctx.translate(p.x, p.y);
@@ -4177,6 +4197,44 @@
                         ctx.restore();
                     } else if (known === 'thunder') {
                         ctx.fillRect(p.x - 1, p.y - p.r * 2, 2, p.r * 4);
+                    } else if (known === 'fight') {
+                        // short impact slash lines
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(Math.atan2(p.vy, p.vx));
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.moveTo(-p.r * 2.2, 0);
+                        ctx.lineTo(p.r * 2.2, 0);
+                        ctx.stroke();
+                        ctx.restore();
+                    } else if (known === 'rock') {
+                        // square rubble chunks
+                        const s = p.r * (1.2 - t * 0.3);
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(t * 3 + p.vx);
+                        ctx.fillRect(-s, -s * 0.75, s * 2, s * 1.5);
+                        ctx.restore();
+                    } else if (known === 'psy') {
+                        // arc / ring fragments
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r * 1.4, t * 4 + p.vx, t * 4 + p.vx + 1.2);
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
+                    } else if (known === 'holy') {
+                        // small rising crosses
+                        const arm = p.r * 1.4;
+                        ctx.lineWidth = 1.6;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x - arm, p.y);
+                        ctx.lineTo(p.x + arm, p.y);
+                        ctx.moveTo(p.x, p.y - arm);
+                        ctx.lineTo(p.x, p.y + arm);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 1.2, 0, Math.PI * 2);
+                        ctx.fill();
                     } else {
                         ctx.beginPath();
                         ctx.arc(p.x, p.y, p.r * (1 - t * 0.4), 0, Math.PI * 2);
@@ -4197,6 +4255,30 @@
                     ctx.strokeStyle = '#ffffff';
                     ctx.lineWidth = 1.5;
                     ctx.stroke();
+                }
+                // psy expanding ring overlay
+                if (known === 'psy' && t < 0.7) {
+                    ctx.globalAlpha = Math.max(0, 0.75 - t);
+                    ctx.strokeStyle = '#a5b4fc';
+                    ctx.lineWidth = 2.5;
+                    ctx.beginPath();
+                    ctx.arc(90, 90, 12 + t * 55, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.strokeStyle = '#e0e7ff';
+                    ctx.lineWidth = 1.2;
+                    ctx.beginPath();
+                    ctx.arc(90, 90, 6 + t * 40, 0, Math.PI * 2);
+                    ctx.stroke();
+                }
+                // holy pillar hint
+                if (known === 'holy' && t < 0.55) {
+                    ctx.globalAlpha = Math.max(0, 0.7 - t * 1.2);
+                    const grd = ctx.createLinearGradient(90, 20, 90, 150);
+                    grd.addColorStop(0, 'rgba(255,255,255,0)');
+                    grd.addColorStop(0.4, '#fef9c3');
+                    grd.addColorStop(1, 'rgba(253,224,71,0)');
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(82, 25, 16, 120);
                 }
                 if (t < 1) requestAnimationFrame(tick);
             }
