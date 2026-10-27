@@ -2689,6 +2689,16 @@
                             <button onclick="feedExpPackMax('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="w-full py-2 bg-gradient-to-r ${monLevel >= 40 ? 'from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed' : 'from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center">
                                 <i class="fa-solid fa-angles-up mr-1.5"></i>${monLevel >= 40 ? '已滿級' : '一鍵升級（用盡可升嘅EXP包）'}
                             </button>
+                            ${(() => {
+                                const nextEvoLv = getNextEvoMinLevel(runtimeData.id, monLevel);
+                                if (nextEvoLv == null) {
+                                    return `<button disabled class="w-full py-2 bg-gradient-to-r from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed font-bold text-xs rounded-xl shadow-md flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>${runtimeData.isMythic ? '神獸無進化階' : '已達最終進化'}</button>`;
+                                }
+                                const packsNeed = estimatePacksToReachLevel(monLevel, monExp, nextEvoLv, 100);
+                                const nextName = getMonsterRuntimeData(runtimeData.id, nextEvoLv).name;
+                                const can = (currentUser.expPacks || 0) >= packsNeed;
+                                return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="w-full py-2 bg-gradient-to-r ${can ? 'from-fuchsia-600 to-purple-600 hover:from-fuchsia-500 hover:to-purple-500 text-white' : 'from-slate-700 to-slate-800 text-slate-300'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
+                            })()}
                         </div>
                     ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">未解鎖 (祈願召喚獲得)</div>`}
                 `;
@@ -2697,6 +2707,112 @@
         }
 
         let feedExpBusy = false;
+
+        /** 下一進化門檻等級；無下一階／非進化系回傳 null */
+        function getNextEvoMinLevel(monsterId, currentLevel) {
+            const family = ELEMENTAL_EVO_FAMILIES[monsterId];
+            if (!family || !Array.isArray(family.stages) || family.stages.length < 2) return null;
+            const lv = Math.max(1, Math.floor(Number(currentLevel) || 1));
+            let next = null;
+            for (let i = 0; i < family.stages.length; i++) {
+                const ml = Math.floor(Number(family.stages[i].minLv) || 1);
+                if (ml > lv) {
+                    if (next == null || ml < next) next = ml;
+                }
+            }
+            return next;
+        }
+
+        /** 由而家等級／經驗升到 targetLevel（剛好達標，exp 可有剩餘）需要幾多包（每包 +100） */
+        function estimatePacksToReachLevel(level, exp, targetLevel, packExp) {
+            packExp = packExp || 100;
+            let simLevel = Math.max(1, Math.floor(Number(level) || 1));
+            let simExp = Math.max(0, Math.floor(Number(exp) || 0));
+            const target = Math.floor(Number(targetLevel) || 1);
+            if (simLevel >= target) return 0;
+            let packs = 0;
+            const guard = 200000;
+            while (simLevel < target && packs < guard) {
+                packs += 1;
+                simExp += packExp;
+                let req = getRequiredExpForNextLevel(simLevel);
+                while (simExp >= req && simLevel < 40) {
+                    simExp -= req;
+                    simLevel += 1;
+                    if (simLevel >= target) return packs;
+                    req = getRequiredExpForNextLevel(simLevel);
+                }
+                if (simLevel >= 40) break;
+            }
+            return packs;
+        }
+
+        /** 一鍵升到下一進化等級：只扣足夠 EXP 包並停喺進化門檻 */
+        function feedExpPackToNextEvo(monsterId) {
+            if (!currentUser || feedExpBusy) return;
+            const mon = currentUser.ownedMonsters.find(m => m.id === monsterId);
+            if (!mon) return;
+
+            const nextEvo = getNextEvoMinLevel(monsterId, mon.level);
+            if (nextEvo == null) {
+                alert('此怪獸已無下一進化階（最終形態或非進化系）。');
+                return;
+            }
+
+            const packsNeed = estimatePacksToReachLevel(mon.level, mon.exp, nextEvo, 100);
+            const packsAvail = Math.max(0, Math.floor(Number(currentUser.expPacks) || 0));
+            const prevRuntime = getMonsterRuntimeData(mon.id, mon.level);
+            const nextRuntime = getMonsterRuntimeData(mon.id, nextEvo);
+
+            if (packsNeed <= 0) {
+                alert('已經達到或超過下一進化等級。');
+                return;
+            }
+            if (packsAvail < packsNeed) {
+                alert(`EXP包不足！升到 Lv.${nextEvo}【${nextRuntime.name}】需要 ${packsNeed} 包，你而家有 ${packsAvail} 包。`);
+                return;
+            }
+
+            const preview = `將用 ${packsNeed} 包 EXP，等級 ${mon.level} → ${nextEvo}\n【${prevRuntime.name}】→【${nextRuntime.name}】\n確定升級到進化級別？`;
+            if (!confirm(preview)) return;
+
+            feedExpBusy = true;
+            try {
+                const startLevel = mon.level;
+                let packsUsed = 0;
+                while (packsUsed < packsNeed && currentUser.expPacks >= 1 && mon.level < nextEvo) {
+                    currentUser.expPacks -= 1;
+                    packsUsed += 1;
+                    mon.exp += 100;
+                    let req = getRequiredExpForNextLevel(mon.level);
+                    while (mon.exp >= req && mon.level < 40) {
+                        mon.exp -= req;
+                        mon.level += 1;
+                        req = getRequiredExpForNextLevel(mon.level);
+                        if (mon.level >= nextEvo) break;
+                    }
+                    if (mon.level >= 40) {
+                        mon.exp = 0;
+                        break;
+                    }
+                }
+
+                const newRuntime = getMonsterRuntimeData(mon.id, mon.level);
+                saveCurrentUserData();
+                renderMonsterCollection();
+
+                let msg = `進化升級完成！\n用咗 ${packsUsed} 包 EXP，等級 ${startLevel} → ${mon.level}`;
+                if (prevRuntime.name !== newRuntime.name) {
+                    msg += `\n✨ 【${prevRuntime.name}】成功進化為【${newRuntime.name}】！`;
+                    playSFX(1200, 'triangle', 0.6);
+                } else {
+                    playSFX(1046.5, 'triangle', 0.4);
+                }
+                alert(msg);
+            } finally {
+                feedExpBusy = false;
+            }
+        }
 
         function feedExpPack(monsterId) {
             if (!currentUser || feedExpBusy) return;
