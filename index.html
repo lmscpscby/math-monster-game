@@ -855,9 +855,9 @@
                     <p class="text-xs text-slate-300 mt-0.5">點擊卡牌可放大預覽！進化系怪獸進化至 30LV 最終形態，4圍數值凌駕同級山海經神獸！</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="filterMonsters('all')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-600 text-white shadow-md">全部</button>
-                    <button onclick="filterMonsters('elemental')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">八屬性進化系</button>
-                    <button onclick="filterMonsters('mythic')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">山海經神獸</button>
+                    <button type="button" data-filter="all" onclick="filterMonsters('all')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-600 text-white shadow-md ring-2 ring-emerald-300/80">全部</button>
+                    <button type="button" data-filter="elemental" onclick="filterMonsters('elemental')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">八屬性進化系</button>
+                    <button type="button" data-filter="mythic" onclick="filterMonsters('mythic')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">山海經神獸</button>
                 </div>
             </div>
 
@@ -2603,13 +2603,26 @@
 
         let currentFilter = 'all';
 
+        function updateMonsterFilterButtons() {
+            const active = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-600 text-white shadow-md ring-2 ring-emerald-300/80 shadow-emerald-500/40';
+            const idle = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800 border border-slate-700/60';
+            document.querySelectorAll('.monster-filter-btn').forEach(btn => {
+                const f = btn.getAttribute('data-filter');
+                const on = f === currentFilter;
+                btn.className = 'monster-filter-btn ' + (on ? active : idle);
+                btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+        }
+
         function filterMonsters(filter) {
             currentFilter = filter;
+            updateMonsterFilterButtons();
             renderMonsterCollection();
         }
 
         function renderMonsterCollection() {
             if (!currentUser) return;
+            updateMonsterFilterButtons();
             const container = document.getElementById('monster-collection-grid');
             container.innerHTML = '';
 
