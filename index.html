@@ -558,6 +558,12 @@
             position: relative;
             z-index: 4;
             border-radius: 50%;
+            overflow: hidden !important;
+            clip-path: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+            isolation: isolate;
+            /* force paint containment so idle translate/scale stays inside mask */
+            transform: translateZ(0);
         }
 
         .neon-avatar-player::before {
