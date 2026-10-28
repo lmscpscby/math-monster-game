@@ -1431,6 +1431,8 @@
 
     <!-- Word 數學試題庫（G5/G6）；file:// 可用 -->
     <script src="數學試題庫.js"></script>
+    <!-- 戰鬥抽題黑名單（A1+B + c_6A16N103b delist；只 skip、唔刪庫） -->
+    <script src="unsolvable-blacklist.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
     <script>
         // 老師 Google Sheet 上報 + 跨裝置帳戶：Apps Script /exec URL（改 Code 後必須重新部署新版本）
@@ -4163,6 +4165,16 @@
         }
 
         /** 題幹是否提及圖／表但實際冇 image（降權／剔除） */
+        /** 黑名單 id（解唔到／壞匯入）：戰鬥永遠 skip */
+        function isBattleBlacklisted(q) {
+            if (!q || !q.id) return false;
+            if (typeof window !== 'undefined' && typeof window.isBattleUnsolvableId === 'function') {
+                return window.isBattleUnsolvableId(q.id);
+            }
+            const ban = (typeof window !== 'undefined' && window.BATTLE_UNSOLVABLE_BLACKLIST_SET) || null;
+            return !!(ban && ban[q.id]);
+        }
+
         function questionRefsMissingImage(q) {
             if (!q || q.image) return false;
             const t = String(q.question || '');
@@ -4181,7 +4193,7 @@
             const shortOk = [];
             for (let i = 0; i < pool.length; i++) {
                 const q = pool[i];
-                if (!q) continue;
+                if (!q || isBattleBlacklisted(q)) continue;
                 if (questionRefsMissingImage(q)) continue;
                 if (q.image) {
                     withImg.push(q);
@@ -4194,11 +4206,11 @@
             const medium = [];
             for (let i = 0; i < pool.length; i++) {
                 const q = pool[i];
-                if (!q || q.image || questionRefsMissingImage(q)) continue;
+                if (!q || isBattleBlacklisted(q) || q.image || questionRefsMissingImage(q)) continue;
                 if (questionStemLen(q) <= 80) medium.push(q);
             }
             const preferred = withImg.concat(shortOk.length ? shortOk : medium);
-            return preferred.length ? preferred : pool.filter(q => q && !questionRefsMissingImage(q));
+            return preferred.length ? preferred : pool.filter(q => q && !isBattleBlacklisted(q) && !questionRefsMissingImage(q));
         }
 
         /**
@@ -4273,7 +4285,7 @@
             const g = gradeNumFromSelected();
             if (g < 1 || g > 6) return null;
 
-            let gradePool = bank.filter(q => q && q.grade === g);
+            let gradePool = bank.filter(q => q && q.grade === g && !isBattleBlacklisted(q));
             // G1–G4：優先 EPH 短題 id（1A_/1B_/1DA_/1DB_ 等）
             if (g >= 1 && g <= 4) {
                 const ephRe = new RegExp('^' + g + '(A|B|DA|DB)_');
@@ -4288,7 +4300,7 @@
 
             // 池太細：先放寬字數（仍剔缺圖），再先全年級。有單元命中就優先用，避免再抽到其他課題。
             if (pool.length < 3 && matched.length) {
-                const wider = matched.filter(q => q && !questionRefsMissingImage(q));
+                const wider = matched.filter(q => q && !isBattleBlacklisted(q) && !questionRefsMissingImage(q));
                 if (wider.length > pool.length) {
                     pool = wider;
                     fallbackLevel = 'unit-wide';
