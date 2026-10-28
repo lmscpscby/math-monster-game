@@ -80742,5 +80742,1121 @@ window.WORD_QUESTION_BANK = [
     "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
     "kind": "multiple_choice",
     "image": "q-images/5DB_L21_Q10.png"
+  },
+  {
+    "id": "5A_L03_Q01",
+    "grade": 5,
+    "question": "以下哪個分數較大？",
+    "options": [
+      "3／4",
+      "13／16"
+    ],
+    "answer": "13／16",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L03_Q02",
+    "grade": 5,
+    "question": "以下哪個分數較小？",
+    "options": [
+      "3／7",
+      "2／5"
+    ],
+    "answer": "2／5",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L03_Q03",
+    "grade": 5,
+    "question": "以下哪個分數較大？",
+    "options": [
+      "8／9",
+      "7／12"
+    ],
+    "answer": "8／9",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L03_Q04",
+    "grade": 5,
+    "question": "以下哪個數最小？",
+    "options": [
+      "10／3",
+      "3",
+      "3又1／5"
+    ],
+    "answer": "3",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q01",
+    "grade": 5,
+    "question": "3／8＋1／2＝？",
+    "options": [
+      "1／4",
+      "7／8",
+      "5／8",
+      "3／8"
+    ],
+    "answer": "7／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q02",
+    "grade": 5,
+    "question": "5又1／6＋3／10＝？",
+    "options": [
+      "4又4／15",
+      "4又7／15",
+      "5又4／15",
+      "5又7／15"
+    ],
+    "answer": "5又7／15",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q03",
+    "grade": 5,
+    "question": "1又1／3＋2又2／9＝？",
+    "options": [
+      "2又4／9",
+      "2又5／9",
+      "3又5／9",
+      "3又4／9"
+    ],
+    "answer": "3又5／9",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q04",
+    "grade": 5,
+    "question": "4又2／5＋1／4＋3＝？",
+    "options": [
+      "7又11／20",
+      "7又13／20",
+      "8又11／20",
+      "8又13／20"
+    ],
+    "answer": "7又13／20",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q05",
+    "grade": 5,
+    "question": "雜菜粒中紅蘿蔔佔1／4、粟米佔1／3，兩者共佔幾分之幾？",
+    "options": [
+      "3／4",
+      "7／12",
+      "1／6",
+      "5／12"
+    ],
+    "answer": "7／12",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q06",
+    "grade": 5,
+    "question": "家中原有花生油3／8升，爸爸多買2又1／2升後，現有多少升？",
+    "options": [
+      "1又5／8",
+      "1又7／8",
+      "2又5／8",
+      "2又7／8"
+    ],
+    "answer": "2又7／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q07",
+    "grade": 5,
+    "question": "紫色絲帶長1又3／5米，比綠色絲帶短1又1／4米。綠色絲帶長多少米？",
+    "options": [
+      "1又11／20",
+      "1又17／20",
+      "2又11／20",
+      "2又17／20"
+    ],
+    "answer": "2又17／20",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q08",
+    "grade": 5,
+    "question": "媽媽運動：跑步1又5／6小時、瑜伽4小時、游泳2又1／3小時。共用多少小時？",
+    "options": [
+      "6又1／6",
+      "8又5／6",
+      "8又1／6",
+      "6又5／6"
+    ],
+    "answer": "8又1／6",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q01",
+    "grade": 5,
+    "question": "4／5－3／7＝？",
+    "options": [
+      "11／35",
+      "13／35",
+      "17／35",
+      "19／35"
+    ],
+    "answer": "13／35",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q02",
+    "grade": 5,
+    "question": "1／4－1／12＝？",
+    "options": [
+      "1／2",
+      "1／3",
+      "1／6",
+      "5／6"
+    ],
+    "answer": "1／6",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q03",
+    "grade": 5,
+    "question": "5又7／8－2／3＝？",
+    "options": [
+      "2又5／24",
+      "2又9／24",
+      "5又5／24",
+      "5又9／24"
+    ],
+    "answer": "5又5／24",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q04",
+    "grade": 5,
+    "question": "6又11／12－2又1／6－2＝？",
+    "options": [
+      "1又1／4",
+      "1又3／4",
+      "2又1／4",
+      "2又3／4"
+    ],
+    "answer": "2又3／4",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q05",
+    "grade": 5,
+    "question": "一瓶蘋果汁有1又1／2升，家怡喝去3／8升後還有多少升？",
+    "options": [
+      "1／4",
+      "1／8",
+      "1又1／2",
+      "1又1／8"
+    ],
+    "answer": "1又1／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q06",
+    "grade": 5,
+    "question": "西瓜重3又9／10 kg，菠蘿重4／5 kg。菠蘿比西瓜輕多少 kg？",
+    "options": [
+      "3又1／10 kg",
+      "2又3／10 kg",
+      "2又1／10 kg",
+      "3又3／10 kg"
+    ],
+    "answer": "3又1／10 kg",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q07",
+    "grade": 5,
+    "question": "文軒有25又4／5元，欣澄比文軒少3又1／2元。欣澄有多少元？",
+    "options": [
+      "20又3／10",
+      "20又7／10",
+      "22又3／10",
+      "22又7／10"
+    ],
+    "answer": "22又3／10",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q08",
+    "grade": 5,
+    "question": "合唱團中小四佔1／12，小五佔2／3，其餘小六。小六佔幾分之幾？",
+    "options": [
+      "1／3",
+      "2／3",
+      "1／6",
+      "1／4"
+    ],
+    "answer": "1／4",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q01",
+    "grade": 5,
+    "question": "1／2＋3／7－3／4＝？",
+    "options": [
+      "1／14",
+      "3／28",
+      "5／28",
+      "3／14"
+    ],
+    "answer": "5／28",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q02",
+    "grade": 5,
+    "question": "1又4／9＋3又5／6－2又1／2＝？",
+    "options": [
+      "1又7／9",
+      "2又7／9",
+      "2又5／9",
+      "1又5／9"
+    ],
+    "answer": "2又7／9",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q03",
+    "grade": 5,
+    "question": "4又2／5－2又1／6＋3又2／3＝？",
+    "options": [
+      "6又9／10",
+      "5又9／10",
+      "5又7／10",
+      "6又7／10"
+    ],
+    "answer": "5又9／10",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q04",
+    "grade": 5,
+    "question": "6－（3／8＋1又1／4）＝？",
+    "options": [
+      "5又3／8",
+      "5又5／8",
+      "4又5／8",
+      "4又3／8"
+    ],
+    "answer": "4又3／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q05",
+    "grade": 5,
+    "question": "淡奶原有6又4／5箱，用去1又1／3箱後再購入2箱。現有多少箱？",
+    "options": [
+      "5又7／15",
+      "7又7／15",
+      "7又8／15",
+      "5又8／15"
+    ],
+    "answer": "7又7／15",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q06",
+    "grade": 5,
+    "question": "原有42又3／5元，再得15又1／2元，買售25又9／10元玩具車後餘多少元？",
+    "options": [
+      "33又3／5",
+      "32又3／5",
+      "32又1／5",
+      "31又1／5"
+    ],
+    "answer": "32又1／5",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q07",
+    "grade": 5,
+    "question": "三文治18又1／5元、豆奶6又3／10元。付50元應找回多少元？",
+    "options": [
+      "25又1／2",
+      "24又1／2",
+      "23又2／5",
+      "24又1／5"
+    ],
+    "answer": "25又1／2",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q08",
+    "grade": 5,
+    "question": "閱讀5又2／3小時，比小提琴多1又3／4小時；運動比小提琴多2又5／6小時。運動多少小時？",
+    "options": [
+      "6又3／4",
+      "5又3／4",
+      "5又1／4",
+      "6又1／4"
+    ],
+    "answer": "6又3／4",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q01",
+    "grade": 5,
+    "question": "1／6×5＝？",
+    "options": [
+      "6／5",
+      "1／30",
+      "5／6",
+      "1／3"
+    ],
+    "answer": "5／6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q02",
+    "grade": 5,
+    "question": "2×2／7＝？",
+    "options": [
+      "1／7",
+      "4／7",
+      "3／7",
+      "2／9"
+    ],
+    "answer": "4／7",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q03",
+    "grade": 5,
+    "question": "4／15×3＝？",
+    "options": [
+      "7／15",
+      "2／9",
+      "1／15",
+      "4／5"
+    ],
+    "answer": "4／5",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q04",
+    "grade": 5,
+    "question": "7×2／3＝？",
+    "options": [
+      "2又1／3",
+      "4又2／3",
+      "3又1／3",
+      "2又2／3"
+    ],
+    "answer": "4又2／3",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q05",
+    "grade": 5,
+    "question": "1又1／2×3＝？",
+    "options": [
+      "1又1／2",
+      "3又1／2",
+      "4又1／2",
+      "3／2"
+    ],
+    "answer": "4又1／2",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q06",
+    "grade": 5,
+    "question": "4又2／5×2＝？",
+    "options": [
+      "8又4／5",
+      "6又4／5",
+      "4又4／5",
+      "6又2／5"
+    ],
+    "answer": "8又4／5",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q07",
+    "grade": 5,
+    "question": "1又8／9×4，哪個估計與計算正確？",
+    "options": [
+      "約2×4＝8，得7又5／9",
+      "約1×4＝4，得4又8／9"
+    ],
+    "answer": "約2×4＝8，得7又5／9",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q08",
+    "grade": 5,
+    "question": "3×2又1／18，哪個估計與計算正確？",
+    "options": [
+      "約3×2＝6，得5又1／6",
+      "約3×2＝6，得6又1／6"
+    ],
+    "answer": "約3×2＝6，得6又1／6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q01",
+    "grade": 5,
+    "question": "2／3×1／5＝？",
+    "options": [
+      "3／8",
+      "2／15",
+      "1／5",
+      "1／4"
+    ],
+    "answer": "2／15",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q02",
+    "grade": 5,
+    "question": "1／2×3／7＝？",
+    "options": [
+      "3／14",
+      "1／3",
+      "4／9",
+      "1／2"
+    ],
+    "answer": "3／14",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q03",
+    "grade": 5,
+    "question": "7／10×2／5＝？",
+    "options": [
+      "3／5",
+      "7／25",
+      "14／15",
+      "9／50"
+    ],
+    "answer": "7／25",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q04",
+    "grade": 5,
+    "question": "4／9×5／6＝？",
+    "options": [
+      "10／27",
+      "3／5",
+      "1／6",
+      "11／15"
+    ],
+    "answer": "10／27",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q05",
+    "grade": 5,
+    "question": "1又3／4×1／7＝？",
+    "options": [
+      "1／3",
+      "2／3",
+      "1／4",
+      "1又3／4"
+    ],
+    "answer": "1／4",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q06",
+    "grade": 5,
+    "question": "2又1／2×1又2／3＝？",
+    "options": [
+      "3又1／6",
+      "3又1／5",
+      "3又3／5",
+      "4又1／6"
+    ],
+    "answer": "4又1／6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q07",
+    "grade": 5,
+    "question": "5／6×3又1／5，哪個估計與計算正確？",
+    "options": [
+      "約1×3＝3，得2又2／3",
+      "約1×4＝4，得3又2／3"
+    ],
+    "answer": "約1×3＝3，得2又2／3",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q08",
+    "grade": 5,
+    "question": "5又1／4×6又6／7，哪個估計與計算正確？",
+    "options": [
+      "約5×7＝35，得35",
+      "約5×7＝35，得36"
+    ],
+    "answer": "約5×7＝35，得36",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q01",
+    "grade": 5,
+    "question": "3／5×1／2×3／4＝？",
+    "options": [
+      "1／5",
+      "3／20",
+      "7／40",
+      "9／40"
+    ],
+    "answer": "9／40",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q02",
+    "grade": 5,
+    "question": "4／7×8×7／12＝？",
+    "options": [
+      "2又2／3",
+      "8又1／3",
+      "2又1／3",
+      "3又2／3"
+    ],
+    "answer": "2又2／3",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q03",
+    "grade": 5,
+    "question": "1／4×1又1／2×5／6＝？",
+    "options": [
+      "3／16",
+      "5／12",
+      "5／16",
+      "1又1／4"
+    ],
+    "answer": "5／16",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q04",
+    "grade": 5,
+    "question": "3×7／10×2又6／7＝？",
+    "options": [
+      "5",
+      "6",
+      "5又3／5",
+      "6又3／5"
+    ],
+    "answer": "6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q05",
+    "grade": 5,
+    "question": "每包麵粉重3／4公斤，8包共重多少公斤？",
+    "options": [
+      "4又1／4",
+      "5",
+      "5又1／4",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q06",
+    "grade": 5,
+    "question": "緩跑徑長2又1／4 km，跑了全長的2／5，即跑了多少 km？",
+    "options": [
+      "1又1／10",
+      "9／10",
+      "1又3／10",
+      "2又1／10"
+    ],
+    "answer": "9／10",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q07",
+    "grade": 5,
+    "question": "練習鋼琴5／6小時，家課是其1又3／10倍。家課用了多少小時？",
+    "options": [
+      "1又1／4",
+      "1又1／2",
+      "1又1／12",
+      "1又1／6"
+    ],
+    "answer": "1又1／12",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q08",
+    "grade": 5,
+    "question": "朱古力每盒價是薯片的6／7；薯片10又1／2元。買2盒朱古力共多少元？",
+    "options": [
+      "18",
+      "18又3／4",
+      "16",
+      "16又1／4"
+    ],
+    "answer": "18",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q02",
+    "grade": 5,
+    "question": "「h×5」可寫成？",
+    "options": [
+      "5＋h",
+      "h＋5",
+      "h－5",
+      "5h"
+    ],
+    "answer": "5h",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q03",
+    "grade": 5,
+    "question": "「12÷Y」可寫成？",
+    "options": [
+      "Y／12",
+      "12／Y",
+      "12Y",
+      "12－Y"
+    ],
+    "answer": "12／Y",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q04",
+    "grade": 5,
+    "question": "布偶有m個和2個，共有多少個？選出正確代數式。",
+    "options": [
+      "m－2",
+      "2m",
+      "m÷2",
+      "m＋2"
+    ],
+    "answer": "m＋2",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q05",
+    "grade": 5,
+    "question": "當A＝2時，6＋A哪個計算正確？",
+    "options": [
+      "6＋A＝6＋2＝8",
+      "6＋A＝6＋1＝7"
+    ],
+    "answer": "6＋A＝6＋2＝8",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q06",
+    "grade": 5,
+    "question": "當c＝10時，c－8哪個計算正確？",
+    "options": [
+      "c－8＝10－8＝2",
+      "c－8＝8－8＝0"
+    ],
+    "answer": "c－8＝10－8＝2",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q07",
+    "grade": 5,
+    "question": "當h＝4時，12h哪個計算正確？",
+    "options": [
+      "12h＝12×2＝24",
+      "12h＝12×4＝48"
+    ],
+    "answer": "12h＝12×4＝48",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q08",
+    "grade": 5,
+    "question": "當Y＝50時，Y／2哪個計算正確？",
+    "options": [
+      "Y／2＝50÷2＝25",
+      "Y／2＝60÷2＝30"
+    ],
+    "answer": "Y／2＝50÷2＝25",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q01",
+    "grade": 5,
+    "question": "用代數式表示「A加25」。",
+    "options": [
+      "A－25",
+      "25－A",
+      "25÷A",
+      "A＋25"
+    ],
+    "answer": "A＋25",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q02",
+    "grade": 5,
+    "question": "用代數式表示「18減f」。",
+    "options": [
+      "f－18",
+      "18－f",
+      "18÷f",
+      "18＋f"
+    ],
+    "answer": "18－f",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q03",
+    "grade": 5,
+    "question": "草莓有4粒和M粒，共有多少粒？選出正確代數式。",
+    "options": [
+      "(4＋M)",
+      "(4－M)",
+      "4M",
+      "4"
+    ],
+    "answer": "(4＋M)",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q04",
+    "grade": 5,
+    "question": "原有麵粉500克，用去n克，還剩多少克？選出正確代數式。",
+    "options": [
+      "(500＋n)",
+      "(500－n)",
+      "500n",
+      "500"
+    ],
+    "answer": "(500－n)",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q05",
+    "grade": 5,
+    "question": "「y乘以5」可寫成？",
+    "options": [
+      "5y",
+      "y／5",
+      "5＋y",
+      "5／y"
+    ],
+    "answer": "5y",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q06",
+    "grade": 5,
+    "question": "「M除以2」可寫成？",
+    "options": [
+      "2－M",
+      "2M",
+      "2／M",
+      "M／2"
+    ],
+    "answer": "M／2",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q07",
+    "grade": 5,
+    "question": "每包棉花糖有n粒，7包共有多少粒？",
+    "options": [
+      "n／7",
+      "7n",
+      "7＋n",
+      "7／n"
+    ],
+    "answer": "7n",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q08",
+    "grade": 5,
+    "question": "汽水750毫升，每杯容量C毫升，剛好倒滿多少杯？",
+    "options": [
+      "750C",
+      "750－C",
+      "750／C",
+      "C／750"
+    ],
+    "answer": "750／C",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
   }
 ];
