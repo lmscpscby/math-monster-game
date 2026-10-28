@@ -176,15 +176,18 @@
         }
 
         /* ===== Battle idle: micro-float + breathe (after entrance) ===== */
-        .neon-avatar-frame.battle-idle > #player-svg-container,
-        .neon-avatar-frame.battle-idle > #enemy-svg-container {
+        /* Animate only contents inside the circular crop — keep frame/ring fixed */
+        .neon-avatar-frame.battle-idle > #player-svg-container > img,
+        .neon-avatar-frame.battle-idle > #enemy-svg-container > img,
+        .neon-avatar-frame.battle-idle > #player-svg-container > div,
+        .neon-avatar-frame.battle-idle > #enemy-svg-container > div {
             transform-origin: center bottom;
             animation: battle-sprite-idle 2.4s ease-in-out infinite;
             transition: none;
         }
         @keyframes battle-sprite-idle {
             0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-10px) scale(1.03); }
+            50% { transform: translateY(-4px) scale(1.02); }
         }
         .neon-avatar-frame.battle-idle .battle-foot-glow {
             animation: battle-foot-glow-breathe 2.4s ease-in-out infinite;
@@ -194,11 +197,25 @@
             50% { opacity: 1; }
         }
         @media (prefers-reduced-motion: reduce) {
-            .neon-avatar-frame.battle-idle > #player-svg-container,
-            .neon-avatar-frame.battle-idle > #enemy-svg-container,
+            .neon-avatar-frame.battle-idle > #player-svg-container > img,
+            .neon-avatar-frame.battle-idle > #enemy-svg-container > img,
+            .neon-avatar-frame.battle-idle > #player-svg-container > div,
+            .neon-avatar-frame.battle-idle > #enemy-svg-container > div,
             .neon-avatar-frame.battle-idle .battle-foot-glow {
                 animation: none !important;
             }
+        }
+
+        /* Battle circle fill: cover circle, drop square border from shared renderMonsterElement */
+        .neon-avatar-frame > #player-svg-container > img,
+        .neon-avatar-frame > #enemy-svg-container > img {
+            object-fit: cover !important;
+            border-radius: 50% !important;
+            border: none !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            width: 100%;
+            height: 100%;
         }
 
         /* ===== Elemental attack VFX (水/火/草/雷) ===== */
