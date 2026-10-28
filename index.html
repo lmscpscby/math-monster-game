@@ -896,6 +896,11 @@
                     </div>
                 </div>
 
+                <button type="button" id="daily-claim-btn" onclick="claimDailyReward()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-200 text-xs font-black flex items-center space-x-1.5 transition-all disabled:opacity-45 disabled:cursor-not-allowed disabled:hover:bg-rose-500/20" title="每日打卡：金幣 +200、EXP包 +10（香港時間每日一次）">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span id="daily-claim-label">每日打卡</span>
+                </button>
+
                 <button onclick="toggleElementChartModal()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-black flex items-center space-x-1 transition-all" title="屬性相克表">
                     <i class="fa-solid fa-bolt text-yellow-400"></i>
                     <span class="hidden md:inline">屬性相克</span>
@@ -1463,6 +1468,109 @@
             return profile;
         }
 
+        /** 香港時間（Asia/Hong_Kong）日期字串 YYYY-MM-DD；打卡重置用，唔跟瀏覽器本地時區 */
+        function getHongKongDateString(dateObj) {
+            var d = dateObj instanceof Date ? dateObj : new Date();
+            try {
+                return d.toLocaleDateString('en-CA', { timeZone: 'Asia/Hong_Kong' });
+            } catch (e) {
+                try {
+                    var parts = new Intl.DateTimeFormat('en-CA', {
+                        timeZone: 'Asia/Hong_Kong',
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit'
+                    }).formatToParts(d);
+                    var y = '', m = '', day = '';
+                    parts.forEach(function (p) {
+                        if (p.type === 'year') y = p.value;
+                        if (p.type === 'month') m = p.value;
+                        if (p.type === 'day') day = p.value;
+                    });
+                    if (y && m && day) return y + '-' + m + '-' + day;
+                } catch (e2) {}
+                // 最後手段：UTC+8 偏移（唔完美但總好過跟錯誤本地時區）
+                var shifted = new Date(d.getTime() + 8 * 60 * 60 * 1000);
+                return shifted.toISOString().slice(0, 10);
+            }
+        }
+
+        function laterDailyClaimDate(a, b) {
+            var sa = String(a || '').trim();
+            var sb = String(b || '').trim();
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(sa)) sa = '';
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(sb)) sb = '';
+            if (!sa) return sb;
+            if (!sb) return sa;
+            return sa >= sb ? sa : sb;
+        }
+
+        let dailyClaimInFlight = false;
+
+        function hasClaimedDailyToday() {
+            var today = getHongKongDateString();
+            var local = currentUser && currentUser.lastDailyClaimDate;
+            var cloud = lastCloudProfile && lastCloudProfile.lastDailyClaimDate;
+            return String(local || '') === today || String(cloud || '') === today;
+        }
+
+        function updateDailyClaimButton() {
+            var btn = document.getElementById('daily-claim-btn');
+            var label = document.getElementById('daily-claim-label');
+            if (!btn) return;
+            if (!currentUser) {
+                btn.disabled = true;
+                if (label) label.textContent = '每日打卡';
+                btn.title = '請先登入再打卡';
+                return;
+            }
+            if (hasClaimedDailyToday()) {
+                btn.disabled = true;
+                if (label) label.textContent = '今日已打卡';
+                btn.title = '今日已打卡，聽日香港時間 00:00 後再嚟';
+            } else {
+                btn.disabled = false;
+                if (label) label.textContent = '每日打卡';
+                btn.title = '每日打卡：金幣 +200、EXP包 +10（香港時間每日一次）';
+            }
+        }
+
+        function claimDailyReward() {
+            if (!currentUser) {
+                showSyncToast('請先登入再打卡');
+                try {
+                    var overlay = document.getElementById('auth-modal-overlay');
+                    if (overlay) overlay.classList.remove('hidden');
+                } catch (e) {}
+                return;
+            }
+            if (dailyClaimInFlight) return;
+            if (hasClaimedDailyToday()) {
+                updateDailyClaimButton();
+                showSyncToast('今日已打卡，聽日再嚟');
+                return;
+            }
+            dailyClaimInFlight = true;
+            try {
+                var today = getHongKongDateString();
+                // 寫入標記先，避免連撳；之後經 saveCurrentUserData → 雲端 sync
+                currentUser.lastDailyClaimDate = today;
+                currentUser.gold = Math.max(0, Math.floor(Number(currentUser.gold) || 0)) + 200;
+                currentUser.expPacks = Math.max(0, Math.floor(Number(currentUser.expPacks) || 0)) + 10;
+                try {
+                    if (lastCloudProfile && typeof lastCloudProfile === 'object') {
+                        lastCloudProfile.lastDailyClaimDate = today;
+                    }
+                } catch (e) {}
+                saveCurrentUserData();
+                updateDailyClaimButton();
+                showSyncToast('每日打卡成功：金幣 +200，EXP包 +10');
+                try { playSFX(659.25, 'triangle', 0.18); } catch (e) {}
+            } finally {
+                dailyClaimInFlight = false;
+            }
+        }
+
         function parseUpdatedAt(p) {
             if (!p || !p.updatedAt) return 0;
             var t = Date.parse(p.updatedAt);
@@ -1666,6 +1774,7 @@
                     baseCloud.progressEpoch = cloudEpProg;
                     if (cloud.accountEpoch != null) baseCloud.accountEpoch = Math.max(0, Math.floor(Number(cloud.accountEpoch) || 0));
                 }
+                baseCloud.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
                 stampUpdatedAt(baseCloud);
                 return baseCloud;
@@ -1729,6 +1838,7 @@
             if (cloudEpProg || localEpProg) {
                 base.progressEpoch = Math.max(cloudEpProg, localEpProg);
             }
+            base.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
             stampUpdatedAt(base);
             return base;
         }
@@ -2890,6 +3000,7 @@
             document.getElementById('logout-btn').classList.remove('flex');
             document.getElementById('user-display-name').innerText = "未登入";
             document.getElementById('user-display-school').innerText = "訪客模式";
+            try { updateDailyClaimButton(); } catch (e) {}
             updateAdminUiVisibility();
             closeAdminStatsPanel();
         }
@@ -2922,7 +3033,8 @@
             document.getElementById('user-gold').innerText = currentUser.gold;
             document.getElementById('user-exp-packs').innerText = currentUser.expPacks;
             document.getElementById('user-rank-score').innerText = currentUser.rankScore;
-            
+            try { updateDailyClaimButton(); } catch (e) {}
+
             document.getElementById('ranked-current-score').innerText = currentUser.rankScore;
             document.getElementById('ranked-current-rank').innerText = getRankTitle(currentUser.rankScore);
             document.getElementById('ranked-user-grade-badge').innerText = `${gradeTextMap[userGrade]}專屬排位 (鎖定)`;
@@ -2939,6 +3051,7 @@
 
         window.onload = function() {
             document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            try { updateDailyClaimButton(); } catch (e) {}
             const activeSessionNick = localStorage.getItem('math_monster_active_session');
             const db = getUsersDatabase();
             const sessionKey = activeSessionNick ? `user_${activeSessionNick}` : '';
