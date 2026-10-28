@@ -273,7 +273,7 @@
         }
 
         #pokemon-battle-arena.neon-stage {
-            /* 試上水晶洞窟戰鬥背景（舊 CSS 漸變見 assets/bg/neon-stage-bg_prev.css.bak） */
+            /* 水晶洞窟戰鬥背景：靜態 PNG 做底；loop 短片蓋上面（舊 CSS 漸變見 assets/bg/neon-stage-bg_prev.css.bak） */
             background-color: var(--bg-deep);
             background-image: url('assets/bg/battle_bg_crystal_cave_1920x1080.png');
             background-size: cover;
@@ -286,6 +286,24 @@
                 0 14px 36px rgba(0, 0, 0, 0.5);
         }
 
+        /* z: bg-video/dotgrid 0 < stage-ring 5 < sprites/HUD 10 < vfx 30 */
+        #pokemon-battle-arena #battle-bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #pokemon-battle-arena #battle-bg-video {
+                display: none !important;
+            }
+        }
+
         #pokemon-battle-arena.neon-stage .neon-dotgrid {
             z-index: 0;
             background-image:
@@ -296,7 +314,7 @@
             opacity: 0.10;
         }
 
-        /* z: bg/dotgrid 0 < stage-ring 5 < sprites/HUD 10 < vfx 30 */
+        /* z: bg-video/dotgrid 0 < stage-ring 5 < sprites/HUD 10 < vfx 30 */
         #battle-stage-ring {
             position: absolute;
             left: 50%;
@@ -1287,6 +1305,10 @@
 
             <!-- Arena: Pokémon classic + neon v2 — clusters: enemy UR (plate|sprite), player LL (sprite|plate) -->
             <div id="pokemon-battle-arena" class="neon-stage poke-stage relative w-full rounded-2xl border-2 border-pink-500/40 p-2 sm:p-3 overflow-hidden h-[38vh] md:h-[44vh] max-h-[440px] min-h-[260px] shadow-xl">
+                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline autoplay preload="metadata" poster="assets/bg/battle_bg_crystal_cave_1920x1080.png" aria-hidden="true">
+                    <source src="assets/bg/battle_bg_crystal_cave_loop.webm" type="video/webm">
+                    <source src="assets/bg/battle_bg_crystal_cave_loop.mp4" type="video/mp4">
+                </video>
                 <div class="neon-dotgrid absolute inset-0 pointer-events-none" aria-hidden="true"></div>
                 <!-- C5 neon stage ring (decorative; under sprites, over bg) -->
                 <div id="battle-stage-ring" aria-hidden="true"></div>
@@ -2581,6 +2603,50 @@
         function getMenuBgmEl() { return document.getElementById('bgm-audio'); }
         function getBattleBgmEl() { return document.getElementById('battle-bgm-audio'); }
 
+        function getBattleBgVideoEl() { return document.getElementById('battle-bg-video'); }
+
+        function prefersReducedMotion() {
+            try {
+                return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function hideBattleBgVideo() {
+            const v = getBattleBgVideoEl();
+            if (!v) return;
+            try { v.pause(); } catch (e) {}
+            v.style.display = 'none';
+        }
+
+        function playBattleBgVideo() {
+            const v = getBattleBgVideoEl();
+            if (!v || prefersReducedMotion()) {
+                if (v && prefersReducedMotion()) hideBattleBgVideo();
+                return;
+            }
+            if (v.style.display === 'none') return;
+            try {
+                v.muted = true;
+                const p = v.play();
+                if (p && typeof p.catch === 'function') p.catch(function () {});
+            } catch (e) {}
+        }
+
+        function pauseBattleBgVideo() {
+            const v = getBattleBgVideoEl();
+            if (!v) return;
+            try { v.pause(); } catch (e) {}
+        }
+
+        (function initBattleBgVideo() {
+            const v = getBattleBgVideoEl();
+            if (!v) return;
+            v.addEventListener('error', function () { hideBattleBgVideo(); });
+            if (prefersReducedMotion()) hideBattleBgVideo();
+        })();
+
         function setBgmIconPlaying(playing) {
             const icon = document.getElementById('bgm-icon');
             if (!icon) return;
@@ -3197,11 +3263,13 @@
             const target = document.getElementById(`view-${viewName}`);
             if (target) target.classList.remove('hidden');
 
-            // 進出戰鬥切換 BGM
+            // 進出戰鬥切換 BGM／背景短片（互不干擾）
             if (viewName === 'battle') {
                 try { startBattleBgm(); } catch (e) {}
+                try { playBattleBgVideo(); } catch (e) {}
             } else {
                 try { stopBattleBgm(); } catch (e) {}
+                try { pauseBattleBgVideo(); } catch (e) {}
             }
 
             if (viewName === 'monsters') renderMonsterCollection();
