@@ -2291,7 +2291,7 @@
                 { id: 'g3_u6', name: '時間與日曆（秒、24小時制）' }
             ],
             'G4': [
-                { id: 'g4_u1', name: '大數（百萬、億）' },
+                { id: 'g4_u1', name: '整數四則混合運算與應用題' },
                 { id: 'g4_u2', name: '乘法與除法的直式進階計算' },
                 { id: 'g4_u3', name: '因數與倍數、公因數與公倍數（HCF/LCM）' },
                 { id: 'g4_u4', name: '同分母分數加減法與帶分數操作' },
@@ -2299,6 +2299,7 @@
                 { id: 'g4_u6', name: '面積（cm²、m² 面積公式）' }
             ],
             'G5': [
+                { id: 'g5_u9', name: '大數（百萬、億）' },
                 { id: 'g5_u1', name: '質數與合數' },
                 { id: 'g5_u2', name: '異分母分數的加法與減法' },
                 { id: 'g5_u3', name: '分數乘法與除法' },
@@ -2309,6 +2310,7 @@
                 { id: 'g5_u8', name: '代數符號與簡易代數式' }
             ],
             'G6': [
+                { id: 'g6_u9', name: '小數除法' },
                 { id: 'g6_u1', name: '百分數的應用（折扣、加減與比較）' },
                 { id: 'g6_u2', name: '分數、小數與百分數的互化' },
                 { id: 'g6_u3', name: '速率（m/s, km/h 換算與計算）' },
@@ -4164,7 +4166,8 @@
         function questionRefsMissingImage(q) {
             if (!q || q.image) return false;
             const t = String(q.question || '');
-            return /下圖|上圖|如圖|下表|上表|看圖|見圖/.test(t);
+            // 加闊：算柱／左右圖／圖形所／陰影／常見統計圖——無圖檔就唔入短題池
+            return /下圖|上圖|如圖|下表|上表|看圖|見圖|算柱|右圖|左圖|圖形所|陰影|棒形圖|折線圖|圓形圖|依圖|根據圖|圖中/.test(t);
         }
 
         function questionStemLen(q) {
@@ -4198,13 +4201,103 @@
             return preferred.length ? preferred : pool.filter(q => q && !questionRefsMissingImage(q));
         }
 
-        function pickWordBankQuestion() {
+        /**
+         * 單元 → 題庫篩選（unitKey／id 前綴／topic 關鍵字）。
+         * 池太細先 widen（相關 unitKey），再 fallback 全年級。
+         */
+        const UNIT_BANK_RULES = {
+            // —— G1 ——
+            g1_u1: { unitKeys: ['numbers_1_to_20','compose_2_to_10','compose_11_to_13','compose_14_to_18','sequence_odd_even','ordering','number_zero','compare_quantities','relative_position'], topicRe: /認識\s*1\s*至\s*20|分解和合成|順數|奇數|偶數|排次序|0的認識|比較數量|相對位置/ },
+            g1_u2: { unitKeys: ['basic_addition','basic_subtraction','addition_1','addition_2','subtraction','add_sub_word_problems'], topicRe: /基本加法|基本減法|加法|減法|加減應用/ },
+            g1_u3: { unitKeys: ['numbers_21_to_100','ones_tens','count_by_2_5_10'], topicRe: /21\s*至\s*100|個位和十位|每\s*2|數數/ },
+            g1_u4: { unitKeys: ['hk_coins','using_coins'], topicRe: /硬幣|香港的硬幣/ },
+            g1_u5: { unitKeys: ['length_distance','ruler','measuring'], topicRe: /長度|距離|永備尺|量度|厘米/ },
+            g1_u6: { unitKeys: ['hours','telling_time','weekdays_dates'], topicRe: /小時|報時|星期|日期|時鐘/ },
+            // —— G2 ——
+            g2_u1: { unitKeys: ['addition_1','addition_2','subtraction','add_sub_mixed','add_sub_word_problems','three_digit_numbers','four_digit_numbers','counting'], topicRe: /加減|三位數|四位數|數數活動/ },
+            g2_u2: { unitKeys: ['mult_2_5_10','mult_3_6','mult_4_8','mult_7_9_1_0'], topicRe: /乘法/ },
+            g2_u3: { unitKeys: ['division','sharing_2'], topicRe: /除法|分物/ },
+            g2_u4: { unitKeys: ['hong_kong_money'], topicRe: /貨幣|元、角|香港的貨幣/ },
+            g2_u5: { unitKeys: ['metre_1','metre_2'], topicRe: /米的認識|長度/ },
+            g2_u6: { unitKeys: ['grams','kilograms'], topicRe: /克|千克|重量|公斤/ },
+            g2_u7: { unitKeys: ['telling_time','activity_time'], topicRe: /報時|活動時間|分/ },
+            // —— G3 ——
+            g3_u1: { unitKeys: ['five_digit_numbers','compare_numbers'], topicRe: /五位數|比較數/ },
+            g3_u2: { unitKeys: ['multiplication_1','multiplication_2','multiplication_3','division_1','division_2','division_3','mult_div_word_problems','addition_and_subtraction'], topicRe: /乘法|除法|乘除|加法和減法|圓括號/ },
+            g3_u3: { unitKeys: ['fractions_intro_1'], topicRe: /分數/ },
+            g3_u4: { unitKeys: ['millimetre','kilometre'], topicRe: /毫米|公里/ },
+            g3_u5: { unitKeys: ['capacity_intro','litres_millilitres','kilograms','grams'], topicRe: /容量|升|毫升|公斤|克/ },
+            g3_u6: { unitKeys: ['activity_time','hour_24_time'], topicRe: /活動時間|24小時|秒/ },
+            // —— G4（庫暫 0 題；預留映射）——
+            g4_u1: { unitKeys: [], topicRe: /四則|混合運算/ },
+            g4_u2: { unitKeys: [], topicRe: /乘法|除法|直式/ },
+            g4_u3: { unitKeys: [], topicRe: /因數|倍數|HCF|LCM/ },
+            g4_u4: { unitKeys: [], topicRe: /同分母|分數|帶分數/ },
+            g4_u5: { unitKeys: [], topicRe: /周長/ },
+            g4_u6: { unitKeys: [], topicRe: /面積/ },
+            // —— G5 ——
+            g5_u9: { unitKeys: ['large_numbers'], idRe: /^5A15N/, topicRe: /多位數|大數|大數量|百萬|億/ },
+            g5_u1: { unitKeys: [], topicRe: /質數|合數/ },
+            g5_u2: { unitKeys: [], idRe: /^5A25N/, topicRe: /異分母|分數.*加|分數.*減/ },
+            g5_u3: { unitKeys: ['fraction'], idRe: /^5A45N|^5B25N/, topicRe: /分數乘|分數除|分數四則|整數與分數|分數與分數/ },
+            g5_u4: { unitKeys: ['decimal'], idRe: /^5B45N/, topicRe: /小數/ },
+            g5_u5: { unitKeys: ['area'], idRe: /^5A35M/, topicRe: /面積|平行四邊形|梯形|三角形的面積|多邊形/ },
+            g5_u6: { unitKeys: ['volume'], idRe: /^5B55M/, topicRe: /體積|立方厘米|立方米|長方體|正方體的體積/ },
+            g5_u7: { unitKeys: [], idRe: /^5B35S/, topicRe: /立體圖形|截面|頂點|摺紙圖樣/ },
+            g5_u8: { unitKeys: ['algebra'], idRe: /^5A55A|^5B65A/, topicRe: /代數|代數式/ },
+            // —— G6 ——
+            g6_u9: { unitKeys: ['decimal_division_1','decimal_division_2','interesting_division'], idRe: /^6A16N101|^6A16N102|^6A16N103/, topicRe: /小數除法|有趣的除法|除以10、100|整數\/小數除以|小數除法的應用/ },
+            g6_u1: { unitKeys: ['percent','percent_intro','percent_app_1','percent_app_2'], idRe: /^6A56N311|^6B16N401/, topicRe: /百分數的認識|百分數的應用|折扣|以百分數比較/ },
+            g6_u2: { unitKeys: ['percent_decimal','percent_fraction'], idRe: /^6A56N312|^6A56N313/, topicRe: /互化|百分數和小數|百分數和分數/ },
+            g6_u3: { unitKeys: ['speed','speed_1','speed_2'], idRe: /^6B46M408|^6B46M409|^6B46M410/, topicRe: /速率|路程和時間/ },
+            g6_u4: { unitKeys: ['circle','circumference_1','circumference_2','circle_area_1','circle_area_2'], idRe: /^6B36M|^6B66M/, topicRe: /圓周|圓面積|求圓周|求圓面積/ },
+            g6_u5: { unitKeys: ['volume','capacity_volume','displacement_1','displacement_2'], idRe: /^6A76M/, topicRe: /排水|容量和體積|量杯|水缸/ },
+            g6_u6: { unitKeys: ['stats','journey_graph','pie_chart_1','pie_chart_2','stats_misuse','average_1','average_2'], idRe: /^6A36D|^6A46D|^6B76D/, topicRe: /折線圖|圓形圖|平均數|統計|誤用/ },
+            g6_u7: { unitKeys: ['time'], idRe: /^6B46M407/, topicRe: /時間間隔|時間單位|開始與結束/ },
+            g6_u8: { unitKeys: ['algebra','simple_equation_1','simple_equation_2','equation_word'], idRe: /^6B56A/, topicRe: /方程/ }
+        };
+
+        function questionMatchesUnitRule(q, rule) {
+            if (!q || !rule) return true;
+            const uk = q.unitKey || '';
+            if (rule.unitKeys && rule.unitKeys.length && rule.unitKeys.indexOf(uk) !== -1) return true;
+            if (rule.idRe && rule.idRe.test(String(q.id || ''))) return true;
+            const blob = String(q.topic || '') + ' ' + String(q.question || '');
+            if (rule.topicRe && rule.topicRe.test(blob)) return true;
+            return false;
+        }
+
+        function pickWordBankQuestion(unitId) {
             const bank = (typeof window !== 'undefined' && window.WORD_QUESTION_BANK) ? window.WORD_QUESTION_BANK : null;
             if (!bank || !bank.length) return null;
             const g = gradeNumFromSelected();
-            if (g !== 5 && g !== 6) return null;
+            if (g < 1 || g > 6) return null;
 
-            const pool = filterBattleQuestionPool(bank.filter(q => q.grade === g));
+            let gradePool = bank.filter(q => q && q.grade === g);
+            // G1–G4：優先 EPH 短題 id（1A_/1B_/1DA_/1DB_ 等）
+            if (g >= 1 && g <= 4) {
+                const ephRe = new RegExp('^' + g + '(A|B|DA|DB)_');
+                const eph = gradePool.filter(q => ephRe.test(String(q.id || '')));
+                if (eph.length) gradePool = eph;
+            }
+
+            const rule = unitId ? UNIT_BANK_RULES[unitId] : null;
+            let matched = rule ? gradePool.filter(q => questionMatchesUnitRule(q, rule)) : gradePool.slice();
+            let pool = filterBattleQuestionPool(matched);
+            let fallbackLevel = 'unit';
+
+            // 池太細：先放寬字數（仍剔缺圖），再先全年級。有單元命中就優先用，避免再抽到其他課題。
+            if (pool.length < 3 && matched.length) {
+                const wider = matched.filter(q => q && !questionRefsMissingImage(q));
+                if (wider.length > pool.length) {
+                    pool = wider;
+                    fallbackLevel = 'unit-wide';
+                }
+            }
+            if (!pool.length) {
+                pool = filterBattleQuestionPool(gradePool);
+                fallbackLevel = pool.length ? 'grade' : 'empty';
+            }
             if (!pool.length) return null;
 
             let candidates = pool.filter(q => !usedWordQuestionIds.has(q.id));
@@ -4214,6 +4307,7 @@
             }
 
             // 有圖題加權：約 55% 機會優先抽有圖（若有）
+            // 無圖視覺題已由 questionRefsMissingImage 剔除；此處唔再抬無圖睇圖題
             const imgCands = candidates.filter(q => q.image);
             let item;
             if (imgCands.length && Math.random() < 0.55) {
@@ -4234,17 +4328,12 @@
                 question: qText,
                 options: opts,
                 correctAnswer: item.answer,
-                image: item.image || null
+                image: item.image || null,
+                _bankMeta: { id: item.id, unitKey: item.unitKey, unitId: unitId || null, fallback: fallbackLevel }
             };
         }
 
         function generateDynamicQuestion() {
-            // G5/G6：優先抽 Word 試題庫隨機題
-            const fromBank = pickWordBankQuestion();
-            if (fromBank && fromBank.options && fromBank.options.length >= 2 && fromBank.correctAnswer != null) {
-                return fromBank;
-            }
-
             const units = GRADE_UNITS[selectedGrade] || GRADE_UNITS['G1'];
             let currentUnitObj = units[0];
 
@@ -4254,6 +4343,12 @@
                 const found = units.find(u => u.id === pendingStrandId);
                 if (found) currentUnitObj = found;
                 else currentUnitObj = units[Math.floor(Math.random() * units.length)];
+            }
+
+            // G1–G6：優先按所選單元抽 Word 題庫；唔夠先 fallback 程式模板
+            const fromBank = pickWordBankQuestion(currentUnitObj && currentUnitObj.id);
+            if (fromBank && fromBank.options && fromBank.options.length >= 2 && fromBank.correctAnswer != null) {
+                return fromBank;
             }
 
             let qText = "";
@@ -4427,10 +4522,30 @@
                 }
 
                 // ==================== P4 (小四) 題庫 ====================
-                else if (unitId === 'g4_u1') { // 大數（百萬、億）
-                    qText = `【${currentUnitObj.name}】一億 (100,000,000) 一共有多少個零 (0)？`;
-                    correctAns = "8 個";
-                    options = ["8 個", "6 個", "7 個", "9 個"];
+                else if (unitId === 'g4_u1') { // 整數四則混合運算與應用題
+                    const mode = Math.floor(Math.random() * 4);
+                    let a = Math.floor(Math.random() * 20) + 5;
+                    let b = Math.floor(Math.random() * 9) + 2;
+                    let c = Math.floor(Math.random() * 8) + 2;
+                    if (mode === 0) {
+                        qText = `【${currentUnitObj.name}】計算：${a} + ${b} × ${c} = ?`;
+                        correctAns = String(a + b * c);
+                        options = [String(a + b * c), String((a + b) * c), String(a * b + c), String(a + b + c)];
+                    } else if (mode === 1) {
+                        qText = `【${currentUnitObj.name}】計算：(${a} + ${b}) × ${c} = ?`;
+                        correctAns = String((a + b) * c);
+                        options = [String((a + b) * c), String(a + b * c), String(a * b * c), String(a + b + c)];
+                    } else if (mode === 2) {
+                        const prod = b * c;
+                        a = prod + Math.floor(Math.random() * 30) + 5;
+                        qText = `【${currentUnitObj.name}】計算：${a} − ${b} × ${c} = ?`;
+                        correctAns = String(a - b * c);
+                        options = [String(a - b * c), String((a - b) * c), String(a - b - c), String(a + b * c)];
+                    } else {
+                        qText = `【${currentUnitObj.name}】${a * b} ÷ ${b} + ${c} = ?`;
+                        correctAns = String(a + c);
+                        options = [String(a + c), String(a * b + c), String(a + b + c), String(a * c)];
+                    }
                 }
                 else if (unitId === 'g4_u2') { // 乘法與除法的直式進階計算
                     let a = Math.floor(Math.random() * 40) + 11;
@@ -4473,6 +4588,39 @@
                 }
 
                 // ==================== P5 (小五) 題庫 ====================
+                else if (unitId === 'g5_u9') { // 大數（百萬、億）— 隨機變體，唔鎖死單一題
+                    const mode = Math.floor(Math.random() * 3);
+                    if (mode === 0) {
+                        const items = [
+                            { name: '一百萬', zeros: 6 },
+                            { name: '一千萬', zeros: 7 },
+                            { name: '一億', zeros: 8 },
+                            { name: '十億', zeros: 9 }
+                        ];
+                        const it = items[Math.floor(Math.random() * items.length)];
+                        const pretty = ({6:'1,000,000',7:'10,000,000',8:'100,000,000',9:'1,000,000,000'})[it.zeros];
+                        qText = `【${currentUnitObj.name}】${it.name} (${pretty}) 一共有多少個零 (0)？`;
+                        correctAns = it.zeros + ' 個';
+                        options = [it.zeros + ' 個', (it.zeros - 1) + ' 個', (it.zeros + 1) + ' 個', (it.zeros - 2) + ' 個'];
+                    } else if (mode === 1) {
+                        const places = [
+                            { d: 7, place: '百萬位' },
+                            { d: 5, place: '萬位' },
+                            { d: 3, place: '百位' },
+                            { d: 9, place: '億位' }
+                        ];
+                        const it = places[Math.floor(Math.random() * places.length)];
+                        qText = `【${currentUnitObj.name}】在大數中，數字「${it.d}」若在${it.place}，它所表示的數值是多少？`;
+                        const valMap = { '百萬位': it.d * 1000000, '萬位': it.d * 10000, '百位': it.d * 100, '億位': it.d * 100000000 };
+                        correctAns = String(valMap[it.place]);
+                        options = [String(valMap[it.place]), String(it.d * 1000), String(it.d * 100000), String(it.d)];
+                    } else {
+                        const a = Math.floor(Math.random() * 5) + 2;
+                        qText = `【${currentUnitObj.name}】${a} 個一百萬等於多少？`;
+                        correctAns = String(a * 1000000);
+                        options = [String(a * 1000000), String(a * 10000), String(a * 100000), String(a * 10000000)];
+                    }
+                }
                 else if (unitId === 'g5_u1') {
                     let primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
                     let chosen = primes[Math.floor(Math.random() * primes.length)];
@@ -4578,6 +4726,32 @@
                     qText = `【${currentUnitObj.name}】解方程：x + ${b} = ${sum}，求 x 的值？`;
                     correctAns = String(x);
                     options = [String(x), String(x + 2), String(sum), String(b)];
+                }
+                else if (unitId === 'g6_u9') { // 小數除法
+                    const mode = Math.floor(Math.random() * 3);
+                    if (mode === 0) {
+                        const n = (Math.floor(Math.random() * 90) + 10) / 10; // 1.0–10.0
+                        const div = [10, 100, 1000][Math.floor(Math.random() * 3)];
+                        const ans = n / div;
+                        qText = `【${currentUnitObj.name}】${n.toFixed(1)} ÷ ${div} = ?`;
+                        correctAns = String(ans);
+                        options = [String(ans), String(n * div), String(n / (div / 10)), String((n / div) * 10)];
+                    } else if (mode === 1) {
+                        const a = (Math.floor(Math.random() * 50) + 10) / 10;
+                        const b = (Math.floor(Math.random() * 8) + 2) / 10;
+                        // keep 1 decimal clean: a/b may be messy — use integers as decimals
+                        const ai = Math.floor(Math.random() * 20) + 5;
+                        const bi = [2, 4, 5][Math.floor(Math.random() * 3)];
+                        qText = `【${currentUnitObj.name}】${(ai / 10).toFixed(1)} ÷ ${(bi / 10).toFixed(1)} = ?`;
+                        correctAns = String(ai / bi);
+                        options = [String(ai / bi), String(ai * bi / 100), String((ai / 10) + (bi / 10)), String(ai / bi + 1)];
+                    } else {
+                        const whole = (Math.floor(Math.random() * 9) + 2) * 10;
+                        const d = [2, 4, 5][Math.floor(Math.random() * 3)];
+                        qText = `【${currentUnitObj.name}】${whole} ÷ ${d} = ?（小數除法：整數 ÷ 整數）`;
+                        correctAns = String(whole / d);
+                        options = [String(whole / d), String(whole * d), String(whole - d), String(whole / d + 1)];
+                    }
                 }
 
                 // 備用生成
