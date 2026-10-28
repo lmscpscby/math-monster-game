@@ -175,6 +175,32 @@
             }
         }
 
+        /* ===== Battle idle: micro-float + breathe (after entrance) ===== */
+        .neon-avatar-frame.battle-idle > #player-svg-container,
+        .neon-avatar-frame.battle-idle > #enemy-svg-container {
+            transform-origin: center bottom;
+            animation: battle-sprite-idle 2.4s ease-in-out infinite;
+            transition: none;
+        }
+        @keyframes battle-sprite-idle {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.03); }
+        }
+        .neon-avatar-frame.battle-idle .battle-foot-glow {
+            animation: battle-foot-glow-breathe 2.4s ease-in-out infinite;
+        }
+        @keyframes battle-foot-glow-breathe {
+            0%, 100% { opacity: 0.55; }
+            50% { opacity: 1; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .neon-avatar-frame.battle-idle > #player-svg-container,
+            .neon-avatar-frame.battle-idle > #enemy-svg-container,
+            .neon-avatar-frame.battle-idle .battle-foot-glow {
+                animation: none !important;
+            }
+        }
+
         /* ===== Elemental attack VFX (水/火/草/雷) ===== */
         #battle-vfx-layer {
             position: absolute;
@@ -1404,7 +1430,7 @@
                                 <img class="entrance-glow" src="assets/vfx/entrance_glow_cyan_512.png" alt="" draggable="false">
                                 <img class="entrance-ring" src="assets/vfx/entrance_ring_cyan_512.png" alt="" draggable="false">
                             </div>
-                            <div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-3 bg-rose-500/25 rounded-full blur-md"></div>
+                            <div class="battle-foot-glow absolute bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-3 bg-rose-500/25 rounded-full blur-md"></div>
                             <div id="enemy-skill-popup" class="absolute top-0 left-0 right-0 text-center pointer-events-none z-20 hidden">
                                 <span class="inline-block px-2 py-0.5 bg-amber-400 text-slate-950 font-black text-[10px] rounded-full shadow-lg border border-amber-200 animate-skill-popup"></span>
                             </div>
@@ -1421,7 +1447,7 @@
                                 <img class="entrance-glow" src="assets/vfx/entrance_glow_cyan_512.png" alt="" draggable="false">
                                 <img class="entrance-ring" src="assets/vfx/entrance_ring_cyan_512.png" alt="" draggable="false">
                             </div>
-                            <div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-3 bg-cyan-400/30 rounded-full blur-md"></div>
+                            <div class="battle-foot-glow absolute bottom-1 left-1/2 -translate-x-1/2 w-[70%] h-3 bg-cyan-400/30 rounded-full blur-md"></div>
                             <div id="player-skill-popup" class="absolute top-0 left-0 right-0 text-center pointer-events-none z-20 hidden">
                                 <span class="inline-block px-2 py-0.5 bg-pink-600 text-white font-black text-[10px] rounded-full shadow-lg border border-pink-300 animate-skill-popup"></span>
                             </div>
@@ -2687,16 +2713,19 @@
         }
 
         function playBattleEntrance(side) {
-            if (prefersReducedMotion()) return;
             const frameId = side === 'enemy' ? 'enemy-avatar-frame' : 'player-avatar-frame';
             const frame = document.getElementById(frameId);
             if (!frame) return;
+            // 入場期間唔同時搶 transform；入場完先開 idle
+            frame.classList.remove('battle-idle');
+            if (prefersReducedMotion()) return;
             frame.classList.remove('battle-entrance');
             void frame.offsetWidth;
             frame.classList.add('battle-entrance');
             if (frame._entranceTimer) clearTimeout(frame._entranceTimer);
             frame._entranceTimer = setTimeout(function () {
                 frame.classList.remove('battle-entrance');
+                frame.classList.add('battle-idle');
                 frame._entranceTimer = null;
             }, 450);
         }
