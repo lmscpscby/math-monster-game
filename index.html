@@ -273,7 +273,12 @@
         }
 
         #pokemon-battle-arena.neon-stage {
-            background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 52%, #12081f 100%);
+            /* 試上水晶洞窟戰鬥背景（舊 CSS 漸變見 assets/bg/neon-stage-bg_prev.css.bak） */
+            background-color: var(--bg-deep);
+            background-image: url('assets/bg/battle_bg_crystal_cave_1920x1080.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-color: rgba(236, 72, 153, 0.55);
             box-shadow:
                 0 0 0 1px rgba(191, 0, 255, 0.28),
@@ -288,7 +293,7 @@
                 radial-gradient(rgba(191, 0, 255, 0.6) 1px, transparent 1px);
             background-size: 16px 16px, 22px 22px;
             background-position: 0 0, 8px 8px;
-            opacity: 0.22;
+            opacity: 0.10;
         }
 
         /* z: bg/dotgrid 0 < stage-ring 5 < sprites/HUD 10 < vfx 30 */
