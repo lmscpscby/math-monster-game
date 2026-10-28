@@ -78284,5 +78284,2463 @@ window.WORD_QUESTION_BANK = [
     "source": "第二版 3 下 B 單元六 第 18 課 棒形圖（一）",
     "kind": "short_answer",
     "image": "q-images/3DB_L18_Q08.png"
+  },
+  {
+    "id": "5A_L01_Q01",
+    "grade": 5,
+    "question": "算柱所表示的數是一個 ______ 位數。",
+    "options": [
+      "五",
+      "六",
+      "七",
+      "八"
+    ],
+    "answer": "六",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q01.png"
+  },
+  {
+    "id": "5A_L01_Q02",
+    "grade": 5,
+    "question": "在這個數中，「5」在 ______ 位，表示 ______ 。",
+    "options": [
+      "百萬；5000000",
+      "十萬；500000",
+      "萬；50000",
+      "千；5000"
+    ],
+    "answer": "十萬；500000",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q02.png"
+  },
+  {
+    "id": "5A_L01_Q03",
+    "grade": 5,
+    "question": "以下算柱所表示的數是  _______________ 。",
+    "options": [
+      "24001250",
+      "2400125",
+      "12000625",
+      "240012500"
+    ],
+    "answer": "24001250",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "short_answer",
+    "image": "q-images/5A_L01_Q03.png"
+  },
+  {
+    "id": "5A_L01_Q04",
+    "grade": 5,
+    "question": "以下算柱所表示的數中，「4」在百萬位，表示 _______________ 。",
+    "options": [
+      "4000000",
+      "2000000",
+      "400000",
+      "40000000"
+    ],
+    "answer": "4000000",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "short_answer",
+    "image": "q-images/5A_L01_Q04.png"
+  },
+  {
+    "id": "5A_L01_Q05",
+    "grade": 5,
+    "question": "「三百一十萬四千七百二十五」是以下哪個數的讀法？",
+    "options": [
+      "301472",
+      "3104725",
+      "314725"
+    ],
+    "answer": "3104725",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q06",
+    "grade": 5,
+    "question": "「七億三千零六萬二千三百零一」是以下哪個數的讀法？",
+    "options": [
+      "730602301",
+      "700362310",
+      "730062301"
+    ],
+    "answer": "730062301",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q07",
+    "grade": 5,
+    "question": "根據以下算柱所表示的數，選擇該數正確的讀法。",
+    "options": [
+      "四十二萬三千五十",
+      "四十萬三千一百五十",
+      "四十萬三千一百五",
+      "四十二萬三千一百五十"
+    ],
+    "answer": "四十二萬三千一百五十",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q07.png"
+  },
+  {
+    "id": "5A_L01_Q08",
+    "grade": 5,
+    "question": "根據以下算柱所表示的數，選擇該數正確的讀法。",
+    "options": [
+      "八千三百二十二萬六",
+      "八千三百二十萬零六",
+      "八千三百二十二萬零六",
+      "八千三百二十萬六"
+    ],
+    "answer": "八千三百二十二萬零六",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q08.png"
+  },
+  {
+    "id": "5A_L01_Q09",
+    "grade": 5,
+    "question": "依規律，選出正確的答案。這是 ______ 。",
+    "options": [
+      "順數",
+      "倒數"
+    ],
+    "answer": "倒數",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q09.png"
+  },
+  {
+    "id": "5A_L01_Q10",
+    "grade": 5,
+    "question": "依規律，選出正確的答案。這是 ______ 。",
+    "options": [
+      "順數",
+      "倒數"
+    ],
+    "answer": "順數",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q10.png"
+  },
+  {
+    "id": "5A_L01_Q13",
+    "grade": 5,
+    "question": "選出正確的答案。",
+    "options": [
+      "7320108 > 480560",
+      "7320108 < 480560"
+    ],
+    "answer": "7320108 > 480560",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q14",
+    "grade": 5,
+    "question": "選出正確的答案。",
+    "options": [
+      "35268425 > 39416330",
+      "35268425 < 39416330"
+    ],
+    "answer": "35268425 < 39416330",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q15",
+    "grade": 5,
+    "question": "把 1200300、210169 和 13450500 由小至大排列出來。",
+    "options": [
+      "1200300 < 210169 < 13450500",
+      "210169 < 1200300 < 13450500",
+      "1200300 < 13450500 < 210169",
+      "210169 < 13450500 < 1200300"
+    ],
+    "answer": "210169 < 1200300 < 13450500",
+    "unitKey": "unknown",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L02_Q01",
+    "grade": 5,
+    "question": "用四捨五入法，把 56380125 取近似值至十萬位是 _______________。",
+    "options": [
+      "56400000",
+      "5640000",
+      "564000000",
+      "28200000"
+    ],
+    "answer": "56400000",
+    "unitKey": "unknown",
+    "topic": "近似值和大數量的估計",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L02_Q02",
+    "grade": 5,
+    "question": "用四捨五入法，把 320479566 取近似值至千萬位是  _______________。",
+    "options": [
+      "160000000",
+      "320000000",
+      "32000000",
+      "3200000000"
+    ],
+    "answer": "320000000",
+    "unitKey": "unknown",
+    "topic": "近似值和大數量的估計",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L02_Q03",
+    "grade": 5,
+    "question": "估計圖中約有圓點多少個。下圖約有圓點  _________ 個。",
+    "options": [
+      "97、90",
+      "192、90",
+      "95、90",
+      "96、90"
+    ],
+    "answer": "96、90",
+    "unitKey": "unknown",
+    "topic": "近似值和大數量的估計",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "kind": "short_answer",
+    "image": "q-images/5A_L02_Q03.png"
+  },
+  {
+    "id": "5A_L07_Q01",
+    "grade": 5,
+    "question": "上面平行四邊形的面積是 ______ cm²。",
+    "options": [
+      "47",
+      "49",
+      "96",
+      "48"
+    ],
+    "answer": "48",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q01.png"
+  },
+  {
+    "id": "5A_L07_Q02",
+    "grade": 5,
+    "question": "上面平行四邊形的面積是 ______ m²。",
+    "options": [
+      "1800",
+      "180",
+      "90",
+      "18"
+    ],
+    "answer": "180",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q02.png"
+  },
+  {
+    "id": "5A_L07_Q03",
+    "grade": 5,
+    "question": "平行四邊形的底是 15 米，高是 19 米，它的面積是 _______ 平方米。",
+    "options": [
+      "285",
+      "2850",
+      "28.5",
+      "142.5"
+    ],
+    "answer": "285",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L07_Q04",
+    "grade": 5,
+    "question": "上圖是一個平行四邊形，它的面積是 ______ cm²。",
+    "options": [
+      "132",
+      "13.2",
+      "66",
+      "1320"
+    ],
+    "answer": "132",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q04.png"
+  },
+  {
+    "id": "5A_L07_Q05",
+    "grade": 5,
+    "question": "上圖平行四邊形的面積是 165 m²。以 11 m 為高，對應的底是 ______ m。",
+    "options": [
+      "30",
+      "16",
+      "15",
+      "14"
+    ],
+    "answer": "15",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q05.png"
+  },
+  {
+    "id": "5A_L07_Q06",
+    "grade": 5,
+    "question": "上圖平行四邊形的面積是 54 平方厘米，以 9 厘米為底，對應的高是 ______ 厘米。",
+    "options": [
+      "5",
+      "12",
+      "7",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q06.png"
+  },
+  {
+    "id": "5A_L07_Q07",
+    "grade": 5,
+    "question": "一塊平行四邊形玻璃的底是 50 厘米，高是底的一半，這塊玻璃的面積是 _______ 平方厘米。",
+    "options": [
+      "12500",
+      "1250",
+      "125",
+      "625"
+    ],
+    "answer": "1250",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L07_Q08",
+    "grade": 5,
+    "question": "德輝把 4 個大小相同的平行四邊形拼成一個大平行四邊形，如上圖所示。大平行四邊形的面積是 ______ cm²。",
+    "options": [
+      "676",
+      "6760",
+      "338",
+      "67.6"
+    ],
+    "answer": "676",
+    "unitKey": "unknown",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q08.png"
+  },
+  {
+    "id": "5A_L08_Q01",
+    "grade": 5,
+    "question": "上圖三角形的面積是 ______ 平方厘米。",
+    "options": [
+      "7",
+      "12",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q01.png"
+  },
+  {
+    "id": "5A_L08_Q02",
+    "grade": 5,
+    "question": "上圖三角形的面積是 ______ m²。",
+    "options": [
+      "2160",
+      "21.6",
+      "216",
+      "108"
+    ],
+    "answer": "216",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q02.png"
+  },
+  {
+    "id": "5A_L08_Q03",
+    "grade": 5,
+    "question": "一張三角形手工紙，它的底是 20 cm，高是 16 cm。三角形紙的面積是 ______ cm²。",
+    "options": [
+      "16",
+      "160",
+      "80",
+      "1600"
+    ],
+    "answer": "160",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q03.png"
+  },
+  {
+    "id": "5A_L08_Q04",
+    "grade": 5,
+    "question": "上圖三角形的面積是 ______ cm²。",
+    "options": [
+      "1800",
+      "90",
+      "180",
+      "18"
+    ],
+    "answer": "180",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q04.png"
+  },
+  {
+    "id": "5A_L08_Q05",
+    "grade": 5,
+    "question": "一面三角形彩旗，底是 8 m，高是底的 2 倍，它的面積是 ______ m²。",
+    "options": [
+      "65",
+      "128",
+      "63",
+      "64"
+    ],
+    "answer": "64",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q05.png"
+  },
+  {
+    "id": "5A_L08_Q06",
+    "grade": 5,
+    "question": "家欣把上圖的三角形沿虛線剪成三個小三角形，每個小三角形的底的長度相等。每個小三角形的面積是 ______ cm²。",
+    "options": [
+      "90",
+      "180",
+      "91",
+      "89"
+    ],
+    "answer": "90",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q06.png"
+  },
+  {
+    "id": "5A_L08_Q07",
+    "grade": 5,
+    "question": "可瑩用四塊圖一的三角形瓷磚拼砌出一個平行四邊形，如圖二所示。圖二的面積是 ______ cm²。",
+    "options": [
+      "600",
+      "60",
+      "300",
+      "6000"
+    ],
+    "answer": "600",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q07.png"
+  },
+  {
+    "id": "5A_L08_Q08",
+    "grade": 5,
+    "question": "上圖是一張正方形手工紙，從這張手工紙剪出一個最大的三角形，這個三角形的面積是 ______ 平方厘米。",
+    "options": [
+      "98",
+      "99",
+      "196",
+      "97"
+    ],
+    "answer": "98",
+    "unitKey": "unknown",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q08.png"
+  },
+  {
+    "id": "5A_L09_Q01",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ cm²。",
+    "options": [
+      "72",
+      "37",
+      "35",
+      "36"
+    ],
+    "answer": "36",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q01.png"
+  },
+  {
+    "id": "5A_L09_Q02",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ m²。",
+    "options": [
+      "150",
+      "30",
+      "3000",
+      "300"
+    ],
+    "answer": "300",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q02.png"
+  },
+  {
+    "id": "5A_L09_Q03",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ 平方米。",
+    "options": [
+      "84",
+      "168",
+      "85",
+      "83"
+    ],
+    "answer": "84",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q03.png"
+  },
+  {
+    "id": "5A_L09_Q04",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ 平方厘米。",
+    "options": [
+      "15",
+      "1500",
+      "75",
+      "150"
+    ],
+    "answer": "150",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q04.png"
+  },
+  {
+    "id": "5A_L09_Q05",
+    "grade": 5,
+    "question": "梯形壁報板的上底與下底之和是 500 厘米，高是 2 米。壁報板的面積是 ______ 平方米。",
+    "options": [
+      "4",
+      "6",
+      "10",
+      "5"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q05.png"
+  },
+  {
+    "id": "5A_L09_Q06",
+    "grade": 5,
+    "question": "老師從一張平行四邊形紙剪出一個三角形和一個梯形，如上圖所示。梯形的面積是 ______ cm²。",
+    "options": [
+      "22.4",
+      "2240",
+      "112",
+      "224"
+    ],
+    "answer": "224",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q06.png"
+  },
+  {
+    "id": "5A_L09_Q07",
+    "grade": 5,
+    "question": "上圖由兩塊大小相同的梯形拼砌而成。上圖的面積是 ______ 平方厘米。",
+    "options": [
+      "32",
+      "15",
+      "17",
+      "16"
+    ],
+    "answer": "16",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q07.png"
+  },
+  {
+    "id": "5A_L09_Q08",
+    "grade": 5,
+    "question": "一個梯形花圃的上底和高都是 2 米，下底是 4 米。園丁把花圃的上底加長了 1 米，下底和高不變。花圃擴建後的面積是 ______ 平方米。",
+    "options": [
+      "14",
+      "7",
+      "6",
+      "8"
+    ],
+    "answer": "7",
+    "unitKey": "unknown",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q08.png"
+  },
+  {
+    "id": "5A_L10_Q01",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ cm²。",
+    "options": [
+      "306",
+      "3060",
+      "153",
+      "30.6"
+    ],
+    "answer": "306",
+    "unitKey": "unknown",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q01.png"
+  },
+  {
+    "id": "5A_L10_Q02",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ cm²。",
+    "options": [
+      "288",
+      "2880",
+      "28.8",
+      "144"
+    ],
+    "answer": "288",
+    "unitKey": "unknown",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q02.png"
+  },
+  {
+    "id": "5A_L10_Q03",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ m²。",
+    "options": [
+      "108",
+      "2160",
+      "216",
+      "21.6"
+    ],
+    "answer": "216",
+    "unitKey": "unknown",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q03.png"
+  },
+  {
+    "id": "5A_L10_Q04",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ m²。",
+    "options": [
+      "14",
+      "13",
+      "28",
+      "15"
+    ],
+    "answer": "14",
+    "unitKey": "unknown",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q04.png"
+  },
+  {
+    "id": "5B_L16_Q01",
+    "grade": 5,
+    "question": "縱軸的每大格代表 ______ 元。",
+    "options": [
+      "100",
+      "10000",
+      "500",
+      "1000"
+    ],
+    "answer": "1000",
+    "unitKey": "unknown",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q01.png"
+  },
+  {
+    "id": "5B_L16_Q02",
+    "grade": 5,
+    "question": "星期六上午的營業額是 ______ 元。",
+    "options": [
+      "3600",
+      "72000",
+      "720",
+      "7200"
+    ],
+    "answer": "7200",
+    "unitKey": "unknown",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q02.png"
+  },
+  {
+    "id": "5B_L16_Q03",
+    "grade": 5,
+    "question": "過去五天，小食店有 ______ 天上午的營業額比下午的低。",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "1"
+    ],
+    "answer": "2",
+    "unitKey": "unknown",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q03.png"
+  },
+  {
+    "id": "5B_L16_Q04",
+    "grade": 5,
+    "question": "過去五天，下午的總營業額是 ______ 元。",
+    "options": [
+      "254000",
+      "25400",
+      "2540",
+      "12700"
+    ],
+    "answer": "25400",
+    "unitKey": "unknown",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q04.png"
+  },
+  {
+    "id": "5DA_L01_Q01",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。根據下圖，線段 _______ 是圓的半徑。",
+    "options": [
+      "AF",
+      "OB",
+      "DF",
+      "EF"
+    ],
+    "answer": "OB",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q01.png"
+  },
+  {
+    "id": "5DA_L01_Q02",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。根據下圖，線段 _______ 是圓的直徑。",
+    "options": [
+      "AD",
+      "AF",
+      "OD",
+      "CE"
+    ],
+    "answer": "AD",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q02.png"
+  },
+  {
+    "id": "5DA_L01_Q03",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。根據下圖，線段 OA 的長度與線段 ________ 的相同。",
+    "options": [
+      "AF",
+      "EF",
+      "OD",
+      "OF"
+    ],
+    "answer": "OD",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q03.png"
+  },
+  {
+    "id": "5DA_L01_Q04",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。如果這個圓的半徑是 3 cm，它的直徑長 ________ cm。",
+    "options": [
+      "7",
+      "5",
+      "12",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L01_Q04.png"
+  },
+  {
+    "id": "5DA_L01_Q05",
+    "grade": 5,
+    "question": "下圖中，AB 是大圓的直徑，長 20 cm。O 點是大圓的圓心，C 點和 D 點分別是兩個大小相同的小圓的圓心。每個小圓的半徑是多少 cm？",
+    "options": [
+      "10 cm",
+      "5 cm",
+      "4 cm",
+      "2.5 cm"
+    ],
+    "answer": "5 cm",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q05.png"
+  },
+  {
+    "id": "5DA_L01_Q06",
+    "grade": 5,
+    "question": "下圖中，X 點和 Y 點分別是小圓和大圓的圓心，這兩點在同一條線段上。小圓和大圓的直徑分別是 12 cm 和 20 cm，XY 長多少 cm？",
+    "options": [
+      "64 cm",
+      "32 cm",
+      "16 cm",
+      "8 cm"
+    ],
+    "answer": "16 cm",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q06.png"
+  },
+  {
+    "id": "5DA_L01_Q07",
+    "grade": 5,
+    "question": "下圖中，正方形內有一個圓，O 點是圓心。以下哪條線段的長度與正方形的邊長相等？",
+    "options": [
+      "OA",
+      "BD",
+      "CF",
+      "OD"
+    ],
+    "answer": "CF",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q07.png"
+  },
+  {
+    "id": "5DA_L01_Q08",
+    "grade": 5,
+    "question": "下圖由四個大小相同的圓組成，P、Q、R 和 S 四點分別是它們的圓心。如果每個圓的直徑是 6 cm，四邊形 PQRS 的周界是多少 cm？",
+    "options": [
+      "12 cm",
+      "24 cm",
+      "30 cm",
+      "48 cm"
+    ],
+    "answer": "24 cm",
+    "unitKey": "unknown",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q08.png"
+  },
+  {
+    "id": "5DA_L03_Q05",
+    "grade": 5,
+    "question": "蛋壽司的數量比蝦壽司的數量是 _________。",
+    "options": [
+      "2 比 5",
+      "2 比 7",
+      "5 比 2",
+      "5 比 7"
+    ],
+    "answer": "2 比 5",
+    "unitKey": "unknown",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L03_Q05.png"
+  },
+  {
+    "id": "5DA_L03_Q06",
+    "grade": 5,
+    "question": "三文魚壽司的數量比蝦壽司的數量是 _________。",
+    "options": [
+      "2 比 5",
+      "5 比 7",
+      "7 比 2",
+      "7 比 5"
+    ],
+    "answer": "7 比 5",
+    "unitKey": "unknown",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L03_Q06.png"
+  },
+  {
+    "id": "5DA_L05_Q07",
+    "grade": 5,
+    "question": "做一個繩結需用繩子 3又3／5 m。若希做繩結剛好用去繩子 18 m，她共做了繩結 ______ 個。",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L05_Q07.png"
+  },
+  {
+    "id": "5DA_L05_Q08",
+    "grade": 5,
+    "question": "侍應把 4又1／2 升檸檬水每 1／4 升分成一杯，然後把檸檬水平均放在 3 個餐盤上，每個餐盤上有檸檬水 ______ 杯。",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L05_Q08.png"
+  },
+  {
+    "id": "5DA_L06_Q07",
+    "grade": 5,
+    "question": "便利店有飲品 28 箱，牛奶佔全部飲品的 1／4，汽水佔全部飲品的 3／7。便利店裏共有牛奶和汽水 ______ 箱。",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": "19",
+    "unitKey": "unknown",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L06_Q07.png"
+  },
+  {
+    "id": "5DA_L06_Q08",
+    "grade": 5,
+    "question": "5B 班有學生 36 個，戴眼鏡的學生佔全班的 5／9。沒有戴眼鏡的學生有 ______ 個。",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": "16",
+    "unitKey": "unknown",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L06_Q08.png"
+  },
+  {
+    "id": "5DA_L08_Q01",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "24",
+      "12",
+      "11",
+      "13"
+    ],
+    "answer": "12",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q01.png"
+  },
+  {
+    "id": "5DA_L08_Q02",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "19",
+      "36",
+      "18",
+      "17"
+    ],
+    "answer": "18",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q02.png"
+  },
+  {
+    "id": "5DA_L08_Q03",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q03.png"
+  },
+  {
+    "id": "5DA_L08_Q04",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "7",
+      "16",
+      "9",
+      "8"
+    ],
+    "answer": "8",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q04.png"
+  },
+  {
+    "id": "5DA_L08_Q05",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "5",
+      "12",
+      "7",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q05.png"
+  },
+  {
+    "id": "5DA_L08_Q06",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "10",
+      "9",
+      "8",
+      "18"
+    ],
+    "answer": "9",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q06.png"
+  },
+  {
+    "id": "5DA_L08_Q07",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "7",
+      "12",
+      "6",
+      "5"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q07.png"
+  },
+  {
+    "id": "5DA_L08_Q08",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "9",
+      "11",
+      "20",
+      "10"
+    ],
+    "answer": "10",
+    "unitKey": "unknown",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q08.png"
+  },
+  {
+    "id": "5DA_L09_Q01",
+    "grade": 5,
+    "question": "下面是一個正方體的摺紙圖樣，這個立體圖形有 ______ 個大小相同的面。",
+    "options": [
+      "7",
+      "12",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q01.png"
+  },
+  {
+    "id": "5DA_L09_Q02",
+    "grade": 5,
+    "question": "下面的立體圖形是一個正方體，它有 __________________。",
+    "options": [
+      "4 個面、6 個頂點和 10 條稜",
+      "6 個面、6 個頂點和 12 條稜",
+      "6 個面、8 個頂點和 10 條稜",
+      "6 個面、8 個頂點和 12 條稜"
+    ],
+    "answer": "6 個面、8 個頂點和 12 條稜",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q02.png"
+  },
+  {
+    "id": "5DA_L09_Q03",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成正方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q03.png"
+  },
+  {
+    "id": "5DA_L09_Q04",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成正方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q04.png"
+  },
+  {
+    "id": "5DA_L09_Q05",
+    "grade": 5,
+    "question": "下圖的摺紙圖樣可以摺成一個 ( 正方體 / 長方體 )，這個立體圖形有 ______ 個面。",
+    "options": [
+      "正方體；6",
+      "正方體；8",
+      "長方體；6",
+      "長方體；8"
+    ],
+    "answer": "長方體；6",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q05.png"
+  },
+  {
+    "id": "5DA_L09_Q06",
+    "grade": 5,
+    "question": "下面的立體圖形是一個長方體，它有 ______ 個面。",
+    "options": [
+      "7",
+      "5",
+      "12",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q06.png"
+  },
+  {
+    "id": "5DA_L09_Q07",
+    "grade": 5,
+    "question": "下面的立體圖形是一個長方體，它有 ______ 個頂點。",
+    "options": [
+      "8",
+      "9",
+      "7",
+      "16"
+    ],
+    "answer": "8",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q07.png"
+  },
+  {
+    "id": "5DA_L09_Q08",
+    "grade": 5,
+    "question": "下面的立體圖形是一個長方體，它有 ______ 條稜。",
+    "options": [
+      "11",
+      "13",
+      "24",
+      "12"
+    ],
+    "answer": "12",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q08.png"
+  },
+  {
+    "id": "5DA_L09_Q09",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成長方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q09.png"
+  },
+  {
+    "id": "5DA_L09_Q10",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成長方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q10.png"
+  },
+  {
+    "id": "5DA_L09_Q11",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q11.png"
+  },
+  {
+    "id": "5DA_L09_Q12",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q12.png"
+  },
+  {
+    "id": "5DA_L09_Q13",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q13.png"
+  },
+  {
+    "id": "5DA_L09_Q14",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "unknown",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q14.png"
+  },
+  {
+    "id": "5DA_L10_Q01",
+    "grade": 5,
+    "question": "下面是一個球，O 點是球心，A、B 和 C 都是在球上的點。O 點和 B 點的距離是 ______ cm。",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L10_Q01.png"
+  },
+  {
+    "id": "5DA_L10_Q02",
+    "grade": 5,
+    "question": "下面是一個球，O 點是球心，A、B 和 C 都是在球上的點。O 點和 C 點的距離是 ______ cm。",
+    "options": [
+      "6",
+      "4",
+      "10",
+      "5"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L10_Q02.png"
+  },
+  {
+    "id": "5DA_L10_Q03",
+    "grade": 5,
+    "question": "下圖是球 P 和球 Q。把這兩個球切開，分別得出兩個截面。這兩個截面的形狀都是 ___________。",
+    "options": [
+      "正方形",
+      "圓柱",
+      "圓"
+    ],
+    "answer": "圓",
+    "unitKey": "unknown",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L10_Q03.png"
+  },
+  {
+    "id": "5DA_L10_Q04",
+    "grade": 5,
+    "question": "下圖是球 P 和球 Q。把這兩個球切開，分別得出兩個截面。這兩個截面的大小 ( 一定 / 不一定 ) 相同。",
+    "options": [
+      "一定",
+      "不一定"
+    ],
+    "answer": "不一定",
+    "unitKey": "unknown",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L10_Q04.png"
+  },
+  {
+    "id": "5DB_L12_Q01",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。0.27 × 10 = ______",
+    "options": [
+      "2.7",
+      "3.7",
+      "5.4",
+      "1.7"
+    ],
+    "answer": "2.7",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q01.png"
+  },
+  {
+    "id": "5DB_L12_Q02",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。1000 × 8.3 = ______",
+    "options": [
+      "83000",
+      "8300",
+      "830",
+      "4150"
+    ],
+    "answer": "8300",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q02.png"
+  },
+  {
+    "id": "5DB_L12_Q03",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。45 × 0.01 = ______",
+    "options": [
+      "0.045",
+      "1.045",
+      "0.0225",
+      "0.09"
+    ],
+    "answer": "0.045",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q03.png"
+  },
+  {
+    "id": "5DB_L12_Q04",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。0.001 × 94 = ______",
+    "options": [
+      "0.188",
+      "0.094",
+      "0.047",
+      "1.094"
+    ],
+    "answer": "0.094",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q04.png"
+  },
+  {
+    "id": "5DB_L12_Q05",
+    "grade": 5,
+    "question": "4.3 米 = ______ 厘米",
+    "options": [
+      "43",
+      "215",
+      "4300",
+      "430"
+    ],
+    "answer": "430",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L12_Q06",
+    "grade": 5,
+    "question": "0.075 升 = ______ 毫升",
+    "options": [
+      "74",
+      "76",
+      "150",
+      "75"
+    ],
+    "answer": "75",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L12_Q07",
+    "grade": 5,
+    "question": "1.9 cm = ______ mm",
+    "options": [
+      "20",
+      "19",
+      "38",
+      "18"
+    ],
+    "answer": "19",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L12_Q08",
+    "grade": 5,
+    "question": "2.62 kg = ______ g",
+    "options": [
+      "1310",
+      "2620",
+      "262",
+      "26200"
+    ],
+    "answer": "2620",
+    "unitKey": "unknown",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L13_Q01",
+    "grade": 5,
+    "question": "0.8 × 4 = ______",
+    "options": [
+      "6.4",
+      "3.2",
+      "4.2",
+      "2.2"
+    ],
+    "answer": "3.2",
+    "unitKey": "unknown",
+    "topic": "小數乘法（一）",
+    "source": "第二版 5 下 B 單元四 第 13 課 小數乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L13_Q02",
+    "grade": 5,
+    "question": "1.39 × 5 = ______",
+    "options": [
+      "13.9",
+      "7.95",
+      "5.95",
+      "6.95"
+    ],
+    "answer": "6.95",
+    "unitKey": "unknown",
+    "topic": "小數乘法（一）",
+    "source": "第二版 5 下 B 單元四 第 13 課 小數乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q01",
+    "grade": 5,
+    "question": "0.7 × 0.5 = ______",
+    "options": [
+      "0.175",
+      "0.35",
+      "1.35",
+      "0.7"
+    ],
+    "answer": "0.35",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q02",
+    "grade": 5,
+    "question": "6.43 × 0.02 = ______",
+    "options": [
+      "0.2572",
+      "0.0643",
+      "1.1286",
+      "0.1286"
+    ],
+    "answer": "0.1286",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q05",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後一個位。0.7 × 0.4 ≈ ______",
+    "options": [
+      "0.15",
+      "1.3",
+      "0.6",
+      "0.3"
+    ],
+    "answer": "0.3",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q05.png"
+  },
+  {
+    "id": "5DB_L14_Q06",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後一個位。2.06 × 5.3 ≈ ______",
+    "options": [
+      "10.9",
+      "21.8",
+      "11.9",
+      "9.9"
+    ],
+    "answer": "10.9",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q06.png"
+  },
+  {
+    "id": "5DB_L14_Q07",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後兩個位。64.2 × 0.08 ≈ ______",
+    "options": [
+      "4.14",
+      "6.14",
+      "10.28",
+      "5.14"
+    ],
+    "answer": "5.14",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q07.png"
+  },
+  {
+    "id": "5DB_L14_Q08",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後兩個位。0.43 × 0.47 ≈ ______",
+    "options": [
+      "0.1",
+      "0.4",
+      "1.2",
+      "0.20"
+    ],
+    "answer": "0.20",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q08.png"
+  },
+  {
+    "id": "5DB_L14_Q09",
+    "grade": 5,
+    "question": "每瓶蘋果汁有 0.36 升，3 瓶蘋果汁有 ________ 升。",
+    "options": [
+      "0.08",
+      "2.08",
+      "1.08",
+      "2.16"
+    ],
+    "answer": "1.08",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q10",
+    "grade": 5,
+    "question": "媽媽買了下面的甜筒 9 個，共需付 ________ 元。",
+    "options": [
+      "66.5",
+      "135",
+      "67.5",
+      "68.5"
+    ],
+    "answer": "67.5",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q10.png"
+  },
+  {
+    "id": "5DB_L14_Q11",
+    "grade": 5,
+    "question": "一包麪粉重 1.45 公斤。做一個千層蛋糕需用麪粉 0.2 包，即需用麪粉 _______ 公斤。",
+    "options": [
+      "0.58",
+      "1.29",
+      "0.145",
+      "0.29"
+    ],
+    "answer": "0.29",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q12",
+    "grade": 5,
+    "question": "綠色絲帶長 2.8 米，橙色絲帶的長度是綠色絲帶的 1.7 倍。橙色絲帶長 _______ 米。",
+    "options": [
+      "5.76",
+      "4.76",
+      "9.52",
+      "3.76"
+    ],
+    "answer": "4.76",
+    "unitKey": "unknown",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L15_Q03",
+    "grade": 5,
+    "question": "氣球 A 內氣體的體積比氣球 B 內的氣體 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "大",
+    "unitKey": "unknown",
+    "topic": "體積的認識",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L15_Q03.png"
+  },
+  {
+    "id": "5DB_L15_Q04",
+    "grade": 5,
+    "question": "杯子 C 內水的體積比杯子 D 內的水 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "小",
+    "unitKey": "unknown",
+    "topic": "體積的認識",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L15_Q04.png"
+  },
+  {
+    "id": "5DB_L16_Q01",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q01.png"
+  },
+  {
+    "id": "5DB_L16_Q02",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "8",
+      "6",
+      "14",
+      "7"
+    ],
+    "answer": "7",
+    "unitKey": "unknown",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q02.png"
+  },
+  {
+    "id": "5DB_L16_Q03",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "11",
+      "20",
+      "9",
+      "10"
+    ],
+    "answer": "10",
+    "unitKey": "unknown",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q03.png"
+  },
+  {
+    "id": "5DB_L16_Q04",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "18",
+      "9",
+      "8",
+      "10"
+    ],
+    "answer": "9",
+    "unitKey": "unknown",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q04.png"
+  },
+  {
+    "id": "5DB_L16_Q07",
+    "grade": 5,
+    "question": "記錄下圖中手提電話實物的體積時，選用哪個體積單位較合適？",
+    "options": [
+      "立方厘米",
+      "立方米"
+    ],
+    "answer": "立方厘米",
+    "unitKey": "unknown",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L16_Q07.png"
+  },
+  {
+    "id": "5DB_L16_Q08",
+    "grade": 5,
+    "question": "記錄下圖中渡輪實物的體積時，選用哪個體積單位較合適？",
+    "options": [
+      "立方厘米",
+      "立方米"
+    ],
+    "answer": "立方米",
+    "unitKey": "unknown",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L16_Q08.png"
+  },
+  {
+    "id": "5DB_L17_Q01",
+    "grade": 5,
+    "question": "以上長方體的體積是 ______ 立方厘米。",
+    "options": [
+      "48",
+      "49",
+      "96",
+      "47"
+    ],
+    "answer": "48",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q01.png"
+  },
+  {
+    "id": "5DB_L17_Q02",
+    "grade": 5,
+    "question": "以上長方體的體積是 ______ m³。",
+    "options": [
+      "33.6",
+      "336",
+      "3360",
+      "168"
+    ],
+    "answer": "336",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q02.png"
+  },
+  {
+    "id": "5DB_L17_Q03",
+    "grade": 5,
+    "question": "一個長方體長 9 cm，闊 4 cm 和高 5 cm。它的體積是 ______ cm³。",
+    "options": [
+      "1800",
+      "90",
+      "18",
+      "180"
+    ],
+    "answer": "180",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q03.png"
+  },
+  {
+    "id": "5DB_L17_Q04",
+    "grade": 5,
+    "question": "一個長方體貨櫃，長 6 米，闊 2.4 米和高 2.5 米。貨櫃的體積是 ______ 立方米。",
+    "options": [
+      "35",
+      "36",
+      "37",
+      "72"
+    ],
+    "answer": "36",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q04.png"
+  },
+  {
+    "id": "5DB_L17_Q05",
+    "grade": 5,
+    "question": "長方體 A 的長是 _______ cm。",
+    "options": [
+      "5",
+      "8",
+      "3",
+      "4"
+    ],
+    "answer": "4",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q05.png"
+  },
+  {
+    "id": "5DB_L17_Q06",
+    "grade": 5,
+    "question": "長方體 B 的闊是 _______ 米。",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "6"
+    ],
+    "answer": "3",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q06.png"
+  },
+  {
+    "id": "5DB_L17_Q07",
+    "grade": 5,
+    "question": "下面長方體的體積是 280 立方厘米，它的長是 _______ 厘米。",
+    "options": [
+      "6",
+      "14",
+      "8",
+      "7"
+    ],
+    "answer": "7",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q07.png"
+  },
+  {
+    "id": "5DB_L17_Q08",
+    "grade": 5,
+    "question": "上面長方體的體積是 504 m³，它的高是 ______ m。",
+    "options": [
+      "13",
+      "11",
+      "12",
+      "24"
+    ],
+    "answer": "12",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q08.png"
+  },
+  {
+    "id": "5DB_L17_Q09",
+    "grade": 5,
+    "question": "這個正方體的體積是 ______ m³。",
+    "options": [
+      "7",
+      "8",
+      "16",
+      "9"
+    ],
+    "answer": "8",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q09.png"
+  },
+  {
+    "id": "5DB_L17_Q10",
+    "grade": 5,
+    "question": "這個正方體的體積是 ______ 立方厘米。",
+    "options": [
+      "512",
+      "256",
+      "5120",
+      "51.2"
+    ],
+    "answer": "512",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q10.png"
+  },
+  {
+    "id": "5DB_L17_Q11",
+    "grade": 5,
+    "question": "一個正方體的邊長是 3 米，正方體的體積是 _______ 立方米。",
+    "options": [
+      "28",
+      "26",
+      "54",
+      "27"
+    ],
+    "answer": "27",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L17_Q12",
+    "grade": 5,
+    "question": "一個正方體盒子的邊長是 10 cm，盒子的體積是 ______ cm³。",
+    "options": [
+      "100",
+      "10000",
+      "1000",
+      "500"
+    ],
+    "answer": "1000",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q12.png"
+  },
+  {
+    "id": "5DB_L17_Q13",
+    "grade": 5,
+    "question": "梓樂用 2 個大小相同的正方體拼砌出一個長方體，如上圖所示。長方體的體積是 ______ cm³。",
+    "options": [
+      "1000",
+      "20000",
+      "200",
+      "2000"
+    ],
+    "answer": "2000",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q13.png"
+  },
+  {
+    "id": "5DB_L17_Q14",
+    "grade": 5,
+    "question": "哥哥用 6 個大小相同的長方體紙盒砌出上圖，上圖的體積是 3000 cm³。如果每個紙盒長 10 cm，闊 10 cm，紙盒高 ______ cm。",
+    "options": [
+      "6",
+      "10",
+      "4",
+      "5"
+    ],
+    "answer": "5",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q14.png"
+  },
+  {
+    "id": "5DB_L17_Q15",
+    "grade": 5,
+    "question": "上面的長方體發泡膠剛好可切成 3 個大小相同的小長方體，每個小長方體的體積是 180 cm³。長方體發泡膠的長是 ______ cm。",
+    "options": [
+      "19",
+      "36",
+      "18",
+      "17"
+    ],
+    "answer": "18",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q15.png"
+  },
+  {
+    "id": "5DB_L17_Q16",
+    "grade": 5,
+    "question": "工人把一塊體積是 48 cm³ 的長方體鐵條沿虛線切割，切去一個邊長是 2 cm 的正方體。餘下部分的體積是 ______ cm³。",
+    "options": [
+      "39",
+      "41",
+      "40",
+      "80"
+    ],
+    "answer": "40",
+    "unitKey": "unknown",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q16.png"
+  },
+  {
+    "id": "5DB_L18_Q01",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ cm³。",
+    "options": [
+      "864",
+      "432",
+      "8640",
+      "86.4"
+    ],
+    "answer": "864",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q01.png"
+  },
+  {
+    "id": "5DB_L18_Q02",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ m³。",
+    "options": [
+      "150",
+      "750",
+      "15000",
+      "1500"
+    ],
+    "answer": "1500",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q02.png"
+  },
+  {
+    "id": "5DB_L18_Q03",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ m³。",
+    "options": [
+      "60",
+      "120",
+      "12",
+      "1200"
+    ],
+    "answer": "120",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q03.png"
+  },
+  {
+    "id": "5DB_L18_Q04",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ cm³。",
+    "options": [
+      "45",
+      "46",
+      "47",
+      "92"
+    ],
+    "answer": "46",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q04.png"
+  },
+  {
+    "id": "5DB_L18_Q05",
+    "grade": 5,
+    "question": "佩琳用上面的摺紙圖樣摺成一個正方體盒子，這個盒子的體積是 ______ cm³。",
+    "options": [
+      "2160",
+      "108",
+      "21.6",
+      "216"
+    ],
+    "answer": "216",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q05.png"
+  },
+  {
+    "id": "5DB_L18_Q06",
+    "grade": 5,
+    "question": "天宇用上面的摺紙圖樣摺成一個長方體紙盒，這個紙盒的體積是 ______ cm³。",
+    "options": [
+      "40",
+      "400",
+      "4000",
+      "200"
+    ],
+    "answer": "400",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q06.png"
+  },
+  {
+    "id": "5DB_L18_Q07",
+    "grade": 5,
+    "question": "一個正方體紙盒的邊長是 16 cm。這個紙盒內最多可放 _______ 粒邊長是 2 cm 的正方體膠粒。",
+    "options": [
+      "512",
+      "256",
+      "5120",
+      "51.2"
+    ],
+    "answer": "512",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q07.png"
+  },
+  {
+    "id": "5DB_L18_Q08",
+    "grade": 5,
+    "question": "下圖是一個長方體盒子，這個盒子內最多可放 _______ 粒邊長 3 cm 的正方體朱古力。",
+    "options": [
+      "12",
+      "7",
+      "6",
+      "5"
+    ],
+    "answer": "6",
+    "unitKey": "unknown",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q08.png"
+  },
+  {
+    "id": "5DB_L19_Q03",
+    "grade": 5,
+    "question": "根據上圖，以下哪個是方程 P＋2＝5 的解？",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    "answer": "3",
+    "unitKey": "unknown",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L19_Q03.png"
+  },
+  {
+    "id": "5DB_L19_Q04",
+    "grade": 5,
+    "question": "根據上圖，以下哪個是方程 x－5＝12 的解？",
+    "options": [
+      "5",
+      "7",
+      "12",
+      "17"
+    ],
+    "answer": "17",
+    "unitKey": "unknown",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L19_Q04.png"
+  },
+  {
+    "id": "5DB_L21_Q03",
+    "grade": 5,
+    "question": "解方程 3e＋12＝24。e＝？",
+    "options": [
+      "4",
+      "3",
+      "8",
+      "5"
+    ],
+    "answer": "4",
+    "unitKey": "unknown",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q03.png"
+  },
+  {
+    "id": "5DB_L21_Q04",
+    "grade": 5,
+    "question": "解方程 5m－16＝44。m＝？",
+    "options": [
+      "12",
+      "11",
+      "24",
+      "13"
+    ],
+    "answer": "12",
+    "unitKey": "unknown",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q04.png"
+  },
+  {
+    "id": "5DB_L21_Q07",
+    "grade": 5,
+    "question": "解以下方程。9＋m／4＝13",
+    "options": [
+      "15",
+      "32",
+      "16",
+      "17"
+    ],
+    "answer": "16",
+    "unitKey": "unknown",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q07.png"
+  },
+  {
+    "id": "5DB_L21_Q08",
+    "grade": 5,
+    "question": "解方程 B／6－5＝13。B＝？",
+    "options": [
+      "1080",
+      "10.8",
+      "54",
+      "108"
+    ],
+    "answer": "108",
+    "unitKey": "unknown",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q08.png"
+  },
+  {
+    "id": "5DB_L21_Q09",
+    "grade": 5,
+    "question": "一筒薯片原來售 R 元，買 2 筒共可便宜 4 元。林小姐買薯片 2 筒，用了 20 元。R 的值是多少？",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "24"
+    ],
+    "answer": "12",
+    "unitKey": "unknown",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L21_Q09.png"
+  },
+  {
+    "id": "5DB_L21_Q10",
+    "grade": 5,
+    "question": "禮謙有手工紙 t 張，其中 1／4 是藍色的。禮謙用了藍色手工紙 3 張後，還餘藍色手工紙 9 張。t 的值是多少？",
+    "options": [
+      "3",
+      "6",
+      "24",
+      "48"
+    ],
+    "answer": "48",
+    "unitKey": "unknown",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L21_Q10.png"
   }
 ];
