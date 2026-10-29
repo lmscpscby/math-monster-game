@@ -1581,15 +1581,30 @@
 
     <!-- LOBBY AVATAR PICKER（只影響大廳頂部，唔影響排行榜／戰鬥） -->
     <div id="avatar-picker-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="avatar-picker-title">
-        <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-pink-400/70 relative">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-pink-400/70 relative max-h-[92vh] overflow-y-auto">
             <button type="button" onclick="closeAvatarPicker()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="關閉"><i class="fa-solid fa-xmark text-2xl"></i></button>
             <div class="text-center pr-6">
                 <h3 id="avatar-picker-title" class="text-xl font-black text-pink-200 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-dragon"></i> 揀一個大廳頭像
                 </h3>
-                <p class="text-[10px] sm:text-xs text-slate-300 mt-1 leading-relaxed">只會顯示喺大廳頂部。排行榜同戰鬥畫面唔會轉。</p>
+                <p class="text-[10px] sm:text-xs text-slate-300 mt-1 leading-relaxed">只會顯示喺大廳頂部。排行榜同戰鬥畫面唔會轉。上傳會裁成正方形並壓縮。</p>
             </div>
-            <div id="avatar-picker-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 max-h-[60vh] overflow-y-auto p-1"></div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-pink-400/60 bg-slate-900 flex items-center justify-center">
+                    <img id="lobby-avatar-preview" alt="頭像預覽" class="hidden w-full h-full object-cover">
+                    <i id="lobby-avatar-preview-glyph" class="fa-solid fa-user-astronaut text-2xl text-pink-300"></i>
+                </div>
+                <p id="lobby-avatar-preview-note" class="text-[11px] text-slate-400 text-center">可揀預設獸，或上傳一張相</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-2">
+                <label for="lobby-avatar-file" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 border border-pink-400/40 text-pink-100 text-xs font-black cursor-pointer">
+                    <i class="fa-solid fa-upload"></i>
+                    <span>上傳頭像</span>
+                </label>
+                <input id="lobby-avatar-file" type="file" accept="image/jpeg,image/png,image/webp" class="hidden" onchange="onLobbyAvatarFileSelected(event)">
+                <button type="button" id="lobby-avatar-reset" onclick="resetLobbyAvatarToPreset()" class="hidden px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold">重設為預設</button>
+            </div>
+            <div id="avatar-picker-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 max-h-[42vh] overflow-y-auto p-1"></div>
             <button type="button" onclick="closeAvatarPicker()" class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-black rounded-xl text-xs border border-slate-600">
                 關閉
             </button>
@@ -2050,12 +2065,66 @@
             try { showSyncToast(message || '帳戶已重置，請重新註冊。'); } catch (e) {}
         }
 
+        /** 自訂圖 data URL 硬上限（同 Apps Script）。壓縮目標再低一截，等成份存檔 JSON 入到試算表儲存格。 */
+        var AVATAR_DATA_MAX_CHARS = 70000;
+        var AVATAR_DATA_TARGET_CHARS = 40000;
+        var AVATAR_PROFILE_JSON_MAX_CHARS = 49000;
+        var lobbyAvatarUploadSeq = 0;
+
+        function sanitizeAvatarData(value) {
+            if (typeof value !== 'string' || !value) return '';
+            if (value.length > AVATAR_DATA_MAX_CHARS || value.length < 32) return '';
+            if (!/^data:image\/(jpeg|jpg|png|webp);base64,/.test(value)) return '';
+            var comma = value.indexOf(',');
+            var payload = value.slice(comma + 1);
+            if (!payload || !/^[A-Za-z0-9+/]+={0,2}$/.test(payload)) return '';
+            var padAt = payload.indexOf('=');
+            if (padAt >= 0 && !/=+$/.test(payload.slice(padAt))) return '';
+            return value;
+        }
+
+        /**
+         * 大廳頭像顯示：有效 avatarData（data URL）優先；否則 avatarId 預設獸；否則空字串（呼叫方顯示圖示）。
+         * 只回傳已驗證 data URL 或 BEAST_IMAGES 入面嘅已知路徑，唔接受外鏈。
+         */
+        function headerAvatarSrc(user) {
+            if (!user || typeof user !== 'object') return '';
+            var data = sanitizeAvatarData(user.avatarData);
+            if (data) return data;
+            var preset = (typeof avatarPresetById === 'function') ? avatarPresetById(user.avatarId) : null;
+            if (preset && preset.src) return preset.src;
+            return '';
+        }
+
+        /**
+         * 將大廳頭像寫入 target。
+         * preferred 有該欄（包括空字串＝明確清除）就用 preferred；
+         * 欄位唔存在（舊存檔）先跟 fallback，避免舊雲端 JSON 冇 avatarData 時抹走另一邊已上傳嘅自訂頭像。
+         */
+        function applyResolvedAvatar(target, preferred, fallback) {
+            if (!target || typeof target !== 'object') return target;
+            var pref = preferred && typeof preferred === 'object' ? preferred : {};
+            var fall = fallback && typeof fallback === 'object' ? fallback : {};
+            if (Object.prototype.hasOwnProperty.call(pref, 'avatarId')) {
+                target.avatarId = canonicalAvatarId(pref.avatarId);
+            } else if (Object.prototype.hasOwnProperty.call(fall, 'avatarId')) {
+                target.avatarId = canonicalAvatarId(fall.avatarId);
+            }
+            if (Object.prototype.hasOwnProperty.call(pref, 'avatarData')) {
+                target.avatarData = sanitizeAvatarData(pref.avatarData);
+            } else if (Object.prototype.hasOwnProperty.call(fall, 'avatarData')) {
+                target.avatarData = sanitizeAvatarData(fall.avatarData);
+            }
+            return target;
+        }
+
         /**
          * 兩份存檔合併：
          * - 金幣／EXP包：以較新 updatedAt 為準（避免消費後被舊雲端 Math.max「回血」）；
          *   若雲端 stamp 較新但金幣同 EXP 都低過本機 → 當過期／中毒 stamp，經濟跟本機
          * - 積分：取較大（只升唔跌）；雲端 leaderboardEpoch 較高＝季節重置跟雲端
          * - 怪獸：按 id 保留較高等級／經驗
+         * - 大廳頭像：跟較新嗰邊（preferCloud 則跟雲端）；空字串當明確清除，缺欄先先保留另一邊
          * - preferCloudProgress／progressEpoch／起步雲端 vs 富本機：跟雲端（老師清戶後）
          * grantsGold／grantsExp：老師剛發放、已寫入 cloud 數值時唔好重複加；若合併選咗本機，就要補加。
          */
@@ -2093,9 +2162,9 @@
                     if (cloud.accountEpoch != null) baseCloud.accountEpoch = Math.max(0, Math.floor(Number(cloud.accountEpoch) || 0));
                 }
                 baseCloud.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
-                // 頭像：雲端有就跟雲端；雲端未有先留本機（舊存檔冇 avatarId 唔好清走）
-                applyResolvedAvatar(baseCloud, cloud, local);
+                // 頭像：雲端有就跟雲端；雲端未有先留本機（舊存檔冇欄唔好清走自訂圖）
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
+                applyResolvedAvatar(baseCloud, cloud, local);
                 stampUpdatedAt(baseCloud);
                 return baseCloud;
             }
@@ -2179,8 +2248,6 @@
             if (Math.floor(Number(a.expPacks) || 0) !== Math.floor(Number(b.expPacks) || 0)) return true;
             if (Math.floor(Number(a.rankScore) || 0) !== Math.floor(Number(b.rankScore) || 0)) return true;
             if (Math.floor(Number(a.leaderboardEpoch) || 0) !== Math.floor(Number(b.leaderboardEpoch) || 0)) return true;
-            // 只改頭像都要當進度有變，否則合併／存檔會當冇嘢發生
-            if (canonicalAvatarId(a.avatarId) !== canonicalAvatarId(b.avatarId)) return true;
             var am = Array.isArray(a.ownedMonsters) ? a.ownedMonsters : [];
             var bm = Array.isArray(b.ownedMonsters) ? b.ownedMonsters : [];
             if (am.length !== bm.length) return true;
@@ -2189,7 +2256,11 @@
                     return String(m.id) + ':' + Math.floor(Number(m.level) || 1) + ':' + Math.floor(Number(m.exp) || 0);
                 }).sort().join('|');
             }
-            return keyOf(am) !== keyOf(bm);
+            if (keyOf(am) !== keyOf(bm)) return true;
+            // 只改大廳頭像都要當有進度差，先會觸發雲端 save／合併提示
+            if (canonicalAvatarId(a.avatarId) !== canonicalAvatarId(b.avatarId)) return true;
+            if (sanitizeAvatarData(a.avatarData) !== sanitizeAvatarData(b.avatarData)) return true;
+            return false;
         }
 
 
@@ -2198,9 +2269,14 @@
             const p = Object.assign({}, user);
             delete p.password;
             delete p._pwd;
+            // 有欄先正規化再上傳：avatarData 空字串＝明確清除自訂圖；avatarId 只留預設短 id
             var canonAvatar = canonicalAvatarId(p.avatarId);
             if (canonAvatar) p.avatarId = canonAvatar;
+            else if (Object.prototype.hasOwnProperty.call(user, 'avatarId')) p.avatarId = '';
             else delete p.avatarId;
+            if (Object.prototype.hasOwnProperty.call(user, 'avatarData')) {
+                p.avatarData = sanitizeAvatarData(user.avatarData);
+            }
             return p;
         }
 
@@ -2256,6 +2332,7 @@
                 leaderboardEpoch: currentUser.leaderboardEpoch,
                 updatedAt: currentUser.updatedAt,
                 avatarId: currentUser.avatarId,
+                avatarData: currentUser.avatarData,
                 ownedMonsters: currentUser.ownedMonsters
             };
             var merged = mergeProgressProfiles(currentUser, profile, {
@@ -2319,6 +2396,7 @@
                     showSyncToast(grantToast);
                 }
             }
+            try { renderHeaderAvatar(); } catch (e) {}
             return changed;
         }
 
@@ -2538,26 +2616,23 @@
             return null;
         }
 
-        /** 優先用 primary 嘅合法頭像；冇先用 secondary。兩邊都冇就清走。 */
-        function applyResolvedAvatar(target, primary, secondary) {
-            if (!target || typeof target !== 'object') return target;
-            var id = canonicalAvatarId(primary && primary.avatarId) || canonicalAvatarId(secondary && secondary.avatarId) || '';
-            if (id) target.avatarId = id;
-            else delete target.avatarId;
-            return target;
-        }
-
         function renderHeaderAvatar() {
             var img = document.getElementById('header-avatar-img');
             var fallback = document.getElementById('header-avatar-fallback');
             var btn = document.getElementById('header-avatar-btn');
+            var src = currentUser ? headerAvatarSrc(currentUser) : '';
+            var custom = currentUser ? sanitizeAvatarData(currentUser.avatarData) : '';
             var preset = avatarPresetById(currentUser && currentUser.avatarId);
-            if (preset && img) {
-                img.src = preset.src;
-                img.alt = preset.name;
+            if (src && img) {
+                img.src = src;
+                img.alt = custom ? '大廳頭像' : (preset ? preset.name : '大廳頭像');
                 img.classList.remove('hidden');
                 if (fallback) fallback.classList.add('hidden');
-                if (btn) btn.title = '大廳頭像：' + preset.name + '（撳一下換頭像）';
+                if (btn) {
+                    if (custom) btn.title = '自訂大廳頭像（撳一下換頭像）';
+                    else if (preset) btn.title = '大廳頭像：' + preset.name + '（撳一下換頭像）';
+                    else btn.title = '撳一下換大廳頭像';
+                }
             } else {
                 if (img) {
                     img.classList.add('hidden');
@@ -2569,11 +2644,44 @@
             }
         }
 
+        function refreshLobbyAvatarModal() {
+            var preview = document.getElementById('lobby-avatar-preview');
+            var glyph = document.getElementById('lobby-avatar-preview-glyph');
+            var note = document.getElementById('lobby-avatar-preview-note');
+            var resetBtn = document.getElementById('lobby-avatar-reset');
+            var src = currentUser ? headerAvatarSrc(currentUser) : '';
+            var custom = currentUser ? sanitizeAvatarData(currentUser.avatarData) : '';
+            if (preview && glyph) {
+                if (src) {
+                    preview.src = src;
+                    preview.classList.remove('hidden');
+                    glyph.classList.add('hidden');
+                } else {
+                    preview.removeAttribute('src');
+                    preview.classList.add('hidden');
+                    glyph.classList.remove('hidden');
+                }
+            }
+            if (note) {
+                if (custom) note.textContent = '自訂頭像（已裁成正方形，約 ' + Math.max(1, Math.round(custom.length / 1024)) + ' KB）';
+                else if (currentUser && canonicalAvatarId(currentUser.avatarId)) {
+                    var preset = avatarPresetById(currentUser.avatarId);
+                    note.textContent = '預設：' + (preset ? preset.name : '怪獸');
+                } else note.textContent = '可揀預設獸，或上傳一張相';
+            }
+            if (resetBtn) {
+                if (custom) resetBtn.classList.remove('hidden');
+                else resetBtn.classList.add('hidden');
+            }
+            renderAvatarPickerGrid();
+        }
+
         function renderAvatarPickerGrid() {
             var grid = document.getElementById('avatar-picker-grid');
             if (!grid) return;
-            grid.innerHTML = '';
-            var current = canonicalAvatarId(currentUser && currentUser.avatarId);
+            grid.textContent = '';
+            var custom = currentUser ? sanitizeAvatarData(currentUser.avatarData) : '';
+            var current = custom ? '' : canonicalAvatarId(currentUser && currentUser.avatarId);
             AVATAR_PRESETS.forEach(function (preset) {
                 var btn = document.createElement('button');
                 btn.type = 'button';
@@ -2604,7 +2712,7 @@
                 } catch (e2) {}
                 return;
             }
-            renderAvatarPickerGrid();
+            refreshLobbyAvatarModal();
             var modal = document.getElementById('avatar-picker-modal');
             if (modal) modal.classList.remove('hidden');
         }
@@ -2618,15 +2726,159 @@
             if (!currentUser) return;
             var canon = canonicalAvatarId(id);
             if (!canon) return;
-            var changed = canonicalAvatarId(currentUser.avatarId) !== canon;
+            lobbyAvatarUploadSeq++;
+            var changed = canonicalAvatarId(currentUser.avatarId) !== canon || !!sanitizeAvatarData(currentUser.avatarData);
             currentUser.avatarId = canon;
+            // 揀預設即明確清走自訂圖（空字串），合併時唔好被舊 avatarData 救返
+            currentUser.avatarData = '';
             renderHeaderAvatar();
             closeAvatarPicker();
             if (!changed) return;
-            // 只改頭像都要走現有本機＋雲端存檔（profilesProgressDiffer 已把 avatarId 算進去）
             saveCurrentUserData();
             try { showSyncToast('大廳頭像已換成「' + (avatarPresetById(canon).name) + '」'); } catch (e) {}
             try { playSFX(784, 'triangle', 0.12); } catch (e2) {}
+        }
+
+        /**
+         * 上傳自訂頭像只寫 avatarData，保留 avatarId。
+         * 顯示優先用 avatarData；若資料無效或被雲端剔走，仍然退回 avatarId 預設獸。
+         * 揀預設獸會把 avatarData 設成空字串（明確清除）。
+         */
+        function applyCustomLobbyAvatar(dataUrl) {
+            if (!currentUser) return false;
+            var clean = sanitizeAvatarData(dataUrl);
+            if (!clean) {
+                showSyncToast('張相太大，壓縮後仍然超過上限，請換一張細啲嘅圖');
+                return false;
+            }
+            var trial = Object.assign({}, currentUser, { avatarData: clean });
+            var packed = '';
+            try { packed = JSON.stringify(profileForCloud(trial)); } catch (e) { packed = ''; }
+            if (!packed || packed.length > AVATAR_PROFILE_JSON_MAX_CHARS) {
+                showSyncToast('張相太大，壓縮後仍然超過上限，請換一張細啲嘅圖');
+                return false;
+            }
+            currentUser.avatarData = clean;
+            saveCurrentUserData();
+            refreshLobbyAvatarModal();
+            showSyncToast('已更新大廳頭像');
+            return true;
+        }
+
+        function resetLobbyAvatarToPreset() {
+            if (!currentUser) return;
+            if (!sanitizeAvatarData(currentUser.avatarData)) return;
+            lobbyAvatarUploadSeq++;
+            currentUser.avatarData = '';
+            saveCurrentUserData();
+            refreshLobbyAvatarModal();
+            showSyncToast('已重設為預設頭像');
+        }
+
+        function isAllowedAvatarFile(file) {
+            if (!file) return false;
+            var type = String(file.type || '').toLowerCase();
+            if (type === 'image/jpg') type = 'image/jpeg';
+            if (type === 'image/jpeg' || type === 'image/png' || type === 'image/webp') return true;
+            if (!type) return /\.(jpe?g|png|webp)$/i.test(String(file.name || ''));
+            return false;
+        }
+
+        function drawAvatarCover(img, size) {
+            var canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            var ctx = canvas.getContext('2d');
+            var sw = img.naturalWidth || img.width || 1;
+            var sh = img.naturalHeight || img.height || 1;
+            var scale = Math.max(size / sw, size / sh);
+            var dw = sw * scale;
+            var dh = sh * scale;
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, 0, size, size);
+            ctx.drawImage(img, (size - dw) / 2, (size - dh) / 2, dw, dh);
+            return canvas;
+        }
+
+        function compressAvatarToDataUrl(img) {
+            var sizes = [256, 128, 96, 64];
+            var qualities = [0.82, 0.7, 0.58, 0.46, 0.34, 0.24];
+            var best = '';
+            function consider(url) {
+                var clean = sanitizeAvatarData(url);
+                if (!clean) return;
+                if (!best || clean.length < best.length) best = clean;
+            }
+            for (var s = 0; s < sizes.length; s++) {
+                var canvas = drawAvatarCover(img, sizes[s]);
+                for (var q = 0; q < qualities.length; q++) {
+                    var url = '';
+                    try { url = canvas.toDataURL('image/jpeg', qualities[q]); } catch (e) { url = ''; }
+                    consider(url);
+                    if (best && best.length <= AVATAR_DATA_TARGET_CHARS) return best;
+                    if (!sanitizeAvatarData(url)) {
+                        try { url = canvas.toDataURL('image/webp', qualities[q]); } catch (e2) { url = ''; }
+                        consider(url);
+                        if (best && best.length <= AVATAR_DATA_TARGET_CHARS) return best;
+                    }
+                }
+            }
+            if (!(best && best.length <= AVATAR_DATA_MAX_CHARS)) {
+                var small = drawAvatarCover(img, 96);
+                try { consider(small.toDataURL('image/png')); } catch (e3) {}
+                try { consider(small.toDataURL('image/jpeg', 0.2)); } catch (e4) {}
+            }
+            if (best && best.length <= AVATAR_DATA_MAX_CHARS) return best;
+            return '';
+        }
+
+        function onLobbyAvatarFileSelected(ev) {
+            var input = ev && ev.target;
+            var file = input && input.files && input.files[0];
+            if (input) input.value = '';
+            if (!file) return;
+            if (!currentUser) {
+                showSyncToast('請先登入再換頭像');
+                return;
+            }
+            if (!isAllowedAvatarFile(file)) {
+                showSyncToast('只接受 JPG、PNG 或 WebP');
+                return;
+            }
+            if (file.size > 12 * 1024 * 1024) {
+                showSyncToast('檔案太大，請換一張細啲嘅圖');
+                return;
+            }
+            var seq = ++lobbyAvatarUploadSeq;
+            var note = document.getElementById('lobby-avatar-preview-note');
+            if (note) note.textContent = '裁緊同壓縮緊…';
+            var objUrl = '';
+            try { objUrl = URL.createObjectURL(file); } catch (e) { objUrl = ''; }
+            if (!objUrl) {
+                showSyncToast('讀唔到呢張圖，請換一張');
+                return;
+            }
+            var img = new Image();
+            img.onload = function () {
+                try { URL.revokeObjectURL(objUrl); } catch (e) {}
+                if (seq !== lobbyAvatarUploadSeq) return;
+                var dataUrl = '';
+                try { dataUrl = compressAvatarToDataUrl(img); } catch (err) { dataUrl = ''; }
+                if (seq !== lobbyAvatarUploadSeq) return;
+                if (!dataUrl) {
+                    showSyncToast('張相太大，壓縮後仍然超過上限，請換一張細啲嘅圖');
+                    refreshLobbyAvatarModal();
+                    return;
+                }
+                if (!applyCustomLobbyAvatar(dataUrl)) refreshLobbyAvatarModal();
+            };
+            img.onerror = function () {
+                try { URL.revokeObjectURL(objUrl); } catch (e) {}
+                if (seq !== lobbyAvatarUploadSeq) return;
+                showSyncToast('讀唔到呢張圖，請換一張');
+                refreshLobbyAvatarModal();
+            };
+            img.src = objUrl;
         }
 
         document.addEventListener('keydown', function (e) {
@@ -3557,6 +3809,9 @@
             var canonAvatar = canonicalAvatarId(currentUser.avatarId);
             if (canonAvatar) currentUser.avatarId = canonAvatar;
             else delete currentUser.avatarId;
+            if (Object.prototype.hasOwnProperty.call(currentUser, 'avatarData')) {
+                currentUser.avatarData = sanitizeAvatarData(currentUser.avatarData);
+            }
 
             if (passwordOpt) activePassword = passwordOpt;
             if (!activeUserKey && currentUser.nickname) activeUserKey = `user_${currentUser.nickname}`;
@@ -3594,6 +3849,7 @@
             document.getElementById('logout-btn').classList.remove('flex');
             document.getElementById('user-display-name').innerText = "未登入";
             document.getElementById('user-display-school').innerText = "訪客模式";
+            try { closeAvatarPicker(); } catch (e) {}
             try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
             updateAdminUiVisibility();
@@ -3638,6 +3894,7 @@
             document.getElementById('ranked-current-rank').innerText = getRankTitle(currentUser.rankScore);
             document.getElementById('ranked-user-grade-badge').innerText = `${gradeTextMap[userGrade]}專屬排位 (鎖定)`;
             document.getElementById('leaderboard-grade-display').innerText = `${gradeTextMap[userGrade]}榜單`;
+            try { renderHeaderAvatar(); } catch (e) {}
         }
 
         function getRankTitle(score) {

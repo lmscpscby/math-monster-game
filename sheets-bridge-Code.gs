@@ -12,6 +12,11 @@
  * 每次改 Code 後要「管理部署 → 編輯 → 新版本」
  * 賽季：專案時區 Asia/Hong_Kong，然後喺編輯器執行一次 installSeasonSettlementTrigger。
  * 結算會先寫「賽季結算」快照，再把獎勵加落 F／G／J，最後先將 rankScore 歸零並提高 leaderboardEpoch。
+ *
+ * 存檔 JSON 可含大廳頭像：
+ * - avatarId：預設獸短 id（英數底線，最長 40）
+ * - avatarData：data:image/(jpeg|jpg|png|webp);base64,... 最長 70000 字；唔符合就清成空字串
+ * 唔接受外鏈。試算表儲存格約 5 萬字，客戶端會再壓細，唔好存未壓縮原圖。
  */
 var SPREADSHEET_ID = '1O5b2ogfhia5Yso-5QY9c4eYtvDwu3WpYgUrxBoMjJY8';
 var OVERVIEW = '學生總覽';
@@ -40,7 +45,7 @@ function doGet() {
   return jsonOut({
     ok: true,
     service: 'math-monster-bridge',
-    features: ['report', 'account-sync', 'pending-grants', 'leaderboard', 'playerStats', 'season'],
+    features: ['report', 'account-sync', 'pending-grants', 'leaderboard', 'playerStats', 'season', 'lobby-avatar'],
     season: seasonPublicInfo_(new Date())
   });
 }
@@ -123,6 +128,42 @@ function findAccountRow(sheet, key) {
   return -1;
 }
 
+/**
+ * 大廳自訂頭像。只收 data:image/(jpeg|jpg|png|webp);base64, ；過長或唔係字串就清走。
+ * 外鏈、script、其他 mime 一律變空字串（明確清除，唔留壞資料）。
+ */
+function sanitizeAvatarDataValue(value) {
+  if (typeof value !== 'string' || !value) return '';
+  if (value.length > 70000 || value.length < 32) return '';
+  if (!/^data:image\/(jpeg|jpg|png|webp);base64,/.test(value)) return '';
+  var comma = value.indexOf(',');
+  var payload = value.slice(comma + 1);
+  if (!payload || !/^[A-Za-z0-9+/]+={0,2}$/.test(payload)) return '';
+  var padAt = payload.indexOf('=');
+  if (padAt >= 0 && !/=+$/.test(payload.slice(padAt))) return '';
+  return value;
+}
+
+/** 預設獸短 id。空字串＝冇預設；其他怪字元就清走。 */
+function sanitizeAvatarIdValue(id) {
+  if (typeof id !== 'string') return '';
+  if (!id) return '';
+  if (!/^[A-Za-z0-9_]{1,40}$/.test(id)) return '';
+  return id;
+}
+
+/** 有 avatarData／avatarId 先正規化，避免舊存檔被加空欄。 */
+function sanitizeProfileAvatarFields(profile) {
+  if (!profile || typeof profile !== 'object') return profile;
+  if (Object.prototype.hasOwnProperty.call(profile, 'avatarData')) {
+    profile.avatarData = sanitizeAvatarDataValue(profile.avatarData);
+  }
+  if (Object.prototype.hasOwnProperty.call(profile, 'avatarId')) {
+    profile.avatarId = sanitizeAvatarIdValue(profile.avatarId);
+  }
+  return profile;
+}
+
 function parseNonNegInt(v) {
   if (v === null || v === undefined || v === '') return 0;
   var n = Number(v);
@@ -142,6 +183,7 @@ function applyPendingGrants(sheet, row, profile, options) {
   options = options || {};
   var writeAlways = !!options.writeAlways;
   var p = profile && typeof profile === 'object' ? profile : {};
+  sanitizeProfileAvatarFields(p);
   var addGold = parseNonNegInt(sheet.getRange(row, 6).getValue());
   var addExp = parseNonNegInt(sheet.getRange(row, 7).getValue());
   var monsterRaw = String(sheet.getRange(row, COL_MONSTER).getValue() || '');
@@ -214,6 +256,7 @@ function accountRegisterUnlocked_(data) {
   var profile = data.profile || {};
   if (!key || !password) return jsonOut({ ok: false, error: 'missing_key_or_password' });
   if (!profile || typeof profile !== 'object') profile = {};
+  sanitizeProfileAvatarFields(profile);
 
   // 新戶若客戶端仲寫住舊賽季編號、又未有積分，直接加入而家進行中嘅賽季。
   var currentEp = seasonEpochAt_(new Date());
@@ -286,6 +329,7 @@ function accountSaveUnlocked_(data) {
   var password = String(data.password || '');
   var profile = data.profile || {};
   if (!key || !password) return jsonOut({ ok: false, error: 'missing_key_or_password' });
+  sanitizeProfileAvatarFields(profile);
 
   var sheet = accountsSheet();
   var row = findAccountRow(sheet, key);
