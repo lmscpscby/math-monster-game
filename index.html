@@ -50,6 +50,12 @@
             box-shadow: 0 12px 30px -5px rgba(236, 72, 153, 0.4);
         }
 
+        .avatar-preset-btn.is-selected {
+            border-color: rgba(244, 114, 182, 0.95);
+            box-shadow: 0 0 16px rgba(236, 72, 153, 0.5);
+            background: rgba(236, 72, 153, 0.16);
+        }
+
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -1006,10 +1012,12 @@
             </div>
 
             <div id="player-dashboard" class="flex flex-wrap items-center justify-end gap-2 sm:gap-3 min-w-0 flex-1 basis-full sm:basis-auto sm:flex-initial">
-                <div class="flex items-center space-x-2 bg-purple-950/60 px-3 py-1.5 rounded-xl border border-purple-500/30 min-w-0 max-w-[46vw] sm:max-w-[14rem]">
-                    <div class="w-8 h-8 shrink-0 rounded-lg bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold text-sm">
-                        <i class="fa-solid fa-user-astronaut"></i>
-                    </div>
+                <div class="flex items-center gap-1.5 bg-purple-950/60 pl-1.5 pr-2.5 py-1.5 rounded-xl border border-purple-500/30 min-w-0 max-w-[72vw] sm:max-w-[17rem]">
+                    <button type="button" id="header-avatar-btn" onclick="openAvatarPicker()" class="relative w-8 h-8 shrink-0 rounded-lg bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold text-sm overflow-hidden border border-pink-400/35 hover:border-pink-300 hover:bg-pink-500/30 transition-colors" title="撳一下換大廳頭像" aria-label="更換大廳頭像" aria-haspopup="dialog">
+                        <i id="header-avatar-fallback" class="fa-solid fa-user-astronaut"></i>
+                        <img id="header-avatar-img" alt="" class="hidden absolute inset-0 w-full h-full object-cover">
+                    </button>
+                    <button type="button" id="header-avatar-change-btn" onclick="openAvatarPicker()" class="shrink-0 px-1.5 py-1 rounded-lg bg-pink-500/15 hover:bg-pink-500/30 border border-pink-400/35 text-pink-200 text-[10px] font-black leading-none" title="更換大廳頭像" aria-haspopup="dialog">換頭像</button>
                     <div class="text-xs min-w-0">
                         <div id="user-display-name" class="font-bold text-slate-100 truncate">未登入</div>
                         <div id="user-display-school" class="text-[10px] text-pink-200/70 truncate hidden sm:block">訪客模式</div>
@@ -1551,6 +1559,23 @@
         </div>
     </div>
 
+    <!-- LOBBY AVATAR PICKER（只影響大廳頂部，唔影響排行榜／戰鬥） -->
+    <div id="avatar-picker-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="avatar-picker-title">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-pink-400/70 relative">
+            <button type="button" onclick="closeAvatarPicker()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="關閉"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <div class="text-center pr-6">
+                <h3 id="avatar-picker-title" class="text-xl font-black text-pink-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-dragon"></i> 揀一個大廳頭像
+                </h3>
+                <p class="text-[10px] sm:text-xs text-slate-300 mt-1 leading-relaxed">只會顯示喺大廳頂部。排行榜同戰鬥畫面唔會轉。</p>
+            </div>
+            <div id="avatar-picker-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 max-h-[60vh] overflow-y-auto p-1"></div>
+            <button type="button" onclick="closeAvatarPicker()" class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-black rounded-xl text-xs border border-slate-600">
+                關閉
+            </button>
+        </div>
+    </div>
+
     <!-- TEAM SELECTION MODAL -->
     <div id="team-select-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 hidden">
         <div class="glass-panel w-full max-w-2xl rounded-3xl p-6 space-y-4 border border-pink-500/30">
@@ -1926,6 +1951,8 @@
                     if (cloud.accountEpoch != null) baseCloud.accountEpoch = Math.max(0, Math.floor(Number(cloud.accountEpoch) || 0));
                 }
                 baseCloud.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
+                // 頭像：雲端有就跟雲端；雲端未有先留本機（舊存檔冇 avatarId 唔好清走）
+                applyResolvedAvatar(baseCloud, cloud, local);
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
                 stampUpdatedAt(baseCloud);
                 return baseCloud;
@@ -1990,6 +2017,7 @@
                 base.progressEpoch = Math.max(cloudEpProg, localEpProg);
             }
             base.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
+            applyResolvedAvatar(base, localNewer ? local : cloud, localNewer ? cloud : local);
             stampUpdatedAt(base);
             return base;
         }
@@ -2000,6 +2028,8 @@
             if (Math.floor(Number(a.expPacks) || 0) !== Math.floor(Number(b.expPacks) || 0)) return true;
             if (Math.floor(Number(a.rankScore) || 0) !== Math.floor(Number(b.rankScore) || 0)) return true;
             if (Math.floor(Number(a.leaderboardEpoch) || 0) !== Math.floor(Number(b.leaderboardEpoch) || 0)) return true;
+            // 只改頭像都要當進度有變，否則合併／存檔會當冇嘢發生
+            if (canonicalAvatarId(a.avatarId) !== canonicalAvatarId(b.avatarId)) return true;
             var am = Array.isArray(a.ownedMonsters) ? a.ownedMonsters : [];
             var bm = Array.isArray(b.ownedMonsters) ? b.ownedMonsters : [];
             if (am.length !== bm.length) return true;
@@ -2017,6 +2047,9 @@
             const p = Object.assign({}, user);
             delete p.password;
             delete p._pwd;
+            var canonAvatar = canonicalAvatarId(p.avatarId);
+            if (canonAvatar) p.avatarId = canonAvatar;
+            else delete p.avatarId;
             return p;
         }
 
@@ -2070,7 +2103,9 @@
                 expPacks: currentUser.expPacks,
                 rankScore: currentUser.rankScore,
                 leaderboardEpoch: currentUser.leaderboardEpoch,
-                updatedAt: currentUser.updatedAt
+                updatedAt: currentUser.updatedAt,
+                avatarId: currentUser.avatarId,
+                ownedMonsters: currentUser.ownedMonsters
             };
             var merged = mergeProgressProfiles(currentUser, profile, {
                 grantedGold: grantG,
@@ -2097,10 +2132,12 @@
             var packsBefore = Math.max(0, Math.floor(Number(before.expPacks) || 0));
             var goldAfter = Math.max(0, Math.floor(Number(merged.gold) || 0));
             var packsAfter = Math.max(0, Math.floor(Number(merged.expPacks) || 0));
-            // 唔好把金幣／EXP 下降當「較新」：保留原本 updatedAt，避免之後再被舊雲端蓋
-            if ((goldAfter < goldBefore || packsAfter < packsBefore) && before.updatedAt) {
+            var avatarChanged = canonicalAvatarId(before.avatarId) !== canonicalAvatarId(merged.avatarId);
+            // 唔好把金幣／EXP 下降當「較新」：保留原本 updatedAt，避免之後再被舊雲端蓋。
+            // 頭像有變就保留合併後時間戳，等只改頭像都會被當成更新寫入。
+            if (!avatarChanged && (goldAfter < goldBefore || packsAfter < packsBefore) && before.updatedAt) {
                 merged.updatedAt = before.updatedAt;
-            } else if (goldAfter === goldBefore && packsAfter === packsBefore && before.updatedAt) {
+            } else if (!avatarChanged && goldAfter === goldBefore && packsAfter === packsBefore && before.updatedAt) {
                 // 經濟無變：保留本機時間戳，唔因 merge 亂 stamp
                 merged.updatedAt = before.updatedAt;
             }
@@ -2112,6 +2149,9 @@
             });
             if (pwd) currentUser.password = pwd;
             if (nick) currentUser.nickname = nick;
+            var keptAvatar = canonicalAvatarId(merged.avatarId);
+            if (keptAvatar) currentUser.avatarId = keptAvatar;
+            else delete currentUser.avatarId;
             try { lastCloudProfile = Object.assign({}, profileForCloud(currentUser)); } catch (e) {}
             if (changed) {
                 try {
@@ -2282,6 +2322,145 @@
             holy_beast: 'assets/monsters/holy/holy_beast.png',
             holy_envoy: 'assets/monsters/holy/holy_envoy.png'
         };
+
+        // 大廳頭像預設（只用現有怪獸圖；avatarId 為短字串，對應 BEAST_IMAGES）
+        const AVATAR_PRESETS = [
+            { id: 'fire_baby', name: '火寶寶', imgKey: 'fire_baby' },
+            { id: 'fire_pig', name: '火豬', imgKey: 'fire_pig' },
+            { id: 'water_turtle', name: '水滴龜', imgKey: 'water_turtle' },
+            { id: 'water_lizard', name: '溪流蜥', imgKey: 'water_lizard' },
+            { id: 'grass_sprout', name: '萌芽獸', imgKey: 'grass_sprout' },
+            { id: 'grass_bud', name: '花蕾獸', imgKey: 'grass_bud' },
+            { id: 'thunder_dragon_baby', name: '雷電幼龍', imgKey: 'thunder_dragon_baby' },
+            { id: 'thunder_fox', name: '迅雷電狐', imgKey: 'thunder_fox' },
+            { id: 'fight_rookie', name: '菜鳥鬥士', imgKey: 'fight_rookie' },
+            { id: 'rock_pebble', name: '礫石幼崽', imgKey: 'rock_pebble' },
+            { id: 'psy_chick', name: '念力幼雛', imgKey: 'psy_chick' },
+            { id: 'holy_chick', name: '天使幼雛', imgKey: 'holy_chick' }
+        ].map(function (preset) {
+            return {
+                id: preset.id,
+                name: preset.name,
+                imgKey: preset.imgKey,
+                src: BEAST_IMAGES[preset.imgKey] || ''
+            };
+        }).filter(function (preset) { return !!preset.src; });
+
+        function canonicalAvatarId(id) {
+            var key = String(id == null ? '' : id).trim();
+            if (!key || key.length > 32 || !/^[a-z0-9_]+$/.test(key)) return '';
+            if (typeof AVATAR_PRESETS === 'undefined' || !AVATAR_PRESETS) return '';
+            for (var i = 0; i < AVATAR_PRESETS.length; i++) {
+                if (AVATAR_PRESETS[i] && AVATAR_PRESETS[i].id === key) return key;
+            }
+            return '';
+        }
+
+        function avatarPresetById(id) {
+            var key = canonicalAvatarId(id);
+            if (!key) return null;
+            for (var i = 0; i < AVATAR_PRESETS.length; i++) {
+                if (AVATAR_PRESETS[i].id === key) return AVATAR_PRESETS[i];
+            }
+            return null;
+        }
+
+        /** 優先用 primary 嘅合法頭像；冇先用 secondary。兩邊都冇就清走。 */
+        function applyResolvedAvatar(target, primary, secondary) {
+            if (!target || typeof target !== 'object') return target;
+            var id = canonicalAvatarId(primary && primary.avatarId) || canonicalAvatarId(secondary && secondary.avatarId) || '';
+            if (id) target.avatarId = id;
+            else delete target.avatarId;
+            return target;
+        }
+
+        function renderHeaderAvatar() {
+            var img = document.getElementById('header-avatar-img');
+            var fallback = document.getElementById('header-avatar-fallback');
+            var btn = document.getElementById('header-avatar-btn');
+            var preset = avatarPresetById(currentUser && currentUser.avatarId);
+            if (preset && img) {
+                img.src = preset.src;
+                img.alt = preset.name;
+                img.classList.remove('hidden');
+                if (fallback) fallback.classList.add('hidden');
+                if (btn) btn.title = '大廳頭像：' + preset.name + '（撳一下換頭像）';
+            } else {
+                if (img) {
+                    img.classList.add('hidden');
+                    img.removeAttribute('src');
+                    img.alt = '';
+                }
+                if (fallback) fallback.classList.remove('hidden');
+                if (btn) btn.title = currentUser ? '撳一下換大廳頭像' : '請先登入再換頭像';
+            }
+        }
+
+        function renderAvatarPickerGrid() {
+            var grid = document.getElementById('avatar-picker-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            var current = canonicalAvatarId(currentUser && currentUser.avatarId);
+            AVATAR_PRESETS.forEach(function (preset) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'avatar-preset-btn rounded-2xl border border-purple-500/30 bg-slate-950/70 p-1.5 hover:border-pink-400/70 transition-colors text-left';
+                btn.setAttribute('aria-pressed', preset.id === current ? 'true' : 'false');
+                btn.title = preset.name;
+                if (preset.id === current) btn.classList.add('is-selected');
+                var image = document.createElement('img');
+                image.src = preset.src;
+                image.alt = preset.name;
+                image.className = 'w-full aspect-square object-cover rounded-xl bg-slate-900';
+                var label = document.createElement('div');
+                label.className = 'mt-1 text-[10px] font-black text-center text-slate-100 truncate';
+                label.textContent = preset.name;
+                btn.appendChild(image);
+                btn.appendChild(label);
+                btn.addEventListener('click', function () { selectAvatarPreset(preset.id); });
+                grid.appendChild(btn);
+            });
+        }
+
+        function openAvatarPicker() {
+            if (!currentUser) {
+                try { showSyncToast('請先登入，再揀大廳頭像'); } catch (e) {}
+                try {
+                    var overlay = document.getElementById('auth-modal-overlay');
+                    if (overlay) overlay.classList.remove('hidden');
+                } catch (e2) {}
+                return;
+            }
+            renderAvatarPickerGrid();
+            var modal = document.getElementById('avatar-picker-modal');
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeAvatarPicker() {
+            var modal = document.getElementById('avatar-picker-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function selectAvatarPreset(id) {
+            if (!currentUser) return;
+            var canon = canonicalAvatarId(id);
+            if (!canon) return;
+            var changed = canonicalAvatarId(currentUser.avatarId) !== canon;
+            currentUser.avatarId = canon;
+            renderHeaderAvatar();
+            closeAvatarPicker();
+            if (!changed) return;
+            // 只改頭像都要走現有本機＋雲端存檔（profilesProgressDiffer 已把 avatarId 算進去）
+            saveCurrentUserData();
+            try { showSyncToast('大廳頭像已換成「' + (avatarPresetById(canon).name) + '」'); } catch (e) {}
+            try { playSFX(784, 'triangle', 0.12); } catch (e2) {}
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape') return;
+            var modal = document.getElementById('avatar-picker-modal');
+            if (modal && !modal.classList.contains('hidden')) closeAvatarPicker();
+        });
 
         const EVIL_BOSSES = [
             { id: 'boss_turtle', name: '深淵冥甲巨龜', element: 'water', imgKey: 'boss_turtle', hp: 200, atk: 40, def: 50, spd: 40 },
@@ -3179,6 +3358,9 @@
                 if (m.level > 40) m.level = 40;
                 if (m.exp === undefined) m.exp = 0;
             });
+            var canonAvatar = canonicalAvatarId(currentUser.avatarId);
+            if (canonAvatar) currentUser.avatarId = canonAvatar;
+            else delete currentUser.avatarId;
 
             if (passwordOpt) activePassword = passwordOpt;
             if (!activeUserKey && currentUser.nickname) activeUserKey = `user_${currentUser.nickname}`;
@@ -3216,6 +3398,7 @@
             document.getElementById('logout-btn').classList.remove('flex');
             document.getElementById('user-display-name').innerText = "未登入";
             document.getElementById('user-display-school').innerText = "訪客模式";
+            try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
             updateAdminUiVisibility();
             closeAdminStatsPanel();
@@ -3231,6 +3414,9 @@
             currentUser.gold = Math.floor(Number(currentUser.gold) || 0);
             currentUser.expPacks = Math.floor(Number(currentUser.expPacks) || 0);
             currentUser.rankScore = Math.floor(Number(currentUser.rankScore) || 0);
+            var canonAvatar = canonicalAvatarId(currentUser.avatarId);
+            if (canonAvatar) currentUser.avatarId = canonAvatar;
+            else delete currentUser.avatarId;
             const db = getUsersDatabase();
             db[`user_${currentUser.nickname}`] = currentUser;
             saveUsersDatabase(db);
@@ -3249,6 +3435,7 @@
             document.getElementById('user-gold').innerText = currentUser.gold;
             document.getElementById('user-exp-packs').innerText = currentUser.expPacks;
             document.getElementById('user-rank-score').innerText = currentUser.rankScore;
+            try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
 
             document.getElementById('ranked-current-score').innerText = currentUser.rankScore;
@@ -3267,6 +3454,7 @@
 
         window.onload = function() {
             document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
             const activeSessionNick = localStorage.getItem('math_monster_active_session');
             const db = getUsersDatabase();
