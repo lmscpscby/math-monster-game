@@ -1099,7 +1099,7 @@
                     </div>
                 </button>
 
-                <button onclick="switchView('ranked')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-purple-400">
+                <button onclick="switchView('ranked')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group min-h-48 h-auto border-l-4 border-l-purple-400">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-ranking-star"></i>
@@ -1109,6 +1109,7 @@
                     <div>
                         <h3 class="text-xl font-extrabold text-white group-hover:text-purple-300 transition-colors">排位賽模式</h3>
                         <p class="text-xs text-slate-300 mt-1">10LV(水) / 20LV(火) / 30LV(草) / 40LV(雷) 雙 BOSS 固定連戰！</p>
+                        <p id="home-season-line" class="text-[10px] text-amber-200 mt-1 font-bold">賽季載入中…</p>
                     </div>
                 </button>
 
@@ -1191,6 +1192,16 @@
                         <div id="admin-stats-by-class" class="space-y-1.5 max-h-48 overflow-y-auto text-xs"></div>
                     </div>
                 </div>
+                <div class="border-t border-rose-500/20 pt-4 space-y-3">
+                    <h4 class="text-xs font-black text-slate-300">排位賽季結算</h4>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／冠軍怪獸 id），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="adminPreviewSeason()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-100 text-xs font-bold">預覽今季頭10</button>
+                        <button type="button" onclick="adminSettleSeason()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-100 text-xs font-bold">結算已結束賽季</button>
+                    </div>
+                    <div id="admin-season-status" class="text-xs text-slate-300"></div>
+                    <div id="admin-season-preview" class="text-xs text-slate-200 space-y-2"></div>
+                </div>
             </div>
         </section>
 
@@ -1221,6 +1232,15 @@
                     <div id="ranked-current-score" class="text-3xl font-black text-amber-300 my-1">0</div>
                     <div id="ranked-current-rank" class="text-xs text-pink-300 font-bold">段位: 數理新秀</div>
                 </div>
+            </div>
+
+            <div id="season-banner" class="glass-panel p-4 sm:p-5 rounded-3xl border border-amber-400/40 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div class="min-w-0">
+                    <div class="text-[10px] font-black tracking-wide text-amber-200/80">排位賽季（香港時間）</div>
+                    <div id="season-epoch-label" class="text-xl font-black text-white mt-0.5">第 1 賽季</div>
+                    <div id="season-countdown" class="text-xs text-amber-100 mt-1 font-bold">距離結算 …</div>
+                </div>
+                <p id="season-reward-rules" class="text-[11px] sm:text-xs text-slate-200 leading-relaxed lg:max-w-xl lg:text-right"></p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -1619,6 +1639,128 @@
             return profile;
         }
 
+        // 與 sheets-bridge-Code.gs 賽季常數保持同步。
+        // 2026-10-26 00:00 Asia/Hong_Kong = 2026-10-25 16:00 UTC。
+        // epoch = 1 + floor((now - start) / 21 days)。
+        const SEASON_LENGTH_DAYS = 21;
+        const SEASON_START_UTC_MS = Date.UTC(2026, 9, 25, 16, 0, 0, 0);
+        const SEASON_MS = SEASON_LENGTH_DAYS * 24 * 60 * 60 * 1000;
+        const SEASON_REWARD_GOLD = [0, 3000, 1800, 1800, 800, 800, 800, 800, 800, 800, 800];
+        const SEASON_REWARD_EXP = [0, 40, 20, 20, 0, 0, 0, 0, 0, 0, 0];
+        const SEASON_REWARD_MONSTER_ID = 'season_kirin';
+        const DUPLICATE_MONSTER_EXP = 5;
+
+        let serverSeasonSkewMs = 0;
+        let serverSeasonInfo = null;
+        let seasonCountdownTimer = null;
+
+        function seasonEpochAt(nowMs) {
+            return 1 + Math.floor((Number(nowMs) - SEASON_START_UTC_MS) / SEASON_MS);
+        }
+
+        function seasonBoundsForEpoch(epoch) {
+            const start = SEASON_START_UTC_MS + (Math.floor(Number(epoch) || 1) - 1) * SEASON_MS;
+            return { startMs: start, endMs: start + SEASON_MS };
+        }
+
+        function currentClientSeasonEpoch() {
+            const ep = seasonEpochAt(Date.now());
+            return ep < 1 ? 1 : ep;
+        }
+
+        function seasonMonsterName(id) {
+            try {
+                if (typeof SEASON_LIMITED_BEASTS !== 'undefined' && Array.isArray(SEASON_LIMITED_BEASTS)) {
+                    const b = SEASON_LIMITED_BEASTS.find(function (x) { return x && x.id === id; });
+                    if (b && b.name) return b.name;
+                }
+            } catch (e) {}
+            if (id === 'season_kirin') return '賽季麒麟';
+            return id || '限定怪獸';
+        }
+
+        function seasonRewardRulesText() {
+            const m = seasonMonsterName(SEASON_REWARD_MONSTER_ID);
+            return '各年級分開計頭 10 名，每 ' + SEASON_LENGTH_DAYS + ' 日結算一次（香港時間）。'
+                + '第1名：' + SEASON_REWARD_GOLD[1] + ' 金幣 + ' + SEASON_REWARD_EXP[1] + ' EXP包 + 限定「' + m + '」'
+                + '（已擁有改發 ' + DUPLICATE_MONSTER_EXP + ' EXP包）。'
+                + '第2–3名：' + SEASON_REWARD_GOLD[2] + ' 金幣 + ' + SEASON_REWARD_EXP[2] + ' EXP包。'
+                + '第4–10名：' + SEASON_REWARD_GOLD[4] + ' 金幣。結算後積分歸零，下次登入領獎。';
+        }
+
+        function formatDurationMs(ms) {
+            ms = Math.max(0, Math.floor(Number(ms) || 0));
+            const total = Math.floor(ms / 1000);
+            const days = Math.floor(total / 86400);
+            const hours = Math.floor((total % 86400) / 3600);
+            const mins = Math.floor((total % 3600) / 60);
+            const secs = total % 60;
+            function pad(n) { return (n < 10 ? '0' : '') + n; }
+            return days + '日 ' + pad(hours) + ':' + pad(mins) + ':' + pad(secs);
+        }
+
+        function noteServerSeason(info) {
+            if (!info || !isFinite(Number(info.serverNowMs))) return;
+            serverSeasonInfo = info;
+            serverSeasonSkewMs = Number(info.serverNowMs) - Date.now();
+        }
+
+        function seasonNowMs() {
+            return Date.now() + (serverSeasonSkewMs || 0);
+        }
+
+        function describeGrantToast(meta) {
+            meta = meta || {};
+            const g = Math.max(0, Math.floor(Number(meta.grantedGold) || 0));
+            const x = Math.max(0, Math.floor(Number(meta.grantedExp) || 0));
+            const monsters = Array.isArray(meta.grantedMonsters) ? meta.grantedMonsters : [];
+            const converted = Array.isArray(meta.convertedMonsters) ? meta.convertedMonsters : [];
+            if (g <= 0 && x <= 0 && !monsters.length && !converted.length) return '';
+            const parts = [];
+            if (g > 0) parts.push('金幣 +' + g);
+            if (x > 0) parts.push('EXP包 +' + x);
+            if (monsters.length) parts.push('限定怪獸「' + monsters.map(seasonMonsterName).join('、') + '」');
+            if (converted.length) parts.push('已擁有「' + converted.map(seasonMonsterName).join('、') + '」改發 EXP包');
+            return '發放：' + parts.join('，');
+        }
+
+        function refreshSeasonBanner() {
+            const now = seasonNowMs();
+            let epoch = seasonEpochAt(now);
+            let bounds = seasonBoundsForEpoch(epoch < 1 ? 1 : epoch);
+            if (serverSeasonInfo && isFinite(Number(serverSeasonInfo.endMs)) && isFinite(Number(serverSeasonInfo.epoch))) {
+                epoch = Math.floor(Number(serverSeasonInfo.epoch));
+                bounds = {
+                    startMs: Number(serverSeasonInfo.startMs),
+                    endMs: Number(serverSeasonInfo.endMs)
+                };
+            }
+            const label = document.getElementById('season-epoch-label');
+            const countdown = document.getElementById('season-countdown');
+            const rules = document.getElementById('season-reward-rules');
+            const home = document.getElementById('home-season-line');
+            const rulesText = seasonRewardRulesText();
+            if (rules && rules.textContent !== rulesText) rules.textContent = rulesText;
+            let epochText = '';
+            let countText = '';
+            if (epoch < 1) {
+                epochText = '第 1 賽季未開始';
+                countText = '距離開賽 ' + formatDurationMs(bounds.startMs - now) + '（香港時間）';
+            } else {
+                epochText = '第 ' + epoch + ' 賽季';
+                countText = '距離結算 ' + formatDurationMs(bounds.endMs - now) + '（香港時間）';
+            }
+            if (label) label.textContent = epochText;
+            if (countdown) countdown.textContent = countText;
+            if (home) home.textContent = epochText + ' · ' + countText;
+        }
+
+        function startSeasonCountdown() {
+            refreshSeasonBanner();
+            if (seasonCountdownTimer) return;
+            seasonCountdownTimer = setInterval(refreshSeasonBanner, 1000);
+        }
+
         /** 香港時間（Asia/Hong_Kong）日期字串 YYYY-MM-DD；打卡重置用，唔跟瀏覽器本地時區 */
         function getHongKongDateString(dateObj) {
             var d = dateObj instanceof Date ? dateObj : new Date();
@@ -1932,7 +2074,16 @@
             }
 
             // 空雲端唔好蓋本機；空本機就用雲端（真正空白，唔包括起步檔）
+            // 賽季歸零後若雲端睇落空，仍要跟較高 leaderboardEpoch，避免本機舊分救返。
             if (isSparseProgressProfile(cloud) && !isSparseProgressProfile(local)) {
+                var sparseCloudEp = Math.max(0, Math.floor(Number(cloud.leaderboardEpoch) || 0));
+                var sparseLocalEp = Math.max(0, Math.floor(Number(local.leaderboardEpoch) || 0));
+                if (sparseCloudEp > sparseLocalEp) {
+                    local = Object.assign({}, local, {
+                        rankScore: Math.max(0, Math.floor(Number(cloud.rankScore) || 0)),
+                        leaderboardEpoch: sparseCloudEp
+                    });
+                }
                 cloud = {};
             }
             if (isSparseProgressProfile(local) && !isSparseProgressProfile(cloud)) {
@@ -2122,9 +2273,10 @@
                 try { updateUserDashboardUI(); } catch (e) {}
                 try { renderLeaderboard(); } catch (e) {}
                 try { renderMonsterCollection(); } catch (e) {}
-                if (grantG > 0 || grantX > 0) {
-                    try { console.log('[老師發放] +金幣', grantG, '+EXP包', grantX); } catch (e) {}
-                    showSyncToast('老師發放：金幣 +' + grantG + '，EXP包 +' + grantX);
+                var grantToast = describeGrantToast(meta || {});
+                if (grantToast) {
+                    try { console.log('[發放]', grantToast); } catch (e) {}
+                    showSyncToast(grantToast);
                 }
             }
             return changed;
@@ -2177,6 +2329,8 @@
                         mergeCloudProfileIntoCurrentUser(res.profile, res);
                     } else if (res && res.error === 'not_found') {
                         handleCloudAccountGone('帳戶已於雲端重置／刪除，請重新註冊。');
+                    } else if (res && res.error === 'busy') {
+                        setTimeout(function () { cloudSaveCurrentUserNow(); }, 1500);
                     }
                 });
             }
@@ -2280,8 +2434,27 @@
             holy_chick: 'assets/monsters/holy/holy_chick.png',
             holy_hunter: 'assets/monsters/holy/holy_hunter.png',
             holy_beast: 'assets/monsters/holy/holy_beast.png',
-            holy_envoy: 'assets/monsters/holy/holy_envoy.png'
+            holy_envoy: 'assets/monsters/holy/holy_envoy.png',
+            // 賽季限定只存 id。立繪暫用現有青龍圖，唔使用 dataURL。
+            season_kirin: 'assets/monsters/classic/青龍.jpg'
         };
+
+        const SEASON_LIMITED_BEASTS = [
+            {
+                id: 'season_kirin',
+                name: '賽季麒麟',
+                element: 'holy',
+                title: '賽季限定神獸',
+                color: '#fbbf24',
+                hp: 230,
+                atk: 118,
+                def: 96,
+                spd: 112,
+                skillText: '麒麟聖輝衝！',
+                imgKey: 'season_kirin',
+                desc: '各年級排位賽季第 1 名限定。已擁有時獎勵改為 EXP 包，唔會抽卡抽出。'
+            }
+        ];
 
         const EVIL_BOSSES = [
             { id: 'boss_turtle', name: '深淵冥甲巨龜', element: 'water', imgKey: 'boss_turtle', hp: 200, atk: 40, def: 50, spd: 40 },
@@ -2622,6 +2795,28 @@
                     skillText: '深淵重擊！',
                     imgKey: boss.imgKey,
                     desc: '守護關卡的極強魔王！'
+                };
+            }
+
+            const seasonal = (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).find(b => b.id === monsterId);
+            if (seasonal) {
+                const lvlFactor = 1 + (level - 1) * 0.12;
+                return {
+                    id: seasonal.id,
+                    name: seasonal.name,
+                    element: seasonal.element || 'holy',
+                    title: seasonal.title || '賽季限定',
+                    color: seasonal.color || '#fbbf24',
+                    isMythic: true,
+                    isLimited: true,
+                    level: level,
+                    hp: Math.floor(seasonal.hp * lvlFactor),
+                    atk: Math.floor(seasonal.atk * lvlFactor),
+                    def: Math.floor(seasonal.def * lvlFactor),
+                    spd: Math.floor(seasonal.spd * lvlFactor),
+                    skillText: seasonal.skillText || '賽季限定衝擊！',
+                    imgKey: seasonal.imgKey || seasonal.id,
+                    desc: seasonal.desc || '排位賽季冠軍限定'
                 };
             }
 
@@ -2971,7 +3166,7 @@
                 gold: 1000,
                 expPacks: 2,
                 rankScore: 0,
-                leaderboardEpoch: 1,
+                leaderboardEpoch: currentClientSeasonEpoch(),
                 updatedAt: new Date().toISOString(),
                 ownedMonsters: [
                     { id: 'fire_base', level: 1, exp: 0 },
@@ -3090,9 +3285,10 @@
                         saveUsersDatabase(db);
                         activePassword = password;
                         activeUserKey = userKey;
-                        if (g > 0 || x > 0) {
-                            errDiv.innerText = `登入成功！老師發放：金幣 +${g}，EXP包 +${x}`;
-                            showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
+                        const grantToast = describeGrantToast(res);
+                        if (grantToast) {
+                            errDiv.innerText = '登入成功！' + grantToast;
+                            showSyncToast(grantToast);
                         } else {
                             errDiv.innerText = differNote || '';
                             if (differNote) showSyncToast(differNote);
@@ -3267,6 +3463,7 @@
 
         window.onload = function() {
             document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            try { startSeasonCountdown(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
             const activeSessionNick = localStorage.getItem('math_monster_active_session');
             const db = getUsersDatabase();
@@ -3314,8 +3511,9 @@
                             activePassword = savedPwd;
                             activeUserKey = sessionKey;
                             loginUserSuccess(merged, savedPwd);
-                            if (g > 0 || x > 0) {
-                                try { showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x); } catch (e) {}
+                            const grantToast = describeGrantToast(res);
+                            if (grantToast) {
+                                try { showSyncToast(grantToast); } catch (e) {}
                             }
                             return;
                         }
@@ -3468,8 +3666,8 @@
 
                 const exists = currentUser.ownedMonsters.some(m => m.id === drawnItemData.id);
                 if (exists) {
-                    currentUser.expPacks += 5;
-                    convertedExpCount += 5;
+                    currentUser.expPacks += DUPLICATE_MONSTER_EXP;
+                    convertedExpCount += DUPLICATE_MONSTER_EXP;
                     drawnItemData.isDuplicate = true;
                 } else {
                     currentUser.ownedMonsters.push({
@@ -3508,7 +3706,7 @@
                     </div>
                     <div class="font-extrabold text-xs text-white mt-1">${item.name}</div>
                     ${item.isMythic ? '<span class="text-[10px] bg-amber-500/40 text-amber-200 font-bold px-2 py-0.5 rounded mt-1 shadow">✨ 山海經神獸</span>' : ''}
-                    ${item.isDuplicate ? '<span class="text-[10px] bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded mt-1">+5 EXP包 (重複)</span>' : '<span class="text-[10px] bg-pink-500/30 text-pink-200 font-bold px-2 py-0.5 rounded mt-1">NEW 新獲得</span>'}
+                    ${item.isDuplicate ? `<span class="text-[10px] bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded mt-1">+${DUPLICATE_MONSTER_EXP} EXP包 (重複)</span>` : '<span class="text-[10px] bg-pink-500/30 text-pink-200 font-bold px-2 py-0.5 rounded mt-1">NEW 新獲得</span>'}
                 `;
                 grid.appendChild(card);
             });
@@ -3539,7 +3737,9 @@
             const container = document.getElementById('monster-collection-grid');
             container.innerHTML = '';
 
-            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'];
+            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'].concat(
+                (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; })
+            );
 
             allList.forEach(mId => {
                 const owned = currentUser.ownedMonsters.find(om => om.id === mId);
@@ -3576,6 +3776,7 @@
                         <div class="font-black text-sm text-white text-center cursor-pointer" onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})">
                             ${runtimeData.name} <i class="fa-solid fa-magnifying-glass-plus text-xs text-amber-300 ml-1"></i>
                         </div>
+                        ${String(mId).indexOf('season_') === 0 ? '<div class="text-center text-[10px] text-amber-300 font-black mt-1">賽季限定</div>' : ''}
 
                         <div class="grid grid-cols-4 gap-1 my-2 bg-slate-900/90 p-1.5 rounded-2xl text-center text-[9px] font-mono border border-slate-800">
                             <div>
@@ -3626,7 +3827,7 @@
                                 return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="w-full py-2 bg-gradient-to-r ${can ? 'from-fuchsia-600 to-purple-600 hover:from-fuchsia-500 hover:to-purple-500 text-white' : 'from-slate-700 to-slate-800 text-slate-300'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
                             })()}
                         </div>
-                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">未解鎖 (祈願召喚獲得)</div>`}
+                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季第1名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
                 `;
                 container.appendChild(card);
             });
@@ -3951,6 +4152,7 @@
                     <div class="text-right">
                         <div class="font-black text-xs text-amber-300">${score} 分</div>
                         <div class="text-[9px] text-purple-200">${getRankTitle(score)}</div>
+                        ${score > 0 && idx < 10 ? '<div class="text-[9px] text-amber-200/90">季結有獎</div>' : ''}
                     </div>
                 `;
                 container.appendChild(item);
@@ -3980,11 +4182,14 @@
                     const data = await callBridge({ action: 'leaderboard', grade: targetGrade });
                     if (reqId !== leaderboardRequestId) return;
                     if (data && data.ok && Array.isArray(data.entries)) {
+                        if (data.season) noteServerSeason(data.season);
+                        refreshSeasonBanner();
                         paintLeaderboardEntries(container, data.entries);
                         if (statusEl) {
+                            const ep = data.season && data.season.epoch > 0 ? ` · 第 ${data.season.epoch} 賽季` : '';
                             statusEl.innerText = data.entries.length
-                                ? `全服同年級榜 · 共 ${data.entries.length} 人`
-                                : '全服同年級暫無紀錄';
+                                ? `全服同年級榜 · 共 ${data.entries.length} 人${ep}`
+                                : `全服同年級暫無紀錄${ep}`;
                         }
                         return;
                     }
@@ -4095,6 +4300,118 @@
                 if (statusEl) statusEl.innerText = '更新時間：' + new Date().toLocaleString('zh-HK', { timeZone: 'Asia/Hong_Kong' }) + '（香港時間）';
             } catch (err) {
                 if (statusEl) statusEl.innerText = '載入失敗：' + (err && err.message ? err.message : '未知錯誤') + '（請確認 Apps Script 已部署新版本）';
+            }
+        }
+
+        function formatSettleResult(data) {
+            if (!data) return '無回傳';
+            if (!data.ok) {
+                if (data.error === 'busy') return '結算進行中，請稍後再試。';
+                return '失敗：' + (data.error || '未知錯誤');
+            }
+            if (data.reason === 'season_in_progress') {
+                return '第 ' + data.currentEpoch + ' 賽季進行中，未到結算（香港時間每 21 日一次）。';
+            }
+            if (data.reason === 'already_settled' || !data.results || !data.results.length) {
+                return '已結算至最新完結賽季（而家係第 ' + data.currentEpoch + ' 賽季）。';
+            }
+            return data.results.map(function (r) {
+                return '賽季 ' + r.epoch + '：新發獎 ' + r.granted + ' 人，上榜 ' + r.winnerCount + ' 人，重置 ' + r.resetAccounts + ' 個帳戶';
+            }).join('；');
+        }
+
+        function renderSeasonPreview(data) {
+            const el = document.getElementById('admin-season-preview');
+            if (!el) return;
+            el.innerHTML = '';
+            const gradeTextMap = { 'G1':'小一', 'G2':'小二', 'G3':'小三', 'G4':'小四', 'G5':'小五', 'G6':'小六' };
+            const grades = (data && data.grades) || {};
+            ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'].forEach(function (g) {
+                const rows = Array.isArray(grades[g]) ? grades[g] : [];
+                const block = document.createElement('div');
+                block.className = 'bg-slate-900/60 border border-slate-700/60 rounded-xl px-3 py-2';
+                const title = document.createElement('div');
+                title.className = 'font-black text-amber-200 mb-1';
+                title.textContent = (gradeTextMap[g] || g) + '（' + rows.length + ' 人上榜）';
+                block.appendChild(title);
+                if (!rows.length) {
+                    const empty = document.createElement('div');
+                    empty.className = 'text-slate-500';
+                    empty.textContent = '暫無積分';
+                    block.appendChild(empty);
+                } else {
+                    rows.forEach(function (row) {
+                        const line = document.createElement('div');
+                        line.className = 'flex justify-between gap-2 py-0.5';
+                        const nick = String(row.nickname || '冒險者');
+                        const klass = String(row.className || '—');
+                        const prize = '金幣 ' + (row.gold || 0) + (row.exp ? ' · EXP ' + row.exp : '') + (row.monsterId ? ' · ' + seasonMonsterName(row.monsterId) : '');
+                        const left = document.createElement('span');
+                        left.textContent = row.rank + '. ' + nick + '（' + klass + '） ' + (row.rankScore || 0) + '分';
+                        const right = document.createElement('span');
+                        right.className = 'text-amber-100 shrink-0';
+                        right.textContent = prize;
+                        line.appendChild(left);
+                        line.appendChild(right);
+                        block.appendChild(line);
+                    });
+                }
+                el.appendChild(block);
+            });
+        }
+
+        async function adminPreviewSeason() {
+            const statusEl = document.getElementById('admin-season-status');
+            if (!currentUser || !currentUser.isAdmin) {
+                if (statusEl) statusEl.textContent = '需要管理員登入';
+                return;
+            }
+            if (!SHEET_REPORT_URL || !activePassword || !activeUserKey) {
+                if (statusEl) statusEl.textContent = '請重新登入管理員帳戶後再試';
+                return;
+            }
+            if (statusEl) statusEl.textContent = '正在讀取今季頭 10…';
+            try {
+                const data = await callBridge({
+                    action: 'seasonPreview',
+                    key: activeUserKey,
+                    password: activePassword
+                });
+                if (!data || !data.ok) throw new Error((data && data.error) || 'preview_failed');
+                if (data.season) noteServerSeason(data.season);
+                refreshSeasonBanner();
+                renderSeasonPreview(data);
+                if (statusEl) statusEl.textContent = '預覽第 ' + (data.previewEpoch || data.currentEpoch) + ' 賽季（未發獎、未歸零）';
+            } catch (err) {
+                if (statusEl) statusEl.textContent = '預覽失敗：' + (err && err.message ? err.message : '未知錯誤');
+            }
+        }
+
+        async function adminSettleSeason() {
+            const statusEl = document.getElementById('admin-season-status');
+            if (!currentUser || !currentUser.isAdmin) {
+                if (statusEl) statusEl.textContent = '需要管理員登入';
+                return;
+            }
+            if (!SHEET_REPORT_URL || !activePassword || !activeUserKey) {
+                if (statusEl) statusEl.textContent = '請重新登入管理員帳戶後再試';
+                return;
+            }
+            const ok = window.confirm('結算已結束的賽季？各年級頭 10 會發獎，舊賽季積分會歸零。可以再執行，不會重複發獎。');
+            if (!ok) return;
+            if (statusEl) statusEl.textContent = '正在結算…';
+            try {
+                const data = await callBridge({
+                    action: 'settleSeason',
+                    key: activeUserKey,
+                    password: activePassword
+                });
+                if (data && data.season) noteServerSeason(data.season);
+                refreshSeasonBanner();
+                if (statusEl) statusEl.textContent = formatSettleResult(data);
+                try { renderLeaderboard(); } catch (e) {}
+            } catch (err) {
+                if (statusEl) statusEl.textContent = '結算失敗：' + (err && err.message ? err.message : '未知錯誤') + '（請確認 Apps Script 已部署新版本）';
             }
         }
 
