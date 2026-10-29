@@ -1579,7 +1579,7 @@
         </div>
     </div>
 
-    <!-- LOBBY AVATAR PICKER（只影響大廳頂部，唔影響排行榜／戰鬥） -->
+    <!-- LOBBY AVATAR PICKER（大廳頂部同年級排行榜；唔影響戰鬥） -->
     <div id="avatar-picker-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="avatar-picker-title">
         <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-pink-400/70 relative max-h-[92vh] overflow-y-auto">
             <button type="button" onclick="closeAvatarPicker()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="關閉"><i class="fa-solid fa-xmark text-2xl"></i></button>
@@ -1587,7 +1587,7 @@
                 <h3 id="avatar-picker-title" class="text-xl font-black text-pink-200 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-dragon"></i> 揀一個大廳頭像
                 </h3>
-                <p class="text-[10px] sm:text-xs text-slate-300 mt-1 leading-relaxed">只會顯示喺大廳頂部。排行榜同戰鬥畫面唔會轉。上傳會裁成正方形並壓縮。</p>
+                <p class="text-[10px] sm:text-xs text-slate-300 mt-1 leading-relaxed">會顯示喺大廳頂部同年級排行榜。戰鬥畫面唔會轉。上傳會裁成正方形並壓縮。</p>
             </div>
             <div class="flex flex-col items-center gap-2">
                 <div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-pink-400/60 bg-slate-900 flex items-center justify-center">
@@ -2084,7 +2084,7 @@
         }
 
         /**
-         * 大廳頭像顯示：有效 avatarData（data URL）優先；否則 avatarId 預設獸；否則空字串（呼叫方顯示圖示）。
+         * 頭像顯示（大廳頂部、年級排行榜共用）：有效 avatarData（data URL）優先；否則 avatarId 預設獸；否則空字串（呼叫方顯示圖示）。
          * 只回傳已驗證 data URL 或 BEAST_IMAGES 入面嘅已知路徑，唔接受外鏈。
          */
         function headerAvatarSrc(user) {
@@ -4573,6 +4573,32 @@
 
         let leaderboardRequestId = 0;
 
+        /** 榜列頭像：同大廳（自訂圖 > 預設獸 > 太空人圖示）。32px 圓形，唔改排名。 */
+        function fillLeaderboardAvatar(host, user) {
+            host.textContent = '';
+            host.className = 'w-8 h-8 shrink-0 rounded-full overflow-hidden border border-pink-400/40 bg-pink-500/15 flex items-center justify-center';
+            host.setAttribute('aria-hidden', 'true');
+            var src = headerAvatarSrc(user);
+            if (!src) {
+                var icon = document.createElement('i');
+                icon.className = 'fa-solid fa-user-astronaut text-pink-300 text-[13px]';
+                host.appendChild(icon);
+                return;
+            }
+            var img = document.createElement('img');
+            img.alt = '';
+            img.className = 'w-full h-full object-cover';
+            img.addEventListener('error', function () {
+                img.remove();
+                if (host.querySelector('i')) return;
+                var fallback = document.createElement('i');
+                fallback.className = 'fa-solid fa-user-astronaut text-pink-300 text-[13px]';
+                host.appendChild(fallback);
+            });
+            img.src = src;
+            host.appendChild(img);
+        }
+
         function paintLeaderboardEntries(container, users) {
             container.innerHTML = '';
             if (!users || users.length === 0) {
@@ -4581,25 +4607,53 @@
             }
             users.forEach((u, idx) => {
                 const item = document.createElement('div');
-                item.className = `p-3 rounded-2xl border flex items-center justify-between ${idx === 0 ? 'bg-amber-500/20 border-amber-400/50' : idx === 1 ? 'bg-slate-300/20 border-slate-300/50' : idx === 2 ? 'bg-amber-700/20 border-amber-600/50' : 'bg-slate-900/60 border-slate-800'}`;
-                const nick = (u.nickname || '冒險者').replace(/[<>&]/g, '');
-                const school = (u.school || '個人學員').replace(/[<>&]/g, '');
-                const klass = (u.className || '—').replace(/[<>&]/g, '');
+                item.className = `p-3 rounded-2xl border flex items-center justify-between gap-3 ${idx === 0 ? 'bg-amber-500/20 border-amber-400/50' : idx === 1 ? 'bg-slate-300/20 border-slate-300/50' : idx === 2 ? 'bg-amber-700/20 border-amber-600/50' : 'bg-slate-900/60 border-slate-800'}`;
                 const score = Math.max(0, Math.floor(Number(u.rankScore) || 0));
-                item.innerHTML = `
-                    <div class="flex items-center space-x-3">
-                        <span class="w-6 font-black text-center text-sm ${idx === 0 ? 'text-amber-300 text-base' : 'text-slate-400'}">${idx + 1}</span>
-                        <div>
-                            <div class="font-extrabold text-xs text-white">${nick}</div>
-                            <div class="text-[10px] text-slate-400">${school} (${klass})</div>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <div class="font-black text-xs text-amber-300">${score} 分</div>
-                        <div class="text-[9px] text-purple-200">${getRankTitle(score)}</div>
-                        ${score > 0 && idx < 10 ? '<div class="text-[9px] text-amber-200/90">季結有獎</div>' : ''}
-                    </div>
-                `;
+
+                const left = document.createElement('div');
+                left.className = 'flex items-center gap-3 min-w-0';
+
+                const rank = document.createElement('span');
+                rank.className = `w-6 shrink-0 font-black text-center text-sm ${idx === 0 ? 'text-amber-300 text-base' : 'text-slate-400'}`;
+                rank.textContent = String(idx + 1);
+
+                const avatar = document.createElement('div');
+                fillLeaderboardAvatar(avatar, u);
+
+                const meta = document.createElement('div');
+                meta.className = 'min-w-0';
+                const nick = document.createElement('div');
+                nick.className = 'font-extrabold text-xs text-white truncate';
+                nick.textContent = u.nickname || '冒險者';
+                const sub = document.createElement('div');
+                sub.className = 'text-[10px] text-slate-400 truncate';
+                sub.textContent = (u.school || '個人學員') + ' (' + (u.className || '—') + ')';
+                meta.appendChild(nick);
+                meta.appendChild(sub);
+
+                left.appendChild(rank);
+                left.appendChild(avatar);
+                left.appendChild(meta);
+
+                const right = document.createElement('div');
+                right.className = 'text-right shrink-0';
+                const scoreEl = document.createElement('div');
+                scoreEl.className = 'font-black text-xs text-amber-300';
+                scoreEl.textContent = score + ' 分';
+                const titleEl = document.createElement('div');
+                titleEl.className = 'text-[9px] text-purple-200';
+                titleEl.textContent = getRankTitle(score);
+                right.appendChild(scoreEl);
+                right.appendChild(titleEl);
+                if (score > 0 && idx < 10) {
+                    const prize = document.createElement('div');
+                    prize.className = 'text-[9px] text-amber-200/90';
+                    prize.textContent = '季結有獎';
+                    right.appendChild(prize);
+                }
+
+                item.appendChild(left);
+                item.appendChild(right);
                 container.appendChild(item);
             });
         }

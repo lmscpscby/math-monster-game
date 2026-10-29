@@ -17,6 +17,7 @@
  * - avatarId：預設獸短 id（英數底線，最長 40）
  * - avatarData：data:image/(jpeg|jpg|png|webp);base64,... 最長 70000 字；唔符合就清成空字串
  * 唔接受外鏈。試算表儲存格約 5 萬字，客戶端會再壓細，唔好存未壓縮原圖。
+ * 年級排行榜會公開回傳已清洗嘅 avatarId／avatarData（冇就空字串），方便榜上顯示頭像。唔回傳密碼。
  */
 var SPREADSHEET_ID = '1O5b2ogfhia5Yso-5QY9c4eYtvDwu3WpYgUrxBoMjJY8';
 var OVERVIEW = '學生總覽';
@@ -45,7 +46,7 @@ function doGet() {
   return jsonOut({
     ok: true,
     service: 'math-monster-bridge',
-    features: ['report', 'account-sync', 'pending-grants', 'leaderboard', 'playerStats', 'season', 'lobby-avatar'],
+    features: ['report', 'account-sync', 'pending-grants', 'leaderboard', 'playerStats', 'season', 'lobby-avatar', 'leaderboard-avatar'],
     season: seasonPublicInfo_(new Date())
   });
 }
@@ -432,13 +433,24 @@ function parseGradeFromClass(className) {
   return 'G6';
 }
 
-/** 由帳戶 D 欄 JSON 抽出公開榜資料（唔回傳密碼雜湊） */
+/**
+ * 由帳戶 D 欄 JSON 抽出公開榜資料（唔回傳密碼雜湊）。
+ * avatarId／avatarData 經同一套清洗：外鏈、壞 data URL、非法 id 變空字串。
+ */
 function publicEntryFromProfile(displayName, profileJson, updatedAtCell) {
   var p = {};
   try { p = JSON.parse(String(profileJson || '{}')); } catch (e) { p = {}; }
-  if (!p || typeof p !== 'object') p = {};
+  if (!p || typeof p !== 'object' || Array.isArray(p)) p = {};
   var nickname = String(p.nickname || p.displayName || p.alias || displayName || '').trim();
   if (!nickname) nickname = String(displayName || '冒險者').trim() || '冒險者';
+  var avatarId = '';
+  var avatarData = '';
+  if (Object.prototype.hasOwnProperty.call(p, 'avatarId')) {
+    avatarId = sanitizeAvatarIdValue(p.avatarId);
+  }
+  if (Object.prototype.hasOwnProperty.call(p, 'avatarData')) {
+    avatarData = sanitizeAvatarDataValue(p.avatarData);
+  }
   return {
     nickname: nickname,
     school: String(p.school || ''),
@@ -446,13 +458,16 @@ function publicEntryFromProfile(displayName, profileJson, updatedAtCell) {
     classNo: p.classNo != null ? p.classNo : '',
     rankScore: Math.max(0, Math.floor(Number(p.rankScore) || 0)),
     updatedAt: String(p.updatedAt || updatedAtCell || ''),
-    grade: parseGradeFromClass(p.className || p.class || '')
+    grade: parseGradeFromClass(p.className || p.class || ''),
+    avatarId: avatarId,
+    avatarData: avatarData
   };
 }
 
 /**
- * 全服／年級排行榜（公開讀，只回暱稱／班／積分）
+ * 全服／年級排行榜（公開讀：暱稱／班／積分／已清洗大廳頭像）
  * POST { action:'leaderboard', grade:'G6' }  // grade 可選；空＝全部
+ * 排序仍然只睇積分，同分先用暱稱。頭像唔參與排名。
  */
 function leaderboardList(data) {
   var gradeFilter = String((data && data.grade) || '').trim().toUpperCase();

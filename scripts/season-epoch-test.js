@@ -139,5 +139,55 @@ assert(JSON.stringify(exp) === JSON.stringify(context.SEASON_REWARD_EXP), 'exp t
 assert(html.includes('assets/monsters/classic/青龍.jpg'), 'season art is a file path');
 assert(!html.includes("season_kirin: 'data:"), 'season art is not a dataURL');
 assert(html.includes('login-nickname'), 'nickname login remains');
+assert(html.includes('fillLeaderboardAvatar'), 'leaderboard rows paint an avatar');
+assert(html.includes('會顯示喺大廳頂部同年級排行榜'), 'picker copy says the grade board shows the avatar');
+
+const jpeg = 'data:image/jpeg;base64,abcdefghij0123456789ABCD';
+const pub = context.publicEntryFromProfile('顯示', JSON.stringify({
+  nickname: '新同學',
+  school: '梨木樹天主教小學',
+  className: '6B',
+  classNo: 3,
+  rankScore: 200,
+  password: 'secret',
+  _pwd: 'secret',
+  avatarId: 'fire_baby',
+  avatarData: jpeg
+}), '');
+assert(pub.nickname === '新同學' && pub.rankScore === 200 && pub.grade === 'G6', 'public entry keeps rank fields');
+assert(pub.className === '6B' && pub.school === '梨木樹天主教小學', 'public entry keeps class');
+assert(pub.avatarId === 'fire_baby', 'preset avatar id kept');
+assert(pub.avatarData === jpeg, 'custom avatar data kept');
+assert(pub.password === undefined && pub._pwd === undefined, 'password not on leaderboard entry');
+
+const bad = context.publicEntryFromProfile('x', JSON.stringify({
+  nickname: '壞',
+  className: '6A',
+  rankScore: 1,
+  avatarId: 'https://evil',
+  avatarData: 'https://evil.example/a.png'
+}), '');
+assert(bad.rankScore === 1, 'bad avatar does not change score');
+assert(bad.avatarId === '' && bad.avatarData === '', 'reject remote avatar id and url');
+
+const svg = 'data:image/svg+xml;base64,abcdefghij0123456789ABCD';
+const svgEntry = context.publicEntryFromProfile('x', JSON.stringify({
+  avatarId: 'not valid!',
+  avatarData: svg
+}), '');
+assert(svgEntry.avatarId === '' && svgEntry.avatarData === '', 'reject svg and illegal id');
+
+const missing = context.publicEntryFromProfile('無名', '{}', '');
+assert(missing.avatarId === '' && missing.avatarData === '' && missing.nickname === '無名', 'missing avatar fields are empty');
+assert(missing.rankScore === 0, 'missing score stays zero');
+
+const cleared = context.publicEntryFromProfile('清', JSON.stringify({
+  nickname: '清',
+  className: '5A',
+  rankScore: 40,
+  avatarId: '',
+  avatarData: ''
+}), '');
+assert(cleared.avatarId === '' && cleared.avatarData === '' && cleared.grade === 'G5' && cleared.rankScore === 40, 'explicit clear stays empty and rank is unchanged');
 
 if (!process.exitCode) console.log('season-epoch-test: ok');
