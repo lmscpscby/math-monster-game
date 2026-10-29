@@ -82802,5 +82802,5974 @@ window.WORD_QUESTION_BANK = [
     "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
     "kind": "multiple_choice",
     "image": null
+  },
+  {
+    "id": "4A_L01_Q01",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "14 × 20 = （ ）",
+    "options": [
+      "280",
+      "560",
+      "290",
+      "28"
+    ],
+    "answer": "280"
+  },
+  {
+    "id": "4A_L01_Q02",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "29 × 30 =（ ）",
+    "options": [
+      "870",
+      "869",
+      "8700",
+      "850"
+    ],
+    "answer": "870"
+  },
+  {
+    "id": "4A_L01_Q03",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "48 × 50 = （ ）",
+    "options": [
+      "2380",
+      "1200",
+      "2500",
+      "2400"
+    ],
+    "answer": "2400"
+  },
+  {
+    "id": "4A_L01_Q04",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "60 × 19 = （ ）",
+    "options": [
+      "1240",
+      "1150",
+      "1140",
+      "1139"
+    ],
+    "answer": "1140"
+  },
+  {
+    "id": "4A_L01_Q05",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "14 × 12 = （ ）",
+    "options": [
+      "168",
+      "178",
+      "1680",
+      "84"
+    ],
+    "answer": "168"
+  },
+  {
+    "id": "4A_L01_Q06",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "21 × 15 = （ ）",
+    "options": [
+      "31",
+      "415",
+      "158",
+      "315"
+    ],
+    "answer": "315"
+  },
+  {
+    "id": "4A_L01_Q07",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 20 × 50 = 1000",
+      "b. 19 × 60 = 1140"
+    ],
+    "answer": "a. 20 × 50 = 1000",
+    "image": "q-images/4A_L01_Q07_a.png"
+  },
+  {
+    "id": "4A_L01_Q08",
+    "grade": 4,
+    "unitKey": "multiplication_1",
+    "source": "第二版 4 上 A 單元一 第 1 課 乘法（一）",
+    "topic": "4A L01 乘法（一）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 20 × 60 = 1200",
+      "b. 20 × 70 = 1400"
+    ],
+    "answer": "b. 20 × 70 = 1400",
+    "image": "q-images/4A_L01_Q08_b.png"
+  },
+  {
+    "id": "4A_L02_Q01",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "160 × 20 = （ ）",
+    "options": [
+      "320",
+      "1600",
+      "3180",
+      "3200"
+    ],
+    "answer": "3200"
+  },
+  {
+    "id": "4A_L02_Q02",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "213 × 40 =（ ）",
+    "options": [
+      "85200",
+      "8520",
+      "8530",
+      "8519"
+    ],
+    "answer": "8520"
+  },
+  {
+    "id": "4A_L02_Q03",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "375 × 50 = （ ）",
+    "options": [
+      "18749",
+      "9375",
+      "18730",
+      "18750"
+    ],
+    "answer": "18750"
+  },
+  {
+    "id": "4A_L02_Q04",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "60 × 588 = （ ）",
+    "options": [
+      "35280",
+      "35380",
+      "352800",
+      "3528"
+    ],
+    "answer": "35280"
+  },
+  {
+    "id": "4A_L02_Q05",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "112 × 24 = （ ）",
+    "options": [
+      "2688",
+      "2698",
+      "5376",
+      "2687"
+    ],
+    "answer": "2688"
+  },
+  {
+    "id": "4A_L02_Q06",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "205 × 43 =（ ）",
+    "options": [
+      "8814",
+      "8815",
+      "8915",
+      "8795"
+    ],
+    "answer": "8815"
+  },
+  {
+    "id": "4A_L02_Q07",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 300 × 30 = 9000",
+      "b. 200 × 40 = 8000"
+    ],
+    "answer": "a. 300 × 30 = 9000",
+    "image": "q-images/4A_L02_Q07_a.png"
+  },
+  {
+    "id": "4A_L02_Q08",
+    "grade": 4,
+    "unitKey": "multiplication_2",
+    "source": "第二版 4 上 A 單元一 第 2 課 乘法（二）",
+    "topic": "4A L02 乘法（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 400 × 40 = 16000",
+      "b. 400 × 30 = 12000"
+    ],
+    "answer": "a. 400 × 40 = 16000",
+    "image": "q-images/4A_L02_Q08_a.png"
+  },
+  {
+    "id": "4A_L03_Q01",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "4 × 25 × 3 = （ ）",
+    "options": [
+      "600",
+      "300",
+      "3000",
+      "310"
+    ],
+    "answer": "300"
+  },
+  {
+    "id": "4A_L03_Q02",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "23 × 5 × 4 = （ ）",
+    "options": [
+      "920",
+      "460",
+      "230",
+      "459"
+    ],
+    "answer": "460"
+  },
+  {
+    "id": "4A_L03_Q03",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "20 × 79 × 5 = （ ）",
+    "options": [
+      "79000",
+      "790",
+      "7900",
+      "3950"
+    ],
+    "answer": "7900"
+  },
+  {
+    "id": "4A_L03_Q04",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "50 × 28 × 2 = （ ）",
+    "options": [
+      "2800",
+      "2799",
+      "5600",
+      "280"
+    ],
+    "answer": "2800"
+  },
+  {
+    "id": "4A_L03_Q05",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "每本筆記簿有 64 頁，30 本筆記簿共有 （ ） 頁。",
+    "options": [
+      "1930",
+      "1920",
+      "3840",
+      "2020"
+    ],
+    "answer": "1920"
+  },
+  {
+    "id": "4A_L03_Q06",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "每疊宣傳單張有 455 張，補習社派出宣傳單張 16 疊，共派出宣傳單張 （ ） 張。",
+    "options": [
+      "7279",
+      "7280",
+      "72800",
+      "7290"
+    ],
+    "answer": "7280"
+  },
+  {
+    "id": "4A_L03_Q07",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "小食店昨天售出燒賣 46 串，售出的魚蛋是燒賣的 21 倍。小食店昨天共售出魚蛋 （ ） 串。",
+    "options": [
+      "1932",
+      "976",
+      "97",
+      "966"
+    ],
+    "answer": "966"
+  },
+  {
+    "id": "4A_L03_Q08",
+    "grade": 4,
+    "unitKey": "multiplication_3",
+    "source": "第二版 4 上 A 單元一 第 3 課 乘法（三）",
+    "topic": "4A L03 乘法（三）",
+    "question": "德禾電影院昨天售出電影《心慌慌小企鵝》學生票 137 張，共收得 （ ）元。",
+    "options": [
+      "11625",
+      "5822",
+      "11645",
+      "116450"
+    ],
+    "answer": "11645",
+    "image": "q-images/4A_L03_Q08.png"
+  },
+  {
+    "id": "4A_L04_Q01",
+    "grade": 4,
+    "unitKey": "rhombus",
+    "source": "第二版 4 上 A 單元二 第 4 課 菱形",
+    "topic": "4A L04 菱形",
+    "question": "以下哪個是菱形？",
+    "options": [
+      "a. 橫放的長方形（淺灰填色）。",
+      "b. 向右傾斜的平行四邊形（上下邊較長，不是菱形）。",
+      "c. 正五邊形（淺灰填色）。",
+      "d. 尖角朝上的菱形（鑽石形，淺灰填色）。"
+    ],
+    "answer": "d. 尖角朝上的菱形（鑽石形，淺灰填色）。",
+    "image": "q-images/4A_L04_Q01_d.png"
+  },
+  {
+    "id": "4A_L04_Q02",
+    "grade": 4,
+    "unitKey": "rhombus",
+    "source": "第二版 4 上 A 單元二 第 4 課 菱形",
+    "topic": "4A L04 菱形",
+    "question": "以下哪個不是菱形？",
+    "options": [
+      "a. 橫放的菱形（左右較尖，淺灰填色）。",
+      "b. 向上的箭咀／凹四邊形（V 形頂，不是菱形）。",
+      "c. 尖角朝上的菱形（上下較尖，淺灰填色）。",
+      "d. 向右傾斜的菱形（四邊等長，左端較尖）。"
+    ],
+    "answer": "b. 向上的箭咀／凹四邊形（V 形頂，不是菱形）。",
+    "image": "q-images/4A_L04_Q02_b.png"
+  },
+  {
+    "id": "4A_L04_Q03",
+    "grade": 4,
+    "unitKey": "rhombus",
+    "source": "第二版 4 上 A 單元二 第 4 課 菱形",
+    "topic": "4A L04 菱形",
+    "question": "看看下面的菱形，不用直尺量度，BC 長 （ ） cm。",
+    "options": [
+      "4",
+      "5",
+      "50",
+      "105"
+    ],
+    "answer": "5",
+    "image": "q-images/4A_L04_Q03.png"
+  },
+  {
+    "id": "4A_L04_Q04",
+    "grade": 4,
+    "unitKey": "rhombus",
+    "source": "第二版 4 上 A 單元二 第 4 課 菱形",
+    "topic": "4A L04 菱形",
+    "question": "看看下面的菱形，AD 和 （ ） 互相平行。",
+    "options": [
+      "BC",
+      "（無法計算）",
+      "1",
+      "0"
+    ],
+    "answer": "BC",
+    "image": "q-images/4A_L04_Q04.png"
+  },
+  {
+    "id": "4A_L05_Q01",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪些平面圖形是正方形的一種？",
+    "options": [
+      "a. 旋轉的正方形（四邊等長、四角直角，淺灰填色，圖內標…",
+      "b. 等腰梯形（上底較短，圖內標示 B）。",
+      "c. 旋轉的長方形（鄰邊不等、四角直角，不是正方形，圖內…",
+      "d. 左上角被斜切的五邊形（淺灰填色，圖內標示 D）。",
+      "e. 圓角長方形（四角圓滑，圖內標示 E）。",
+      "f. 正放的正方形（四邊等長、四角直角，淺灰填色，圖內標…"
+    ],
+    "answer": "a. 旋轉的正方形（四邊等長、四角直角，淺灰填色，圖內標…",
+    "image": "q-images/4A_L05_Q01_a.png"
+  },
+  {
+    "id": "4A_L05_Q02",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪些平面圖形是長方形的一種？",
+    "options": [
+      "a. 旋轉的正方形（四邊等長、四角直角，淺灰填色，圖內標…",
+      "b. 等腰梯形（上底較短，圖內標示 B）。",
+      "c. 旋轉的長方形（鄰邊不等、四角直角，不是正方形，圖內…",
+      "d. 左上角被斜切的五邊形（淺灰填色，圖內標示 D）。",
+      "e. 圓角長方形（四角圓滑，圖內標示 E）。",
+      "f. 正放的正方形（四邊等長、四角直角，淺灰填色，圖內標…"
+    ],
+    "answer": "a. 旋轉的正方形（四邊等長、四角直角，淺灰填色，圖內標…",
+    "image": "q-images/4A_L05_Q02_a.png"
+  },
+  {
+    "id": "4A_L05_Q03",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪些四邊形是長方形的一種？",
+    "options": [
+      "a. 橫放的長方形（淺灰填色，四角直角）。",
+      "b. 等腰梯形（上底較短）。",
+      "c. 正方形（淺灰填色，四角直角）。",
+      "d. 向右傾斜的平行四邊形（鄰邊不等，不是長方形）。"
+    ],
+    "answer": "a. 橫放的長方形（淺灰填色，四角直角）。",
+    "image": "q-images/4A_L05_Q03_a.png"
+  },
+  {
+    "id": "4A_L05_Q04",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪些四邊形不是長方形的一種？",
+    "options": [
+      "a. 正方形（淺灰填色，四角直角）。",
+      "b. 扁長、向右傾斜的平行四邊形（鄰邊不等）。",
+      "c. 等腰梯形（上底較短）。",
+      "d. 尖角朝上的菱形（四邊等長，不是直角）。"
+    ],
+    "answer": "b. 扁長、向右傾斜的平行四邊形（鄰邊不等）。",
+    "image": "q-images/4A_L05_Q04_b.png"
+  },
+  {
+    "id": "4A_L05_Q05",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪個 / 些平面圖形是正方形的一種？",
+    "options": [
+      "a. 橫向菱形（左右較尖，四角不是直角，圖內標示 A）。",
+      "b. 圓角菱形（四角圓滑，圖內標示 B）。",
+      "c. 直放的長方形（高大於寬，四角直角，圖內標示 C）。",
+      "d. 上尖下寬的鳶形（鄰邊不等，圖內標示 D，不是菱形）。",
+      "e. 旋轉的正方形（四邊等長、四角直角，圖內標示 E）。",
+      "f. 向右傾斜的菱形（四邊等長，圖內標示 F）。"
+    ],
+    "answer": "e. 旋轉的正方形（四邊等長、四角直角，圖內標示 E）。",
+    "image": "q-images/4A_L05_Q05_e.png"
+  },
+  {
+    "id": "4A_L05_Q06",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪個 / 些平面圖形是菱形的一種？",
+    "options": [
+      "a. 橫向菱形（左右較尖，四角不是直角，圖內標示 A）。",
+      "b. 圓角菱形（四角圓滑，圖內標示 B）。",
+      "c. 直放的長方形（高大於寬，四角直角，圖內標示 C）。",
+      "d. 上尖下寬的鳶形（鄰邊不等，圖內標示 D，不是菱形）。",
+      "e. 旋轉的正方形（四邊等長、四角直角，圖內標示 E）。",
+      "f. 向右傾斜的菱形（四邊等長，圖內標示 F）。"
+    ],
+    "answer": "a. 橫向菱形（左右較尖，四角不是直角，圖內標示 A）。",
+    "image": "q-images/4A_L05_Q06_a.png"
+  },
+  {
+    "id": "4A_L05_Q07",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪個四邊形是菱形的一種？",
+    "options": [
+      "a. 橫放的長方形（淺灰填色）。",
+      "b. 向右傾斜的平行四邊形（鄰邊不等，不是菱形）。",
+      "c. 正方形（淺灰填色）。",
+      "d. 等腰梯形（上底較短）。"
+    ],
+    "answer": "c. 正方形（淺灰填色）。",
+    "image": "q-images/4A_L05_Q07_c.png"
+  },
+  {
+    "id": "4A_L05_Q08",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪個四邊形不是菱形的一種？",
+    "options": [
+      "a. 橫放的長方形（扁而長，不是菱形）。",
+      "b. 尖角朝上的菱形（四邊等長，不是直角）。",
+      "c. 正方形（淺灰填色）。",
+      "d. 向右傾斜的菱形（四邊等長）。"
+    ],
+    "answer": "a. 橫放的長方形（扁而長，不是菱形）。",
+    "image": "q-images/4A_L05_Q08_a.png"
+  },
+  {
+    "id": "4A_L05_Q09",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪些四邊形是平行四邊形的一種？",
+    "options": [
+      "a. 正方形（淺灰填色）。",
+      "b. 向右傾斜的平行四邊形（鄰邊不等）。",
+      "c. 橫放的長方形（淺灰填色）。",
+      "d. 斜放的梯形（對邊不平行，不是平行四邊形）。"
+    ],
+    "answer": "a. 正方形（淺灰填色）。",
+    "image": "q-images/4A_L05_Q09_a.png"
+  },
+  {
+    "id": "4A_L05_Q10",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "以下哪個四邊形不是平行四邊形的一種？",
+    "options": [
+      "a. 尖角朝上的菱形（淺灰填色）。",
+      "b. 等腰梯形（上底較短，不是平行四邊形）。",
+      "c. 正方形（淺灰填色）。",
+      "d. 向右傾斜的平行四邊形（鄰邊不等）。"
+    ],
+    "answer": "b. 等腰梯形（上底較短，不是平行四邊形）。",
+    "image": "q-images/4A_L05_Q10_b.png"
+  },
+  {
+    "id": "4A_L05_Q11",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "判斷句子是否正確。所有長方形皆是平行四邊形。",
+    "options": [
+      "a. 正確",
+      "b. 不正確"
+    ],
+    "answer": "a. 正確"
+  },
+  {
+    "id": "4A_L05_Q12",
+    "grade": 4,
+    "unitKey": "quadrilateral_relations",
+    "source": "第二版 4 上 A 單元二 第 5 課 四邊形之間的關係",
+    "topic": "4A L05 四邊形之間的關係",
+    "question": "判斷句子是否正確。所有菱形皆是平行四邊形。",
+    "options": [
+      "a. 正確",
+      "b. 不正確"
+    ],
+    "answer": "a. 正確"
+  },
+  {
+    "id": "4A_L06_Q01",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "28 ÷ 20 = （ ）",
+    "options": [
+      "1 ... 8、1...8",
+      "1",
+      "0",
+      "（無法計算）"
+    ],
+    "answer": "1 ... 8、1...8"
+  },
+  {
+    "id": "4A_L06_Q02",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "53 ÷ 10 = （ ）",
+    "options": [
+      "0",
+      "1",
+      "（無法計算）",
+      "5 ... 3、5...3"
+    ],
+    "answer": "5 ... 3、5...3"
+  },
+  {
+    "id": "4A_L06_Q03",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "74 ÷ 30 = （ ）",
+    "options": [
+      "（無法計算）",
+      "0",
+      "1",
+      "2 ... 14、2...14"
+    ],
+    "answer": "2 ... 14、2...14"
+  },
+  {
+    "id": "4A_L06_Q04",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "89 ÷ 40 = （ ）",
+    "options": [
+      "（無法計算）",
+      "1",
+      "0",
+      "2 ... 9、2...9"
+    ],
+    "answer": "2 ... 9、2...9"
+  },
+  {
+    "id": "4A_L06_Q05",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "選出正確的直式。",
+    "options": [
+      "a. 直式：除數 12、被除數 48，商 4，下面 48…",
+      "b. 直式：除數 12、被除數 48，商寫成 3，但下面…"
+    ],
+    "answer": "a. 直式：除數 12、被除數 48，商 4，下面 48…",
+    "image": "q-images/4A_L06_Q05_a.png"
+  },
+  {
+    "id": "4A_L06_Q06",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "選出正確的直式。",
+    "options": [
+      "a. 直式：除數 23、被除數 68，商 2，下面 46…",
+      "b. 直式：除數 23、被除數 68，商寫成 1，下面 …"
+    ],
+    "answer": "a. 直式：除數 23、被除數 68，商 2，下面 46…",
+    "image": "q-images/4A_L06_Q06_a.png"
+  },
+  {
+    "id": "4A_L06_Q07",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 93 ÷ 31 = ?；灰底「結果約是：90 ÷ …",
+      "b. 93 ÷ 31 = ?；灰底「結果約是：90 ÷ …"
+    ],
+    "answer": "b. 93 ÷ 31 = ?；灰底「結果約是：90 ÷ …",
+    "image": "q-images/4A_L06_Q07_b.png"
+  },
+  {
+    "id": "4A_L06_Q08",
+    "grade": 4,
+    "unitKey": "division_1",
+    "source": "第二版 4 上 A 單元三 第 6 課 除法（一）",
+    "topic": "4A L06 除法（一）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 77 ÷ 19 = ?；灰底「結果約是：80 ÷ …",
+      "b. 77 ÷ 19 = ?；灰底「結果約是：80 ÷ …"
+    ],
+    "answer": "a. 77 ÷ 19 = ?；灰底「結果約是：80 ÷ …",
+    "image": "q-images/4A_L06_Q08_a.png"
+  },
+  {
+    "id": "4A_L07_Q01",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "320 ÷ 40 = （ ）",
+    "options": [
+      "108",
+      "4",
+      "8",
+      "16"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "4A_L07_Q02",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "487 ÷ 53 = （ ）",
+    "options": [
+      "1",
+      "（無法計算）",
+      "9 … 10、9…10",
+      "0"
+    ],
+    "answer": "9 … 10、9…10"
+  },
+  {
+    "id": "4A_L07_Q03",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 102 ÷ 24 = ?；灰底「結果約是：100 …",
+      "b. 102 ÷ 24 = ?；灰底「結果約是：100 …"
+    ],
+    "answer": "a. 102 ÷ 24 = ?；灰底「結果約是：100 …",
+    "image": "q-images/4A_L07_Q03_a.png"
+  },
+  {
+    "id": "4A_L07_Q04",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 390 ÷ 77 = ?；灰底「結果約是：400 …",
+      "b. 390 ÷ 77 = ?；灰底「結果約是：400 …"
+    ],
+    "answer": "b. 390 ÷ 77 = ?；灰底「結果約是：400 …",
+    "image": "q-images/4A_L07_Q04_b.png"
+  },
+  {
+    "id": "4A_L07_Q05",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "900 ÷ 30 = （ ）",
+    "options": [
+      "40",
+      "30",
+      "3",
+      "10"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "4A_L07_Q06",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "832 ÷ 26 = （ ）",
+    "options": [
+      "32",
+      "31",
+      "3",
+      "320"
+    ],
+    "answer": "32"
+  },
+  {
+    "id": "4A_L07_Q07",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "427 ÷ 14 = （ ）",
+    "options": [
+      "（無法計算）",
+      "1",
+      "0",
+      "30 ... 7、30...7"
+    ],
+    "answer": "30 ... 7、30...7"
+  },
+  {
+    "id": "4A_L07_Q08",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "583 ÷ 24 = （ ）",
+    "options": [
+      "0",
+      "（無法計算）",
+      "24 ... 7、24....7",
+      "1"
+    ],
+    "answer": "24 ... 7、24....7"
+  },
+  {
+    "id": "4A_L07_Q09",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "媽媽用 96 元買了 16 盒售價相同的蘋果汁。每盒蘋果汁售 （ ） 元。",
+    "options": [
+      "6",
+      "14",
+      "60",
+      "16"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "4A_L07_Q10",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "林先生上班 22 天共用了車費 330 元，他每天的車費相同。他每天的車費是 （ ） 元。",
+    "options": [
+      "15",
+      "30",
+      "8",
+      "150"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "4A_L07_Q11",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "4B 班學生參觀文物展，全班學生購買門票共付了 700 元。4B 班有學生 （ ） 個。",
+    "options": [
+      "3",
+      "28",
+      "38",
+      "128"
+    ],
+    "answer": "28",
+    "image": "q-images/4A_L07_Q11.png"
+  },
+  {
+    "id": "4A_L07_Q12",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "520 粒藥丸每 30 粒裝成一瓶，共可裝成 （ ） 瓶，還餘藥丸 （ ） 粒。",
+    "options": [
+      "0",
+      "17 … 10、17…10",
+      "（無法計算）",
+      "1"
+    ],
+    "answer": "17 … 10、17…10"
+  },
+  {
+    "id": "4A_L07_Q13",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "老師把 86 張畫紙每 16 張分成一疊。如果老師把餘下的畫紙放入最後一疊，這疊有畫紙 （ ） 張。",
+    "options": [
+      "22",
+      "122",
+      "2",
+      "44"
+    ],
+    "answer": "22"
+  },
+  {
+    "id": "4A_L07_Q14",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "文具店有鉛筆 182 枝，店員把鉛筆平均分成 15 盒。如果店員把餘下的鉛筆放入最後一盒，這盒有鉛筆 （ ） 枝。",
+    "options": [
+      "114",
+      "1",
+      "14",
+      "140"
+    ],
+    "answer": "14"
+  },
+  {
+    "id": "4A_L07_Q15",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "玫瑰每枝售 18 元。黃先生有 200 元。黃先生最多可買玫瑰 11 枝。如果黃先生想多買 1 枝玫瑰，還欠 （ ） 元。",
+    "options": [
+      "16",
+      "2",
+      "160",
+      "8"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "4A_L07_Q16",
+    "grade": 4,
+    "unitKey": "division_2",
+    "source": "第二版 4 上 A 單元三 第 7 課 除法（二）",
+    "topic": "4A L07 除法（二）",
+    "question": "一箱復活蛋有 256 隻，店員把復活蛋每 24 隻包裝成一盒。最少需要盒子 11 個才可把全部復活蛋包裝好。如果店員想多包裝一盒，最少要添加復活蛋 （ ） 隻。",
+    "options": [
+      "4",
+      "108",
+      "18",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "4A_L08_Q01",
+    "grade": 4,
+    "unitKey": "mult_div_word",
+    "source": "第二版 4 上 A 單元三 第 8 課 乘除應用題",
+    "topic": "4A L08 乘除應用題",
+    "question": "劉老師購買 21 塊售價相同的膠擦，用了 126 元。每塊膠擦的售價是 （ ） 元。",
+    "options": [
+      "14",
+      "60",
+      "106",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "4A_L08_Q02",
+    "grade": 4,
+    "unitKey": "mult_div_word",
+    "source": "第二版 4 上 A 單元三 第 8 課 乘除應用題",
+    "topic": "4A L08 乘除應用題",
+    "question": "陳小姐有現金券 19 張，每張價值 120 元。她的現金券共價值 （ ） 元。",
+    "options": [
+      "2290",
+      "22800",
+      "2280",
+      "2260"
+    ],
+    "answer": "2280"
+  },
+  {
+    "id": "4A_L08_Q03",
+    "grade": 4,
+    "unitKey": "mult_div_word",
+    "source": "第二版 4 上 A 單元三 第 8 課 乘除應用題",
+    "topic": "4A L08 乘除應用題",
+    "question": "每瓶洗手液售 26 元，媽媽有 160 元，最多可買洗手液 （ ） 瓶。",
+    "options": [
+      "6",
+      "16",
+      "5",
+      "60"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "4A_L08_Q04",
+    "grade": 4,
+    "unitKey": "mult_div_word",
+    "source": "第二版 4 上 A 單元三 第 8 課 乘除應用題",
+    "topic": "4A L08 乘除應用題",
+    "question": "妹妹每天儲蓄 10 元，她最少要儲蓄 （ ） 天才有足夠的款項購買下面的音樂盒。",
+    "options": [
+      "1",
+      "9",
+      "100",
+      "10"
+    ],
+    "answer": "10",
+    "image": "q-images/4A_L08_Q04.png"
+  },
+  {
+    "id": "4A_L09_Q01",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "可以被 2 整除的數都是 （ ）。",
+    "options": [
+      "a. 奇數",
+      "b. 偶數"
+    ],
+    "answer": "b. 偶數"
+  },
+  {
+    "id": "4A_L09_Q02",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "可以被 2 整除的數中，個位數字都是 （ ）。",
+    "options": [
+      "a. 0",
+      "b. 1",
+      "c. 2",
+      "d. 3",
+      "e. 4",
+      "f. 5",
+      "g. 6",
+      "h. 7",
+      "i. 8",
+      "j. 9"
+    ],
+    "answer": "a. 0"
+  },
+  {
+    "id": "4A_L09_Q03",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "以下哪些數可以被 2 整除？",
+    "options": [
+      "a. 43",
+      "b. 126",
+      "c. 73",
+      "d. 98",
+      "e. 274"
+    ],
+    "answer": "b. 126"
+  },
+  {
+    "id": "4A_L09_Q04",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "以下哪些數不可以被 2 整除？",
+    "options": [
+      "a. 41",
+      "b. 28",
+      "c. 379",
+      "d. 95",
+      "e. 1154",
+      "f. 2047"
+    ],
+    "answer": "a. 41"
+  },
+  {
+    "id": "4A_L09_Q05",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "以下哪些數可以被 5 整除？",
+    "options": [
+      "a. 32",
+      "b. 45",
+      "c. 60",
+      "d. 113",
+      "e. 205"
+    ],
+    "answer": "b. 45"
+  },
+  {
+    "id": "4A_L09_Q06",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "以下哪些數可以被 10 整除？",
+    "options": [
+      "a. 16",
+      "b. 80",
+      "c. 99",
+      "d. 120",
+      "e. 200"
+    ],
+    "answer": "b. 80"
+  },
+  {
+    "id": "4A_L09_Q07",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "以下哪些數可以同時被 2 和 5 整除？",
+    "options": [
+      "a. 8",
+      "b. 25",
+      "c. 50",
+      "d. 98",
+      "e. 160"
+    ],
+    "answer": "c. 50"
+  },
+  {
+    "id": "4A_L09_Q08",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "以下哪些數可以同時被 5 和 10 整除？",
+    "options": [
+      "a. 5",
+      "b. 10",
+      "c. 85",
+      "d. 100",
+      "e. 370"
+    ],
+    "answer": "b. 10"
+  },
+  {
+    "id": "4A_L09_Q09",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "51 可以被 3 整除嗎？",
+    "options": [
+      "a. 可以",
+      "b. 不可以"
+    ],
+    "answer": "a. 可以"
+  },
+  {
+    "id": "4A_L09_Q10",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "76 可以被 3 整除嗎？",
+    "options": [
+      "a. 可以",
+      "b. 不可以"
+    ],
+    "answer": "b. 不可以"
+  },
+  {
+    "id": "4A_L09_Q11",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "129 可以被 3 整除嗎？",
+    "options": [
+      "a. 可以",
+      "b. 不可以"
+    ],
+    "answer": "a. 可以"
+  },
+  {
+    "id": "4A_L09_Q12",
+    "grade": 4,
+    "unitKey": "divisibility",
+    "source": "第二版 4 上 A 單元三 第 9 課 整除性",
+    "topic": "4A L09 整除性",
+    "question": "245 可以被 3 整除嗎？",
+    "options": [
+      "a. 可以",
+      "b. 不可以"
+    ],
+    "answer": "b. 不可以"
+  },
+  {
+    "id": "4B_L11_Q01",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "在東方和北方之間的方向是 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "a. 東北"
+  },
+  {
+    "id": "4B_L11_Q02",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "在南方和西方之間的方向是 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "d. 西南"
+  },
+  {
+    "id": "4B_L11_Q03",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "選出正確的方向指示。",
+    "options": [
+      "a. 正確的八方位圖：北箭咀向上。上北、右東、下南、左西…",
+      "b. 錯誤的方向圖：北箭咀向上，但左標東、右標西；左上與…"
+    ],
+    "answer": "a. 正確的八方位圖：北箭咀向上。上北、右東、下南、左西…",
+    "image": "q-images/4B_L11_Q03_a.png"
+  },
+  {
+    "id": "4B_L11_Q04",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "選出正確的方向指示。",
+    "options": [
+      "a. 錯誤的方向圖：北箭咀向右。左南、右北，但上標東、下…",
+      "b. 正確的方向圖（北箭咀向右，即標準方位順時針轉 90…"
+    ],
+    "answer": "b. 正確的方向圖（北箭咀向右，即標準方位順時針轉 90…",
+    "image": "q-images/4B_L11_Q04_b.png"
+  },
+  {
+    "id": "4B_L11_Q05",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "下圖中，詠心站在商場中庭，時裝店在詠心的 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "d. 西南",
+    "image": "q-images/4B_L11_Q05.png"
+  },
+  {
+    "id": "4B_L11_Q06",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "下圖中，詠心站在商場中庭，便利店在詠心的 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "a. 東北",
+    "image": "q-images/4B_L11_Q06.png"
+  },
+  {
+    "id": "4B_L11_Q07",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "根據下圖，日朗面向 （ ） 方。如果他向右轉 1 個直角，會面向（ ） 方。",
+    "options": [
+      "a. 西北；西南",
+      "b. 西北；東北",
+      "c. 東北；西北",
+      "d. 東北；東南"
+    ],
+    "answer": "b. 西北；東北",
+    "image": "q-images/4B_L11_Q07.png"
+  },
+  {
+    "id": "4B_L11_Q08",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "根據下圖，向晴面向 （ ） 方。如果她向左轉 2 個直角，會面向（ ） 方。",
+    "options": [
+      "a. 西南；西北",
+      "b. 西南；東北",
+      "c. 東南；西北",
+      "d. 東南；西南"
+    ],
+    "answer": "c. 東南；西北",
+    "image": "q-images/4B_L11_Q08.png"
+  },
+  {
+    "id": "4B_L11_Q09",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "根據下圖，瀑布在入口的 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "b. 西北",
+    "image": "q-images/4B_L11_Q09.png"
+  },
+  {
+    "id": "4B_L11_Q10",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "根據下圖，（ ） 在洗手間的西南方。",
+    "options": [
+      "a. 瀑布",
+      "b. 洗手間",
+      "c. 小食亭",
+      "d. 入口"
+    ],
+    "answer": "c. 小食亭",
+    "image": "q-images/4B_L11_Q10.png"
+  },
+  {
+    "id": "4B_L11_Q11",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "下面是渡假村的平面圖。由辦公室向南方走，到達泳池後，再向 （ ）方走，便可到達遊樂場。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "d. 西南",
+    "image": "q-images/4B_L11_Q11.png"
+  },
+  {
+    "id": "4B_L11_Q12",
+    "grade": 4,
+    "unitKey": "direction_1",
+    "source": "第二版 4 上 B 單元四 第 11 課 方向（一）",
+    "topic": "4B L11 方向（一）",
+    "question": "下面是渡假村的平面圖。王先生由營舍前往籃球場，他先向 （ ） 方走，到達辦公室後，再向 （ ） 方走，便可到達。",
+    "options": [
+      "a. 東北；東南",
+      "b. 東北；西南",
+      "c. 西北；東北",
+      "d. 西北；西南"
+    ],
+    "answer": "a. 東北；東南",
+    "image": "q-images/4B_L11_Q12.png"
+  },
+  {
+    "id": "4B_L12_Q01",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "根據指南針，選出正確的方向指示。",
+    "options": [
+      "a. 正確的指南針：北端（針咀）指向左方。左北、上東、右…",
+      "b. 錯誤的指南針：針咀仍指向左方且左方標北、右方標南，…"
+    ],
+    "answer": "a. 正確的指南針：北端（針咀）指向左方。左北、上東、右…",
+    "image": "q-images/4B_L12_Q01_a.png"
+  },
+  {
+    "id": "4B_L12_Q02",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "根據指南針，選出正確的方向指示。",
+    "options": [
+      "a. 錯誤的指南針：有重複標籤（上方與左方都是西南，右方…",
+      "b. 正確的指南針：北端指向右下方。右下北、下東北、左下…"
+    ],
+    "answer": "b. 正確的指南針：北端指向右下方。右下北、下東北、左下…",
+    "image": "q-images/4B_L12_Q02_b.png"
+  },
+  {
+    "id": "4B_L12_Q03",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "根據下圖，觀光塔在樂童的 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "a. 東北",
+    "image": "q-images/4B_L12_Q03.png"
+  },
+  {
+    "id": "4B_L12_Q04",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "根據下圖，小屋在子樂的 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "c. 東南",
+    "image": "q-images/4B_L12_Q04.png"
+  },
+  {
+    "id": "4B_L12_Q05",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "根據下圖，飛機場在寺廟的 （ ） 方。",
+    "options": [
+      "a. 東北",
+      "b. 西北",
+      "c. 東南",
+      "d. 西南"
+    ],
+    "answer": "b. 西北",
+    "image": "q-images/4B_L12_Q05.png"
+  },
+  {
+    "id": "4B_L12_Q06",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "根據下圖，（ ） 在碼頭的南方。",
+    "options": [
+      "a. 寺廟",
+      "b. 飛機場",
+      "c. 大橋",
+      "d. 碼頭"
+    ],
+    "answer": "b. 飛機場",
+    "image": "q-images/4B_L12_Q06.png"
+  },
+  {
+    "id": "4B_L12_Q07",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "以下哪個平面圖中，商場在醫院的西北方？",
+    "options": [
+      "a. 商場在醫院的下方（北向左下時，下方為西北）。圖中：…",
+      "b. 商場在醫院的上方（同一指南針下，上方不是西北）。布…"
+    ],
+    "answer": "a. 商場在醫院的下方（北向左下時，下方為西北）。圖中：…",
+    "image": "q-images/4B_L12_Q07_a.png"
+  },
+  {
+    "id": "4B_L12_Q08",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "下面是樂文家附近設施的平面圖。（ ） 在樂文家的西南方。",
+    "options": [
+      "a. 書店",
+      "b. 遊樂場",
+      "c. 醫院",
+      "d. 鐵路站"
+    ],
+    "answer": "c. 醫院",
+    "image": "q-images/4B_L12_Q08.png"
+  },
+  {
+    "id": "4B_L12_Q09",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "下面是芷穎家附近街道和設施的平面圖。由益振街 11 號走到 17 號，應向 （ ） 方走。",
+    "options": [
+      "a. 東南",
+      "b. 東北",
+      "c. 西南",
+      "d. 西北"
+    ],
+    "answer": "b. 東北",
+    "image": "q-images/4B_L12_Q09.png"
+  },
+  {
+    "id": "4B_L12_Q10",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "下面是芷穎家附近街道和設施的平面圖。芷穎現於下圖 × 的位置。她沿箭咀所示的方向走到學校，她應先向 （ ） 方走，到達路口後，向 （ ） 方一直走到下一個路…",
+    "options": [
+      "a. 東南；西南；東南",
+      "b. 東北；西北；東北",
+      "c. 西南；東南；西南",
+      "d. 西北；東北；西北"
+    ],
+    "answer": "a. 東南；西南；東南",
+    "image": "q-images/4B_L12_Q10.png"
+  },
+  {
+    "id": "4B_L12_Q11",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "下面是學校一樓的平面圖。李老師以最短的路線由露天操場到停車場，她應向 （ ） 方走。",
+    "options": [
+      "a. 東南",
+      "b. 東北",
+      "c. 西南",
+      "d. 西北"
+    ],
+    "answer": "d. 西北",
+    "image": "q-images/4B_L12_Q11.png"
+  },
+  {
+    "id": "4B_L12_Q12",
+    "grade": 4,
+    "unitKey": "direction_2",
+    "source": "第二版 4 上 B 單元四 第 12 課 方向（二）",
+    "topic": "4B L12 方向（二）",
+    "question": "下面是學校一樓的平面圖。永康由正門前往露天操場。他先向 （ ） 方走，到達 （ ） 後，再向 （ ） 方走，便可到達。",
+    "options": [
+      "a. 東南；校務處；東北",
+      "b. 南；校務處；東",
+      "c. 東；停車場；南",
+      "d. 西北；停車場；西南"
+    ],
+    "answer": "a. 東南；校務處；東北",
+    "image": "q-images/4B_L12_Q12.png"
+  },
+  {
+    "id": "4B_L13_Q01",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "選出 7 的最初 7 個倍數。",
+    "options": [
+      "a. 21",
+      "b. 56",
+      "c. 49",
+      "d. 17",
+      "e. 7",
+      "f. 28",
+      "g. 1",
+      "h. 14",
+      "i. 70",
+      "j. 27",
+      "k. 42",
+      "l. 35"
+    ],
+    "answer": "a. 21"
+  },
+  {
+    "id": "4B_L13_Q02",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "選出 50 以內，8 的倍數。",
+    "options": [
+      "a. 40",
+      "b. 8",
+      "c. 56",
+      "d. 80",
+      "e. 18",
+      "f. 32",
+      "g. 24",
+      "h. 38",
+      "i. 16",
+      "j. 48"
+    ],
+    "answer": "a. 40"
+  },
+  {
+    "id": "4B_L13_Q03",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "17 的第 4 個倍數是 （ ）。",
+    "options": [
+      "136",
+      "68",
+      "67",
+      "78"
+    ],
+    "answer": "68"
+  },
+  {
+    "id": "4B_L13_Q04",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "在 40 和 80 之間，12 的倍數是 （ ）。",
+    "options": [
+      "a. 24、48 和 60",
+      "b. 48、58 和 70",
+      "c. 48、60 和 72",
+      "d. 60、72 和 84"
+    ],
+    "answer": "c. 48、60 和 72"
+  },
+  {
+    "id": "4B_L13_Q05",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "下表中，塗了顏色的是 （ ） 的倍數。",
+    "options": [
+      "9",
+      "8",
+      "19",
+      "11"
+    ],
+    "answer": "9",
+    "image": "q-images/4B_L13_Q05.png"
+  },
+  {
+    "id": "4B_L13_Q06",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "下表中，9 的倍數排列成 （ ）。",
+    "options": [
+      "a. 直行",
+      "b. 橫行",
+      "c. 斜行"
+    ],
+    "answer": "c. 斜行",
+    "image": "q-images/4B_L13_Q06.png"
+  },
+  {
+    "id": "4B_L13_Q07",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "在 25 和 75 之間，9 的倍數是 （ ）。",
+    "options": [
+      "a. 25、35、45、55、65 和 70",
+      "b. 25、30、35、40、45 和 55",
+      "c. 27、36、45、54、63 和 72",
+      "d. 45、54、63、72、81 和 90"
+    ],
+    "answer": "c. 27、36、45、54、63 和 72",
+    "image": "q-images/4B_L13_Q07.png"
+  },
+  {
+    "id": "4B_L13_Q08",
+    "grade": 4,
+    "unitKey": "multiples",
+    "source": "第二版 4 上 B 單元五 第 13 課 倍數",
+    "topic": "4B L13 倍數",
+    "question": "100 以內，9 最大的倍數是 （ ）。",
+    "options": [
+      "109",
+      "98",
+      "99",
+      "79"
+    ],
+    "answer": "99",
+    "image": "q-images/4B_L13_Q08.png"
+  },
+  {
+    "id": "4B_L14_Q01",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "15 的所有因數是 （ ）。",
+    "options": [
+      "a. 1、2、3 和 15",
+      "b. 1、2、5 和 15",
+      "c. 1、3、5 和 15",
+      "d. 1、5、15 和 30"
+    ],
+    "answer": "c. 1、3、5 和 15"
+  },
+  {
+    "id": "4B_L14_Q02",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "28 的所有因數是 （ ）。",
+    "options": [
+      "a. 1、2、3、7、14 和 28",
+      "b. 1、2、3、8、14 和 28",
+      "c. 1、2、4、7、14 和 28",
+      "d. 1、2、4、8、14 和 28"
+    ],
+    "answer": "c. 1、2、4、7、14 和 28"
+  },
+  {
+    "id": "4B_L14_Q03",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "13 的所有因數是 （ ）。",
+    "options": [
+      "a. 1",
+      "b. 1 和 2",
+      "c. 1、2 和 13",
+      "d. 1 和 13"
+    ],
+    "answer": "d. 1 和 13"
+  },
+  {
+    "id": "4B_L14_Q04",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "6 是不是 34 的因數？",
+    "options": [
+      "a. 是",
+      "b. 不是"
+    ],
+    "answer": "b. 不是"
+  },
+  {
+    "id": "4B_L14_Q05",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "8 的所有因數是 （ ）。",
+    "options": [
+      "a. 8",
+      "b. 1 和 8",
+      "c. 1、2 和 8",
+      "d. 1、2、4 和 8"
+    ],
+    "answer": "d. 1、2、4 和 8"
+  },
+  {
+    "id": "4B_L14_Q06",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "50 的所有因數是 （ ）。",
+    "options": [
+      "a. 1、2、25 和 50",
+      "b. 1、2、5、10、25 和 50",
+      "c. 10、20、53、40 和 50",
+      "d. 50、100、150 和 200"
+    ],
+    "answer": "b. 1、2、5、10、25 和 50"
+  },
+  {
+    "id": "4B_L14_Q07",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "68 的所有因數是 （ ）。",
+    "options": [
+      "a. 1、2、4、17 和 34",
+      "b. 1、2、8、17 和 34",
+      "c. 1、2、4、17、34 和 68",
+      "d. 1、2、8、10、34 和 68"
+    ],
+    "answer": "c. 1、2、4、17、34 和 68"
+  },
+  {
+    "id": "4B_L14_Q08",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "以下哪些數是 93 的因數？",
+    "options": [
+      "a. 1",
+      "b. 3",
+      "c. 7",
+      "d. 21",
+      "e. 31"
+    ],
+    "answer": "a. 1"
+  },
+  {
+    "id": "4B_L14_Q09",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "36 × 3 = 108，36 是 108 的 （ ）。",
+    "options": [
+      "a. 因數",
+      "b. 倍數"
+    ],
+    "answer": "a. 因數"
+  },
+  {
+    "id": "4B_L14_Q10",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "78 ÷ 6 = 13，78 是 13 的 （ ）。",
+    "options": [
+      "a. 因數",
+      "b. 倍數"
+    ],
+    "answer": "b. 倍數"
+  },
+  {
+    "id": "4B_L14_Q11",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "5 是 25 的 （ ），25 是 5 的 （ ）。",
+    "options": [
+      "a. 因數；倍數",
+      "b. 倍數；因數"
+    ],
+    "answer": "a. 因數；倍數"
+  },
+  {
+    "id": "4B_L14_Q12",
+    "grade": 4,
+    "unitKey": "factors",
+    "source": "第二版 4 上 B 單元五 第 14 課 因數",
+    "topic": "4B L14 因數",
+    "question": "36 是 4 和 9 的 （ ），4 和 9 是 36 的 （ ）。",
+    "options": [
+      "a. 因數；倍數",
+      "b. 倍數；因數"
+    ],
+    "answer": "b. 倍數；因數"
+  },
+  {
+    "id": "4B_L15_Q01",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "20 是一個 （ ）。",
+    "options": [
+      "a. 質數",
+      "b. 合成數"
+    ],
+    "answer": "b. 合成數"
+  },
+  {
+    "id": "4B_L15_Q02",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "31 是一個 （ ）。",
+    "options": [
+      "a. 質數",
+      "b. 合成數"
+    ],
+    "answer": "a. 質數"
+  },
+  {
+    "id": "4B_L15_Q03",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "17 是一個 （ ）。",
+    "options": [
+      "a. 質數",
+      "b. 合成數"
+    ],
+    "answer": "a. 質數"
+  },
+  {
+    "id": "4B_L15_Q04",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "91 是一個 （ ）。",
+    "options": [
+      "a. 質數",
+      "b. 合成數"
+    ],
+    "answer": "b. 合成數"
+  },
+  {
+    "id": "4B_L15_Q05",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "下表中，塗了顏色的是 （ ）。",
+    "options": [
+      "a. 質數",
+      "b. 合成數"
+    ],
+    "answer": "a. 質數",
+    "image": "q-images/4B_L15_Q05.png"
+  },
+  {
+    "id": "4B_L15_Q06",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "30 以內的質數有：",
+    "options": [
+      "a. 2、3、5、7、11、13、17、19、23 和 29",
+      "b. 1、2、3、5、7、11、13、17、19、23 …"
+    ],
+    "answer": "a. 2、3、5、7、11、13、17、19、23 和 29",
+    "image": "q-images/4B_L15_Q06.png"
+  },
+  {
+    "id": "4B_L15_Q07",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "30 以內共有質數 （ ） 個。",
+    "options": [
+      "20",
+      "1",
+      "10",
+      "5"
+    ],
+    "answer": "10",
+    "image": "q-images/4B_L15_Q07.png"
+  },
+  {
+    "id": "4B_L15_Q08",
+    "grade": 4,
+    "unitKey": "prime_composite",
+    "source": "第二版 4 上 B 單元五 第 15 課 質數和合成數",
+    "topic": "4B L15 質數和合成數",
+    "question": "30 以內共有合成數 （ ） 個。",
+    "options": [
+      "119",
+      "10",
+      "1",
+      "19"
+    ],
+    "answer": "19",
+    "image": "q-images/4B_L15_Q08.png"
+  },
+  {
+    "id": "4B_L16_Q01",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "9 的所有因數是 1、3 和 9。12 的所有因數是 1、2、3、4、6 和 12。9 和 12 的所有公因數是 （ ） 。",
+    "options": [
+      "a. 1",
+      "b. 2",
+      "c. 3",
+      "d. 4",
+      "e. 6",
+      "f. 9",
+      "g. 12",
+      "h. 24"
+    ],
+    "answer": "a. 1"
+  },
+  {
+    "id": "4B_L16_Q02",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "21 和 28 的最大公因數是 （ ）。",
+    "options": [
+      "107",
+      "1",
+      "7",
+      "14"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "4B_L16_Q03",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "16 和 36 的最大公因數是 （ ）。",
+    "options": [
+      "1",
+      "104",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "4B_L16_Q04",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "15 和 30 的 H.C.F. 是 （ ）。",
+    "options": [
+      "5",
+      "14",
+      "15",
+      "115"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "4B_L16_Q05",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "14 和 49 的最大公因數是 （ ）。",
+    "options": [
+      "13",
+      "7",
+      "1",
+      "14"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "4B_L16_Q06",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "35 和 60 的最大公因數是 （ ）。",
+    "options": [
+      "5",
+      "50",
+      "15",
+      "105"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "4B_L16_Q07",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "12 和 54 的最大公因數是 （ ）。",
+    "options": [
+      "12",
+      "6",
+      "60",
+      "16"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "4B_L16_Q08",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "48 和 84 的最大公因數是 （ ）。",
+    "options": [
+      "12",
+      "6",
+      "24",
+      "120"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "4B_L16_Q09",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "16 和 24 的最大公因數是 8。16 和 24 的所有公因數是 （ ） 。",
+    "options": [
+      "a. 1、2 和 3",
+      "b. 1、2、3 和 4",
+      "c. 1、2、4 和 8",
+      "d. 1、2、6 和 8"
+    ],
+    "answer": "c. 1、2、4 和 8"
+  },
+  {
+    "id": "4B_L16_Q10",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "18 和 36 的最大公因數是 18。18 和 36 的所有公因數是 （ ） 。",
+    "options": [
+      "a. 1、2、3、4、6 和 7",
+      "b. 1、2、3、4、8 和 12",
+      "c. 1、2、3、9、12 和 18",
+      "d. 1、2、3、6、9 和 18"
+    ],
+    "answer": "d. 1、2、3、6、9 和 18"
+  },
+  {
+    "id": "4B_L16_Q11",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "45 和 81 的所有公因數是 （ ） 。",
+    "options": [
+      "a. 1、3 和 6",
+      "b. 1、3 和 9",
+      "c. 1、6 和 9",
+      "d. 1、8 和 18"
+    ],
+    "answer": "b. 1、3 和 9"
+  },
+  {
+    "id": "4B_L16_Q12",
+    "grade": 4,
+    "unitKey": "gcf",
+    "source": "第二版 4 上 B 單元五 第 16 課 公因數和最大公因數",
+    "topic": "4B L16 公因數和最大公因數",
+    "question": "49 和 63 的最大公因數是 （ ）。",
+    "options": [
+      "107",
+      "7",
+      "17",
+      "13"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "4B_L17_Q01",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "3 和 4 的最小公倍數是 （ ）。",
+    "options": [
+      "22",
+      "11",
+      "12",
+      "120"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "4B_L17_Q02",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "15 和 9 的最小公倍數是 （ ）。",
+    "options": [
+      "55",
+      "45",
+      "450",
+      "145"
+    ],
+    "answer": "45"
+  },
+  {
+    "id": "4B_L17_Q03",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "12 和 18 的 L.C.M. 是 （ ）。",
+    "options": [
+      "46",
+      "36",
+      "72",
+      "18"
+    ],
+    "answer": "36"
+  },
+  {
+    "id": "4B_L17_Q04",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "6 和 42 的最小公倍數是 （ ）。",
+    "options": [
+      "84",
+      "42",
+      "142",
+      "22"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": "4B_L17_Q05",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "8 和 14 的最小公倍數是 （ ）。",
+    "options": [
+      "56",
+      "560",
+      "6",
+      "28"
+    ],
+    "answer": "56"
+  },
+  {
+    "id": "4B_L17_Q06",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "15 和 25 的最小公倍數是 （ ） 。",
+    "options": [
+      "85",
+      "74",
+      "75",
+      "38"
+    ],
+    "answer": "75"
+  },
+  {
+    "id": "4B_L17_Q07",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "27 和 36 的最小公倍數是 （ ） 。",
+    "options": [
+      "108",
+      "208",
+      "118",
+      "11"
+    ],
+    "answer": "108"
+  },
+  {
+    "id": "4B_L17_Q08",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "32 和 40 的最小公倍數是 （ ） 。",
+    "options": [
+      "16",
+      "80",
+      "140",
+      "160"
+    ],
+    "answer": "160"
+  },
+  {
+    "id": "4B_L17_Q09",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "15 和 6 的最小公倍數是 30。15 和 6 的第 2 個公倍數是 （ ）。",
+    "options": [
+      "30",
+      "160",
+      "59",
+      "60"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "4B_L17_Q10",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "28 和 14 的最小公倍數是 28。28 和 14 的第 3 個公倍數是 （ ）。",
+    "options": [
+      "64",
+      "184",
+      "8",
+      "84"
+    ],
+    "answer": "84"
+  },
+  {
+    "id": "4B_L17_Q11",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "12 和 18 的最小公倍數是 [36]。12 和 18 的第 10 個公倍數是 （ ）。",
+    "options": [
+      "359",
+      "360",
+      "340",
+      "36"
+    ],
+    "answer": "360"
+  },
+  {
+    "id": "4B_L17_Q12",
+    "grade": 4,
+    "unitKey": "lcm",
+    "source": "第二版 4 上 B 單元五 第 17 課 公倍數和最小公倍數",
+    "topic": "4B L17 公倍數和最小公倍數",
+    "question": "27 和 45 的最小公倍數是 [135]。27 和 45 的第 6 個公倍數是 （ ）。",
+    "options": [
+      "405",
+      "1620",
+      "810",
+      "790"
+    ],
+    "answer": "810"
+  },
+  {
+    "id": "4B_L18_Q01",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把以下多邊形沿虛線剪開，可分割成 4 個 （ ）。",
+    "options": [
+      "a. 三角形",
+      "b. 正方形",
+      "c. 梯形",
+      "d. 平行四邊形"
+    ],
+    "answer": "a. 三角形",
+    "image": "q-images/4B_L18_Q01.png"
+  },
+  {
+    "id": "4B_L18_Q02",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把以下多邊形沿虛線剪開，可分割成 4 個 （ ）。",
+    "options": [
+      "a. 三角形",
+      "b. 正方形",
+      "c. 梯形",
+      "d. 平行四邊形"
+    ],
+    "answer": "c. 梯形",
+    "image": "q-images/4B_L18_Q02.png"
+  },
+  {
+    "id": "4B_L18_Q03",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把以下多邊形沿虛線剪開，可分割成 2 個 （ ）。",
+    "options": [
+      "a. 三角形",
+      "b. 正方形",
+      "c. 梯形",
+      "d. 平行四邊形"
+    ],
+    "answer": "d. 平行四邊形",
+    "image": "q-images/4B_L18_Q03.png"
+  },
+  {
+    "id": "4B_L18_Q04",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把以下多邊形沿虛線剪開，可分割成 6 個 （ ）。",
+    "options": [
+      "a. 三角形",
+      "b. 正方形",
+      "c. 梯形",
+      "d. 平行四邊形"
+    ],
+    "answer": "a. 三角形",
+    "image": "q-images/4B_L18_Q04.png"
+  },
+  {
+    "id": "4B_L18_Q05",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把下面的四邊形沿虛線剪開，可分割成 2 個三角形和 （ ） 個梯形。",
+    "options": [
+      "19",
+      "1",
+      "101",
+      "10"
+    ],
+    "answer": "1",
+    "image": "q-images/4B_L18_Q05.png"
+  },
+  {
+    "id": "4B_L18_Q06",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把下面的四邊形沿虛線剪開，可分割成 2 個平行四邊形和 （ ） 個梯形。",
+    "options": [
+      "1",
+      "19",
+      "11",
+      "4"
+    ],
+    "answer": "1",
+    "image": "q-images/4B_L18_Q06.png"
+  },
+  {
+    "id": "4B_L18_Q07",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把下面的多邊形沿虛線剪開，可分割成 （ ）。",
+    "options": [
+      "a. 2 個正方形和 1 個梯形",
+      "b. 1 個長方形和 2 個梯形",
+      "c. 2 個正方形和 1 個三角形",
+      "d. 2 個長方形和 2 個梯形"
+    ],
+    "answer": "b. 1 個長方形和 2 個梯形",
+    "image": "q-images/4B_L18_Q07.png"
+  },
+  {
+    "id": "4B_L18_Q08",
+    "grade": 4,
+    "unitKey": "shape_partition",
+    "source": "第二版 4 上 B 單元六 第 18 課 圖形分割",
+    "topic": "4B L18 圖形分割",
+    "question": "把下面的多邊形沿虛線剪開，可分割成 （ ）。",
+    "options": [
+      "a. 1 個正方形和 2 個梯形",
+      "b. 1 個長方形和 3 個三角形",
+      "c. 1 個正方形和 3 個三角形",
+      "d. 1 個長方形和 2 個梯形"
+    ],
+    "answer": "b. 1 個長方形和 3 個三角形",
+    "image": "q-images/4B_L18_Q08.png"
+  },
+  {
+    "id": "4B_L19_Q02",
+    "grade": 4,
+    "unitKey": "shape_tessellation",
+    "source": "第二版 4 上 B 單元六 第 19 課 圖形拼砌",
+    "topic": "4B L19 圖形拼砌",
+    "question": "用兩個相同的四邊形拼砌出下面的多邊形，這個多邊形的名稱是甚麼？",
+    "options": [
+      "a. 梯形",
+      "b. 平行四邊形",
+      "c. 五邊形",
+      "d. 六邊形"
+    ],
+    "answer": "d. 六邊形",
+    "image": "q-images/4B_L19_Q02.png"
+  },
+  {
+    "id": "4B_L19_Q04",
+    "grade": 4,
+    "unitKey": "shape_tessellation",
+    "source": "第二版 4 上 B 單元六 第 19 課 圖形拼砌",
+    "topic": "4B L19 圖形拼砌",
+    "question": "用下面 3 個五邊形，可以拼砌出以下哪種多邊形？",
+    "options": [
+      "a. 方格上的五邊形：上窄下寬，像倒置的凸字／房屋輪廓（…",
+      "b. 方格上的五邊形：左直邊、右尖角，像向右的箭頭（淺灰）。"
+    ],
+    "answer": "a. 方格上的五邊形：上窄下寬，像倒置的凸字／房屋輪廓（…",
+    "image": "q-images/4B_L19_Q04.png"
+  },
+  {
+    "id": "4B_L19_Q05",
+    "grade": 4,
+    "unitKey": "shape_tessellation",
+    "source": "第二版 4 上 B 單元六 第 19 課 圖形拼砌",
+    "topic": "4B L19 圖形拼砌",
+    "question": "用下面 3 個多邊形，可以拼砌出以下哪種多邊形？",
+    "options": [
+      "a. 方格上的平行四邊形（向右傾斜，底 4 格、高 2 …",
+      "b. 方格上的五邊形：左方塊加右尖角，像向右的房子（淺灰）。"
+    ],
+    "answer": "a. 方格上的平行四邊形（向右傾斜，底 4 格、高 2 …",
+    "image": "q-images/4B_L19_Q05.png"
+  },
+  {
+    "id": "4B_L19_Q06",
+    "grade": 4,
+    "unitKey": "shape_tessellation",
+    "source": "第二版 4 上 B 單元六 第 19 課 圖形拼砌",
+    "topic": "4B L19 圖形拼砌",
+    "question": "用下面 3 個多邊形，可以拼砌出以下哪種多邊形？",
+    "options": [
+      "a. 方格上的直角梯形：左直邊、右下角被斜切（淺灰）。",
+      "b. 方格上的直角梯形：底邊水平，頂邊向右上斜（淺灰）。"
+    ],
+    "answer": "b. 方格上的直角梯形：底邊水平，頂邊向右上斜（淺灰）。",
+    "image": "q-images/4B_L19_Q06.png"
+  },
+  {
+    "id": "4B_L19_Q07",
+    "grade": 4,
+    "unitKey": "shape_tessellation",
+    "source": "第二版 4 上 B 單元六 第 19 課 圖形拼砌",
+    "topic": "4B L19 圖形拼砌",
+    "question": "下圖中，補上 1 個 （ ） 後，可拼砌出一個等腰三角形。",
+    "options": [
+      "a. 菱形",
+      "b. 正方形",
+      "c. 梯形",
+      "d. 三角形"
+    ],
+    "answer": "d. 三角形",
+    "image": "q-images/4B_L19_Q07.png"
+  },
+  {
+    "id": "4B_L19_Q08",
+    "grade": 4,
+    "unitKey": "shape_tessellation",
+    "source": "第二版 4 上 B 單元六 第 19 課 圖形拼砌",
+    "topic": "4B L19 圖形拼砌",
+    "question": "下圖中，補上 2 個 （ ） 後，可拼砌出一個梯形。",
+    "options": [
+      "a. 平行四邊形",
+      "b. 正方形",
+      "c. 梯形",
+      "d. 三角形"
+    ],
+    "answer": "a. 平行四邊形",
+    "image": "q-images/4B_L19_Q08.png"
+  },
+  {
+    "id": "4DA_L01_Q01",
+    "grade": 4,
+    "unitKey": "mix_mult_add",
+    "source": "第二版 4 下 A 單元一 第 1 課 乘加和乘減混合運算",
+    "topic": "4DA L01 乘加和乘減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 18 × 100 + 18 × 2",
+      "b. = 18 × 102"
+    ],
+    "answer": "a. = 18 × 100 + 18 × 2",
+    "image": "q-images/4DA_L01_Q01_a.png"
+  },
+  {
+    "id": "4DA_L01_Q02",
+    "grade": 4,
+    "unitKey": "mix_mult_add",
+    "source": "第二版 4 下 A 單元一 第 1 課 乘加和乘減混合運算",
+    "topic": "4DA L01 乘加和乘減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 2464 − 804",
+      "b. = ( 154 − 54 ) × 16"
+    ],
+    "answer": "b. = ( 154 − 54 ) × 16",
+    "image": "q-images/4DA_L01_Q02_b.png"
+  },
+  {
+    "id": "4DA_L01_Q03",
+    "grade": 4,
+    "unitKey": "mix_mult_add",
+    "source": "第二版 4 下 A 單元一 第 1 課 乘加和乘減混合運算",
+    "topic": "4DA L01 乘加和乘減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 15 × ( 100 + 2 )",
+      "b. = 15 × ( 100 − 2 )"
+    ],
+    "answer": "b. = 15 × ( 100 − 2 )",
+    "image": "q-images/4DA_L01_Q03_b.png"
+  },
+  {
+    "id": "4DA_L01_Q04",
+    "grade": 4,
+    "unitKey": "mix_mult_add",
+    "source": "第二版 4 下 A 單元一 第 1 課 乘加和乘減混合運算",
+    "topic": "4DA L01 乘加和乘減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 25 × ( 10 + 2 )",
+      "b. = 25 × ( 10 + 2 )"
+    ],
+    "answer": "a. = 25 × ( 10 + 2 )",
+    "image": "q-images/4DA_L01_Q04_a.png"
+  },
+  {
+    "id": "4DA_L02_Q01",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "27 + 95 ÷ 5 = （ ）",
+    "options": [
+      "4",
+      "5",
+      "146",
+      "46"
+    ],
+    "answer": "46"
+  },
+  {
+    "id": "4DA_L02_Q02",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "169 ÷ ( 5 + 8 ) = （ ）",
+    "options": [
+      "130",
+      "12",
+      "113",
+      "13"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "4DA_L02_Q03",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "215 ÷ 5 + 21 = （ ）",
+    "options": [
+      "44",
+      "164",
+      "6",
+      "64"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "4DA_L02_Q04",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "( 123 + 141 ) ÷ 24 = （ ）",
+    "options": [
+      "21",
+      "22",
+      "11",
+      "10"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "4DA_L02_Q05",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "234 ÷ 6 – 10 = （ ）",
+    "options": [
+      "14",
+      "58",
+      "2",
+      "29"
+    ],
+    "answer": "29"
+  },
+  {
+    "id": "4DA_L02_Q06",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "27 – 126 ÷ 14 = （ ）",
+    "options": [
+      "1",
+      "28",
+      "18",
+      "180"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "4DA_L02_Q07",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "208 ÷ ( 72 - 64 ) = （ ）",
+    "options": [
+      "126",
+      "52",
+      "26",
+      "36"
+    ],
+    "answer": "26"
+  },
+  {
+    "id": "4DA_L02_Q08",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "( 246 - 154 ) ÷ 23 = （ ）",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "4DA_L02_Q09",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "超級市場原有午餐肉 356 罐，職員把過期的 11 罐扔掉，然後把餘下的午餐肉每 3 罐分成一份，可分成 （ ） 份。",
+    "options": [
+      "114",
+      "95",
+      "11",
+      "115"
+    ],
+    "answer": "115"
+  },
+  {
+    "id": "4DA_L02_Q10",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "兩兄妹合資購買了一本字典和一輛單車，他們每人所付的款項相同，每人付了 （ ） 元。",
+    "options": [
+      "411",
+      "421",
+      "511",
+      "822"
+    ],
+    "answer": "411",
+    "image": "q-images/4DA_L02_Q10.png"
+  },
+  {
+    "id": "4DA_L02_Q11",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "美味快餐店的早餐 A 售 28 元，早餐 B 比早餐 A 貴 3 元。李小姐付 155 元，可買到早餐 B （ ） 份。",
+    "options": [
+      "5",
+      "105",
+      "50",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "4DA_L02_Q12",
+    "grade": 4,
+    "unitKey": "mix_div_add",
+    "source": "第二版 4 下 A 單元一 第 2 課 除加和除減混合運算",
+    "topic": "4DA L02 除加和除減混合運算",
+    "question": "8 個魚柳包售 176 元，每個的售價相同。每個漢堡包比魚柳包便宜 6 元，家欣購買一個漢堡包，需付 （ ） 元。",
+    "options": [
+      "16",
+      "26",
+      "8",
+      "160"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "4DA_L03_Q01",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "63 ÷ 9 × 4 = （ ）",
+    "options": [
+      "3",
+      "28",
+      "8",
+      "27"
+    ],
+    "answer": "28"
+  },
+  {
+    "id": "4DA_L03_Q02",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "12 × 14 ÷ 7 = （ ）",
+    "options": [
+      "124",
+      "24",
+      "34",
+      "23"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "4DA_L03_Q03",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "315 ÷ ( 7 × 3 ) = （ ）",
+    "options": [
+      "115",
+      "15",
+      "2",
+      "5"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "4DA_L03_Q04",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "28 × ( 208 ÷ 13 ) = （ ）",
+    "options": [
+      "224",
+      "896",
+      "458",
+      "448"
+    ],
+    "answer": "448"
+  },
+  {
+    "id": "4DA_L03_Q05",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "每頁郵票簿可放郵票 12 枚，妍美有的郵票剛好放滿郵票簿 4 頁。如果妍美改為每頁放郵票 8 枚，她有的郵票可放滿郵票簿 （ ） 頁。",
+    "options": [
+      "5",
+      "106",
+      "16",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "4DA_L03_Q06",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "3 瓶裝花生油售 81 元，媽媽購買花生油 9 瓶，共需付 （ ） 元。",
+    "options": [
+      "2430",
+      "122",
+      "253",
+      "243"
+    ],
+    "answer": "243"
+  },
+  {
+    "id": "4DA_L03_Q07",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "一箱雞蛋有 16 盒，每盒有雞蛋 12 隻。超級市場賣出雞蛋 2 箱，共收得 896 元。每盒雞蛋售 （ ） 元。",
+    "options": [
+      "128",
+      "28",
+      "280",
+      "3"
+    ],
+    "answer": "28"
+  },
+  {
+    "id": "4DA_L03_Q08",
+    "grade": 4,
+    "unitKey": "mix_div_mult",
+    "source": "第二版 4 下 A 單元一 第 3 課 除乘混合運算",
+    "topic": "4DA L03 除乘混合運算",
+    "question": "製作一個五邊形需用 5 條竹枝，製作一個四邊形需用 4 條竹枝。陳老師用竹枝製作了五邊形 12 個，後來她想利用這些竹枝製作四邊形，可製作四邊形 （ ） 個。",
+    "options": [
+      "15",
+      "8",
+      "30",
+      "25"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "4DA_L04_Q01",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 4 ÷ 16 × 7",
+      "b. = 60 − 4 × 7"
+    ],
+    "answer": "b. = 60 − 4 × 7",
+    "image": "q-images/4DA_L04_Q01_b.png"
+  },
+  {
+    "id": "4DA_L04_Q02",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 45 × 6 − 48",
+      "b. = 45 × 6 − 48"
+    ],
+    "answer": "a. = 45 × 6 − 48",
+    "image": "q-images/4DA_L04_Q02_a.png"
+  },
+  {
+    "id": "4DA_L04_Q03",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 28 × ( 14 − 5 )",
+      "b. = 28 × ( 56 ÷ 1 )"
+    ],
+    "answer": "a. = 28 × ( 14 − 5 )",
+    "image": "q-images/4DA_L04_Q03_a.png"
+  },
+  {
+    "id": "4DA_L04_Q04",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 102 + 75 ÷ 5",
+      "b. = 102 + 75 ÷ 5"
+    ],
+    "answer": "a. = 102 + 75 ÷ 5",
+    "image": "q-images/4DA_L04_Q04_a.png"
+  },
+  {
+    "id": "4DA_L04_Q05",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "4A 班有女生 19 個，比男生多 4 個。老師把 136 張手工紙平均分給 4A 班學生，每個學生分到手工紙 （ ） 張。",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "14"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "4DA_L04_Q06",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "貨倉有碗 4 箱，每箱有 180 個，工人丟去破裂的 9 個後，把餘下的碗每 3 個分成一盒，共可分成 （ ） 盒。",
+    "options": [
+      "217",
+      "337",
+      "236",
+      "237"
+    ],
+    "answer": "237"
+  },
+  {
+    "id": "4DA_L04_Q07",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "智斌每 3 天儲蓄 45 元，智孝每 5 天儲蓄 95 元，智斌和智孝每天各儲蓄固定的款項。智孝每天儲蓄的款項比智斌每天儲蓄的多 （ ） 元。",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "4DA_L04_Q08",
+    "grade": 4,
+    "unitKey": "four_ops",
+    "source": "第二版 4 下 A 單元一 第 4 課 四則混合運算",
+    "topic": "4DA L04 四則混合運算",
+    "question": "媽媽買了搓手液 3 盒，每盒有 6 瓶。她打算送給外婆和另外 11 個親戚每人4 瓶，媽媽最少要再買搓手液 （ ） 盒。",
+    "options": [
+      "5",
+      "15",
+      "105",
+      "50"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "4DA_L05_Q01",
+    "grade": 4,
+    "unitKey": "perimeter_intro",
+    "source": "第二版 4 下 A 單元二 第 5 課 周界的認識",
+    "topic": "4DA L05 周界的認識",
+    "question": "以下哪些圖案有周界？選出所有答案。",
+    "options": [
+      "a. 正六邊形（封閉圖形）",
+      "b. 右側有缺口的長方形（線段不封閉）",
+      "c. 橢圓（封閉圖形）",
+      "d. 上方有半圓形凹口的正方形（封閉圖形）"
+    ],
+    "answer": "a. 正六邊形（封閉圖形）",
+    "image": "q-images/4DA_L05_Q01_a.png"
+  },
+  {
+    "id": "4DA_L05_Q02",
+    "grade": 4,
+    "unitKey": "perimeter_intro",
+    "source": "第二版 4 下 A 單元二 第 5 課 周界的認識",
+    "topic": "4DA L05 周界的認識",
+    "question": "下圖的周界是 （ ） cm。",
+    "options": [
+      "17",
+      "34",
+      "3",
+      "8"
+    ],
+    "answer": "17",
+    "image": "q-images/4DA_L05_Q02.png"
+  },
+  {
+    "id": "4DA_L05_Q03",
+    "grade": 4,
+    "unitKey": "perimeter_intro",
+    "source": "第二版 4 下 A 單元二 第 5 課 周界的認識",
+    "topic": "4DA L05 周界的認識",
+    "question": "下圖的周界是 （ ） cm。",
+    "options": [
+      "31",
+      "41",
+      "30",
+      "16"
+    ],
+    "answer": "31",
+    "image": "q-images/4DA_L05_Q03.png"
+  },
+  {
+    "id": "4DA_L05_Q04",
+    "grade": 4,
+    "unitKey": "perimeter_intro",
+    "source": "第二版 4 下 A 單元二 第 5 課 周界的認識",
+    "topic": "4DA L05 周界的認識",
+    "question": "下圖陰影部分的周界是 （ ） cm。",
+    "options": [
+      "24",
+      "12",
+      "6",
+      "112"
+    ],
+    "answer": "12",
+    "image": "q-images/4DA_L05_Q04.png"
+  },
+  {
+    "id": "4DA_L06_Q01",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的周界是 （ ） cm。",
+    "options": [
+      "240",
+      "24",
+      "34",
+      "2"
+    ],
+    "answer": "24",
+    "image": "q-images/4DA_L06_Q01.png"
+  },
+  {
+    "id": "4DA_L06_Q02",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的周界是 （ ） cm。",
+    "options": [
+      "52",
+      "62",
+      "51",
+      "32"
+    ],
+    "answer": "52",
+    "image": "q-images/4DA_L06_Q02.png"
+  },
+  {
+    "id": "4DA_L06_Q03",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的周界是 （ ） mm。",
+    "options": [
+      "60",
+      "80",
+      "8",
+      "40"
+    ],
+    "answer": "80",
+    "image": "q-images/4DA_L06_Q03.png"
+  },
+  {
+    "id": "4DA_L06_Q04",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的周界是 （ ） m。",
+    "options": [
+      "2",
+      "20",
+      "200",
+      "10"
+    ],
+    "answer": "20",
+    "image": "q-images/4DA_L06_Q04.png"
+  },
+  {
+    "id": "4DA_L06_Q05",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的邊長是 （ ） cm。",
+    "options": [
+      "13",
+      "3",
+      "1",
+      "2"
+    ],
+    "answer": "3",
+    "image": "q-images/4DA_L06_Q05.png"
+  },
+  {
+    "id": "4DA_L06_Q06",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的邊長是 （ ） cm。",
+    "options": [
+      "5",
+      "100",
+      "10",
+      "110"
+    ],
+    "answer": "10",
+    "image": "q-images/4DA_L06_Q06.png"
+  },
+  {
+    "id": "4DA_L06_Q07",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的邊長是 （ ） m。",
+    "options": [
+      "4",
+      "8",
+      "3",
+      "14"
+    ],
+    "answer": "4",
+    "image": "q-images/4DA_L06_Q07.png"
+  },
+  {
+    "id": "4DA_L06_Q08",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下面正方形的邊長是 （ ） mm。",
+    "options": [
+      "350",
+      "35",
+      "45",
+      "4"
+    ],
+    "answer": "35",
+    "image": "q-images/4DA_L06_Q08.png"
+  },
+  {
+    "id": "4DA_L06_Q09",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下圖的大正方形由 4 個邊長各是 2 cm 的小正方形拼砌而成。大正方形的周界是 （ ） cm。",
+    "options": [
+      "2",
+      "26",
+      "16",
+      "15"
+    ],
+    "answer": "16",
+    "image": "q-images/4DA_L06_Q09.png"
+  },
+  {
+    "id": "4DA_L06_Q10",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "下圖由 3 個大小相同的正方形拼砌而成，每個正方形的周界是 （ ） cm。",
+    "options": [
+      "128",
+      "640",
+      "64",
+      "6"
+    ],
+    "answer": "64",
+    "image": "q-images/4DA_L06_Q10.png"
+  },
+  {
+    "id": "4DA_L06_Q11",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "子聰用 9 張邊長 7 cm 的正方形圖卡拼出一個大正方形。大正方形的周界是 （ ） cm。",
+    "options": [
+      "42",
+      "94",
+      "184",
+      "84"
+    ],
+    "answer": "84"
+  },
+  {
+    "id": "4DA_L06_Q12",
+    "grade": 4,
+    "unitKey": "perimeter_square",
+    "source": "第二版 4 下 A 單元二 第 6 課 正方形的周界",
+    "topic": "4DA L06 正方形的周界",
+    "question": "一個小正方形相架的邊長是 9 cm，比大正方形的邊長少 6 cm，大正方形相架的周界是 （ ） cm。",
+    "options": [
+      "120",
+      "30",
+      "60",
+      "40"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "4DA_L07_Q01",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "下面長方形的周界是 （ ） m。",
+    "options": [
+      "12",
+      "132",
+      "3",
+      "32"
+    ],
+    "answer": "32",
+    "image": "q-images/4DA_L07_Q01.png"
+  },
+  {
+    "id": "4DA_L07_Q02",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "下面長方形的周界是 （ ） cm。",
+    "options": [
+      "21",
+      "208",
+      "2080",
+      "188"
+    ],
+    "answer": "208",
+    "image": "q-images/4DA_L07_Q02.png"
+  },
+  {
+    "id": "4DA_L07_Q03",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "長方形地毯的長是 40 cm，闊是 35 cm。地毯的周界是 （ ） cm。",
+    "options": [
+      "75",
+      "150",
+      "130",
+      "1500"
+    ],
+    "answer": "150"
+  },
+  {
+    "id": "4DA_L07_Q04",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "家裏有一張長 110 cm，闊 88 cm 的花紙，它的周界是 （ ） cm。",
+    "options": [
+      "198",
+      "376",
+      "396",
+      "39"
+    ],
+    "answer": "396"
+  },
+  {
+    "id": "4DA_L07_Q05",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "下面長方形的長是 （ ） cm。",
+    "options": [
+      "1",
+      "108",
+      "80",
+      "8"
+    ],
+    "answer": "8",
+    "image": "q-images/4DA_L07_Q05.png"
+  },
+  {
+    "id": "4DA_L07_Q06",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "下面長方形的闊是 （ ） m。",
+    "options": [
+      "1",
+      "30",
+      "103",
+      "3"
+    ],
+    "answer": "3",
+    "image": "q-images/4DA_L07_Q06.png"
+  },
+  {
+    "id": "4DA_L07_Q07",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "下面長方形的闊是 （ ） 厘米。",
+    "options": [
+      "1",
+      "104",
+      "4",
+      "16"
+    ],
+    "answer": "4",
+    "image": "q-images/4DA_L07_Q07.png"
+  },
+  {
+    "id": "4DA_L07_Q08",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "下面長方形的長是 （ ） 毫米。",
+    "options": [
+      "350",
+      "135",
+      "4",
+      "35"
+    ],
+    "answer": "35",
+    "image": "q-images/4DA_L07_Q08.png"
+  },
+  {
+    "id": "4DA_L07_Q09",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "一張長方形花紙闊 65 cm，長是闊的 2 倍。長方形花紙的周界是 （ ） cm。",
+    "options": [
+      "39",
+      "390",
+      "3900",
+      "389"
+    ],
+    "answer": "390"
+  },
+  {
+    "id": "4DA_L07_Q10",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "一個長方形花圃的闊是 1 m，闊比長少 40 cm。長方形花圃的周界是 （ ） cm。",
+    "options": [
+      "480",
+      "48",
+      "960",
+      "479"
+    ],
+    "answer": "480"
+  },
+  {
+    "id": "4DA_L07_Q11",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "一張長方形便利貼長 5 cm，闊 3 cm。陳老師把 2 張便利貼如下圖拼砌出一個大長方形，它的周界是 （ ） cm。",
+    "options": [
+      "13",
+      "26",
+      "126",
+      "2"
+    ],
+    "answer": "26",
+    "image": "q-images/4DA_L07_Q11.png"
+  },
+  {
+    "id": "4DA_L07_Q12",
+    "grade": 4,
+    "unitKey": "perimeter_rect",
+    "source": "第二版 4 下 A 單元二 第 7 課 長方形的周界",
+    "topic": "4DA L07 長方形的周界",
+    "question": "嘉妍有 3 張大小相同的遊戲卡，她把遊戲卡拼砌成一個大長方形，如下圖所示，大長方形的周界是 （ ） cm。",
+    "options": [
+      "45",
+      "46",
+      "56",
+      "92"
+    ],
+    "answer": "46",
+    "image": "q-images/4DA_L07_Q12.png"
+  },
+  {
+    "id": "4DA_L08_Q01",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "下面平面圖形的周界是 （ ） cm。",
+    "options": [
+      "34",
+      "124",
+      "24",
+      "2"
+    ],
+    "answer": "24",
+    "image": "q-images/4DA_L08_Q01.png"
+  },
+  {
+    "id": "4DA_L08_Q02",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "下面平面圖形的周界是 （ ） cm。",
+    "options": [
+      "148",
+      "96",
+      "48",
+      "28"
+    ],
+    "answer": "48",
+    "image": "q-images/4DA_L08_Q02.png"
+  },
+  {
+    "id": "4DA_L08_Q03",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "諾意從一張正方形手工紙剪出一個長方形，得出下圖。下圖的周界是 （ ） cm。",
+    "options": [
+      "104",
+      "152",
+      "52",
+      "26"
+    ],
+    "answer": "52",
+    "image": "q-images/4DA_L08_Q03.png"
+  },
+  {
+    "id": "4DA_L08_Q04",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "下圖是一塊草地的平面圖，爺爺沿着草地的外圍走了 1 圈，他共走了 （ ） m。",
+    "options": [
+      "146",
+      "136",
+      "13",
+      "1360"
+    ],
+    "answer": "136",
+    "image": "q-images/4DA_L08_Q04.png"
+  },
+  {
+    "id": "4DA_L08_Q05",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "嘉恩用 5 張邊長各是 5 cm 的正方形卡紙拼砌出下圖，下圖的周界是 （ ） cm。",
+    "options": [
+      "59",
+      "120",
+      "60",
+      "40"
+    ],
+    "answer": "60",
+    "image": "q-images/4DA_L08_Q05.png"
+  },
+  {
+    "id": "4DA_L08_Q06",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "思晴用 2 張長 10 cm，闊 8 cm 的長方形紙拼砌出下圖，下圖的周界是 （ ） cm。",
+    "options": [
+      "6",
+      "56",
+      "28",
+      "560"
+    ],
+    "answer": "56",
+    "image": "q-images/4DA_L08_Q06.png"
+  },
+  {
+    "id": "4DA_L08_Q07",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "卓楠把 2 張長 18 cm，闊 6 cm 的長方形紙以部分重疊的方法組成下圖。下圖的周界是 （ ） cm。",
+    "options": [
+      "76",
+      "8",
+      "86",
+      "760"
+    ],
+    "answer": "76",
+    "image": "q-images/4DA_L08_Q07.png"
+  },
+  {
+    "id": "4DA_L08_Q08",
+    "grade": 4,
+    "unitKey": "perimeter_plane",
+    "source": "第二版 4 下 A 單元二 第 8 課 平面圖形的周界",
+    "topic": "4DA L08 平面圖形的周界",
+    "question": "樂天用 2 張長 21 cm，闊 5 cm 的長方形紙條以部分重疊的方法組成下圖。下圖的周界是 （ ） cm。",
+    "options": [
+      "184",
+      "8",
+      "84",
+      "64"
+    ],
+    "answer": "84",
+    "image": "q-images/4DA_L08_Q08.png"
+  },
+  {
+    "id": "4DA_L09_Q01",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "7/8 是 （ ）。",
+    "options": [
+      "a. 真分數",
+      "b. 假分數",
+      "c. 帶分數"
+    ],
+    "answer": "a. 真分數",
+    "image": "q-images/4DA_L09_Q01.png"
+  },
+  {
+    "id": "4DA_L09_Q02",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "2 2/3 是 （ ）。",
+    "options": [
+      "a. 真分數",
+      "b. 假分數",
+      "c. 帶分數"
+    ],
+    "answer": "c. 帶分數",
+    "image": "q-images/4DA_L09_Q02.png"
+  },
+  {
+    "id": "4DA_L09_Q03",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "每個（7 等份的正方形）表示 1。以上的陰影部分佔全圖的 （ ）。（以假分數表示答案。）",
+    "options": [
+      "a. 10/7",
+      "b. 11/7",
+      "c. 7/11",
+      "d. 11/14"
+    ],
+    "answer": "b. 11/7",
+    "image": "q-images/4DA_L09_Q03.png"
+  },
+  {
+    "id": "4DA_L09_Q04",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "每個（8 等份的圓）表示 1。以上的陰影部分佔全圖的 （ ）。（以帶分數表示答案。）",
+    "options": [
+      "a. 1 2/3",
+      "b. 2 3/5",
+      "c. 2 3/8",
+      "d. 2 5/8"
+    ],
+    "answer": "d. 2 5/8",
+    "image": "q-images/4DA_L09_Q04.png"
+  },
+  {
+    "id": "4DA_L09_Q05",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下假分數化為帶分數或整數。 24/6 = （ ）",
+    "options": [
+      "a. 5/6",
+      "b. 2 1/6",
+      "c. 4",
+      "d. 6"
+    ],
+    "answer": "c. 4",
+    "image": "q-images/4DA_L09_Q05.png"
+  },
+  {
+    "id": "4DA_L09_Q06",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下假分數化為帶分數或整數。 20/7 = （ ）",
+    "options": [
+      "a. 2 6/7",
+      "b. 3",
+      "c. 3 1/7",
+      "d. 3 2/7"
+    ],
+    "answer": "a. 2 6/7",
+    "image": "q-images/4DA_L09_Q06.png"
+  },
+  {
+    "id": "4DA_L09_Q07",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下假分數化為帶分數或整數。 17/8 = （ ）",
+    "options": [
+      "a. 1 7/8",
+      "b. 2 1/8",
+      "c. 2 5/8",
+      "d. 4"
+    ],
+    "answer": "b. 2 1/8",
+    "image": "q-images/4DA_L09_Q07.png"
+  },
+  {
+    "id": "4DA_L09_Q08",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下假分數化為帶分數或整數。 15/4 = （ ）",
+    "options": [
+      "a. 1 3/4",
+      "b. 2 1/4",
+      "c. 3 1/4",
+      "d. 3 3/4"
+    ],
+    "answer": "d. 3 3/4",
+    "image": "q-images/4DA_L09_Q08.png"
+  },
+  {
+    "id": "4DA_L09_Q09",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下整數化為假分數，A = （ ）。 4 = A/8",
+    "options": [
+      "12",
+      "64",
+      "32",
+      "16"
+    ],
+    "answer": "32",
+    "image": "q-images/4DA_L09_Q09.png"
+  },
+  {
+    "id": "4DA_L09_Q10",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下整數化為假分數，B = （ ）。 11 = B/5",
+    "options": [
+      "6",
+      "5",
+      "155",
+      "55"
+    ],
+    "answer": "55",
+    "image": "q-images/4DA_L09_Q10.png"
+  },
+  {
+    "id": "4DA_L09_Q11",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下帶分數化為假分數。 3 1/4 = （ ）",
+    "options": [
+      "a. 11/4",
+      "b. 12/4",
+      "c. 13/4",
+      "d. 14/4"
+    ],
+    "answer": "c. 13/4",
+    "image": "q-images/4DA_L09_Q11.png"
+  },
+  {
+    "id": "4DA_L09_Q12",
+    "grade": 4,
+    "unitKey": "fraction_types",
+    "source": "第二版 4 下 A 單元三 第 9 課 分數的種類",
+    "topic": "4DA L09 分數的種類",
+    "question": "把以下帶分數化為假分數。 4 5/8 = （ ）",
+    "options": [
+      "a. 32/8",
+      "b. 35/8",
+      "c. 37/8",
+      "d. 41/8"
+    ],
+    "answer": "c. 37/8",
+    "image": "q-images/4DA_L09_Q12.png"
+  },
+  {
+    "id": "4DA_L10_Q01",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "A = （ ）（1/8 = A/24）",
+    "options": [
+      "17",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "3",
+    "image": "q-images/4DA_L10_Q01.png"
+  },
+  {
+    "id": "4DA_L10_Q02",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "B = （ ）（4/5 = 16/B）",
+    "options": [
+      "10",
+      "200",
+      "30",
+      "20"
+    ],
+    "answer": "20",
+    "image": "q-images/4DA_L10_Q02.png"
+  },
+  {
+    "id": "4DA_L10_Q03",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "C = （ ）（5/9 = C/27）",
+    "options": [
+      "115",
+      "1",
+      "2",
+      "15"
+    ],
+    "answer": "15",
+    "image": "q-images/4DA_L10_Q03.png"
+  },
+  {
+    "id": "4DA_L10_Q04",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "D = （ ）（3/7 = 12/D）",
+    "options": [
+      "28",
+      "2",
+      "280",
+      "3"
+    ],
+    "answer": "28",
+    "image": "q-images/4DA_L10_Q04.png"
+  },
+  {
+    "id": "4DA_L10_Q05",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "A = （ ）（12/24 = A/4）",
+    "options": [
+      "18",
+      "102",
+      "2",
+      "1"
+    ],
+    "answer": "2",
+    "image": "q-images/4DA_L10_Q05.png"
+  },
+  {
+    "id": "4DA_L10_Q06",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "B = （ ）（35/25 = 7/B）",
+    "options": [
+      "5",
+      "10",
+      "2",
+      "4"
+    ],
+    "answer": "5",
+    "image": "q-images/4DA_L10_Q06.png"
+  },
+  {
+    "id": "4DA_L10_Q07",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "C = （ ）（4/16 = C/4）",
+    "options": [
+      "10",
+      "19",
+      "1",
+      "4"
+    ],
+    "answer": "1",
+    "image": "q-images/4DA_L10_Q07.png"
+  },
+  {
+    "id": "4DA_L10_Q08",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "D = （ ）（2 14/21 = 2 2/D）",
+    "options": [
+      "13",
+      "3",
+      "6",
+      "103"
+    ],
+    "answer": "3",
+    "image": "q-images/4DA_L10_Q08.png"
+  },
+  {
+    "id": "4DA_L10_Q09",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "以下哪項正確？",
+    "options": [
+      "a. 3 4/7 > 3",
+      "b. 3 4/7 < 3",
+      "c. 3 4/7 = 3"
+    ],
+    "answer": "a. 3 4/7 > 3",
+    "image": "q-images/4DA_L10_Q09_a.png"
+  },
+  {
+    "id": "4DA_L10_Q10",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "以下哪項正確？",
+    "options": [
+      "a. 1 9/10 > 19/10",
+      "b. 1 9/10 < 19/10",
+      "c. 1 9/10 = 19/10"
+    ],
+    "answer": "c. 1 9/10 = 19/10",
+    "image": "q-images/4DA_L10_Q10_c.png"
+  },
+  {
+    "id": "4DA_L10_Q11",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "以下哪項正確？",
+    "options": [
+      "a. 4/5 > 9 1/5 > 6 3/5",
+      "b. 9 1/5 > 4/5 > 6 3/5",
+      "c. 9 1/5 > 6 3/5 > 4/5",
+      "d. 4/5 > 6 3/5 > 9 1/5"
+    ],
+    "answer": "c. 9 1/5 > 6 3/5 > 4/5",
+    "image": "q-images/4DA_L10_Q11_c.png"
+  },
+  {
+    "id": "4DA_L10_Q12",
+    "grade": 4,
+    "unitKey": "fraction_equiv",
+    "source": "第二版 4 下 A 單元三 第 10 課 擴分、約分和比較大小",
+    "topic": "4DA L10 擴分、約分和比較大小",
+    "question": "以下哪項正確？",
+    "options": [
+      "a. 3 < 3 7/11 < 3 4/11",
+      "b. 3 < 3 4/11 < 3 7/11",
+      "c. 3 4/11 < 3 < 3 7/11",
+      "d. 3 7/11 < 3 < 3 4/11"
+    ],
+    "answer": "b. 3 < 3 4/11 < 3 7/11",
+    "image": "q-images/4DA_L10_Q12_b.png"
+  },
+  {
+    "id": "4DA_L11_Q01",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "2/9 + 5/9 = （ ）",
+    "options": [
+      "a. 3/9",
+      "b. 9/7",
+      "c. 3/7",
+      "d. 7/9"
+    ],
+    "answer": "d. 7/9",
+    "image": "q-images/4DA_L11_Q01.png"
+  },
+  {
+    "id": "4DA_L11_Q02",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "5/16 + 3/16 = （ ）",
+    "options": [
+      "a. 1/2",
+      "b. 1/8",
+      "c. 7/16",
+      "d. 2/16"
+    ],
+    "answer": "a. 1/2",
+    "image": "q-images/4DA_L11_Q02.png"
+  },
+  {
+    "id": "4DA_L11_Q03",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "2 1/5 + 4 2/5 = （ ）",
+    "options": [
+      "a. 7 1/5",
+      "b. 5 2/5",
+      "c. 6 3/5",
+      "d. 7 3/5"
+    ],
+    "answer": "c. 6 3/5",
+    "image": "q-images/4DA_L11_Q03.png"
+  },
+  {
+    "id": "4DA_L11_Q04",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "6 3/11 + 3 + 3/11 = （ ）",
+    "options": [
+      "a. 10 3/11",
+      "b. 9 6/11",
+      "c. 8 3/11",
+      "d. 10 6/11"
+    ],
+    "answer": "b. 9 6/11",
+    "image": "q-images/4DA_L11_Q04.png"
+  },
+  {
+    "id": "4DA_L11_Q05",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "把以下各數取約數至整數，哪個數約是 3？",
+    "options": [
+      "a. 30 2/5",
+      "b. 2 1/2",
+      "c. 2 9/20",
+      "d. 3 5/8"
+    ],
+    "answer": "b. 2 1/2",
+    "image": "q-images/4DA_L11_Q05_b.png"
+  },
+  {
+    "id": "4DA_L11_Q06",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "把以下各數取約數至整數，哪兩個數約是 6？",
+    "options": [
+      "a. 6 5/6",
+      "b. 7 2/7",
+      "c. 5 1/2",
+      "d. 6 1/4"
+    ],
+    "answer": "c. 5 1/2",
+    "image": "q-images/4DA_L11_Q06_c.png"
+  },
+  {
+    "id": "4DA_L11_Q07",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "2 6/11 + 4 2/11 的結果約是：（ ） + （ ） = （ ）",
+    "options": [
+      "a. 2 + 4 = 6",
+      "b. 2 + 5 = 7",
+      "c. 3 + 4 = 7",
+      "d. 3 + 5 = 8"
+    ],
+    "answer": "c. 3 + 4 = 7",
+    "image": "q-images/4DA_L11_Q07.png"
+  },
+  {
+    "id": "4DA_L11_Q08",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "8 3/14 + 9/14 的結果約是：（ ） + （ ） = （ ）",
+    "options": [
+      "a. 8 + 0 = 8",
+      "b. 8 + 1 = 9",
+      "c. 9 + 0 = 9",
+      "d. 9 + 1 = 10"
+    ],
+    "answer": "b. 8 + 1 = 9",
+    "image": "q-images/4DA_L11_Q08.png"
+  },
+  {
+    "id": "4DA_L11_Q09",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "一隊童軍中，三年級學生佔 3/14，四年級學生佔 5/14。三年級和四年級學生共佔全隊童軍的幾分之幾？",
+    "options": [
+      "a. 1/2",
+      "b. 2/7",
+      "c. 4/7",
+      "d. 2/14"
+    ],
+    "answer": "c. 4/7",
+    "image": "q-images/4DA_L11_Q09.png"
+  },
+  {
+    "id": "4DA_L11_Q10",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "家中原有橙汁 3/4 升，媽媽多買 1 3/4 升後，家中現有橙汁多少升？",
+    "options": [
+      "a. 1 1/2 升",
+      "b. 1 1/4 升",
+      "c. 2 1/2 升",
+      "d. 2 1/4 升"
+    ],
+    "answer": "c. 2 1/2 升",
+    "image": "q-images/4DA_L11_Q10.png"
+  },
+  {
+    "id": "4DA_L11_Q11",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "小貓重 3 3/5 公斤，小狗比小貓重 1 1/5 公斤。小狗重 （ ） 公斤。",
+    "options": [
+      "a. 2 2/5",
+      "b. 2 4/5",
+      "c. 4 2/5",
+      "d. 4 4/5"
+    ],
+    "answer": "d. 4 4/5",
+    "image": "q-images/4DA_L11_Q11.png"
+  },
+  {
+    "id": "4DA_L11_Q12",
+    "grade": 4,
+    "unitKey": "fraction_add",
+    "source": "第二版 4 下 A 單元三 第 11 課 同分母分數加法",
+    "topic": "4DA L11 同分母分數加法",
+    "question": "下表顯示餐廳在今天的三個時段所用的雞蛋數量，即今天共用了雞蛋 （ ） 盒。（早市 5 2/9 盒、午市 1 5/9 盒、晚市 2 1/9 盒）",
+    "options": [
+      "a. 7 7/9",
+      "b. 7 8/9",
+      "c. 8 7/9",
+      "d. 8 8/9"
+    ],
+    "answer": "d. 8 8/9",
+    "image": "q-images/4DA_L11_Q12.png"
+  },
+  {
+    "id": "4DA_L12_Q01",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "7/11 - 5/11 = （ ）",
+    "options": [
+      "a. 1/11",
+      "b. 2/11",
+      "c. 3/11",
+      "d. 4/11"
+    ],
+    "answer": "b. 2/11",
+    "image": "q-images/4DA_L12_Q01.png"
+  },
+  {
+    "id": "4DA_L12_Q02",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "8/15 - 2/15 = （ ）",
+    "options": [
+      "a. 1/3",
+      "b. 2/3",
+      "c. 1/5",
+      "d. 2/5"
+    ],
+    "answer": "d. 2/5",
+    "image": "q-images/4DA_L12_Q02.png"
+  },
+  {
+    "id": "4DA_L12_Q03",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "5 7/9 - 2/9 = （ ）",
+    "options": [
+      "a. 5 1/3",
+      "b. 5 2/3",
+      "c. 5 1/9",
+      "d. 5 5/9"
+    ],
+    "answer": "d. 5 5/9",
+    "image": "q-images/4DA_L12_Q03.png"
+  },
+  {
+    "id": "4DA_L12_Q04",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "9 10/11 - 2 - 4 6/11 = （ ）",
+    "options": [
+      "a. 2 2/11",
+      "b. 2 4/11",
+      "c. 3 3/11",
+      "d. 3 4/11"
+    ],
+    "answer": "d. 3 4/11",
+    "image": "q-images/4DA_L12_Q04.png"
+  },
+  {
+    "id": "4DA_L12_Q05",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "四年級的女生中，長頭髮的佔 4/7，剩下的是短頭髮。短頭髮的女生佔全部女生的幾分之幾？",
+    "options": [
+      "a. 2/7",
+      "b. 3/7",
+      "c. 4/7",
+      "d. 5/7"
+    ],
+    "answer": "b. 3/7",
+    "image": "q-images/4DA_L12_Q05.png"
+  },
+  {
+    "id": "4DA_L12_Q06",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "妹妹原有絲帶 5 3/4 米，用去 1 1/4 米後，還餘 （ ） 米。",
+    "options": [
+      "a. 4",
+      "b. 4 1/2",
+      "c. 6 1/2",
+      "d. 7"
+    ],
+    "answer": "b. 4 1/2",
+    "image": "q-images/4DA_L12_Q06.png"
+  },
+  {
+    "id": "4DA_L12_Q07",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "家中有成人口罩 2 盒和兒童口罩 5/6 盒，每盒口罩的數量相同。成人口罩比兒童口罩多 （ ） 盒。",
+    "options": [
+      "a. 1 1/6",
+      "b. 1 5/6",
+      "c. 2 1/6",
+      "d. 2 5/6"
+    ],
+    "answer": "a. 1 1/6",
+    "image": "q-images/4DA_L12_Q07.png"
+  },
+  {
+    "id": "4DA_L12_Q08",
+    "grade": 4,
+    "unitKey": "fraction_sub",
+    "source": "第二版 4 下 A 單元三 第 12 課 同分母分數減法",
+    "topic": "4DA L12 同分母分數減法",
+    "question": "樂文原有 50 9/10 元，買麵包用去 9 7/10 元，買文具用去 10 1/10 元，還餘 （ ） 元。",
+    "options": [
+      "a. 30 2/5",
+      "b. 30 1/10",
+      "c. 31 2/5",
+      "d. 31 1/10"
+    ],
+    "answer": "d. 31 1/10",
+    "image": "q-images/4DA_L12_Q08.png"
+  },
+  {
+    "id": "4DA_L13_Q01",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "計算以下題目，並選出正確答案。（答案以最簡分數表示） 7/8 + 1/8 - 5/8 = （ ）",
+    "options": [
+      "a. 1/4",
+      "b. 1/8",
+      "c. 3/8",
+      "d. 5/8"
+    ],
+    "answer": "c. 3/8",
+    "image": "q-images/4DA_L13_Q01.png"
+  },
+  {
+    "id": "4DA_L13_Q02",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "計算以下題目，並選出正確答案。（答案以最簡分數表示） 4 5/11 - 1 2/11 + 2 3/11 = （ ）",
+    "options": [
+      "a. 4 4/11",
+      "b. 5 4/11",
+      "c. 5 5/11",
+      "d. 5 6/11"
+    ],
+    "answer": "d. 5 6/11",
+    "image": "q-images/4DA_L13_Q02.png"
+  },
+  {
+    "id": "4DA_L13_Q03",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "計算以下題目，並選出正確答案。（答案以最簡分數表示） 9/14 + 1 11/14 - 13/14 = （ ）",
+    "options": [
+      "a. 1/2",
+      "b. 1 1/2",
+      "c. 1 1/14",
+      "d. 1 7/14"
+    ],
+    "answer": "b. 1 1/2",
+    "image": "q-images/4DA_L13_Q03.png"
+  },
+  {
+    "id": "4DA_L13_Q04",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "計算以下題目，並選出正確答案。（答案以最簡分數表示） 6 - (4 4/5 - 1 2/5) = （ ）",
+    "options": [
+      "a. 1 1/5",
+      "b. 2 1/5",
+      "c. 2 3/5",
+      "d. 3 2/5"
+    ],
+    "answer": "c. 2 3/5",
+    "image": "q-images/4DA_L13_Q04.png"
+  },
+  {
+    "id": "4DA_L13_Q05",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "超級市場有午餐肉4 5/18箱，售出2 1/18箱後，再購入3箱。超級市場現有午餐肉 （ ） 箱。",
+    "options": [
+      "a. 5 1/6",
+      "b. 5 2/9",
+      "c. 6 1/3",
+      "d. 9 1/3"
+    ],
+    "answer": "b. 5 2/9",
+    "image": "q-images/4DA_L13_Q05.png"
+  },
+  {
+    "id": "4DA_L13_Q06",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "杯子售 20 3/10 元，碟子比杯子貴 4 7/10 元，碗比碟子便宜 2 9/10 元。一個碗售 （ ） 元。",
+    "options": [
+      "a. 12 7/10",
+      "b. 18 1/2",
+      "c. 22 1/10",
+      "d. 27 9/10"
+    ],
+    "answer": "c. 22 1/10",
+    "image": "q-images/4DA_L13_Q06.png"
+  },
+  {
+    "id": "4DA_L13_Q07",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "家中有紅葡萄 4/5 公斤和青葡萄 3/5 公斤，吃了紅葡萄 1/5 公斤後，還餘葡萄 （ ） 公斤。",
+    "options": [
+      "a. 1/5",
+      "b. 3/5",
+      "c. 1 1/5",
+      "d. 1 3/5"
+    ],
+    "answer": "c. 1 1/5",
+    "image": "q-images/4DA_L13_Q07.png"
+  },
+  {
+    "id": "4DA_L13_Q08",
+    "grade": 4,
+    "unitKey": "fraction_mix",
+    "source": "第二版 4 下 A 單元三 第 13 課 同分母分數加減混合運算",
+    "topic": "4DA L13 同分母分數加減混合運算",
+    "question": "繩子 A 長 14 1/2 米，繩子 B 長 15 米，爸爸包裝貨物用去繩子 B 5 1/2 米後，餘下的繩子 B 比繩子 A 短 （ ） 米。",
+    "options": [
+      "a. 4",
+      "b. 4 1/5",
+      "c. 5",
+      "d. 5 1/5"
+    ],
+    "answer": "c. 5",
+    "image": "q-images/4DA_L13_Q08.png"
+  },
+  {
+    "id": "4DB_L14_Q01",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "比較以下兩個圖形的面積，正方形的面積比三角形的 （ ）。",
+    "options": [
+      "a. 大",
+      "b. 小"
+    ],
+    "answer": "a. 大",
+    "image": "q-images/4DB_L14_Q01.png"
+  },
+  {
+    "id": "4DB_L14_Q02",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "根據□的數量，比較圖 X 和圖 Y 的面積。圖 X 的面積約等於 （ ） 個□的面積。",
+    "options": [
+      "14",
+      "17",
+      "7",
+      "1"
+    ],
+    "answer": "7",
+    "image": "q-images/4DB_L14_Q02.png"
+  },
+  {
+    "id": "4DB_L14_Q03",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "根據□的數量，比較圖 X 和圖 Y 的面積。圖 Y 的面積約等於 （ ） 個□的面積。",
+    "options": [
+      "8",
+      "80",
+      "4",
+      "16"
+    ],
+    "answer": "8",
+    "image": "q-images/4DB_L14_Q03.png"
+  },
+  {
+    "id": "4DB_L14_Q04",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "根據□的數量，比較圖 X 和圖 Y 的面積。哪個圖的面積較小？",
+    "options": [
+      "a. 圖 X",
+      "b. 圖 Y"
+    ],
+    "answer": "a. 圖 X",
+    "image": "q-images/4DB_L14_Q04.png"
+  },
+  {
+    "id": "4DB_L14_Q05",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "圖 A 的面積等於 （ ） 個方格的面積。",
+    "options": [
+      "1",
+      "60",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "image": "q-images/4DB_L14_Q05.png"
+  },
+  {
+    "id": "4DB_L14_Q06",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "圖 B 的面積等於 （ ） 個方格的面積。",
+    "options": [
+      "13",
+      "1",
+      "107",
+      "7"
+    ],
+    "answer": "7",
+    "image": "q-images/4DB_L14_Q06.png"
+  },
+  {
+    "id": "4DB_L14_Q07",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "圖 A 的面積比圖 B 的 （ ）。",
+    "options": [
+      "a. 大",
+      "b. 小"
+    ],
+    "answer": "b. 小",
+    "image": "q-images/4DB_L14_Q07.png"
+  },
+  {
+    "id": "4DB_L14_Q08",
+    "grade": 4,
+    "unitKey": "area_intro",
+    "source": "第二版 4 下 B 單元四 第 14 課 面積的認識",
+    "topic": "4DB L14 面積的認識",
+    "question": "圖 （ ） 的面積較大。",
+    "options": [
+      "a. C",
+      "b. D"
+    ],
+    "answer": "b. D",
+    "image": "q-images/4DB_L14_Q08.png"
+  },
+  {
+    "id": "4DB_L15_Q01",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "以下陰影部分的面積是 （ ） cm²。",
+    "options": [
+      "110",
+      "10",
+      "1",
+      "5"
+    ],
+    "answer": "10",
+    "image": "q-images/4DB_L15_Q01.png"
+  },
+  {
+    "id": "4DB_L15_Q02",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "圖卡 A 的面積約是 （ ） cm²。",
+    "options": [
+      "4",
+      "16",
+      "15",
+      "2"
+    ],
+    "answer": "16",
+    "image": "q-images/4DB_L15_Q02.png"
+  },
+  {
+    "id": "4DB_L15_Q03",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "圖卡 B 的面積約是 （ ） cm²。",
+    "options": [
+      "14",
+      "6",
+      "28",
+      "24"
+    ],
+    "answer": "14",
+    "image": "q-images/4DB_L15_Q03.png"
+  },
+  {
+    "id": "4DB_L15_Q04",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "量度及比較以下各圖卡的面積，哪一張圖卡的面積較小？",
+    "options": [
+      "a. 圖卡 A",
+      "b. 圖卡 B"
+    ],
+    "answer": "b. 圖卡 B",
+    "image": "q-images/4DB_L15_Q04.png"
+  },
+  {
+    "id": "4DB_L15_Q05",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "量度睡房地面的面積時，選用哪個面積單位較合適？",
+    "options": [
+      "a. cm²",
+      "b. m²"
+    ],
+    "answer": "b. m²",
+    "image": "q-images/4DB_L15_Q05.png"
+  },
+  {
+    "id": "4DB_L15_Q06",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "量度電話熒幕的面積時，選用哪個面積單位較合適？",
+    "options": [
+      "a. cm²",
+      "b. m²"
+    ],
+    "answer": "a. cm²",
+    "image": "q-images/4DB_L15_Q06.png"
+  },
+  {
+    "id": "4DB_L15_Q07",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "量度八達通卡的面積時，選用哪個面積單位較合適？",
+    "options": [
+      "a. cm²",
+      "b. m²"
+    ],
+    "answer": "a. cm²",
+    "image": "q-images/4DB_L15_Q07.png"
+  },
+  {
+    "id": "4DB_L15_Q08",
+    "grade": 4,
+    "unitKey": "area_measure",
+    "source": "第二版 4 下 B 單元四 第 15 課 面積的量度",
+    "topic": "4DB L15 面積的量度",
+    "question": "量度泳池裏水面的面積時，選用哪個面積單位較合適？",
+    "options": [
+      "a. cm²",
+      "b. m²"
+    ],
+    "answer": "b. m²",
+    "image": "q-images/4DB_L15_Q08.png"
+  },
+  {
+    "id": "4DB_L16_Q01",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以下長方形的面積是 （ ） cm²。",
+    "options": [
+      "120",
+      "600",
+      "60",
+      "40"
+    ],
+    "answer": "60",
+    "image": "q-images/4DB_L16_Q01.png"
+  },
+  {
+    "id": "4DB_L16_Q02",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以下長方形的面積是 （ ） 平方米。",
+    "options": [
+      "18",
+      "108",
+      "8",
+      "12"
+    ],
+    "answer": "8",
+    "image": "q-images/4DB_L16_Q02.png"
+  },
+  {
+    "id": "4DB_L16_Q03",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一張長方形名片長 7 cm，闊 4 cm，它的面積是 （ ） cm²。",
+    "options": [
+      "128",
+      "280",
+      "28",
+      "27"
+    ],
+    "answer": "28",
+    "image": "q-images/4DB_L16_Q03.png"
+  },
+  {
+    "id": "4DB_L16_Q04",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一個長方形花圃長 8 米，闊 3 米。花圃的面積是 （ ） 平方米。",
+    "options": [
+      "24",
+      "4",
+      "48",
+      "2"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "4DB_L16_Q05",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以上長方形的長是 （ ） cm。",
+    "options": [
+      "10",
+      "5",
+      "9",
+      "110"
+    ],
+    "answer": "10",
+    "image": "q-images/4DB_L16_Q05.png"
+  },
+  {
+    "id": "4DB_L16_Q06",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以上長方形的闊是 （ ） m。",
+    "options": [
+      "1",
+      "8",
+      "2",
+      "4"
+    ],
+    "answer": "4",
+    "image": "q-images/4DB_L16_Q06.png"
+  },
+  {
+    "id": "4DB_L16_Q07",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以下長方形的長是 （ ） 厘米。",
+    "options": [
+      "18",
+      "8",
+      "108",
+      "4"
+    ],
+    "answer": "8",
+    "image": "q-images/4DB_L16_Q07.png"
+  },
+  {
+    "id": "4DB_L16_Q08",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以下長方形的闊是 （ ） 米。",
+    "options": [
+      "107",
+      "70",
+      "17",
+      "7"
+    ],
+    "answer": "7",
+    "image": "q-images/4DB_L16_Q08.png"
+  },
+  {
+    "id": "4DB_L16_Q09",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以上正方形的面積是 （ ） cm²。",
+    "options": [
+      "164",
+      "74",
+      "640",
+      "64"
+    ],
+    "answer": "64",
+    "image": "q-images/4DB_L16_Q09.png"
+  },
+  {
+    "id": "4DB_L16_Q10",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "以上正方形的面積是 （ ） m²。",
+    "options": [
+      "288",
+      "124",
+      "144",
+      "14"
+    ],
+    "answer": "144",
+    "image": "q-images/4DB_L16_Q10.png"
+  },
+  {
+    "id": "4DB_L16_Q11",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一面正方形小鏡子的邊長是 7 cm，它的面積是 （ ） cm²。",
+    "options": [
+      "48",
+      "49",
+      "490",
+      "29"
+    ],
+    "answer": "49",
+    "image": "q-images/4DB_L16_Q11.png"
+  },
+  {
+    "id": "4DB_L16_Q12",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一塊正方形手帕的邊長是 20 厘米，它的面積是 （ ） 平方厘米。",
+    "options": [
+      "500",
+      "400",
+      "410",
+      "800"
+    ],
+    "answer": "400"
+  },
+  {
+    "id": "4DB_L16_Q13",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一張長方形明信片長 16 厘米，長比闊多 4 厘米。明信片的面積是 （ ） 平方厘米。",
+    "options": [
+      "384",
+      "1920",
+      "172",
+      "192"
+    ],
+    "answer": "192"
+  },
+  {
+    "id": "4DB_L16_Q14",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一條長方形浴巾闊 40 cm，長是闊的 2 倍。浴巾的面積是 （ ） cm²。",
+    "options": [
+      "3199",
+      "6400",
+      "1600",
+      "3200"
+    ],
+    "answer": "3200",
+    "image": "q-images/4DB_L16_Q14.png"
+  },
+  {
+    "id": "4DB_L16_Q15",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "一塊長方形告示板上，剛好鋪滿了 8 張正方形通告，每張通告邊長 24 厘米，告示板的面積是 （ ） 平方厘米。",
+    "options": [
+      "4618",
+      "4608",
+      "2304",
+      "4607"
+    ],
+    "answer": "4608"
+  },
+  {
+    "id": "4DB_L16_Q16",
+    "grade": 4,
+    "unitKey": "area_rect_square",
+    "source": "第二版 4 下 B 單元四 第 16 課 長方形和正方形的面積",
+    "topic": "4DB L16 長方形和正方形的面積",
+    "question": "陳先生有一塊長 20 m 的長方形菜田，他把菜田分成兩塊大小相同的正方形菜田，如上圖所示。每塊正方形菜田的面積是 （ ） m²。",
+    "options": [
+      "110",
+      "100",
+      "50",
+      "99"
+    ],
+    "answer": "100",
+    "image": "q-images/4DB_L16_Q16.png"
+  },
+  {
+    "id": "4DB_L17_Q01",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "以上平面圖形的面積是 （ ） cm²。",
+    "options": [
+      "6",
+      "114",
+      "14",
+      "1"
+    ],
+    "answer": "14",
+    "image": "q-images/4DB_L17_Q01.png"
+  },
+  {
+    "id": "4DB_L17_Q02",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "以上平面圖形的面積是 （ ） m²。",
+    "options": [
+      "156",
+      "1760",
+      "276",
+      "176"
+    ],
+    "answer": "176",
+    "image": "q-images/4DB_L17_Q02.png"
+  },
+  {
+    "id": "4DB_L17_Q03",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "詠彤用三個大小相同的長方形拼砌出上圖。上圖的面積是 （ ） cm²。",
+    "options": [
+      "82",
+      "144",
+      "52",
+      "72"
+    ],
+    "answer": "72",
+    "image": "q-images/4DB_L17_Q03.png"
+  },
+  {
+    "id": "4DB_L17_Q04",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "哥哥從一張正方形卡紙剪去一個長方形後，得出上圖。上圖的面積是 （ ） cm²。",
+    "options": [
+      "211",
+      "201",
+      "402",
+      "301"
+    ],
+    "answer": "201",
+    "image": "q-images/4DB_L17_Q04.png"
+  },
+  {
+    "id": "4DB_L17_Q05",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "一張正方形貼紙的周界是 12 厘米。貼紙的面積是 （ ） 平方厘米。",
+    "options": [
+      "8",
+      "109",
+      "9",
+      "11"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "4DB_L17_Q06",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "一條長方形毛巾長 48 cm，周界是 160 cm。毛巾的面積是 （ ） cm²。",
+    "options": [
+      "1636",
+      "1536",
+      "3072",
+      "154"
+    ],
+    "answer": "1536",
+    "image": "q-images/4DB_L17_Q06.png"
+  },
+  {
+    "id": "4DB_L17_Q07",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "長方形草地闊 8 米，面積是 96 平方米。草地的周界是 （ ） 米。",
+    "options": [
+      "140",
+      "50",
+      "20",
+      "40"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "4DB_L17_Q08",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "上圖中，正方形 A 的周界是 28 cm，正方形 B 的周界是 36 cm。它們的面積相差 （ ） cm²。",
+    "options": [
+      "32",
+      "3",
+      "31",
+      "16"
+    ],
+    "answer": "32",
+    "image": "q-images/4DB_L17_Q08.png"
+  },
+  {
+    "id": "4DB_L17_Q09",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "文欣把兩張長 20 cm，闊 10 cm 的長方形紙以部分重疊的方法組成一個大長方形，如上圖所示。大長方形的面積是 （ ） cm²。",
+    "options": [
+      "740",
+      "185",
+      "37",
+      "370"
+    ],
+    "answer": "370",
+    "image": "q-images/4DB_L17_Q09.png"
+  },
+  {
+    "id": "4DB_L17_Q10",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "上圖由兩張長 25 cm，闊 5 cm 的長方形紙條以部分重疊的方法拼砌而成。整個圖形的面積是 （ ） cm²。",
+    "options": [
+      "112",
+      "325",
+      "205",
+      "225"
+    ],
+    "answer": "225",
+    "image": "q-images/4DB_L17_Q10.png"
+  },
+  {
+    "id": "4DB_L17_Q11",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "心妍有一張邊長 50 cm 的正方形卡紙，她把卡紙剪成若干張邊長 5 cm 的小正方形卡紙。她可得小正方形卡紙 （ ） 張。",
+    "options": [
+      "10",
+      "200",
+      "100",
+      "50"
+    ],
+    "answer": "100",
+    "image": "q-images/4DB_L17_Q11.png"
+  },
+  {
+    "id": "4DB_L17_Q12",
+    "grade": 4,
+    "unitKey": "area_plane",
+    "source": "第二版 4 下 B 單元四 第 17 課 平面圖形的面積",
+    "topic": "4DB L17 平面圖形的面積",
+    "question": "樂軒有一些邊長 6 cm 的正方形瓷磚，他想用這些瓷磚鋪成一個長 72 cm，闊 54cm 的長方形。他共需瓷磚 （ ） 塊。",
+    "options": [
+      "11",
+      "108",
+      "1080",
+      "88"
+    ],
+    "answer": "108",
+    "image": "q-images/4DB_L17_Q12.png"
+  },
+  {
+    "id": "4DB_L18_Q01",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "以下哪個是「0.2」的讀法？",
+    "options": [
+      "a. 點二",
+      "b. 零二",
+      "c. 零點二",
+      "d. 二"
+    ],
+    "answer": "c. 零點二"
+  },
+  {
+    "id": "4DB_L18_Q02",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "1 3/10 可寫作以下哪個小數？",
+    "options": [
+      "a. 110.3",
+      "b. 13.10",
+      "c. 10.13",
+      "d. 1.3"
+    ],
+    "answer": "d. 1.3",
+    "image": "q-images/4DB_L18_Q02.png"
+  },
+  {
+    "id": "4DB_L18_Q03",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "選出正確的答案。每個方格表示 1，用分數和小數表示陰影部分所表示的數值。",
+    "options": [
+      "a. 用分數表示：4/10；用小數表示：4.0",
+      "b. 用分數表示：4/10；用小數表示：0.4"
+    ],
+    "answer": "b. 用分數表示：4/10；用小數表示：0.4",
+    "image": "q-images/4DB_L18_Q03.png"
+  },
+  {
+    "id": "4DB_L18_Q04",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "選出正確的答案。每個方格表示 1，用分數和小數表示陰影部分所表示的數值。",
+    "options": [
+      "a. 用分數表示：1 5/10；用小數表示：1.5",
+      "b. 用分數表示：1 5/10；用小數表示：5.1"
+    ],
+    "answer": "a. 用分數表示：1 5/10；用小數表示：1.5",
+    "image": "q-images/4DB_L18_Q04.png"
+  },
+  {
+    "id": "4DB_L18_Q05",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "以下哪個是「1.18」的讀法？",
+    "options": [
+      "a. 一一八",
+      "b. 一點十八",
+      "c. 一點一八",
+      "d. 一十八"
+    ],
+    "answer": "c. 一點一八"
+  },
+  {
+    "id": "4DB_L18_Q06",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "以下哪個小數讀作零點二零一七？",
+    "options": [
+      "a. 0.217",
+      "b. 0.2107",
+      "c. 0.0217",
+      "d. 0.2017"
+    ],
+    "answer": "d. 0.2017"
+  },
+  {
+    "id": "4DB_L18_Q07",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "567/1000 可寫作 （ ），這個小數讀作 （ ）。",
+    "options": [
+      "a. 0.567；零點五六七",
+      "b. 5.67；五點六七"
+    ],
+    "answer": "a. 0.567；零點五六七",
+    "image": "q-images/4DB_L18_Q07.png"
+  },
+  {
+    "id": "4DB_L18_Q08",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "2 1369/10000 可寫作 （ ），這個小數讀作 （ ）。",
+    "options": [
+      "a. 0.21369；零點二一三六九",
+      "b. 2.1369；二點一三六九"
+    ],
+    "answer": "b. 2.1369；二點一三六九",
+    "image": "q-images/4DB_L18_Q08.png"
+  },
+  {
+    "id": "4DB_L18_Q09",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "在 7.869 這個數中，哪個數字在十分位？",
+    "options": [
+      "a. 7",
+      "b. 8",
+      "c. 6",
+      "d. 9"
+    ],
+    "answer": "b. 8"
+  },
+  {
+    "id": "4DB_L18_Q10",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "在 3.412 這個數中，「1」表示的數值是甚麼？",
+    "options": [
+      "a. 1",
+      "b. 1/10",
+      "c. 1/100",
+      "d. 1/1000"
+    ],
+    "answer": "c. 1/100",
+    "image": "q-images/4DB_L18_Q10_c.png"
+  },
+  {
+    "id": "4DB_L18_Q11",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "以下哪個數中的千分位數字是「3」？",
+    "options": [
+      "a. 0.6543",
+      "b. 6.543",
+      "c. 65.43",
+      "d. 654.3"
+    ],
+    "answer": "b. 6.543"
+  },
+  {
+    "id": "4DB_L18_Q12",
+    "grade": 4,
+    "unitKey": "decimal_1",
+    "source": "第二版 4 下 B 單元五 第 18 課 小數的認識（一）",
+    "topic": "4DB L18 小數的認識（一）",
+    "question": "以下哪個數的數值與 0.021 的相等？",
+    "options": [
+      "a. 2.1",
+      "b. 0.0021",
+      "c. 0.21",
+      "d. 0.0210"
+    ],
+    "answer": "d. 0.0210"
+  },
+  {
+    "id": "4DB_L19_Q01",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "選出較小的數。",
+    "options": [
+      "a. 7.3",
+      "b. 6.9"
+    ],
+    "answer": "b. 6.9",
+    "image": "q-images/4DB_L19_Q01_b.png"
+  },
+  {
+    "id": "4DB_L19_Q02",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "選出較小的數。",
+    "options": [
+      "a. 3.148",
+      "b. 3 11/100"
+    ],
+    "answer": "b. 3 11/100",
+    "image": "q-images/4DB_L19_Q02_b.png"
+  },
+  {
+    "id": "4DB_L19_Q03",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "把以下的數由小至大排列出來。",
+    "options": [
+      "a. 8.523 < 6.99 < 8.571",
+      "b. 6.99 < 8.523 < 8.571",
+      "c. 6.99 < 8.571 < 8.523",
+      "d. 8.571 < 8.523 < 6.99"
+    ],
+    "answer": "b. 6.99 < 8.523 < 8.571",
+    "image": "q-images/4DB_L19_Q03.png"
+  },
+  {
+    "id": "4DB_L19_Q04",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "把以下的數由大至小排列出來。",
+    "options": [
+      "a. 4.838 > 4.826 > 4 7/10",
+      "b. 4 7/10 > 4.838 > 4.826",
+      "c. 4.838 > 4 7/10 > 4.826"
+    ],
+    "answer": "a. 4.838 > 4.826 > 4 7/10",
+    "image": "q-images/4DB_L19_Q04.png"
+  },
+  {
+    "id": "4DB_L19_Q05",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 9元6角 = 9 6/10元 = 9.6元",
+      "b. 9元6角 = 6 9/10元 = 6.9元"
+    ],
+    "answer": "a. 9元6角 = 9 6/10元 = 9.6元",
+    "image": "q-images/4DB_L19_Q05_a.png"
+  },
+  {
+    "id": "4DB_L19_Q06",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 825克 = 825/100公斤 = 8.25公斤",
+      "b. 825克 = 825/1000公斤 = 0.825公斤"
+    ],
+    "answer": "b. 825克 = 825/1000公斤 = 0.825公斤",
+    "image": "q-images/4DB_L19_Q06_b.png"
+  },
+  {
+    "id": "4DB_L19_Q07",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 120毫升 = 120/100升 = 1.2升",
+      "b. 120毫升 = 120/1000升 = 0.12升"
+    ],
+    "answer": "b. 120毫升 = 120/1000升 = 0.12升",
+    "image": "q-images/4DB_L19_Q07_b.png"
+  },
+  {
+    "id": "4DB_L19_Q08",
+    "grade": 4,
+    "unitKey": "decimal_2",
+    "source": "第二版 4 下 B 單元五 第 19 課 小數的認識（二）",
+    "topic": "4DB L19 小數的認識（二）",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 1.7厘米 = 1 7/10厘米 = 17/10厘…",
+      "b. 1.7厘米 = 1 7/100厘米 = 17/10…"
+    ],
+    "answer": "a. 1.7厘米 = 1 7/10厘米 = 17/10厘…",
+    "image": "q-images/4DB_L19_Q08_a.png"
+  },
+  {
+    "id": "4DB_L20_Q01",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "0.7 + 6.1 = （ ）",
+    "options": [
+      "5.80",
+      "6.8",
+      "3.40",
+      "13.60"
+    ],
+    "answer": "6.8"
+  },
+  {
+    "id": "4DB_L20_Q02",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "3.2 + 2.7 = （ ）",
+    "options": [
+      "5.9",
+      "2.95",
+      "4.90",
+      "11.80"
+    ],
+    "answer": "5.9"
+  },
+  {
+    "id": "4DB_L20_Q03",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "6 + 7.3 = （ ）",
+    "options": [
+      "12.30",
+      "13.3",
+      "13.20",
+      "13.29"
+    ],
+    "answer": "13.3"
+  },
+  {
+    "id": "4DB_L20_Q04",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "5.8 + 4.2 = （ ）",
+    "options": [
+      "20",
+      "10",
+      "9",
+      "100"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "4DB_L20_Q05",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "6.04 + 8.19 = （ ）",
+    "options": [
+      "14.23",
+      "14.13",
+      "14.22",
+      "13.23"
+    ],
+    "answer": "14.23"
+  },
+  {
+    "id": "4DB_L20_Q06",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "5.45 + 3.2 + 7.8 = （ ）",
+    "options": [
+      "16.45",
+      "16.35",
+      "15.45",
+      "16.44"
+    ],
+    "answer": "16.45"
+  },
+  {
+    "id": "4DB_L20_Q07",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 結果約是：21 + 4 = 25",
+      "b. 結果約是：22 + 5 = 27"
+    ],
+    "answer": "b. 結果約是：22 + 5 = 27",
+    "image": "q-images/4DB_L20_Q07_b.png"
+  },
+  {
+    "id": "4DB_L20_Q08",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 結果約是：19 + 30 = 49",
+      "b. 結果約是：18 + 30 = 48"
+    ],
+    "answer": "a. 結果約是：19 + 30 = 49",
+    "image": "q-images/4DB_L20_Q08_a.png"
+  },
+  {
+    "id": "4DB_L20_Q09",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "6.4 – 3.1 = （ ）",
+    "options": [
+      "3.3",
+      "3.20",
+      "1.65",
+      "2.30"
+    ],
+    "answer": "3.3"
+  },
+  {
+    "id": "4DB_L20_Q10",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "14.7 – 2.8 = （ ）",
+    "options": [
+      "10.90",
+      "11.9",
+      "11.89",
+      "11.80"
+    ],
+    "answer": "11.9"
+  },
+  {
+    "id": "4DB_L20_Q11",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 結果約是：17 – 4 = 13",
+      "b. 結果約是：16 – 4 = 12"
+    ],
+    "answer": "a. 結果約是：17 – 4 = 13",
+    "image": "q-images/4DB_L20_Q11_a.png"
+  },
+  {
+    "id": "4DB_L20_Q12",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. 結果約是：25 – 11 = 14",
+      "b. 結果約是：25 – 10 = 15"
+    ],
+    "answer": "a. 結果約是：25 – 11 = 14",
+    "image": "q-images/4DB_L20_Q12_a.png"
+  },
+  {
+    "id": "4DB_L20_Q13",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "8.56 – 3.12 = （ ）",
+    "options": [
+      "2.72",
+      "4.44",
+      "10.88",
+      "5.44"
+    ],
+    "answer": "5.44"
+  },
+  {
+    "id": "4DB_L20_Q14",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "20.08 – 6.28 = （ ）",
+    "options": [
+      "13.79",
+      "13.70",
+      "12.80",
+      "13.8"
+    ],
+    "answer": "13.8"
+  },
+  {
+    "id": "4DB_L20_Q15",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "30 – 11.6 – 14.21 =？",
+    "options": [
+      "a. 15.29",
+      "b. 14.29",
+      "c. 4.19",
+      "d. 3.19"
+    ],
+    "answer": "c. 4.19"
+  },
+  {
+    "id": "4DB_L20_Q16",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "以下哪道算式最適合估算 58.4 – 26.8 的結果？",
+    "options": [
+      "a. 58 – 27",
+      "b. 59 – 27",
+      "c. 58 – 26",
+      "d. 59 – 26"
+    ],
+    "answer": "a. 58 – 27"
+  },
+  {
+    "id": "4DB_L20_Q17",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "媽媽原有紅豆 1.45 公斤，做紅豆糕用去 0.87 公斤後，還餘紅豆 （ ） 公斤。",
+    "options": [
+      "0.42",
+      "0.29",
+      "0.48",
+      "0.58"
+    ],
+    "answer": "0.58"
+  },
+  {
+    "id": "4DB_L20_Q18",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "偉森有 16.8 元，思南有 26.4 元，雅琳有 32.4 元。他們三人共有 （ ） 元。",
+    "options": [
+      "75.6",
+      "37.80",
+      "151.20",
+      "74.60"
+    ],
+    "answer": "75.6"
+  },
+  {
+    "id": "4DB_L20_Q19",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "詠怡由家出發，經圖書館前往公園，她全程共走了 （ ） 公里。",
+    "options": [
+      "4.01",
+      "4.11",
+      "3.11",
+      "2.06"
+    ],
+    "answer": "4.11",
+    "image": "q-images/4DB_L20_Q19.png"
+  },
+  {
+    "id": "4DB_L20_Q20",
+    "grade": 4,
+    "unitKey": "decimal_add_sub",
+    "source": "第二版 4 下 B 單元五 第 20 課 小數加法和減法",
+    "topic": "4DB L20 小數加法和減法",
+    "question": "柏文有 64.1 元，樂之比柏文少 40.7 元。樂之有 （ ） 元。",
+    "options": [
+      "11.70",
+      "22.40",
+      "23.30",
+      "23.4"
+    ],
+    "answer": "23.4"
+  },
+  {
+    "id": "4DB_L21_Q01",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 9.6 - 3.15",
+      "b. = 5 - 1.45"
+    ],
+    "answer": "a. = 9.6 - 3.15",
+    "image": "q-images/4DB_L21_Q01_a.png"
+  },
+  {
+    "id": "4DB_L21_Q02",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 14.34 + 21.6",
+      "b. = 16.34 + 21.6"
+    ],
+    "answer": "b. = 16.34 + 21.6",
+    "image": "q-images/4DB_L21_Q02_b.png"
+  },
+  {
+    "id": "4DB_L21_Q03",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 28.79 - 12.5",
+      "b. = 12.29 - 4"
+    ],
+    "answer": "a. = 28.79 - 12.5",
+    "image": "q-images/4DB_L21_Q03_a.png"
+  },
+  {
+    "id": "4DB_L21_Q04",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "選出正確的答案。",
+    "options": [
+      "a. = 16.86 + 8.5",
+      "b. = 20.28 - 11.92"
+    ],
+    "answer": "b. = 20.28 - 11.92",
+    "image": "q-images/4DB_L21_Q04_b.png"
+  },
+  {
+    "id": "4DB_L21_Q05",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "家中原有茶葉 0.7 公斤，用了 0.52 公斤後，爸爸再買回 0.55 公斤。家中現有茶葉 （ ） 公斤。",
+    "options": [
+      "0.73",
+      "0.36",
+      "0.27",
+      "0.63"
+    ],
+    "answer": "0.73"
+  },
+  {
+    "id": "4DB_L21_Q06",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "媽媽用 1.2 升汽水和 0.8 升橙汁調製一瓶雜果賓治，她喝了 0.38 升雜果賓治後，還餘雜果賓治 （ ） 升。",
+    "options": [
+      "0.81",
+      "1.62",
+      "0.62",
+      "1.52"
+    ],
+    "answer": "1.62"
+  },
+  {
+    "id": "4DB_L21_Q07",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "家中有兩包分別重 0.4 公斤和 0.86 公斤的紅豆，另有一包重 1.3 公斤的綠豆。家中的紅豆比綠豆少 （ ） 公斤。",
+    "options": [
+      "0.04",
+      "0.02",
+      "0.05",
+      "0.03"
+    ],
+    "answer": "0.04"
+  },
+  {
+    "id": "4DB_L21_Q08",
+    "grade": 4,
+    "unitKey": "decimal_mix",
+    "source": "第二版 4 下 B 單元五 第 21 課 小數加減混合運算",
+    "topic": "4DB L21 小數加減混合運算",
+    "question": "紫曈有兩卷絲帶，每卷長 1.75 米。她用去絲帶 0.88 米後，還餘絲帶 （ ） 米。",
+    "options": [
+      "2.62",
+      "2.52",
+      "1.62",
+      "1.31"
+    ],
+    "answer": "2.62"
+  },
+  {
+    "id": "4DB_L22_Q01",
+    "grade": 4,
+    "unitKey": "bar_chart_1",
+    "source": "第二版 4 下 B 單元六 第 22 課 棒形圖（一）",
+    "topic": "4DB L22 棒形圖（一）",
+    "question": "以下的棒形圖顯示星星快餐店五間分店昨天售出火鍋套餐的數量。分店 （ ） 售出的火鍋套餐最多，有 （ ） 份。",
+    "options": [
+      "a. A；110",
+      "b. A；100",
+      "c. E；100",
+      "d. E；90"
+    ],
+    "answer": "b. A；100",
+    "image": "q-images/4DB_L22_Q01.png"
+  },
+  {
+    "id": "4DB_L22_Q02",
+    "grade": 4,
+    "unitKey": "bar_chart_1",
+    "source": "第二版 4 下 B 單元六 第 22 課 棒形圖（一）",
+    "topic": "4DB L22 棒形圖（一）",
+    "question": "以下的棒形圖顯示星星快餐店五間分店昨天售出火鍋套餐的數量。分店 （ ） 售出的火鍋套餐最少，只有 （ ） 份。",
+    "options": [
+      "a. A；100",
+      "b. B；20",
+      "c. B；15",
+      "d. C；35"
+    ],
+    "answer": "b. B；20",
+    "image": "q-images/4DB_L22_Q02.png"
+  },
+  {
+    "id": "4DB_L22_Q03",
+    "grade": 4,
+    "unitKey": "bar_chart_1",
+    "source": "第二版 4 下 B 單元六 第 22 課 棒形圖（一）",
+    "topic": "4DB L22 棒形圖（一）",
+    "question": "以下的棒形圖顯示星星快餐店五間分店昨天售出火鍋套餐的數量。分店 E 售出的火鍋套餐比分店 D 的 ( 多 / 少 ) （ ） 份。",
+    "options": [
+      "a. 多；30",
+      "b. 多；35",
+      "c. 少；30",
+      "d. 少；35"
+    ],
+    "answer": "b. 多；35",
+    "image": "q-images/4DB_L22_Q03.png"
+  },
+  {
+    "id": "4DB_L22_Q04",
+    "grade": 4,
+    "unitKey": "bar_chart_1",
+    "source": "第二版 4 下 B 單元六 第 22 課 棒形圖（一）",
+    "topic": "4DB L22 棒形圖（一）",
+    "question": "以下的棒形圖顯示星星快餐店五間分店昨天售出火鍋套餐的數量。星星快餐店五間分店售出火鍋套餐的總數是 （ ） 份。",
+    "options": [
+      "150",
+      "280",
+      "3000",
+      "300"
+    ],
+    "answer": "300",
+    "image": "q-images/4DB_L22_Q04.png"
+  },
+  {
+    "id": "4DB_L23_Q01",
+    "grade": 4,
+    "unitKey": "rounding",
+    "source": "第二版 4 下 B 單元六 第 23 課 棒形圖（二）",
+    "topic": "4DB L23 四捨五入",
+    "question": "用四捨五入法，把 42 湊整至十位。42 的近似值是 （ ）。",
+    "options": [
+      "140",
+      "20",
+      "40",
+      "400"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "4DB_L23_Q02",
+    "grade": 4,
+    "unitKey": "rounding",
+    "source": "第二版 4 下 B 單元六 第 23 課 棒形圖（二）",
+    "topic": "4DB L23 四捨五入",
+    "question": "用四捨五入法，把 175 湊整至十位。175 的近似值是 （ ）。",
+    "options": [
+      "280",
+      "180",
+      "160",
+      "190"
+    ],
+    "answer": "180"
+  },
+  {
+    "id": "4DB_L23_Q03",
+    "grade": 4,
+    "unitKey": "rounding",
+    "source": "第二版 4 下 B 單元六 第 23 課 棒形圖（二）",
+    "topic": "4DB L23 四捨五入",
+    "question": "用四捨五入法，把 281 湊整至百位。281 的近似值是 （ ）。",
+    "options": [
+      "400",
+      "280",
+      "300",
+      "310"
+    ],
+    "answer": "300"
+  },
+  {
+    "id": "4DB_L23_Q04",
+    "grade": 4,
+    "unitKey": "rounding",
+    "source": "第二版 4 下 B 單元六 第 23 課 棒形圖（二）",
+    "topic": "4DB L23 四捨五入",
+    "question": "用四捨五入法，把 912 湊整至百位。912 的近似值是 （ ）。",
+    "options": [
+      "910",
+      "1000",
+      "900",
+      "9000"
+    ],
+    "answer": "900"
   }
 ];
