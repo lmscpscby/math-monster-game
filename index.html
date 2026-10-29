@@ -50,6 +50,12 @@
             box-shadow: 0 12px 30px -5px rgba(236, 72, 153, 0.4);
         }
 
+        .avatar-preset-btn.is-selected {
+            border-color: rgba(244, 114, 182, 0.95);
+            box-shadow: 0 0 16px rgba(236, 72, 153, 0.5);
+            background: rgba(236, 72, 153, 0.16);
+        }
+
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -1006,11 +1012,12 @@
             </div>
 
             <div id="player-dashboard" class="flex flex-wrap items-center justify-end gap-2 sm:gap-3 min-w-0 flex-1 basis-full sm:basis-auto sm:flex-initial">
-                <div class="flex items-center space-x-2 bg-purple-950/60 px-3 py-1.5 rounded-xl border border-purple-500/30 min-w-0 max-w-[46vw] sm:max-w-[14rem]">
-                    <button type="button" id="header-avatar-btn" onclick="openLobbyAvatarModal()" title="換頭像" aria-label="換頭像" class="w-8 h-8 shrink-0 rounded-lg bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold text-sm overflow-hidden border border-pink-400/30 hover:border-pink-300">
-                        <img id="header-avatar-img" alt="" class="hidden w-full h-full object-cover">
-                        <i id="header-avatar-glyph" class="fa-solid fa-user-astronaut"></i>
+                <div class="flex items-center gap-1.5 bg-purple-950/60 pl-1.5 pr-2.5 py-1.5 rounded-xl border border-purple-500/30 min-w-0 max-w-[72vw] sm:max-w-[17rem]">
+                    <button type="button" id="header-avatar-btn" onclick="openAvatarPicker()" class="relative w-8 h-8 shrink-0 rounded-lg bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold text-sm overflow-hidden border border-pink-400/35 hover:border-pink-300 hover:bg-pink-500/30 transition-colors" title="撳一下換大廳頭像" aria-label="更換大廳頭像" aria-haspopup="dialog">
+                        <i id="header-avatar-fallback" class="fa-solid fa-user-astronaut"></i>
+                        <img id="header-avatar-img" alt="" class="hidden absolute inset-0 w-full h-full object-cover">
                     </button>
+                    <button type="button" id="header-avatar-change-btn" onclick="openAvatarPicker()" class="shrink-0 px-1.5 py-1 rounded-lg bg-pink-500/15 hover:bg-pink-500/30 border border-pink-400/35 text-pink-200 text-[10px] font-black leading-none" title="更換大廳頭像" aria-haspopup="dialog">換頭像</button>
                     <div class="text-xs min-w-0">
                         <div id="user-display-name" class="font-bold text-slate-100 truncate">未登入</div>
                         <div id="user-display-school" class="text-[10px] text-pink-200/70 truncate hidden sm:block">訪客模式</div>
@@ -1100,7 +1107,7 @@
                     </div>
                 </button>
 
-                <button onclick="switchView('ranked')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-purple-400">
+                <button onclick="switchView('ranked')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group min-h-48 h-auto border-l-4 border-l-purple-400">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-ranking-star"></i>
@@ -1110,6 +1117,7 @@
                     <div>
                         <h3 class="text-xl font-extrabold text-white group-hover:text-purple-300 transition-colors">排位賽模式</h3>
                         <p class="text-xs text-slate-300 mt-1">10LV(水) / 20LV(火) / 30LV(草) / 40LV(雷) 雙 BOSS 固定連戰！</p>
+                        <p id="home-season-line" class="text-[10px] text-amber-200 mt-1 font-bold">賽季載入中…</p>
                     </div>
                 </button>
 
@@ -1192,6 +1200,16 @@
                         <div id="admin-stats-by-class" class="space-y-1.5 max-h-48 overflow-y-auto text-xs"></div>
                     </div>
                 </div>
+                <div class="border-t border-rose-500/20 pt-4 space-y-3">
+                    <h4 class="text-xs font-black text-slate-300">排位賽季結算</h4>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／冠軍怪獸 id），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="adminPreviewSeason()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-100 text-xs font-bold">預覽今季頭10</button>
+                        <button type="button" onclick="adminSettleSeason()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-100 text-xs font-bold">結算已結束賽季</button>
+                    </div>
+                    <div id="admin-season-status" class="text-xs text-slate-300"></div>
+                    <div id="admin-season-preview" class="text-xs text-slate-200 space-y-2"></div>
+                </div>
             </div>
         </section>
 
@@ -1222,6 +1240,15 @@
                     <div id="ranked-current-score" class="text-3xl font-black text-amber-300 my-1">0</div>
                     <div id="ranked-current-rank" class="text-xs text-pink-300 font-bold">段位: 數理新秀</div>
                 </div>
+            </div>
+
+            <div id="season-banner" class="glass-panel p-4 sm:p-5 rounded-3xl border border-amber-400/40 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div class="min-w-0">
+                    <div class="text-[10px] font-black tracking-wide text-amber-200/80">排位賽季（香港時間）</div>
+                    <div id="season-epoch-label" class="text-xl font-black text-white mt-0.5">第 1 賽季</div>
+                    <div id="season-countdown" class="text-xs text-amber-100 mt-1 font-bold">距離結算 …</div>
+                </div>
+                <p id="season-reward-rules" class="text-[11px] sm:text-xs text-slate-200 leading-relaxed lg:max-w-xl lg:text-right"></p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -1552,6 +1579,38 @@
         </div>
     </div>
 
+    <!-- LOBBY AVATAR PICKER（只影響大廳頂部，唔影響排行榜／戰鬥） -->
+    <div id="avatar-picker-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="avatar-picker-title">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-pink-400/70 relative max-h-[92vh] overflow-y-auto">
+            <button type="button" onclick="closeAvatarPicker()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="關閉"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            <div class="text-center pr-6">
+                <h3 id="avatar-picker-title" class="text-xl font-black text-pink-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-dragon"></i> 揀一個大廳頭像
+                </h3>
+                <p class="text-[10px] sm:text-xs text-slate-300 mt-1 leading-relaxed">只會顯示喺大廳頂部。排行榜同戰鬥畫面唔會轉。上傳會裁成正方形並壓縮。</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-pink-400/60 bg-slate-900 flex items-center justify-center">
+                    <img id="lobby-avatar-preview" alt="頭像預覽" class="hidden w-full h-full object-cover">
+                    <i id="lobby-avatar-preview-glyph" class="fa-solid fa-user-astronaut text-2xl text-pink-300"></i>
+                </div>
+                <p id="lobby-avatar-preview-note" class="text-[11px] text-slate-400 text-center">可揀預設獸，或上傳一張相</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-2">
+                <label for="lobby-avatar-file" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 border border-pink-400/40 text-pink-100 text-xs font-black cursor-pointer">
+                    <i class="fa-solid fa-upload"></i>
+                    <span>上傳頭像</span>
+                </label>
+                <input id="lobby-avatar-file" type="file" accept="image/jpeg,image/png,image/webp" class="hidden" onchange="onLobbyAvatarFileSelected(event)">
+                <button type="button" id="lobby-avatar-reset" onclick="resetLobbyAvatarToPreset()" class="hidden px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold">重設為預設</button>
+            </div>
+            <div id="avatar-picker-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 max-h-[42vh] overflow-y-auto p-1"></div>
+            <button type="button" onclick="closeAvatarPicker()" class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-black rounded-xl text-xs border border-slate-600">
+                關閉
+            </button>
+        </div>
+    </div>
+
     <!-- TEAM SELECTION MODAL -->
     <div id="team-select-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 hidden">
         <div class="glass-panel w-full max-w-2xl rounded-3xl p-6 space-y-4 border border-pink-500/30">
@@ -1572,37 +1631,6 @@
                 <button onclick="closeTeamSelectModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl">取消</button>
                 <button onclick="startBattleWithSelectedTeam()" class="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg">進入戰鬥</button>
             </div>
-        </div>
-    </div>
-
-    <!-- 大廳頭像：預設獸 + 本機上傳（只影響 header，唔影響排行榜／戰鬥） -->
-    <div id="lobby-avatar-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 hidden" onclick="if (event.target === this) closeLobbyAvatarModal()">
-        <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-4 border border-pink-500/30 max-h-[92vh] overflow-y-auto">
-            <div class="flex justify-between items-center border-b border-purple-500/20 pb-3">
-                <h3 class="font-extrabold text-lg text-white">揀大廳頭像</h3>
-                <button type="button" onclick="closeLobbyAvatarModal()" class="text-slate-400 hover:text-white" aria-label="關閉"><i class="fa-solid fa-xmark text-xl"></i></button>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-                <div class="w-28 h-28 rounded-2xl overflow-hidden border-2 border-pink-400/60 bg-slate-900 flex items-center justify-center">
-                    <img id="lobby-avatar-preview" alt="頭像預覽" class="hidden w-full h-full object-cover">
-                    <i id="lobby-avatar-preview-glyph" class="fa-solid fa-user-astronaut text-3xl text-pink-300"></i>
-                </div>
-                <p id="lobby-avatar-preview-note" class="text-[11px] text-slate-400 text-center">正方形裁切預覽</p>
-            </div>
-            <div>
-                <div class="text-xs font-semibold text-slate-300 mb-2">預設獸</div>
-                <div id="lobby-avatar-presets" class="grid grid-cols-4 sm:grid-cols-7 gap-2 max-h-52 overflow-y-auto p-1"></div>
-            </div>
-            <div class="flex flex-wrap items-center gap-2">
-                <label for="lobby-avatar-file" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 border border-pink-400/40 text-pink-100 text-xs font-black cursor-pointer">
-                    <i class="fa-solid fa-upload"></i>
-                    <span>上傳頭像</span>
-                </label>
-                <input id="lobby-avatar-file" type="file" accept="image/jpeg,image/png,image/webp" class="hidden" onchange="onLobbyAvatarFileSelected(event)">
-                <button type="button" id="lobby-avatar-reset" onclick="resetLobbyAvatarToPreset()" class="hidden px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold">重設為預設</button>
-            </div>
-            <p class="text-[10px] text-slate-400 leading-relaxed">會裁成正方形並壓縮。自訂相只顯示喺大廳，排行榜同戰鬥維持原樣。</p>
-            <button type="button" onclick="closeLobbyAvatarModal()" class="w-full py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black text-xs rounded-xl">完成</button>
         </div>
     </div>
 
@@ -1649,6 +1677,128 @@
             if (!profile || typeof profile !== 'object') return profile;
             profile.updatedAt = new Date().toISOString();
             return profile;
+        }
+
+        // 與 sheets-bridge-Code.gs 賽季常數保持同步。
+        // 2026-10-26 00:00 Asia/Hong_Kong = 2026-10-25 16:00 UTC。
+        // epoch = 1 + floor((now - start) / 21 days)。
+        const SEASON_LENGTH_DAYS = 21;
+        const SEASON_START_UTC_MS = Date.UTC(2026, 9, 25, 16, 0, 0, 0);
+        const SEASON_MS = SEASON_LENGTH_DAYS * 24 * 60 * 60 * 1000;
+        const SEASON_REWARD_GOLD = [0, 3000, 1800, 1800, 800, 800, 800, 800, 800, 800, 800];
+        const SEASON_REWARD_EXP = [0, 40, 20, 20, 0, 0, 0, 0, 0, 0, 0];
+        const SEASON_REWARD_MONSTER_ID = 'season_kirin';
+        const DUPLICATE_MONSTER_EXP = 5;
+
+        let serverSeasonSkewMs = 0;
+        let serverSeasonInfo = null;
+        let seasonCountdownTimer = null;
+
+        function seasonEpochAt(nowMs) {
+            return 1 + Math.floor((Number(nowMs) - SEASON_START_UTC_MS) / SEASON_MS);
+        }
+
+        function seasonBoundsForEpoch(epoch) {
+            const start = SEASON_START_UTC_MS + (Math.floor(Number(epoch) || 1) - 1) * SEASON_MS;
+            return { startMs: start, endMs: start + SEASON_MS };
+        }
+
+        function currentClientSeasonEpoch() {
+            const ep = seasonEpochAt(Date.now());
+            return ep < 1 ? 1 : ep;
+        }
+
+        function seasonMonsterName(id) {
+            try {
+                if (typeof SEASON_LIMITED_BEASTS !== 'undefined' && Array.isArray(SEASON_LIMITED_BEASTS)) {
+                    const b = SEASON_LIMITED_BEASTS.find(function (x) { return x && x.id === id; });
+                    if (b && b.name) return b.name;
+                }
+            } catch (e) {}
+            if (id === 'season_kirin') return '賽季麒麟';
+            return id || '限定怪獸';
+        }
+
+        function seasonRewardRulesText() {
+            const m = seasonMonsterName(SEASON_REWARD_MONSTER_ID);
+            return '各年級分開計頭 10 名，每 ' + SEASON_LENGTH_DAYS + ' 日結算一次（香港時間）。'
+                + '第1名：' + SEASON_REWARD_GOLD[1] + ' 金幣 + ' + SEASON_REWARD_EXP[1] + ' EXP包 + 限定「' + m + '」'
+                + '（已擁有改發 ' + DUPLICATE_MONSTER_EXP + ' EXP包）。'
+                + '第2–3名：' + SEASON_REWARD_GOLD[2] + ' 金幣 + ' + SEASON_REWARD_EXP[2] + ' EXP包。'
+                + '第4–10名：' + SEASON_REWARD_GOLD[4] + ' 金幣。結算後積分歸零，下次登入領獎。';
+        }
+
+        function formatDurationMs(ms) {
+            ms = Math.max(0, Math.floor(Number(ms) || 0));
+            const total = Math.floor(ms / 1000);
+            const days = Math.floor(total / 86400);
+            const hours = Math.floor((total % 86400) / 3600);
+            const mins = Math.floor((total % 3600) / 60);
+            const secs = total % 60;
+            function pad(n) { return (n < 10 ? '0' : '') + n; }
+            return days + '日 ' + pad(hours) + ':' + pad(mins) + ':' + pad(secs);
+        }
+
+        function noteServerSeason(info) {
+            if (!info || !isFinite(Number(info.serverNowMs))) return;
+            serverSeasonInfo = info;
+            serverSeasonSkewMs = Number(info.serverNowMs) - Date.now();
+        }
+
+        function seasonNowMs() {
+            return Date.now() + (serverSeasonSkewMs || 0);
+        }
+
+        function describeGrantToast(meta) {
+            meta = meta || {};
+            const g = Math.max(0, Math.floor(Number(meta.grantedGold) || 0));
+            const x = Math.max(0, Math.floor(Number(meta.grantedExp) || 0));
+            const monsters = Array.isArray(meta.grantedMonsters) ? meta.grantedMonsters : [];
+            const converted = Array.isArray(meta.convertedMonsters) ? meta.convertedMonsters : [];
+            if (g <= 0 && x <= 0 && !monsters.length && !converted.length) return '';
+            const parts = [];
+            if (g > 0) parts.push('金幣 +' + g);
+            if (x > 0) parts.push('EXP包 +' + x);
+            if (monsters.length) parts.push('限定怪獸「' + monsters.map(seasonMonsterName).join('、') + '」');
+            if (converted.length) parts.push('已擁有「' + converted.map(seasonMonsterName).join('、') + '」改發 EXP包');
+            return '發放：' + parts.join('，');
+        }
+
+        function refreshSeasonBanner() {
+            const now = seasonNowMs();
+            let epoch = seasonEpochAt(now);
+            let bounds = seasonBoundsForEpoch(epoch < 1 ? 1 : epoch);
+            if (serverSeasonInfo && isFinite(Number(serverSeasonInfo.endMs)) && isFinite(Number(serverSeasonInfo.epoch))) {
+                epoch = Math.floor(Number(serverSeasonInfo.epoch));
+                bounds = {
+                    startMs: Number(serverSeasonInfo.startMs),
+                    endMs: Number(serverSeasonInfo.endMs)
+                };
+            }
+            const label = document.getElementById('season-epoch-label');
+            const countdown = document.getElementById('season-countdown');
+            const rules = document.getElementById('season-reward-rules');
+            const home = document.getElementById('home-season-line');
+            const rulesText = seasonRewardRulesText();
+            if (rules && rules.textContent !== rulesText) rules.textContent = rulesText;
+            let epochText = '';
+            let countText = '';
+            if (epoch < 1) {
+                epochText = '第 1 賽季未開始';
+                countText = '距離開賽 ' + formatDurationMs(bounds.startMs - now) + '（香港時間）';
+            } else {
+                epochText = '第 ' + epoch + ' 賽季';
+                countText = '距離結算 ' + formatDurationMs(bounds.endMs - now) + '（香港時間）';
+            }
+            if (label) label.textContent = epochText;
+            if (countdown) countdown.textContent = countText;
+            if (home) home.textContent = epochText + ' · ' + countText;
+        }
+
+        function startSeasonCountdown() {
+            refreshSeasonBanner();
+            if (seasonCountdownTimer) return;
+            seasonCountdownTimer = setInterval(refreshSeasonBanner, 1000);
         }
 
         /** 香港時間（Asia/Hong_Kong）日期字串 YYYY-MM-DD；打卡重置用，唔跟瀏覽器本地時區 */
@@ -1915,26 +2065,6 @@
             try { showSyncToast(message || '帳戶已重置，請重新註冊。'); } catch (e) {}
         }
 
-        /**
-         * 大廳頭像預設獸（短 id，必須係 BEAST_IMAGES 嘅 key）。
-         * 只用於大廳 header；排行榜同戰鬥唔讀呢度。
-         */
-        var LOBBY_AVATAR_PRESETS = [
-            { id: 'fire_baby', name: '火寶寶' },
-            { id: 'fire_phoenix', name: '火鳳凰' },
-            { id: 'water_turtle', name: '水滴龜' },
-            { id: 'water_dragon', name: '海王龍' },
-            { id: 'grass_sprout', name: '萌芽獸' },
-            { id: 'grass_tree_dragon', name: '樹木龍' },
-            { id: 'thunder_fox', name: '電狐' },
-            { id: 'thunder_god_horse', name: '雷煌馬' },
-            { id: 'fight_rookie', name: '格鬥' },
-            { id: 'rock_pebble', name: '石仔' },
-            { id: 'psy_chick', name: '念力雛' },
-            { id: 'holy_chick', name: '聖光雛' },
-            { id: 'sh5', name: '九尾狐' },
-            { id: 'sh1', name: '青龍' }
-        ];
         /** 自訂圖 data URL 硬上限（同 Apps Script）。壓縮目標再低一截，等成份存檔 JSON 入到試算表儲存格。 */
         var AVATAR_DATA_MAX_CHARS = 70000;
         var AVATAR_DATA_TARGET_CHARS = 40000;
@@ -1953,18 +2083,6 @@
             return value;
         }
 
-        function canonicalAvatarId(id) {
-            var s = String(id == null ? '' : id);
-            if (!/^[A-Za-z0-9_]{1,40}$/.test(s)) return '';
-            var known = false;
-            for (var i = 0; i < LOBBY_AVATAR_PRESETS.length; i++) {
-                if (LOBBY_AVATAR_PRESETS[i].id === s) { known = true; break; }
-            }
-            if (!known) return '';
-            if (typeof BEAST_IMAGES === 'undefined' || !BEAST_IMAGES || !BEAST_IMAGES[s]) return '';
-            return s;
-        }
-
         /**
          * 大廳頭像顯示：有效 avatarData（data URL）優先；否則 avatarId 預設獸；否則空字串（呼叫方顯示圖示）。
          * 只回傳已驗證 data URL 或 BEAST_IMAGES 入面嘅已知路徑，唔接受外鏈。
@@ -1973,8 +2091,8 @@
             if (!user || typeof user !== 'object') return '';
             var data = sanitizeAvatarData(user.avatarData);
             if (data) return data;
-            var id = canonicalAvatarId(user.avatarId);
-            if (id && BEAST_IMAGES[id]) return BEAST_IMAGES[id];
+            var preset = (typeof avatarPresetById === 'function') ? avatarPresetById(user.avatarId) : null;
+            if (preset && preset.src) return preset.src;
             return '';
         }
 
@@ -2044,6 +2162,7 @@
                     if (cloud.accountEpoch != null) baseCloud.accountEpoch = Math.max(0, Math.floor(Number(cloud.accountEpoch) || 0));
                 }
                 baseCloud.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
+                // 頭像：雲端有就跟雲端；雲端未有先留本機（舊存檔冇欄唔好清走自訂圖）
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
                 applyResolvedAvatar(baseCloud, cloud, local);
                 stampUpdatedAt(baseCloud);
@@ -2051,7 +2170,16 @@
             }
 
             // 空雲端唔好蓋本機；空本機就用雲端（真正空白，唔包括起步檔）
+            // 賽季歸零後若雲端睇落空，仍要跟較高 leaderboardEpoch，避免本機舊分救返。
             if (isSparseProgressProfile(cloud) && !isSparseProgressProfile(local)) {
+                var sparseCloudEp = Math.max(0, Math.floor(Number(cloud.leaderboardEpoch) || 0));
+                var sparseLocalEp = Math.max(0, Math.floor(Number(local.leaderboardEpoch) || 0));
+                if (sparseCloudEp > sparseLocalEp) {
+                    local = Object.assign({}, local, {
+                        rankScore: Math.max(0, Math.floor(Number(cloud.rankScore) || 0)),
+                        leaderboardEpoch: sparseCloudEp
+                    });
+                }
                 cloud = {};
             }
             if (isSparseProgressProfile(local) && !isSparseProgressProfile(cloud)) {
@@ -2142,9 +2270,10 @@
             delete p.password;
             delete p._pwd;
             // 有欄先正規化再上傳：avatarData 空字串＝明確清除自訂圖；avatarId 只留預設短 id
-            if (Object.prototype.hasOwnProperty.call(user, 'avatarId')) {
-                p.avatarId = canonicalAvatarId(user.avatarId);
-            }
+            var canonAvatar = canonicalAvatarId(p.avatarId);
+            if (canonAvatar) p.avatarId = canonAvatar;
+            else if (Object.prototype.hasOwnProperty.call(user, 'avatarId')) p.avatarId = '';
+            else delete p.avatarId;
             if (Object.prototype.hasOwnProperty.call(user, 'avatarData')) {
                 p.avatarData = sanitizeAvatarData(user.avatarData);
             }
@@ -2203,7 +2332,8 @@
                 leaderboardEpoch: currentUser.leaderboardEpoch,
                 updatedAt: currentUser.updatedAt,
                 avatarId: currentUser.avatarId,
-                avatarData: currentUser.avatarData
+                avatarData: currentUser.avatarData,
+                ownedMonsters: currentUser.ownedMonsters
             };
             var merged = mergeProgressProfiles(currentUser, profile, {
                 grantedGold: grantG,
@@ -2230,10 +2360,12 @@
             var packsBefore = Math.max(0, Math.floor(Number(before.expPacks) || 0));
             var goldAfter = Math.max(0, Math.floor(Number(merged.gold) || 0));
             var packsAfter = Math.max(0, Math.floor(Number(merged.expPacks) || 0));
-            // 唔好把金幣／EXP 下降當「較新」：保留原本 updatedAt，避免之後再被舊雲端蓋
-            if ((goldAfter < goldBefore || packsAfter < packsBefore) && before.updatedAt) {
+            var avatarChanged = canonicalAvatarId(before.avatarId) !== canonicalAvatarId(merged.avatarId);
+            // 唔好把金幣／EXP 下降當「較新」：保留原本 updatedAt，避免之後再被舊雲端蓋。
+            // 頭像有變就保留合併後時間戳，等只改頭像都會被當成更新寫入。
+            if (!avatarChanged && (goldAfter < goldBefore || packsAfter < packsBefore) && before.updatedAt) {
                 merged.updatedAt = before.updatedAt;
-            } else if (goldAfter === goldBefore && packsAfter === packsBefore && before.updatedAt) {
+            } else if (!avatarChanged && goldAfter === goldBefore && packsAfter === packsBefore && before.updatedAt) {
                 // 經濟無變：保留本機時間戳，唔因 merge 亂 stamp
                 merged.updatedAt = before.updatedAt;
             }
@@ -2245,6 +2377,9 @@
             });
             if (pwd) currentUser.password = pwd;
             if (nick) currentUser.nickname = nick;
+            var keptAvatar = canonicalAvatarId(merged.avatarId);
+            if (keptAvatar) currentUser.avatarId = keptAvatar;
+            else delete currentUser.avatarId;
             try { lastCloudProfile = Object.assign({}, profileForCloud(currentUser)); } catch (e) {}
             if (changed) {
                 try {
@@ -2255,9 +2390,10 @@
                 try { updateUserDashboardUI(); } catch (e) {}
                 try { renderLeaderboard(); } catch (e) {}
                 try { renderMonsterCollection(); } catch (e) {}
-                if (grantG > 0 || grantX > 0) {
-                    try { console.log('[老師發放] +金幣', grantG, '+EXP包', grantX); } catch (e) {}
-                    showSyncToast('老師發放：金幣 +' + grantG + '，EXP包 +' + grantX);
+                var grantToast = describeGrantToast(meta || {});
+                if (grantToast) {
+                    try { console.log('[發放]', grantToast); } catch (e) {}
+                    showSyncToast(grantToast);
                 }
             }
             try { renderHeaderAvatar(); } catch (e) {}
@@ -2311,6 +2447,8 @@
                         mergeCloudProfileIntoCurrentUser(res.profile, res);
                     } else if (res && res.error === 'not_found') {
                         handleCloudAccountGone('帳戶已於雲端重置／刪除，請重新註冊。');
+                    } else if (res && res.error === 'busy') {
+                        setTimeout(function () { cloudSaveCurrentUserNow(); }, 1500);
                     }
                 });
             }
@@ -2414,45 +2552,96 @@
             holy_chick: 'assets/monsters/holy/holy_chick.png',
             holy_hunter: 'assets/monsters/holy/holy_hunter.png',
             holy_beast: 'assets/monsters/holy/holy_beast.png',
-            holy_envoy: 'assets/monsters/holy/holy_envoy.png'
+            holy_envoy: 'assets/monsters/holy/holy_envoy.png',
+            // 賽季限定只存 id。立繪暫用現有青龍圖，唔使用 dataURL。
+            season_kirin: 'assets/monsters/classic/青龍.jpg'
         };
+
+        const SEASON_LIMITED_BEASTS = [
+            {
+                id: 'season_kirin',
+                name: '賽季麒麟',
+                element: 'holy',
+                title: '賽季限定神獸',
+                color: '#fbbf24',
+                hp: 230,
+                atk: 118,
+                def: 96,
+                spd: 112,
+                skillText: '麒麟聖輝衝！',
+                imgKey: 'season_kirin',
+                desc: '各年級排位賽季第 1 名限定。已擁有時獎勵改為 EXP 包，唔會抽卡抽出。'
+            }
+        ];
+
+        // 大廳頭像預設（只用現有怪獸圖；avatarId 為短字串，對應 BEAST_IMAGES）
+        const AVATAR_PRESETS = [
+            { id: 'fire_baby', name: '火寶寶', imgKey: 'fire_baby' },
+            { id: 'fire_pig', name: '火豬', imgKey: 'fire_pig' },
+            { id: 'water_turtle', name: '水滴龜', imgKey: 'water_turtle' },
+            { id: 'water_lizard', name: '溪流蜥', imgKey: 'water_lizard' },
+            { id: 'grass_sprout', name: '萌芽獸', imgKey: 'grass_sprout' },
+            { id: 'grass_bud', name: '花蕾獸', imgKey: 'grass_bud' },
+            { id: 'thunder_dragon_baby', name: '雷電幼龍', imgKey: 'thunder_dragon_baby' },
+            { id: 'thunder_fox', name: '迅雷電狐', imgKey: 'thunder_fox' },
+            { id: 'fight_rookie', name: '菜鳥鬥士', imgKey: 'fight_rookie' },
+            { id: 'rock_pebble', name: '礫石幼崽', imgKey: 'rock_pebble' },
+            { id: 'psy_chick', name: '念力幼雛', imgKey: 'psy_chick' },
+            { id: 'holy_chick', name: '天使幼雛', imgKey: 'holy_chick' }
+        ].map(function (preset) {
+            return {
+                id: preset.id,
+                name: preset.name,
+                imgKey: preset.imgKey,
+                src: BEAST_IMAGES[preset.imgKey] || ''
+            };
+        }).filter(function (preset) { return !!preset.src; });
+
+        function canonicalAvatarId(id) {
+            var key = String(id == null ? '' : id).trim();
+            if (!key || key.length > 32 || !/^[a-z0-9_]+$/.test(key)) return '';
+            if (typeof AVATAR_PRESETS === 'undefined' || !AVATAR_PRESETS) return '';
+            for (var i = 0; i < AVATAR_PRESETS.length; i++) {
+                if (AVATAR_PRESETS[i] && AVATAR_PRESETS[i].id === key) return key;
+            }
+            return '';
+        }
+
+        function avatarPresetById(id) {
+            var key = canonicalAvatarId(id);
+            if (!key) return null;
+            for (var i = 0; i < AVATAR_PRESETS.length; i++) {
+                if (AVATAR_PRESETS[i].id === key) return AVATAR_PRESETS[i];
+            }
+            return null;
+        }
 
         function renderHeaderAvatar() {
             var img = document.getElementById('header-avatar-img');
-            var glyph = document.getElementById('header-avatar-glyph');
-            if (!img || !glyph) return;
+            var fallback = document.getElementById('header-avatar-fallback');
+            var btn = document.getElementById('header-avatar-btn');
             var src = currentUser ? headerAvatarSrc(currentUser) : '';
-            if (src) {
+            var custom = currentUser ? sanitizeAvatarData(currentUser.avatarData) : '';
+            var preset = avatarPresetById(currentUser && currentUser.avatarId);
+            if (src && img) {
                 img.src = src;
-                img.alt = '大廳頭像';
+                img.alt = custom ? '大廳頭像' : (preset ? preset.name : '大廳頭像');
                 img.classList.remove('hidden');
-                glyph.classList.add('hidden');
+                if (fallback) fallback.classList.add('hidden');
+                if (btn) {
+                    if (custom) btn.title = '自訂大廳頭像（撳一下換頭像）';
+                    else if (preset) btn.title = '大廳頭像：' + preset.name + '（撳一下換頭像）';
+                    else btn.title = '撳一下換大廳頭像';
+                }
             } else {
-                img.removeAttribute('src');
-                img.alt = '';
-                img.classList.add('hidden');
-                glyph.classList.remove('hidden');
+                if (img) {
+                    img.classList.add('hidden');
+                    img.removeAttribute('src');
+                    img.alt = '';
+                }
+                if (fallback) fallback.classList.remove('hidden');
+                if (btn) btn.title = currentUser ? '撳一下換大廳頭像' : '請先登入再換頭像';
             }
-        }
-
-        function openLobbyAvatarModal() {
-            if (!currentUser) {
-                showSyncToast('請先登入再換頭像');
-                try {
-                    var overlay = document.getElementById('auth-modal-overlay');
-                    if (overlay) overlay.classList.remove('hidden');
-                } catch (e) {}
-                return;
-            }
-            var modal = document.getElementById('lobby-avatar-modal');
-            if (!modal) return;
-            modal.classList.remove('hidden');
-            refreshLobbyAvatarModal();
-        }
-
-        function closeLobbyAvatarModal() {
-            var modal = document.getElementById('lobby-avatar-modal');
-            if (modal) modal.classList.add('hidden');
         }
 
         function refreshLobbyAvatarModal() {
@@ -2474,67 +2663,80 @@
                 }
             }
             if (note) {
-                if (custom) {
-                    note.textContent = '自訂頭像（已裁成正方形，約 ' + Math.max(1, Math.round(custom.length / 1024)) + ' KB）';
-                } else if (currentUser && canonicalAvatarId(currentUser.avatarId)) {
-                    var presetName = '';
-                    var pid = canonicalAvatarId(currentUser.avatarId);
-                    for (var i = 0; i < LOBBY_AVATAR_PRESETS.length; i++) {
-                        if (LOBBY_AVATAR_PRESETS[i].id === pid) { presetName = LOBBY_AVATAR_PRESETS[i].name; break; }
-                    }
-                    note.textContent = '預設：' + (presetName || '怪獸');
-                } else {
-                    note.textContent = '未設定頭像，可揀預設獸或上傳';
-                }
+                if (custom) note.textContent = '自訂頭像（已裁成正方形，約 ' + Math.max(1, Math.round(custom.length / 1024)) + ' KB）';
+                else if (currentUser && canonicalAvatarId(currentUser.avatarId)) {
+                    var preset = avatarPresetById(currentUser.avatarId);
+                    note.textContent = '預設：' + (preset ? preset.name : '怪獸');
+                } else note.textContent = '可揀預設獸，或上傳一張相';
             }
             if (resetBtn) {
                 if (custom) resetBtn.classList.remove('hidden');
                 else resetBtn.classList.add('hidden');
             }
-            renderLobbyAvatarPresets();
+            renderAvatarPickerGrid();
         }
 
-        function renderLobbyAvatarPresets() {
-            var grid = document.getElementById('lobby-avatar-presets');
+        function renderAvatarPickerGrid() {
+            var grid = document.getElementById('avatar-picker-grid');
             if (!grid) return;
             grid.textContent = '';
-            var activeId = '';
-            if (currentUser && !sanitizeAvatarData(currentUser.avatarData)) {
-                activeId = canonicalAvatarId(currentUser.avatarId);
-            }
-            LOBBY_AVATAR_PRESETS.forEach(function (p) {
-                if (!BEAST_IMAGES[p.id]) return;
+            var custom = currentUser ? sanitizeAvatarData(currentUser.avatarData) : '';
+            var current = custom ? '' : canonicalAvatarId(currentUser && currentUser.avatarId);
+            AVATAR_PRESETS.forEach(function (preset) {
                 var btn = document.createElement('button');
                 btn.type = 'button';
-                btn.title = p.name;
-                btn.className = 'rounded-xl overflow-hidden border bg-slate-900 hover:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-400 flex flex-col items-stretch';
-                if (activeId === p.id) btn.className += ' border-pink-400 ring-2 ring-pink-400';
-                else btn.className += ' border-slate-700';
-                var img = document.createElement('img');
-                img.alt = p.name;
-                img.src = BEAST_IMAGES[p.id];
-                img.className = 'w-full aspect-square object-cover';
-                var cap = document.createElement('span');
-                cap.className = 'text-[9px] text-center text-slate-300 py-0.5 truncate px-0.5';
-                cap.textContent = p.name;
-                btn.appendChild(img);
-                btn.appendChild(cap);
-                btn.addEventListener('click', function () { selectLobbyPresetAvatar(p.id); });
+                btn.className = 'avatar-preset-btn rounded-2xl border border-purple-500/30 bg-slate-950/70 p-1.5 hover:border-pink-400/70 transition-colors text-left';
+                btn.setAttribute('aria-pressed', preset.id === current ? 'true' : 'false');
+                btn.title = preset.name;
+                if (preset.id === current) btn.classList.add('is-selected');
+                var image = document.createElement('img');
+                image.src = preset.src;
+                image.alt = preset.name;
+                image.className = 'w-full aspect-square object-cover rounded-xl bg-slate-900';
+                var label = document.createElement('div');
+                label.className = 'mt-1 text-[10px] font-black text-center text-slate-100 truncate';
+                label.textContent = preset.name;
+                btn.appendChild(image);
+                btn.appendChild(label);
+                btn.addEventListener('click', function () { selectAvatarPreset(preset.id); });
                 grid.appendChild(btn);
             });
         }
 
-        function selectLobbyPresetAvatar(id) {
+        function openAvatarPicker() {
+            if (!currentUser) {
+                try { showSyncToast('請先登入，再揀大廳頭像'); } catch (e) {}
+                try {
+                    var overlay = document.getElementById('auth-modal-overlay');
+                    if (overlay) overlay.classList.remove('hidden');
+                } catch (e2) {}
+                return;
+            }
+            refreshLobbyAvatarModal();
+            var modal = document.getElementById('avatar-picker-modal');
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeAvatarPicker() {
+            var modal = document.getElementById('avatar-picker-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function selectAvatarPreset(id) {
             if (!currentUser) return;
             var canon = canonicalAvatarId(id);
             if (!canon) return;
             lobbyAvatarUploadSeq++;
+            var changed = canonicalAvatarId(currentUser.avatarId) !== canon || !!sanitizeAvatarData(currentUser.avatarData);
             currentUser.avatarId = canon;
             // 揀預設即明確清走自訂圖（空字串），合併時唔好被舊 avatarData 救返
             currentUser.avatarData = '';
+            renderHeaderAvatar();
+            closeAvatarPicker();
+            if (!changed) return;
             saveCurrentUserData();
-            refreshLobbyAvatarModal();
-            showSyncToast('已換預設頭像');
+            try { showSyncToast('大廳頭像已換成「' + (avatarPresetById(canon).name) + '」'); } catch (e) {}
+            try { playSFX(784, 'triangle', 0.12); } catch (e2) {}
         }
 
         /**
@@ -2578,9 +2780,7 @@
             var type = String(file.type || '').toLowerCase();
             if (type === 'image/jpg') type = 'image/jpeg';
             if (type === 'image/jpeg' || type === 'image/png' || type === 'image/webp') return true;
-            if (!type) {
-                return /\.(jpe?g|png|webp)$/i.test(String(file.name || ''));
-            }
+            if (!type) return /\.(jpe?g|png|webp)$/i.test(String(file.name || ''));
             return false;
         }
 
@@ -2680,6 +2880,12 @@
             };
             img.src = objUrl;
         }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape') return;
+            var modal = document.getElementById('avatar-picker-modal');
+            if (modal && !modal.classList.contains('hidden')) closeAvatarPicker();
+        });
 
         const EVIL_BOSSES = [
             { id: 'boss_turtle', name: '深淵冥甲巨龜', element: 'water', imgKey: 'boss_turtle', hp: 200, atk: 40, def: 50, spd: 40 },
@@ -3020,6 +3226,28 @@
                     skillText: '深淵重擊！',
                     imgKey: boss.imgKey,
                     desc: '守護關卡的極強魔王！'
+                };
+            }
+
+            const seasonal = (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).find(b => b.id === monsterId);
+            if (seasonal) {
+                const lvlFactor = 1 + (level - 1) * 0.12;
+                return {
+                    id: seasonal.id,
+                    name: seasonal.name,
+                    element: seasonal.element || 'holy',
+                    title: seasonal.title || '賽季限定',
+                    color: seasonal.color || '#fbbf24',
+                    isMythic: true,
+                    isLimited: true,
+                    level: level,
+                    hp: Math.floor(seasonal.hp * lvlFactor),
+                    atk: Math.floor(seasonal.atk * lvlFactor),
+                    def: Math.floor(seasonal.def * lvlFactor),
+                    spd: Math.floor(seasonal.spd * lvlFactor),
+                    skillText: seasonal.skillText || '賽季限定衝擊！',
+                    imgKey: seasonal.imgKey || seasonal.id,
+                    desc: seasonal.desc || '排位賽季冠軍限定'
                 };
             }
 
@@ -3369,7 +3597,7 @@
                 gold: 1000,
                 expPacks: 2,
                 rankScore: 0,
-                leaderboardEpoch: 1,
+                leaderboardEpoch: currentClientSeasonEpoch(),
                 updatedAt: new Date().toISOString(),
                 ownedMonsters: [
                     { id: 'fire_base', level: 1, exp: 0 },
@@ -3488,9 +3716,10 @@
                         saveUsersDatabase(db);
                         activePassword = password;
                         activeUserKey = userKey;
-                        if (g > 0 || x > 0) {
-                            errDiv.innerText = `登入成功！老師發放：金幣 +${g}，EXP包 +${x}`;
-                            showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x);
+                        const grantToast = describeGrantToast(res);
+                        if (grantToast) {
+                            errDiv.innerText = '登入成功！' + grantToast;
+                            showSyncToast(grantToast);
                         } else {
                             errDiv.innerText = differNote || '';
                             if (differNote) showSyncToast(differNote);
@@ -3577,6 +3806,12 @@
                 if (m.level > 40) m.level = 40;
                 if (m.exp === undefined) m.exp = 0;
             });
+            var canonAvatar = canonicalAvatarId(currentUser.avatarId);
+            if (canonAvatar) currentUser.avatarId = canonAvatar;
+            else delete currentUser.avatarId;
+            if (Object.prototype.hasOwnProperty.call(currentUser, 'avatarData')) {
+                currentUser.avatarData = sanitizeAvatarData(currentUser.avatarData);
+            }
 
             if (passwordOpt) activePassword = passwordOpt;
             if (!activeUserKey && currentUser.nickname) activeUserKey = `user_${currentUser.nickname}`;
@@ -3614,7 +3849,7 @@
             document.getElementById('logout-btn').classList.remove('flex');
             document.getElementById('user-display-name').innerText = "未登入";
             document.getElementById('user-display-school').innerText = "訪客模式";
-            try { closeLobbyAvatarModal(); } catch (e) {}
+            try { closeAvatarPicker(); } catch (e) {}
             try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
             updateAdminUiVisibility();
@@ -3631,6 +3866,9 @@
             currentUser.gold = Math.floor(Number(currentUser.gold) || 0);
             currentUser.expPacks = Math.floor(Number(currentUser.expPacks) || 0);
             currentUser.rankScore = Math.floor(Number(currentUser.rankScore) || 0);
+            var canonAvatar = canonicalAvatarId(currentUser.avatarId);
+            if (canonAvatar) currentUser.avatarId = canonAvatar;
+            else delete currentUser.avatarId;
             const db = getUsersDatabase();
             db[`user_${currentUser.nickname}`] = currentUser;
             saveUsersDatabase(db);
@@ -3649,6 +3887,7 @@
             document.getElementById('user-gold').innerText = currentUser.gold;
             document.getElementById('user-exp-packs').innerText = currentUser.expPacks;
             document.getElementById('user-rank-score').innerText = currentUser.rankScore;
+            try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
 
             document.getElementById('ranked-current-score').innerText = currentUser.rankScore;
@@ -3668,6 +3907,8 @@
 
         window.onload = function() {
             document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            try { startSeasonCountdown(); } catch (e) {}
+            try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
             const activeSessionNick = localStorage.getItem('math_monster_active_session');
             const db = getUsersDatabase();
@@ -3715,8 +3956,9 @@
                             activePassword = savedPwd;
                             activeUserKey = sessionKey;
                             loginUserSuccess(merged, savedPwd);
-                            if (g > 0 || x > 0) {
-                                try { showSyncToast('老師發放：金幣 +' + g + '，EXP包 +' + x); } catch (e) {}
+                            const grantToast = describeGrantToast(res);
+                            if (grantToast) {
+                                try { showSyncToast(grantToast); } catch (e) {}
                             }
                             return;
                         }
@@ -3869,8 +4111,8 @@
 
                 const exists = currentUser.ownedMonsters.some(m => m.id === drawnItemData.id);
                 if (exists) {
-                    currentUser.expPacks += 5;
-                    convertedExpCount += 5;
+                    currentUser.expPacks += DUPLICATE_MONSTER_EXP;
+                    convertedExpCount += DUPLICATE_MONSTER_EXP;
                     drawnItemData.isDuplicate = true;
                 } else {
                     currentUser.ownedMonsters.push({
@@ -3909,7 +4151,7 @@
                     </div>
                     <div class="font-extrabold text-xs text-white mt-1">${item.name}</div>
                     ${item.isMythic ? '<span class="text-[10px] bg-amber-500/40 text-amber-200 font-bold px-2 py-0.5 rounded mt-1 shadow">✨ 山海經神獸</span>' : ''}
-                    ${item.isDuplicate ? '<span class="text-[10px] bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded mt-1">+5 EXP包 (重複)</span>' : '<span class="text-[10px] bg-pink-500/30 text-pink-200 font-bold px-2 py-0.5 rounded mt-1">NEW 新獲得</span>'}
+                    ${item.isDuplicate ? `<span class="text-[10px] bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded mt-1">+${DUPLICATE_MONSTER_EXP} EXP包 (重複)</span>` : '<span class="text-[10px] bg-pink-500/30 text-pink-200 font-bold px-2 py-0.5 rounded mt-1">NEW 新獲得</span>'}
                 `;
                 grid.appendChild(card);
             });
@@ -3940,7 +4182,9 @@
             const container = document.getElementById('monster-collection-grid');
             container.innerHTML = '';
 
-            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'];
+            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'].concat(
+                (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; })
+            );
 
             allList.forEach(mId => {
                 const owned = currentUser.ownedMonsters.find(om => om.id === mId);
@@ -3977,6 +4221,7 @@
                         <div class="font-black text-sm text-white text-center cursor-pointer" onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})">
                             ${runtimeData.name} <i class="fa-solid fa-magnifying-glass-plus text-xs text-amber-300 ml-1"></i>
                         </div>
+                        ${String(mId).indexOf('season_') === 0 ? '<div class="text-center text-[10px] text-amber-300 font-black mt-1">賽季限定</div>' : ''}
 
                         <div class="grid grid-cols-4 gap-1 my-2 bg-slate-900/90 p-1.5 rounded-2xl text-center text-[9px] font-mono border border-slate-800">
                             <div>
@@ -4027,7 +4272,7 @@
                                 return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="w-full py-2 bg-gradient-to-r ${can ? 'from-fuchsia-600 to-purple-600 hover:from-fuchsia-500 hover:to-purple-500 text-white' : 'from-slate-700 to-slate-800 text-slate-300'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
                             })()}
                         </div>
-                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">未解鎖 (祈願召喚獲得)</div>`}
+                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季第1名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
                 `;
                 container.appendChild(card);
             });
@@ -4352,6 +4597,7 @@
                     <div class="text-right">
                         <div class="font-black text-xs text-amber-300">${score} 分</div>
                         <div class="text-[9px] text-purple-200">${getRankTitle(score)}</div>
+                        ${score > 0 && idx < 10 ? '<div class="text-[9px] text-amber-200/90">季結有獎</div>' : ''}
                     </div>
                 `;
                 container.appendChild(item);
@@ -4381,11 +4627,14 @@
                     const data = await callBridge({ action: 'leaderboard', grade: targetGrade });
                     if (reqId !== leaderboardRequestId) return;
                     if (data && data.ok && Array.isArray(data.entries)) {
+                        if (data.season) noteServerSeason(data.season);
+                        refreshSeasonBanner();
                         paintLeaderboardEntries(container, data.entries);
                         if (statusEl) {
+                            const ep = data.season && data.season.epoch > 0 ? ` · 第 ${data.season.epoch} 賽季` : '';
                             statusEl.innerText = data.entries.length
-                                ? `全服同年級榜 · 共 ${data.entries.length} 人`
-                                : '全服同年級暫無紀錄';
+                                ? `全服同年級榜 · 共 ${data.entries.length} 人${ep}`
+                                : `全服同年級暫無紀錄${ep}`;
                         }
                         return;
                     }
@@ -4496,6 +4745,118 @@
                 if (statusEl) statusEl.innerText = '更新時間：' + new Date().toLocaleString('zh-HK', { timeZone: 'Asia/Hong_Kong' }) + '（香港時間）';
             } catch (err) {
                 if (statusEl) statusEl.innerText = '載入失敗：' + (err && err.message ? err.message : '未知錯誤') + '（請確認 Apps Script 已部署新版本）';
+            }
+        }
+
+        function formatSettleResult(data) {
+            if (!data) return '無回傳';
+            if (!data.ok) {
+                if (data.error === 'busy') return '結算進行中，請稍後再試。';
+                return '失敗：' + (data.error || '未知錯誤');
+            }
+            if (data.reason === 'season_in_progress') {
+                return '第 ' + data.currentEpoch + ' 賽季進行中，未到結算（香港時間每 21 日一次）。';
+            }
+            if (data.reason === 'already_settled' || !data.results || !data.results.length) {
+                return '已結算至最新完結賽季（而家係第 ' + data.currentEpoch + ' 賽季）。';
+            }
+            return data.results.map(function (r) {
+                return '賽季 ' + r.epoch + '：新發獎 ' + r.granted + ' 人，上榜 ' + r.winnerCount + ' 人，重置 ' + r.resetAccounts + ' 個帳戶';
+            }).join('；');
+        }
+
+        function renderSeasonPreview(data) {
+            const el = document.getElementById('admin-season-preview');
+            if (!el) return;
+            el.innerHTML = '';
+            const gradeTextMap = { 'G1':'小一', 'G2':'小二', 'G3':'小三', 'G4':'小四', 'G5':'小五', 'G6':'小六' };
+            const grades = (data && data.grades) || {};
+            ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'].forEach(function (g) {
+                const rows = Array.isArray(grades[g]) ? grades[g] : [];
+                const block = document.createElement('div');
+                block.className = 'bg-slate-900/60 border border-slate-700/60 rounded-xl px-3 py-2';
+                const title = document.createElement('div');
+                title.className = 'font-black text-amber-200 mb-1';
+                title.textContent = (gradeTextMap[g] || g) + '（' + rows.length + ' 人上榜）';
+                block.appendChild(title);
+                if (!rows.length) {
+                    const empty = document.createElement('div');
+                    empty.className = 'text-slate-500';
+                    empty.textContent = '暫無積分';
+                    block.appendChild(empty);
+                } else {
+                    rows.forEach(function (row) {
+                        const line = document.createElement('div');
+                        line.className = 'flex justify-between gap-2 py-0.5';
+                        const nick = String(row.nickname || '冒險者');
+                        const klass = String(row.className || '—');
+                        const prize = '金幣 ' + (row.gold || 0) + (row.exp ? ' · EXP ' + row.exp : '') + (row.monsterId ? ' · ' + seasonMonsterName(row.monsterId) : '');
+                        const left = document.createElement('span');
+                        left.textContent = row.rank + '. ' + nick + '（' + klass + '） ' + (row.rankScore || 0) + '分';
+                        const right = document.createElement('span');
+                        right.className = 'text-amber-100 shrink-0';
+                        right.textContent = prize;
+                        line.appendChild(left);
+                        line.appendChild(right);
+                        block.appendChild(line);
+                    });
+                }
+                el.appendChild(block);
+            });
+        }
+
+        async function adminPreviewSeason() {
+            const statusEl = document.getElementById('admin-season-status');
+            if (!currentUser || !currentUser.isAdmin) {
+                if (statusEl) statusEl.textContent = '需要管理員登入';
+                return;
+            }
+            if (!SHEET_REPORT_URL || !activePassword || !activeUserKey) {
+                if (statusEl) statusEl.textContent = '請重新登入管理員帳戶後再試';
+                return;
+            }
+            if (statusEl) statusEl.textContent = '正在讀取今季頭 10…';
+            try {
+                const data = await callBridge({
+                    action: 'seasonPreview',
+                    key: activeUserKey,
+                    password: activePassword
+                });
+                if (!data || !data.ok) throw new Error((data && data.error) || 'preview_failed');
+                if (data.season) noteServerSeason(data.season);
+                refreshSeasonBanner();
+                renderSeasonPreview(data);
+                if (statusEl) statusEl.textContent = '預覽第 ' + (data.previewEpoch || data.currentEpoch) + ' 賽季（未發獎、未歸零）';
+            } catch (err) {
+                if (statusEl) statusEl.textContent = '預覽失敗：' + (err && err.message ? err.message : '未知錯誤');
+            }
+        }
+
+        async function adminSettleSeason() {
+            const statusEl = document.getElementById('admin-season-status');
+            if (!currentUser || !currentUser.isAdmin) {
+                if (statusEl) statusEl.textContent = '需要管理員登入';
+                return;
+            }
+            if (!SHEET_REPORT_URL || !activePassword || !activeUserKey) {
+                if (statusEl) statusEl.textContent = '請重新登入管理員帳戶後再試';
+                return;
+            }
+            const ok = window.confirm('結算已結束的賽季？各年級頭 10 會發獎，舊賽季積分會歸零。可以再執行，不會重複發獎。');
+            if (!ok) return;
+            if (statusEl) statusEl.textContent = '正在結算…';
+            try {
+                const data = await callBridge({
+                    action: 'settleSeason',
+                    key: activeUserKey,
+                    password: activePassword
+                });
+                if (data && data.season) noteServerSeason(data.season);
+                refreshSeasonBanner();
+                if (statusEl) statusEl.textContent = formatSettleResult(data);
+                try { renderLeaderboard(); } catch (e) {}
+            } catch (err) {
+                if (statusEl) statusEl.textContent = '結算失敗：' + (err && err.message ? err.message : '未知錯誤') + '（請確認 Apps Script 已部署新版本）';
             }
         }
 
