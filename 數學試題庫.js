@@ -88733,5 +88733,482 @@ window.WORD_QUESTION_BANK = [
       "9000"
     ],
     "answer": "900"
+  },
+  {
+    "id": "5A_L01_Q11",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "topic": "5A L01 多位數",
+    "question": "選出所有奇數。",
+    "options": [
+      "45667798",
+      "305113",
+      "1400000",
+      "2832227"
+    ],
+    "answer": "305113"
+  },
+  {
+    "id": "5A_L01_Q12",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "topic": "5A L01 多位數",
+    "question": "選出所有偶數。",
+    "options": [
+      "215660",
+      "4222175",
+      "3002508",
+      "576246369"
+    ],
+    "answer": "215660"
+  },
+  {
+    "id": "5A_L01_Q16",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "topic": "5A L01 多位數",
+    "question": "把 50120000、105000760 和 24460000 由大至小排列出來。",
+    "options": [
+      "a. 50120000 > 105000760 > 24460000",
+      "b. 24460000 > 105000760 > 50120000",
+      "c. 24460000 > 50120000 > 105000760",
+      "d. 105000760 > 50120000 > 24460000"
+    ],
+    "answer": "d. 105000760 > 50120000 > 24460000"
+  },
+  {
+    "id": "5A_L02_Q04",
+    "grade": 5,
+    "unitKey": "approx_estimate",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "topic": "5A L02 近似值和大數量的估計",
+    "question": "如果把 124▲190 取近似值至萬位是 1250000，▲ 代表的數字可能是 （ ）。（選出所有正確答案。）",
+    "options": [
+      "4",
+      "9",
+      "1",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B_L14_Q01",
+    "grade": 5,
+    "unitKey": "algebra_symbols_1",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "topic": "5B L14 代數符號（一）",
+    "question": "以下哪些是代數式？選出所有正確的答案。",
+    "options": [
+      "4 − a、14 ÷ 2 = 7、18 × 3",
+      "4 − a、18 × 3、y/4",
+      "4 − a、14 ÷ 2 = 7、Q + 5",
+      "4 − a、Q + 5、y/4"
+    ],
+    "answer": "4 − a、Q + 5、y/4",
+    "image": "q-images/5B_L14_Q01_a.png"
+  },
+  {
+    "id": "5DA_L07_Q01",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q01.png"
+  },
+  {
+    "id": "5DA_L07_Q02",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "c. c.",
+    "image": "q-images/5DA_L07_Q02.png"
+  },
+  {
+    "id": "5DA_L07_Q03",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "a. a.",
+    "image": "q-images/5DA_L07_Q03.png"
+  },
+  {
+    "id": "5DA_L07_Q04",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q04.png"
+  },
+  {
+    "id": "5DA_L07_Q05",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "a. a.",
+    "image": "q-images/5DA_L07_Q05.png"
+  },
+  {
+    "id": "5DA_L07_Q06",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q06.png"
+  },
+  {
+    "id": "5DA_L07_Q07",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "c. c.",
+    "image": "q-images/5DA_L07_Q07.png"
+  },
+  {
+    "id": "5DA_L07_Q08",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q08.png"
+  },
+  {
+    "id": "5DB_L15_Q01",
+    "grade": 5,
+    "unitKey": "volume_intro",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "topic": "5DB L15 體積的認識",
+    "question": "選出體積較大的球。",
+    "options": [
+      "a. 較大的灰色球（球面有三個深色小圓）",
+      "b. 較小的線條球"
+    ],
+    "answer": "a. 較大的灰色球（球面有三個深色小圓）",
+    "image": "q-images/5DB_L15_Q01_a.png"
+  },
+  {
+    "id": "5DB_L15_Q02",
+    "grade": 5,
+    "unitKey": "volume_intro",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "topic": "5DB L15 體積的認識",
+    "question": "選出體積較小的蛋糕。",
+    "options": [
+      "a. 較高的圓形草莓蛋糕",
+      "b. 較矮的分層草莓蛋糕"
+    ],
+    "answer": "b. 較矮的分層草莓蛋糕",
+    "image": "q-images/5DB_L15_Q02_b.png"
+  },
+  {
+    "id": "6A_L02_Q03",
+    "grade": 6,
+    "unitKey": "decimal_div_1",
+    "source": "第二版 6 上 A 單元一 第 2 課 小數除法（一）",
+    "topic": "6A L02 小數除法（一）",
+    "question": "選出正確的估算結果。",
+    "options": [
+      "a. 結果約是：64 ÷ 4 = 16",
+      "b. 結果約是：60 ÷ 4 = 15"
+    ],
+    "answer": "b. 結果約是：60 ÷ 4 = 15",
+    "image": "q-images/6A_L02_Q03_b.png"
+  },
+  {
+    "id": "6A_L02_Q04",
+    "grade": 6,
+    "unitKey": "decimal_div_1",
+    "source": "第二版 6 上 A 單元一 第 2 課 小數除法（一）",
+    "topic": "6A L02 小數除法（一）",
+    "question": "選出正確的估算結果。",
+    "options": [
+      "a. 結果約是：40 ÷ 20 = 2",
+      "b. 結果約是：30 ÷ 20 = 1.5"
+    ],
+    "answer": "a. 結果約是：40 ÷ 20 = 2",
+    "image": "q-images/6A_L02_Q04_a.png"
+  },
+  {
+    "id": "6A_L02_Q11",
+    "grade": 6,
+    "unitKey": "decimal_div_1",
+    "source": "第二版 6 上 A 單元一 第 2 課 小數除法（一）",
+    "topic": "6A L02 小數除法（一）",
+    "question": "選出正確的估算結果。",
+    "options": [
+      "a. 結果約是：40 ÷ 5 = 8",
+      "b. 結果約是：40 ÷ 5 = 8"
+    ],
+    "answer": "a. 結果約是：40 ÷ 5 = 8",
+    "image": "q-images/6A_L02_Q11_a.png"
+  },
+  {
+    "id": "6A_L02_Q12",
+    "grade": 6,
+    "unitKey": "decimal_div_1",
+    "source": "第二版 6 上 A 單元一 第 2 課 小數除法（一）",
+    "topic": "6A L02 小數除法（一）",
+    "question": "選出正確的估算結果。",
+    "options": [
+      "a. 結果約是：40 ÷ 4 = 10",
+      "b. 結果約是：40 ÷ 4 = 10"
+    ],
+    "answer": "b. 結果約是：40 ÷ 4 = 10",
+    "image": "q-images/6A_L02_Q12_b.png"
+  },
+  {
+    "id": "6A_L04_Q06",
+    "grade": 6,
+    "unitKey": "decimal_four_ops",
+    "source": "第二版 6 上 A 單元一 第 4 課 小數四則混合運算",
+    "topic": "6A L04 小數四則混合運算",
+    "question": "何老師買了下面的原子筆 6 枝，共付了 50.4 元。張老師想買這款原子筆 8 枝，共需付 （ ） 元。",
+    "options": [
+      "67.21",
+      "67.2",
+      "67.1",
+      "67.3"
+    ],
+    "answer": "67.2",
+    "image": "q-images/6A_L04_Q06.png"
+  },
+  {
+    "id": "6A_L05_Q05",
+    "grade": 6,
+    "unitKey": "decimal_frac_convert",
+    "source": "第二版 6 上 A 單元二 第 5 課 小數和分數的互化",
+    "topic": "6A L05 小數和分數的互化",
+    "question": "利用擴分的方法，把 4/5 化為小數。以下哪項是正確的？",
+    "options": [
+      "a. = (4×2)/(5×2)",
+      "b. = 4/5 × 2"
+    ],
+    "answer": "a. = (4×2)/(5×2)",
+    "image": "q-images/6A_L05_Q05.png"
+  },
+  {
+    "id": "6A_L05_Q06",
+    "grade": 6,
+    "unitKey": "decimal_frac_convert",
+    "source": "第二版 6 上 A 單元二 第 5 課 小數和分數的互化",
+    "topic": "6A L05 小數和分數的互化",
+    "question": "利用擴分的方法，把 2 13/20 化為小數。以下哪項是正確的？",
+    "options": [
+      "a. = 2 × 13/20",
+      "b. = 2 (13×5)/(20×5)"
+    ],
+    "answer": "b. = 2 (13×5)/(20×5)",
+    "image": "q-images/6A_L05_Q06.png"
+  },
+  {
+    "id": "6A_L05_Q08",
+    "grade": 6,
+    "unitKey": "decimal_frac_convert",
+    "source": "第二版 6 上 A 單元二 第 5 課 小數和分數的互化",
+    "topic": "6A L05 小數和分數的互化",
+    "question": "利用除法，把 1 7/13 化為小數。（答案取至小數點後一個位）以下哪項是正確的？",
+    "options": [
+      "a. = 1 + 7/13",
+      "b. = 1 + 7/13"
+    ],
+    "answer": "b. = 1 + 7/13",
+    "image": "q-images/6A_L05_Q08.png"
+  },
+  {
+    "id": "6A_L08_Q01",
+    "grade": 6,
+    "unitKey": "average_2",
+    "source": "第二版 6 上 A 單元三 第 8 課 平均數（二）",
+    "topic": "6A L08 平均數（二）",
+    "question": "下表顯示服裝店上星期四種顏色的襯衣的銷量。服裝店上星期平均每種顏色的襯衣的銷量是 （ ） 件。",
+    "options": [
+      "42",
+      "43",
+      "86",
+      "430"
+    ],
+    "answer": "43",
+    "image": "q-images/6A_L08_Q01.png"
+  },
+  {
+    "id": "6A_L08_Q02",
+    "grade": 6,
+    "unitKey": "average_2",
+    "source": "第二版 6 上 A 單元三 第 8 課 平均數（二）",
+    "topic": "6A L08 平均數（二）",
+    "question": "家謙參加跳遠比賽。他第一跳的成績是 4.8 米，第二跳的成績是 4.6 米，第三跳的成績是 4.5 米。他跳遠的平均成績是 （ ） 米。…",
+    "options": [
+      "4.61",
+      "4.7",
+      "4.6",
+      "4.5"
+    ],
+    "answer": "4.6"
+  },
+  {
+    "id": "6A_L08_Q04",
+    "grade": 6,
+    "unitKey": "average_2",
+    "source": "第二版 6 上 A 單元三 第 8 課 平均數（二）",
+    "topic": "6A L08 平均數（二）",
+    "question": "寵物店內有小狗 9 隻，其中 3 隻各重 3.6 kg，另外 4 隻各重 2.8 kg，餘下的分別重 4.1 kg 和 2.7 kg。…",
+    "options": [
+      "3.2",
+      "3.1",
+      "3.21",
+      "3.3"
+    ],
+    "answer": "3.2"
+  },
+  {
+    "id": "6A_L08_Q06",
+    "grade": 6,
+    "unitKey": "average_2",
+    "source": "第二版 6 上 A 單元三 第 8 課 平均數（二）",
+    "topic": "6A L08 平均數（二）",
+    "question": "",
+    "options": [
+      "110",
+      "55",
+      "90",
+      "210"
+    ],
+    "answer": "110",
+    "image": "q-images/6A_L08_Q06.png"
+  },
+  {
+    "id": "6A_L09_Q01",
+    "grade": 6,
+    "unitKey": "line_graph_1",
+    "source": "第二版 6 上 A 單元四 第 9 課 折線圖（一）",
+    "topic": "6A L09 折線圖（一）",
+    "question": "",
+    "options": [
+      "9",
+      "10",
+      "5",
+      "100"
+    ],
+    "answer": "10",
+    "image": "q-images/6A_L09_Q01.png"
+  },
+  {
+    "id": "6A_L09_Q02",
+    "grade": 6,
+    "unitKey": "line_graph_1",
+    "source": "第二版 6 上 A 單元四 第 9 課 折線圖（一）",
+    "topic": "6A L09 折線圖（一）",
+    "question": "",
+    "options": [
+      "a. 七月；54 萬",
+      "b. 七月；50 萬",
+      "c. 十一月；54 萬",
+      "d. 十一月；50 萬"
+    ],
+    "answer": "c. 十一月；54 萬",
+    "image": "q-images/6A_L09_Q02.png"
+  },
+  {
+    "id": "6A_L09_Q03",
+    "grade": 6,
+    "unitKey": "line_graph_1",
+    "source": "第二版 6 上 A 單元四 第 9 課 折線圖（一）",
+    "topic": "6A L09 折線圖（一）",
+    "question": "",
+    "options": [
+      "a. 八月；32 萬",
+      "b. 八月；30 萬",
+      "c. 九月；32 萬",
+      "d. 九月；30 萬"
+    ],
+    "answer": "d. 九月；30 萬",
+    "image": "q-images/6A_L09_Q03.png"
+  },
+  {
+    "id": "6A_L09_Q04",
+    "grade": 6,
+    "unitKey": "line_graph_1",
+    "source": "第二版 6 上 A 單元四 第 9 課 折線圖（一）",
+    "topic": "6A L09 折線圖（一）",
+    "question": "",
+    "options": [
+      "a. 上升",
+      "b. 下降"
+    ],
+    "answer": "b. 下降",
+    "image": "q-images/6A_L09_Q04.png"
+  },
+  {
+    "id": "6B_L16_Q04",
+    "grade": 6,
+    "unitKey": "capacity_volume",
+    "source": "第二版 6 上 B 單元七 第 16 課 容量和體積",
+    "topic": "6B L16 容量和體積",
+    "question": "正方體水箱的邊長是 20 cm。把 800 mL 水注入水箱裏，水深 （ ） cm。",
+    "options": [
+      "20",
+      "19",
+      "2",
+      "200"
+    ],
+    "answer": "20"
   }
 ];
