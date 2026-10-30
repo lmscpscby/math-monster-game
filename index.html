@@ -1202,7 +1202,7 @@
                 </div>
                 <div class="border-t border-rose-500/20 pt-4 space-y-3">
                     <h4 class="text-xs font-black text-slate-300">排位賽季結算</h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／冠軍怪獸 id），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。</p>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／頭 10 限定怪獸 id），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。</p>
                     <div class="flex flex-wrap gap-2">
                         <button type="button" onclick="adminPreviewSeason()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-100 text-xs font-bold">預覽今季頭10</button>
                         <button type="button" onclick="adminSettleSeason()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-100 text-xs font-bold">結算已結束賽季</button>
@@ -1715,15 +1715,15 @@
                     if (b && b.name) return b.name;
                 }
             } catch (e) {}
-            if (id === 'season_kirin') return '賽季麒麟';
+            if (id === 'season_kirin') return '聖光麒麟';
             return id || '限定怪獸';
         }
 
         function seasonRewardRulesText() {
             const m = seasonMonsterName(SEASON_REWARD_MONSTER_ID);
             return '各年級分開計頭 10 名，每 ' + SEASON_LENGTH_DAYS + ' 日結算一次（香港時間）。'
-                + '第1名：' + SEASON_REWARD_GOLD[1] + ' 金幣 + ' + SEASON_REWARD_EXP[1] + ' EXP包 + 限定「' + m + '」'
-                + '（已擁有改發 ' + DUPLICATE_MONSTER_EXP + ' EXP包）。'
+                + '頭 10 名均獲限定「' + m + '」（已擁有改發 ' + DUPLICATE_MONSTER_EXP + ' EXP包）。'
+                + '第1名：' + SEASON_REWARD_GOLD[1] + ' 金幣 + ' + SEASON_REWARD_EXP[1] + ' EXP包。'
                 + '第2–3名：' + SEASON_REWARD_GOLD[2] + ' 金幣 + ' + SEASON_REWARD_EXP[2] + ' EXP包。'
                 + '第4–10名：' + SEASON_REWARD_GOLD[4] + ' 金幣。結算後積分歸零，下次登入領獎。';
         }
@@ -2553,24 +2553,24 @@
             holy_hunter: 'assets/monsters/holy/holy_hunter.png',
             holy_beast: 'assets/monsters/holy/holy_beast.png',
             holy_envoy: 'assets/monsters/holy/holy_envoy.png',
-            // 賽季限定只存 id。立繪暫用現有青龍圖，唔使用 dataURL。
-            season_kirin: 'assets/monsters/classic/青龍.jpg'
+            // 賽季限定只存 id；立繪唔使用 dataURL。
+            season_kirin: 'assets/monsters/season_kirin.jpg'
         };
 
         const SEASON_LIMITED_BEASTS = [
             {
                 id: 'season_kirin',
-                name: '賽季麒麟',
+                name: '聖光麒麟',
                 element: 'holy',
-                title: '賽季限定神獸',
+                title: '賽季限定 · 聖光麒麟',
                 color: '#fbbf24',
                 hp: 230,
                 atk: 118,
                 def: 96,
                 spd: 112,
-                skillText: '麒麟聖輝衝！',
+                skillText: '聖光麒麟裁決！',
                 imgKey: 'season_kirin',
-                desc: '各年級排位賽季第 1 名限定。已擁有時獎勵改為 EXP 包，唔會抽卡抽出。'
+                desc: '各年級排位賽季頭 10 名限定。已擁有時獎勵改為 EXP 包，唔會抽卡抽出。'
             }
         ];
 
@@ -3247,7 +3247,7 @@
                     spd: Math.floor(seasonal.spd * lvlFactor),
                     skillText: seasonal.skillText || '賽季限定衝擊！',
                     imgKey: seasonal.imgKey || seasonal.id,
-                    desc: seasonal.desc || '排位賽季冠軍限定'
+                    desc: seasonal.desc || '排位賽季頭10限定'
                 };
             }
 
@@ -4272,7 +4272,7 @@
                                 return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="w-full py-2 bg-gradient-to-r ${can ? 'from-fuchsia-600 to-purple-600 hover:from-fuchsia-500 hover:to-purple-500 text-white' : 'from-slate-700 to-slate-800 text-slate-300'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
                             })()}
                         </div>
-                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季第1名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
+                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季頭10名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
                 `;
                 container.appendChild(card);
             });

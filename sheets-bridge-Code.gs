@@ -602,7 +602,8 @@ function rewardForRank_(rank) {
   return {
     gold: SEASON_REWARD_GOLD[r] || 0,
     exp: SEASON_REWARD_EXP[r] || 0,
-    monsterId: r === 1 ? SEASON_REWARD_MONSTER_ID : ''
+    // 頭 10 名均獲賽季限定怪獸（已擁有由客戶端／發放邏輯轉 EXP 包）
+    monsterId: SEASON_REWARD_MONSTER_ID
   };
 }
 
