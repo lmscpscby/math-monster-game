@@ -805,20 +805,26 @@
             pointer-events: none;
             user-select: none;
         }
-        /* Manus overlay: centers are % of the stage. Nameplates already include the Chinese titles. */
-        .island-hotspot--adventure { --x: 23%; --y: 26%; --delay: 0s; --bob-dur: 2.4s; }
-        .island-hotspot--arena { --x: 75%; --y: 25%; --delay: 0.55s; --bob-dur: 2.8s; }
-        .island-hotspot--gacha { --x: 24%; --y: 73%; --delay: 1.05s; --bob-dur: 2.2s; }
-        .island-hotspot--codex { --x: 75%; --y: 70%; --delay: 0.35s; --bob-dur: 3s; }
+        /* Lobby map v4: wood nameplate centers are % of the stage (approximate; fine-tune later). */
+        .island-stage { --label-h: clamp(30px, 7.8%, 50px); }
+        .island-hotspot--adventure { --x: 52%; --y: 28%; --delay: 0s; --bob-dur: 2.5s; --plate-w: 180; --plate-h: 56; }
+        .island-hotspot--arena { --x: 28%; --y: 48%; --delay: 0.35s; --bob-dur: 2.8s; --plate-w: 256; --plate-h: 56; }
+        .island-hotspot--training { --x: 22%; --y: 78%; --delay: 0.7s; --bob-dur: 2.3s; --plate-w: 182; --plate-h: 55; }
+        .island-hotspot--gacha { --x: 82%; --y: 32%; --delay: 0.15s; --bob-dur: 2.6s; --plate-w: 205; --plate-h: 55; }
+        .island-hotspot--recreation { --x: 78%; --y: 78%; --delay: 1.05s; --bob-dur: 2.9s; --plate-w: 224; --plate-h: 55; }
+        .island-hotspot--darkforest { --x: 18%; --y: 22%; --delay: 0.5s; --bob-dur: 2.4s; --plate-w: 274; --plate-h: 57; }
+        .island-hotspot--cloudrealm { --x: 62%; --y: 12%; --delay: 0.9s; --bob-dur: 3.1s; --plate-w: 256; --plate-h: 53; }
+        .island-hotspot--sunkencity { --x: 48%; --y: 88%; --delay: 1.25s; --bob-dur: 2.7s; --plate-w: 292; --plate-h: 55; }
         .island-hotspot {
             position: absolute;
             left: var(--x);
             top: var(--y);
-            width: clamp(126px, 24%, 320px);
-            aspect-ratio: 3 / 2;
+            height: var(--label-h);
+            width: calc(var(--label-h) * var(--plate-w) / var(--plate-h));
+            aspect-ratio: auto;
             z-index: 2;
             transform: translate(-50%, -50%);
-            transition: transform 0.18s ease;
+            transition: transform 0.18s ease, opacity 0.18s ease;
             margin: 0;
             padding: 0;
             border: 0;
@@ -831,6 +837,14 @@
             line-height: 0;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
+        }
+        .island-hotspot--locked {
+            opacity: 0.55;
+            cursor: not-allowed;
+            z-index: 2;
+        }
+        .island-hotspot:not(.island-hotspot--locked) {
+            z-index: 3;
         }
         .island-hotspot::after {
             content: "";
@@ -870,7 +884,45 @@
         }
         @keyframes island-bob {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-6px); }
+        }
+        .island-hub-bar {
+            width: min(100%, calc(72vh * 16 / 9));
+            max-width: 1100px;
+            margin: 0 auto 0.45rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .island-codex-btn {
+            display: block;
+            height: 38px;
+            width: calc(38px * 240 / 65);
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            cursor: pointer;
+            line-height: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .island-codex-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        .island-codex-btn:hover,
+        .island-codex-btn:focus-visible {
+            filter: brightness(1.08);
+            transform: translateY(-1px);
+        }
+        .island-codex-btn:focus-visible {
+            outline: 3px solid #fff7d6;
+            outline-offset: 3px;
         }
         .island-hotspot:hover .island-hotspot__bob img,
         .island-hotspot:focus-visible .island-hotspot__bob img {
@@ -913,6 +965,10 @@
         }
         @media (max-width: 720px) {
             .island-stage {
+                width: 100%;
+                --label-h: clamp(22px, 12%, 32px);
+            }
+            .island-hub-bar {
                 width: 100%;
             }
         }
@@ -1254,19 +1310,36 @@
             </div>
 
             <nav class="island-hub" aria-label="島嶼大廳">
+                <div class="island-hub-bar">
+                    <button type="button" class="island-codex-btn" onclick="switchView('monsters')" aria-label="圖鑑，進入怪獸圖鑑與隊伍">
+                        <img src="assets/bg/ui-btn-codex-small.png" alt="">
+                    </button>
+                </div>
                 <div class="island-stage">
-                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-v3-nolabels.jpg" alt="">
-                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="switchView('adventure')" aria-label="冒險島，進入數學冒險">
+                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg" alt="">
+                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="switchView('adventure')" aria-label="冒險塔，進入數學冒險">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png" alt=""></span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="競技場，進入排位賽">
+                    <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分排位鬥場，進入排位賽">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-arena.png" alt=""></span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="扭蛋坊，進入怪獸抽卡">
+                    <button type="button" class="island-hotspot island-hotspot--training island-hotspot--locked" data-locked-tip="即將開放" onclick="showIslandLockedTip(this)" aria-label="訓練場，即將開放">
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-training.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="神獸抽蛋，進入抽卡">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-gacha.png" alt=""></span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--codex" onclick="switchView('monsters')" aria-label="圖鑑館，進入怪獸圖鑑與隊伍">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-codex.png" alt=""></span>
+                    <button type="button" class="island-hotspot island-hotspot--recreation island-hotspot--locked" data-locked-tip="即將開放" onclick="showIslandLockedTip(this)" aria-label="小小遊憩區，即將開放">
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-recreation.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--darkforest island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="幽暗密林，待開發">
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-darkforest.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--cloudrealm island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="雲端秘境，待開發">
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-cloudrealm.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--sunkencity island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="沉沒古城，待開發">
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png" alt=""></span>
                     </button>
                 </div>
                 <p id="home-season-line" class="island-season-line">賽季載入中…</p>
@@ -1772,6 +1845,12 @@
         let cloudSaveInFlight = false;
         let cloudSavePending = false;
         let cloudSaveTimer = null;
+
+        function showIslandLockedTip(el) {
+            var msg = '即將開放';
+            if (el && el.getAttribute) msg = el.getAttribute('data-locked-tip') || msg;
+            showSyncToast(msg);
+        }
 
         function showSyncToast(msg) {
             try {
