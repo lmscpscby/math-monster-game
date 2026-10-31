@@ -477,6 +477,10 @@ function leaderboardList(data) {
   for (var i = 1; i < values.length; i++) {
     var key = String(values[i][0] || '').trim();
     if (!key) continue;
+    var profileObj = {};
+    try { profileObj = JSON.parse(String(values[i][3] || '{}')); } catch (e) { profileObj = {}; }
+    // 老師／管理員帳唔上學生排位榜（例：mr to、yin）
+    if (isAdminProfile(profileObj, key)) continue;
     var entry = publicEntryFromProfile(values[i][2], values[i][3], values[i][4]);
     if (gradeFilter && entry.grade !== gradeFilter) continue;
     list.push(entry);
@@ -955,6 +959,7 @@ function settleOneEpochUnlocked_(epoch, now) {
     winners = winnersFromSnapshot_(snap.rows);
   } else {
     var eligibleForRank = table.list.filter(function (p) {
+      if (isAdminProfile(p.profile, p.key)) return false;
       return effectiveScoreEpoch_(p.profile) <= ep;
     });
     var computed = rankGradeTop10_(eligibleForRank);

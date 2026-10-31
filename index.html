@@ -4779,7 +4779,11 @@
         function localLeaderboardUsers(targetGrade) {
             const db = getUsersDatabase();
             return Object.values(db)
-                .filter(u => parseGradeFromClass(u.className) === targetGrade)
+                .filter(u => {
+                    if (isBuiltInAdmin(u.nickname, u.key || ('user_' + (u.nickname || '')))) return false;
+                    if (u.isAdmin === true) return false;
+                    return parseGradeFromClass(u.className) === targetGrade;
+                })
                 .sort((a, b) => (b.rankScore || 0) - (a.rankScore || 0));
         }
 
@@ -4801,11 +4805,16 @@
                     if (data && data.ok && Array.isArray(data.entries)) {
                         if (data.season) noteServerSeason(data.season);
                         refreshSeasonBanner();
-                        paintLeaderboardEntries(container, data.entries);
+                        var entries = data.entries.filter(function (u) {
+                            if (!u) return false;
+                            if (u.isAdmin === true) return false;
+                            return !isBuiltInAdmin(u.nickname, u.key || ('user_' + (u.nickname || '')));
+                        });
+                        paintLeaderboardEntries(container, entries);
                         if (statusEl) {
                             const ep = data.season && data.season.epoch > 0 ? ` · 第 ${data.season.epoch} 賽季` : '';
-                            statusEl.innerText = data.entries.length
-                                ? `全服同年級榜 · 共 ${data.entries.length} 人${ep}`
+                            statusEl.innerText = entries.length
+                                ? `全服同年級榜 · 共 ${entries.length} 人${ep}`
                                 : `全服同年級暫無紀錄${ep}`;
                         }
                         return;
