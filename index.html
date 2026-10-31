@@ -788,11 +788,10 @@
         }
         .island-stage {
             position: relative;
-            width: min(100%, calc(72vh * 1680 / 944));
-            max-width: 1080px;
+            width: min(100%, calc(72vh * 16 / 9));
+            max-width: 1100px;
             margin-inline: auto;
-            aspect-ratio: 1680 / 944;
-            container-type: inline-size;
+            aspect-ratio: 16 / 9;
             filter: drop-shadow(0 16px 28px rgba(8, 50, 90, 0.35));
         }
         .island-stage__bg {
@@ -802,83 +801,68 @@
             height: 100%;
             object-fit: contain;
             object-position: center;
-            border-radius: 1.25rem;
+            border-radius: 0.75rem;
             pointer-events: none;
             user-select: none;
         }
-        .island-hotspot--adventure { --x: 24%; --y: 24%; --delay: 0s; --bob-dur: 2.4s; }
-        .island-hotspot--arena { --x: 66%; --y: 28%; --delay: 0.55s; --bob-dur: 2.8s; }
-        .island-hotspot--gacha { --x: 27%; --y: 68%; --delay: 1.05s; --bob-dur: 2.2s; }
-        .island-hotspot--codex { --x: 72%; --y: 60%; --delay: 0.35s; --bob-dur: 3s; }
+        /* Badge width/center matched to the baked markers on the 16:9 Manus map. */
+        .island-hotspot--adventure { --x: 22.23%; --y: 19.79%; --w: 9.45%; --delay: 0s; --bob-dur: 2.4s; }
+        .island-hotspot--arena { --x: 67.52%; --y: 21.49%; --w: 9.65%; --delay: 0.55s; --bob-dur: 2.8s; }
+        .island-hotspot--gacha { --x: 23.52%; --y: 61.25%; --w: 10.47%; --delay: 1.05s; --bob-dur: 2.2s; }
+        .island-hotspot--codex { --x: 67.52%; --y: 58.06%; --w: 9.65%; --delay: 0.35s; --bob-dur: 3s; }
         .island-hotspot {
             position: absolute;
             left: var(--x);
             top: var(--y);
+            width: var(--w);
             z-index: 2;
-            transform: translate(-50%, -42%);
+            transform: translate(-50%, -50%);
             margin: 0;
-            padding: 0.15rem;
+            padding: 0;
             border: 0;
             background: transparent;
             cursor: pointer;
-            border-radius: 999px;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
+        }
+        .island-hotspot::after {
+            content: "";
+            position: absolute;
+            inset: -10px;
         }
         .island-hotspot:hover,
         .island-hotspot:focus-visible {
             z-index: 4;
         }
         .island-hotspot:focus-visible {
-            outline: 3px solid #ffffff;
-            outline-offset: 3px;
+            outline: 3px solid #fff7d6;
+            outline-offset: 4px;
+            border-radius: 1rem;
         }
         .island-hotspot__bob {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.15rem;
+            display: block;
+            transform-origin: center center;
             animation: island-bob var(--bob-dur, 2.6s) ease-in-out infinite;
             animation-delay: var(--delay, 0s);
         }
-        .island-hotspot img {
-            width: clamp(56px, 14vw, 124px);
+        .island-hotspot__bob img {
+            width: 100%;
             height: auto;
             display: block;
             pointer-events: none;
-            filter: drop-shadow(0 8px 10px rgba(8, 40, 70, 0.45));
-        }
-        @container (min-width: 280px) {
-            .island-hotspot img {
-                width: clamp(56px, 13cqw, 124px);
-            }
-        }
-        .island-hotspot__label {
-            font-weight: 900;
-            font-size: clamp(12px, 2.5vw, 16px);
-            line-height: 1.35;
-            color: #fff;
-            letter-spacing: 0.04em;
-            white-space: nowrap;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
-            background: rgba(10, 58, 96, 0.78);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 999px;
-            padding: 0.08rem 0.55rem;
-            pointer-events: none;
+            user-select: none;
         }
         @keyframes island-bob {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
         }
-        .island-hotspot:hover .island-hotspot__bob,
-        .island-hotspot:focus-visible .island-hotspot__bob {
-            animation-play-state: paused;
-            transform: translateY(-4px) scale(1.05);
+        .island-hotspot:hover .island-hotspot__bob img,
+        .island-hotspot:focus-visible .island-hotspot__bob img {
+            filter: brightness(1.06);
         }
         .island-hotspot:active .island-hotspot__bob {
             animation: none;
-            transform: translateY(1px) scale(0.96);
+            transform: translateY(1px) scale(0.98);
         }
         .island-season-line {
             margin: 0.85rem auto 0;
@@ -914,18 +898,6 @@
         @media (max-width: 720px) {
             .island-stage {
                 width: 100%;
-            }
-            /* Short stage: push hotspots toward each quadrant so labels stay clear of the next icon. */
-            .island-hotspot--adventure { --x: 22%; --y: 16%; }
-            .island-hotspot--arena { --x: 72%; --y: 16%; }
-            .island-hotspot--gacha { --x: 24%; --y: 80%; }
-            .island-hotspot--codex { --x: 76%; --y: 72%; }
-            .island-hotspot img {
-                width: clamp(48px, 13vw, 64px);
-            }
-            .island-hotspot__label {
-                font-size: 12px;
-                padding: 0.05rem 0.4rem;
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -1267,30 +1239,18 @@
 
             <nav class="island-hub" aria-label="島嶼大廳">
                 <div class="island-stage">
-                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-v1.png" alt="">
+                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-v2-manus.png" alt="">
                     <button type="button" class="island-hotspot island-hotspot--adventure" onclick="switchView('adventure')" aria-label="冒險島，進入數學冒險">
-                        <span class="island-hotspot__bob">
-                            <img src="assets/bg/icon-adventure.png" alt="">
-                            <span class="island-hotspot__label">冒險島</span>
-                        </span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-adventure.png" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="競技場，進入排位賽">
-                        <span class="island-hotspot__bob">
-                            <img src="assets/bg/icon-arena.png" alt="">
-                            <span class="island-hotspot__label">競技場</span>
-                        </span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-arena.png" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="扭蛋坊，進入怪獸抽卡">
-                        <span class="island-hotspot__bob">
-                            <img src="assets/bg/icon-gacha.png" alt="">
-                            <span class="island-hotspot__label">扭蛋坊</span>
-                        </span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-gacha.png" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--codex" onclick="switchView('monsters')" aria-label="圖鑑館，進入怪獸圖鑑與隊伍">
-                        <span class="island-hotspot__bob">
-                            <img src="assets/bg/icon-codex.png" alt="">
-                            <span class="island-hotspot__label">圖鑑館</span>
-                        </span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-codex.png" alt=""></span>
                     </button>
                 </div>
                 <p id="home-season-line" class="island-season-line">賽季載入中…</p>
