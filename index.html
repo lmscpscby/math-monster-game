@@ -762,9 +762,153 @@
             }
         }
 
+        /* Lobby island hub — softer sea chrome only while the home view is up */
+        body.lobby-open {
+            background: linear-gradient(180deg, #d7f1ff 0%, #8fd0f0 32%, #3f97c9 68%, #1a6b9e 100%);
+            background-attachment: fixed;
+        }
+        body.lobby-open > header.glass-panel {
+            background: rgba(12, 78, 118, 0.82);
+            border-bottom-color: rgba(186, 230, 253, 0.38);
+        }
+        #view-home .lobby-hero {
+            background: linear-gradient(100deg, rgba(12, 74, 110, 0.78), rgba(15, 23, 42, 0.5) 55%, rgba(8, 90, 120, 0.7));
+            border-color: rgba(186, 230, 253, 0.45);
+        }
+        #view-home .lobby-hero-cta {
+            background: linear-gradient(90deg, #0f766e, #0891b2);
+            box-shadow: 0 12px 24px -8px rgba(8, 145, 178, 0.55);
+        }
+        #view-home .lobby-hero-cta:hover {
+            background: linear-gradient(90deg, #0d9488, #06b6d4);
+        }
+
+        .island-hub {
+            width: 100%;
+        }
+        .island-stage {
+            position: relative;
+            width: min(100%, calc(72vh * 16 / 9));
+            max-width: 1100px;
+            margin-inline: auto;
+            aspect-ratio: 16 / 9;
+            filter: drop-shadow(0 16px 28px rgba(8, 50, 90, 0.35));
+        }
+        .island-stage__bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 0.75rem;
+            pointer-events: none;
+            user-select: none;
+        }
+        /* Badge width/center matched to the baked markers on the 16:9 Manus map. */
+        .island-hotspot--adventure { --x: 22.23%; --y: 19.79%; --w: 9.45%; --delay: 0s; --bob-dur: 2.4s; }
+        .island-hotspot--arena { --x: 67.52%; --y: 21.49%; --w: 9.65%; --delay: 0.55s; --bob-dur: 2.8s; }
+        .island-hotspot--gacha { --x: 23.52%; --y: 61.25%; --w: 10.47%; --delay: 1.05s; --bob-dur: 2.2s; }
+        .island-hotspot--codex { --x: 67.52%; --y: 58.06%; --w: 9.65%; --delay: 0.35s; --bob-dur: 3s; }
+        .island-hotspot {
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--w);
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .island-hotspot::after {
+            content: "";
+            position: absolute;
+            inset: -10px;
+        }
+        .island-hotspot:hover,
+        .island-hotspot:focus-visible {
+            z-index: 4;
+        }
+        .island-hotspot:focus-visible {
+            outline: 3px solid #fff7d6;
+            outline-offset: 4px;
+            border-radius: 1rem;
+        }
+        .island-hotspot__bob {
+            display: block;
+            transform-origin: center center;
+            animation: island-bob var(--bob-dur, 2.6s) ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+        }
+        .island-hotspot__bob img {
+            width: 100%;
+            height: auto;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+        }
+        @keyframes island-bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .island-hotspot:hover .island-hotspot__bob img,
+        .island-hotspot:focus-visible .island-hotspot__bob img {
+            filter: brightness(1.06);
+        }
+        .island-hotspot:active .island-hotspot__bob {
+            animation: none;
+            transform: translateY(1px) scale(0.98);
+        }
+        .island-season-line {
+            margin: 0.85rem auto 0;
+            width: fit-content;
+            max-width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 800;
+            color: #08314d;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            border-radius: 999px;
+            padding: 0.35rem 0.85rem;
+            box-shadow: 0 4px 14px rgba(8, 50, 90, 0.15);
+        }
+        .island-admin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin: 0.75rem auto 0;
+            padding: 0.55rem 0.9rem;
+            border-radius: 0.9rem;
+            border: 1px solid rgba(251, 113, 133, 0.55);
+            background: rgba(136, 19, 55, 0.82);
+            color: #ffe4e6;
+            font-size: 12px;
+            font-weight: 800;
+        }
+        #view-home .island-admin-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width: 720px) {
+            .island-stage {
+                width: 100%;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .island-hotspot__bob {
+                animation: none;
+            }
+        }
+
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
+<body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
 
     <!-- 背景音樂 HTML5 Audio 標籤 -->
     <audio id="bgm-audio" loop preload="metadata">
@@ -1071,7 +1215,7 @@
 
         <!-- VIEW 1: HOME MENU -->
         <section id="view-home" class="space-y-6">
-            <div class="relative rounded-3xl overflow-hidden glass-panel border-2 border-pink-500/30 shadow-2xl group bg-gradient-to-r from-purple-950 via-slate-950 to-indigo-950">
+            <div class="lobby-hero relative rounded-3xl overflow-hidden glass-panel border-2 shadow-2xl group">
                 <div class="w-full h-64 md:h-80 overflow-hidden relative flex items-center justify-center bg-slate-950">
                     <img id="main-cover-img" src="" alt="山海數學之戰" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent pointer-events-none"></div>
@@ -1079,87 +1223,44 @@
                 
                 <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
-                        <h2 class="text-xl sm:text-3xl md:text-5xl font-black break-words bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-amber-200 to-indigo-200">
+                        <h2 class="text-xl sm:text-3xl md:text-5xl font-black break-words bg-clip-text text-transparent bg-gradient-to-r from-sky-100 via-amber-100 to-white">
                             歡迎來到數理怪獸世界
                         </h2>
                         <p class="text-slate-200 max-w-2xl text-xs md:text-sm mt-1 leading-relaxed">
                             排位賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）！冒險模式 BOSS 隨機登場，小數題目完整保留小數點！
                         </p>
                     </div>
-                    <button onclick="switchView('adventure')" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white font-black text-sm rounded-2xl shadow-xl shadow-pink-500/30 flex items-center space-x-2 active:scale-95 transition-all">
+                    <button onclick="switchView('adventure')" class="lobby-hero-cta px-6 py-3 text-white font-black text-sm rounded-2xl flex items-center space-x-2 active:scale-95 transition-all">
                         <i class="fa-solid fa-play"></i>
                         <span>開始冒險</span>
                     </button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                <button onclick="switchView('adventure')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-indigo-400">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                        </div>
-                        <span class="text-xs bg-indigo-500/30 text-indigo-200 font-bold px-3 py-1 rounded-full">動態多題型</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors">數學冒險</h3>
-                        <p class="text-xs text-slate-300 mt-1">小一至小六多元化試題！每次換題自動抽換完全不同的題型風格！</p>
-                    </div>
-                </button>
+            <nav class="island-hub" aria-label="島嶼大廳">
+                <div class="island-stage">
+                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-v2-manus.png" alt="">
+                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="switchView('adventure')" aria-label="冒險島，進入數學冒險">
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-adventure.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="競技場，進入排位賽">
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-arena.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="扭蛋坊，進入怪獸抽卡">
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-gacha.png" alt=""></span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--codex" onclick="switchView('monsters')" aria-label="圖鑑館，進入怪獸圖鑑與隊伍">
+                        <span class="island-hotspot__bob"><img src="assets/bg/badge-codex.png" alt=""></span>
+                    </button>
+                </div>
+                <p id="home-season-line" class="island-season-line">賽季載入中…</p>
+            </nav>
 
-                <button onclick="switchView('ranked')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group min-h-48 h-auto border-l-4 border-l-purple-400">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-ranking-star"></i>
-                        </div>
-                        <span class="text-xs bg-purple-500/30 text-purple-200 font-bold px-3 py-1 rounded-full">4關屬性雙BOSS</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white group-hover:text-purple-300 transition-colors">排位賽模式</h3>
-                        <p class="text-xs text-slate-300 mt-1">10LV(水) / 20LV(火) / 30LV(草) / 40LV(雷) 雙 BOSS 固定連戰！</p>
-                        <p id="home-season-line" class="text-[10px] text-amber-200 mt-1 font-bold">賽季載入中…</p>
-                    </div>
-                </button>
-
-                <button onclick="switchView('gacha')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-amber-400">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-cubes-stacked"></i>
-                        </div>
-                        <span class="text-xs bg-amber-500/30 text-amber-200 font-bold px-3 py-1 rounded-full">十連保底山海經</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white group-hover:text-amber-300 transition-colors">怪獸抽卡機</h3>
-                        <p class="text-xs text-slate-300 mt-1">單抽200元，十連抽2000元！十連抽必得1個山海經怪獸卡！</p>
-                    </div>
-                </button>
-
-                <button onclick="switchView('monsters')" class="glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-emerald-400">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-book-bookmark"></i>
-                        </div>
-                        <span class="text-xs bg-emerald-500/30 text-emerald-200 font-bold px-3 py-1 rounded-full">養成系統</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white group-hover:text-emerald-300 transition-colors">怪獸圖鑑與隊伍</h3>
-                        <p class="text-xs text-slate-300 mt-1">查看怪獸等級與屬性，培育最終形態（30LV）戰力再突破！</p>
-                    </div>
-                </button>
-
-                <!-- PVP 對決擂台：已停用 -->
-
-                <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden glass-card p-6 rounded-3xl text-left flex flex-col justify-between group h-48 border-l-4 border-l-rose-400">
-                    <div class="flex justify-between items-start">
-                        <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-chart-user"></i>
-                        </div>
-                        <span class="text-xs bg-rose-500/30 text-rose-200 font-bold px-3 py-1 rounded-full">管理員</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white group-hover:text-rose-300 transition-colors">參加人數統計</h3>
-                        <p class="text-xs text-slate-300 mt-1">睇全服註冊人數、按班／年級分佈同排位參與度。</p>
-                    </div>
+            <!-- PVP 對決擂台：已停用 -->
+            <div class="island-admin-wrap">
+                <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden island-admin-btn">
+                    <i class="fa-solid fa-chart-user" aria-hidden="true"></i>
+                    <span>參加人數統計</span>
                 </button>
             </div>
 
@@ -4046,6 +4147,7 @@
             });
             const target = document.getElementById(`view-${viewName}`);
             if (target) target.classList.remove('hidden');
+            document.body.classList.toggle('lobby-open', viewName === 'home');
 
             // 進出戰鬥切換 BGM／背景短片（互不干擾）
             if (viewName === 'battle') {
