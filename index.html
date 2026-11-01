@@ -2182,25 +2182,232 @@
         .adventure-tower-card--sunkencity .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-sunkencity.png'); }
         .adventure-tower-card--cloudrealm .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-cloudrealm.png'); }
         .adventure-tower-card--training .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-training.png'); }
-        .adventure-tower-card__title {
+        /* Dedicated four-op scenic cards. v = SHA-256 first 8 hex. Names stay HTML. */
+        .adventure-tower-card--add .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-add-fire.png?v=862ab859'); }
+        .adventure-tower-card--sub .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-sub-ice.png?v=9f616294'); }
+        .adventure-tower-card--mul .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-mul-emerald.png?v=7cfb7a7f'); }
+        .adventure-tower-card--div .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-div-thunder.png?v=9a7bfb13'); }
+        .adventure-tower-card__badge {
             position: absolute;
-            left: 14%;
-            right: 14%;
-            top: 86%;
-            bottom: 7.5%;
-            z-index: 1;
+            left: 8.5%;
+            width: 17%;
+            top: 5.6%;
+            height: 6.2%;
+            z-index: 2;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0;
-            color: #fff8ec;
+            color: #fff6e0;
             font-weight: 900;
-            font-size: clamp(18px, 4.6cqi, 32px);
+            font-size: clamp(9px, 2.05cqi, 13px);
             letter-spacing: 0.12em;
             line-height: 1;
-            text-shadow: 0 1px 2px rgba(20, 8, 4, 0.9);
+            text-shadow: 0 1px 1px rgba(40, 18, 4, 0.9);
             pointer-events: none;
             white-space: nowrap;
+        }
+        .adventure-tower-card__title {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            top: 81.5%;
+            bottom: 6.4%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.08rem;
+            margin: 0;
+            color: #fff8ec;
+            font-weight: 900;
+            font-size: clamp(15px, 3.7cqi, 28px);
+            letter-spacing: 0.08em;
+            line-height: 1.05;
+            text-shadow: 0 1px 2px rgba(20, 8, 4, 0.9);
+            pointer-events: none;
+        }
+        .adventure-tower-card__sub {
+            font-size: clamp(10px, 2.15cqi, 14px);
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            color: #f6e6cf;
+            line-height: 1.15;
+        }
+        .adventure-tower-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.85rem 1rem;
+            width: 100%;
+        }
+        .adventure-tower-grid.hidden,
+        .adventure-floor-list.hidden { display: none; }
+        .adventure-floor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            width: min(100%, 860px);
+            margin: 0 auto;
+        }
+        .adventure-floor {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.55rem 0.85rem;
+            padding: 0.7rem 0.85rem;
+            background: rgba(255, 248, 236, 0.92);
+            border: 2px solid #c4924a;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(70, 42, 16, 0.16);
+            color: #3a2412;
+        }
+        .adventure-floor.is-locked { opacity: 0.62; }
+        .adventure-floor.is-endless {
+            border-color: #7a5cbc;
+            background: rgba(246, 236, 255, 0.94);
+        }
+        .adventure-floor__index {
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            background: #f3d7a2;
+            color: #5c3a16;
+            flex: 0 0 auto;
+        }
+        .adventure-floor.is-endless .adventure-floor__index {
+            background: #e4d4ff;
+            color: #4c2d86;
+        }
+        .adventure-floor__main { flex: 1 1 14rem; min-width: 0; }
+        .adventure-floor__main h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+        .adventure-floor__meta {
+            margin: 0.15rem 0 0;
+            font-size: 12px;
+            font-weight: 700;
+            color: #6b4524;
+        }
+        .adventure-floor__stars {
+            letter-spacing: 0.14em;
+            color: #b08968;
+            font-size: 1.05rem;
+            font-weight: 900;
+        }
+        .adventure-floor__stars .is-on { color: #c89212; }
+        .adventure-floor__go {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 7.4rem;
+            height: 46px;
+            padding: 0 0.75rem 1px;
+            border: 0;
+            background: url('assets/bg/ui-shared-btn-primary.png') center / 100% 100% no-repeat;
+            color: #fff8ec;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: 14px;
+            cursor: pointer;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+        }
+        .adventure-floor__go:hover { filter: brightness(1.06); }
+        .adventure-floor__go:disabled {
+            filter: grayscale(0.45) brightness(0.86);
+            cursor: not-allowed;
+        }
+        .adventure-floor__go:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 2px;
+        }
+        @media (max-width: 1100px) {
+            .adventure-tower-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 640px) {
+            .adventure-tower-grid { grid-template-columns: minmax(0, 1fr); }
+        }
+        .battle-quiz--tower .battle-quiz__prompt {
+            top: 18%;
+            height: 22%;
+        }
+        .battle-quiz--tower .battle-quiz__options {
+            top: 42%;
+            bottom: 7%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.28rem;
+            align-content: stretch;
+        }
+        .tower-answer {
+            display: flex;
+            flex-direction: column;
+            gap: 0.28rem;
+            height: 100%;
+            min-height: 0;
+        }
+        .tower-answer__row { display: flex; gap: 0.35rem; align-items: stretch; }
+        .tower-answer__input {
+            flex: 1 1 auto;
+            min-width: 0;
+            border: 2px solid #c4924a;
+            border-radius: 12px;
+            background: rgba(255, 248, 236, 0.96);
+            color: #3a2412;
+            font-weight: 900;
+            font-size: clamp(16px, 2.4cqi, 22px);
+            text-align: center;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .tower-answer__input:focus { outline: 3px solid #f6e2a8; outline-offset: 1px; }
+        .tower-answer__go,
+        .tower-answer__pad > button {
+            border-style: solid;
+            border-color: transparent;
+            background: transparent;
+            color: #fff8ec;
+            font-weight: 900;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+            cursor: pointer;
+        }
+        .tower-answer__go {
+            flex: 0 0 auto;
+            min-width: 5.5rem;
+            border-width: 8px 16px;
+            border-image: url('assets/bg/ui-shared-btn-primary.png') 22 40 fill stretch;
+            font-size: clamp(14px, 2cqi, 18px);
+        }
+        .tower-answer__pad {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.22rem;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+        .tower-answer__pad > button {
+            border-width: 6px 10px;
+            border-image: url('assets/bg/ui-shared-btn-primary.png') 22 40 fill stretch;
+            font-size: clamp(12px, 1.7cqi, 16px);
+            line-height: 1;
+            min-height: 1.7rem;
+        }
+        .tower-answer__pad > button:focus-visible,
+        .tower-answer__go:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 2px;
+        }
+        .tower-answer__wide { grid-column: 1 / -1; }
+        @media (max-width: 720px) {
+            .battle-quiz--tower .battle-quiz__prompt { top: 15%; height: 18%; }
+            .battle-quiz--tower .battle-quiz__options { top: 36%; bottom: 5%; }
         }
         .adventure-banner h2 span.is-off { display: none; }
         .adventure-tower-card:hover .adventure-tower-card__frame { filter: brightness(1.06); }
@@ -3173,7 +3380,7 @@
                             歡迎來到數理怪獸世界
                         </h2>
                         <p class="text-slate-200 max-w-2xl text-xs md:text-sm mt-1 leading-relaxed">
-                            訓練場分單元挑戰。積分爭霸賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）。冒險塔無盡爬層，只出加減乘除。
+                            訓練場分單元挑戰。積分爭霸賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）。冒險塔四座元素神塔，各五層，通關後開無限挑戰。
                         </p>
                     </div>
                     <button onclick="enterAdventure()" class="lobby-hero-cta px-6 py-3 text-white font-black text-sm rounded-2xl flex items-center space-x-2 active:scale-95 transition-all">
@@ -3191,7 +3398,7 @@
                 </div>
                 <div class="island-stage">
                     <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg" alt="">
-                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，無盡爬層">
+                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，四座元素神塔">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png?v=559d001e" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分爭霸賽，進入積分塔">
@@ -3447,46 +3654,45 @@
             </div>
         </section>
 
-        <!-- VIEW 4: ADVENTURE TOWER — endless +−×÷ climb. Tower-picker art is unused. -->
+        <!-- VIEW 4: ADVENTURE — four element towers, floors 1–5, then endless. -->
         <section id="view-adventure" class="hidden adventure-view">
             <div>
-                <button type="button" onclick="switchView('home')" class="adventure-back">
-                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回主選單</span>
+                <button type="button" onclick="adventureBack()" class="adventure-back">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span id="adventure-back-label">返回主選單</span>
                 </button>
             </div>
 
             <header class="adventure-banner">
                 <div class="adventure-banner__copy">
-                    <h2>冒險塔<span>無盡爬層 · 加減乘除</span></h2>
-                    <p>一層一戰，只出加、減、乘、除。每 10 層獲得金幣 +100 同 EXP 包 +2。</p>
+                    <h2 id="adventure-banner-title">冒險塔<span id="adventure-banner-sub">加減乘除四神塔</span></h2>
+                    <p id="adventure-banner-note">通關前 5 層即可開啟無限挑戰。</p>
                 </div>
             </header>
 
-            <div class="climb-board" id="adventure-climb">
-                <div class="climb-stats">
-                    <div class="climb-stat">
-                        <div class="climb-stat__kicker">目前樓層</div>
-                        <div id="climb-floor-now" class="climb-stat__value">1</div>
-                    </div>
-                    <div class="climb-stat">
-                        <div class="climb-stat__kicker">最高紀錄</div>
-                        <div id="climb-floor-best" class="climb-stat__value">0</div>
-                    </div>
-                    <div class="climb-stat">
-                        <div class="climb-stat__kicker">本層題型</div>
-                        <div id="climb-floor-op" class="climb-stat__value">加法</div>
-                    </div>
-                </div>
-                <div class="climb-ops" id="climb-op-list" aria-label="加減乘除">
-                    <span class="climb-op is-current" data-op="climb_add">加法</span>
-                    <span class="climb-op" data-op="climb_sub">減法</span>
-                    <span class="climb-op" data-op="climb_mul">乘法</span>
-                    <span class="climb-op" data-op="climb_div">除法</span>
-                </div>
-                <p id="climb-milestone" class="climb-milestone">下一里程碑第 10 層：金幣 +100、EXP包 +2</p>
-                <button type="button" id="climb-start-btn" class="climb-start" onclick="startClimbBattle()">挑戰第 1 層</button>
-                <p class="climb-note">通關後會記住樓層。失敗就停在本層，可以再挑戰。題型依樓層輪流：加法、減法、乘法、除法。</p>
+            <div id="adventure-hub" class="adventure-tower-grid">
+                <button type="button" class="adventure-tower-card adventure-tower-card--add" onclick="selectAdventureTower('addition')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__badge">火焰</span>
+                    <span class="adventure-tower-card__title">火焰加法塔<span class="adventure-tower-card__sub" id="adv-meta-addition">★ 0/15 · 進度 0/5</span></span>
+                </button>
+                <button type="button" class="adventure-tower-card adventure-tower-card--sub" onclick="selectAdventureTower('subtraction')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__badge">冰霜</span>
+                    <span class="adventure-tower-card__title">冰霜減法塔<span class="adventure-tower-card__sub" id="adv-meta-subtraction">★ 0/15 · 進度 0/5</span></span>
+                </button>
+                <button type="button" class="adventure-tower-card adventure-tower-card--mul" onclick="selectAdventureTower('multiplication')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__badge">翡翠</span>
+                    <span class="adventure-tower-card__title">翡翠乘法塔<span class="adventure-tower-card__sub" id="adv-meta-multiplication">★ 0/15 · 進度 0/5</span></span>
+                </button>
+                <button type="button" class="adventure-tower-card adventure-tower-card--div" onclick="selectAdventureTower('division')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__badge">雷霆</span>
+                    <span class="adventure-tower-card__title">雷霆除法塔<span class="adventure-tower-card__sub" id="adv-meta-division">★ 0/15 · 進度 0/5</span></span>
+                </button>
             </div>
+
+            <div id="adventure-floors" class="adventure-floor-list hidden"></div>
         </section>
 
         <!-- VIEW: TRAINING — grade tabs + unit scenic cards -->
@@ -3531,7 +3737,7 @@
                 <div class="flex items-center gap-2">
                     <div id="boss-attack-timer-badge" class="battle-chip battle-chip--timer">
                         <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
-                        <span class="hidden sm:inline">Boss 襲擊倒數: </span><span id="boss-timer-num">20</span>s
+                        <span id="boss-timer-label" class="hidden sm:inline">Boss 襲擊倒數: </span><span id="boss-timer-num">20</span><span id="boss-timer-suffix">s</span>
                     </div>
                     <div class="battle-chip battle-chip--boss">
                         <i class="fa-solid fa-infinity" aria-hidden="true"></i>
@@ -3619,7 +3825,7 @@
                 <div class="battle-quiz__plaque">題目 <span id="quiz-current-num">1</span></div>
                 <p id="battle-combo" class="battle-quiz__hint">
                     <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
-                    <span class="hidden sm:inline">答題無完場時限；每 20 秒唔答 Boss 會襲擊</span><span class="sm:hidden">無完場限；每20s襲擊</span>
+                    <span id="battle-combo-text"><span class="hidden sm:inline">答題無完場時限；每 20 秒唔答 Boss 會襲擊</span><span class="sm:hidden">無完場限；每20s襲擊</span></span>
                 </p>
                 <div class="battle-quiz__prompt">
                     <div id="quiz-question-figure" class="quiz-question-figure hidden">
@@ -3635,6 +3841,36 @@
         <!-- VIEW 6: PVP LOBBY — 已停用 -->
 
     </main>
+
+    <!-- Adventure tower result: stars, gold, EXP. Parchment frame, not the prototype panel. -->
+    <div id="adventure-result-modal" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="adventure-result-title">
+        <div class="ui-modal ui-parchment w-full max-w-md my-auto space-y-3 text-center">
+            <h3 id="adventure-result-title" class="text-2xl font-black text-amber-900">樓層討伐成功！</h3>
+            <p id="adventure-result-desc" class="text-sm font-bold text-amber-950/80">你成功擊敗了守護獸。</p>
+            <div class="rounded-2xl border border-amber-900/20 bg-white/50 px-4 py-3 text-left space-y-2 text-sm">
+                <div id="adventure-result-stars-row" class="flex justify-between items-center">
+                    <span class="text-amber-950/70">獲得評價</span>
+                    <span id="adventure-result-stars" class="font-black tracking-widest text-amber-700">★★★</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-amber-950/70">答對</span>
+                    <span id="adventure-result-waves" class="font-black text-amber-950">0 / 5</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-amber-950/70">經驗值</span>
+                    <span id="adventure-result-exp" class="font-black text-purple-800">+0 EXP</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-amber-950/70">金幣</span>
+                    <span id="adventure-result-gold" class="font-black text-amber-800">+0</span>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button type="button" onclick="adventureResultBack()" class="ui-btn ui-btn--secondary flex-1 text-xs">返回關卡</button>
+                <button type="button" id="adventure-result-next" onclick="adventureResultNext()" class="ui-btn ui-btn--primary flex-1 text-xs">繼續挑戰</button>
+            </div>
+        </div>
+    </div>
 
     <!-- CARD ZOOM MODAL -->
     <div id="card-zoom-modal" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4 hidden">
@@ -4067,7 +4303,8 @@
             var monsters = Array.isArray(p.ownedMonsters) ? p.ownedMonsters.length : 0;
             var rank = Math.max(0, Math.floor(Number(p.rankScore) || 0));
             var climbBest = Math.max(0, Math.floor(Number(p.adventureClimbBest) || 0));
-            return gold === 0 && packs === 0 && monsters === 0 && rank === 0 && climbBest === 0;
+            var towerStars = adventureStarTotal(p);
+            return gold === 0 && packs === 0 && monsters === 0 && rank === 0 && climbBest === 0 && towerStars === 0;
         }
 
         /** 註冊起步檔：四隻 Lv1 基礎怪＋金幣≤1000＋rank0（老師清戶後重新 register 常見） */
@@ -4110,6 +4347,7 @@
             if (am.length > bm.length) return true;
             if (ag > bg + 50) return true;
             if (aClimb > bClimb) return true;
+            if (adventureStarTotal(a) > adventureStarTotal(b)) return true;
             if (aMax > 1 && isStarterLikeProgressProfile(b)) return true;
             return false;
         }
@@ -4262,6 +4500,9 @@
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
                 applyResolvedAvatar(baseCloud, cloud, local);
                 applyAdventureClimbFrom(baseCloud, cloud);
+                baseCloud.adventureProgress = coerceAdventureProgress(
+                    cloud.adventureProgress ? cloud.adventureProgress : baseCloud.adventureProgress
+                );
                 stampUpdatedAt(baseCloud);
                 return baseCloud;
             }
@@ -4336,6 +4577,7 @@
             base.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
             applyResolvedAvatar(base, localNewer ? local : cloud, localNewer ? cloud : local);
             applyAdventureClimbMax(base, local, cloud);
+            base.adventureProgress = maxAdventureProgress(local.adventureProgress, cloud.adventureProgress);
             stampUpdatedAt(base);
             return base;
         }
@@ -4381,7 +4623,10 @@
 
         function normalizeAdventureClimb(user) {
             if (!user) return user;
-            return applyAdventureClimbFrom(user, user);
+            applyAdventureClimbFrom(user, user);
+            migrateLegacyTowerSave(user);
+            user.adventureProgress = coerceAdventureProgress(user.adventureProgress);
+            return user;
         }
 
         function profilesProgressDiffer(a, b) {
@@ -4404,6 +4649,7 @@
             if (sanitizeAvatarData(a.avatarData) !== sanitizeAvatarData(b.avatarData)) return true;
             if (storedClimbFloor(a) !== storedClimbFloor(b)) return true;
             if (readClimbBest(a) !== readClimbBest(b)) return true;
+            if (adventureProgressFingerprint(a) !== adventureProgressFingerprint(b)) return true;
             return false;
         }
 
@@ -4477,7 +4723,8 @@
                 updatedAt: currentUser.updatedAt,
                 avatarId: currentUser.avatarId,
                 avatarData: currentUser.avatarData,
-                ownedMonsters: currentUser.ownedMonsters
+                ownedMonsters: currentUser.ownedMonsters,
+                adventureProgress: currentUser.adventureProgress
             };
             var merged = mergeProgressProfiles(currentUser, profile, {
                 grantedGold: grantG,
@@ -4637,10 +4884,10 @@
         function currentBattleUnitLabel() {
             try {
                 const units = (typeof GRADE_UNITS !== 'undefined' && GRADE_UNITS[selectedGrade]) ? GRADE_UNITS[selectedGrade] : [];
-                if (isClimbMode) {
-                    const floor = climbBattleFloor || readClimbFloor(currentUser);
-                    const op = climbOpForFloor(floor);
-                    return '第' + floor + '層·' + op.name;
+                if (isClimbMode && adventureTowerId && ADVENTURE_TOWERS[adventureTowerId]) {
+                    const tower = ADVENTURE_TOWERS[adventureTowerId];
+                    const floor = tower.floors[adventureFloorIndex];
+                    return tower.name + (floor ? '·' + floor.title : '');
                 }
                 if (typeof pendingStrandId !== 'undefined' && pendingStrandId) {
                     const found = units.find(function (x) { return x.id === pendingStrandId; });
@@ -5605,10 +5852,28 @@
             return true;
         }
 
+        /** Apply an elemental plate. If the file is missing, fall back to the random pool. */
+        function applyAdventureElementStage(elementId) {
+            const url = rankedAttributeStageUrl(elementId);
+            if (!url) return false;
+            applyBattleStageBackground(url);
+            const token = ++adventureStageProbeToken;
+            const probe = new Image();
+            probe.onload = function () {};
+            probe.onerror = function () {
+                if (token !== adventureStageProbeToken) return;
+                if (isClimbMode) applyRandomBattleStage();
+            };
+            probe.src = url;
+            return true;
+        }
+
         /**
          * Ranked water/fire/grass/thunder (stage key or element id) uses the matching plate
-         * and does not call applyRandomBattleStage. Adventure, training, and any other
-         * entry still draw from the five-image pool.
+         * and does not call applyRandomBattleStage. Adventure towers use the same plates
+         * (addition→fire, subtraction→water, multiplication→grass, division→thunder)
+         * and fall back to the random pool only when that plate is missing.
+         * Training and any other entry draw from the five-image pool.
          */
         function applyBattleStageForEntry() {
             if (isRankedMode) {
@@ -5620,6 +5885,10 @@
                     applyRankedAttributeBattleStage(elementId);
                     return;
                 }
+            }
+            if (isClimbMode) {
+                const advElement = adventureTowerElement(adventureTowerId);
+                if (advElement && applyAdventureElementStage(advElement)) return;
             }
             applyRandomBattleStage();
         }
@@ -5871,6 +6140,7 @@
                 leaderboardEpoch: currentClientSeasonEpoch(),
                 adventureClimbFloor: 1,
                 adventureClimbBest: 0,
+                adventureProgress: { level: 1, exp: 0, addition: [0, 0, 0, 0, 0], subtraction: [0, 0, 0, 0, 0], multiplication: [0, 0, 0, 0, 0], division: [0, 0, 0, 0, 0] },
                 updatedAt: new Date().toISOString(),
                 ownedMonsters: [
                     { id: 'fire_base', level: 1, exp: 0 },
@@ -6340,7 +6610,7 @@
             if (viewName === 'monsters') renderMonsterCollection();
             if (viewName === 'ranked') renderLeaderboard();
             if (viewName === 'home') updateAdminUiVisibility();
-            if (viewName === 'adventure') renderAdventureClimb();
+            if (viewName === 'adventure') renderAdventureScreen();
             if (viewName === 'training') renderStrandsGrid();
         }
 
@@ -6802,34 +7072,350 @@
         }
 
         /**
-         * 冒險塔暫時只出加減乘除。樓層 1 加法、2 減法、3 乘法、4 除法，之後循環。
-         * 里程碑只在每 10 層（10、20、30…）：固定 +100 金幣、+2 EXP 包。
-         * 第 5、15、25 層等不發獎。同一層只在首次通關（高過 adventureClimbBest）發獎。
+         * 四神塔：加法／減法／乘法／除法各 5 層 + 無限。
+         * 題目產生器跟同事原型 genAdd* / genSub* / genMul* / genDiv* / genEndlessQuestion。
+         * 星星、金幣、EXP 寫入帳戶 adventureProgress；金幣同時入 currentUser.gold。
          */
-        const CLIMB_MILESTONE_EVERY = 10;
-        const CLIMB_MILESTONE_GOLD = 100;
-        const CLIMB_MILESTONE_EXP = 2;
-        const CLIMB_OPS = [
-            { id: 'climb_add', name: '加法', unitKeys: ['basic_addition', 'addition_1', 'addition_2'] },
-            { id: 'climb_sub', name: '減法', unitKeys: ['basic_subtraction', 'subtraction', 'subtraction_1', 'subtraction_2'] },
-            { id: 'climb_mul', name: '乘法', unitKeys: ['mult_2_5_10', 'mult_3_6', 'mult_4_8', 'mult_7_9_1_0', 'multiplication_1', 'multiplication_2', 'multiplication_3', 'multiplication_intro', 'wonderful_multiplication'] },
-            { id: 'climb_div', name: '除法', unitKeys: ['division', 'division_1', 'division_2', 'division_3', 'sharing_1', 'sharing_2', 'interesting_division'] }
-        ];
+        /* ADVENTURE_TOWER_LOGIC_START */
+        const ADVENTURE_TOWER_IDS = ['addition', 'subtraction', 'multiplication', 'division'];
+        const ADVENTURE_TOWER_ELEMENT = {
+            addition: 'fire',
+            subtraction: 'water',
+            multiplication: 'grass',
+            division: 'thunder'
+        };
 
-        function climbOpForFloor(floor) {
-            const n = Math.max(1, Math.floor(Number(floor) || 1));
-            return CLIMB_OPS[(n - 1) % CLIMB_OPS.length];
+        function adventureTowerElement(towerId) {
+            return ADVENTURE_TOWER_ELEMENT[towerId] || '';
         }
 
-        function climbMilestoneReward(floor) {
-            const n = Math.floor(Number(floor) || 0);
-            if (n <= 0 || n % CLIMB_MILESTONE_EVERY !== 0) return { gold: 0, expPacks: 0 };
-            return { gold: CLIMB_MILESTONE_GOLD, expPacks: CLIMB_MILESTONE_EXP };
+        function towerRandInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
-        function nextClimbMilestone(floor) {
-            const n = Math.max(1, Math.floor(Number(floor) || 1));
-            return Math.ceil(n / CLIMB_MILESTONE_EVERY) * CLIMB_MILESTONE_EVERY;
+        function genAdd(min1, max1, min2, max2) {
+            const a = towerRandInt(min1, max1);
+            const b = towerRandInt(min2, max2);
+            return { prompt: a + ' + ' + b + ' = ?', ans: String(a + b) };
+        }
+        function genAddNoCarry() {
+            const a1 = towerRandInt(1, 8);
+            const a2 = towerRandInt(1, 8);
+            const b1 = towerRandInt(1, 9 - a1);
+            const b2 = towerRandInt(1, 9 - a2);
+            const a = a1 * 10 + a2;
+            const b = b1 * 10 + b2;
+            return { prompt: a + ' + ' + b + ' = ?', ans: String(a + b) };
+        }
+        function genAddCarry() {
+            const a1 = towerRandInt(1, 8);
+            const a2 = towerRandInt(5, 9);
+            const b1 = towerRandInt(1, 8);
+            const b2 = towerRandInt(10 - a2, 9);
+            const a = a1 * 10 + a2;
+            const b = b1 * 10 + b2;
+            return { prompt: a + ' + ' + b + ' = ?', ans: String(a + b) };
+        }
+        function genSub(min1, max1, min2, max2) {
+            let a = towerRandInt(min1, max1);
+            let b = towerRandInt(min2, max2);
+            if (a < b) { const t = a; a = b; b = t; }
+            return { prompt: a + ' - ' + b + ' = ?', ans: String(a - b) };
+        }
+        function genSubNoBorrow(min1, max1, min2, max2) {
+            const tensA = towerRandInt(2, 9);
+            const onesA = towerRandInt(4, 9);
+            const onesB = towerRandInt(0, onesA);
+            const a = tensA * 10 + onesA;
+            const b = onesB;
+            return { prompt: a + ' - ' + b + ' = ?', ans: String(a - b) };
+        }
+        function genSubBorrow2Digit() {
+            const tensA = towerRandInt(3, 9);
+            const onesA = towerRandInt(0, 4);
+            const tensB = towerRandInt(1, tensA - 1);
+            const onesB = towerRandInt(5, 9);
+            const a = tensA * 10 + onesA;
+            const b = tensB * 10 + onesB;
+            return { prompt: a + ' - ' + b + ' = ?', ans: String(a - b) };
+        }
+        function genSubTens() {
+            const a = towerRandInt(2, 10) * 10;
+            const b = towerRandInt(1, a / 10 - 1) * 10;
+            return { prompt: a + ' - ' + b + ' = ?', ans: String(a - b) };
+        }
+        function genSub3DigitBorrow() {
+            const a = towerRandInt(500, 900);
+            const b = towerRandInt(155, 499);
+            return { prompt: a + ' - ' + b + ' = ?', ans: String(a - b) };
+        }
+        function genMul(arrA, arrB) {
+            const a = arrA[Math.floor(Math.random() * arrA.length)];
+            const b = arrB[Math.floor(Math.random() * arrB.length)];
+            return { prompt: a + ' × ' + b + ' = ?', ans: String(a * b) };
+        }
+        function genMulMultiOrTens() {
+            if (Math.random() > 0.5) {
+                const a = towerRandInt(2, 4);
+                const b = towerRandInt(2, 4);
+                const c = towerRandInt(2, 4);
+                return { prompt: a + ' × ' + b + ' × ' + c + ' = ?', ans: String(a * b * c) };
+            }
+            const a = towerRandInt(2, 9) * 10;
+            const b = towerRandInt(2, 9);
+            return { prompt: a + ' × ' + b + ' = ?', ans: String(a * b) };
+        }
+        function genMul2DigitTens() {
+            const a = towerRandInt(12, 45);
+            const b = towerRandInt(1, 9) * 10;
+            return { prompt: a + ' × ' + b + ' = ?', ans: String(a * b) };
+        }
+        function genDivExact(minDivisor, maxDivisor, minAns, maxAns) {
+            const divisor = towerRandInt(minDivisor, maxDivisor);
+            const ans = towerRandInt(minAns, maxAns);
+            const dividend = divisor * ans;
+            return { prompt: dividend + ' ÷ ' + divisor + ' = ?', ans: String(ans) };
+        }
+        function genDivRemainder(minDivisor, maxDivisor) {
+            const divisor = towerRandInt(minDivisor, maxDivisor);
+            const ans = towerRandInt(2, 8);
+            const rem = towerRandInt(1, divisor - 1);
+            const dividend = divisor * ans + rem;
+            return { prompt: dividend + ' ÷ ' + divisor + ' = ?', ans: ans + ' r ' + rem };
+        }
+        function genDivHundreds() {
+            const divisor = towerRandInt(2, 5);
+            const ans = towerRandInt(2, 9) * 10;
+            const dividend = divisor * ans;
+            return { prompt: dividend + ' ÷ ' + divisor + ' = ?', ans: String(ans) };
+        }
+        function genEndlessQuestion(towerId, wave) {
+            if (towerId === 'addition') {
+                if (wave < 5) return genAddCarry();
+                return genAdd(200 + wave * 10, 800, 150 + wave * 10, 800);
+            }
+            if (towerId === 'subtraction') {
+                if (wave < 5) return genSubBorrow2Digit();
+                return genSub3DigitBorrow();
+            }
+            if (towerId === 'multiplication') {
+                if (wave < 5) return genMul([12, 15, 18, 24], [3, 4, 5, 6]);
+                return genMul2DigitTens();
+            }
+            if (wave < 5) return genDivRemainder(3, 8);
+            return genDivExact(3, 9, 15, 50);
+        }
+
+        const ADVENTURE_TOWERS = {
+            addition: {
+                id: 'addition',
+                name: '火焰加法塔',
+                elementName: '火焰元素',
+                element: 'fire',
+                blurb: '從一位數加法至三位數進位',
+                floors: [
+                    { id: 1, title: '第一層：1位數 + 1位數', hp: 50, gold: 30, exp: 40, gen: function () { return genAdd(1, 9, 1, 9); } },
+                    { id: 2, title: '第二層：2位數 + 1位數', hp: 70, gold: 50, exp: 60, gen: function () { return genAdd(10, 89, 1, 9); } },
+                    { id: 3, title: '第三層：2位數 + 2位數 (無進位)', hp: 90, gold: 80, exp: 90, gen: function () { return genAddNoCarry(); } },
+                    { id: 4, title: '第四層：2位數 + 2位數 (進位加法)', hp: 120, gold: 120, exp: 130, gen: function () { return genAddCarry(); } },
+                    { id: 5, title: '第五層：3位數 + 3位數 (補零/進位)', hp: 160, gold: 180, exp: 180, gen: function () { return genAdd(100, 899, 100, 899); } },
+                    { id: 6, title: '【第六層】無限挑戰 (Endless Mode)', hp: 999999, gold: 0, exp: 0, isEndless: true }
+                ]
+            },
+            subtraction: {
+                id: 'subtraction',
+                name: '冰霜減法塔',
+                elementName: '冰霜元素',
+                element: 'water',
+                blurb: '退位減法至連續退位演算',
+                floors: [
+                    { id: 1, title: '第一層：1位數 - 1位數', hp: 50, gold: 30, exp: 40, gen: function () { return genSub(1, 9, 1, 9); } },
+                    { id: 2, title: '第二層：2位數 - 1位數 (無退位)', hp: 70, gold: 50, exp: 60, gen: function () { return genSubNoBorrow(10, 89, 1, 9); } },
+                    { id: 3, title: '第三層：2位數 - 2位數 (退位減法)', hp: 90, gold: 80, exp: 90, gen: function () { return genSubBorrow2Digit(); } },
+                    { id: 4, title: '第四層：100以內整十/整百減法', hp: 120, gold: 120, exp: 130, gen: function () { return genSubTens(); } },
+                    { id: 5, title: '第五層：3位數減法 (連續退位)', hp: 160, gold: 180, exp: 180, gen: function () { return genSub3DigitBorrow(); } },
+                    { id: 6, title: '【第六層】無限挑戰 (Endless Mode)', hp: 999999, gold: 0, exp: 0, isEndless: true }
+                ]
+            },
+            multiplication: {
+                id: 'multiplication',
+                name: '翡翠乘法塔',
+                elementName: '翡翠元素',
+                element: 'grass',
+                blurb: '九九乘法、連乘與兩位數乘法',
+                floors: [
+                    { id: 1, title: '第一層：九九乘法表基礎', hp: 50, gold: 30, exp: 40, gen: function () { return genMul([2, 3, 4, 5, 6, 7, 8, 9], [2, 3, 4, 5, 6, 7, 8, 9]); } },
+                    { id: 2, title: '第二層：10以內連乘 / 整十數乘法', hp: 70, gold: 50, exp: 60, gen: function () { return genMulMultiOrTens(); } },
+                    { id: 3, title: '第三層：2位數 × 1位數', hp: 90, gold: 80, exp: 90, gen: function () { return genMul([12, 15, 24, 35, 48, 56], [2, 3, 4, 5, 6]); } },
+                    { id: 4, title: '第四層：11~19經典平方 / 進階乘法', hp: 120, gold: 120, exp: 130, gen: function () { return genMul([11, 12, 13, 14, 15, 16, 17, 18, 19], [11, 12, 13, 14, 15, 16, 17, 18, 19]); } },
+                    { id: 5, title: '第五層：2位數 × 整十數', hp: 160, gold: 180, exp: 180, gen: function () { return genMul2DigitTens(); } },
+                    { id: 6, title: '【第六層】無限挑戰 (Endless Mode)', hp: 999999, gold: 0, exp: 0, isEndless: true }
+                ]
+            },
+            division: {
+                id: 'division',
+                name: '雷霆除法塔',
+                elementName: '雷霆元素',
+                element: 'thunder',
+                blurb: '整除、帶餘數除法與多位數除法',
+                floors: [
+                    { id: 1, title: '第一層：表內除法 (整除)', hp: 50, gold: 30, exp: 40, gen: function () { return genDivExact(2, 9, 2, 9); } },
+                    { id: 2, title: '第二層：帶餘數除法 (基礎)', hp: 70, gold: 50, exp: 60, gen: function () { return genDivRemainder(2, 9); } },
+                    { id: 3, title: '第三層：2位數 ÷ 1位數 (整除)', hp: 90, gold: 80, exp: 90, gen: function () { return genDivExact(2, 9, 11, 25); } },
+                    { id: 4, title: '第四層：整百整十數除法', hp: 120, gold: 120, exp: 130, gen: function () { return genDivHundreds(); } },
+                    { id: 5, title: '第五層：3位數 ÷ 1位數', hp: 160, gold: 180, exp: 180, gen: function () { return genDivExact(3, 9, 20, 99); } },
+                    { id: 6, title: '【第六層】無限挑戰 (Endless Mode)', hp: 999999, gold: 0, exp: 0, isEndless: true }
+                ]
+            }
+        };
+
+        function adventureAnswersMatch(user, expected) {
+            const fold = function (s) {
+                return String(s || '').trim().toLowerCase().replace(/\s+/g, ' ').replace(/\s*r\s*/g, ' r ').replace(/\s+/g, ' ').trim();
+            };
+            const a = String(user || '').trim().toLowerCase().replace(/\s+/g, ' ');
+            const b = String(expected || '').trim().toLowerCase().replace(/\s+/g, ' ');
+            return a === b || fold(a) === fold(b);
+        }
+        function adventureHitDamage(maxHp) {
+            return Math.ceil(Math.max(1, Number(maxHp) || 1) / 5);
+        }
+        function adventureWrongDamage(endless, wave) {
+            if (!endless) return 20;
+            return Math.min(50, 15 + Math.floor(Number(wave) / 3) * 5);
+        }
+        function adventureEndlessHitReward(combo, wave) {
+            const multiplier = 1 + (Number(combo) * 0.2) + (Number(wave) * 0.15);
+            return {
+                multiplier: multiplier,
+                gold: Math.floor(15 * multiplier),
+                exp: Math.floor(20 * multiplier)
+            };
+        }
+        function adventureStandardWin(monsterHp, playerHp, correctCount) {
+            return monsterHp <= 0 || (playerHp > 0 && correctCount >= 3);
+        }
+        function adventureStarReward(correctCount) {
+            const accuracy = Math.round((Number(correctCount) / 5) * 100);
+            let stars = 1;
+            if (accuracy >= 80) stars = 2;
+            if (accuracy === 100) stars = 3;
+            return stars;
+        }
+        function adventureScaledReward(base, stars) {
+            return Math.floor(Number(base) * (Number(stars) / 3));
+        }
+        function adventureClampStar(n) {
+            let s = Math.floor(Number(n) || 0);
+            if (s < 0) s = 0;
+            if (s > 3) s = 3;
+            return s;
+        }
+        function coerceAdventureProgress(src) {
+            const out = { level: 1, exp: 0 };
+            ADVENTURE_TOWER_IDS.forEach(function (id) { out[id] = [0, 0, 0, 0, 0]; });
+            if (!src || typeof src !== 'object') return out;
+            const level = Math.floor(Number(src.level) || 1);
+            const exp = Math.floor(Number(src.exp) || 0);
+            out.level = level >= 1 ? level : 1;
+            out.exp = exp >= 0 ? exp : 0;
+            ADVENTURE_TOWER_IDS.forEach(function (id) {
+                const arr = Array.isArray(src[id]) ? src[id] : [];
+                out[id] = [0, 1, 2, 3, 4].map(function (i) { return adventureClampStar(arr[i]); });
+            });
+            return out;
+        }
+        function adventureClearedCount(stars) {
+            const row = Array.isArray(stars) ? stars : [];
+            let n = 0;
+            for (let i = 0; i < 5; i++) if (adventureClampStar(row[i]) > 0) n += 1;
+            return n;
+        }
+        function adventureFloorUnlocked(stars, floorIndex) {
+            const idx = Math.floor(Number(floorIndex) || 0);
+            if (idx <= 0) return true;
+            if (idx < 5) return adventureClampStar(stars && stars[idx - 1]) > 0;
+            return adventureClearedCount(stars) >= 5;
+        }
+        function adventureStarTotal(profile) {
+            const prog = coerceAdventureProgress(profile && profile.adventureProgress);
+            let n = 0;
+            ADVENTURE_TOWER_IDS.forEach(function (id) {
+                prog[id].forEach(function (s) { n += s; });
+            });
+            return n;
+        }
+        function maxAdventureProgress(a, b) {
+            const hasA = !!(a && typeof a === 'object');
+            const hasB = !!(b && typeof b === 'object');
+            const left = coerceAdventureProgress(a);
+            const right = coerceAdventureProgress(b);
+            if (hasA && !hasB) return left;
+            if (hasB && !hasA) return right;
+            const out = coerceAdventureProgress(null);
+            ADVENTURE_TOWER_IDS.forEach(function (id) {
+                out[id] = left[id].map(function (s, i) { return Math.max(s, right[id][i] || 0); });
+            });
+            if (left.level > right.level || (left.level === right.level && left.exp >= right.exp)) {
+                out.level = left.level;
+                out.exp = left.exp;
+            } else {
+                out.level = right.level;
+                out.exp = right.exp;
+            }
+            return out;
+        }
+        function adventureProgressFingerprint(profile) {
+            const prog = coerceAdventureProgress(profile && profile.adventureProgress);
+            return ADVENTURE_TOWER_IDS.map(function (id) { return prog[id].join(','); }).join(';') + '|' + prog.level + ':' + prog.exp;
+        }
+        /* ADVENTURE_TOWER_LOGIC_END */
+
+        let adventureScreen = 'hub';
+        let adventureTowerId = null;
+        let adventureFloorIndex = 0;
+        let adventureEndless = false;
+        let adventureCombo = 0;
+        let adventureCorrect = 0;
+        let adventureAsked = 0;
+        let adventureWave = 0;
+        let adventureGoldRun = 0;
+        let adventureExpRun = 0;
+        let adventureSeconds = 0;
+        let adventureClock = null;
+        let adventureQuestion = null;
+        let adventureSettled = false;
+        let adventureLastWin = false;
+        let adventureStageProbeToken = 0;
+
+        function migrateLegacyTowerSave(user) {
+            if (!user || user.adventureProgress) return;
+            let raw = null;
+            try { raw = localStorage.getItem('tower_adventure_save_v2'); } catch (e) { return; }
+            if (!raw) return;
+            let saved = null;
+            try { saved = JSON.parse(raw); } catch (e) { return; }
+            if (!saved || typeof saved !== 'object') return;
+            user.adventureProgress = coerceAdventureProgress(saved);
+            try { localStorage.removeItem('tower_adventure_save_v2'); } catch (e) {}
+        }
+
+        function grantAdventureExp(amount) {
+            const prog = coerceAdventureProgress(currentUser && currentUser.adventureProgress);
+            const expAmount = Math.max(0, Math.floor(Number(amount) || 0));
+            prog.exp += expAmount;
+            let required = prog.level * 100;
+            while (prog.exp >= required && prog.level < 999) {
+                prog.exp -= required;
+                prog.level += 1;
+                required = prog.level * 100;
+            }
+            if (currentUser) currentUser.adventureProgress = prog;
+            const packs = Math.floor(expAmount / 100);
+            if (packs > 0 && currentUser) {
+                currentUser.expPacks = Math.max(0, Math.floor(Number(currentUser.expPacks) || 0)) + packs;
+            }
+            return { exp: expAmount, packs: packs, level: prog.level };
         }
 
         /** Teacher-report key. Question banks stay on the bare unit id. */
@@ -6848,9 +7434,11 @@
                 totalQuestions: totalQuestions,
                 goldDelta: goldDelta
             };
-            if (isClimbMode) {
-                extra.floor = climbBattleFloor || readClimbFloor(currentUser);
-                extra.progressKey = 'adventureClimb:' + extra.floor;
+            if (isClimbMode && adventureTowerId) {
+                const floor = ADVENTURE_TOWERS[adventureTowerId] && ADVENTURE_TOWERS[adventureTowerId].floors[adventureFloorIndex];
+                extra.tower = adventureTowerId;
+                extra.floor = floor ? floor.id : (adventureFloorIndex + 1);
+                extra.progressKey = 'adventure:' + adventureTowerId + ':' + extra.floor;
             } else if (!isRankedMode) {
                 extra.tower = 'training';
                 extra.progressKey = adventureProgressKey('training', pendingStrandId);
@@ -6858,33 +7446,120 @@
             return extra;
         }
 
-        function renderAdventureClimb() {
-            const floor = currentUser ? readClimbFloor(currentUser) : 1;
-            const best = currentUser ? readClimbBest(currentUser) : 0;
-            const op = climbOpForFloor(floor);
-            const now = document.getElementById('climb-floor-now');
-            const bestEl = document.getElementById('climb-floor-best');
-            const opEl = document.getElementById('climb-floor-op');
-            const mile = document.getElementById('climb-milestone');
-            const btn = document.getElementById('climb-start-btn');
-            if (now) now.textContent = String(floor);
-            if (bestEl) bestEl.textContent = String(best);
-            if (opEl) opEl.textContent = op.name;
-            document.querySelectorAll('.climb-op').forEach(function (el) {
-                el.classList.toggle('is-current', el.getAttribute('data-op') === op.id);
-            });
-            const nextM = nextClimbMilestone(floor);
-            const reward = climbMilestoneReward(nextM);
-            if (mile) {
-                mile.textContent = floor === nextM
-                    ? ('本層是里程碑：金幣 +' + reward.gold + '、EXP包 +' + reward.expPacks)
-                    : ('下一里程碑第 ' + nextM + ' 層：金幣 +' + reward.gold + '、EXP包 +' + reward.expPacks);
+        function renderAdventureScreen() {
+            const hub = document.getElementById('adventure-hub');
+            const floors = document.getElementById('adventure-floors');
+            const back = document.getElementById('adventure-back-label');
+            const title = document.getElementById('adventure-banner-title');
+            const sub = document.getElementById('adventure-banner-sub');
+            const note = document.getElementById('adventure-banner-note');
+            const prog = currentUser ? coerceAdventureProgress(currentUser.adventureProgress) : coerceAdventureProgress(null);
+            if (currentUser) currentUser.adventureProgress = prog;
+            if (adventureScreen === 'floors' && adventureTowerId && ADVENTURE_TOWERS[adventureTowerId]) {
+                if (hub) hub.classList.add('hidden');
+                if (floors) floors.classList.remove('hidden');
+                if (back) back.textContent = '返回神塔';
+                renderAdventureFloors(prog);
+                return;
             }
-            if (btn) btn.textContent = '挑戰第 ' + floor + ' 層';
+            adventureScreen = 'hub';
+            if (hub) hub.classList.remove('hidden');
+            if (floors) floors.classList.add('hidden');
+            if (back) back.textContent = '返回主選單';
+            if (title) title.childNodes[0].textContent = '冒險塔';
+            if (sub) sub.textContent = '加減乘除四神塔';
+            let stars = 0;
+            ADVENTURE_TOWER_IDS.forEach(function (id) {
+                const row = prog[id];
+                const sum = row.reduce(function (a, b) { return a + b; }, 0);
+                stars += sum;
+                const cleared = adventureClearedCount(row);
+                const meta = document.getElementById('adv-meta-' + id);
+                if (meta) meta.textContent = '★ ' + sum + '/15 · 進度 ' + cleared + '/5';
+            });
+            if (note) {
+                note.textContent = '修為 Lv.' + prog.level + ' · 星星 ' + stars + '/60。通關前 5 層開啟無限挑戰。';
+            }
+        }
+
+        function renderAdventureFloors(prog) {
+            const tower = ADVENTURE_TOWERS[adventureTowerId];
+            const host = document.getElementById('adventure-floors');
+            const title = document.getElementById('adventure-banner-title');
+            const sub = document.getElementById('adventure-banner-sub');
+            const note = document.getElementById('adventure-banner-note');
+            if (!tower || !host) return;
+            if (title) title.childNodes[0].textContent = tower.name;
+            if (sub) sub.textContent = tower.elementName;
+            if (note) note.textContent = '第 1 層開放。通過前一層才可挑戰下一層。五層全清開啟無限。';
+            const stars = prog[tower.id];
+            host.replaceChildren();
+            tower.floors.forEach(function (floor, idx) {
+                const unlocked = adventureFloorUnlocked(stars, idx);
+                const earned = floor.isEndless ? 0 : adventureClampStar(stars[idx]);
+                const row = document.createElement('article');
+                row.className = 'adventure-floor' + (floor.isEndless ? ' is-endless' : '') + (unlocked ? '' : ' is-locked');
+                const index = document.createElement('div');
+                index.className = 'adventure-floor__index';
+                index.textContent = floor.isEndless ? '∞' : String(floor.id);
+                const main = document.createElement('div');
+                main.className = 'adventure-floor__main';
+                const h4 = document.createElement('h4');
+                h4.textContent = floor.title;
+                const meta = document.createElement('p');
+                meta.className = 'adventure-floor__meta';
+                meta.textContent = floor.isEndless ? '獎勵隨答題波次呈倍率增加' : ('金幣 +' + floor.gold + ' · EXP +' + floor.exp);
+                main.appendChild(h4);
+                main.appendChild(meta);
+                const starEl = document.createElement('div');
+                starEl.className = 'adventure-floor__stars';
+                if (floor.isEndless) {
+                    starEl.textContent = unlocked ? '無限戰場' : '未解鎖';
+                } else {
+                    for (let s = 1; s <= 3; s++) {
+                        const mark = document.createElement('span');
+                        mark.textContent = s <= earned ? '★' : '☆';
+                        if (s <= earned) mark.className = 'is-on';
+                        starEl.appendChild(mark);
+                    }
+                }
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'adventure-floor__go';
+                btn.disabled = !unlocked;
+                if (!unlocked) btn.textContent = '未解鎖';
+                else if (floor.isEndless) btn.textContent = '挑戰無限';
+                else btn.textContent = earned > 0 ? '再次挑戰' : '開始討伐';
+                if (unlocked) {
+                    btn.addEventListener('click', function () { startAdventureFloor(idx); });
+                }
+                row.appendChild(index);
+                row.appendChild(main);
+                row.appendChild(starEl);
+                row.appendChild(btn);
+                host.appendChild(row);
+            });
+        }
+
+        function adventureBack() {
+            if (adventureScreen === 'floors') {
+                adventureScreen = 'hub';
+                renderAdventureScreen();
+                return;
+            }
+            switchView('home');
+        }
+
+        function selectAdventureTower(towerId) {
+            if (!ADVENTURE_TOWERS[towerId]) return;
+            adventureTowerId = towerId;
+            adventureScreen = 'floors';
+            renderAdventureScreen();
         }
 
         function enterAdventure() {
             isClimbMode = false;
+            adventureScreen = 'hub';
             switchView('adventure');
         }
 
@@ -6893,18 +7568,406 @@
             switchView('training');
         }
 
-        function startClimbBattle() {
+        function restoreBattleTimerChrome() {
+            clearInterval(adventureClock);
+            adventureClock = null;
+            const label = document.getElementById('boss-timer-label');
+            const suffix = document.getElementById('boss-timer-suffix');
+            const quiz = document.getElementById('battle-question-section');
+            const hint = document.getElementById('battle-combo-text');
+            if (label) label.textContent = 'Boss 襲擊倒數: ';
+            if (suffix) suffix.textContent = 's';
+            if (quiz) quiz.classList.remove('battle-quiz--tower');
+            if (hint) {
+                hint.innerHTML = '<span class="hidden sm:inline">答題無完場時限；每 20 秒唔答 Boss 會襲擊</span><span class="sm:hidden">無完場限；每20s襲擊</span>';
+            }
+        }
+
+        function paintAdventureClock() {
+            const label = document.getElementById('boss-timer-label');
+            const num = document.getElementById('boss-timer-num');
+            const suffix = document.getElementById('boss-timer-suffix');
+            if (label) label.textContent = '耗時 ';
+            if (suffix) suffix.textContent = '';
+            if (num) {
+                const m = String(Math.floor(adventureSeconds / 60)).padStart(2, '0');
+                const s = String(adventureSeconds % 60).padStart(2, '0');
+                num.textContent = m + ':' + s;
+            }
+        }
+
+        function startAdventureClock() {
+            clearInterval(bossTimer);
+            clearInterval(adventureClock);
+            adventureSeconds = 0;
+            paintAdventureClock();
+            adventureClock = setInterval(function () {
+                adventureSeconds += 1;
+                paintAdventureClock();
+            }, 1000);
+        }
+
+        function paintAdventureBattleHint() {
+            const el = document.getElementById('battle-combo-text');
+            if (!el) return;
+            const reward = adventureEndlessHitReward(adventureCombo, adventureWave);
+            let text = '';
+            if (adventureCombo > 1) text += 'COMBO x' + adventureCombo + ' · ';
+            if (adventureEndless) text += '倍率 ' + reward.multiplier.toFixed(1) + 'x · 金幣 +' + adventureGoldRun + ' · ';
+            text += adventureTowerId === 'division' ? '餘數寫成 7 r 2' : '輸入答案後攻擊';
+            el.textContent = text;
+        }
+
+        function adventurePressKey(val) {
+            const input = document.getElementById('tower-answer-input');
+            if (!input || adventureSettled) return;
+            if (val === 'clear') input.value = '';
+            else if (val === 'back') input.value = input.value.slice(0, -1);
+            else input.value += val;
+            input.focus();
+        }
+
+        function renderTowerAnswerPad() {
+            const grid = document.getElementById('quiz-options-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            const wrap = document.createElement('div');
+            wrap.className = 'tower-answer';
+            const row = document.createElement('div');
+            row.className = 'tower-answer__row';
+            const input = document.createElement('input');
+            input.id = 'tower-answer-input';
+            input.type = 'text';
+            input.className = 'tower-answer__input';
+            input.setAttribute('inputmode', 'text');
+            input.setAttribute('autocomplete', 'off');
+            input.placeholder = '輸入答案';
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    submitAdventureAnswer();
+                }
+            });
+            const go = document.createElement('button');
+            go.type = 'button';
+            go.className = 'tower-answer__go';
+            go.textContent = '攻擊';
+            go.addEventListener('click', function () { submitAdventureAnswer(); });
+            row.appendChild(input);
+            row.appendChild(go);
+            const pad = document.createElement('div');
+            pad.className = 'tower-answer__pad';
+            ['1', '2', '3', 'clear', '4', '5', '6', 'back', '7', '8', '9', '0'].forEach(function (key) {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.textContent = key === 'clear' ? '清除' : (key === 'back' ? '⌫' : key);
+                b.addEventListener('click', function () { adventurePressKey(key); });
+                pad.appendChild(b);
+            });
+            const rem = document.createElement('button');
+            rem.type = 'button';
+            rem.className = 'tower-answer__wide';
+            rem.textContent = '餘數 r';
+            rem.addEventListener('click', function () { adventurePressKey(' r '); });
+            pad.appendChild(rem);
+            wrap.appendChild(row);
+            wrap.appendChild(pad);
+            grid.appendChild(wrap);
+            const figure = document.getElementById('quiz-question-figure');
+            if (figure) figure.classList.add('hidden');
+            input.focus();
+        }
+
+        function adventureShouldEnd() {
+            if (!activePlayerMonster || !activeEnemy) return true;
+            if (adventureEndless) return activePlayerMonster.currentHp <= 0;
+            return adventureAsked >= 5 || activeEnemy.hp <= 0 || activePlayerMonster.currentHp <= 0;
+        }
+
+        function adventurePresentQuestion() {
+            if (adventureSettled || battleSettled) return;
+            if (adventureShouldEnd()) {
+                settleAdventureBattle();
+                return;
+            }
+            isAnswerLocked = false;
+            adventureAsked += 1;
+            if (adventureEndless) adventureWave += 1;
+            const tower = ADVENTURE_TOWERS[adventureTowerId];
+            const floor = tower.floors[adventureFloorIndex];
+            adventureQuestion = adventureEndless ? genEndlessQuestion(adventureTowerId, adventureWave) : floor.gen();
+            currentQuestionObj = {
+                question: adventureQuestion.prompt,
+                options: [],
+                correctAnswer: adventureQuestion.ans
+            };
+            const numEl = document.getElementById('quiz-current-num');
+            if (numEl) numEl.textContent = adventureEndless ? String(adventureWave) : String(adventureAsked);
+            const qTextEl = document.getElementById('quiz-question-text');
+            if (qTextEl) qTextEl.textContent = adventureQuestion.prompt;
+            renderTowerAnswerPad();
+            paintAdventureBattleHint();
+            updateBattleUI();
+        }
+
+        function submitAdventureAnswer() {
+            if (!adventureQuestion || isAnswerLocked || adventureSettled || battleSettled) return;
+            const input = document.getElementById('tower-answer-input');
+            const raw = input ? input.value : '';
+            if (!String(raw).trim()) return;
+            isAnswerLocked = true;
+            const ok = adventureAnswersMatch(raw, adventureQuestion.ans);
+            if (ok) {
+                adventureCombo += 1;
+                adventureCorrect += 1;
+                quizScore = adventureCorrect;
+                playSFX(1046.5, 'sine', 0.2);
+                if (adventureEndless) {
+                    const gain = adventureEndlessHitReward(adventureCombo, adventureWave);
+                    adventureGoldRun += gain.gold;
+                    adventureExpRun += gain.exp;
+                    showSkillPopup('player-skill-popup', '金幣 +' + gain.gold);
+                } else {
+                    const dmg = adventureHitDamage(activeEnemy.maxHp);
+                    activeEnemy.hp = Math.max(0, activeEnemy.hp - dmg);
+                    triggerHurtEffect('enemy-svg-container');
+                    playElementAttackVfx(activePlayerMonster.element, 'enemy');
+                    showSkillPopup('player-skill-popup', '命中 -' + dmg + ' HP');
+                }
+            } else {
+                adventureCombo = 0;
+                playSFX(220, 'sawtooth', 0.3);
+                const dmg = adventureWrongDamage(adventureEndless, adventureWave);
+                activePlayerMonster.currentHp = Math.max(0, activePlayerMonster.currentHp - dmg);
+                triggerHurtEffect('player-svg-container');
+                playElementAttackVfx(activeEnemy.element, 'player');
+                showSkillPopup('enemy-skill-popup', '答錯 -' + dmg + ' HP');
+            }
+            updateBattleUI();
+            paintAdventureBattleHint();
+            setTimeout(function () {
+                if (adventureSettled) return;
+                if (adventureShouldEnd()) settleAdventureBattle();
+                else adventurePresentQuestion();
+            }, 400);
+        }
+
+        function showAdventureResult(opts) {
+            const modal = document.getElementById('adventure-result-modal');
+            const title = document.getElementById('adventure-result-title');
+            const desc = document.getElementById('adventure-result-desc');
+            const starsRow = document.getElementById('adventure-result-stars-row');
+            const stars = document.getElementById('adventure-result-stars');
+            const waves = document.getElementById('adventure-result-waves');
+            const exp = document.getElementById('adventure-result-exp');
+            const gold = document.getElementById('adventure-result-gold');
+            const next = document.getElementById('adventure-result-next');
+            if (title) title.textContent = opts.title;
+            if (desc) desc.textContent = opts.desc;
+            if (starsRow) starsRow.classList.toggle('hidden', !opts.showStars);
+            if (stars && opts.showStars) {
+                let glyphs = '';
+                for (let i = 1; i <= 3; i++) glyphs += i <= opts.stars ? '★' : '☆';
+                stars.textContent = glyphs;
+            }
+            if (waves) waves.textContent = opts.waves;
+            if (exp) {
+                exp.textContent = '+' + opts.exp + ' EXP' + (opts.packs > 0 ? '（EXP 包 +' + opts.packs + '）' : '');
+            }
+            if (gold) gold.textContent = '+' + opts.gold + ' 金幣';
+            if (next) next.textContent = opts.nextLabel;
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function settleAdventureBattle() {
+            if (adventureSettled) return;
+            adventureSettled = true;
+            battleSettled = true;
+            isAnswerLocked = true;
+            battleRewardGranted = true;
+            clearInterval(adventureClock);
+            clearInterval(bossTimer);
+            const grid = document.getElementById('quiz-options-grid');
+            if (grid) grid.innerHTML = '';
+            const tower = ADVENTURE_TOWERS[adventureTowerId];
+            const floor = tower && tower.floors[adventureFloorIndex];
+            if (!tower || !floor || !currentUser) {
+                showAdventureResult({
+                    title: '挑戰結束',
+                    desc: '未能結算這場戰鬥。',
+                    showStars: false,
+                    waves: '0',
+                    exp: 0,
+                    packs: 0,
+                    gold: 0,
+                    nextLabel: '返回關卡'
+                });
+                return;
+            }
+            if (adventureEndless) {
+                adventureLastWin = true;
+                const goldReward = adventureGoldRun;
+                const grant = grantAdventureExp(adventureExpRun);
+                currentUser.gold = Math.max(0, Math.floor(Number(currentUser.gold) || 0)) + goldReward;
+                saveCurrentUserData();
+                reportToTeacherSheet(buildStudentReportExtra(
+                    adventureBattleReportExtra('結束', adventureCorrect, adventureAsked, goldReward)
+                ));
+                showAdventureResult({
+                    title: '無限極限挑戰結束！',
+                    desc: '你在極限魔王攻擊下堅持了 ' + adventureCorrect + ' 波！',
+                    showStars: false,
+                    waves: adventureCorrect + ' 波',
+                    exp: grant.exp,
+                    packs: grant.packs,
+                    gold: goldReward,
+                    nextLabel: '再次挑戰無限'
+                });
+                return;
+            }
+            const win = adventureStandardWin(activeEnemy.hp, activePlayerMonster.currentHp, adventureCorrect);
+            adventureLastWin = win;
+            const accuracy = Math.round((adventureCorrect / 5) * 100);
+            if (!win) {
+                reportToTeacherSheet(buildStudentReportExtra(
+                    adventureBattleReportExtra('失敗', adventureCorrect, adventureAsked, 0)
+                ));
+                showAdventureResult({
+                    title: '討伐失敗…',
+                    desc: '守護獸還在。再算一次試試。',
+                    showStars: true,
+                    stars: 0,
+                    waves: adventureCorrect + ' / 5 題',
+                    exp: 0,
+                    packs: 0,
+                    gold: 0,
+                    nextLabel: '重試本層'
+                });
+                return;
+            }
+            const earned = adventureStarReward(adventureCorrect);
+            const prog = coerceAdventureProgress(currentUser.adventureProgress);
+            if (earned > prog[tower.id][adventureFloorIndex]) prog[tower.id][adventureFloorIndex] = earned;
+            currentUser.adventureProgress = prog;
+            const goldReward = adventureScaledReward(floor.gold, earned);
+            const expReward = adventureScaledReward(floor.exp, earned);
+            const grant = grantAdventureExp(expReward);
+            currentUser.gold = Math.max(0, Math.floor(Number(currentUser.gold) || 0)) + goldReward;
+            saveCurrentUserData();
+            reportToTeacherSheet(buildStudentReportExtra(
+                adventureBattleReportExtra('勝利', adventureCorrect, adventureAsked, goldReward)
+            ));
+            showAdventureResult({
+                title: '樓層討伐成功！',
+                desc: '成功戰勝守護獸。評價 ' + earned + ' 星（答對 ' + accuracy + '%）。',
+                showStars: true,
+                stars: earned,
+                waves: adventureCorrect + ' / 5 題（' + accuracy + '%）',
+                exp: grant.exp,
+                packs: grant.packs,
+                gold: goldReward,
+                nextLabel: adventureFloorIndex >= 4 ? '挑戰無限' : '挑戰下一層'
+            });
+        }
+
+        function adventureResultBack() {
+            const modal = document.getElementById('adventure-result-modal');
+            if (modal) modal.classList.add('hidden');
+            exitBattle();
+        }
+
+        function adventureResultNext() {
+            const modal = document.getElementById('adventure-result-modal');
+            if (modal) modal.classList.add('hidden');
+            if (!adventureLastWin) {
+                startAdventureFloor(adventureFloorIndex);
+                return;
+            }
+            if (adventureEndless || adventureFloorIndex >= 5) {
+                startAdventureFloor(5);
+                return;
+            }
+            startAdventureFloor(adventureFloorIndex + 1);
+        }
+
+        function adventureBossForElement(element) {
+            const pool = EVIL_BOSSES.filter(function (b) { return b.element === element; });
+            const list = pool.length ? pool : EVIL_BOSSES;
+            return list[Math.floor(Math.random() * list.length)];
+        }
+
+        function startAdventureFloor(floorIndex) {
             if (!currentUser) {
                 document.getElementById('auth-modal-overlay').classList.remove('hidden');
                 return;
             }
+            const tower = ADVENTURE_TOWERS[adventureTowerId];
+            if (!tower) return;
+            const prog = coerceAdventureProgress(currentUser.adventureProgress);
+            currentUser.adventureProgress = prog;
+            const idx = Math.floor(Number(floorIndex) || 0);
+            if (!adventureFloorUnlocked(prog[tower.id], idx)) {
+                adventureScreen = 'floors';
+                renderAdventureScreen();
+                return;
+            }
+            const floor = tower.floors[idx];
+            if (!floor) return;
             isClimbMode = true;
             isRankedMode = false;
-            const floor = readClimbFloor(currentUser);
-            const op = climbOpForFloor(floor);
-            openTeamSelect(op.id, false, 10);
-        }
+            adventureFloorIndex = idx;
+            adventureEndless = !!floor.isEndless;
+            adventureCombo = 0;
+            adventureCorrect = 0;
+            adventureAsked = 0;
+            adventureWave = 0;
+            adventureGoldRun = 0;
+            adventureExpRun = 0;
+            adventureSettled = false;
+            adventureLastWin = false;
+            adventureQuestion = null;
+            battleSettled = false;
+            battleRewardGranted = false;
+            isAnswerLocked = false;
+            quizScore = 0;
+            currentQuizIndex = 0;
+            usedQuestionsMap.clear();
+            usedWordQuestionIds.clear();
 
+            const monId = (currentUser.ownedMonsters && currentUser.ownedMonsters[0])
+                ? currentUser.ownedMonsters[0].id
+                : 'fire_base';
+            selectedBattleTeam = [monId];
+            currentMonsterIndex = 0;
+            loadPlayerActiveMonster();
+            activePlayerMonster.currentHp = 100;
+            activePlayerMonster.maxHp = 100;
+
+            const boss = adventureBossForElement(tower.element);
+            activeEnemy = {
+                name: adventureEndless ? '無限深淵魔王' : tower.name,
+                element: tower.element,
+                level: floor.id,
+                hp: adventureEndless ? 999 : floor.hp,
+                maxHp: adventureEndless ? 999 : floor.hp,
+                atk: 20,
+                imgKey: boss.imgKey,
+                isBoss: true
+            };
+
+            const modal = document.getElementById('adventure-result-modal');
+            if (modal) modal.classList.add('hidden');
+            const quiz = document.getElementById('battle-question-section');
+            if (quiz) quiz.classList.add('battle-quiz--tower');
+            applyBattleStageForEntry();
+            switchView('battle');
+            paintBattleContextLabels();
+            updateBattleUI();
+            playBattleEntrance('player');
+            playBattleEntrance('enemy');
+            startAdventureClock();
+            adventurePresentQuestion();
+        }
         function paintBattleContextLabels() {
             const tag = document.getElementById('battle-strand-tag');
             const title = document.getElementById('battle-title');
@@ -6913,11 +7976,11 @@
                 if (title) title.textContent = '數學關卡挑戰';
                 return;
             }
-            if (isClimbMode) {
-                const floor = climbBattleFloor || readClimbFloor(currentUser);
-                const op = climbOpForFloor(floor);
-                if (tag) tag.textContent = '第 ' + floor + ' 層 · ' + op.name;
-                if (title) title.textContent = '冒險塔';
+            if (isClimbMode && adventureTowerId && ADVENTURE_TOWERS[adventureTowerId]) {
+                const tower = ADVENTURE_TOWERS[adventureTowerId];
+                const floor = tower.floors[adventureFloorIndex];
+                if (tag) tag.textContent = tower.name;
+                if (title) title.textContent = floor ? floor.title : '冒險塔';
                 return;
             }
             if (tag) tag.textContent = '訓練場';
@@ -7513,6 +8576,7 @@
         }
 
         function startBattleWithSelectedTeam() {
+            restoreBattleTimerChrome();
             if (!currentUser) {
                 alert('數據異常，請先重新登入！');
                 return;
@@ -7540,12 +8604,7 @@
                 const randomBossConfig = EVIL_BOSSES[Math.floor(Math.random() * EVIL_BOSSES.length)];
                 
                 const bossRuntime = getMonsterRuntimeData(randomBossConfig.id, p1Level, true);
-                let bossName = `守護魔王·${randomBossConfig.name}`;
-                if (isClimbMode) {
-                    climbBattleFloor = readClimbFloor(currentUser);
-                    const op = climbOpForFloor(climbBattleFloor);
-                    bossName = `第${climbBattleFloor}層·${op.name}·${randomBossConfig.name}`;
-                }
+                const bossName = `守護魔王·${randomBossConfig.name}`;
 
                 activeEnemy = {
                     name: bossName,
@@ -7625,9 +8684,23 @@
             if (!activePlayerMonster || !activeEnemy) return;
 
             setNameplateLabel(document.getElementById('enemy-name'), activeEnemy.name);
-            document.getElementById('enemy-level-tag').innerText = `Boss Lv.${activeEnemy.level}`;
-            document.getElementById('enemy-hp-text').innerText = `${Math.max(0, activeEnemy.hp)} / ${activeEnemy.maxHp}`;
-            const enemyHpPct = Math.max(0, Math.min(100, (activeEnemy.hp / activeEnemy.maxHp) * 100));
+            const towerFight = isClimbMode && adventureTowerId;
+            if (towerFight && adventureEndless) {
+                document.getElementById('enemy-level-tag').innerText = '無限';
+            } else if (towerFight) {
+                const floorNo = (ADVENTURE_TOWERS[adventureTowerId] && ADVENTURE_TOWERS[adventureTowerId].floors[adventureFloorIndex])
+                    ? ADVENTURE_TOWERS[adventureTowerId].floors[adventureFloorIndex].id
+                    : (adventureFloorIndex + 1);
+                document.getElementById('enemy-level-tag').innerText = '第' + floorNo + '層';
+            } else {
+                document.getElementById('enemy-level-tag').innerText = `Boss Lv.${activeEnemy.level}`;
+            }
+            document.getElementById('enemy-hp-text').innerText = (towerFight && adventureEndless)
+                ? '∞ / ∞'
+                : `${Math.max(0, activeEnemy.hp)} / ${activeEnemy.maxHp}`;
+            const enemyHpPct = (towerFight && adventureEndless)
+                ? 100
+                : Math.max(0, Math.min(100, (activeEnemy.hp / activeEnemy.maxHp) * 100));
             document.getElementById('enemy-hp-bar').style.width = `${enemyHpPct}%`;
             document.getElementById('enemy-svg-container').innerHTML = renderMonsterElement(activeEnemy.imgKey, activeEnemy.name);
 
@@ -7646,10 +8719,18 @@
             playerElemBadge.className = `shrink-0 px-1.5 py-0.5 text-[9px] rounded font-black ${getElementBadgeClass(activePlayerMonster.element || 'fire')}`;
 
             document.getElementById('player-team-slot-badge').innerText = `Lv.${activePlayerMonster.level} · 第 ${currentMonsterIndex + 1}/${selectedBattleTeam.length}`;
-            document.getElementById('battle-boss-progress').innerText = isRankedMode ? `BOSS ${currentBossStageIndex + 1}/2` : `BOSS 1/1`;
+            document.getElementById('battle-boss-progress').innerText = isRankedMode
+                ? `BOSS ${currentBossStageIndex + 1}/2`
+                : (isClimbMode && adventureTowerId
+                    ? (adventureEndless ? ('波次 ' + Math.max(adventureWave, 1)) : ('題數 ' + Math.max(adventureAsked, 1) + '/5'))
+                    : 'BOSS 1/1');
         }
 
         function resetBossTimer() {
+            if (isClimbMode && adventureTowerId) {
+                clearInterval(bossTimer);
+                return;
+            }
             clearInterval(bossTimer);
             bossAttackCountdown = 20;
             const timerBadge = document.getElementById('boss-timer-num');
@@ -7667,6 +8748,7 @@
         }
 
         function bossTimerAttack() {
+            if (isClimbMode && adventureTowerId) return;
             if (battleSettled || isAnswerLocked) return;
             if (!activePlayerMonster || !activeEnemy) return;
 
@@ -7983,156 +9065,7 @@
             };
         }
 
-        function climbPlayerGradeNum() {
-            try {
-                const g = parseGradeFromClass(currentUser && currentUser.className);
-                const m = String(g || '').match(/(\d)/);
-                return m ? parseInt(m[1], 10) : null;
-            } catch (e) {
-                return null;
-            }
-        }
-
-        /** 冒險塔抽題：只收該運算的 unitKey。先同年級，池太細再跨年級，唔好跌回全年級其他課題。 */
-        function pickClimbBankQuestion(op) {
-            const bank = (typeof window !== 'undefined' && window.WORD_QUESTION_BANK) ? window.WORD_QUESTION_BANK : null;
-            if (!bank || !bank.length || !op) return null;
-            const rule = { unitKeys: op.unitKeys || [] };
-            let matched = bank.filter(function (q) {
-                return q && questionMatchesUnitRule(q, rule) && !isBattleBlacklisted(q);
-            });
-            const grade = climbPlayerGradeNum();
-            if (grade) {
-                const same = matched.filter(function (q) { return q.grade === grade; });
-                if (filterBattleQuestionPool(same).length >= 4) matched = same;
-            }
-            let pool = filterBattleQuestionPool(matched);
-            if (pool.length < 3 && matched.length) {
-                const wider = matched.filter(function (q) {
-                    return q && !isBattleBlacklisted(q) && !questionRefsMissingImage(q);
-                });
-                if (wider.length > pool.length) pool = wider;
-            }
-            if (!pool.length) return null;
-
-            let candidates = pool.filter(function (q) { return !usedWordQuestionIds.has(q.id); });
-            if (!candidates.length) {
-                candidates = pool.slice();
-                usedWordQuestionIds.clear();
-            }
-            const imgCands = candidates.filter(function (q) { return q.image; });
-            const item = (imgCands.length && Math.random() < 0.55)
-                ? imgCands[Math.floor(Math.random() * imgCands.length)]
-                : candidates[Math.floor(Math.random() * candidates.length)];
-            usedWordQuestionIds.add(item.id);
-
-            const opts = Array.isArray(item.options) ? item.options.slice() : [];
-            for (let i = opts.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                const tmp = opts[i];
-                opts[i] = opts[j];
-                opts[j] = tmp;
-            }
-            const qText = String(item.question || '').replace(/^【[^】]{0,80}】\s*/, '');
-            usedQuestionsMap.add(qText);
-            return {
-                question: qText,
-                options: opts,
-                correctAnswer: item.answer,
-                image: item.image || null,
-                _bankMeta: { id: item.id, unitKey: item.unitKey, unitId: op.id, fallback: 'climb' }
-            };
-        }
-
-        function climbChoiceOptions(correct) {
-            const ans = Number(correct);
-            const bag = [ans];
-            const seen = {};
-            seen[ans] = true;
-            const deltas = [1, -1, 2, -2, 3, 10, -10, 4, -3];
-            for (let i = 0; i < deltas.length && bag.length < 4; i++) {
-                const v = ans + deltas[i];
-                if (v < 0 || seen[v]) continue;
-                seen[v] = true;
-                bag.push(v);
-            }
-            let extra = 1;
-            while (bag.length < 4) {
-                const v = ans + 5 + extra;
-                extra += 1;
-                if (v < 0 || seen[v]) continue;
-                seen[v] = true;
-                bag.push(v);
-            }
-            for (let i = bag.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                const tmp = bag[i];
-                bag[i] = bag[j];
-                bag[j] = tmp;
-            }
-            return bag.map(function (n) { return String(n); });
-        }
-
-        function climbProceduralQuestion(op, floor) {
-            const tier = Math.floor((Math.max(1, floor) - 1) / 4);
-            const cap = Math.min(80, 12 + tier * 6);
-            let last = null;
-            for (let attempt = 0; attempt < 8; attempt++) {
-                let a = 1;
-                let b = 1;
-                let ans = 0;
-                let stem = '';
-                if (!op || op.id === 'climb_add') {
-                    a = 1 + Math.floor(Math.random() * cap);
-                    b = 1 + Math.floor(Math.random() * cap);
-                    ans = a + b;
-                    stem = a + ' + ' + b + ' = ?';
-                } else if (op.id === 'climb_sub') {
-                    a = cap + Math.floor(Math.random() * cap);
-                    b = 1 + Math.floor(Math.random() * a);
-                    ans = a - b;
-                    stem = a + ' − ' + b + ' = ?';
-                } else if (op.id === 'climb_mul') {
-                    const hi = Math.min(12, 4 + tier);
-                    a = 2 + Math.floor(Math.random() * (hi - 1));
-                    b = 2 + Math.floor(Math.random() * (hi - 1));
-                    ans = a * b;
-                    stem = a + ' × ' + b + ' = ?';
-                } else {
-                    const hi = Math.min(12, 4 + tier);
-                    b = 2 + Math.floor(Math.random() * (hi - 1));
-                    ans = 2 + Math.floor(Math.random() * (hi - 1));
-                    a = b * ans;
-                    stem = a + ' ÷ ' + b + ' = ?';
-                }
-                const qText = '計算：' + stem;
-                last = {
-                    question: qText,
-                    options: climbChoiceOptions(ans),
-                    correctAnswer: String(ans),
-                    image: null
-                };
-                if (!usedQuestionsMap.has(qText)) {
-                    usedQuestionsMap.add(qText);
-                    return last;
-                }
-            }
-            if (last) usedQuestionsMap.add(last.question);
-            return last;
-        }
-
-        function generateClimbQuestion() {
-            const floor = climbBattleFloor || readClimbFloor(currentUser);
-            const op = climbOpForFloor(floor);
-            const fromBank = pickClimbBankQuestion(op);
-            if (fromBank && fromBank.options && fromBank.options.length >= 2 && fromBank.correctAnswer != null) {
-                return fromBank;
-            }
-            return climbProceduralQuestion(op, floor);
-        }
-
         function generateDynamicQuestion() {
-            if (isClimbMode) return generateClimbQuestion();
             const units = GRADE_UNITS[selectedGrade] || GRADE_UNITS['G1'];
             let currentUnitObj = units[0];
 
@@ -8578,6 +9511,7 @@
         let currentQuestionObj = null;
 
         function nextBattleQuestion() {
+            if (isClimbMode && adventureTowerId) return;
             if (battleSettled) return;
             isAnswerLocked = false;
             currentQuizIndex++;
@@ -8617,6 +9551,7 @@
         }
 
         function handleAnswerSubmit(userAns) {
+            if (isClimbMode && adventureTowerId) return;
             if (!currentQuestionObj || isAnswerLocked || battleSettled) return;
             isAnswerLocked = true;
             disableQuizOptionButtons();
@@ -8699,6 +9634,10 @@
         }
 
         function handleVictory() {
+            if (isClimbMode && adventureTowerId) {
+                settleAdventureBattle();
+                return;
+            }
             if (battleRewardGranted) return;
             battleRewardGranted = true;
             battleSettled = true;
@@ -8709,22 +9648,8 @@
 
             let goldReward = 150;
             let expPackReward = 2;
-            let climbCleared = 0;
 
-            if (isClimbMode) {
-                climbCleared = climbBattleFloor || readClimbFloor(currentUser);
-                const bestBefore = readClimbBest(currentUser);
-                const firstClear = climbCleared > bestBefore;
-                goldReward = 0;
-                expPackReward = 0;
-                if (firstClear) {
-                    const milestone = climbMilestoneReward(climbCleared);
-                    goldReward = milestone.gold;
-                    expPackReward = milestone.expPacks;
-                }
-                currentUser.adventureClimbBest = Math.max(bestBefore, climbCleared);
-                currentUser.adventureClimbFloor = climbCleared + 1;
-            } else if (isRankedMode) {
+            if (isRankedMode) {
                 goldReward = 300;
                 currentUser.rankScore = Math.max(0, Math.floor(Number(currentUser.rankScore) || 0)) + Math.max(0, Math.floor(Number(currentRankedBonus) || 0));
             }
@@ -8743,25 +9668,15 @@
                 adventureBattleReportExtra('勝利', quizScore, currentQuizIndex, goldReward)
             ));
 
-            if (isClimbMode) {
-                const op = climbOpForFloor(climbCleared);
-                let msg = `🎉 通過冒險塔第 ${climbCleared} 層（${op.name}）！`;
-                if (goldReward > 0 || expPackReward > 0) {
-                    msg += `\n里程碑獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！`;
-                } else {
-                    const nextM = nextClimbMilestone(climbCleared + 1);
-                    const upcoming = climbMilestoneReward(nextM);
-                    msg += `\n本層沒有里程碑獎勵。下一里程碑：第 ${nextM} 層（金幣 +${upcoming.gold}、EXP包 +${upcoming.expPacks}）。`;
-                }
-                msg += `\n下一層：第 ${climbCleared + 1} 層。`;
-                alert(msg);
-            } else {
-                alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
-            }
+            alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
             exitBattle();
         }
 
         function handleDefeat() {
+            if (isClimbMode && adventureTowerId) {
+                settleAdventureBattle();
+                return;
+            }
             // 失敗唔發獎，但仍鎖結算，避免重複彈窗／報表
             if (battleSettled) return;
             battleSettled = true;
@@ -8773,12 +9688,7 @@
             reportToTeacherSheet(buildStudentReportExtra(
                 adventureBattleReportExtra('失敗', quizScore, currentQuizIndex, 0)
             ));
-            if (isClimbMode) {
-                const stay = climbBattleFloor || readClimbFloor(currentUser);
-                alert('💔 己方全數怪獸皆已倒下，挑戰失敗！\n停留在第 ' + stay + ' 層，可以再挑戰。');
-            } else {
-                alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
-            }
+            alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
             exitBattle();
         }
 
@@ -8991,9 +9901,24 @@
 
         function exitBattle() {
             clearInterval(bossTimer);
-            if (isRankedMode) switchView('ranked');
-            else if (isClimbMode) switchView('adventure');
-            else switchView('training');
+            const stayTower = isClimbMode && adventureTowerId;
+            restoreBattleTimerChrome();
+            const modal = document.getElementById('adventure-result-modal');
+            if (modal) modal.classList.add('hidden');
+            if (isRankedMode) {
+                isClimbMode = false;
+                switchView('ranked');
+            } else if (stayTower) {
+                adventureScreen = 'floors';
+                isClimbMode = false;
+                switchView('adventure');
+            } else if (isClimbMode) {
+                isClimbMode = false;
+                adventureScreen = 'hub';
+                switchView('adventure');
+            } else {
+                switchView('training');
+            }
         }
 
         /* PVP 對決擂台：已停用（入口／房間邏輯已移除） */
