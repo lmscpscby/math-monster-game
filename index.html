@@ -25,7 +25,7 @@
         body {
             font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Outfit', sans-serif;
             user-select: none;
-            background: linear-gradient(135deg, #1e1b4b 0%, #311b92 35%, #4a148c 70%, #0f172a 100%);
+            background: linear-gradient(180deg, #4a301c 0%, #2a1a10 48%, #140e0a 100%);
             background-attachment: fixed;
             color: #f8fafc;
         }
@@ -46,14 +46,14 @@
 
         .glass-card:hover {
             transform: translateY(-4px) scale(1.02);
-            border-color: rgba(236, 72, 153, 0.6);
-            box-shadow: 0 12px 30px -5px rgba(236, 72, 153, 0.4);
+            border-color: rgba(201, 146, 62, 0.75);
+            box-shadow: 0 12px 30px -5px rgba(141, 90, 40, 0.45);
         }
 
         .avatar-preset-btn.is-selected {
-            border-color: rgba(244, 114, 182, 0.95);
-            box-shadow: 0 0 16px rgba(236, 72, 153, 0.5);
-            background: rgba(236, 72, 153, 0.16);
+            border-color: #c9923e;
+            box-shadow: 0 0 0 2px #e6c27a;
+            background: rgba(232, 184, 84, 0.35);
         }
 
         ::-webkit-scrollbar {
@@ -64,7 +64,7 @@
             background: rgba(15, 23, 42, 0.6);
         }
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #ec4899, #8b5cf6);
+            background: linear-gradient(to bottom, #e6c27a, #8d5a28);
             border-radius: 9999px;
         }
 
@@ -1520,13 +1520,15 @@
             .ranked-btn { transition: none; }
         }
 
-        /* Dual-BOSS team picker only. Adventure keeps the shared purple panel. */
+        /* Dual-BOSS team picker keeps the ranked parchment treatment.
+           Adventure uses the shared ui-modal frame; this override wins in ranked mode. */
         #team-select-modal.team-select--ranked {
             background: rgba(28, 16, 8, 0.78);
         }
-        #team-select-modal.team-select--ranked > .glass-panel {
+        #team-select-modal.team-select--ranked > .team-select-panel {
             background: linear-gradient(180deg, #f8edd8 0%, #ecd9b4 100%);
             border: 0;
+            border-image: none;
             border-radius: 18px;
             box-shadow:
                 0 0 0 3px #8d5a28,
@@ -1555,6 +1557,7 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
             border: 0;
+            border-image: none;
             border-radius: 0;
             color: #f8ecd4;
             text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
@@ -1567,6 +1570,7 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
             border: 0;
+            border-image: none;
             border-radius: 0;
             color: #fff8ec;
             text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
@@ -1667,9 +1671,376 @@
             white-space: nowrap;
         }
 
+        /* Shared kit (priority 2). Copy stays HTML; frames are 9-sliced.
+           panel-modal -> .ui-modal
+           panel-medium -> .ui-panel, .ui-field, .ui-nameplate
+           toast-bar -> .ui-toast
+           input-dropdown -> .ui-select (chevron is in the art)
+           btn-primary / -lg / secondary / secondary-alt -> .ui-btn--*
+           icon square / circle / ornate -> .ui-icon--*
+           Ranked keeps ui-ranked-*. Battle arena chrome is unchanged.
+           Header bar is a color plate, not a sliced frame: the medium asset is too short to wrap the whole navbar. */
+        body:not(.lobby-open):not(.ranked-open) > header.glass-panel {
+            background: rgba(54, 34, 18, 0.92);
+            border-bottom-color: rgba(212, 168, 74, 0.38);
+        }
+        body:not(.lobby-open) > footer {
+            background: rgba(28, 16, 8, 0.55);
+            border-top-color: rgba(212, 168, 74, 0.28);
+            color: #e7d3b0;
+        }
+        header.glass-panel h1 {
+            background-image: none;
+            -webkit-text-fill-color: #f8ecd4;
+            color: #f8ecd4;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+        }
+        header.glass-panel h1 + p {
+            color: #f3e0bc;
+        }
+        ::selection {
+            background: #e6c27a;
+            color: #3a2412;
+        }
+
+        .ui-modal-overlay {
+            background: rgba(20, 12, 6, 0.78);
+            backdrop-filter: blur(6px);
+            overflow-y: auto;
+            align-items: safe center;
+            justify-content: center;
+        }
+        .ui-modal,
+        .ui-panel {
+            position: relative;
+            color: #3d2914;
+            background-color: #f4e4c8;
+            border-style: solid;
+            border-radius: 0;
+            box-shadow: 0 16px 36px rgba(20, 10, 4, 0.4);
+        }
+        .ui-modal {
+            border-width: 46px 50px;
+            border-image: url('assets/bg/ui-shared-panel-modal.png') 78 88 fill stretch;
+            padding: 0.2rem 0.35rem 0.55rem;
+        }
+        .ui-panel {
+            border-width: 20px 24px;
+            border-image: url('assets/bg/ui-shared-panel-medium.png') 32 36 fill stretch;
+            box-shadow: none;
+            padding: 0.25rem 0.55rem;
+        }
+        .ui-parchment h1,
+        .ui-parchment h2,
+        .ui-parchment h3,
+        .ui-parchment h4 {
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            color: #3a2412;
+            background-image: none;
+            -webkit-text-fill-color: #3a2412;
+        }
+        .ui-parchment p,
+        .ui-parchment label,
+        .ui-parchment .ui-muted {
+            color: #5c4128;
+        }
+        .ui-parchment .bg-clip-text {
+            background-image: none;
+            -webkit-text-fill-color: #3a2412;
+            color: #3a2412;
+        }
+        .ui-parchment .text-white,
+        .ui-parchment .text-slate-100,
+        .ui-parchment .text-slate-200,
+        .ui-parchment .text-slate-300,
+        .ui-parchment .text-slate-400 {
+            color: #3d2914;
+        }
+        .ui-parchment input[type="radio"] {
+            accent-color: #a87420;
+        }
+        .ui-modal > .ui-icon {
+            z-index: 2;
+        }
+        .ui-parchment .bg-slate-900\/80,
+        .ui-parchment .bg-slate-900\/90,
+        .ui-parchment .bg-slate-900\/70,
+        .ui-parchment .bg-slate-950\/90 {
+            background-color: rgba(120, 78, 36, 0.1);
+            border-color: rgba(120, 78, 36, 0.35);
+            color: #3d2914;
+        }
+
+        .ui-toast {
+            position: fixed;
+            left: 50%;
+            bottom: 1.25rem;
+            transform: translateX(-50%);
+            z-index: 9999;
+            width: max-content;
+            max-width: min(92vw, 640px);
+            min-width: min(92vw, 260px);
+            pointer-events: none;
+            text-align: center;
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(20, 10, 4, 0.75);
+            font-size: 0.8rem;
+            font-weight: 800;
+            line-height: 1.35;
+            background-color: #6b4424;
+            border-style: solid;
+            border-width: 16px 48px;
+            border-image: url('assets/bg/ui-shared-toast-bar.png') 28 64 fill stretch;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .ui-toast.is-on { opacity: 1; }
+
+        .ui-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            border-style: solid;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+            cursor: pointer;
+            font-weight: 900;
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            transition: filter 0.15s ease, transform 0.15s ease;
+        }
+        .ui-btn:hover { filter: brightness(1.08); }
+        .ui-btn:active { transform: translateY(1px); }
+        .ui-btn:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 3px;
+        }
+        .ui-btn:disabled,
+        .ui-btn:disabled:hover {
+            filter: grayscale(0.45) brightness(0.82);
+            cursor: not-allowed;
+            transform: none;
+        }
+        .ui-btn--primary {
+            border-width: 12px 30px;
+            border-image: url('assets/bg/ui-shared-btn-primary.png') 22 40 fill stretch;
+            color: #fff8ec;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+            min-height: 48px;
+            padding: 0 0.35rem;
+        }
+        .ui-btn--lg {
+            width: 100%;
+            border-width: 14px 36px;
+            border-image: url('assets/bg/ui-shared-btn-primary-lg.png') 22 42 fill stretch;
+            color: #fff8ec;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.88);
+            min-height: 54px;
+            padding: 0 0.5rem;
+        }
+        .ui-btn--auto { width: auto; }
+        .ui-btn--secondary {
+            border-width: 11px 24px;
+            border-image: url('assets/bg/ui-shared-btn-secondary.png') 18 30 fill stretch;
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
+            min-height: 44px;
+            padding: 0 0.4rem;
+        }
+        .ui-btn--secondary-alt {
+            border-width: 11px 24px;
+            border-image: url('assets/bg/ui-shared-btn-secondary-alt.png') 18 30 fill stretch;
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
+            min-height: 44px;
+            padding: 0 0.4rem;
+        }
+        .ui-btn--compact {
+            min-height: 0;
+            border-width: 8px 16px;
+            font-size: 11px;
+            padding: 0 0.15rem;
+        }
+        .hidden.ui-btn,
+        .hidden.ui-icon,
+        .hidden.ui-panel,
+        .hidden.ui-toast {
+            display: none !important;
+        }
+
+        .ui-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            box-shadow: none;
+            color: #f6e7c8;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .ui-icon:hover { filter: brightness(1.1); }
+        .ui-icon:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 3px;
+        }
+        .ui-icon--square { background-image: url('assets/bg/ui-shared-btn-icon-square.png'); }
+        .ui-icon--circle { background-image: url('assets/bg/ui-shared-btn-icon-circle.png'); }
+        .ui-icon--ornate { background-image: url('assets/bg/ui-shared-btn-icon-ornate.png'); }
+        .ui-icon--lg { width: 72px; height: 72px; font-size: 1.7rem; }
+        .ui-icon--danger { color: #fb7185; }
+        .ui-icon--avatar { width: 36px; height: 36px; position: relative; }
+        .ui-icon--avatar > img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 58%;
+            height: 58%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            border-radius: 999px;
+        }
+        button.ui-icon { appearance: none; }
+
+        .ui-field,
+        .ui-select {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            font: inherit;
+            font-size: 0.875rem;
+            font-weight: 700;
+            border-radius: 0;
+            box-shadow: none;
+            outline: none;
+            background-color: transparent;
+        }
+        .ui-field {
+            color: #3a2412;
+            border-style: solid;
+            border-width: 12px 16px;
+            border-image: url('assets/bg/ui-shared-panel-medium.png') 26 30 fill stretch;
+            min-height: 48px;
+            padding: 0 0.4rem;
+        }
+        .ui-field::placeholder { color: rgba(90, 58, 28, 0.55); }
+        .ui-field:focus,
+        .ui-select:focus {
+            outline: 2px solid rgba(201, 146, 62, 0.9);
+            outline-offset: 2px;
+        }
+        .ui-select {
+            appearance: none;
+            -webkit-appearance: none;
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(20, 10, 4, 0.65);
+            border-style: solid;
+            border-width: 12px 68px 12px 22px;
+            border-image: url('assets/bg/ui-shared-input-dropdown.png') 20 84 20 32 fill stretch;
+            min-height: 48px;
+            padding: 0 0.15rem;
+            cursor: pointer;
+            background-color: #5c3a22;
+        }
+        .ui-select option {
+            color: #f8ecd4;
+            background: #3a2414;
+        }
+        .ui-field-wrap { position: relative; }
+        .ui-field-wrap > i {
+            position: absolute;
+            left: 1.35rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b4424;
+            font-size: 0.85rem;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .ui-field-wrap > .ui-field { padding-left: 2.15rem; }
+
+        .ui-nameplate {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            min-width: 0;
+            max-width: 72vw;
+            color: #3d2914;
+            background-color: #f4e4c8;
+            border-style: solid;
+            border-width: 8px 14px;
+            border-image: url('assets/bg/ui-shared-panel-medium.png') 22 26 fill stretch;
+        }
+        .ui-nameplate #user-display-name { color: #3a2412; }
+        .ui-nameplate #user-display-school { color: #6b4424; }
+        @media (min-width: 640px) {
+            .ui-nameplate { max-width: 17rem; }
+        }
+
+        .ui-slot {
+            background: rgba(255, 248, 232, 0.78);
+            border: 1px solid rgba(141, 90, 40, 0.35);
+            border-radius: 12px;
+            color: #3d2914;
+            text-align: center;
+        }
+        .ui-slot--pick {
+            cursor: pointer;
+            padding: 0.45rem;
+            position: relative;
+        }
+        .ui-slot--pick.is-selected,
+        .ui-slot--pick.is-selected:hover {
+            border-color: #c9923e;
+            background: rgba(232, 184, 84, 0.4);
+        }
+        .ui-slot .text-pink-300,
+        .ui-slot .text-slate-500,
+        .ui-slot .text-white,
+        .ui-slot .text-slate-600 {
+            color: #5c3a1c;
+        }
+        #element-chart-table-host .bg-slate-900\/95,
+        #element-chart-table-host .bg-slate-800\/80 {
+            background-color: rgba(244, 228, 200, 0.94);
+            color: #5c4128;
+        }
+
+        .avatar-preset-btn {
+            background: rgba(255, 248, 232, 0.72);
+            border-color: rgba(141, 90, 40, 0.4);
+            color: #3d2914;
+        }
+        .avatar-preset-btn .text-slate-100 { color: #3d2914; }
+
+        @media (max-width: 640px) {
+            .ui-modal {
+                border-width: 28px 22px;
+                padding: 0.1rem 0.15rem 0.35rem;
+            }
+            .ui-select { border-width: 10px 48px 10px 16px; }
+            .ui-panel { border-width: 16px 16px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .ui-btn, .ui-toast { transition: none; }
+        }
+
     </style>
 </head>
-<body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
+<body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100">
 
     <!-- 背景音樂 HTML5 Audio 標籤 -->
     <audio id="bgm-audio" loop preload="metadata">
@@ -1684,24 +2055,24 @@
     </audio>
 
     <!-- AUTH MODAL OVERLAY -->
-    <div id="auth-modal-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-xl p-4 transition-all duration-300">
-        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-pink-500/30 relative overflow-hidden">
-            <div class="text-center mb-6">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-600 text-white text-3xl mb-3 shadow-lg shadow-pink-500/30">
-                    <i class="fa-solid font-bold fa-square-root-variable"></i>
+    <div id="auth-modal-overlay" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4">
+        <div class="ui-modal ui-parchment w-full max-w-lg my-auto">
+            <div class="text-center mb-5">
+                <div class="ui-icon ui-icon--ornate ui-icon--lg mx-auto mb-3" aria-hidden="true">
+                    <i class="fa-solid fa-square-root-variable"></i>
                 </div>
-                <h1 class="text-2xl md:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-200 to-indigo-300">
+                <h1 class="text-2xl md:text-3xl font-black">
                     數理怪獸抽卡大冒險
                 </h1>
-                <p class="text-xs md:text-sm text-slate-300 mt-1">請登入或註冊帳號以開始遊戲</p>
+                <p class="text-xs md:text-sm mt-1">請登入或註冊帳號以開始遊戲</p>
             </div>
 
-            <div class="flex bg-slate-900/80 p-1 rounded-xl mb-6 border border-slate-700/50">
-                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="flex-1 py-2 text-sm font-bold rounded-lg transition-all bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md">
-                    <i class="fa-solid fa-right-to-bracket mr-1.5"></i>帳號登入
+            <div class="flex gap-2 mb-5">
+                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="ui-btn ui-btn--primary flex-1 text-sm">
+                    <i class="fa-solid fa-right-to-bracket"></i>帳號登入
                 </button>
-                <button id="tab-btn-register" onclick="switchAuthTab('register')" class="flex-1 py-2 text-sm font-bold rounded-lg transition-all text-slate-400 hover:text-white">
-                    <i class="fa-solid fa-user-plus mr-1.5"></i>學生註冊
+                <button id="tab-btn-register" onclick="switchAuthTab('register')" class="ui-btn ui-btn--secondary flex-1 text-sm">
+                    <i class="fa-solid fa-user-plus"></i>學生註冊
                 </button>
             </div>
 
@@ -1723,9 +2094,9 @@
                 <div id="login-mode-nickname" class="space-y-3">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname)</label>
-                        <div class="relative">
-                            <i class="fa-solid fa-user absolute left-3.5 top-3 text-slate-400 text-sm"></i>
-                            <input type="text" id="login-nickname" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="請輸入個人別號">
+                        <div class="ui-field-wrap">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="login-nickname" class="ui-field" placeholder="請輸入個人別號">
                         </div>
                     </div>
                 </div>
@@ -1733,12 +2104,12 @@
                 <div id="login-mode-school" class="space-y-3 hidden">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱</label>
-                        <input type="text" id="login-school" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="例如: 培正小學">
+                        <input type="text" id="login-school" class="ui-field" placeholder="例如: 培正小學">
                     </div>
                     <div class="grid grid-cols-2 gap-3">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">班別</label>
-                                                        <select id="login-class" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500">
+                                                        <select id="login-class" class="ui-select">
                                 <option value="">請選擇班別</option>
                             <option value="1A">1A</option>
                             <option value="1B">1B</option>
@@ -1762,7 +2133,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">學號</label>
-                            <select id="login-class-no" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500">
+                            <select id="login-class-no" class="ui-select">
                                 <option value="">請選擇學號</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -1801,29 +2172,29 @@
 
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">密碼</label>
-                    <div class="relative">
-                        <i class="fa-solid fa-lock absolute left-3.5 top-3 text-slate-400 text-sm"></i>
-                        <input type="password" id="login-password" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="請輸入密碼">
+                    <div class="ui-field-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="login-password" required class="ui-field" placeholder="請輸入密碼">
                     </div>
                 </div>
 
                 <div id="login-error" class="text-rose-400 text-xs text-center min-h-[1rem]"></div>
 
-                <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 hover:from-pink-500 hover:to-indigo-500 text-white font-black rounded-xl shadow-lg shadow-pink-600/30 active:scale-[0.98] transition-all flex items-center justify-center">
+                <button type="submit" class="ui-btn ui-btn--lg text-sm">
                     <span>登入冒險</span>
-                    <i class="fa-solid fa-arrow-right-to-bracket ml-2"></i>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </button>
             </form>
 
             <form id="form-register" onsubmit="handleRegister(event)" class="space-y-3 hidden">
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱 <span class="text-rose-400">*</span></label>
-                    <input type="text" id="reg-school" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="全稱或簡稱 (例如: 培正小學)">
+                    <input type="text" id="reg-school" required class="ui-field" placeholder="全稱或簡稱 (例如: 培正小學)">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">班別 <span class="text-rose-400">*</span></label>
-                                                <select id="reg-class" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500">
+                                                <select id="reg-class" required class="ui-select">
                             <option value="" disabled selected>請選擇班別</option>
                             <option value="1A">1A</option>
                             <option value="1B">1B</option>
@@ -1847,7 +2218,7 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">學號 <span class="text-rose-400">*</span></label>
-                        <select id="reg-class-no" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500">
+                        <select id="reg-class-no" required class="ui-select">
                             <option value="" disabled selected>請選擇學號</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -1884,18 +2255,18 @@
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname) <span class="text-rose-400">*</span></label>
-                    <input type="text" id="reg-nickname" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="用於顯示與快捷登入">
+                    <input type="text" id="reg-nickname" required class="ui-field" placeholder="用於顯示與快捷登入">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">設定密碼 <span class="text-rose-400">*</span></label>
-                    <input type="password" id="reg-password" required minlength="4" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-pink-500" placeholder="至少 4 位數">
+                    <input type="password" id="reg-password" required minlength="4" class="ui-field" placeholder="至少 4 位數">
                 </div>
 
                 <div id="reg-error" class="text-rose-400 text-xs text-center min-h-[1rem]"></div>
 
-                <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/30 active:scale-[0.98] transition-all flex items-center justify-center">
+                <button type="submit" class="ui-btn ui-btn--lg text-sm">
                     <span>建立帳號並登入</span>
-                    <i class="fa-solid fa-user-check ml-2"></i>
+                    <i class="fa-solid fa-user-check"></i>
                 </button>
             </form>
         </div>
@@ -1905,7 +2276,7 @@
     <header class="sticky top-0 z-30 glass-panel border-b border-purple-500/20 px-4 py-3">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center space-x-3 cursor-pointer hover:opacity-90 transition-opacity" onclick="switchView('home')">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-xl font-black text-white shadow-md shadow-pink-500/30">
+                <div class="ui-icon ui-icon--ornate" aria-hidden="true">
                     <i class="fa-solid fa-dragon"></i>
                 </div>
                 <div>
@@ -1917,12 +2288,12 @@
             </div>
 
             <div id="player-dashboard" class="flex flex-wrap items-center justify-end gap-2 sm:gap-3 min-w-0 flex-1 basis-full sm:basis-auto sm:flex-initial">
-                <div class="flex items-center gap-1.5 bg-purple-950/60 pl-1.5 pr-2.5 py-1.5 rounded-xl border border-purple-500/30 min-w-0 max-w-[72vw] sm:max-w-[17rem]">
-                    <button type="button" id="header-avatar-btn" onclick="openAvatarPicker()" class="relative w-8 h-8 shrink-0 rounded-lg bg-pink-500/20 text-pink-300 flex items-center justify-center font-bold text-sm overflow-hidden border border-pink-400/35 hover:border-pink-300 hover:bg-pink-500/30 transition-colors" title="撳一下換大廳頭像" aria-label="更換大廳頭像" aria-haspopup="dialog">
+                <div class="ui-nameplate">
+                    <button type="button" id="header-avatar-btn" onclick="openAvatarPicker()" class="ui-icon ui-icon--circle ui-icon--avatar" title="撳一下換大廳頭像" aria-label="更換大廳頭像" aria-haspopup="dialog">
                         <i id="header-avatar-fallback" class="fa-solid fa-user-astronaut"></i>
-                        <img id="header-avatar-img" alt="" class="hidden absolute inset-0 w-full h-full object-cover">
+                        <img id="header-avatar-img" alt="" class="hidden">
                     </button>
-                    <button type="button" id="header-avatar-change-btn" onclick="openAvatarPicker()" class="shrink-0 px-1.5 py-1 rounded-lg bg-pink-500/15 hover:bg-pink-500/30 border border-pink-400/35 text-pink-200 text-[10px] font-black leading-none" title="更換大廳頭像" aria-haspopup="dialog">換頭像</button>
+                    <button type="button" id="header-avatar-change-btn" onclick="openAvatarPicker()" class="ui-btn ui-btn--secondary-alt ui-btn--compact" title="更換大廳頭像" aria-haspopup="dialog">換頭像</button>
                     <div class="text-xs min-w-0">
                         <div id="user-display-name" class="font-bold text-slate-100 truncate">未登入</div>
                         <div id="user-display-school" class="text-[10px] text-pink-200/70 truncate hidden sm:block">訪客模式</div>
@@ -1934,10 +2305,10 @@
                         <i class="fa-solid fa-coins text-amber-400"></i>
                         <span id="user-gold">0</span>
                     </div>
-                    <div class="flex items-center space-x-1.5 bg-purple-500/20 border border-purple-400/40 px-3 py-1.5 rounded-xl text-purple-300 font-extrabold text-xs sm:text-sm">
+                    <div class="flex items-center space-x-1.5 bg-amber-950/55 border border-amber-400/40 px-3 py-1.5 rounded-xl text-amber-100 font-extrabold text-xs sm:text-sm">
                         <i class="fa-solid fa-trophy text-amber-300"></i>
                         <span id="user-rank-score">0</span>
-                        <span class="text-[10px] text-purple-200 hidden md:inline">積分</span>
+                        <span class="text-[10px] text-amber-100 hidden md:inline">積分</span>
                     </div>
                     <div class="flex items-center space-x-1.5 bg-emerald-500/20 border border-emerald-400/40 px-3 py-1.5 rounded-xl text-emerald-300 font-extrabold text-xs sm:text-sm">
                         <i class="fa-solid fa-box-open"></i>
@@ -1946,25 +2317,25 @@
                     </div>
                 </div>
 
-                <button type="button" id="daily-claim-btn" onclick="claimDailyReward()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-200 text-xs font-black flex items-center space-x-1.5 transition-all disabled:opacity-45 disabled:cursor-not-allowed disabled:hover:bg-rose-500/20" title="每日打卡：金幣 +200、EXP包 +10（香港時間每日一次）">
+                <button type="button" id="daily-claim-btn" onclick="claimDailyReward()" class="ui-btn ui-btn--primary ui-btn--compact text-xs" title="每日打卡：金幣 +200、EXP包 +10（香港時間每日一次）">
                     <i class="fa-solid fa-calendar-check"></i>
                     <span id="daily-claim-label">每日打卡</span>
                 </button>
 
-                <button onclick="toggleElementChartModal()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-black flex items-center space-x-1 transition-all" title="屬性相克表">
+                <button onclick="toggleElementChartModal()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs" title="屬性相克表">
                     <i class="fa-solid fa-bolt text-yellow-400"></i>
                     <span class="hidden md:inline">屬性相克</span>
                 </button>
 
-                <button onclick="toggleFullScreen()" id="fullscreen-btn" class="w-9 h-9 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-500/40 text-slate-200 flex items-center justify-center transition-colors" title="全畫面 toggle">
+                <button onclick="toggleFullScreen()" id="fullscreen-btn" class="ui-icon ui-icon--square" title="全畫面 toggle">
                     <i class="fa-solid fa-expand" id="fullscreen-icon"></i>
                 </button>
 
-                <button onclick="toggleAudio()" id="bgm-btn" class="w-9 h-9 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-500/40 text-slate-200 flex items-center justify-center transition-colors" title="切換背景音樂">
+                <button onclick="toggleAudio()" id="bgm-btn" class="ui-icon ui-icon--square" title="切換背景音樂">
                     <i class="fa-solid fa-volume-xmark" id="bgm-icon"></i>
                 </button>
 
-                <button onclick="logout()" id="logout-btn" class="hidden w-9 h-9 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/40 text-rose-300 items-center justify-center transition-colors" title="登出">
+                <button onclick="logout()" id="logout-btn" class="ui-icon ui-icon--square ui-icon--danger hidden" title="登出">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </button>
             </div>
@@ -2042,16 +2413,16 @@
                 </button>
             </div>
 
-            <div id="admin-stats-panel" class="hidden glass-panel p-5 rounded-3xl border border-rose-500/40 space-y-4">
+            <div id="admin-stats-panel" class="ui-panel ui-parchment hidden space-y-4">
                 <div class="flex items-center justify-between gap-3 flex-wrap">
                     <h3 class="font-black text-base text-rose-300 flex items-center">
                         <i class="fa-solid fa-chart-pie mr-1.5"></i>管理員：遊戲參加統計
                     </h3>
                     <div class="flex items-center gap-2">
-                        <button type="button" onclick="loadAdminPlayerStats()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-200 text-xs font-bold">
-                            <i class="fa-solid fa-rotate mr-1"></i>重新整理
+                        <button type="button" onclick="loadAdminPlayerStats()" class="ui-btn ui-btn--primary ui-btn--compact text-xs">
+                            <i class="fa-solid fa-rotate"></i>重新整理
                         </button>
-                        <button type="button" onclick="closeAdminStatsPanel()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold">關閉</button>
+                        <button type="button" onclick="closeAdminStatsPanel()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs">關閉</button>
                     </div>
                 </div>
                 <div id="admin-stats-status" class="text-xs text-slate-400">載入中…</div>
@@ -2064,9 +2435,9 @@
                         <div class="text-[10px] text-amber-200/80 font-bold">有排位積分</div>
                         <div id="admin-stat-ranked" class="text-2xl font-black text-amber-300 mt-1">—</div>
                     </div>
-                    <div class="bg-slate-900/70 border border-purple-500/30 rounded-2xl p-4">
-                        <div class="text-[10px] text-purple-200/80 font-bold">年級／班別組數</div>
-                        <div id="admin-stat-groups" class="text-2xl font-black text-purple-200 mt-1">—</div>
+                    <div class="bg-slate-900/70 border border-amber-700/40 rounded-2xl p-4">
+                        <div class="text-[10px] font-bold">年級／班別組數</div>
+                        <div id="admin-stat-groups" class="text-2xl font-black mt-1">—</div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -2083,8 +2454,8 @@
                     <h4 class="text-xs font-black text-slate-300">排位賽季結算</h4>
                     <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／頭 10 限定怪獸 id），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。</p>
                     <div class="flex flex-wrap gap-2">
-                        <button type="button" onclick="adminPreviewSeason()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-amber-100 text-xs font-bold">預覽今季頭10</button>
-                        <button type="button" onclick="adminSettleSeason()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-rose-100 text-xs font-bold">結算已結束賽季</button>
+                        <button type="button" onclick="adminPreviewSeason()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs">預覽今季頭10</button>
+                        <button type="button" onclick="adminSettleSeason()" class="ui-btn ui-btn--secondary-alt ui-btn--compact text-xs">結算已結束賽季</button>
                     </div>
                     <div id="admin-season-status" class="text-xs text-slate-300"></div>
                     <div id="admin-season-preview" class="text-xs text-slate-200 space-y-2"></div>
@@ -2199,29 +2570,29 @@
         <!-- VIEW 2: GACHA SYSTEM -->
         <section id="view-gacha" class="hidden space-y-6">
             <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                <button onclick="switchView('home')" class="ui-btn ui-btn--secondary text-xs">
                     <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
                 </button>
             </div>
 
-            <div class="glass-panel p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 border-2 border-amber-500/30">
+            <div class="ui-panel ui-parchment flex flex-col md:flex-row items-center justify-between gap-4">
                 <div>
-                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-amber-300 break-words">怪獸祈願召喚機</h2>
-                    <p class="text-xs md:text-sm text-slate-200 mt-1">單抽 **200 元**，十抽 **2000 元**。**十連抽必得 1 個山海經怪獸卡**！抽中山海經怪獸將觸發黃金閃光效果！</p>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black break-words">怪獸祈願召喚機</h2>
+                    <p class="text-xs md:text-sm mt-1">單抽 200 元，十抽 2000 元。十連抽必得 1 個山海經怪獸卡！抽中山海經怪獸將觸發黃金閃光效果！</p>
                 </div>
-                <div class="flex items-center space-x-3">
-                    <button id="btn-gacha-1" onclick="drawGacha(1)" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl shadow-lg shadow-amber-500/30 active:scale-95 transition-all flex items-center">
-                        <i class="fa-solid fa-gem mr-2"></i>單抽 (200元)
+                <div class="flex items-center gap-2">
+                    <button id="btn-gacha-1" onclick="drawGacha(1)" class="ui-btn ui-btn--primary text-sm">
+                        <i class="fa-solid fa-gem"></i>單抽 (200元)
                     </button>
-                    <button id="btn-gacha-10" onclick="drawGacha(10)" class="px-6 py-3 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black rounded-xl shadow-lg shadow-pink-600/30 active:scale-95 transition-all flex items-center">
-                        <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>十連抽 (2000元)
+                    <button id="btn-gacha-10" onclick="drawGacha(10)" class="ui-btn ui-btn--lg ui-btn--auto text-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>十連抽 (2000元)
                     </button>
                 </div>
             </div>
 
-            <div id="gacha-display-area" class="min-h-[350px] glass-panel rounded-3xl p-8 flex flex-col items-center justify-center relative overflow-hidden border border-purple-500/30">
+            <div id="gacha-display-area" class="ui-modal ui-parchment min-h-[350px] flex flex-col items-center justify-center relative">
                 <div id="gacha-idle-state" class="text-center space-y-4">
-                    <div class="w-28 h-28 mx-auto rounded-3xl bg-purple-900/60 border border-amber-400/40 flex items-center justify-center text-5xl text-amber-300 mythic-glow">
+                    <div class="ui-icon ui-icon--ornate ui-icon--lg mx-auto mythic-glow">
                         <i class="fa-solid fa-box-archive"></i>
                     </div>
                     <p class="text-slate-300 text-sm font-semibold">按下上方按鈕開始召喚怪獸！</p>
@@ -2235,20 +2606,20 @@
         <!-- VIEW 3: MONSTER COLLECTION & EXP NURTURING -->
         <section id="view-monsters" class="hidden space-y-6">
             <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                <button onclick="switchView('home')" class="ui-btn ui-btn--secondary text-xs">
                     <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
                 </button>
             </div>
 
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-panel p-5 rounded-3xl border border-emerald-500/30">
+            <div class="ui-panel ui-parchment flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-black text-emerald-300 break-words">怪獸圖鑑與進化養成</h2>
-                    <p class="text-xs text-slate-300 mt-0.5">點擊卡牌可放大預覽！進化系怪獸進化至 30LV 最終形態，4圍數值凌駕同級山海經神獸！</p>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-black break-words">怪獸圖鑑與進化養成</h2>
+                    <p class="text-xs mt-0.5">點擊卡牌可放大預覽！進化系怪獸進化至 30LV 最終形態，4圍數值凌駕同級山海經神獸！</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                    <button type="button" data-filter="all" onclick="filterMonsters('all')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-600 text-white shadow-md ring-2 ring-emerald-300/80">全部</button>
-                    <button type="button" data-filter="elemental" onclick="filterMonsters('elemental')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">八屬性進化系</button>
-                    <button type="button" data-filter="mythic" onclick="filterMonsters('mythic')" class="monster-filter-btn px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800">山海經神獸</button>
+                    <button type="button" data-filter="all" onclick="filterMonsters('all')" class="monster-filter-btn ui-btn ui-btn--primary text-xs">全部</button>
+                    <button type="button" data-filter="elemental" onclick="filterMonsters('elemental')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">八屬性進化系</button>
+                    <button type="button" data-filter="mythic" onclick="filterMonsters('mythic')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">山海經神獸</button>
                 </div>
             </div>
 
@@ -2259,23 +2630,23 @@
         <!-- VIEW 4: MATHEMATICS ADVENTURE STAGES -->
         <section id="view-adventure" class="hidden space-y-6">
             <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
+                <button onclick="switchView('home')" class="ui-btn ui-btn--secondary text-xs">
                     <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
                 </button>
             </div>
 
-            <div class="glass-panel p-6 rounded-3xl border border-indigo-500/30">
-                <h2 class="text-lg sm:text-xl md:text-2xl font-black text-indigo-300 mb-1 break-words">選擇數學冒險單元<br class="sm:hidden"> (2隻怪獸登場，BOSS等級動態匹配)</h2>
-                <p class="text-xs text-slate-300">選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！</p>
+            <div class="ui-panel ui-parchment">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-black mb-1 break-words">選擇數學冒險單元<br class="sm:hidden"> (2隻怪獸登場，BOSS等級動態匹配)</h2>
+                <p class="text-xs">選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！</p>
             </div>
 
-            <div class="flex overflow-x-auto space-x-2 pb-2">
-                <button id="grade-btn-G1" onclick="selectGrade('G1')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小一 (G1)</button>
-                <button id="grade-btn-G2" onclick="selectGrade('G2')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小二 (G2)</button>
-                <button id="grade-btn-G3" onclick="selectGrade('G3')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小三 (G3)</button>
-                <button id="grade-btn-G4" onclick="selectGrade('G4')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小四 (G4)</button>
-                <button id="grade-btn-G5" onclick="selectGrade('G5')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小五 (G5)</button>
-                <button id="grade-btn-G6" onclick="selectGrade('G6')" class="grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30">小六 (G6)</button>
+            <div class="flex overflow-x-auto gap-2 pb-2">
+                <button id="grade-btn-G1" onclick="selectGrade('G1')" class="grade-tab-btn ui-btn ui-btn--primary flex-shrink-0 text-sm">小一 (G1)</button>
+                <button id="grade-btn-G2" onclick="selectGrade('G2')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小二 (G2)</button>
+                <button id="grade-btn-G3" onclick="selectGrade('G3')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小三 (G3)</button>
+                <button id="grade-btn-G4" onclick="selectGrade('G4')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小四 (G4)</button>
+                <button id="grade-btn-G5" onclick="selectGrade('G5')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小五 (G5)</button>
+                <button id="grade-btn-G6" onclick="selectGrade('G6')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小六 (G6)</button>
             </div>
 
             <div id="strand-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -2411,17 +2782,17 @@
     </main>
 
     <!-- CARD ZOOM MODAL -->
-    <div id="card-zoom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden">
-        <div class="glass-panel w-full max-w-md rounded-3xl p-6 space-y-4 border-2 border-amber-400 relative text-center">
-            <button onclick="closeCardZoomModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
+    <div id="card-zoom-modal" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4 hidden">
+        <div class="ui-modal ui-parchment w-full max-w-md my-auto space-y-4 text-center">
+            <button onclick="closeCardZoomModal()" class="ui-icon ui-icon--circle absolute top-1 right-1" aria-label="關閉"><i class="fa-solid fa-xmark text-lg"></i></button>
             <div id="zoom-card-content"></div>
         </div>
     </div>
 
     <!-- ELEMENT CHART MODAL (屬性相克表) -->
-    <div id="element-chart-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden">
-        <div class="glass-panel w-full max-w-3xl rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-amber-400 relative">
-            <button onclick="toggleElementChartModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
+    <div id="element-chart-modal" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4 hidden">
+        <div class="ui-modal ui-parchment w-full max-w-3xl my-auto space-y-3">
+            <button onclick="toggleElementChartModal()" class="ui-icon ui-icon--circle absolute top-1 right-1" aria-label="關閉"><i class="fa-solid fa-xmark text-lg"></i></button>
             <div class="text-center pr-6">
                 <h3 class="text-xl font-black text-amber-300 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-shield-halved"></i> 屬性相克表（八屬性）
@@ -2432,16 +2803,16 @@
                 <div id="element-chart-table-host"></div>
             </div>
             <p class="text-[10px] sm:text-xs text-slate-400 text-center leading-relaxed">舊口訣：水克火、火克草；草同雷都克水。新加：格鬥克岩雷、岩石克火雷聖光、念力克格鬥草、聖光克念力格鬥。</p>
-            <button onclick="toggleElementChartModal()" class="w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs">
+            <button onclick="toggleElementChartModal()" class="ui-btn ui-btn--primary w-full text-xs">
                 理解並關閉
             </button>
         </div>
     </div>
 
     <!-- LOBBY AVATAR PICKER（大廳頂部同年級排行榜；唔影響戰鬥） -->
-    <div id="avatar-picker-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-xl p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="avatar-picker-title">
-        <div class="glass-panel w-full max-w-lg rounded-3xl p-5 sm:p-6 space-y-3 border-2 border-pink-400/70 relative max-h-[92vh] overflow-y-auto">
-            <button type="button" onclick="closeAvatarPicker()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="關閉"><i class="fa-solid fa-xmark text-2xl"></i></button>
+    <div id="avatar-picker-modal" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="avatar-picker-title">
+        <div class="ui-modal ui-parchment w-full max-w-lg my-auto space-y-3">
+            <button type="button" onclick="closeAvatarPicker()" class="ui-icon ui-icon--circle absolute top-1 right-1" aria-label="關閉"><i class="fa-solid fa-xmark text-lg"></i></button>
             <div class="text-center pr-6">
                 <h3 id="avatar-picker-title" class="text-xl font-black text-pink-200 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-dragon"></i> 揀一個大廳頭像
@@ -2456,29 +2827,29 @@
                 <p id="lobby-avatar-preview-note" class="text-[11px] text-slate-400 text-center">可揀預設獸，或上傳一張相</p>
             </div>
             <div class="flex flex-wrap items-center justify-center gap-2">
-                <label for="lobby-avatar-file" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 border border-pink-400/40 text-pink-100 text-xs font-black cursor-pointer">
+                <label for="lobby-avatar-file" class="ui-btn ui-btn--primary ui-btn--compact text-xs cursor-pointer">
                     <i class="fa-solid fa-upload"></i>
                     <span>上傳頭像</span>
                 </label>
                 <input id="lobby-avatar-file" type="file" accept="image/jpeg,image/png,image/webp" class="hidden" onchange="onLobbyAvatarFileSelected(event)">
-                <button type="button" id="lobby-avatar-reset" onclick="resetLobbyAvatarToPreset()" class="hidden px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold">重設為預設</button>
+                <button type="button" id="lobby-avatar-reset" onclick="resetLobbyAvatarToPreset()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs hidden">重設為預設</button>
             </div>
             <div id="avatar-picker-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 max-h-[42vh] overflow-y-auto p-1"></div>
-            <button type="button" onclick="closeAvatarPicker()" class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-black rounded-xl text-xs border border-slate-600">
+            <button type="button" onclick="closeAvatarPicker()" class="ui-btn ui-btn--secondary w-full text-xs">
                 關閉
             </button>
         </div>
     </div>
 
     <!-- TEAM SELECTION MODAL -->
-    <div id="team-select-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 hidden">
-        <div class="glass-panel team-select-panel w-full max-w-2xl rounded-3xl p-6 space-y-4 border border-pink-500/30">
-            <div class="flex justify-between items-center border-b border-purple-500/20 pb-3">
-                <h3 id="team-select-modal-title" class="font-extrabold text-lg text-white">選擇出戰怪獸陣容</h3>
-                <button type="button" onclick="closeTeamSelectModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+    <div id="team-select-modal" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4 hidden">
+        <div class="ui-modal ui-parchment team-select-panel w-full max-w-2xl my-auto space-y-4">
+            <div class="flex justify-between items-center border-b border-amber-900/20 pb-3">
+                <h3 id="team-select-modal-title" class="font-extrabold text-lg">選擇出戰怪獸陣容</h3>
+                <button type="button" onclick="closeTeamSelectModal()" class="ui-icon ui-icon--circle" aria-label="關閉"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
-            <div id="team-selection-slots" class="grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800">
+            <div id="team-selection-slots" class="grid grid-cols-3 gap-3 p-1">
             </div>
 
             <div class="text-xs font-semibold text-slate-300 team-select-hint">點擊下方擁有怪獸加入/替換陣容（怪獸上帶有等級標籤）：</div>
@@ -2486,9 +2857,9 @@
             <div id="team-available-monsters" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2.5 max-h-60 overflow-y-auto p-1">
             </div>
 
-            <div class="pt-3 border-t border-purple-500/20 flex justify-end space-x-3 team-select-actions">
-                <button type="button" id="team-select-cancel" onclick="closeTeamSelectModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl">取消</button>
-                <button type="button" id="team-select-start" onclick="startBattleWithSelectedTeam()" class="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg">進入戰鬥</button>
+            <div class="pt-3 border-t border-amber-900/25 flex justify-end gap-2 team-select-actions">
+                <button type="button" id="team-select-cancel" onclick="closeTeamSelectModal()" class="ui-btn ui-btn--secondary text-xs">取消</button>
+                <button type="button" id="team-select-start" onclick="startBattleWithSelectedTeam()" class="ui-btn ui-btn--primary text-xs">進入戰鬥</button>
             </div>
         </div>
     </div>
@@ -2528,13 +2899,14 @@
                 if (!el) {
                     el = document.createElement('div');
                     el.id = 'cloud-sync-toast';
-                    el.style.cssText = 'position:fixed;bottom:1.25rem;left:50%;transform:translateX(-50%);z-index:9999;max-width:90vw;padding:0.65rem 1rem;border-radius:0.9rem;background:rgba(15,23,42,0.95);border:1px solid rgba(168,85,247,0.45);color:#e2e8f0;font-size:0.75rem;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,0.35);pointer-events:none;opacity:0;transition:opacity .2s ease';
+                    el.className = 'ui-toast';
+                    el.setAttribute('role', 'status');
                     document.body.appendChild(el);
                 }
                 el.textContent = msg;
-                el.style.opacity = '1';
+                el.classList.add('is-on');
                 clearTimeout(el._hideTimer);
-                el._hideTimer = setTimeout(function () { el.style.opacity = '0'; }, 4200);
+                el._hideTimer = setTimeout(function () { el.classList.remove('is-on'); }, 4200);
             } catch (e) {}
         }
 
@@ -3550,7 +3922,7 @@
             AVATAR_PRESETS.forEach(function (preset) {
                 var btn = document.createElement('button');
                 btn.type = 'button';
-                btn.className = 'avatar-preset-btn rounded-2xl border border-purple-500/30 bg-slate-950/70 p-1.5 hover:border-pink-400/70 transition-colors text-left';
+                btn.className = 'avatar-preset-btn rounded-2xl border p-1.5 transition-colors text-left';
                 btn.setAttribute('aria-pressed', preset.id === current ? 'true' : 'false');
                 btn.title = preset.name;
                 if (preset.id === current) btn.classList.add('is-selected');
@@ -4357,13 +4729,13 @@
             if (tab === 'login') {
                 loginForm.classList.remove('hidden');
                 regForm.classList.add('hidden');
-                loginBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md";
-                regBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all text-slate-400 hover:text-white";
+                loginBtn.className = "ui-btn ui-btn--primary flex-1 text-sm";
+                regBtn.className = "ui-btn ui-btn--secondary flex-1 text-sm";
             } else {
                 loginForm.classList.add('hidden');
                 regForm.classList.remove('hidden');
-                regBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all bg-emerald-600 text-white shadow-md";
-                loginBtn.className = "flex-1 py-2 text-sm font-bold rounded-lg transition-all text-slate-400 hover:text-white";
+                regBtn.className = "ui-btn ui-btn--primary flex-1 text-sm";
+                loginBtn.className = "ui-btn ui-btn--secondary flex-1 text-sm";
             }
         }
 
@@ -5010,7 +5382,7 @@
 
             results.forEach(item => {
                 const card = document.createElement('div');
-                card.className = `glass-card p-4 rounded-2xl text-center border relative flex flex-col items-center cursor-pointer ${item.isMythic ? 'border-amber-400 mythic-glow gacha-shanhai-flash' : 'border-purple-500/30'}`;
+                card.className = `glass-card p-4 rounded-2xl text-center border relative flex flex-col items-center cursor-pointer ${item.isMythic ? 'border-amber-400 mythic-glow gacha-shanhai-flash' : 'border-amber-800/40'}`;
                 card.onclick = () => openCardZoomModal(item.id, item.level);
                 card.innerHTML = `
                     <div class="w-20 h-20 my-2">
@@ -5027,8 +5399,8 @@
         let currentFilter = 'all';
 
         function updateMonsterFilterButtons() {
-            const active = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-emerald-600 text-white shadow-md ring-2 ring-emerald-300/80 shadow-emerald-500/40';
-            const idle = 'px-3.5 py-1.5 text-xs font-bold rounded-xl bg-slate-900/80 text-slate-300 hover:bg-slate-800 border border-slate-700/60';
+            const active = 'ui-btn ui-btn--primary text-xs';
+            const idle = 'ui-btn ui-btn--secondary text-xs';
             document.querySelectorAll('.monster-filter-btn').forEach(btn => {
                 const f = btn.getAttribute('data-filter');
                 const on = f === currentFilter;
@@ -5066,7 +5438,7 @@
                 const expPct = monLevel >= 40 ? 100 : Math.min(100, Math.floor((monExp / reqExp) * 100));
 
                 const card = document.createElement('div');
-                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : owned ? 'border-pink-500/40 opacity-100' : 'border-slate-800 opacity-40 grayscale'}`;
+                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : owned ? 'border-amber-700/50 opacity-100' : 'border-slate-800 opacity-40 grayscale'}`;
 
                 const elemBadge = getElementBadgeClass(runtimeData.element);
 
@@ -5111,7 +5483,7 @@
                     </div>
 
                     ${owned ? `
-                        <div class="space-y-2 mt-2 pt-2 border-t border-purple-500/20">
+                        <div class="space-y-2 mt-2 pt-2 border-t border-amber-900/25">
                             <div>
                                 <div class="flex justify-between text-[10px] text-slate-300 mb-1">
                                     <span>EXP: ${monLevel >= 40 ? '已達等級上限' : `${monExp} / ${reqExp}`}</span>
@@ -5122,24 +5494,24 @@
                                 </div>
                             </div>
 
-                            <button onclick="feedExpPack('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="w-full py-2 bg-gradient-to-r ${monLevel >= 40 ? 'from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed' : 'from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center">
-                                <i class="fa-solid fa-box-open mr-1.5"></i>${monLevel >= 40 ? '已達到最高 40LV' : '餵養EXP包 (+100經驗)'}
+                            <button onclick="feedExpPack('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="ui-btn ui-btn--secondary w-full text-xs">
+                                <i class="fa-solid fa-box-open"></i>${monLevel >= 40 ? '已達到最高 40LV' : '餵養EXP包 (+100經驗)'}
                             </button>
-                            <button onclick="feedExpPackMax('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="w-full py-2 bg-gradient-to-r ${monLevel >= 40 ? 'from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed' : 'from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center">
-                                <i class="fa-solid fa-angles-up mr-1.5"></i>${monLevel >= 40 ? '已滿級' : '一鍵升級（用盡可升嘅EXP包）'}
+                            <button onclick="feedExpPackMax('${runtimeData.id}')" ${monLevel >= 40 ? 'disabled' : ''} class="ui-btn ui-btn--secondary-alt w-full text-xs">
+                                <i class="fa-solid fa-angles-up"></i>${monLevel >= 40 ? '已滿級' : '一鍵升級（用盡可升嘅EXP包）'}
                             </button>
                             ${(() => {
                                 const nextEvoLv = getNextEvoMinLevel(runtimeData.id, monLevel);
                                 if (nextEvoLv == null) {
-                                    return `<button disabled class="w-full py-2 bg-gradient-to-r from-slate-700 to-slate-800 text-slate-500 cursor-not-allowed font-bold text-xs rounded-xl shadow-md flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>${runtimeData.isMythic ? '神獸無進化階' : '已達最終進化'}</button>`;
+                                    return `<button disabled class="ui-btn ui-btn--secondary w-full text-xs"><i class="fa-solid fa-dna"></i>${runtimeData.isMythic ? '神獸無進化階' : '已達最終進化'}</button>`;
                                 }
                                 const packsNeed = estimatePacksToReachLevel(monLevel, monExp, nextEvoLv, 100);
                                 const nextName = getMonsterRuntimeData(runtimeData.id, nextEvoLv).name;
                                 const can = (currentUser.expPacks || 0) >= packsNeed;
-                                return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="w-full py-2 bg-gradient-to-r ${can ? 'from-fuchsia-600 to-purple-600 hover:from-fuchsia-500 hover:to-purple-500 text-white' : 'from-slate-700 to-slate-800 text-slate-300'} font-bold text-xs rounded-xl shadow-md active:scale-95 transition-all flex items-center justify-center"><i class="fa-solid fa-dna mr-1.5"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
+                                return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="ui-btn ${can ? 'ui-btn--primary' : 'ui-btn--secondary'} w-full text-xs"><i class="fa-solid fa-dna"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
                             })()}
                         </div>
-                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-purple-500/20">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季頭10名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
+                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-amber-900/25">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季頭10名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
                 `;
                 container.appendChild(card);
             });
@@ -5385,9 +5757,9 @@
                 const btn = document.getElementById(`grade-btn-${g}`);
                 if (btn) {
                     if (g === grade) {
-                        btn.className = "grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-pink-600 to-purple-900 text-white shadow-lg ring-2 ring-pink-400";
+                        btn.className = "grade-tab-btn ui-btn ui-btn--primary flex-shrink-0 text-sm";
                     } else {
-                        btn.className = "grade-tab-btn flex-shrink-0 px-5 py-2.5 rounded-xl font-bold text-sm bg-purple-950/80 text-slate-300 hover:bg-purple-900 border border-purple-500/30";
+                        btn.className = "grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm";
                     }
                 }
             });
@@ -5404,16 +5776,16 @@
 
             units.forEach((u, idx) => {
                 const card = document.createElement('div');
-                card.className = "glass-card p-5 rounded-3xl flex flex-col justify-between border border-purple-500/30 hover:border-pink-500/50";
+                card.className = "glass-card p-5 rounded-3xl flex flex-col justify-between border border-amber-800/40";
                 card.innerHTML = `
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <span class="text-xs bg-pink-500/30 text-pink-200 font-black px-2.5 py-0.5 rounded-full">單元 ${idx + 1}</span>
+                            <span class="text-xs bg-amber-900/50 text-amber-100 font-black px-2.5 py-0.5 rounded-full">單元 ${idx + 1}</span>
                             <span class="text-[10px] text-emerald-300 font-bold"><i class="fa-solid fa-list-check mr-1"></i>專屬單元試題</span>
                         </div>
                         <h4 class="font-extrabold text-base text-white">${u.name}</h4>
                     </div>
-                    <button onclick="openTeamSelect('${u.id}', false)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black text-xs rounded-xl shadow-lg transition-all">
+                    <button onclick="openTeamSelect('${u.id}', false)" class="ui-btn ui-btn--primary w-full mt-4 text-xs">
                         選擇陣容並挑戰 (可選2隻)
                     </button>
                 `;
@@ -5826,8 +6198,8 @@
                     : 'ranked-team-slots ranked-team-slots--3';
             } else {
                 slotsContainer.className = maxAllowedTeamSize === 2
-                    ? 'grid grid-cols-2 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800'
-                    : 'grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800';
+                    ? 'grid grid-cols-2 gap-3 p-1'
+                    : 'grid grid-cols-3 gap-3 p-1';
             }
 
             for (let i = 0; i < maxAllowedTeamSize; i++) {
@@ -5835,7 +6207,7 @@
                 const slot = document.createElement('div');
                 slot.className = isRankedMode
                     ? 'ranked-team-slot'
-                    : 'bg-slate-950 p-2 rounded-xl text-center border border-slate-700 flex flex-col items-center justify-between min-h-[90px]';
+                    : 'ui-slot p-2 flex flex-col items-center justify-between min-h-[90px]';
 
                 if (monId) {
                     const om = currentUser.ownedMonsters.find(m => m.id === monId);
@@ -5884,7 +6256,7 @@
                 if (isRankedMode) {
                     item.className = 'ranked-team-mon' + (isSelected ? ' is-selected' : '');
                 } else {
-                    item.className = `p-2 rounded-xl text-center border cursor-pointer transition-all relative ${isSelected ? 'border-amber-400 bg-amber-500/20' : 'border-slate-800 bg-slate-900/90 hover:border-slate-600'}`;
+                    item.className = 'ui-slot ui-slot--pick' + (isSelected ? ' is-selected' : '');
                 }
                 item.onclick = () => toggleSelectMonsterForTeam(om.id);
                 if (isRankedMode) {
