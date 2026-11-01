@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
 
     <style>
         html, body {
@@ -978,6 +978,695 @@
             }
         }
 
+        /* Ranked / dual-BOSS: wood + parchment + gold frames. Copy stays HTML. */
+        body.ranked-open {
+            background:
+                radial-gradient(1100px 480px at 50% -8%, rgba(214, 168, 92, 0.2), transparent 58%),
+                linear-gradient(180deg, #4a301c 0%, #2a1a10 46%, #140e0a 100%);
+        }
+        body.ranked-open > header.glass-panel {
+            background: rgba(54, 34, 18, 0.92);
+            border-bottom-color: rgba(212, 168, 74, 0.38);
+        }
+        body.ranked-open > footer {
+            background: rgba(28, 16, 8, 0.55);
+            border-top-color: rgba(212, 168, 74, 0.28);
+            color: #e7d3b0;
+        }
+        .ranked-view {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .ranked-header h2,
+        .ranked-card h4,
+        .ranked-section-title,
+        #season-epoch-label,
+        .ranked-board__head h3,
+        #team-select-modal.team-select--ranked #team-select-modal-title {
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+        }
+        .ranked-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            border: 0;
+            border-radius: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            cursor: pointer;
+            font-weight: 900;
+            letter-spacing: 0.01em;
+            line-height: 1.2;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            transition: filter 0.15s ease, transform 0.15s ease;
+        }
+        .ranked-btn:hover { filter: brightness(1.08); }
+        .ranked-btn:active { transform: translateY(1px); }
+        .ranked-btn:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 3px;
+        }
+        .ranked-btn--secondary {
+            background-image: url('assets/bg/ui-ranked-btn-secondary.png');
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
+            min-height: 46px;
+            min-width: 168px;
+            padding: 0.4rem 1.45rem;
+            font-size: 13px;
+        }
+        .ranked-btn--secondary-alt {
+            background-image: url('assets/bg/ui-ranked-btn-secondary-alt.png');
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
+            min-height: 46px;
+            min-width: 132px;
+            padding: 0.35rem 1.3rem;
+            font-size: 13px;
+        }
+        .ranked-btn--primary {
+            background-image: url('assets/bg/ui-ranked-btn-primary.png');
+            color: #fff8ec;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+            min-height: 50px;
+            min-width: 156px;
+            padding: 0.4rem 1.5rem;
+            font-size: 14px;
+        }
+        .ranked-btn--lg {
+            width: 100%;
+            aspect-ratio: 238 / 84;
+            margin-top: auto;
+            flex-direction: column;
+            gap: 0.05rem;
+            background-image: url('assets/bg/ui-ranked-btn-primary-lg.png');
+            color: #fff8ec;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.88);
+            font-size: 13px;
+            line-height: 1.15;
+            padding: 0 9%;
+        }
+        .ranked-btn__sub {
+            font-size: 11px;
+            font-weight: 800;
+        }
+        .ranked-header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.6rem;
+            width: 100%;
+            aspect-ratio: 912 / 60;
+            padding: 0 33.5% 0 5.4%;
+            background: url('assets/bg/ui-ranked-header-bar.png') center / 100% 100% no-repeat;
+            color: #f8ecd4;
+            container-type: inline-size;
+        }
+        .ranked-header__title {
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+        .ranked-header h2 {
+            margin: 0;
+            min-width: 0;
+            font-size: clamp(13px, 2.15cqi, 24px);
+            font-weight: 900;
+            color: #fff6e4;
+            text-shadow: 0 1px 0 #3a2412, 0 2px 6px rgba(0, 0, 0, 0.45);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ranked-chip {
+            flex: 0 0 auto;
+            font-size: clamp(9px, 1.15cqi, 12px);
+            font-weight: 900;
+            color: #4a3014;
+            background: rgba(246, 224, 176, 0.94);
+            border: 1px solid #c9923e;
+            border-radius: 999px;
+            padding: 0.1rem 0.5rem;
+            white-space: nowrap;
+            text-shadow: none;
+        }
+        .ranked-header__score {
+            display: flex;
+            align-items: baseline;
+            gap: 0.35rem;
+            min-width: 0;
+            color: #ffe7b0;
+            text-shadow: 0 1px 0 #3a2412;
+            white-space: nowrap;
+        }
+        .ranked-header__score-label {
+            font-size: clamp(11px, 1.2cqi, 14px);
+            font-weight: 800;
+        }
+        .ranked-header__rank {
+            font-size: clamp(12px, 1.35cqi, 16px);
+            font-weight: 800;
+            color: #fff6d2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 12rem;
+        }
+        #ranked-current-score {
+            font-size: clamp(16px, 2.7cqi, 30px);
+            font-weight: 900;
+            color: #ffe08a;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+        .ranked-lead {
+            margin: 0;
+            color: #f3e4cc;
+            font-size: 13px;
+            line-height: 1.55;
+        }
+        .ranked-lead b { color: #ffe1a3; }
+        .ranked-season {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.35rem 1.25rem;
+            width: 100%;
+            min-height: clamp(104px, 15vw, 156px);
+            padding: clamp(20px, 2.8vw, 30px) clamp(26px, 3.6vw, 46px);
+            background: url('assets/bg/ui-ranked-season-banner.png') center / 100% 100% no-repeat;
+            color: #4a3018;
+        }
+        .ranked-season__main { min-width: 0; }
+        .ranked-season__kicker {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: #8a5a28;
+        }
+        #season-epoch-label {
+            font-size: clamp(18px, 2.1vw, 26px);
+            font-weight: 900;
+            color: #3a2412;
+            line-height: 1.15;
+        }
+        #season-countdown {
+            margin-top: 0.15rem;
+            font-size: 12px;
+            font-weight: 800;
+            color: #7a4a1c;
+        }
+        #season-reward-rules {
+            flex: 1 1 16rem;
+            margin: 0;
+            max-width: 46rem;
+            font-size: 11px;
+            line-height: 1.45;
+            color: #5c3e24;
+            text-align: right;
+        }
+        .ranked-section-title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem;
+            margin: 0 0 0.75rem;
+            color: #f6e7c8;
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: 900;
+        }
+        .ranked-section-title i { color: #e2b15a; }
+        .ranked-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1.25rem;
+            align-items: start;
+        }
+        .ranked-cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 280px));
+            justify-content: start;
+            gap: 0.9rem 1rem;
+        }
+        .ranked-card {
+            position: relative;
+            width: 100%;
+            max-width: 280px;
+            container-type: inline-size;
+        }
+        .ranked-card--water { aspect-ratio: 233 / 352; }
+        .ranked-card--fire { aspect-ratio: 224 / 350; }
+        .ranked-card--grass { aspect-ratio: 216 / 347; }
+        .ranked-card--thunder { aspect-ratio: 224 / 356; }
+        .ranked-card__fill,
+        .ranked-card__body {
+            position: absolute;
+            left: 13%;
+            right: 13%;
+            top: 17.5%;
+            bottom: 8.5%;
+        }
+        .ranked-card--thunder .ranked-card__fill,
+        .ranked-card--thunder .ranked-card__body { top: 21%; }
+        .ranked-card__fill {
+            z-index: 0;
+            border-radius: 10px;
+            background:
+                radial-gradient(120% 70% at 50% 0%, rgba(255, 248, 230, 0.75), transparent 52%),
+                linear-gradient(180deg, #f8e8cb 0%, #e7d0a6 100%);
+        }
+        .ranked-card__body {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.28rem;
+            min-height: 0;
+            color: #3d2914;
+        }
+        .ranked-card__frame {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+        }
+        .ranked-card--water .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-water.png'); }
+        .ranked-card--fire .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-fire.png'); }
+        .ranked-card--grass .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-grass.png'); }
+        .ranked-card--thunder .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-thunder.png'); }
+        .ranked-card__meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.15rem 0.35rem;
+        }
+        .ranked-card__lv {
+            font-size: 10px;
+            font-weight: 900;
+            padding: 0.1rem 0.4rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.5);
+            white-space: nowrap;
+        }
+        .ranked-card--water .ranked-card__lv { color: #0e6288; }
+        .ranked-card--fire .ranked-card__lv { color: #9a3412; }
+        .ranked-card--grass .ranked-card__lv { color: #3f6b24; }
+        .ranked-card--thunder .ranked-card__lv { color: #8a5a10; }
+        .ranked-card__pts {
+            margin-left: auto;
+            font-size: 10px;
+            font-weight: 800;
+            color: #8a5a12;
+            white-space: nowrap;
+        }
+        .ranked-card h4 {
+            margin: 0;
+            font-size: clamp(14px, 5.4cqi, 18px);
+            font-weight: 900;
+            line-height: 1.25;
+            color: #2e1d10;
+        }
+        .ranked-card p {
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.35;
+            color: #5c4330;
+        }
+        .ranked-board {
+            position: relative;
+            width: min(100%, 320px);
+            margin-inline: auto;
+            aspect-ratio: 289 / 383;
+            background: url('assets/bg/ui-ranked-leaderboard-panel.png') center / 100% 100% no-repeat;
+            container-type: inline-size;
+        }
+        .ranked-board__head {
+            position: absolute;
+            left: 9%;
+            right: 9%;
+            top: 1.2%;
+            height: 7.4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.3rem;
+            color: #3e2a16;
+        }
+        .ranked-board__head h3 {
+            margin: 0;
+            min-width: 0;
+            font-size: clamp(13px, 4.6cqi, 16px);
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 0.28rem;
+            white-space: nowrap;
+        }
+        .ranked-board__head h3 i { color: #a87420; }
+        #leaderboard-grade-display {
+            flex: 0 0 auto;
+            font-size: 11px;
+            font-weight: 800;
+            color: #6b4320;
+            background: rgba(255, 244, 220, 0.55);
+            border: 1px solid rgba(122, 78, 32, 0.35);
+            border-radius: 999px;
+            padding: 0.08rem 0.45rem;
+            white-space: nowrap;
+        }
+        .ranked-board__status {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            top: 8.5%;
+            height: 5.2%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            font-size: 10px;
+            font-weight: 700;
+            color: #6a4a2c;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .ranked-board__list {
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            top: 15.5%;
+            height: 67.8%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2cqi;
+            scrollbar-width: thin;
+            scrollbar-color: #8a6232 transparent;
+        }
+        .ranked-row {
+            flex: 0 0 17%;
+            min-height: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.3rem;
+            padding: 0 0.28rem;
+            border-radius: 8px;
+            color: #fff8ee;
+        }
+        .ranked-row--1 { background: rgba(196, 142, 48, 0.28); }
+        .ranked-row--2 { background: rgba(232, 220, 196, 0.16); }
+        .ranked-row--3 { background: rgba(166, 102, 48, 0.22); }
+        .ranked-row__left {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            min-width: 0;
+        }
+        .ranked-row__rank {
+            width: 1.1rem;
+            flex: 0 0 auto;
+            text-align: center;
+            font-weight: 900;
+            font-size: 12px;
+            color: #ffe7b8;
+        }
+        .ranked-row--1 .ranked-row__rank { font-size: 14px; color: #ffe08a; }
+        .ranked-row__avatar {
+            width: 1.45rem;
+            height: 1.45rem;
+            flex: 0 0 auto;
+            border-radius: 999px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 224, 160, 0.75);
+            background: rgba(90, 54, 24, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ranked-row__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .ranked-row__avatar i { color: #f6e2c0; font-size: 11px; }
+        .ranked-row__meta { min-width: 0; }
+        .ranked-row__name {
+            font-weight: 800;
+            font-size: 12px;
+            color: #fffaf2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ranked-row__sub {
+            font-size: 10px;
+            color: #f3e4cc;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ranked-row__right {
+            text-align: right;
+            flex: 0 0 auto;
+        }
+        .ranked-row__score {
+            font-weight: 900;
+            font-size: 12px;
+            color: #ffe7a8;
+        }
+        .ranked-row__title,
+        .ranked-row__prize {
+            font-size: 9px;
+            color: #f6e2c4;
+        }
+        .ranked-board-empty {
+            margin: auto;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: #f6ead8;
+            padding: 0.75rem;
+        }
+        @media (min-width: 1024px) {
+            .ranked-layout {
+                grid-template-columns: minmax(0, 1fr) 320px;
+            }
+            .ranked-header__score-label { font-size: 13px; }
+            .ranked-header__rank { font-size: 15px; }
+            #ranked-current-score { font-size: 28px; }
+        }
+        @media (max-width: 900px) {
+            #season-reward-rules {
+                text-align: left;
+                flex-basis: 100%;
+            }
+        }
+        @media (max-width: 720px) {
+            .ranked-header {
+                aspect-ratio: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                background: none;
+                gap: 0.45rem;
+                container-type: normal;
+            }
+            .ranked-header::before {
+                content: "";
+                display: block;
+                width: 100%;
+                aspect-ratio: 912 / 60;
+                background: url('assets/bg/ui-ranked-header-bar.png') center / 100% 100% no-repeat;
+            }
+            .ranked-header__title,
+            .ranked-header__score {
+                background: linear-gradient(180deg, rgba(248, 232, 204, 0.96), rgba(228, 200, 154, 0.96));
+                color: #3d2914;
+                border-radius: 12px;
+                padding: 0.5rem 0.75rem;
+                text-shadow: none;
+            }
+            .ranked-header h2,
+            .ranked-header__score,
+            .ranked-header__score-label,
+            .ranked-header__rank,
+            #ranked-current-score {
+                color: #3d2914;
+                text-shadow: none;
+            }
+            .ranked-header h2 {
+                white-space: normal;
+                font-size: 1.05rem;
+            }
+            #ranked-current-score { font-size: 1.65rem; color: #8a4b12; }
+            .ranked-header__score { justify-content: space-between; }
+            .ranked-header__rank { max-width: none; }
+            .ranked-cards { grid-template-columns: minmax(0, 320px); justify-content: center; }
+            .ranked-card { max-width: 320px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .ranked-btn { transition: none; }
+        }
+
+        /* Dual-BOSS team picker only. Adventure keeps the shared purple panel. */
+        #team-select-modal.team-select--ranked {
+            background: rgba(28, 16, 8, 0.78);
+        }
+        #team-select-modal.team-select--ranked > .glass-panel {
+            background: linear-gradient(180deg, #f8edd8 0%, #ecd9b4 100%);
+            border: 0;
+            border-radius: 18px;
+            box-shadow:
+                0 0 0 3px #8d5a28,
+                0 0 0 6px #e6c27a,
+                0 18px 40px rgba(20, 10, 4, 0.55);
+            color: #3d2914;
+        }
+        #team-select-modal.team-select--ranked #team-select-modal-title {
+            color: #3a2412;
+        }
+        #team-select-modal.team-select--ranked .team-select-panel > .flex {
+            border-bottom-color: rgba(141, 90, 40, 0.35);
+        }
+        #team-select-modal.team-select--ranked .team-select-panel > .flex > button {
+            color: #6b4320;
+        }
+        #team-select-modal.team-select--ranked .team-select-hint {
+            color: #5c4128;
+        }
+        #team-select-modal.team-select--ranked .team-select-actions {
+            border-top-color: rgba(141, 90, 40, 0.35);
+        }
+        #team-select-modal.team-select--ranked #team-select-cancel {
+            background-color: transparent;
+            background-image: url('assets/bg/ui-ranked-btn-secondary-alt.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            border: 0;
+            border-radius: 0;
+            color: #f8ecd4;
+            text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
+            min-height: 46px;
+            min-width: 120px;
+        }
+        #team-select-modal.team-select--ranked #team-select-start {
+            background-color: transparent;
+            background-image: url('assets/bg/ui-ranked-btn-primary.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            border: 0;
+            border-radius: 0;
+            color: #fff8ec;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+            min-height: 50px;
+            min-width: 148px;
+            box-shadow: none;
+        }
+        .ranked-team-slots {
+            display: grid;
+            gap: 0.7rem;
+            padding: 0.7rem;
+            border-radius: 14px;
+            background: rgba(120, 78, 40, 0.12);
+            border: 1px solid rgba(141, 90, 40, 0.28);
+        }
+        .ranked-team-slots--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .ranked-team-slots--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .ranked-team-slot {
+            background: rgba(255, 248, 232, 0.72);
+            border: 1px solid rgba(141, 90, 40, 0.35);
+            border-radius: 12px;
+            padding: 0.45rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90px;
+            color: #3d2914;
+        }
+        .ranked-team-slot__lv,
+        .ranked-team-slot__empty {
+            font-size: 9px;
+            font-weight: 800;
+            color: #8a5a28;
+        }
+        .ranked-team-slot__name {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 10px;
+            font-weight: 900;
+            color: #2e1d10;
+        }
+        .ranked-team-slot__remove {
+            margin-top: 0.15rem;
+            border: 0;
+            background: transparent;
+            color: #9a3412;
+            font-size: 9px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .ranked-team-slot__plus {
+            width: 3rem;
+            height: 3rem;
+            margin: 0.25rem 0;
+            border: 1px dashed rgba(141, 90, 40, 0.45);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a07848;
+            font-size: 12px;
+        }
+        #team-available-monsters .ranked-team-mon {
+            position: relative;
+            padding: 0.45rem;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid rgba(120, 78, 40, 0.28);
+            background: rgba(255, 248, 232, 0.8);
+        }
+        #team-available-monsters .ranked-team-mon.is-selected {
+            border-color: #c9923e;
+            background: rgba(232, 184, 84, 0.35);
+        }
+        #team-available-monsters .ranked-team-mon__lv {
+            position: absolute;
+            top: 0.2rem;
+            right: 0.2rem;
+            background: #c9923e;
+            color: #3a220c;
+            font-size: 8px;
+            font-weight: 900;
+            padding: 0 0.2rem;
+            border-radius: 4px;
+        }
+        #team-available-monsters .ranked-team-mon__name {
+            margin-top: 0.15rem;
+            font-size: 9px;
+            font-weight: 800;
+            color: #2e1d10;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
     </style>
 </head>
 <body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100 selection:bg-pink-500 selection:text-white">
@@ -1404,126 +2093,106 @@
         </section>
 
         <!-- VIEW: RANKED MODE -->
-        <section id="view-ranked" class="hidden space-y-6">
-            <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="inline-flex items-center px-4 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 text-slate-200 font-bold text-xs border border-purple-500/40 shadow-md">
-                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+        <section id="view-ranked" class="hidden ranked-view">
+            <div>
+                <button type="button" onclick="switchView('home')" class="ranked-btn ranked-btn--secondary">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>返回主選單
                 </button>
             </div>
 
-            <div class="glass-panel p-6 rounded-3xl border-2 border-purple-500/40 flex flex-col md:flex-row items-center justify-between gap-6">
+            <header class="ranked-header">
+                <div class="ranked-header__title">
+                    <h2>全服年級排位爭霸賽</h2>
+                    <span id="ranked-user-grade-badge" class="ranked-chip">小六專屬 (鎖定)</span>
+                </div>
+                <div class="ranked-header__score">
+                    <span class="ranked-header__score-label">目前個人積分</span>
+                    <span id="ranked-current-score">0</span>
+                    <span id="ranked-current-rank" class="ranked-header__rank">段位: 數理新秀</span>
+                </div>
+            </header>
+            <p class="ranked-lead">
+                排位賽分 4 關：<b>10LV(水系)</b>、<b>20LV(火系)</b>、<b>30LV(草系)</b>、<b>40LV(雷系)</b>！每關皆由 2 隻對應屬性巨型 BOSS 駐守！
+            </p>
+
+            <div id="season-banner" class="ranked-season">
+                <div class="ranked-season__main">
+                    <div class="ranked-season__kicker">排位賽季（香港時間）</div>
+                    <div id="season-epoch-label">第 1 賽季</div>
+                    <div id="season-countdown">距離結算 …</div>
+                </div>
+                <p id="season-reward-rules"></p>
+            </div>
+
+            <div class="ranked-layout">
                 <div>
-                    <div class="flex flex-col sm:flex-row sm:items-center flex-wrap gap-2 mb-1 min-w-0">
-                        <h2 class="text-xl sm:text-2xl md:text-3xl font-black break-words bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-200 to-amber-300">
-                            🏆 全服年級排位爭霸賽 (4大屬性雙 BOSS 連戰)
-                        </h2>
-                        <span id="ranked-user-grade-badge" class="shrink-0 self-start sm:self-auto px-3 py-1 bg-pink-500/30 border border-pink-400/40 text-pink-200 text-xs font-black rounded-full">
-                            小六專屬 (鎖定)
-                        </span>
-                    </div>
-                    <p class="text-xs md:text-sm text-slate-200 mt-1">
-                        排位賽分 4 關：<b>10LV(水系)</b>、<b>20LV(火系)</b>、<b>30LV(草系)</b>、<b>40LV(雷系)</b>！每關皆由 2 隻對應屬性巨型 BOSS 駐守！
-                    </p>
-                </div>
-                <div class="bg-purple-900/60 p-4 rounded-2xl border border-purple-400/30 text-center min-w-[200px]">
-                    <div class="text-xs text-purple-200 font-bold">目前個人積分</div>
-                    <div id="ranked-current-score" class="text-3xl font-black text-amber-300 my-1">0</div>
-                    <div id="ranked-current-rank" class="text-xs text-pink-300 font-bold">段位: 數理新秀</div>
-                </div>
-            </div>
-
-            <div id="season-banner" class="glass-panel p-4 sm:p-5 rounded-3xl border border-amber-400/40 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-                <div class="min-w-0">
-                    <div class="text-[10px] font-black tracking-wide text-amber-200/80">排位賽季（香港時間）</div>
-                    <div id="season-epoch-label" class="text-xl font-black text-white mt-0.5">第 1 賽季</div>
-                    <div id="season-countdown" class="text-xs text-amber-100 mt-1 font-bold">距離結算 …</div>
-                </div>
-                <p id="season-reward-rules" class="text-[11px] sm:text-xs text-slate-200 leading-relaxed lg:max-w-xl lg:text-right"></p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2 space-y-4">
-                    <h3 class="font-extrabold text-base sm:text-lg text-purple-200 flex flex-wrap items-center gap-x-2 gap-y-1 break-words">
-                        <i class="fa-solid fa-skull-crossbones shrink-0 text-pink-400"></i><span>選擇排位賽關卡 (固定對應屬性雙 BOSS)</span>
+                    <h3 class="ranked-section-title">
+                        <i class="fa-solid fa-skull-crossbones" aria-hidden="true"></i><span>選擇排位賽關卡 (固定對應屬性雙 BOSS)</span>
                     </h3>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- 10LV 水系 -->
-                        <div class="glass-card p-5 rounded-3xl border border-blue-500/40 flex flex-col justify-between bg-blue-950/20">
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-xs font-black bg-blue-500/30 text-blue-300 px-3 py-1 rounded-full">Boss Lv.10 (水系)</span>
-                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+100 積分</span>
+                    <div class="ranked-cards">
+                        <article class="ranked-card ranked-card--water">
+                            <div class="ranked-card__fill" aria-hidden="true"></div>
+                            <div class="ranked-card__body">
+                                <div class="ranked-card__meta">
+                                    <span class="ranked-card__lv">Boss Lv.10 (水系)</span>
+                                    <span class="ranked-card__pts"><i class="fa-solid fa-trophy" aria-hidden="true"></i> +100 積分</span>
                                 </div>
-                                <h4 class="font-black text-lg text-white">10LV 水系雙BOSS關卡</h4>
-                                <p class="text-xs text-slate-300 mt-1">守護者：深淵冥甲巨龜 & 霜獄滅世冰龍！</p>
+                                <h4>10LV 水系雙BOSS關卡</h4>
+                                <p>守護者：<br>深淵冥甲巨龜 & 霜獄滅世冰龍</p>
+                                <button type="button" onclick="startRankedBattle(10, 100)" class="ranked-btn ranked-btn--lg"><span>開始水系雙BOSS挑戰</span><span class="ranked-btn__sub">(3隻怪獸)</span></button>
                             </div>
-                            <button onclick="startRankedBattle(10, 100)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-xs rounded-xl shadow-lg">
-                                開始水系雙BOSS挑戰 (3隻怪獸)
-                            </button>
-                        </div>
-
-                        <!-- 20LV 火系 -->
-                        <div class="glass-card p-5 rounded-3xl border border-rose-500/40 flex flex-col justify-between bg-rose-950/20">
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-xs font-black bg-rose-500/30 text-rose-300 px-3 py-1 rounded-full">Boss Lv.20 (火系)</span>
-                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+300 積分</span>
+                            <div class="ranked-card__frame" aria-hidden="true"></div>
+                        </article>
+                        <article class="ranked-card ranked-card--fire">
+                            <div class="ranked-card__fill" aria-hidden="true"></div>
+                            <div class="ranked-card__body">
+                                <div class="ranked-card__meta">
+                                    <span class="ranked-card__lv">Boss Lv.20 (火系)</span>
+                                    <span class="ranked-card__pts"><i class="fa-solid fa-trophy" aria-hidden="true"></i> +300 積分</span>
                                 </div>
-                                <h4 class="font-black text-lg text-white">20LV 火系雙BOSS關卡</h4>
-                                <p class="text-xs text-slate-300 mt-1">守護者：熔岩毀滅炎豬 & 焚天烈獄凰鳥！</p>
+                                <h4>20LV 火系雙BOSS關卡</h4>
+                                <p>守護者：<br>熔岩毀滅炎豬 & 焚天烈獄凰鳥</p>
+                                <button type="button" onclick="startRankedBattle(20, 300)" class="ranked-btn ranked-btn--lg"><span>開始火系雙BOSS挑戰</span><span class="ranked-btn__sub">(3隻怪獸)</span></button>
                             </div>
-                            <button onclick="startRankedBattle(20, 300)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black text-xs rounded-xl shadow-lg">
-                                開始火系雙BOSS挑戰 (3隻怪獸)
-                            </button>
-                        </div>
-
-                        <!-- 30LV 草系 -->
-                        <div class="glass-card p-5 rounded-3xl border border-emerald-500/40 flex flex-col justify-between bg-emerald-950/20">
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-xs font-black bg-emerald-500/30 text-emerald-300 px-3 py-1 rounded-full">Boss Lv.30 (草系)</span>
-                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+600 積分</span>
+                            <div class="ranked-card__frame" aria-hidden="true"></div>
+                        </article>
+                        <article class="ranked-card ranked-card--grass">
+                            <div class="ranked-card__fill" aria-hidden="true"></div>
+                            <div class="ranked-card__body">
+                                <div class="ranked-card__meta">
+                                    <span class="ranked-card__lv">Boss Lv.30 (草系)</span>
+                                    <span class="ranked-card__pts"><i class="fa-solid fa-trophy" aria-hidden="true"></i> +600 積分</span>
                                 </div>
-                                <h4 class="font-black text-lg text-white">30LV 草系雙BOSS關卡</h4>
-                                <p class="text-xs text-slate-300 mt-1">守護者：腐殖食人樹牛 & 劇毒蝕骨萬足蟲！</p>
+                                <h4>30LV 草系雙BOSS關卡</h4>
+                                <p>守護者：<br>腐殖食人樹牛 & 劇毒蝕骨萬足蟲</p>
+                                <button type="button" onclick="startRankedBattle(30, 600)" class="ranked-btn ranked-btn--lg"><span>開始草系雙BOSS挑戰</span><span class="ranked-btn__sub">(3隻怪獸)</span></button>
                             </div>
-                            <button onclick="startRankedBattle(30, 600)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs rounded-xl shadow-lg">
-                                開始草系雙BOSS挑戰 (3隻怪獸)
-                            </button>
-                        </div>
-
-                        <!-- 40LV 雷系 -->
-                        <div class="glass-card p-5 rounded-3xl border border-amber-500/40 bg-amber-950/20 mythic-glow flex flex-col justify-between">
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-xs font-black bg-amber-500/30 text-amber-300 px-3 py-1 rounded-full">Boss Lv.40 (雷系 MAX)</span>
-                                    <span class="text-xs font-bold text-amber-300"><i class="fa-solid fa-trophy mr-1"></i>+1200 積分</span>
+                            <div class="ranked-card__frame" aria-hidden="true"></div>
+                        </article>
+                        <article class="ranked-card ranked-card--thunder">
+                            <div class="ranked-card__fill" aria-hidden="true"></div>
+                            <div class="ranked-card__body">
+                                <div class="ranked-card__meta">
+                                    <span class="ranked-card__lv">Boss Lv.40 (雷系 MAX)</span>
+                                    <span class="ranked-card__pts"><i class="fa-solid fa-trophy" aria-hidden="true"></i> +1200 積分</span>
                                 </div>
-                                <h4 class="font-black text-lg text-white">40LV 雷系極限雙BOSS決戰</h4>
-                                <p class="text-xs text-slate-300 mt-1">守護者：九頭狂雷蛇皇 & 滅世雷霆天龍！</p>
+                                <h4>40LV 雷系極限雙BOSS決戰</h4>
+                                <p>守護者：<br>九頭狂雷蛇皇 & 滅世雷霆天龍</p>
+                                <button type="button" onclick="startRankedBattle(40, 1200)" class="ranked-btn ranked-btn--lg"><span>挑戰雷系極限雙BOSS</span><span class="ranked-btn__sub">(3隻怪獸)</span></button>
                             </div>
-                            <button onclick="startRankedBattle(40, 1200)" class="mt-4 w-full py-2.5 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black text-xs rounded-xl shadow-lg">
-                                挑戰雷系極限雙BOSS (3隻怪獸)
-                            </button>
-                        </div>
+                            <div class="ranked-card__frame" aria-hidden="true"></div>
+                        </article>
                     </div>
                 </div>
 
-                <div class="glass-panel p-5 rounded-3xl border border-purple-500/30 space-y-4">
-                    <div class="flex items-center justify-between">
-                        <h3 class="font-black text-base text-amber-300 flex items-center">
-                            <i class="fa-solid fa-crown mr-1.5 text-amber-400"></i>年級排行榜
-                        </h3>
-                        <span id="leaderboard-grade-display" class="bg-slate-900 border border-purple-500/40 text-xs text-amber-300 font-bold px-3 py-1 rounded-xl">
-                            小六榜單
-                        </span>
+                <aside class="ranked-board" aria-label="年級排行榜">
+                    <div class="ranked-board__head">
+                        <h3><i class="fa-solid fa-crown" aria-hidden="true"></i>年級排行榜</h3>
+                        <span id="leaderboard-grade-display">小六榜單</span>
                     </div>
-
-                    <div id="ranked-leaderboard-status" class="text-[10px] text-slate-400 min-h-[1rem]"></div>
-                    <div id="ranked-leaderboard-list" class="space-y-2 max-h-[380px] overflow-y-auto">
-                    </div>
-                </div>
+                    <div id="ranked-leaderboard-status" class="ranked-board__status"></div>
+                    <div id="ranked-leaderboard-list" class="ranked-board__list"></div>
+                </aside>
             </div>
         </section>
 
@@ -1803,23 +2472,23 @@
 
     <!-- TEAM SELECTION MODAL -->
     <div id="team-select-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 hidden">
-        <div class="glass-panel w-full max-w-2xl rounded-3xl p-6 space-y-4 border border-pink-500/30">
+        <div class="glass-panel team-select-panel w-full max-w-2xl rounded-3xl p-6 space-y-4 border border-pink-500/30">
             <div class="flex justify-between items-center border-b border-purple-500/20 pb-3">
                 <h3 id="team-select-modal-title" class="font-extrabold text-lg text-white">選擇出戰怪獸陣容</h3>
-                <button onclick="closeTeamSelectModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+                <button type="button" onclick="closeTeamSelectModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
             </div>
             
             <div id="team-selection-slots" class="grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800">
             </div>
 
-            <div class="text-xs font-semibold text-slate-300">點擊下方擁有怪獸加入/替換陣容（怪獸上帶有等級標籤）：</div>
+            <div class="text-xs font-semibold text-slate-300 team-select-hint">點擊下方擁有怪獸加入/替換陣容（怪獸上帶有等級標籤）：</div>
             
             <div id="team-available-monsters" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2.5 max-h-60 overflow-y-auto p-1">
             </div>
 
-            <div class="pt-3 border-t border-purple-500/20 flex justify-end space-x-3">
-                <button onclick="closeTeamSelectModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl">取消</button>
-                <button onclick="startBattleWithSelectedTeam()" class="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg">進入戰鬥</button>
+            <div class="pt-3 border-t border-purple-500/20 flex justify-end space-x-3 team-select-actions">
+                <button type="button" id="team-select-cancel" onclick="closeTeamSelectModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl">取消</button>
+                <button type="button" id="team-select-start" onclick="startBattleWithSelectedTeam()" class="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold text-xs rounded-xl shadow-lg">進入戰鬥</button>
             </div>
         </div>
     </div>
@@ -4243,6 +4912,7 @@
             const target = document.getElementById(`view-${viewName}`);
             if (target) target.classList.remove('hidden');
             document.body.classList.toggle('lobby-open', viewName === 'home');
+            document.body.classList.toggle('ranked-open', viewName === 'ranked');
 
             // 進出戰鬥切換 BGM／背景短片（互不干擾）
             if (viewName === 'battle') {
@@ -4773,23 +5443,22 @@
         /** 榜列頭像：同大廳（自訂圖 > 預設獸 > 太空人圖示）。32px 圓形，唔改排名。 */
         function fillLeaderboardAvatar(host, user) {
             host.textContent = '';
-            host.className = 'w-8 h-8 shrink-0 rounded-full overflow-hidden border border-pink-400/40 bg-pink-500/15 flex items-center justify-center';
+            host.className = 'ranked-row__avatar';
             host.setAttribute('aria-hidden', 'true');
             var src = headerAvatarSrc(user);
             if (!src) {
                 var icon = document.createElement('i');
-                icon.className = 'fa-solid fa-user-astronaut text-pink-300 text-[13px]';
+                icon.className = 'fa-solid fa-user-astronaut';
                 host.appendChild(icon);
                 return;
             }
             var img = document.createElement('img');
             img.alt = '';
-            img.className = 'w-full h-full object-cover';
             img.addEventListener('error', function () {
                 img.remove();
                 if (host.querySelector('i')) return;
                 var fallback = document.createElement('i');
-                fallback.className = 'fa-solid fa-user-astronaut text-pink-300 text-[13px]';
+                fallback.className = 'fa-solid fa-user-astronaut';
                 host.appendChild(fallback);
             });
             img.src = src;
@@ -4799,31 +5468,31 @@
         function paintLeaderboardEntries(container, users) {
             container.innerHTML = '';
             if (!users || users.length === 0) {
-                container.innerHTML = `<div class="text-center text-xs text-slate-400 py-6">該年級暫無排位紀錄</div>`;
+                container.innerHTML = `<div class="ranked-board-empty">該年級暫無排位紀錄</div>`;
                 return;
             }
             users.forEach((u, idx) => {
                 const item = document.createElement('div');
-                item.className = `p-3 rounded-2xl border flex items-center justify-between gap-3 ${idx === 0 ? 'bg-amber-500/20 border-amber-400/50' : idx === 1 ? 'bg-slate-300/20 border-slate-300/50' : idx === 2 ? 'bg-amber-700/20 border-amber-600/50' : 'bg-slate-900/60 border-slate-800'}`;
+                item.className = 'ranked-row' + (idx < 3 ? ' ranked-row--' + (idx + 1) : '');
                 const score = Math.max(0, Math.floor(Number(u.rankScore) || 0));
 
                 const left = document.createElement('div');
-                left.className = 'flex items-center gap-3 min-w-0';
+                left.className = 'ranked-row__left';
 
                 const rank = document.createElement('span');
-                rank.className = `w-6 shrink-0 font-black text-center text-sm ${idx === 0 ? 'text-amber-300 text-base' : 'text-slate-400'}`;
+                rank.className = 'ranked-row__rank';
                 rank.textContent = String(idx + 1);
 
                 const avatar = document.createElement('div');
                 fillLeaderboardAvatar(avatar, u);
 
                 const meta = document.createElement('div');
-                meta.className = 'min-w-0';
+                meta.className = 'ranked-row__meta';
                 const nick = document.createElement('div');
-                nick.className = 'font-extrabold text-xs text-white truncate';
+                nick.className = 'ranked-row__name';
                 nick.textContent = u.nickname || '冒險者';
                 const sub = document.createElement('div');
-                sub.className = 'text-[10px] text-slate-400 truncate';
+                sub.className = 'ranked-row__sub';
                 sub.textContent = (u.school || '個人學員') + ' (' + (u.className || '—') + ')';
                 meta.appendChild(nick);
                 meta.appendChild(sub);
@@ -4833,18 +5502,18 @@
                 left.appendChild(meta);
 
                 const right = document.createElement('div');
-                right.className = 'text-right shrink-0';
+                right.className = 'ranked-row__right';
                 const scoreEl = document.createElement('div');
-                scoreEl.className = 'font-black text-xs text-amber-300';
+                scoreEl.className = 'ranked-row__score';
                 scoreEl.textContent = score + ' 分';
                 const titleEl = document.createElement('div');
-                titleEl.className = 'text-[9px] text-purple-200';
+                titleEl.className = 'ranked-row__title';
                 titleEl.textContent = getRankTitle(score);
                 right.appendChild(scoreEl);
                 right.appendChild(titleEl);
                 if (score > 0 && idx < 10) {
                     const prize = document.createElement('div');
-                    prize.className = 'text-[9px] text-amber-200/90';
+                    prize.className = 'ranked-row__prize';
                     prize.textContent = '季結有獎';
                     right.appendChild(prize);
                 }
@@ -4874,7 +5543,7 @@
             const reqId = ++leaderboardRequestId;
 
             if (statusEl) statusEl.innerText = '正在載入全服榜…';
-            container.innerHTML = `<div class="text-center text-xs text-slate-400 py-6"><i class="fa-solid fa-spinner fa-spin mr-1"></i>載入排行榜…</div>`;
+            container.innerHTML = `<div class="ranked-board-empty"><i class="fa-solid fa-spinner fa-spin mr-1"></i>載入排行榜…</div>`;
 
             // 有雲端就拉全服；失敗先用本機並提示
             if (SHEET_REPORT_URL) {
@@ -5139,7 +5808,9 @@
             }
 
             renderTeamSelectModal();
-            document.getElementById('team-select-modal').classList.remove('hidden');
+            const teamModal = document.getElementById('team-select-modal');
+            teamModal.classList.toggle('team-select--ranked', !!isRanked);
+            teamModal.classList.remove('hidden');
         }
 
         function closeTeamSelectModal() {
@@ -5149,24 +5820,47 @@
         function renderTeamSelectModal() {
             const slotsContainer = document.getElementById('team-selection-slots');
             slotsContainer.innerHTML = '';
-            slotsContainer.className = maxAllowedTeamSize === 2 
-                ? 'grid grid-cols-2 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800'
-                : 'grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800';
+            if (isRankedMode) {
+                slotsContainer.className = maxAllowedTeamSize === 2
+                    ? 'ranked-team-slots ranked-team-slots--2'
+                    : 'ranked-team-slots ranked-team-slots--3';
+            } else {
+                slotsContainer.className = maxAllowedTeamSize === 2
+                    ? 'grid grid-cols-2 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800'
+                    : 'grid grid-cols-3 gap-3 bg-slate-900/80 p-3 rounded-2xl border border-slate-800';
+            }
 
             for (let i = 0; i < maxAllowedTeamSize; i++) {
                 const monId = selectedBattleTeam[i];
                 const slot = document.createElement('div');
-                slot.className = "bg-slate-950 p-2 rounded-xl text-center border border-slate-700 flex flex-col items-center justify-between min-h-[90px]";
+                slot.className = isRankedMode
+                    ? 'ranked-team-slot'
+                    : 'bg-slate-950 p-2 rounded-xl text-center border border-slate-700 flex flex-col items-center justify-between min-h-[90px]';
 
                 if (monId) {
                     const om = currentUser.ownedMonsters.find(m => m.id === monId);
                     const monLevel = om ? om.level : 1;
                     const runtimeData = getMonsterRuntimeData(monId, monLevel);
+                    if (isRankedMode) {
+                        slot.innerHTML = `
+                            <div class="ranked-team-slot__lv">位置 ${i+1} (Lv.${monLevel})</div>
+                            <div class="w-12 h-12 my-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
+                            <div class="ranked-team-slot__name">${runtimeData.name}</div>
+                            <button type="button" onclick="removeFromTeam(${i})" class="ranked-team-slot__remove">移除</button>
+                        `;
+                    } else {
+                        slot.innerHTML = `
+                            <div class="text-[9px] text-pink-300 font-bold">位置 ${i+1} (Lv.${monLevel})</div>
+                            <div class="w-12 h-12 my-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
+                            <div class="text-[10px] font-black text-white truncate w-full">${runtimeData.name}</div>
+                            <button onclick="removeFromTeam(${i})" class="text-[9px] text-rose-400 hover:text-rose-300 mt-1">移除</button>
+                        `;
+                    }
+                } else if (isRankedMode) {
                     slot.innerHTML = `
-                        <div class="text-[9px] text-pink-300 font-bold">位置 ${i+1} (Lv.${monLevel})</div>
-                        <div class="w-12 h-12 my-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
-                        <div class="text-[10px] font-black text-white truncate w-full">${runtimeData.name}</div>
-                        <button onclick="removeFromTeam(${i})" class="text-[9px] text-rose-400 hover:text-rose-300 mt-1">移除</button>
+                        <div class="ranked-team-slot__empty">位置 ${i+1}</div>
+                        <div class="ranked-team-slot__plus"><i class="fa-solid fa-plus"></i></div>
+                        <div class="ranked-team-slot__empty">未選擇</div>
                     `;
                 } else {
                     slot.innerHTML = `
@@ -5187,13 +5881,25 @@
                 const isSelected = selectedBattleTeam.includes(om.id);
 
                 const item = document.createElement('div');
-                item.className = `p-2 rounded-xl text-center border cursor-pointer transition-all relative ${isSelected ? 'border-amber-400 bg-amber-500/20' : 'border-slate-800 bg-slate-900/90 hover:border-slate-600'}`;
+                if (isRankedMode) {
+                    item.className = 'ranked-team-mon' + (isSelected ? ' is-selected' : '');
+                } else {
+                    item.className = `p-2 rounded-xl text-center border cursor-pointer transition-all relative ${isSelected ? 'border-amber-400 bg-amber-500/20' : 'border-slate-800 bg-slate-900/90 hover:border-slate-600'}`;
+                }
                 item.onclick = () => toggleSelectMonsterForTeam(om.id);
-                item.innerHTML = `
-                    <span class="absolute top-1 right-1 bg-amber-500 text-slate-950 text-[8px] font-black px-1 rounded">Lv.${monLevel}</span>
-                    <div class="w-10 h-10 mx-auto mt-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
-                    <div class="text-[9px] font-bold text-white truncate mt-1">${runtimeData.name}</div>
-                `;
+                if (isRankedMode) {
+                    item.innerHTML = `
+                        <span class="ranked-team-mon__lv">Lv.${monLevel}</span>
+                        <div class="w-10 h-10 mx-auto mt-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
+                        <div class="ranked-team-mon__name">${runtimeData.name}</div>
+                    `;
+                } else {
+                    item.innerHTML = `
+                        <span class="absolute top-1 right-1 bg-amber-500 text-slate-950 text-[8px] font-black px-1 rounded">Lv.${monLevel}</span>
+                        <div class="w-10 h-10 mx-auto mt-1">${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}</div>
+                        <div class="text-[9px] font-bold text-white truncate mt-1">${runtimeData.name}</div>
+                    `;
+                }
                 availContainer.appendChild(item);
             });
         }
