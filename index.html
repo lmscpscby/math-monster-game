@@ -418,9 +418,9 @@
         }
 
         #pokemon-battle-arena.neon-stage {
-            /* Dreamy floating-island stage. Crystal-cave loop stays in the markup (hidden) so it can be restored. */
+            /* Fallback parchment plate. A battle entry replaces this with one pool stage. */
             background-color: #f6e2c4;
-            background-image: url('assets/bg/ui-battle-stage-bg-1920.png?v=1498b8b7');
+            background-image: url('assets/bg/ui-battle-stage-bg-1920.png?v=20261101');
             background-size: cover;
             background-position: center 72%;
             background-repeat: no-repeat;
@@ -3531,11 +3531,8 @@
 
             <!-- Arena clusters stay diagonal: enemy UR (plate|sprite), player LL (sprite|plate). -->
             <div id="pokemon-battle-arena" class="neon-stage poke-stage relative w-full overflow-hidden h-[42vh] md:h-[48vh] max-h-[500px] min-h-[280px]">
-                <!-- Crystal-cave loop kept for restore. display:none also makes playBattleBgVideo return early. -->
-                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline preload="none" poster="assets/bg/ui-battle-stage-bg-1920.png?v=1498b8b7" style="display:none" aria-hidden="true">
-                    <source src="assets/bg/battle_bg_crystal_cave_loop.webm" type="video/webm">
-                    <source src="assets/bg/battle_bg_crystal_cave_loop.mp4" type="video/mp4">
-                </video>
+                <!-- Hidden and inert. Poster is updated to the stage chosen for this battle. Crystal-cave sources stay unwired. -->
+                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline preload="none" poster="assets/bg/ui-battle-stage-bg-1920.png?v=20261101" style="display:none" aria-hidden="true"></video>
                 <div class="neon-dotgrid absolute inset-0 pointer-events-none" aria-hidden="true"></div>
                 <div id="battle-stage-ring" aria-hidden="true"></div>
                 <div id="battle-vfx-layer" aria-hidden="true"></div>
@@ -5498,6 +5495,34 @@
 
         function getBattleBgVideoEl() { return document.getElementById('battle-bg-video'); }
 
+        // One plate per battle entry. Parchment is the existing 1920 file; the other four are thematic plates.
+        const BATTLE_STAGE_BG_VERSION = '20261101';
+        const BATTLE_STAGE_BACKGROUNDS = [
+            'assets/bg/ui-battle-stage-bg-1920.png',
+            'assets/bg/ui-battle-stage-bg-forest-1920.png',
+            'assets/bg/ui-battle-stage-bg-beach-1920.png',
+            'assets/bg/ui-battle-stage-bg-volcano-1920.png',
+            'assets/bg/ui-battle-stage-bg-arena-1920.png'
+        ];
+
+        function battleStageBackgroundUrl(path) {
+            return path + '?v=' + BATTLE_STAGE_BG_VERSION;
+        }
+
+        function applyRandomBattleStage() {
+            const arena = document.getElementById('pokemon-battle-arena');
+            if (!arena || !BATTLE_STAGE_BACKGROUNDS.length) return;
+            const path = BATTLE_STAGE_BACKGROUNDS[Math.floor(Math.random() * BATTLE_STAGE_BACKGROUNDS.length)];
+            const url = battleStageBackgroundUrl(path);
+            arena.style.backgroundImage = "url('" + url + "')";
+            const video = getBattleBgVideoEl();
+            if (video) {
+                video.setAttribute('poster', url);
+                video.removeAttribute('src');
+                video.style.display = 'none';
+            }
+        }
+
         function prefersReducedMotion() {
             try {
                 return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -7444,6 +7469,7 @@
             usedWordQuestionIds.clear();
             lastQuestionTypeIndex = -1;
 
+            applyRandomBattleStage();
             switchView('battle');
             paintBattleContextLabels();
             updateBattleUI();
