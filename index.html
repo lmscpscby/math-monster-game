@@ -832,13 +832,14 @@
             position: absolute;
             left: 8%;
             right: 8%;
-            top: 22%;
-            height: 30%;
+            top: 21%;
+            height: 33%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 0.3rem;
+            /* safe: when the figure is taller than the parchment, start at the top so it can scroll into view */
+            justify-content: safe center;
+            gap: 0.35rem;
             overflow: auto;
             text-align: center;
         }
@@ -846,28 +847,67 @@
         #view-battle #quiz-question-text {
             margin: 0;
             width: 100%;
+            flex: 0 0 auto;
             color: #3a2412;
             font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
             font-weight: 900;
-            font-size: clamp(14px, 2.15cqi, 20px);
+            font-size: clamp(0.875rem, 2.15cqi, 1.25rem);
             line-height: 1.35;
         }
+        .quiz-question-figure {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-height: 62%;
+            flex: 0 1 auto;
+            min-height: 0;
+        }
+        .quiz-question-figure.hidden { display: none; }
         #view-battle #quiz-question-image {
-            max-height: 72%;
+            display: block;
             width: auto;
             max-width: 100%;
+            height: auto;
+            max-height: clamp(3.25rem, 12cqi, 5.25rem);
             object-fit: contain;
-            border-radius: 8px;
-            background: rgba(255, 250, 240, 0.92);
+            border-radius: 0.5rem;
+            background: rgba(255, 250, 240, 0.95);
             border: 1px solid rgba(141, 90, 40, 0.35);
-            padding: 2px;
+            padding: 0.15rem;
         }
+        #view-battle #quiz-question-image.is-pending,
+        #view-battle #quiz-question-image.is-broken {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            border: 0;
+            opacity: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .quiz-question-image-fallback {
+            margin: 0;
+            max-width: 100%;
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.55rem;
+            border: 1px dashed rgba(122, 72, 28, 0.6);
+            background: rgba(255, 248, 236, 0.96);
+            color: #6b3a12;
+            font-weight: 800;
+            font-size: clamp(0.8rem, 1.9cqi, 0.95rem);
+            line-height: 1.35;
+            text-align: center;
+        }
+        .quiz-question-image-fallback.hidden { display: none; }
         .battle-quiz__options {
             position: absolute;
             left: 7.5%;
             right: 7.5%;
-            top: 54%;
-            bottom: 13%;
+            top: 56%;
+            bottom: 12%;
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             gap: 0.35rem 0.75rem;
@@ -921,8 +961,8 @@
             }
             .battle-quiz__plaque { height: 11%; top: 2.2%; }
             .battle-quiz__hint { top: 13%; left: 32%; }
-            .battle-quiz__prompt { top: 22%; height: 26%; }
-            .battle-quiz__options { top: 50%; bottom: 10%; gap: 0.28rem 0.4rem; }
+            .battle-quiz__prompt { top: 20%; height: 32%; }
+            .battle-quiz__options { top: 54%; bottom: 9%; gap: 0.28rem 0.4rem; }
             #view-battle #quiz-options-grid > button {
                 border-width: 8px 12px;
                 min-height: 2.45rem;
@@ -1977,15 +2017,15 @@
             position: absolute;
             left: 7.5%;
             right: 7.5%;
-            top: 74%;
-            bottom: 7.2%;
+            top: 72.6%;
+            bottom: 6%;
             z-index: 1;
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(96px, 36%);
+            grid-template-columns: minmax(0, 1fr) minmax(7.25rem, 32%);
             grid-template-rows: auto minmax(0, 1fr);
             align-items: center;
-            column-gap: 0.45rem;
-            row-gap: 0.05rem;
+            column-gap: 0.4rem;
+            row-gap: 0.12rem;
             min-height: 0;
             overflow: hidden;
             color: #fff8ec;
@@ -2008,9 +2048,9 @@
         }
         .adventure-card__index {
             flex: 0 0 auto;
-            font-size: clamp(9px, 2.1cqi, 12px);
+            font-size: clamp(0.75rem, 2.1cqi, 0.875rem);
             font-weight: 900;
-            line-height: 1.25;
+            line-height: 1.15;
             padding: 0 0.4rem;
             border-radius: 999px;
             background: rgba(255, 248, 236, 0.92);
@@ -2023,21 +2063,22 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            font-size: clamp(9px, 2cqi, 12px);
+            font-size: clamp(0.8125rem, 2.35cqi, 1rem);
             font-weight: 800;
+            line-height: 1.15;
             color: #f6e6cf;
         }
         .adventure-card__tag i { margin-right: 0.25rem; }
         .adventure-card h4 {
             grid-column: 1;
             grid-row: 2;
-            align-self: start;
+            align-self: center;
             margin: 0;
             min-width: 0;
-            font-size: clamp(12px, 2.9cqi, 18px);
+            font-size: clamp(1.05rem, 3.45cqi, 1.25rem);
             font-weight: 900;
-            line-height: 1.25;
-            max-height: 2.5em;
+            line-height: 1.35;
+            max-height: 2.8em;
             color: #fff8ec;
             overflow: hidden;
         }
@@ -2059,7 +2100,7 @@
             background: url('assets/bg/ui-shared-btn-primary.png') center / 100% 100% no-repeat;
             color: #fff8ec;
             font-weight: 900;
-            font-size: clamp(10px, 2.25cqi, 13px);
+            font-size: clamp(0.6875rem, 2.2cqi, 0.8125rem);
             line-height: 1.12;
             text-align: center;
             white-space: nowrap;
@@ -2069,7 +2110,7 @@
             transition: filter 0.15s ease, transform 0.15s ease;
         }
         .adventure-card__cta-sub {
-            font-size: clamp(9px, 1.9cqi, 11px);
+            font-size: clamp(0.625rem, 1.85cqi, 0.75rem);
             font-weight: 800;
         }
         .adventure-card__cta:hover { filter: brightness(1.08); }
@@ -2079,8 +2120,15 @@
             outline-offset: 2px;
         }
         @container (max-width: 430px) {
-            .adventure-card__body { grid-template-columns: minmax(0, 1fr) 104px; }
-            .adventure-card__tag { display: none; }
+            /* Plaque already says 單元 N. Drop the duplicate meta row so the title can use the dark band. */
+            .adventure-card__body { grid-template-columns: minmax(0, 1fr) minmax(5.5rem, 32%); }
+            .adventure-card__meta { display: none; }
+            .adventure-card h4 {
+                grid-row: 1 / -1;
+                font-size: clamp(1rem, 4.7cqi, 1.2rem);
+                line-height: 1.28;
+                max-height: 2.65em;
+            }
         }
         @media (max-width: 720px) {
             .adventure-cards { grid-template-columns: minmax(0, 1fr); }
@@ -3428,7 +3476,10 @@
                     <span class="hidden sm:inline">答題無完場時限；每 20 秒唔答 Boss 會襲擊</span><span class="sm:hidden">無完場限；每20s襲擊</span>
                 </p>
                 <div class="battle-quiz__prompt">
-                    <img id="quiz-question-image" alt="題目圖片" class="hidden" />
+                    <div id="quiz-question-figure" class="quiz-question-figure hidden">
+                        <img id="quiz-question-image" alt="題目圖片" class="is-pending" />
+                        <p id="quiz-question-image-fallback" class="quiz-question-image-fallback hidden">題目圖片暫時無法顯示</p>
+                    </div>
                     <h3 id="quiz-question-text">題目載入中...</h3>
                 </div>
                 <div id="quiz-options-grid" class="battle-quiz__options"></div>
@@ -7306,11 +7357,104 @@
             return !!(ban && ban[q.id]);
         }
 
+        function questionStemExpectsFigure(q) {
+            const t = String((q && q.question) || '');
+            // 題幹叫學生睇圖／表，但題庫冇對應圖檔
+            return /下圖|上圖|如圖|下表|上表|看圖|見圖|算柱|右圖|左圖|圖形所|陰影|棒形圖|折線圖|圓形圖|依圖|根據圖|圖中|右面的圖|下面的圖|下面是圖|哪個圖形|摺紙圖樣/.test(t);
+        }
+
         function questionRefsMissingImage(q) {
             if (!q || q.image) return false;
-            const t = String(q.question || '');
-            // 加闊：算柱／左右圖／圖形所／陰影／常見統計圖——無圖檔就唔入短題池
-            return /下圖|上圖|如圖|下表|上表|看圖|見圖|算柱|右圖|左圖|圖形所|陰影|棒形圖|折線圖|圓形圖|依圖|根據圖|圖中/.test(t);
+            return questionStemExpectsFigure(q);
+        }
+
+        /** 題庫 image 路徑；失敗時先試同名另一副檔、再試 id 對應檔（# → __）。 */
+        function questionImageCandidates(q) {
+            const list = [];
+            const push = (p) => {
+                const s = String(p || '').trim();
+                if (!s || list.indexOf(s) !== -1) return;
+                list.push(s);
+            };
+            const declared = q && q.image ? String(q.image).trim() : '';
+            if (declared) {
+                push(declared);
+                if (/\.webp$/i.test(declared)) push(declared.replace(/\.webp$/i, '.png'));
+                else if (/\.png$/i.test(declared)) push(declared.replace(/\.png$/i, '.webp'));
+            }
+            const id = q && q.id ? String(q.id) : '';
+            if (id && (declared || questionStemExpectsFigure(q))) {
+                const core = id.split('#')[0];
+                const hashed = id.replace(/#/g, '__');
+                [hashed, core, core + '__num'].forEach((base) => {
+                    push('q-images/' + base + '.webp');
+                    push('q-images/' + base + '.png');
+                });
+            }
+            return list;
+        }
+
+        function bindQuestionFigure(q) {
+            const figure = document.getElementById('quiz-question-figure');
+            const img = document.getElementById('quiz-question-image');
+            const fallback = document.getElementById('quiz-question-image-fallback');
+            if (!figure || !img) return;
+            const candidates = questionImageCandidates(q);
+            let index = 0;
+
+            const hideFigure = () => {
+                img.onload = null;
+                img.onerror = null;
+                img.removeAttribute('src');
+                img.classList.add('is-broken');
+                img.classList.remove('is-pending');
+                if (fallback) fallback.classList.add('hidden');
+                figure.classList.add('hidden');
+            };
+            const showFallback = () => {
+                img.onload = null;
+                img.onerror = null;
+                img.removeAttribute('src');
+                img.classList.add('is-broken');
+                img.classList.remove('is-pending');
+                if (fallback) fallback.classList.remove('hidden');
+                figure.classList.remove('hidden');
+            };
+            const tryNext = () => {
+                if (index >= candidates.length) {
+                    if (declaredExpects(q)) showFallback();
+                    else hideFigure();
+                    return;
+                }
+                const src = candidates[index++];
+                img.onload = null;
+                img.onerror = null;
+                img.removeAttribute('src');
+                img.classList.add('is-pending');
+                img.classList.remove('is-broken');
+                if (fallback) fallback.classList.add('hidden');
+                figure.classList.remove('hidden');
+                img.alt = '題目圖片';
+                img.onload = () => {
+                    if (!img.getAttribute('src')) return;
+                    img.classList.remove('is-pending', 'is-broken');
+                    if (fallback) fallback.classList.add('hidden');
+                    figure.classList.remove('hidden');
+                };
+                img.onerror = () => { tryNext(); };
+                img.src = src;
+            };
+
+            function declaredExpects(item) {
+                return !!(item && (item.image || questionStemExpectsFigure(item)));
+            }
+
+            if (!candidates.length) {
+                if (declaredExpects(q)) showFallback();
+                else hideFigure();
+                return;
+            }
+            tryNext();
         }
 
         function questionStemLen(q) {
@@ -7933,18 +8077,7 @@
             const qTextEl = document.getElementById('quiz-question-text');
             if (qTextEl) qTextEl.innerText = String(currentQuestionObj.question || '').replace(/^【[^】]{0,80}】\s*/, '');
 
-            const qImgEl = document.getElementById('quiz-question-image');
-            if (qImgEl) {
-                const src = currentQuestionObj && currentQuestionObj.image ? currentQuestionObj.image : '';
-                qImgEl.onerror = () => { qImgEl.removeAttribute('src'); qImgEl.classList.add('hidden'); };
-                if (src) {
-                    qImgEl.src = src;
-                    qImgEl.classList.remove('hidden');
-                } else {
-                    qImgEl.removeAttribute('src');
-                    qImgEl.classList.add('hidden');
-                }
-            }
+            bindQuestionFigure(currentQuestionObj);
 
             const optionsGrid = document.getElementById('quiz-options-grid');
             if (optionsGrid) {
