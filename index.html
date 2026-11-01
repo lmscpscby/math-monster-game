@@ -980,9 +980,12 @@
 
         /* Ranked / dual-BOSS: wood + parchment + gold frames. Copy stays HTML. */
         body.ranked-open {
-            background:
-                radial-gradient(1100px 480px at 50% -8%, rgba(214, 168, 92, 0.2), transparent 58%),
-                linear-gradient(180deg, #4a301c 0%, #2a1a10 46%, #140e0a 100%);
+            background-color: #f3e2bc;
+            background-image: url('assets/bg/ui-ranked-bg-arena-2560.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
         }
         body.ranked-open > header.glass-panel {
             background: rgba(54, 34, 18, 0.92);
@@ -1147,11 +1150,11 @@
         }
         .ranked-lead {
             margin: 0;
-            color: #f3e4cc;
+            color: #3a2412;
             font-size: 13px;
             line-height: 1.55;
         }
-        .ranked-lead b { color: #ffe1a3; }
+        .ranked-lead b { color: #8a3412; }
         .ranked-season {
             display: flex;
             flex-wrap: wrap;
@@ -1198,85 +1201,81 @@
             align-items: center;
             gap: 0.4rem;
             margin: 0 0 0.75rem;
-            color: #f6e7c8;
+            color: #3a2412;
             font-size: clamp(16px, 2vw, 20px);
             font-weight: 900;
         }
-        .ranked-section-title i { color: #e2b15a; }
+        .ranked-section-title i { color: #a15c12; }
         .ranked-layout {
             display: grid;
             grid-template-columns: minmax(0, 1fr);
             gap: 1.25rem;
             align-items: start;
         }
+        /* Scenic-wide stage cards are 1224×692. Copy sits in the shared bottom dark band. */
         .ranked-cards {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 280px));
-            justify-content: start;
-            gap: 0.9rem 1rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.85rem 1rem;
+            width: 100%;
         }
         .ranked-card {
             position: relative;
             width: 100%;
-            max-width: 280px;
+            aspect-ratio: 1224 / 692;
             container-type: inline-size;
         }
-        .ranked-card--water { aspect-ratio: 233 / 352; }
-        .ranked-card--fire { aspect-ratio: 224 / 350; }
-        .ranked-card--grass { aspect-ratio: 216 / 347; }
-        .ranked-card--thunder { aspect-ratio: 224 / 356; }
-        .ranked-card__fill,
+        .ranked-card__fill { display: none; }
         .ranked-card__body {
             position: absolute;
-            left: 13%;
-            right: 13%;
-            top: 17.5%;
-            bottom: 8.5%;
-        }
-        .ranked-card--thunder .ranked-card__fill,
-        .ranked-card--thunder .ranked-card__body { top: 21%; }
-        .ranked-card__fill {
-            z-index: 0;
-            border-radius: 10px;
-            background:
-                radial-gradient(120% 70% at 50% 0%, rgba(255, 248, 230, 0.75), transparent 52%),
-                linear-gradient(180deg, #f8e8cb 0%, #e7d0a6 100%);
-        }
-        .ranked-card__body {
+            left: 7.5%;
+            right: 7.5%;
+            top: 72%;
+            bottom: 6.8%;
             z-index: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 0.28rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(128px, 38%);
+            grid-template-rows: auto auto minmax(0, 1fr);
+            align-items: center;
+            column-gap: 0.5rem;
+            row-gap: 0;
             min-height: 0;
-            color: #3d2914;
+            overflow: hidden;
+            color: #fff8ec;
+            text-shadow: 0 1px 2px rgba(20, 8, 4, 0.88);
         }
         .ranked-card__frame {
             position: absolute;
             inset: 0;
-            z-index: 2;
+            z-index: 0;
             pointer-events: none;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100% 100%;
         }
-        .ranked-card--water .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-water.png'); }
-        .ranked-card--fire .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-fire.png'); }
-        .ranked-card--grass .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-grass.png'); }
-        .ranked-card--thunder .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-thunder.png'); }
+        .ranked-card--water .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-water-scenic-wide.png'); }
+        .ranked-card--fire .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-fire-scenic-wide.png'); }
+        .ranked-card--grass .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-grass-scenic-wide.png'); }
+        .ranked-card--thunder .ranked-card__frame { background-image: url('assets/bg/ui-ranked-card-thunder-scenic-wide.png'); }
         .ranked-card__meta {
+            grid-column: 1;
+            grid-row: 1;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 0.15rem 0.35rem;
+            min-width: 0;
         }
         .ranked-card__lv {
-            font-size: 10px;
+            font-size: clamp(9px, 2.15cqi, 12px);
             font-weight: 900;
-            padding: 0.1rem 0.4rem;
+            padding: 0 0.35rem;
+            line-height: 1.25;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 248, 236, 0.92);
             white-space: nowrap;
+            text-shadow: none;
         }
         .ranked-card--water .ranked-card__lv { color: #0e6288; }
         .ranked-card--fire .ranked-card__lv { color: #9a3412; }
@@ -1284,23 +1283,57 @@
         .ranked-card--thunder .ranked-card__lv { color: #8a5a10; }
         .ranked-card__pts {
             margin-left: auto;
-            font-size: 10px;
+            flex: 0 0 auto;
+            font-size: clamp(9px, 2.15cqi, 12px);
             font-weight: 800;
-            color: #8a5a12;
+            color: #fff6e4;
             white-space: nowrap;
         }
         .ranked-card h4 {
+            grid-column: 1;
+            grid-row: 2;
             margin: 0;
-            font-size: clamp(14px, 5.4cqi, 18px);
+            min-width: 0;
+            font-size: clamp(12px, 3.15cqi, 18px);
             font-weight: 900;
-            line-height: 1.25;
-            color: #2e1d10;
+            line-height: 1.05;
+            color: #fff8ec;
         }
         .ranked-card p {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: start;
             margin: 0;
-            font-size: 12px;
-            line-height: 1.35;
-            color: #5c4330;
+            min-width: 0;
+            font-size: clamp(10px, 2.2cqi, 12px);
+            line-height: 1.05;
+            color: #f6e6cf;
+        }
+        .ranked-card .ranked-btn--lg {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            align-self: stretch;
+            justify-self: stretch;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: auto;
+            margin-top: 0;
+            padding: 0 5%;
+            font-size: clamp(10px, 2.45cqi, 13px);
+            white-space: nowrap;
+        }
+        .ranked-card .ranked-btn__sub {
+            font-size: clamp(9px, 2cqi, 11px);
+        }
+        @container (max-width: 430px) {
+            .ranked-card__body { grid-template-columns: minmax(0, 1fr) 118px; }
+            .ranked-card h4,
+            .ranked-card p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .ranked-card p br { display: none; }
         }
         .ranked-board {
             position: relative;
@@ -1459,12 +1492,14 @@
             padding: 0.75rem;
         }
         @media (min-width: 1024px) {
-            .ranked-layout {
-                grid-template-columns: minmax(0, 1fr) 320px;
-            }
             .ranked-header__score-label { font-size: 13px; }
             .ranked-header__rank { font-size: 15px; }
             #ranked-current-score { font-size: 28px; }
+        }
+        @media (min-width: 1280px) {
+            .ranked-layout {
+                grid-template-columns: minmax(0, 1fr) 320px;
+            }
         }
         @media (max-width: 900px) {
             #season-reward-rules {
@@ -1513,8 +1548,7 @@
             #ranked-current-score { font-size: 1.65rem; color: #8a4b12; }
             .ranked-header__score { justify-content: space-between; }
             .ranked-header__rank { max-width: none; }
-            .ranked-cards { grid-template-columns: minmax(0, 320px); justify-content: center; }
-            .ranked-card { max-width: 320px; }
+            .ranked-cards { grid-template-columns: minmax(0, 1fr); }
         }
         @media (prefers-reduced-motion: reduce) {
             .ranked-btn { transition: none; }
