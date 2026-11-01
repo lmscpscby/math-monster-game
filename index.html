@@ -3399,7 +3399,7 @@
             <header class="adventure-banner">
                 <div class="adventure-banner__copy">
                     <h2>冒險塔<span>無盡爬層 · 加減乘除</span></h2>
-                    <p>一層一戰，只出加、減、乘、除。每 5 層獲得金幣同 EXP 包。</p>
+                    <p>一層一戰，只出加、減、乘、除。每 10 層獲得金幣 +100 同 EXP 包 +2。</p>
                 </div>
             </header>
 
@@ -3424,7 +3424,7 @@
                     <span class="climb-op" data-op="climb_mul">乘法</span>
                     <span class="climb-op" data-op="climb_div">除法</span>
                 </div>
-                <p id="climb-milestone" class="climb-milestone">下一里程碑第 5 層：金幣 +80、EXP包 +1</p>
+                <p id="climb-milestone" class="climb-milestone">下一里程碑第 10 層：金幣 +100、EXP包 +2</p>
                 <button type="button" id="climb-start-btn" class="climb-start" onclick="startClimbBattle()">挑戰第 1 層</button>
                 <p class="climb-note">通關後會記住樓層。失敗就停在本層，可以再挑戰。題型依樓層輪流：加法、減法、乘法、除法。</p>
             </div>
@@ -6626,11 +6626,12 @@
 
         /**
          * 冒險塔暫時只出加減乘除。樓層 1 加法、2 減法、3 乘法、4 除法，之後循環。
-         * 里程碑每 5 層：金幣 = 60 + (樓層/5)*20；EXP 包 = 10 的倍數為 2，其餘里程碑為 1。
-         * 例：第 5 層 +80 金／+1 包，第 10 層 +100 金／+2 包，第 15 層 +120 金／+1 包。
-         * 非里程碑樓層不發金幣／EXP。同一層只在首次通關（高過 adventureClimbBest）發獎。
+         * 里程碑只在每 10 層（10、20、30…）：固定 +100 金幣、+2 EXP 包。
+         * 第 5、15、25 層等不發獎。同一層只在首次通關（高過 adventureClimbBest）發獎。
          */
-        const CLIMB_MILESTONE_EVERY = 5;
+        const CLIMB_MILESTONE_EVERY = 10;
+        const CLIMB_MILESTONE_GOLD = 100;
+        const CLIMB_MILESTONE_EXP = 2;
         const CLIMB_OPS = [
             { id: 'climb_add', name: '加法', unitKeys: ['basic_addition', 'addition_1', 'addition_2'] },
             { id: 'climb_sub', name: '減法', unitKeys: ['basic_subtraction', 'subtraction', 'subtraction_1', 'subtraction_2'] },
@@ -6646,11 +6647,7 @@
         function climbMilestoneReward(floor) {
             const n = Math.floor(Number(floor) || 0);
             if (n <= 0 || n % CLIMB_MILESTONE_EVERY !== 0) return { gold: 0, expPacks: 0 };
-            const step = n / CLIMB_MILESTONE_EVERY;
-            return {
-                gold: 60 + step * 20,
-                expPacks: n % 10 === 0 ? 2 : 1
-            };
+            return { gold: CLIMB_MILESTONE_GOLD, expPacks: CLIMB_MILESTONE_EXP };
         }
 
         function nextClimbMilestone(floor) {
