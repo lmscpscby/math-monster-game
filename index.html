@@ -2155,7 +2155,124 @@
             .grade-tab-btn,
             .adventure-card__cta,
             .adventure-tower-card,
-            .adventure-tower-card__frame { transition: none; }
+            .adventure-tower-card__frame,
+            .climb-start { transition: none; }
+        }
+
+        /* Endless climb sits on the same tower sky. Four-tower card art stays in CSS for later. */
+        .climb-board {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.85rem;
+            width: min(100%, 760px);
+            margin: 0 auto;
+            padding: 0.2rem 0.1rem 0.4rem;
+        }
+        .climb-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.65rem;
+            width: 100%;
+        }
+        .climb-stat {
+            text-align: center;
+            background: rgba(255, 248, 236, 0.9);
+            border: 2px solid #c4924a;
+            border-radius: 16px;
+            padding: 0.55rem 0.35rem 0.7rem;
+            box-shadow: 0 8px 16px rgba(70, 42, 16, 0.18);
+        }
+        .climb-stat__kicker {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: #6b4524;
+        }
+        .climb-stat__value {
+            margin-top: 0.12rem;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: clamp(22px, 4vw, 36px);
+            line-height: 1.1;
+            color: #3a2412;
+        }
+        .climb-ops {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.35rem;
+            width: 100%;
+        }
+        .climb-op {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 108px;
+            height: 48px;
+            background: url('assets/bg/ui-adventure-grade-tab.png') center / 100% 100% no-repeat;
+            color: #5c4030;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 0.14em;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.65);
+        }
+        .climb-op.is-current {
+            background-image: url('assets/bg/ui-adventure-grade-tab-active.png');
+            color: #3a220c;
+        }
+        .climb-milestone {
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 800;
+            color: #3a2412;
+            background: rgba(255, 248, 236, 0.86);
+            border-radius: 999px;
+            padding: 0.4rem 0.95rem;
+        }
+        .climb-start {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 240px;
+            height: 72px;
+            margin: 0;
+            border: 0;
+            padding: 0 1rem 2px;
+            background: url('assets/bg/ui-shared-btn-primary.png') center / 100% 100% no-repeat;
+            color: #fff8ec;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.06em;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: filter 0.15s ease, transform 0.15s ease;
+        }
+        .climb-start:hover { filter: brightness(1.06); }
+        .climb-start:active { transform: translateY(1px); }
+        .climb-start:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 3px;
+        }
+        .climb-note {
+            margin: 0;
+            max-width: 36rem;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.45;
+            color: #4a3018;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.75);
+        }
+        @media (max-width: 720px) {
+            .climb-stats { gap: 0.4rem; }
+            .climb-stat { padding: 0.45rem 0.2rem 0.55rem; }
+            .climb-stat__kicker { font-size: 11px; letter-spacing: 0.04em; }
+            .climb-op { width: 84px; height: 42px; font-size: 14px; }
         }
 
         /* Dual-BOSS team picker keeps the ranked parchment treatment.
@@ -2997,7 +3114,7 @@
                             歡迎來到數理怪獸世界
                         </h2>
                         <p class="text-slate-200 max-w-2xl text-xs md:text-sm mt-1 leading-relaxed">
-                            排位賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）！冒險模式 BOSS 隨機登場，小數題目完整保留小數點！
+                            訓練場分單元挑戰。積分爭霸賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）。冒險塔無盡爬層，只出加減乘除。
                         </p>
                     </div>
                     <button onclick="enterAdventure()" class="lobby-hero-cta px-6 py-3 text-white font-black text-sm rounded-2xl flex items-center space-x-2 active:scale-95 transition-all">
@@ -3015,13 +3132,13 @@
                 </div>
                 <div class="island-stage">
                     <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg" alt="">
-                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，進入數學冒險">
+                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，無盡爬層">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png" alt=""></span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分排位鬥場，進入排位賽">
+                    <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分爭霸賽，進入積分塔">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-arena.png" alt=""></span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--training island-hotspot--locked" data-locked-tip="即將開放" onclick="showIslandLockedTip(this)" aria-label="訓練場，即將開放">
+                    <button type="button" class="island-hotspot island-hotspot--training" onclick="enterTraining()" aria-label="訓練場，分單元挑戰">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-training.png" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="神獸抽蛋，進入抽卡">
@@ -3112,7 +3229,7 @@
             <div class="ranked-ornament">
                 <header class="ranked-header">
                     <div class="ranked-header__title">
-                        <h2>全服年級排位爭霸賽</h2>
+                        <h2>積分爭霸賽</h2>
                         <span id="ranked-user-grade-badge" class="ranked-chip">小六專屬 (鎖定)</span>
                     </div>
                     <div class="ranked-header__score">
@@ -3123,14 +3240,14 @@
                 </header>
             </div>
             <p class="ranked-lead">
-                排位賽分 4 關：<b>10LV(水系)</b>、<b>20LV(火系)</b>、<b>30LV(草系)</b>、<b>40LV(雷系)</b>！每關皆由 2 隻對應屬性巨型 BOSS 駐守！
+                積分爭霸賽分 4 關：<b>10LV(水系)</b>、<b>20LV(火系)</b>、<b>30LV(草系)</b>、<b>40LV(雷系)</b>！每關皆由 2 隻對應屬性巨型 BOSS 駐守！
             </p>
 
             <div class="ranked-ornament">
                 <div id="season-banner" class="ranked-season">
                     <div class="ranked-season__copy">
                         <div class="ranked-season__main">
-                            <div class="ranked-season__kicker">排位賽季（香港時間）</div>
+                            <div class="ranked-season__kicker">積分爭霸賽季（香港時間）</div>
                             <div id="season-epoch-label">第 1 賽季</div>
                             <div id="season-countdown">距離結算 …</div>
                         </div>
@@ -3142,7 +3259,7 @@
             <div class="ranked-layout">
                 <div>
                     <h3 class="ranked-section-title">
-                        <i class="fa-solid fa-skull-crossbones" aria-hidden="true"></i><span>選擇排位賽關卡 (固定對應屬性雙 BOSS)</span>
+                        <i class="fa-solid fa-skull-crossbones" aria-hidden="true"></i><span>選擇積分爭霸賽關卡 (固定對應屬性雙 BOSS)</span>
                     </h3>
                     <div class="ranked-cards">
                         <article class="ranked-card ranked-card--water">
@@ -3271,52 +3388,73 @@
             </div>
         </section>
 
-        <!-- VIEW 4: MATHEMATICS ADVENTURE — tower picker, then grade / unit stages -->
+        <!-- VIEW 4: ADVENTURE TOWER — endless +−×÷ climb. Tower-picker art is unused. -->
         <section id="view-adventure" class="hidden adventure-view">
             <div>
-                <button type="button" onclick="adventureGoBack()" class="adventure-back">
-                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span id="adventure-back-label">返回主選單</span>
+                <button type="button" onclick="switchView('home')" class="adventure-back">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回主選單</span>
                 </button>
             </div>
 
             <header class="adventure-banner">
                 <div class="adventure-banner__copy">
-                    <h2 id="adventure-banner-title">選擇冒險塔<span id="adventure-banner-sub" class="is-off"></span></h2>
-                    <p id="adventure-banner-lead">揀一座塔，再選年級同單元開始挑戰。</p>
+                    <h2>冒險塔<span>無盡爬層 · 加減乘除</span></h2>
+                    <p>一層一戰，只出加、減、乘、除。每 5 層獲得金幣同 EXP 包。</p>
                 </div>
             </header>
 
-            <div id="adventure-tower-picker" class="adventure-cards adventure-tower-picker" role="group" aria-label="冒險塔">
-                <button type="button" class="adventure-tower-card adventure-tower-card--darkforest" onclick="selectAdventureTower('darkforest')">
-                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
-                    <span class="adventure-tower-card__title">幽暗密林</span>
-                </button>
-                <button type="button" class="adventure-tower-card adventure-tower-card--sunkencity" onclick="selectAdventureTower('sunkencity')">
-                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
-                    <span class="adventure-tower-card__title">沉沒古城</span>
-                </button>
-                <button type="button" class="adventure-tower-card adventure-tower-card--cloudrealm" onclick="selectAdventureTower('cloudrealm')">
-                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
-                    <span class="adventure-tower-card__title">雲端秘境</span>
-                </button>
-                <button type="button" class="adventure-tower-card adventure-tower-card--training" onclick="selectAdventureTower('training')">
-                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
-                    <span class="adventure-tower-card__title">訓練場</span>
+            <div class="climb-board" id="adventure-climb">
+                <div class="climb-stats">
+                    <div class="climb-stat">
+                        <div class="climb-stat__kicker">目前樓層</div>
+                        <div id="climb-floor-now" class="climb-stat__value">1</div>
+                    </div>
+                    <div class="climb-stat">
+                        <div class="climb-stat__kicker">最高紀錄</div>
+                        <div id="climb-floor-best" class="climb-stat__value">0</div>
+                    </div>
+                    <div class="climb-stat">
+                        <div class="climb-stat__kicker">本層題型</div>
+                        <div id="climb-floor-op" class="climb-stat__value">加法</div>
+                    </div>
+                </div>
+                <div class="climb-ops" id="climb-op-list" aria-label="加減乘除">
+                    <span class="climb-op is-current" data-op="climb_add">加法</span>
+                    <span class="climb-op" data-op="climb_sub">減法</span>
+                    <span class="climb-op" data-op="climb_mul">乘法</span>
+                    <span class="climb-op" data-op="climb_div">除法</span>
+                </div>
+                <p id="climb-milestone" class="climb-milestone">下一里程碑第 5 層：金幣 +80、EXP包 +1</p>
+                <button type="button" id="climb-start-btn" class="climb-start" onclick="startClimbBattle()">挑戰第 1 層</button>
+                <p class="climb-note">通關後會記住樓層。失敗就停在本層，可以再挑戰。題型依樓層輪流：加法、減法、乘法、除法。</p>
+            </div>
+        </section>
+
+        <!-- VIEW: TRAINING — grade tabs + unit scenic cards -->
+        <section id="view-training" class="hidden adventure-view">
+            <div>
+                <button type="button" onclick="switchView('home')" class="adventure-back">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回主選單</span>
                 </button>
             </div>
 
-            <div id="adventure-unit-flow" class="adventure-unit-flow hidden">
-                <div class="adventure-tabs" role="tablist" aria-label="年級">
-                    <button type="button" id="grade-btn-G1" role="tab" aria-pressed="true" onclick="selectGrade('G1')" class="grade-tab-btn is-active">小一 (G1)</button>
-                    <button type="button" id="grade-btn-G2" role="tab" aria-pressed="false" onclick="selectGrade('G2')" class="grade-tab-btn">小二 (G2)</button>
-                    <button type="button" id="grade-btn-G3" role="tab" aria-pressed="false" onclick="selectGrade('G3')" class="grade-tab-btn">小三 (G3)</button>
-                    <button type="button" id="grade-btn-G4" role="tab" aria-pressed="false" onclick="selectGrade('G4')" class="grade-tab-btn">小四 (G4)</button>
-                    <button type="button" id="grade-btn-G5" role="tab" aria-pressed="false" onclick="selectGrade('G5')" class="grade-tab-btn">小五 (G5)</button>
-                    <button type="button" id="grade-btn-G6" role="tab" aria-pressed="false" onclick="selectGrade('G6')" class="grade-tab-btn">小六 (G6)</button>
+            <header class="adventure-banner">
+                <div class="adventure-banner__copy">
+                    <h2>訓練場<span>分單元挑戰</span></h2>
+                    <p>選擇年級同單元進行挑戰。關卡 BOSS 隨機登場，換題時輪播該單元題型。</p>
                 </div>
+            </header>
 
-                <div id="strand-cards-grid" class="adventure-cards">
-                </div>
+            <div class="adventure-tabs" role="tablist" aria-label="年級">
+                <button type="button" id="grade-btn-G1" role="tab" aria-pressed="true" onclick="selectGrade('G1')" class="grade-tab-btn is-active">小一 (G1)</button>
+                <button type="button" id="grade-btn-G2" role="tab" aria-pressed="false" onclick="selectGrade('G2')" class="grade-tab-btn">小二 (G2)</button>
+                <button type="button" id="grade-btn-G3" role="tab" aria-pressed="false" onclick="selectGrade('G3')" class="grade-tab-btn">小三 (G3)</button>
+                <button type="button" id="grade-btn-G4" role="tab" aria-pressed="false" onclick="selectGrade('G4')" class="grade-tab-btn">小四 (G4)</button>
+                <button type="button" id="grade-btn-G5" role="tab" aria-pressed="false" onclick="selectGrade('G5')" class="grade-tab-btn">小五 (G5)</button>
+                <button type="button" id="grade-btn-G6" role="tab" aria-pressed="false" onclick="selectGrade('G6')" class="grade-tab-btn">小六 (G6)</button>
+            </div>
+
+            <div id="strand-cards-grid" class="adventure-cards">
             </div>
         </section>
 
@@ -3869,7 +4007,8 @@
             var packs = Math.max(0, Math.floor(Number(p.expPacks) || 0));
             var monsters = Array.isArray(p.ownedMonsters) ? p.ownedMonsters.length : 0;
             var rank = Math.max(0, Math.floor(Number(p.rankScore) || 0));
-            return gold === 0 && packs === 0 && monsters === 0 && rank === 0;
+            var climbBest = Math.max(0, Math.floor(Number(p.adventureClimbBest) || 0));
+            return gold === 0 && packs === 0 && monsters === 0 && rank === 0 && climbBest === 0;
         }
 
         /** 註冊起步檔：四隻 Lv1 基礎怪＋金幣≤1000＋rank0（老師清戶後重新 register 常見） */
@@ -3906,9 +4045,12 @@
             am.forEach(function (m) {
                 aMax = Math.max(aMax, Math.max(1, Math.floor(Number(m && m.level) || 1)));
             });
+            var aClimb = Math.max(0, Math.floor(Number(a.adventureClimbBest) || 0));
+            var bClimb = Math.max(0, Math.floor(Number(b.adventureClimbBest) || 0));
             if (ar > br) return true;
             if (am.length > bm.length) return true;
             if (ag > bg + 50) return true;
+            if (aClimb > bClimb) return true;
             if (aMax > 1 && isStarterLikeProgressProfile(b)) return true;
             return false;
         }
@@ -4060,6 +4202,7 @@
                 // 頭像：雲端有就跟雲端；雲端未有先留本機（舊存檔冇欄唔好清走自訂圖）
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
                 applyResolvedAvatar(baseCloud, cloud, local);
+                applyAdventureClimbFrom(baseCloud, cloud);
                 stampUpdatedAt(baseCloud);
                 return baseCloud;
             }
@@ -4133,8 +4276,53 @@
             }
             base.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
             applyResolvedAvatar(base, localNewer ? local : cloud, localNewer ? cloud : local);
+            applyAdventureClimbMax(base, local, cloud);
             stampUpdatedAt(base);
             return base;
+        }
+
+        /** 冒險塔進度。adventureClimbFloor＝下一層要打的樓層；adventureClimbBest＝已通關最高層。 */
+        function storedClimbFloor(p) {
+            var floor = Math.floor(Number(p && p.adventureClimbFloor));
+            if (!isFinite(floor) || floor < 1) return 1;
+            return floor;
+        }
+
+        function readClimbBest(p) {
+            return Math.max(0, Math.floor(Number(p && p.adventureClimbBest) || 0));
+        }
+
+        function readClimbFloor(p) {
+            var floor = Math.floor(Number(p && p.adventureClimbFloor) || 0);
+            if (!isFinite(floor) || floor < 1) floor = 1;
+            var best = readClimbBest(p);
+            if (floor < best + 1) floor = best + 1;
+            return floor;
+        }
+
+        function applyAdventureClimbFrom(target, source) {
+            if (!target) return target;
+            var best = readClimbBest(source);
+            target.adventureClimbBest = best;
+            var floor = Math.floor(Number(source && source.adventureClimbFloor) || 0);
+            if (!isFinite(floor) || floor < 1) floor = best + 1;
+            if (floor < best + 1) floor = best + 1;
+            target.adventureClimbFloor = floor;
+            return target;
+        }
+
+        function applyAdventureClimbMax(target, a, b) {
+            if (!target) return target;
+            var best = Math.max(readClimbBest(a), readClimbBest(b));
+            var floor = Math.max(readClimbFloor(a), readClimbFloor(b), best + 1);
+            target.adventureClimbBest = best;
+            target.adventureClimbFloor = floor;
+            return target;
+        }
+
+        function normalizeAdventureClimb(user) {
+            if (!user) return user;
+            return applyAdventureClimbFrom(user, user);
         }
 
         function profilesProgressDiffer(a, b) {
@@ -4155,6 +4343,8 @@
             // 只改大廳頭像都要當有進度差，先會觸發雲端 save／合併提示
             if (canonicalAvatarId(a.avatarId) !== canonicalAvatarId(b.avatarId)) return true;
             if (sanitizeAvatarData(a.avatarData) !== sanitizeAvatarData(b.avatarData)) return true;
+            if (storedClimbFloor(a) !== storedClimbFloor(b)) return true;
+            if (readClimbBest(a) !== readClimbBest(b)) return true;
             return false;
         }
 
@@ -4388,12 +4578,17 @@
         function currentBattleUnitLabel() {
             try {
                 const units = (typeof GRADE_UNITS !== 'undefined' && GRADE_UNITS[selectedGrade]) ? GRADE_UNITS[selectedGrade] : [];
+                if (isClimbMode) {
+                    const floor = climbBattleFloor || readClimbFloor(currentUser);
+                    const op = climbOpForFloor(floor);
+                    return '第' + floor + '層·' + op.name;
+                }
                 if (typeof pendingStrandId !== 'undefined' && pendingStrandId) {
                     const found = units.find(function (x) { return x.id === pendingStrandId; });
                     if (found) return found.name;
                     return String(pendingStrandId);
                 }
-                if (isRankedMode) return '排位賽';
+                if (isRankedMode) return '積分爭霸賽';
             } catch (e) {}
             return '';
         }
@@ -4974,14 +5169,10 @@
 
         let currentUser = null;
         let selectedGrade = 'G1';
-        /** null = four-tower picker. Story towers reuse GRADE_UNITS; ids keep saves apart. */
-        let selectedAdventureTower = null;
-        const ADVENTURE_TOWERS = [
-            { id: 'darkforest', name: '幽暗密林' },
-            { id: 'sunkencity', name: '沉沒古城' },
-            { id: 'cloudrealm', name: '雲端秘境' },
-            { id: 'training', name: '訓練場' }
-        ];
+        /** 冒險塔戰鬥中。訓練場／積分爭霸賽為 false。 */
+        let isClimbMode = false;
+        /** 這一場冒險塔正在打的樓層（結算前唔好跟存檔前進）。 */
+        let climbBattleFloor = 1;
         let activeStrand = null;
         let bossTimer = null;
         let bossAttackCountdown = 20;
@@ -5501,6 +5692,8 @@
                 expPacks: 2,
                 rankScore: 0,
                 leaderboardEpoch: currentClientSeasonEpoch(),
+                adventureClimbFloor: 1,
+                adventureClimbBest: 0,
                 updatedAt: new Date().toISOString(),
                 ownedMonsters: [
                     { id: 'fire_base', level: 1, exp: 0 },
@@ -5701,6 +5894,7 @@
             }
             if (currentUser.rankScore === undefined) currentUser.rankScore = 0;
             if (currentUser.leaderboardEpoch === undefined || currentUser.leaderboardEpoch === null) currentUser.leaderboardEpoch = 0;
+            normalizeAdventureClimb(currentUser);
             if (!Array.isArray(currentUser.ownedMonsters)) currentUser.ownedMonsters = [];
             currentUser.ownedMonsters = migrateLegacyMythicOwned(currentUser.ownedMonsters);
 
@@ -5769,6 +5963,7 @@
             currentUser.gold = Math.floor(Number(currentUser.gold) || 0);
             currentUser.expPacks = Math.floor(Number(currentUser.expPacks) || 0);
             currentUser.rankScore = Math.floor(Number(currentUser.rankScore) || 0);
+            normalizeAdventureClimb(currentUser);
             var canonAvatar = canonicalAvatarId(currentUser.avatarId);
             if (canonAvatar) currentUser.avatarId = canonAvatar;
             else delete currentUser.avatarId;
@@ -5944,7 +6139,7 @@
                 return;
             }
 
-            const views = ['home', 'gacha', 'monsters', 'adventure', 'battle', 'ranked'];
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked'];
             views.forEach(v => {
                 const el = document.getElementById(`view-${v}`);
                 if (el) el.classList.add('hidden');
@@ -5953,7 +6148,7 @@
             if (target) target.classList.remove('hidden');
             document.body.classList.toggle('lobby-open', viewName === 'home');
             document.body.classList.toggle('ranked-open', viewName === 'ranked');
-            document.body.classList.toggle('adventure-open', viewName === 'adventure');
+            document.body.classList.toggle('adventure-open', viewName === 'adventure' || viewName === 'training');
             document.body.classList.toggle('battle-open', viewName === 'battle');
 
             // 進出戰鬥切換 BGM／背景短片（互不干擾）
@@ -5968,7 +6163,8 @@
             if (viewName === 'monsters') renderMonsterCollection();
             if (viewName === 'ranked') renderLeaderboard();
             if (viewName === 'home') updateAdminUiVisibility();
-            if (viewName === 'adventure') showAdventureStage(selectedAdventureTower ? 'units' : 'towers');
+            if (viewName === 'adventure') renderAdventureClimb();
+            if (viewName === 'training') renderStrandsGrid();
         }
 
         function drawGacha(count) {
@@ -6428,11 +6624,38 @@
             }
         }
 
-        function adventureTowerById(id) {
-            for (let i = 0; i < ADVENTURE_TOWERS.length; i++) {
-                if (ADVENTURE_TOWERS[i].id === id) return ADVENTURE_TOWERS[i];
-            }
-            return null;
+        /**
+         * 冒險塔暫時只出加減乘除。樓層 1 加法、2 減法、3 乘法、4 除法，之後循環。
+         * 里程碑每 5 層：金幣 = 60 + (樓層/5)*20；EXP 包 = 10 的倍數為 2，其餘里程碑為 1。
+         * 例：第 5 層 +80 金／+1 包，第 10 層 +100 金／+2 包，第 15 層 +120 金／+1 包。
+         * 非里程碑樓層不發金幣／EXP。同一層只在首次通關（高過 adventureClimbBest）發獎。
+         */
+        const CLIMB_MILESTONE_EVERY = 5;
+        const CLIMB_OPS = [
+            { id: 'climb_add', name: '加法', unitKeys: ['basic_addition', 'addition_1', 'addition_2'] },
+            { id: 'climb_sub', name: '減法', unitKeys: ['basic_subtraction', 'subtraction', 'subtraction_1', 'subtraction_2'] },
+            { id: 'climb_mul', name: '乘法', unitKeys: ['mult_2_5_10', 'mult_3_6', 'mult_4_8', 'mult_7_9_1_0', 'multiplication_1', 'multiplication_2', 'multiplication_3', 'multiplication_intro', 'wonderful_multiplication'] },
+            { id: 'climb_div', name: '除法', unitKeys: ['division', 'division_1', 'division_2', 'division_3', 'sharing_1', 'sharing_2', 'interesting_division'] }
+        ];
+
+        function climbOpForFloor(floor) {
+            const n = Math.max(1, Math.floor(Number(floor) || 1));
+            return CLIMB_OPS[(n - 1) % CLIMB_OPS.length];
+        }
+
+        function climbMilestoneReward(floor) {
+            const n = Math.floor(Number(floor) || 0);
+            if (n <= 0 || n % CLIMB_MILESTONE_EVERY !== 0) return { gold: 0, expPacks: 0 };
+            const step = n / CLIMB_MILESTONE_EVERY;
+            return {
+                gold: 60 + step * 20,
+                expPacks: n % 10 === 0 ? 2 : 1
+            };
+        }
+
+        function nextClimbMilestone(floor) {
+            const n = Math.max(1, Math.floor(Number(floor) || 1));
+            return Math.ceil(n / CLIMB_MILESTONE_EVERY) * CLIMB_MILESTONE_EVERY;
         }
 
         /** Teacher-report key. Question banks stay on the bare unit id. */
@@ -6442,85 +6665,89 @@
         }
 
         function adventureBattleReportExtra(result, correct, totalQuestions, goldDelta) {
+            const mode = isRankedMode ? '排位' : (isClimbMode ? '冒險塔' : '訓練場');
             const extra = {
-                mode: isRankedMode ? '排位' : '冒險',
+                mode: mode,
                 unit: currentBattleUnitLabel(),
                 result: result,
                 correct: correct,
                 totalQuestions: totalQuestions,
                 goldDelta: goldDelta
             };
-            if (!isRankedMode) {
-                extra.tower = selectedAdventureTower || '';
-                extra.progressKey = adventureProgressKey(selectedAdventureTower, pendingStrandId);
+            if (isClimbMode) {
+                extra.floor = climbBattleFloor || readClimbFloor(currentUser);
+                extra.progressKey = 'adventureClimb:' + extra.floor;
+            } else if (!isRankedMode) {
+                extra.tower = 'training';
+                extra.progressKey = adventureProgressKey('training', pendingStrandId);
             }
             return extra;
         }
 
-        function showAdventureStage(stage) {
-            const picker = document.getElementById('adventure-tower-picker');
-            const units = document.getElementById('adventure-unit-flow');
-            const title = document.getElementById('adventure-banner-title');
-            const sub = document.getElementById('adventure-banner-sub');
-            const lead = document.getElementById('adventure-banner-lead');
-            const backLabel = document.getElementById('adventure-back-label');
-            const tower = adventureTowerById(selectedAdventureTower);
-            const showUnits = stage === 'units' && !!tower;
-            if (picker) picker.classList.toggle('hidden', showUnits);
-            if (units) units.classList.toggle('hidden', !showUnits);
-            if (showUnits) {
-                if (title) title.firstChild.nodeValue = tower.name;
-                if (sub) {
-                    sub.textContent = '(2隻怪獸登場，BOSS等級動態匹配)';
-                    sub.classList.remove('is-off');
-                }
-                if (lead) lead.textContent = '選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！';
-                if (backLabel) backLabel.textContent = '返回選塔';
-                const grid = document.getElementById('strand-cards-grid');
-                if (grid && !grid.childElementCount) renderStrandsGrid();
-            } else {
-                selectedAdventureTower = null;
-                if (title) title.firstChild.nodeValue = '選擇冒險塔';
-                if (sub) {
-                    sub.textContent = '';
-                    sub.classList.add('is-off');
-                }
-                if (lead) lead.textContent = '揀一座塔，再選年級同單元開始挑戰。';
-                if (backLabel) backLabel.textContent = '返回主選單';
+        function renderAdventureClimb() {
+            const floor = currentUser ? readClimbFloor(currentUser) : 1;
+            const best = currentUser ? readClimbBest(currentUser) : 0;
+            const op = climbOpForFloor(floor);
+            const now = document.getElementById('climb-floor-now');
+            const bestEl = document.getElementById('climb-floor-best');
+            const opEl = document.getElementById('climb-floor-op');
+            const mile = document.getElementById('climb-milestone');
+            const btn = document.getElementById('climb-start-btn');
+            if (now) now.textContent = String(floor);
+            if (bestEl) bestEl.textContent = String(best);
+            if (opEl) opEl.textContent = op.name;
+            document.querySelectorAll('.climb-op').forEach(function (el) {
+                el.classList.toggle('is-current', el.getAttribute('data-op') === op.id);
+            });
+            const nextM = nextClimbMilestone(floor);
+            const reward = climbMilestoneReward(nextM);
+            if (mile) {
+                mile.textContent = floor === nextM
+                    ? ('本層是里程碑：金幣 +' + reward.gold + '、EXP包 +' + reward.expPacks)
+                    : ('下一里程碑第 ' + nextM + ' 層：金幣 +' + reward.gold + '、EXP包 +' + reward.expPacks);
             }
+            if (btn) btn.textContent = '挑戰第 ' + floor + ' 層';
         }
 
         function enterAdventure() {
-            selectedAdventureTower = null;
+            isClimbMode = false;
             switchView('adventure');
         }
 
-        function selectAdventureTower(towerId) {
-            if (!adventureTowerById(towerId)) return;
-            selectedAdventureTower = towerId;
-            showAdventureStage('units');
+        function enterTraining() {
+            isClimbMode = false;
+            switchView('training');
         }
 
-        function adventureGoBack() {
-            if (selectedAdventureTower) {
-                selectedAdventureTower = null;
-                showAdventureStage('towers');
+        function startClimbBattle() {
+            if (!currentUser) {
+                document.getElementById('auth-modal-overlay').classList.remove('hidden');
                 return;
             }
-            switchView('home');
+            isClimbMode = true;
+            isRankedMode = false;
+            const floor = readClimbFloor(currentUser);
+            const op = climbOpForFloor(floor);
+            openTeamSelect(op.id, false, 10);
         }
 
         function paintBattleContextLabels() {
             const tag = document.getElementById('battle-strand-tag');
             const title = document.getElementById('battle-title');
             if (isRankedMode) {
-                if (tag) tag.textContent = '單元挑戰';
+                if (tag) tag.textContent = '積分爭霸賽';
                 if (title) title.textContent = '數學關卡挑戰';
                 return;
             }
-            const tower = adventureTowerById(selectedAdventureTower);
-            if (tag) tag.textContent = tower ? tower.name : '單元挑戰';
-            if (title) title.textContent = currentBattleUnitLabel() || '數學關卡挑戰';
+            if (isClimbMode) {
+                const floor = climbBattleFloor || readClimbFloor(currentUser);
+                const op = climbOpForFloor(floor);
+                if (tag) tag.textContent = '第 ' + floor + ' 層 · ' + op.name;
+                if (title) title.textContent = '冒險塔';
+                return;
+            }
+            if (tag) tag.textContent = '訓練場';
+            if (title) title.textContent = currentBattleUnitLabel() || '單元挑戰';
         }
 
         function selectGrade(grade) {
@@ -6584,6 +6811,7 @@
                 btn.appendChild(btnMain);
                 btn.appendChild(btnSub);
                 btn.addEventListener('click', function () {
+                    isClimbMode = false;
                     openTeamSelect(u.id, false);
                 });
 
@@ -6606,6 +6834,7 @@
 
         function startRankedBattle(bossLv, bonusScore) {
             isRankedMode = true;
+            isClimbMode = false;
             currentRankedBonus = bonusScore;
 
             const userGrade = parseGradeFromClass(currentUser.className);
@@ -6981,7 +7210,11 @@
             pendingBossLv = bossLv;
             maxAllowedTeamSize = isRanked ? 3 : 2;
 
-            document.getElementById('team-select-modal-title').innerText = isRanked ? '選擇 3 隻出戰怪獸陣容 (排位賽)' : '選擇 2 隻出戰怪獸陣容 (數學冒險)';
+            if (isRanked) isClimbMode = false;
+            let teamTitle = '選擇 2 隻出戰怪獸陣容 (訓練場)';
+            if (isRanked) teamTitle = '選擇 3 隻出戰怪獸陣容 (積分爭霸賽)';
+            else if (isClimbMode) teamTitle = '選擇 2 隻出戰怪獸陣容 (冒險塔第 ' + readClimbFloor(currentUser) + ' 層)';
+            document.getElementById('team-select-modal-title').innerText = teamTitle;
 
             selectedBattleTeam = [];
             for (let om of currentUser.ownedMonsters) {
@@ -7133,9 +7366,15 @@
                 const randomBossConfig = EVIL_BOSSES[Math.floor(Math.random() * EVIL_BOSSES.length)];
                 
                 const bossRuntime = getMonsterRuntimeData(randomBossConfig.id, p1Level, true);
+                let bossName = `守護魔王·${randomBossConfig.name}`;
+                if (isClimbMode) {
+                    climbBattleFloor = readClimbFloor(currentUser);
+                    const op = climbOpForFloor(climbBattleFloor);
+                    bossName = `第${climbBattleFloor}層·${op.name}·${randomBossConfig.name}`;
+                }
 
                 activeEnemy = {
-                    name: `守護魔王·${randomBossConfig.name}`,
+                    name: bossName,
                     element: randomBossConfig.element,
                     level: p1Level,
                     hp: bossRuntime.hp,
@@ -7476,7 +7715,156 @@
             };
         }
 
+        function climbPlayerGradeNum() {
+            try {
+                const g = parseGradeFromClass(currentUser && currentUser.className);
+                const m = String(g || '').match(/(\d)/);
+                return m ? parseInt(m[1], 10) : null;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        /** 冒險塔抽題：只收該運算的 unitKey。先同年級，池太細再跨年級，唔好跌回全年級其他課題。 */
+        function pickClimbBankQuestion(op) {
+            const bank = (typeof window !== 'undefined' && window.WORD_QUESTION_BANK) ? window.WORD_QUESTION_BANK : null;
+            if (!bank || !bank.length || !op) return null;
+            const rule = { unitKeys: op.unitKeys || [] };
+            let matched = bank.filter(function (q) {
+                return q && questionMatchesUnitRule(q, rule) && !isBattleBlacklisted(q);
+            });
+            const grade = climbPlayerGradeNum();
+            if (grade) {
+                const same = matched.filter(function (q) { return q.grade === grade; });
+                if (filterBattleQuestionPool(same).length >= 4) matched = same;
+            }
+            let pool = filterBattleQuestionPool(matched);
+            if (pool.length < 3 && matched.length) {
+                const wider = matched.filter(function (q) {
+                    return q && !isBattleBlacklisted(q) && !questionRefsMissingImage(q);
+                });
+                if (wider.length > pool.length) pool = wider;
+            }
+            if (!pool.length) return null;
+
+            let candidates = pool.filter(function (q) { return !usedWordQuestionIds.has(q.id); });
+            if (!candidates.length) {
+                candidates = pool.slice();
+                usedWordQuestionIds.clear();
+            }
+            const imgCands = candidates.filter(function (q) { return q.image; });
+            const item = (imgCands.length && Math.random() < 0.55)
+                ? imgCands[Math.floor(Math.random() * imgCands.length)]
+                : candidates[Math.floor(Math.random() * candidates.length)];
+            usedWordQuestionIds.add(item.id);
+
+            const opts = Array.isArray(item.options) ? item.options.slice() : [];
+            for (let i = opts.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const tmp = opts[i];
+                opts[i] = opts[j];
+                opts[j] = tmp;
+            }
+            const qText = String(item.question || '').replace(/^【[^】]{0,80}】\s*/, '');
+            usedQuestionsMap.add(qText);
+            return {
+                question: qText,
+                options: opts,
+                correctAnswer: item.answer,
+                image: item.image || null,
+                _bankMeta: { id: item.id, unitKey: item.unitKey, unitId: op.id, fallback: 'climb' }
+            };
+        }
+
+        function climbChoiceOptions(correct) {
+            const ans = Number(correct);
+            const bag = [ans];
+            const seen = {};
+            seen[ans] = true;
+            const deltas = [1, -1, 2, -2, 3, 10, -10, 4, -3];
+            for (let i = 0; i < deltas.length && bag.length < 4; i++) {
+                const v = ans + deltas[i];
+                if (v < 0 || seen[v]) continue;
+                seen[v] = true;
+                bag.push(v);
+            }
+            let extra = 1;
+            while (bag.length < 4) {
+                const v = ans + 5 + extra;
+                extra += 1;
+                if (v < 0 || seen[v]) continue;
+                seen[v] = true;
+                bag.push(v);
+            }
+            for (let i = bag.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const tmp = bag[i];
+                bag[i] = bag[j];
+                bag[j] = tmp;
+            }
+            return bag.map(function (n) { return String(n); });
+        }
+
+        function climbProceduralQuestion(op, floor) {
+            const tier = Math.floor((Math.max(1, floor) - 1) / 4);
+            const cap = Math.min(80, 12 + tier * 6);
+            let last = null;
+            for (let attempt = 0; attempt < 8; attempt++) {
+                let a = 1;
+                let b = 1;
+                let ans = 0;
+                let stem = '';
+                if (!op || op.id === 'climb_add') {
+                    a = 1 + Math.floor(Math.random() * cap);
+                    b = 1 + Math.floor(Math.random() * cap);
+                    ans = a + b;
+                    stem = a + ' + ' + b + ' = ?';
+                } else if (op.id === 'climb_sub') {
+                    a = cap + Math.floor(Math.random() * cap);
+                    b = 1 + Math.floor(Math.random() * a);
+                    ans = a - b;
+                    stem = a + ' − ' + b + ' = ?';
+                } else if (op.id === 'climb_mul') {
+                    const hi = Math.min(12, 4 + tier);
+                    a = 2 + Math.floor(Math.random() * (hi - 1));
+                    b = 2 + Math.floor(Math.random() * (hi - 1));
+                    ans = a * b;
+                    stem = a + ' × ' + b + ' = ?';
+                } else {
+                    const hi = Math.min(12, 4 + tier);
+                    b = 2 + Math.floor(Math.random() * (hi - 1));
+                    ans = 2 + Math.floor(Math.random() * (hi - 1));
+                    a = b * ans;
+                    stem = a + ' ÷ ' + b + ' = ?';
+                }
+                const qText = '計算：' + stem;
+                last = {
+                    question: qText,
+                    options: climbChoiceOptions(ans),
+                    correctAnswer: String(ans),
+                    image: null
+                };
+                if (!usedQuestionsMap.has(qText)) {
+                    usedQuestionsMap.add(qText);
+                    return last;
+                }
+            }
+            if (last) usedQuestionsMap.add(last.question);
+            return last;
+        }
+
+        function generateClimbQuestion() {
+            const floor = climbBattleFloor || readClimbFloor(currentUser);
+            const op = climbOpForFloor(floor);
+            const fromBank = pickClimbBankQuestion(op);
+            if (fromBank && fromBank.options && fromBank.options.length >= 2 && fromBank.correctAnswer != null) {
+                return fromBank;
+            }
+            return climbProceduralQuestion(op, floor);
+        }
+
         function generateDynamicQuestion() {
+            if (isClimbMode) return generateClimbQuestion();
             const units = GRADE_UNITS[selectedGrade] || GRADE_UNITS['G1'];
             let currentUnitObj = units[0];
 
@@ -8064,8 +8452,22 @@
 
             let goldReward = 150;
             let expPackReward = 2;
+            let climbCleared = 0;
 
-            if (isRankedMode) {
+            if (isClimbMode) {
+                climbCleared = climbBattleFloor || readClimbFloor(currentUser);
+                const bestBefore = readClimbBest(currentUser);
+                const firstClear = climbCleared > bestBefore;
+                goldReward = 0;
+                expPackReward = 0;
+                if (firstClear) {
+                    const milestone = climbMilestoneReward(climbCleared);
+                    goldReward = milestone.gold;
+                    expPackReward = milestone.expPacks;
+                }
+                currentUser.adventureClimbBest = Math.max(bestBefore, climbCleared);
+                currentUser.adventureClimbFloor = climbCleared + 1;
+            } else if (isRankedMode) {
                 goldReward = 300;
                 currentUser.rankScore = Math.max(0, Math.floor(Number(currentUser.rankScore) || 0)) + Math.max(0, Math.floor(Number(currentRankedBonus) || 0));
             }
@@ -8084,7 +8486,21 @@
                 adventureBattleReportExtra('勝利', quizScore, currentQuizIndex, goldReward)
             ));
 
-            alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
+            if (isClimbMode) {
+                const op = climbOpForFloor(climbCleared);
+                let msg = `🎉 通過冒險塔第 ${climbCleared} 層（${op.name}）！`;
+                if (goldReward > 0 || expPackReward > 0) {
+                    msg += `\n里程碑獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！`;
+                } else {
+                    const nextM = nextClimbMilestone(climbCleared + 1);
+                    const upcoming = climbMilestoneReward(nextM);
+                    msg += `\n本層沒有里程碑獎勵。下一里程碑：第 ${nextM} 層（金幣 +${upcoming.gold}、EXP包 +${upcoming.expPacks}）。`;
+                }
+                msg += `\n下一層：第 ${climbCleared + 1} 層。`;
+                alert(msg);
+            } else {
+                alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
+            }
             exitBattle();
         }
 
@@ -8100,7 +8516,12 @@
             reportToTeacherSheet(buildStudentReportExtra(
                 adventureBattleReportExtra('失敗', quizScore, currentQuizIndex, 0)
             ));
-            alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
+            if (isClimbMode) {
+                const stay = climbBattleFloor || readClimbFloor(currentUser);
+                alert('💔 己方全數怪獸皆已倒下，挑戰失敗！\n停留在第 ' + stay + ' 層，可以再挑戰。');
+            } else {
+                alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
+            }
             exitBattle();
         }
 
@@ -8313,7 +8734,9 @@
 
         function exitBattle() {
             clearInterval(bossTimer);
-            switchView(isRankedMode ? 'ranked' : 'adventure');
+            if (isRankedMode) switchView('ranked');
+            else if (isClimbMode) switchView('adventure');
+            else switchView('training');
         }
 
         /* PVP 對決擂台：已停用（入口／房間邏輯已移除） */
