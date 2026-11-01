@@ -33,10 +33,12 @@ var SEASON_LENGTH_DAYS = 21;
 var SEASON_START_UTC_MS = Date.UTC(2026, 9, 25, 16, 0, 0, 0);
 var SEASON_MS = SEASON_LENGTH_DAYS * 24 * 60 * 60 * 1000;
 // 對照而家排位：勝一場 +300 金幣、+2 EXP 包，積分 +100／300／600／1200。
-// 21 日先派一次，頭名大約等於 10 場排位金幣 + 20 場 EXP，再加一隻限定怪獸。
+// 21 日先派一次。頭10名：聖光麒麟（名次 1…SEASON_KIRIN_MAX_RANK 各一隻）。
+// 第 11 名及以後唔發。已擁有唔再入一隻，改發 DUPLICATE_MONSTER_EXP。
 var SEASON_REWARD_GOLD = [0, 3000, 1800, 1800, 800, 800, 800, 800, 800, 800, 800];
 var SEASON_REWARD_EXP = [0, 40, 20, 20, 0, 0, 0, 0, 0, 0, 0];
 var SEASON_REWARD_MONSTER_ID = 'season_kirin';
+var SEASON_KIRIN_MAX_RANK = 10;
 var DUPLICATE_MONSTER_EXP = 5;
 var SEASON_GRADES = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'];
 var COL_MONSTER = 10;
@@ -206,21 +208,11 @@ function applyPendingGrants(sheet, row, profile, options) {
   if (addGold > 0) gold += addGold;
   if (addExp > 0) packs += addExp;
 
-  if (!Array.isArray(p.ownedMonsters)) p.ownedMonsters = [];
-  var grantedMonsters = [];
-  var convertedMonsters = [];
-  monsterIds.forEach(function (id) {
-    if (profileOwnsMonster_(p, id)) {
-      packs += DUPLICATE_MONSTER_EXP;
-      convertedMonsters.push(id);
-    } else {
-      p.ownedMonsters.push({ id: id, level: 1, exp: 0 });
-      grantedMonsters.push(id);
-    }
-  });
-
   p.gold = gold;
   p.expPacks = packs;
+  var monsterGrant = applyMonsterIdsToProfile_(p, monsterIds);
+  var grantedMonsters = monsterGrant.grantedMonsters;
+  var convertedMonsters = monsterGrant.convertedMonsters;
 
   // 只喺真正發放時先 bump updatedAt；零發放 login 唔好令舊金幣看起來「較新」
   if (hasGrants) {
@@ -594,6 +586,7 @@ function seasonPublicInfo_(now) {
     endMs: bounds.endMs,
     serverNowMs: n.getTime(),
     monsterId: SEASON_REWARD_MONSTER_ID,
+    kirinMaxRank: SEASON_KIRIN_MAX_RANK,
     duplicateExp: DUPLICATE_MONSTER_EXP,
     goldByRank: SEASON_REWARD_GOLD.slice(1),
     expByRank: SEASON_REWARD_EXP.slice(1)
@@ -602,12 +595,42 @@ function seasonPublicInfo_(now) {
 
 function rewardForRank_(rank) {
   var r = Math.floor(Number(rank) || 0);
-  if (r < 1 || r > 10) return { gold: 0, exp: 0, monsterId: '' };
+  // 頭10名：聖光麒麟。1…SEASON_KIRIN_MAX_RANK 各得 SEASON_REWARD_MONSTER_ID 一隻；第 11 名起唔發。
+  if (r < 1 || r > SEASON_KIRIN_MAX_RANK) return { gold: 0, exp: 0, monsterId: '' };
   return {
     gold: SEASON_REWARD_GOLD[r] || 0,
     exp: SEASON_REWARD_EXP[r] || 0,
-    // 頭 10 名均獲賽季限定怪獸（已擁有由客戶端／發放邏輯轉 EXP 包）
     monsterId: SEASON_REWARD_MONSTER_ID
+  };
+}
+
+/**
+ * 把頭10名：聖光麒麟（或其他待發放 id）寫入存檔。
+ * 已擁有同一 id 就唔再 push，改加 DUPLICATE_MONSTER_EXP，避免重複一隻搞壞帳戶。
+ */
+function applyMonsterIdsToProfile_(profile, monsterIds) {
+  var p = profile && typeof profile === 'object' ? profile : {};
+  if (!Array.isArray(p.ownedMonsters)) p.ownedMonsters = [];
+  var packs;
+  if (p.expPacks == null || p.expPacks === '') packs = 0;
+  else packs = Math.max(0, Math.floor(Number(p.expPacks) || 0));
+  var grantedMonsters = [];
+  var convertedMonsters = [];
+  (Array.isArray(monsterIds) ? monsterIds : []).forEach(function (id) {
+    if (!isSafeMonsterId_(id)) return;
+    if (profileOwnsMonster_(p, id)) {
+      packs += DUPLICATE_MONSTER_EXP;
+      convertedMonsters.push(id);
+    } else {
+      p.ownedMonsters.push({ id: String(id), level: 1, exp: 0 });
+      grantedMonsters.push(id);
+    }
+  });
+  p.expPacks = packs;
+  return {
+    profile: p,
+    grantedMonsters: grantedMonsters,
+    convertedMonsters: convertedMonsters
   };
 }
 
@@ -927,7 +950,13 @@ function patchAccountForSettlement_(sheet, rowNumber, epoch, rewardOrNull) {
 
 function winnersFromSnapshot_(rows) {
   return (rows || []).map(function (r) {
+    var rank = Math.floor(Number(r.rank) || 0);
     var monsterId = isSafeMonsterId_(r.monsterId) ? r.monsterId : '';
+    // 舊快照可能只記第 1 名怪獸。頭10名：聖光麒麟，未記 id 的 1…10 補上。
+    // 該賽季若已寫入 K 欄，applySeasonRewardToCells_ 會跳過，唔會重複發。
+    if (!monsterId && rank >= 1 && rank <= SEASON_KIRIN_MAX_RANK) {
+      monsterId = SEASON_REWARD_MONSTER_ID;
+    }
     return {
       key: r.key,
       grade: r.grade,

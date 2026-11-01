@@ -3216,7 +3216,7 @@
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png?v=d96b8d0d" alt=""></span>
                     </button>
                 </div>
-                <p id="home-season-line" class="island-season-line">賽季載入中…</p>
+                <p id="home-season-line" class="island-season-line">賽季載入中… · 頭10名：聖光麒麟</p>
             </nav>
 
             <!-- PVP 對決擂台：已停用 -->
@@ -3266,7 +3266,7 @@
                 </div>
                 <div class="border-t border-rose-500/20 pt-4 space-y-3">
                     <h4 class="text-xs font-black text-slate-300">排位賽季結算</h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／頭 10 限定怪獸 id），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。</p>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">結算已完結賽季：先快照各年級頭 10，再寫入待發放（金幣／EXP／頭10名：聖光麒麟），然後積分歸零。同一賽季可以再執行，不會重複發獎。進行中的賽季不會結算。已擁有聖光麒麟會改發 EXP 包。</p>
                     <div class="flex flex-wrap gap-2">
                         <button type="button" onclick="adminPreviewSeason()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs">預覽今季頭10</button>
                         <button type="button" onclick="adminSettleSeason()" class="ui-btn ui-btn--secondary-alt ui-btn--compact text-xs">結算已結束賽季</button>
@@ -3310,7 +3310,7 @@
                             <div id="season-epoch-label">第 1 賽季</div>
                             <div id="season-countdown">距離結算 …</div>
                         </div>
-                        <p id="season-reward-rules"></p>
+                        <p id="season-reward-rules">頭10名：聖光麒麟</p>
                     </div>
                 </div>
             </div>
@@ -3780,6 +3780,8 @@
         const SEASON_REWARD_GOLD = [0, 3000, 1800, 1800, 800, 800, 800, 800, 800, 800, 800];
         const SEASON_REWARD_EXP = [0, 40, 20, 20, 0, 0, 0, 0, 0, 0, 0];
         const SEASON_REWARD_MONSTER_ID = 'season_kirin';
+        // 頭10名：聖光麒麟。與 sheets-bridge-Code.gs SEASON_KIRIN_MAX_RANK 保持同步。
+        const SEASON_KIRIN_MAX_RANK = 10;
         const DUPLICATE_MONSTER_EXP = 5;
 
         let serverSeasonSkewMs = 0;
@@ -3811,13 +3813,17 @@
             return id || '限定怪獸';
         }
 
+        function seasonKirinRewardLabel() {
+            return '頭' + SEASON_KIRIN_MAX_RANK + '名：' + seasonMonsterName(SEASON_REWARD_MONSTER_ID);
+        }
+
         function seasonRewardRulesText() {
-            const m = seasonMonsterName(SEASON_REWARD_MONSTER_ID);
-            return '各年級分開計頭 10 名，每 ' + SEASON_LENGTH_DAYS + ' 日結算一次（香港時間）。'
-                + '頭 10 名均獲限定「' + m + '」（已擁有改發 ' + DUPLICATE_MONSTER_EXP + ' EXP包）。'
+            return seasonKirinRewardLabel() + '。'
+                + '各年級分開計，每 ' + SEASON_LENGTH_DAYS + ' 日結算一次（香港時間）。'
+                + '已擁有改發 ' + DUPLICATE_MONSTER_EXP + ' EXP包，唔會重複。'
                 + '第1名：' + SEASON_REWARD_GOLD[1] + ' 金幣 + ' + SEASON_REWARD_EXP[1] + ' EXP包。'
                 + '第2–3名：' + SEASON_REWARD_GOLD[2] + ' 金幣 + ' + SEASON_REWARD_EXP[2] + ' EXP包。'
-                + '第4–10名：' + SEASON_REWARD_GOLD[4] + ' 金幣。結算後積分歸零，下次登入領獎。';
+                + '第4–' + SEASON_KIRIN_MAX_RANK + '名：' + SEASON_REWARD_GOLD[4] + ' 金幣。結算後積分歸零，下次登入領獎。';
         }
 
         function formatDurationMs(ms) {
@@ -3884,7 +3890,7 @@
             }
             if (label) label.textContent = epochText;
             if (countdown) countdown.textContent = countText;
-            if (home) home.textContent = epochText + ' · ' + countText;
+            if (home) home.textContent = epochText + ' · ' + countText + ' · ' + seasonKirinRewardLabel();
         }
 
         function startSeasonCountdown() {
@@ -4719,7 +4725,7 @@
                 spd: 112,
                 skillText: '聖光麒麟裁決！',
                 imgKey: 'season_kirin',
-                desc: '各年級排位賽季頭 10 名限定。已擁有時獎勵改為 EXP 包，唔會抽卡抽出。'
+                desc: '各年級排位賽季頭10名：聖光麒麟。已擁有時獎勵改為 EXP 包，唔會抽卡抽出。'
             }
         ];
 
