@@ -1000,6 +1000,17 @@
             display: flex;
             flex-direction: column;
             gap: 0.9rem;
+            min-width: 0;
+            max-width: 100%;
+        }
+        /* Wide frames pan inside the column on small screens so type stays readable. */
+        .ranked-ornament {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            overscroll-behavior-x: contain;
         }
         .ranked-header h2,
         .ranked-card h4,
@@ -1078,42 +1089,51 @@
             font-size: 11px;
             font-weight: 800;
         }
+        /* Header frame 2246×342. Title + grade chip: open center (clear of gems ~0–23%,
+           book ~54%, seal, and the right scroll). Score: scroll blank ~79–91% × 33–69%. */
         .ranked-header {
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.6rem;
+            display: block;
             width: 100%;
-            aspect-ratio: 912 / 60;
-            padding: 0 33.5% 0 5.4%;
+            min-width: 720px;
+            aspect-ratio: 2246 / 342;
             background: url('assets/bg/ui-ranked-header-bar.png') center / 100% 100% no-repeat;
-            color: #f8ecd4;
+            color: #3e2914;
             container-type: inline-size;
         }
         .ranked-header__title {
+            position: absolute;
+            left: 23.5%;
+            width: 29.5%;
+            top: 28%;
+            height: 46%;
             min-width: 0;
             display: flex;
             align-items: center;
-            gap: 0.55rem;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 0.3rem 0.5rem;
+            text-align: center;
         }
         .ranked-header h2 {
             margin: 0;
             min-width: 0;
-            font-size: clamp(13px, 2.15cqi, 24px);
+            max-width: 100%;
+            font-size: clamp(13px, 1.8cqi, 22px);
             font-weight: 900;
-            color: #fff6e4;
-            text-shadow: 0 1px 0 #3a2412, 0 2px 6px rgba(0, 0, 0, 0.45);
+            line-height: 1.15;
+            color: #3a2412;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.85), 0 0 6px rgba(255, 248, 236, 0.9);
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         .ranked-chip {
-            flex: 0 0 auto;
-            font-size: clamp(9px, 1.15cqi, 12px);
+            flex: 0 1 auto;
+            max-width: 100%;
+            font-size: clamp(10px, 1.15cqi, 12px);
             font-weight: 900;
             color: #4a3014;
-            background: rgba(246, 224, 176, 0.94);
+            background: rgba(255, 248, 236, 0.94);
             border: 1px solid #c9923e;
             border-radius: 999px;
             padding: 0.1rem 0.5rem;
@@ -1121,31 +1141,47 @@
             text-shadow: none;
         }
         .ranked-header__score {
+            position: absolute;
+            left: 79.2%;
+            width: 11.4%;
+            top: 33%;
+            height: 36%;
             display: flex;
-            align-items: baseline;
-            gap: 0.35rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
             min-width: 0;
-            color: #ffe7b0;
-            text-shadow: 0 1px 0 #3a2412;
-            white-space: nowrap;
+            padding: 0 0.1rem;
+            color: #4a3014;
+            text-align: center;
+            text-shadow: none;
+            line-height: 1.05;
+            white-space: normal;
         }
         .ranked-header__score-label {
-            font-size: clamp(11px, 1.2cqi, 14px);
+            max-width: 100%;
+            font-size: clamp(9px, 1.2cqi, 13px);
             font-weight: 800;
-        }
-        .ranked-header__rank {
-            font-size: clamp(12px, 1.35cqi, 16px);
-            font-weight: 800;
-            color: #fff6d2;
+            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 12rem;
+        }
+        .ranked-header__rank {
+            max-width: 100%;
+            font-size: clamp(9px, 1.15cqi, 13px);
+            font-weight: 800;
+            color: #5c3d1c;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         #ranked-current-score {
-            font-size: clamp(16px, 2.7cqi, 30px);
+            font-size: clamp(14px, 2.05cqi, 26px);
             font-weight: 900;
-            color: #ffe08a;
+            color: #8a3f10;
             line-height: 1;
+            text-shadow: none;
             font-variant-numeric: tabular-nums;
         }
         .ranked-lead {
@@ -1155,45 +1191,91 @@
             line-height: 1.55;
         }
         .ranked-lead b { color: #8a3412; }
+        /* Season frame 2322×284. Copy sits in the clear center, inside the islands
+           (left island ~x<16% y<36%, right island ~x>86% y>52%). */
         .ranked-season {
+            position: relative;
+            display: block;
+            width: 100%;
+            min-width: 720px;
+            aspect-ratio: 2322 / 284;
+            background: url('assets/bg/ui-ranked-season-banner.png') center / 100% 100% no-repeat;
+            color: #4a3018;
+            container-type: inline-size;
+        }
+        .ranked-season__copy {
+            position: absolute;
+            left: 17%;
+            right: 15%;
+            top: 28%;
+            bottom: 17%;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            align-content: center;
             justify-content: space-between;
-            gap: 0.35rem 1.25rem;
-            width: 100%;
-            min-height: clamp(104px, 15vw, 156px);
-            padding: clamp(20px, 2.8vw, 30px) clamp(26px, 3.6vw, 46px);
-            background: url('assets/bg/ui-ranked-season-banner.png') center / 100% 100% no-repeat;
-            color: #4a3018;
+            gap: 0.15rem 1.1rem;
+            min-width: 0;
+            overflow: hidden;
         }
-        .ranked-season__main { min-width: 0; }
+        .ranked-season__main {
+            min-width: 0;
+            flex: 1 1 14rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.02rem;
+        }
         .ranked-season__kicker {
-            font-size: 10px;
+            font-size: clamp(10px, 1.15cqi, 12px);
             font-weight: 900;
             letter-spacing: 0.08em;
             color: #8a5a28;
         }
         #season-epoch-label {
-            font-size: clamp(18px, 2.1vw, 26px);
+            font-size: clamp(15px, 2.05cqi, 26px);
             font-weight: 900;
             color: #3a2412;
-            line-height: 1.15;
+            line-height: 1.1;
         }
         #season-countdown {
-            margin-top: 0.15rem;
-            font-size: 12px;
+            margin-top: 0.08rem;
+            font-size: clamp(11px, 1.25cqi, 13px);
             font-weight: 800;
             color: #7a4a1c;
         }
         #season-reward-rules {
-            flex: 1 1 16rem;
+            flex: 1 1 20rem;
             margin: 0;
-            max-width: 46rem;
-            font-size: 11px;
-            line-height: 1.45;
+            min-width: 0;
+            max-width: none;
+            font-size: clamp(10px, 1.15cqi, 12.5px);
+            line-height: 1.35;
             color: #5c3e24;
-            text-align: right;
+            text-align: left;
+        }
+        @container (max-width: 1040px) {
+            .ranked-season__copy {
+                flex-flow: column nowrap;
+                align-items: stretch;
+                justify-content: center;
+                gap: 0.1rem;
+            }
+            .ranked-season__main {
+                flex: 0 0 auto;
+                width: 100%;
+                flex-flow: row wrap;
+                align-items: baseline;
+                column-gap: 0.55rem;
+                row-gap: 0;
+            }
+            #season-countdown { margin-top: 0; }
+            #season-reward-rules {
+                flex: 0 1 auto;
+                width: 100%;
+                font-size: clamp(9px, 1.2cqi, 12px);
+                line-height: 1.28;
+            }
         }
         .ranked-section-title {
             display: flex;
@@ -1491,63 +1573,12 @@
             color: #f6ead8;
             padding: 0.75rem;
         }
-        @media (min-width: 1024px) {
-            .ranked-header__score-label { font-size: 13px; }
-            .ranked-header__rank { font-size: 15px; }
-            #ranked-current-score { font-size: 28px; }
-        }
         @media (min-width: 1280px) {
             .ranked-layout {
                 grid-template-columns: minmax(0, 1fr) 320px;
             }
         }
-        @media (max-width: 900px) {
-            #season-reward-rules {
-                text-align: left;
-                flex-basis: 100%;
-            }
-        }
         @media (max-width: 720px) {
-            .ranked-header {
-                aspect-ratio: auto;
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                padding: 0;
-                background: none;
-                gap: 0.45rem;
-                container-type: normal;
-            }
-            .ranked-header::before {
-                content: "";
-                display: block;
-                width: 100%;
-                aspect-ratio: 912 / 60;
-                background: url('assets/bg/ui-ranked-header-bar.png') center / 100% 100% no-repeat;
-            }
-            .ranked-header__title,
-            .ranked-header__score {
-                background: linear-gradient(180deg, rgba(248, 232, 204, 0.96), rgba(228, 200, 154, 0.96));
-                color: #3d2914;
-                border-radius: 12px;
-                padding: 0.5rem 0.75rem;
-                text-shadow: none;
-            }
-            .ranked-header h2,
-            .ranked-header__score,
-            .ranked-header__score-label,
-            .ranked-header__rank,
-            #ranked-current-score {
-                color: #3d2914;
-                text-shadow: none;
-            }
-            .ranked-header h2 {
-                white-space: normal;
-                font-size: 1.05rem;
-            }
-            #ranked-current-score { font-size: 1.65rem; color: #8a4b12; }
-            .ranked-header__score { justify-content: space-between; }
-            .ranked-header__rank { max-width: none; }
             .ranked-cards { grid-template-columns: minmax(0, 1fr); }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -2505,28 +2536,34 @@
                 </button>
             </div>
 
-            <header class="ranked-header">
-                <div class="ranked-header__title">
-                    <h2>全服年級排位爭霸賽</h2>
-                    <span id="ranked-user-grade-badge" class="ranked-chip">小六專屬 (鎖定)</span>
-                </div>
-                <div class="ranked-header__score">
-                    <span class="ranked-header__score-label">目前個人積分</span>
-                    <span id="ranked-current-score">0</span>
-                    <span id="ranked-current-rank" class="ranked-header__rank">段位: 數理新秀</span>
-                </div>
-            </header>
+            <div class="ranked-ornament">
+                <header class="ranked-header">
+                    <div class="ranked-header__title">
+                        <h2>全服年級排位爭霸賽</h2>
+                        <span id="ranked-user-grade-badge" class="ranked-chip">小六專屬 (鎖定)</span>
+                    </div>
+                    <div class="ranked-header__score">
+                        <span class="ranked-header__score-label">目前個人積分</span>
+                        <span id="ranked-current-score">0</span>
+                        <span id="ranked-current-rank" class="ranked-header__rank">段位: 數理新秀</span>
+                    </div>
+                </header>
+            </div>
             <p class="ranked-lead">
                 排位賽分 4 關：<b>10LV(水系)</b>、<b>20LV(火系)</b>、<b>30LV(草系)</b>、<b>40LV(雷系)</b>！每關皆由 2 隻對應屬性巨型 BOSS 駐守！
             </p>
 
-            <div id="season-banner" class="ranked-season">
-                <div class="ranked-season__main">
-                    <div class="ranked-season__kicker">排位賽季（香港時間）</div>
-                    <div id="season-epoch-label">第 1 賽季</div>
-                    <div id="season-countdown">距離結算 …</div>
+            <div class="ranked-ornament">
+                <div id="season-banner" class="ranked-season">
+                    <div class="ranked-season__copy">
+                        <div class="ranked-season__main">
+                            <div class="ranked-season__kicker">排位賽季（香港時間）</div>
+                            <div id="season-epoch-label">第 1 賽季</div>
+                            <div id="season-countdown">距離結算 …</div>
+                        </div>
+                        <p id="season-reward-rules"></p>
+                    </div>
                 </div>
-                <p id="season-reward-rules"></p>
             </div>
 
             <div class="ranked-layout">
