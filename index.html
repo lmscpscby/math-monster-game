@@ -5506,7 +5506,8 @@
 
         function getBattleBgVideoEl() { return document.getElementById('battle-bg-video'); }
 
-        // One plate per battle entry. Parchment is the existing 1920 file; the other four are thematic plates.
+        // One plate per non-ranked battle entry. Parchment plus four thematic plates.
+        // 積分爭霸賽 water/fire/grass/thunder 唔入呢個池。
         const BATTLE_STAGE_BG_VERSION = '20261101';
         const BATTLE_STAGE_BACKGROUNDS = [
             'assets/bg/ui-battle-stage-bg-1920.png',
@@ -5516,15 +5517,70 @@
             'assets/bg/ui-battle-stage-bg-arena-1920.png'
         ];
 
+        /* RANKED_ATTRIBUTE_STAGE_BG_START
+           積分爭霸賽屬性戰場。
+           Stage key（BOSS 等級 10/20/30/40）→ element id（water/fire/grass/thunder）。
+           中文別名 水/火/草/雷（同 水系/火系/草系/雷系）都解到同一個 element id。
+           v = 該 PNG SHA-256 頭 8 個 hex。
+        */
+        const RANKED_STAGE_ELEMENT = {
+            10: 'water',
+            20: 'fire',
+            30: 'grass',
+            40: 'thunder'
+        };
+        const RANKED_ATTRIBUTE_STAGE_BG = {
+            water:   { path: 'assets/bg/ui-battle-stage-bg-water-1920.png',   v: 'e6fdc7f4' },
+            fire:    { path: 'assets/bg/ui-battle-stage-bg-fire-1920.png',    v: '268edebd' },
+            grass:   { path: 'assets/bg/ui-battle-stage-bg-grass-1920.png',   v: 'fb45886f' },
+            thunder: { path: 'assets/bg/ui-battle-stage-bg-thunder-1920.png', v: 'cbd3e935' }
+        };
+        const RANKED_ELEMENT_ALIASES = {
+            water: 'water',
+            fire: 'fire',
+            grass: 'grass',
+            thunder: 'thunder',
+            '水': 'water',
+            '火': 'fire',
+            '草': 'grass',
+            '雷': 'thunder',
+            '水系': 'water',
+            '火系': 'fire',
+            '草系': 'grass',
+            '雷系': 'thunder'
+        };
+
+        function rankedElementId(stageOrElement) {
+            if (stageOrElement == null || stageOrElement === '') return '';
+            const raw = String(stageOrElement).trim();
+            if (Object.prototype.hasOwnProperty.call(RANKED_STAGE_ELEMENT, raw)) {
+                return RANKED_STAGE_ELEMENT[raw];
+            }
+            const asNum = Number(raw);
+            if (raw !== '' && Number.isFinite(asNum) && Object.prototype.hasOwnProperty.call(RANKED_STAGE_ELEMENT, asNum)) {
+                return RANKED_STAGE_ELEMENT[asNum];
+            }
+            if (RANKED_ELEMENT_ALIASES[raw]) return RANKED_ELEMENT_ALIASES[raw];
+            const lower = raw.toLowerCase();
+            if (RANKED_ELEMENT_ALIASES[lower]) return RANKED_ELEMENT_ALIASES[lower];
+            return '';
+        }
+
+        function rankedAttributeStageUrl(stageOrElement) {
+            const elementId = rankedElementId(stageOrElement);
+            const plate = elementId && RANKED_ATTRIBUTE_STAGE_BG[elementId];
+            if (!plate) return '';
+            return plate.path + '?v=' + plate.v;
+        }
+        /* RANKED_ATTRIBUTE_STAGE_BG_END */
+
         function battleStageBackgroundUrl(path) {
             return path + '?v=' + BATTLE_STAGE_BG_VERSION;
         }
 
-        function applyRandomBattleStage() {
+        function applyBattleStageBackground(url) {
             const arena = document.getElementById('pokemon-battle-arena');
-            if (!arena || !BATTLE_STAGE_BACKGROUNDS.length) return;
-            const path = BATTLE_STAGE_BACKGROUNDS[Math.floor(Math.random() * BATTLE_STAGE_BACKGROUNDS.length)];
-            const url = battleStageBackgroundUrl(path);
+            if (!arena || !url) return;
             arena.style.backgroundImage = "url('" + url + "')";
             const video = getBattleBgVideoEl();
             if (video) {
@@ -5532,6 +5588,40 @@
                 video.removeAttribute('src');
                 video.style.display = 'none';
             }
+        }
+
+        function applyRandomBattleStage() {
+            const arena = document.getElementById('pokemon-battle-arena');
+            if (!arena || !BATTLE_STAGE_BACKGROUNDS.length) return;
+            const path = BATTLE_STAGE_BACKGROUNDS[Math.floor(Math.random() * BATTLE_STAGE_BACKGROUNDS.length)];
+            applyBattleStageBackground(battleStageBackgroundUrl(path));
+        }
+
+        /** Fixed plate for a ranked attribute fight. False when the key is not one of the four elements. */
+        function applyRankedAttributeBattleStage(stageOrElement) {
+            const url = rankedAttributeStageUrl(stageOrElement);
+            if (!url) return false;
+            applyBattleStageBackground(url);
+            return true;
+        }
+
+        /**
+         * Ranked water/fire/grass/thunder (stage key or element id) uses the matching plate
+         * and does not call applyRandomBattleStage. Adventure, training, and any other
+         * entry still draw from the five-image pool.
+         */
+        function applyBattleStageForEntry() {
+            if (isRankedMode) {
+                const fromStage = rankedElementId(pendingBossLv);
+                const boss = rankedBossQueue && rankedBossQueue[0];
+                const fromBoss = rankedElementId(boss && boss.element);
+                const elementId = fromStage || fromBoss;
+                if (elementId) {
+                    applyRankedAttributeBattleStage(elementId);
+                    return;
+                }
+            }
+            applyRandomBattleStage();
         }
 
         function prefersReducedMotion() {
@@ -7480,7 +7570,7 @@
             usedWordQuestionIds.clear();
             lastQuestionTypeIndex = -1;
 
-            applyRandomBattleStage();
+            applyBattleStageForEntry();
             switchView('battle');
             paintBattleContextLabels();
             updateBattleUI();
