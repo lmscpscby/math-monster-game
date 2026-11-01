@@ -1806,6 +1806,7 @@
         .adventure-banner h2,
         .adventure-card h4,
         .adventure-card__plaque,
+        .adventure-tower-card__title,
         .grade-tab-btn {
             font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
         }
@@ -2084,10 +2085,77 @@
         @media (max-width: 720px) {
             .adventure-cards { grid-template-columns: minmax(0, 1fr); }
         }
+        /* Four-tower picker uses the same 1224×692 scenic frame. The PNG keeps
+           a blank top plaque and a bottom dark band; the tower name is HTML. */
+        .adventure-tower-picker.hidden,
+        .adventure-unit-flow.hidden { display: none; }
+        .adventure-unit-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            min-width: 0;
+        }
+        .adventure-tower-card {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1224 / 692;
+            container-type: inline-size;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            filter: drop-shadow(0 10px 14px rgba(70, 42, 16, 0.28));
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.15s ease;
+        }
+        .adventure-tower-card__frame {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            transition: filter 0.15s ease;
+        }
+        .adventure-tower-card--darkforest .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-darkforest.png'); }
+        .adventure-tower-card--sunkencity .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-sunkencity.png'); }
+        .adventure-tower-card--cloudrealm .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-cloudrealm.png'); }
+        .adventure-tower-card--training .adventure-tower-card__frame { background-image: url('assets/bg/ui-adventure-tower-training.png'); }
+        .adventure-tower-card__title {
+            position: absolute;
+            left: 14%;
+            right: 14%;
+            top: 86%;
+            bottom: 7.5%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: #fff8ec;
+            font-weight: 900;
+            font-size: clamp(18px, 4.6cqi, 32px);
+            letter-spacing: 0.12em;
+            line-height: 1;
+            text-shadow: 0 1px 2px rgba(20, 8, 4, 0.9);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .adventure-banner h2 span.is-off { display: none; }
+        .adventure-tower-card:hover .adventure-tower-card__frame { filter: brightness(1.06); }
+        .adventure-tower-card:active { transform: translateY(1px); }
+        .adventure-tower-card:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 3px;
+        }
         @media (prefers-reduced-motion: reduce) {
             .adventure-back,
             .grade-tab-btn,
-            .adventure-card__cta { transition: none; }
+            .adventure-card__cta,
+            .adventure-tower-card,
+            .adventure-tower-card__frame { transition: none; }
         }
 
         /* Dual-BOSS team picker keeps the ranked parchment treatment.
@@ -2932,7 +3000,7 @@
                             排位賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）！冒險模式 BOSS 隨機登場，小數題目完整保留小數點！
                         </p>
                     </div>
-                    <button onclick="switchView('adventure')" class="lobby-hero-cta px-6 py-3 text-white font-black text-sm rounded-2xl flex items-center space-x-2 active:scale-95 transition-all">
+                    <button onclick="enterAdventure()" class="lobby-hero-cta px-6 py-3 text-white font-black text-sm rounded-2xl flex items-center space-x-2 active:scale-95 transition-all">
                         <i class="fa-solid fa-play"></i>
                         <span>開始冒險</span>
                     </button>
@@ -2947,7 +3015,7 @@
                 </div>
                 <div class="island-stage">
                     <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg" alt="">
-                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="switchView('adventure')" aria-label="冒險塔，進入數學冒險">
+                    <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，進入數學冒險">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分排位鬥場，進入排位賽">
@@ -3203,31 +3271,52 @@
             </div>
         </section>
 
-        <!-- VIEW 4: MATHEMATICS ADVENTURE STAGES -->
+        <!-- VIEW 4: MATHEMATICS ADVENTURE — tower picker, then grade / unit stages -->
         <section id="view-adventure" class="hidden adventure-view">
             <div>
-                <button type="button" onclick="switchView('home')" class="adventure-back">
-                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>返回主選單
+                <button type="button" onclick="adventureGoBack()" class="adventure-back">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span id="adventure-back-label">返回主選單</span>
                 </button>
             </div>
 
             <header class="adventure-banner">
                 <div class="adventure-banner__copy">
-                    <h2>選擇數學冒險單元<span>(2隻怪獸登場，BOSS等級動態匹配)</span></h2>
-                    <p>選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！</p>
+                    <h2 id="adventure-banner-title">選擇冒險塔<span id="adventure-banner-sub" class="is-off"></span></h2>
+                    <p id="adventure-banner-lead">揀一座塔，再選年級同單元開始挑戰。</p>
                 </div>
             </header>
 
-            <div class="adventure-tabs" role="tablist" aria-label="年級">
-                <button type="button" id="grade-btn-G1" role="tab" aria-pressed="true" onclick="selectGrade('G1')" class="grade-tab-btn is-active">小一 (G1)</button>
-                <button type="button" id="grade-btn-G2" role="tab" aria-pressed="false" onclick="selectGrade('G2')" class="grade-tab-btn">小二 (G2)</button>
-                <button type="button" id="grade-btn-G3" role="tab" aria-pressed="false" onclick="selectGrade('G3')" class="grade-tab-btn">小三 (G3)</button>
-                <button type="button" id="grade-btn-G4" role="tab" aria-pressed="false" onclick="selectGrade('G4')" class="grade-tab-btn">小四 (G4)</button>
-                <button type="button" id="grade-btn-G5" role="tab" aria-pressed="false" onclick="selectGrade('G5')" class="grade-tab-btn">小五 (G5)</button>
-                <button type="button" id="grade-btn-G6" role="tab" aria-pressed="false" onclick="selectGrade('G6')" class="grade-tab-btn">小六 (G6)</button>
+            <div id="adventure-tower-picker" class="adventure-cards adventure-tower-picker" role="group" aria-label="冒險塔">
+                <button type="button" class="adventure-tower-card adventure-tower-card--darkforest" onclick="selectAdventureTower('darkforest')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__title">幽暗密林</span>
+                </button>
+                <button type="button" class="adventure-tower-card adventure-tower-card--sunkencity" onclick="selectAdventureTower('sunkencity')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__title">沉沒古城</span>
+                </button>
+                <button type="button" class="adventure-tower-card adventure-tower-card--cloudrealm" onclick="selectAdventureTower('cloudrealm')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__title">雲端秘境</span>
+                </button>
+                <button type="button" class="adventure-tower-card adventure-tower-card--training" onclick="selectAdventureTower('training')">
+                    <span class="adventure-tower-card__frame" aria-hidden="true"></span>
+                    <span class="adventure-tower-card__title">訓練場</span>
+                </button>
             </div>
 
-            <div id="strand-cards-grid" class="adventure-cards">
+            <div id="adventure-unit-flow" class="adventure-unit-flow hidden">
+                <div class="adventure-tabs" role="tablist" aria-label="年級">
+                    <button type="button" id="grade-btn-G1" role="tab" aria-pressed="true" onclick="selectGrade('G1')" class="grade-tab-btn is-active">小一 (G1)</button>
+                    <button type="button" id="grade-btn-G2" role="tab" aria-pressed="false" onclick="selectGrade('G2')" class="grade-tab-btn">小二 (G2)</button>
+                    <button type="button" id="grade-btn-G3" role="tab" aria-pressed="false" onclick="selectGrade('G3')" class="grade-tab-btn">小三 (G3)</button>
+                    <button type="button" id="grade-btn-G4" role="tab" aria-pressed="false" onclick="selectGrade('G4')" class="grade-tab-btn">小四 (G4)</button>
+                    <button type="button" id="grade-btn-G5" role="tab" aria-pressed="false" onclick="selectGrade('G5')" class="grade-tab-btn">小五 (G5)</button>
+                    <button type="button" id="grade-btn-G6" role="tab" aria-pressed="false" onclick="selectGrade('G6')" class="grade-tab-btn">小六 (G6)</button>
+                </div>
+
+                <div id="strand-cards-grid" class="adventure-cards">
+                </div>
             </div>
         </section>
 
@@ -4885,6 +4974,14 @@
 
         let currentUser = null;
         let selectedGrade = 'G1';
+        /** null = four-tower picker. Story towers reuse GRADE_UNITS; ids keep saves apart. */
+        let selectedAdventureTower = null;
+        const ADVENTURE_TOWERS = [
+            { id: 'darkforest', name: '幽暗密林' },
+            { id: 'sunkencity', name: '沉沒古城' },
+            { id: 'cloudrealm', name: '雲端秘境' },
+            { id: 'training', name: '訓練場' }
+        ];
         let activeStrand = null;
         let bossTimer = null;
         let bossAttackCountdown = 20;
@@ -5871,6 +5968,7 @@
             if (viewName === 'monsters') renderMonsterCollection();
             if (viewName === 'ranked') renderLeaderboard();
             if (viewName === 'home') updateAdminUiVisibility();
+            if (viewName === 'adventure') showAdventureStage(selectedAdventureTower ? 'units' : 'towers');
         }
 
         function drawGacha(count) {
@@ -6328,6 +6426,101 @@
             } finally {
                 feedExpBusy = false;
             }
+        }
+
+        function adventureTowerById(id) {
+            for (let i = 0; i < ADVENTURE_TOWERS.length; i++) {
+                if (ADVENTURE_TOWERS[i].id === id) return ADVENTURE_TOWERS[i];
+            }
+            return null;
+        }
+
+        /** Teacher-report key. Question banks stay on the bare unit id. */
+        function adventureProgressKey(towerId, unitId) {
+            if (!towerId || !unitId) return '';
+            return String(towerId) + ':' + String(unitId);
+        }
+
+        function adventureBattleReportExtra(result, correct, totalQuestions, goldDelta) {
+            const extra = {
+                mode: isRankedMode ? '排位' : '冒險',
+                unit: currentBattleUnitLabel(),
+                result: result,
+                correct: correct,
+                totalQuestions: totalQuestions,
+                goldDelta: goldDelta
+            };
+            if (!isRankedMode) {
+                extra.tower = selectedAdventureTower || '';
+                extra.progressKey = adventureProgressKey(selectedAdventureTower, pendingStrandId);
+            }
+            return extra;
+        }
+
+        function showAdventureStage(stage) {
+            const picker = document.getElementById('adventure-tower-picker');
+            const units = document.getElementById('adventure-unit-flow');
+            const title = document.getElementById('adventure-banner-title');
+            const sub = document.getElementById('adventure-banner-sub');
+            const lead = document.getElementById('adventure-banner-lead');
+            const backLabel = document.getElementById('adventure-back-label');
+            const tower = adventureTowerById(selectedAdventureTower);
+            const showUnits = stage === 'units' && !!tower;
+            if (picker) picker.classList.toggle('hidden', showUnits);
+            if (units) units.classList.toggle('hidden', !showUnits);
+            if (showUnits) {
+                if (title) title.firstChild.nodeValue = tower.name;
+                if (sub) {
+                    sub.textContent = '(2隻怪獸登場，BOSS等級動態匹配)';
+                    sub.classList.remove('is-off');
+                }
+                if (lead) lead.textContent = '選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！';
+                if (backLabel) backLabel.textContent = '返回選塔';
+                const grid = document.getElementById('strand-cards-grid');
+                if (grid && !grid.childElementCount) renderStrandsGrid();
+            } else {
+                selectedAdventureTower = null;
+                if (title) title.firstChild.nodeValue = '選擇冒險塔';
+                if (sub) {
+                    sub.textContent = '';
+                    sub.classList.add('is-off');
+                }
+                if (lead) lead.textContent = '揀一座塔，再選年級同單元開始挑戰。';
+                if (backLabel) backLabel.textContent = '返回主選單';
+            }
+        }
+
+        function enterAdventure() {
+            selectedAdventureTower = null;
+            switchView('adventure');
+        }
+
+        function selectAdventureTower(towerId) {
+            if (!adventureTowerById(towerId)) return;
+            selectedAdventureTower = towerId;
+            showAdventureStage('units');
+        }
+
+        function adventureGoBack() {
+            if (selectedAdventureTower) {
+                selectedAdventureTower = null;
+                showAdventureStage('towers');
+                return;
+            }
+            switchView('home');
+        }
+
+        function paintBattleContextLabels() {
+            const tag = document.getElementById('battle-strand-tag');
+            const title = document.getElementById('battle-title');
+            if (isRankedMode) {
+                if (tag) tag.textContent = '單元挑戰';
+                if (title) title.textContent = '數學關卡挑戰';
+                return;
+            }
+            const tower = adventureTowerById(selectedAdventureTower);
+            if (tag) tag.textContent = tower ? tower.name : '單元挑戰';
+            if (title) title.textContent = currentBattleUnitLabel() || '數學關卡挑戰';
         }
 
         function selectGrade(grade) {
@@ -6965,6 +7158,7 @@
             lastQuestionTypeIndex = -1;
 
             switchView('battle');
+            paintBattleContextLabels();
             updateBattleUI();
             playBattleEntrance('player');
             playBattleEntrance('enemy');
@@ -7886,14 +8080,9 @@
 
             saveCurrentUserData();
 
-            reportToTeacherSheet(buildStudentReportExtra({
-                mode: isRankedMode ? '排位' : '冒險',
-                unit: currentBattleUnitLabel(),
-                result: '勝利',
-                correct: quizScore,
-                totalQuestions: currentQuizIndex,
-                goldDelta: goldReward
-            }));
+            reportToTeacherSheet(buildStudentReportExtra(
+                adventureBattleReportExtra('勝利', quizScore, currentQuizIndex, goldReward)
+            ));
 
             alert(`🎉 恭喜擊敗所有 BOSS 獲得勝利！\n獲取獎勵：+${goldReward} 金幣，+${expPackReward} 包 EXP 包！${isRankedMode ? `\n排位積分 +${currentRankedBonus}！` : ''}`);
             exitBattle();
@@ -7908,14 +8097,9 @@
             const optionsGrid = document.getElementById('quiz-options-grid');
             if (optionsGrid) optionsGrid.innerHTML = '';
 
-            reportToTeacherSheet(buildStudentReportExtra({
-                mode: isRankedMode ? '排位' : '冒險',
-                unit: currentBattleUnitLabel(),
-                result: '失敗',
-                correct: quizScore,
-                totalQuestions: currentQuizIndex,
-                goldDelta: 0
-            }));
+            reportToTeacherSheet(buildStudentReportExtra(
+                adventureBattleReportExtra('失敗', quizScore, currentQuizIndex, 0)
+            ));
             alert('💔 己方全數怪獸皆已倒下，挑戰失敗！');
             exitBattle();
         }
