@@ -1043,23 +1043,23 @@
             pointer-events: none;
             user-select: none;
         }
-        /* Lobby map v4: wood nameplate centers are % of the stage (approximate; fine-tune later). */
-        .island-stage { --label-h: clamp(30px, 7.8%, 50px); }
-        .island-hotspot--adventure { --x: 52%; --y: 28%; --delay: 0s; --bob-dur: 2.5s; --plate-w: 180; --plate-h: 56; }
-        .island-hotspot--arena { --x: 28%; --y: 48%; --delay: 0.35s; --bob-dur: 2.8s; --plate-w: 256; --plate-h: 56; }
-        .island-hotspot--training { --x: 22%; --y: 78%; --delay: 0.7s; --bob-dur: 2.3s; --plate-w: 182; --plate-h: 55; }
-        .island-hotspot--gacha { --x: 82%; --y: 32%; --delay: 0.15s; --bob-dur: 2.6s; --plate-w: 205; --plate-h: 55; }
-        .island-hotspot--recreation { --x: 78%; --y: 78%; --delay: 1.05s; --bob-dur: 2.9s; --plate-w: 224; --plate-h: 55; }
-        .island-hotspot--darkforest { --x: 18%; --y: 22%; --delay: 0.5s; --bob-dur: 2.4s; --plate-w: 274; --plate-h: 57; }
-        .island-hotspot--cloudrealm { --x: 62%; --y: 12%; --delay: 0.9s; --bob-dur: 3.1s; --plate-w: 256; --plate-h: 53; }
-        .island-hotspot--sunkencity { --x: 48%; --y: 88%; --delay: 1.25s; --bob-dur: 2.7s; --plate-w: 292; --plate-h: 55; }
+        /* Crisp plates (2026-11-01) are 120px tall. Display ~half that so type matches the old ~56px plates. --plate-ratio is the PNG pixel size. */
+        .island-stage { --label-h: clamp(36px, 9.7%, 60px); }
+        .island-hotspot--adventure { --x: 52%; --y: 28%; --delay: 0s; --bob-dur: 2.5s; --plate-ratio: 280 / 120; }
+        .island-hotspot--arena { --x: 28%; --y: 48%; --delay: 0.35s; --bob-dur: 2.8s; --plate-ratio: 376 / 120; }
+        .island-hotspot--training { --x: 22%; --y: 78%; --delay: 0.7s; --bob-dur: 2.3s; --plate-ratio: 280 / 120; }
+        .island-hotspot--gacha { --x: 82%; --y: 32%; --delay: 0.15s; --bob-dur: 2.6s; --plate-ratio: 328 / 120; }
+        .island-hotspot--recreation { --x: 78%; --y: 78%; --delay: 1.05s; --bob-dur: 2.9s; --plate-ratio: 376 / 120; }
+        .island-hotspot--darkforest { --x: 18%; --y: 22%; --delay: 0.5s; --bob-dur: 2.4s; --plate-ratio: 568 / 120; }
+        .island-hotspot--cloudrealm { --x: 62%; --y: 12%; --delay: 0.9s; --bob-dur: 3.1s; --plate-ratio: 568 / 120; }
+        .island-hotspot--sunkencity { --x: 48%; --y: 88%; --delay: 1.25s; --bob-dur: 2.7s; --plate-ratio: 568 / 120; }
         .island-hotspot {
             position: absolute;
             left: var(--x);
             top: var(--y);
             height: var(--label-h);
-            width: calc(var(--label-h) * var(--plate-w) / var(--plate-h));
-            aspect-ratio: auto;
+            width: auto;
+            aspect-ratio: var(--plate-ratio);
             z-index: 2;
             transform: translate(-50%, -50%);
             transition: transform 0.18s ease, opacity 0.18s ease;
@@ -1080,6 +1080,12 @@
             opacity: 0.55;
             cursor: not-allowed;
             z-index: 2;
+        }
+        /* 待開發 tower plates already carry the semi-transparent treatment. */
+        .island-hotspot--darkforest,
+        .island-hotspot--cloudrealm,
+        .island-hotspot--sunkencity {
+            opacity: 1;
         }
         .island-hotspot:not(.island-hotspot--locked) {
             z-index: 3;
@@ -1133,8 +1139,8 @@
         }
         .island-codex-btn {
             display: block;
-            height: 38px;
-            width: calc(38px * 240 / 65);
+            height: 60px;
+            width: calc(60px * 240 / 120);
             margin: 0;
             padding: 0;
             border: 0;
@@ -1204,10 +1210,15 @@
         @media (max-width: 720px) {
             .island-stage {
                 width: 100%;
-                --label-h: clamp(22px, 12%, 32px);
+                --label-h: clamp(28px, 14.5%, 40px);
             }
+            .island-hotspot--darkforest { --x: 22%; }
             .island-hub-bar {
                 width: 100%;
+            }
+            .island-codex-btn {
+                height: 40px;
+                width: calc(40px * 240 / 120);
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -3175,34 +3186,34 @@
             <nav class="island-hub" aria-label="島嶼大廳">
                 <div class="island-hub-bar">
                     <button type="button" class="island-codex-btn" onclick="switchView('monsters')" aria-label="圖鑑，進入怪獸圖鑑與隊伍">
-                        <img src="assets/bg/ui-btn-codex-small.png" alt="">
+                        <img src="assets/bg/ui-btn-codex-small.png?v=2dc0a165" alt="">
                     </button>
                 </div>
                 <div class="island-stage">
                     <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg" alt="">
                     <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，無盡爬層">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png?v=559d001e" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分爭霸賽，進入積分塔">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-arena.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-arena.png?v=f37ad0e6" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--training" onclick="enterTraining()" aria-label="訓練場，分單元挑戰">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-training.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-training.png?v=95557e97" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="神獸抽蛋，進入抽卡">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-gacha.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-gacha.png?v=20fabfde" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--recreation island-hotspot--locked" data-locked-tip="即將開放" onclick="showIslandLockedTip(this)" aria-label="小小遊憩區，即將開放">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-recreation.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-recreation.png?v=b67d76ad" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--darkforest island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="幽暗密林，待開發">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-darkforest.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-darkforest.png?v=af3a4131" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--cloudrealm island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="雲端秘境，待開發">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-cloudrealm.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-cloudrealm.png?v=00bf3990" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--sunkencity island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="沉沒古城，待開發">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png" alt=""></span>
+                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png?v=d96b8d0d" alt=""></span>
                     </button>
                 </div>
                 <p id="home-season-line" class="island-season-line">賽季載入中…</p>
