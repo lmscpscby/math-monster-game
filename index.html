@@ -420,7 +420,7 @@
         #pokemon-battle-arena.neon-stage {
             /* Dreamy floating-island stage. Crystal-cave loop stays in the markup (hidden) so it can be restored. */
             background-color: #f6e2c4;
-            background-image: url('assets/bg/ui-battle-stage-bg-1920.png');
+            background-image: url('assets/bg/ui-battle-stage-bg-1920.png?v=1498b8b7');
             background-size: cover;
             background-position: center 72%;
             background-repeat: no-repeat;
@@ -3484,7 +3484,7 @@
             <!-- Arena clusters stay diagonal: enemy UR (plate|sprite), player LL (sprite|plate). -->
             <div id="pokemon-battle-arena" class="neon-stage poke-stage relative w-full overflow-hidden h-[42vh] md:h-[48vh] max-h-[500px] min-h-[280px]">
                 <!-- Crystal-cave loop kept for restore. display:none also makes playBattleBgVideo return early. -->
-                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline preload="none" poster="assets/bg/ui-battle-stage-bg-1920.png" style="display:none" aria-hidden="true">
+                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline preload="none" poster="assets/bg/ui-battle-stage-bg-1920.png?v=1498b8b7" style="display:none" aria-hidden="true">
                     <source src="assets/bg/battle_bg_crystal_cave_loop.webm" type="video/webm">
                     <source src="assets/bg/battle_bg_crystal_cave_loop.mp4" type="video/mp4">
                 </video>
