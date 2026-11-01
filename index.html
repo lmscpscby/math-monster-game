@@ -50,6 +50,37 @@
             box-shadow: 0 12px 30px -5px rgba(141, 90, 40, 0.45);
         }
 
+        /* 圖鑑角標：S1 賽季神獸（聖光麒麟）。字喺 HTML，唔燒入 PNG。 */
+        .codex-s1-badge {
+            position: absolute;
+            top: 0.35rem;
+            right: 0.35rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            z-index: 4;
+            pointer-events: none;
+            user-select: none;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 3px rgba(42, 24, 8, 0.5));
+        }
+        .codex-card--s1 > div > .codex-card__head {
+            padding-right: 3.15rem;
+        }
+        .codex-s1-label {
+            margin-top: 0.25rem;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: rgba(253, 230, 138, 0.78);
+        }
+        .codex-s1-badge--on-art {
+            top: -0.4rem;
+            right: -0.45rem;
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
         .avatar-preset-btn.is-selected {
             border-color: #c9923e;
             box-shadow: 0 0 0 2px #e6c27a;
@@ -5784,12 +5815,14 @@
             const content = document.getElementById('zoom-card-content');
             const elemText = getElementFullLabel(runtimeData.element);
             
+            const s1Kirin = runtimeData.id === 'season_kirin';
             content.innerHTML = `
                 <div class="text-xs font-black px-3 py-1 bg-amber-500/30 text-amber-300 rounded-full inline-block mb-2">
                     ${runtimeData.title} (${elemText})
                 </div>
-                <div class="w-48 h-48 mx-auto my-3">
+                <div class="relative w-48 h-48 mx-auto my-3">
                     ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                    ${s1Kirin ? '<img class="codex-s1-badge codex-s1-badge--on-art" src="assets/bg/ui-codex-badge-s1-season.png" alt="" decoding="async">' : ''}
                 </div>
                 <h3 class="text-2xl font-black text-white">${runtimeData.name} (Lv.${runtimeData.level})</h3>
                 <p class="text-xs text-slate-300 my-2">${runtimeData.desc || '數理極限卡牌，強大屬性戰力！'}</p>
@@ -5978,13 +6011,20 @@
                 const expPct = monLevel >= 40 ? 100 : Math.min(100, Math.floor((monExp / reqExp) * 100));
 
                 const card = document.createElement('div');
-                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : owned ? 'border-amber-700/50 opacity-100' : 'border-slate-800 opacity-40 grayscale'}`;
+                const s1Kirin = mId === 'season_kirin';
+                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${s1Kirin ? 'codex-card--s1 ' : ''}${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : owned ? 'border-amber-700/50 opacity-100' : 'border-slate-800 opacity-40 grayscale'}`;
 
                 const elemBadge = getElementBadgeClass(runtimeData.element);
+                const seasonSubtitle = String(mId).indexOf('season_') !== 0
+                    ? ''
+                    : (s1Kirin
+                        ? '<div class="codex-s1-label">賽季神獸 · S1</div>'
+                        : '<div class="text-center text-[10px] text-amber-300 font-black mt-1">賽季限定</div>');
 
                 card.innerHTML = `
+                    ${s1Kirin ? '<img class="codex-s1-badge" src="assets/bg/ui-codex-badge-s1-season.png" alt="" decoding="async">' : ''}
                     <div>
-                        <div class="flex justify-between items-center mb-1">
+                        <div class="codex-card__head flex justify-between items-center mb-1">
                             <span class="text-[10px] font-black px-2 py-0.5 rounded ${elemBadge}">
                                 ${getElementZh(runtimeData.element)}
                             </span>
@@ -6000,7 +6040,7 @@
                         <div class="font-black text-sm text-white text-center cursor-pointer" onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})">
                             ${runtimeData.name} <i class="fa-solid fa-magnifying-glass-plus text-xs text-amber-300 ml-1"></i>
                         </div>
-                        ${String(mId).indexOf('season_') === 0 ? '<div class="text-center text-[10px] text-amber-300 font-black mt-1">賽季限定</div>' : ''}
+                        ${seasonSubtitle}
 
                         <div class="grid grid-cols-4 gap-1 my-2 bg-slate-900/90 p-1.5 rounded-2xl text-center text-[9px] font-mono border border-slate-800">
                             <div>
