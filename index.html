@@ -1585,6 +1585,313 @@
             .ranked-btn { transition: none; }
         }
 
+        /* Adventure stage select: tower sky + wood frames. Copy stays HTML.
+           Battle arena neon is untouched. */
+        body.adventure-open {
+            background-color: #f6e7c8;
+            background-image: url('assets/bg/ui-adventure-bg-tower-2560.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .adventure-view {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            min-width: 0;
+            max-width: 100%;
+            color: #3a2412;
+        }
+        .adventure-view.hidden { display: none; }
+        .adventure-back,
+        .adventure-banner h2,
+        .adventure-card h4,
+        .adventure-card__plaque,
+        .grade-tab-btn {
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+        }
+        .adventure-back {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            width: 210px;
+            height: 78px;
+            border: 0;
+            padding: 0 14px 0 46px;
+            background: url('assets/bg/ui-adventure-btn-back.png') center / 100% 100% no-repeat;
+            color: #4a3018;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            cursor: pointer;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.7);
+            -webkit-tap-highlight-color: transparent;
+            transition: filter 0.15s ease, transform 0.15s ease;
+        }
+        .adventure-back:hover { filter: brightness(1.06); }
+        .adventure-back:active { transform: translateY(1px); }
+        .adventure-back:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 3px;
+        }
+        /* Banner 2200×284. Islands sit outside ~21%–79%. min-height keeps two
+           lines readable on a phone; cover then crops the side islands and
+           leaves the open parchment. Desktop stays at the art's own ratio. */
+        .adventure-banner {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2200 / 284;
+            min-height: 150px;
+            background: url('assets/bg/ui-adventure-header-banner.png') center / cover no-repeat;
+            color: #3a2412;
+            container-type: inline-size;
+        }
+        .adventure-banner__copy {
+            position: absolute;
+            left: 24%;
+            right: 22%;
+            top: 22%;
+            bottom: 14%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.12rem;
+            min-width: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .adventure-banner h2 {
+            margin: 0;
+            max-width: 100%;
+            font-size: clamp(15px, 2.35cqi, 28px);
+            font-weight: 900;
+            line-height: 1.15;
+            color: #3a2412;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.85), 0 0 6px rgba(255, 248, 236, 0.75);
+        }
+        .adventure-banner h2 span {
+            display: inline;
+            margin-left: 0.35rem;
+            font-size: clamp(11px, 1.35cqi, 15px);
+            font-weight: 800;
+            line-height: 1.25;
+            color: #6b4524;
+        }
+        @container (max-width: 720px) {
+            .adventure-banner h2 span {
+                display: block;
+                margin-left: 0;
+                margin-top: 0.06rem;
+            }
+        }
+        .adventure-banner p {
+            margin: 0;
+            max-width: 100%;
+            font-size: clamp(11px, 1.3cqi, 14px);
+            font-weight: 700;
+            line-height: 1.35;
+            color: #5c3e24;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.8);
+        }
+        .adventure-tabs {
+            display: flex;
+            gap: 0.45rem;
+            overflow-x: auto;
+            overscroll-behavior-x: contain;
+            padding: 0.2rem 0.1rem 0.45rem;
+            scrollbar-width: thin;
+            scrollbar-color: #8a6232 transparent;
+        }
+        .grade-tab-btn {
+            flex: 0 0 auto;
+            width: 132px;
+            height: 53px;
+            border: 0;
+            padding: 0 16px 1px;
+            background-color: transparent;
+            background-image: url('assets/bg/ui-adventure-grade-tab.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            color: #5c4030;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 1;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            cursor: pointer;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.65);
+            -webkit-tap-highlight-color: transparent;
+            transition: filter 0.15s ease, transform 0.15s ease;
+        }
+        .grade-tab-btn.is-active {
+            background-image: url('assets/bg/ui-adventure-grade-tab-active.png');
+            color: #3a220c;
+        }
+        .grade-tab-btn:hover { filter: brightness(1.05); }
+        .grade-tab-btn:active { transform: translateY(1px); }
+        .grade-tab-btn:focus-visible {
+            outline: 3px solid #e6c27a;
+            outline-offset: 2px;
+        }
+        /* Scenic-wide unit frame is 1224×692. Index sits on the top-left wood
+           plaque; name + challenge CTA sit in the bottom dark band. */
+        .adventure-cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.85rem 1rem;
+            width: 100%;
+        }
+        .adventure-card {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1224 / 692;
+            container-type: inline-size;
+            filter: drop-shadow(0 10px 14px rgba(70, 42, 16, 0.28));
+        }
+        .adventure-card__plaque {
+            position: absolute;
+            left: 9%;
+            width: 16%;
+            top: 6.2%;
+            height: 5.4%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: #fff6e0;
+            font-weight: 900;
+            font-size: clamp(8px, 2.15cqi, 14px);
+            letter-spacing: 0.04em;
+            line-height: 1;
+            text-shadow: 0 1px 1px rgba(40, 18, 4, 0.9);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .adventure-card__body {
+            position: absolute;
+            left: 7.5%;
+            right: 7.5%;
+            top: 74%;
+            bottom: 7.2%;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(96px, 36%);
+            grid-template-rows: auto minmax(0, 1fr);
+            align-items: center;
+            column-gap: 0.45rem;
+            row-gap: 0.05rem;
+            min-height: 0;
+            overflow: hidden;
+            color: #fff8ec;
+            text-shadow: 0 1px 2px rgba(20, 8, 4, 0.88);
+        }
+        .adventure-card__frame {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background: url('assets/bg/ui-adventure-unit-card-scenic-wide.png') center / 100% 100% no-repeat;
+        }
+        .adventure-card__meta {
+            grid-column: 1;
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            min-width: 0;
+        }
+        .adventure-card__index {
+            flex: 0 0 auto;
+            font-size: clamp(9px, 2.1cqi, 12px);
+            font-weight: 900;
+            line-height: 1.25;
+            padding: 0 0.4rem;
+            border-radius: 999px;
+            background: rgba(255, 248, 236, 0.92);
+            color: #6b3a12;
+            text-shadow: none;
+            white-space: nowrap;
+        }
+        .adventure-card__tag {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: clamp(9px, 2cqi, 12px);
+            font-weight: 800;
+            color: #f6e6cf;
+        }
+        .adventure-card__tag i { margin-right: 0.25rem; }
+        .adventure-card h4 {
+            grid-column: 1;
+            grid-row: 2;
+            align-self: start;
+            margin: 0;
+            min-width: 0;
+            font-size: clamp(12px, 2.9cqi, 18px);
+            font-weight: 900;
+            line-height: 1.25;
+            max-height: 2.5em;
+            color: #fff8ec;
+            overflow: hidden;
+        }
+        .adventure-card__cta {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            align-self: stretch;
+            justify-self: stretch;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.02rem;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0 8%;
+            border: 0;
+            background: url('assets/bg/ui-shared-btn-primary.png') center / 100% 100% no-repeat;
+            color: #fff8ec;
+            font-weight: 900;
+            font-size: clamp(10px, 2.25cqi, 13px);
+            line-height: 1.12;
+            text-align: center;
+            white-space: nowrap;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.88);
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: filter 0.15s ease, transform 0.15s ease;
+        }
+        .adventure-card__cta-sub {
+            font-size: clamp(9px, 1.9cqi, 11px);
+            font-weight: 800;
+        }
+        .adventure-card__cta:hover { filter: brightness(1.08); }
+        .adventure-card__cta:active { transform: translateY(1px); }
+        .adventure-card__cta:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 2px;
+        }
+        @container (max-width: 430px) {
+            .adventure-card__body { grid-template-columns: minmax(0, 1fr) 104px; }
+            .adventure-card__tag { display: none; }
+        }
+        @media (max-width: 720px) {
+            .adventure-cards { grid-template-columns: minmax(0, 1fr); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .adventure-back,
+            .grade-tab-btn,
+            .adventure-card__cta { transition: none; }
+        }
+
         /* Dual-BOSS team picker keeps the ranked parchment treatment.
            Adventure uses the shared ui-modal frame; this override wins in ranked mode. */
         #team-select-modal.team-select--ranked {
@@ -2699,28 +3006,30 @@
         </section>
 
         <!-- VIEW 4: MATHEMATICS ADVENTURE STAGES -->
-        <section id="view-adventure" class="hidden space-y-6">
-            <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="ui-btn ui-btn--secondary text-xs">
-                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+        <section id="view-adventure" class="hidden adventure-view">
+            <div>
+                <button type="button" onclick="switchView('home')" class="adventure-back">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>返回主選單
                 </button>
             </div>
 
-            <div class="ui-panel ui-parchment">
-                <h2 class="text-lg sm:text-xl md:text-2xl font-black mb-1 break-words">選擇數學冒險單元<br class="sm:hidden"> (2隻怪獸登場，BOSS等級動態匹配)</h2>
-                <p class="text-xs">選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！</p>
+            <header class="adventure-banner">
+                <div class="adventure-banner__copy">
+                    <h2>選擇數學冒險單元<span>(2隻怪獸登場，BOSS等級動態匹配)</span></h2>
+                    <p>選擇單元進行挑戰！冒險模式關卡 BOSS 隨機登場，題目換題時自動輪播多元題型！</p>
+                </div>
+            </header>
+
+            <div class="adventure-tabs" role="tablist" aria-label="年級">
+                <button type="button" id="grade-btn-G1" role="tab" aria-pressed="true" onclick="selectGrade('G1')" class="grade-tab-btn is-active">小一 (G1)</button>
+                <button type="button" id="grade-btn-G2" role="tab" aria-pressed="false" onclick="selectGrade('G2')" class="grade-tab-btn">小二 (G2)</button>
+                <button type="button" id="grade-btn-G3" role="tab" aria-pressed="false" onclick="selectGrade('G3')" class="grade-tab-btn">小三 (G3)</button>
+                <button type="button" id="grade-btn-G4" role="tab" aria-pressed="false" onclick="selectGrade('G4')" class="grade-tab-btn">小四 (G4)</button>
+                <button type="button" id="grade-btn-G5" role="tab" aria-pressed="false" onclick="selectGrade('G5')" class="grade-tab-btn">小五 (G5)</button>
+                <button type="button" id="grade-btn-G6" role="tab" aria-pressed="false" onclick="selectGrade('G6')" class="grade-tab-btn">小六 (G6)</button>
             </div>
 
-            <div class="flex overflow-x-auto gap-2 pb-2">
-                <button id="grade-btn-G1" onclick="selectGrade('G1')" class="grade-tab-btn ui-btn ui-btn--primary flex-shrink-0 text-sm">小一 (G1)</button>
-                <button id="grade-btn-G2" onclick="selectGrade('G2')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小二 (G2)</button>
-                <button id="grade-btn-G3" onclick="selectGrade('G3')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小三 (G3)</button>
-                <button id="grade-btn-G4" onclick="selectGrade('G4')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小四 (G4)</button>
-                <button id="grade-btn-G5" onclick="selectGrade('G5')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小五 (G5)</button>
-                <button id="grade-btn-G6" onclick="selectGrade('G6')" class="grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm">小六 (G6)</button>
-            </div>
-
-            <div id="strand-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div id="strand-cards-grid" class="adventure-cards">
             </div>
         </section>
 
@@ -5356,6 +5665,7 @@
             if (target) target.classList.remove('hidden');
             document.body.classList.toggle('lobby-open', viewName === 'home');
             document.body.classList.toggle('ranked-open', viewName === 'ranked');
+            document.body.classList.toggle('adventure-open', viewName === 'adventure');
 
             // 進出戰鬥切換 BGM／背景短片（互不干擾）
             if (viewName === 'battle') {
@@ -5826,13 +6136,10 @@
 
             ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'].forEach(g => {
                 const btn = document.getElementById(`grade-btn-${g}`);
-                if (btn) {
-                    if (g === grade) {
-                        btn.className = "grade-tab-btn ui-btn ui-btn--primary flex-shrink-0 text-sm";
-                    } else {
-                        btn.className = "grade-tab-btn ui-btn ui-btn--secondary flex-shrink-0 text-sm";
-                    }
-                }
+                if (!btn) return;
+                const on = g === grade;
+                btn.classList.toggle('is-active', on);
+                btn.setAttribute('aria-pressed', on ? 'true' : 'false');
             });
 
             renderStrandsGrid();
@@ -5841,25 +6148,66 @@
         function renderStrandsGrid() {
             const grid = document.getElementById('strand-cards-grid');
             if (!grid) return;
-            grid.innerHTML = '';
+            grid.replaceChildren();
 
             const units = GRADE_UNITS[selectedGrade] || [];
 
             units.forEach((u, idx) => {
-                const card = document.createElement('div');
-                card.className = "glass-card p-5 rounded-3xl flex flex-col justify-between border border-amber-800/40";
-                card.innerHTML = `
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-xs bg-amber-900/50 text-amber-100 font-black px-2.5 py-0.5 rounded-full">單元 ${idx + 1}</span>
-                            <span class="text-[10px] text-emerald-300 font-bold"><i class="fa-solid fa-list-check mr-1"></i>專屬單元試題</span>
-                        </div>
-                        <h4 class="font-extrabold text-base text-white">${u.name}</h4>
-                    </div>
-                    <button onclick="openTeamSelect('${u.id}', false)" class="ui-btn ui-btn--primary w-full mt-4 text-xs">
-                        選擇陣容並挑戰 (可選2隻)
-                    </button>
-                `;
+                const card = document.createElement('article');
+                card.className = 'adventure-card';
+
+                const plaque = document.createElement('p');
+                plaque.className = 'adventure-card__plaque';
+                plaque.textContent = '單元 ' + (idx + 1);
+
+                const body = document.createElement('div');
+                body.className = 'adventure-card__body';
+
+                const meta = document.createElement('div');
+                meta.className = 'adventure-card__meta';
+
+                const index = document.createElement('span');
+                index.className = 'adventure-card__index';
+                index.textContent = '單元 ' + (idx + 1);
+
+                const tag = document.createElement('span');
+                tag.className = 'adventure-card__tag';
+                const tagIcon = document.createElement('i');
+                tagIcon.className = 'fa-solid fa-list-check';
+                tagIcon.setAttribute('aria-hidden', 'true');
+                tag.appendChild(tagIcon);
+                tag.appendChild(document.createTextNode('專屬單元試題'));
+
+                const title = document.createElement('h4');
+                title.textContent = u.name;
+
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'adventure-card__cta';
+                const btnMain = document.createElement('span');
+                btnMain.textContent = '選擇陣容並挑戰';
+                const btnSub = document.createElement('span');
+                btnSub.className = 'adventure-card__cta-sub';
+                btnSub.textContent = '(可選2隻)';
+                btn.appendChild(btnMain);
+                btn.appendChild(btnSub);
+                btn.addEventListener('click', function () {
+                    openTeamSelect(u.id, false);
+                });
+
+                meta.appendChild(index);
+                meta.appendChild(tag);
+                body.appendChild(meta);
+                body.appendChild(title);
+                body.appendChild(btn);
+
+                const frame = document.createElement('div');
+                frame.className = 'adventure-card__frame';
+                frame.setAttribute('aria-hidden', 'true');
+
+                card.appendChild(plaque);
+                card.appendChild(body);
+                card.appendChild(frame);
                 grid.appendChild(card);
             });
         }
