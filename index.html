@@ -2049,6 +2049,26 @@
             pointer-events: none;
             background: url('assets/bg/ui-adventure-unit-card-scenic-wide.png') center / 100% 100% no-repeat;
         }
+        /* Training-town scenic cards, assigned by unit index. v = SHA-256 first 8 hex.
+           Unit titles stay HTML on the dark band. Scenes without a top nameplate hide that label. */
+        .adventure-card--count .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-01-count.png?v=285fe1f0'); }
+        .adventure-card--addsub .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-02-addsub.png?v=ceec556f'); }
+        .adventure-card--hundred .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-03-hundred.png?v=28c84bde'); }
+        .adventure-card--coins .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-04-coins.png?v=4f767f45'); }
+        .adventure-card--length .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-05-length.png?v=c0a65205'); }
+        .adventure-card--time .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-06-time.png?v=810b76d1'); }
+        .adventure-card--fractions .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-07-fractions.png?v=b6d287be'); }
+        .adventure-card--measure .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-08-measure.png?v=548ed096'); }
+        .adventure-card--algebra .adventure-card__frame { background-image: url('assets/bg/ui-train-unit-09-algebra.png?v=94f76d00'); }
+        .adventure-card--count .adventure-card__plaque,
+        .adventure-card--hundred .adventure-card__plaque,
+        .adventure-card--coins .adventure-card__plaque,
+        .adventure-card--length .adventure-card__plaque,
+        .adventure-card--time .adventure-card__plaque,
+        .adventure-card--fractions .adventure-card__plaque,
+        .adventure-card--measure .adventure-card__plaque {
+            display: none;
+        }
         .adventure-card__meta {
             grid-column: 1;
             grid-row: 1;
@@ -8082,6 +8102,19 @@
             renderStrandsGrid();
         }
 
+        /** Scenic art by 0-based unit index in GRADE_UNITS. Titles stay u.name. */
+        const TRAIN_UNIT_SCENIC = [
+            'adventure-card--count',
+            'adventure-card--addsub',
+            'adventure-card--hundred',
+            'adventure-card--coins',
+            'adventure-card--length',
+            'adventure-card--time',
+            'adventure-card--fractions',
+            'adventure-card--measure',
+            'adventure-card--algebra'
+        ];
+
         function renderStrandsGrid() {
             const grid = document.getElementById('strand-cards-grid');
             if (!grid) return;
@@ -8091,7 +8124,8 @@
 
             units.forEach((u, idx) => {
                 const card = document.createElement('article');
-                card.className = 'adventure-card';
+                const scenic = TRAIN_UNIT_SCENIC[idx];
+                card.className = scenic ? 'adventure-card ' + scenic : 'adventure-card';
 
                 const plaque = document.createElement('p');
                 plaque.className = 'adventure-card__plaque';
