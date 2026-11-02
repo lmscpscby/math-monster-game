@@ -11,15 +11,15 @@ const root = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 
 const CARDS = [
-  { cls: 'adventure-card--count', file: 'assets/bg/ui-train-unit-01-count.png', sha256: '285fe1f058dc2579f01d45b2a98ff58b78e5a3ec40dc90d6fac4a308bfcc553d' },
-  { cls: 'adventure-card--addsub', file: 'assets/bg/ui-train-unit-02-addsub.png', sha256: 'ceec556f30f7821112f56e46d74626cdb6a084b41377fa32a73cb366cfcad7a8' },
-  { cls: 'adventure-card--hundred', file: 'assets/bg/ui-train-unit-03-hundred.png', sha256: '28c84bde9cd2d4ae25eb83e012ac83d19e5a132e929b178b3944d88f9b84937e' },
-  { cls: 'adventure-card--coins', file: 'assets/bg/ui-train-unit-04-coins.png', sha256: '4f767f45eadc3f914f181f2b0fe6f81c802bdfef690357c5cce33999b12d459f' },
-  { cls: 'adventure-card--length', file: 'assets/bg/ui-train-unit-05-length.png', sha256: 'c0a652056d5dace38827e53a4764d1d4f2aab59d8a23a89a29c455271568e4f9' },
-  { cls: 'adventure-card--time', file: 'assets/bg/ui-train-unit-06-time.png', sha256: '810b76d1593ea050a1afc6ec5b39d63d033fd2f2e499544f317f495fa8cc9924' },
-  { cls: 'adventure-card--fractions', file: 'assets/bg/ui-train-unit-07-fractions.png', sha256: 'b6d287bef53e442c5b02b7f363ad11f8fbf49752bc8cf6924bee901fe187372c' },
-  { cls: 'adventure-card--measure', file: 'assets/bg/ui-train-unit-08-measure.png', sha256: '548ed096713ca9259b5d3415883b7cef56e85002cb2ade4db0c6ffe7dea44796' },
-  { cls: 'adventure-card--algebra', file: 'assets/bg/ui-train-unit-09-algebra.png', sha256: '94f76d000d6e79dfa5d712964842204806b56b5380394748c2d7727eb2a32734' }
+  { cls: 'adventure-card--count', file: 'assets/bg/ui-train-unit-01-count.png', sha256: '6a11e095076006123c0f366d2d495ec89cda7d378dd7cc168deb659bf7cc0de7' },
+  { cls: 'adventure-card--addsub', file: 'assets/bg/ui-train-unit-02-addsub.png', sha256: 'd540831c7e78d6a13d4d1e3aace360c948c199e8029f2ac3b719bab2244846b2' },
+  { cls: 'adventure-card--hundred', file: 'assets/bg/ui-train-unit-03-hundred.png', sha256: '5be7b13df419ea1e4d4bed623226dbfd2e4a48f8919613b32b1351228fca1142' },
+  { cls: 'adventure-card--coins', file: 'assets/bg/ui-train-unit-04-coins.png', sha256: 'ccd211a110d24feb21bd47a16f023018e4142698532870ddf01565bbb83cd366' },
+  { cls: 'adventure-card--length', file: 'assets/bg/ui-train-unit-05-length.png', sha256: '08a01eccbe70d96aa96bb1aa5f618a98fd3bc989d758d6554d0bb71a22fb3865' },
+  { cls: 'adventure-card--time', file: 'assets/bg/ui-train-unit-06-time.png', sha256: 'daa87a9c10b9bd133078d3b43ae5624073086821ba6ced234153aaeb366b63a5' },
+  { cls: 'adventure-card--fractions', file: 'assets/bg/ui-train-unit-07-fractions.png', sha256: 'd045ecf2e42507989687bf1a152b26e0eb470308e4f5a6445b3b99f86efe1121' },
+  { cls: 'adventure-card--measure', file: 'assets/bg/ui-train-unit-08-measure.png', sha256: 'f83c68acf4cf58f76aafb15fd99df8ed820aaa5171183b21af83d5e4794810ae' },
+  { cls: 'adventure-card--algebra', file: 'assets/bg/ui-train-unit-09-algebra.png', sha256: '5400e7fc8b7134e5d597812506f8c9f2e538c69766b9747ae2fa5c4f4728f49e' }
 ];
 
 function assert(cond, msg) {
