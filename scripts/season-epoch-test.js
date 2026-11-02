@@ -44,15 +44,15 @@ const oct29 = Date.UTC(2026, 9, 29, 4, 0, 0, 0);
 assert(context.seasonEpochAt_(oct29) === 1, '2026-10-29 HKT noon is season 1');
 
 const r1 = context.rewardForRank_(1);
-assert(r1.gold === 3000 && r1.exp === 40 && r1.monsterId === 'season_kirin', 'rank 1 reward');
+assert(r1.gold === 4000 && r1.exp === 300 && r1.monsterId === 'season_kirin', 'rank 1 reward');
 const r2 = context.rewardForRank_(2);
 const r3 = context.rewardForRank_(3);
-assert(r2.gold === 1800 && r2.exp === 20 && r2.monsterId === 'season_kirin', 'rank 2 reward');
-assert(r3.gold === 1800 && r3.exp === 20 && r3.monsterId === 'season_kirin', 'rank 3 reward');
+assert(r2.gold === 3300 && r2.exp === 230 && r2.monsterId === 'season_kirin', 'rank 2 reward');
+assert(r3.gold === 3000 && r3.exp === 230 && r3.monsterId === 'season_kirin', 'rank 3 reward');
 const r4 = context.rewardForRank_(4);
 const r10 = context.rewardForRank_(10);
-assert(r4.gold === 800 && r4.exp === 0 && r4.monsterId === 'season_kirin', 'rank 4 reward');
-assert(r10.gold === 800 && r10.exp === 0 && r10.monsterId === 'season_kirin', 'rank 10 reward');
+assert(r4.gold === 2000 && r4.exp === 100 && r4.monsterId === 'season_kirin', 'rank 4 reward');
+assert(r10.gold === 2000 && r10.exp === 100 && r10.monsterId === 'season_kirin', 'rank 10 reward');
 const r11 = context.rewardForRank_(11);
 assert(r11.gold === 0 && r11.exp === 0 && r11.monsterId === '', 'rank 11 none');
 assert(context.SEASON_KIRIN_MAX_RANK === 10, 'kirin cutoff is top 10');
@@ -92,18 +92,18 @@ assert(context.parseMonsterIdList_('data:image/png;base64,iVBORw0KGgo').length =
 
 const first = context.applySeasonRewardToCells_('', 12, '', '', r1, 1);
 assert(first.applied === true, 'first grant applies');
-assert(first.gold === 3000, 'gold queued');
-assert(first.exp === 52, 'exp adds onto existing teacher pending');
+assert(first.gold === 4000, 'gold queued');
+assert(first.exp === 312, 'exp adds onto existing teacher pending');
 assert(first.monster === 'season_kirin', 'monster id queued');
 assert(first.paid === '1', 'epoch marked paid');
 const second = context.applySeasonRewardToCells_(first.gold, first.exp, first.monster, first.paid, r1, 1);
 assert(second.applied === false, 're-run does not grant again');
-assert(second.gold === 3000 && second.exp === 52 && second.monster === 'season_kirin', 'cells unchanged on re-run');
+assert(second.gold === 4000 && second.exp === 312 && second.monster === 'season_kirin', 'cells unchanged on re-run');
 
 const keepTeacher = context.applySeasonRewardToCells_(100, 0, 'other_pet', '', context.rewardForRank_(4), 2);
-assert(keepTeacher.gold === 900 && keepTeacher.monster === 'other_pet,season_kirin' && keepTeacher.paid === '2', 'rank 4 adds gold and queues kirin beside existing monster id');
+assert(keepTeacher.gold === 2100 && keepTeacher.monster === 'other_pet,season_kirin' && keepTeacher.paid === '2', 'rank 4 adds gold and queues kirin beside existing monster id');
 const rank10Queue = context.applySeasonRewardToCells_('', 0, '', '', context.rewardForRank_(10), 3);
-assert(rank10Queue.applied === true && rank10Queue.monster === 'season_kirin' && rank10Queue.gold === 800, 'rank 10 queues kirin');
+assert(rank10Queue.applied === true && rank10Queue.monster === 'season_kirin' && rank10Queue.gold === 2000 && rank10Queue.exp === 100, 'rank 10 queues kirin');
 const rank10Again = context.applySeasonRewardToCells_(rank10Queue.gold, rank10Queue.exp, rank10Queue.monster, rank10Queue.paid, context.rewardForRank_(10), 3);
 assert(rank10Again.applied === false && rank10Again.monster === 'season_kirin', 'rank 10 re-run does not queue a second kirin');
 const rank11Queue = context.applySeasonRewardToCells_('', 0, 'other_pet', '', r11, 4);
@@ -128,7 +128,8 @@ const g1 = top.filter((w) => w.grade === 'G1');
 const g2 = top.filter((w) => w.grade === 'G2');
 assert(g1.length === 10, 'G1 top 10 only, got ' + g1.length);
 assert(g1[0].rankScore === 1000 && g1[0].reward.monsterId === 'season_kirin', 'G1 first gets monster');
-assert(g1[9].reward.gold === 800 && g1[9].reward.monsterId === 'season_kirin', 'G1 10th gets kirin');
+assert(g1[1].reward.gold === 3300 && g1[1].reward.exp === 230 && g1[1].reward.monsterId === 'season_kirin', 'G1 2nd gets kirin');
+assert(g1[9].reward.gold === 2000 && g1[9].reward.exp === 100 && g1[9].reward.monsterId === 'season_kirin', 'G1 10th gets kirin');
 assert(g1.every((w) => w.reward.monsterId === 'season_kirin'), 'every G1 top-10 row gets kirin');
 assert(!g1.some((w) => w.key === 'zero'), 'zero score excluded');
 assert(g2.length === 1 && g2[0].reward.monsterId === 'season_kirin', 'G2 sole player is rank 1');
@@ -185,6 +186,48 @@ assert(JSON.stringify(gold) === JSON.stringify(context.SEASON_REWARD_GOLD), 'gol
 assert(JSON.stringify(exp) === JSON.stringify(context.SEASON_REWARD_EXP), 'exp table synced');
 assert(html.includes('頭10名：聖光麒麟'), 'player copy says top 10 get 聖光麒麟');
 assert(html.includes('function seasonKirinRewardLabel'), 'reward label is built in the client');
+assert(html.includes('function seasonPreviewPrizeText'), 'preview prize is formatted on the client');
+assert(!html.includes('row.monsterId ?'), 'preview does not show kirin only when the server sent an id');
+
+function grabFunction(name) {
+  const start = html.indexOf('function ' + name + '(');
+  if (start < 0) throw new Error('missing function ' + name);
+  let i = html.indexOf('{', start);
+  let depth = 0;
+  for (; i < html.length; i++) {
+    const ch = html[i];
+    if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      if (depth === 0) return html.slice(start, i + 1);
+    }
+  }
+  throw new Error('unclosed function ' + name);
+}
+
+const previewContext = {
+  SEASON_REWARD_GOLD: gold,
+  SEASON_REWARD_EXP: exp,
+  SEASON_REWARD_MONSTER_ID: grabConst('SEASON_REWARD_MONSTER_ID'),
+  SEASON_KIRIN_MAX_RANK: grabConst('SEASON_KIRIN_MAX_RANK'),
+  SEASON_LIMITED_BEASTS: [{ id: 'season_kirin', name: '聖光麒麟' }]
+};
+vm.createContext(previewContext);
+vm.runInContext(
+  [
+    grabFunction('seasonMonsterName'),
+    grabFunction('rewardForSeasonRank'),
+    grabFunction('seasonPreviewPrizeText')
+  ].join('\n'),
+  previewContext
+);
+const staleServerRow = { rank: 2, gold: 1800, exp: 20, monsterId: '' };
+const staleRank10 = { rank: 10, gold: 800, exp: 0, monsterId: '' };
+assert(previewContext.seasonPreviewPrizeText({ rank: 1 }) === '金幣 4000 · EXP 300 · 聖光麒麟', 'rank 1 preview text');
+assert(previewContext.seasonPreviewPrizeText(staleServerRow) === '金幣 3300 · EXP 230 · 聖光麒麟', 'rank 2 preview shows kirin despite empty server id');
+assert(previewContext.seasonPreviewPrizeText({ rank: 3, monsterId: '' }) === '金幣 3000 · EXP 230 · 聖光麒麟', 'rank 3 preview text');
+assert(previewContext.seasonPreviewPrizeText(staleRank10) === '金幣 2000 · EXP 100 · 聖光麒麟', 'rank 10 preview shows kirin despite old server payload');
+assert(previewContext.seasonPreviewPrizeText({ rank: 11, monsterId: 'season_kirin', gold: 800 }) === '', 'rank 11 preview shows nothing');
 assert(html.includes('assets/monsters/classic/青龍.jpg'), 'season art is a file path');
 assert(!html.includes("season_kirin: 'data:"), 'season art is not a dataURL');
 assert(html.includes('login-nickname'), 'nickname login remains');
