@@ -32,11 +32,11 @@ var SEASON_STATE = '賽季狀態';
 var SEASON_LENGTH_DAYS = 21;
 var SEASON_START_UTC_MS = Date.UTC(2026, 9, 25, 16, 0, 0, 0);
 var SEASON_MS = SEASON_LENGTH_DAYS * 24 * 60 * 60 * 1000;
-// 對照而家排位：勝一場 +300 金幣、+2 EXP 包，積分 +100／300／600／1200。
-// 21 日先派一次。頭10名：聖光麒麟（名次 1…SEASON_KIRIN_MAX_RANK 各一隻）。
-// 第 11 名及以後唔發。已擁有唔再入一隻，改發 DUPLICATE_MONSTER_EXP。
-var SEASON_REWARD_GOLD = [0, 3000, 1800, 1800, 800, 800, 800, 800, 800, 800, 800];
-var SEASON_REWARD_EXP = [0, 40, 20, 20, 0, 0, 0, 0, 0, 0, 0];
+// 頭10名：聖光麒麟。索引 0 不用；1…10 對名次。第 11 名起 rewardForRank_ 回傳空。
+// 第1名 4000 金／300 EXP，第2名 3300／230，第3名 3000／230，第4–10名 2000／100。
+// 已擁有唔再入一隻，改發 DUPLICATE_MONSTER_EXP。
+var SEASON_REWARD_GOLD = [0, 4000, 3300, 3000, 2000, 2000, 2000, 2000, 2000, 2000, 2000];
+var SEASON_REWARD_EXP = [0, 300, 230, 230, 100, 100, 100, 100, 100, 100, 100];
 var SEASON_REWARD_MONSTER_ID = 'season_kirin';
 var SEASON_KIRIN_MAX_RANK = 10;
 var DUPLICATE_MONSTER_EXP = 5;
