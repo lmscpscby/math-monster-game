@@ -2355,19 +2355,35 @@
             min-height: 0;
         }
         .tower-answer__row { display: flex; gap: 0.35rem; align-items: stretch; }
-        .tower-answer__input {
+        .tower-answer__display {
             flex: 1 1 auto;
             min-width: 0;
+            min-height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0.75rem;
             border: 2px solid #c4924a;
             border-radius: 12px;
             background: rgba(255, 248, 236, 0.96);
             color: #3a2412;
             font-weight: 900;
             font-size: clamp(16px, 2.4cqi, 22px);
+            line-height: 1.2;
             text-align: center;
             font-family: 'Noto Sans TC', sans-serif;
+            white-space: pre;
+            overflow: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            pointer-events: none;
         }
-        .tower-answer__input:focus { outline: 3px solid #f6e2a8; outline-offset: 1px; }
+        .tower-answer__display.is-empty::before {
+            content: '按數字鍵';
+            color: #a08060;
+            font-weight: 800;
+        }
         .tower-answer__go,
         .tower-answer__pad > button {
             border-style: solid;
@@ -7306,6 +7322,12 @@
             const b = String(expected || '').trim().toLowerCase().replace(/\s+/g, ' ');
             return a === b || fold(a) === fold(b);
         }
+        function adventureApplyKey(current, val) {
+            const cur = String(current || '');
+            if (val === 'clear') return '';
+            if (val === 'back') return cur.slice(0, -1);
+            return cur + String(val == null ? '' : val);
+        }
         function adventureHitDamage(maxHp) {
             return Math.ceil(Math.max(1, Number(maxHp) || 1) / 5);
         }
@@ -7643,17 +7665,28 @@
             let text = '';
             if (adventureCombo > 1) text += 'COMBO x' + adventureCombo + ' · ';
             if (adventureEndless) text += '倍率 ' + reward.multiplier.toFixed(1) + 'x · 金幣 +' + adventureGoldRun + ' · ';
-            text += adventureTowerId === 'division' ? '餘數寫成 7 r 2' : '輸入答案後攻擊';
+            text += adventureTowerId === 'division' ? '餘數寫成 7 r 2' : '按數字鍵後攻擊';
             el.textContent = text;
         }
 
+        function adventureAnswerText() {
+            const display = document.getElementById('tower-answer-display');
+            return display ? display.textContent : '';
+        }
+
+        function paintTowerAnswer(value) {
+            const display = document.getElementById('tower-answer-display');
+            if (!display) return;
+            const next = String(value || '');
+            display.textContent = next;
+            display.classList.toggle('is-empty', next.length === 0);
+            display.setAttribute('aria-label', next ? ('答案 ' + next) : '答案，請用數字鍵');
+        }
+
         function adventurePressKey(val) {
-            const input = document.getElementById('tower-answer-input');
-            if (!input || adventureSettled) return;
-            if (val === 'clear') input.value = '';
-            else if (val === 'back') input.value = input.value.slice(0, -1);
-            else input.value += val;
-            input.focus();
+            const display = document.getElementById('tower-answer-display');
+            if (!display || adventureSettled || isAnswerLocked) return;
+            paintTowerAnswer(adventureApplyKey(display.textContent, val));
         }
 
         function renderTowerAnswerPad() {
@@ -7664,25 +7697,19 @@
             wrap.className = 'tower-answer';
             const row = document.createElement('div');
             row.className = 'tower-answer__row';
-            const input = document.createElement('input');
-            input.id = 'tower-answer-input';
-            input.type = 'text';
-            input.className = 'tower-answer__input';
-            input.setAttribute('inputmode', 'text');
-            input.setAttribute('autocomplete', 'off');
-            input.placeholder = '輸入答案';
-            input.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    submitAdventureAnswer();
-                }
-            });
+            const display = document.createElement('div');
+            display.id = 'tower-answer-display';
+            display.className = 'tower-answer__display is-empty';
+            display.setAttribute('role', 'status');
+            display.setAttribute('aria-live', 'polite');
+            display.setAttribute('aria-atomic', 'true');
+            display.setAttribute('aria-label', '答案，請用數字鍵');
             const go = document.createElement('button');
             go.type = 'button';
             go.className = 'tower-answer__go';
             go.textContent = '攻擊';
             go.addEventListener('click', function () { submitAdventureAnswer(); });
-            row.appendChild(input);
+            row.appendChild(display);
             row.appendChild(go);
             const pad = document.createElement('div');
             pad.className = 'tower-answer__pad';
@@ -7704,8 +7731,34 @@
             grid.appendChild(wrap);
             const figure = document.getElementById('quiz-question-figure');
             if (figure) figure.classList.add('hidden');
-            input.focus();
         }
+
+        document.addEventListener('keydown', function (e) {
+            const display = document.getElementById('tower-answer-display');
+            if (!display || adventureSettled || isAnswerLocked) return;
+            const battle = document.getElementById('view-battle');
+            if (!battle || battle.classList.contains('hidden')) return;
+            const tag = e.target && e.target.tagName;
+            if (tag === 'INPUT' || tag === 'TEXTAREA' || (e.target && e.target.isContentEditable)) return;
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                submitAdventureAnswer();
+                return;
+            }
+            if (e.key === 'Backspace' || e.key === 'Delete') {
+                e.preventDefault();
+                adventurePressKey('back');
+                return;
+            }
+            if (/^[0-9]$/.test(e.key)) {
+                e.preventDefault();
+                adventurePressKey(e.key);
+            } else if (e.key === 'r' || e.key === 'R') {
+                e.preventDefault();
+                adventurePressKey(' r ');
+            }
+        });
 
         function adventureShouldEnd() {
             if (!activePlayerMonster || !activeEnemy) return true;
@@ -7741,8 +7794,7 @@
 
         function submitAdventureAnswer() {
             if (!adventureQuestion || isAnswerLocked || adventureSettled || battleSettled) return;
-            const input = document.getElementById('tower-answer-input');
-            const raw = input ? input.value : '';
+            const raw = adventureAnswerText();
             if (!String(raw).trim()) return;
             isAnswerLocked = true;
             const ok = adventureAnswersMatch(raw, adventureQuestion.ans);

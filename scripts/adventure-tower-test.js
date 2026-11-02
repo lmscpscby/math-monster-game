@@ -125,6 +125,30 @@ assert(context.adventureAnswersMatch('7r2', '7 r 2'), 'compact remainder matches
 assert(context.adventureAnswersMatch(' 12 ', '12'), 'trimmed number matches');
 assert(context.adventureAnswersMatch('11', '12') === false, 'wrong number does not match');
 
+let built = '';
+built = context.adventureApplyKey(built, '5');
+built = context.adventureApplyKey(built, '3');
+assert(built === '53', 'keypad digits append');
+built = context.adventureApplyKey(built, 'back');
+assert(built === '5', 'keypad backspace drops the last character');
+built = context.adventureApplyKey(built, 'clear');
+assert(built === '', 'keypad clear empties the answer');
+built = context.adventureApplyKey('7', ' r ');
+built = context.adventureApplyKey(built, '2');
+assert(built === '7 r 2', 'remainder key builds 7 r 2');
+assert(context.adventureApplyKey('', 'back') === '', 'backspace on empty stays empty');
+
+const padFn = html.slice(html.indexOf('function renderTowerAnswerPad'), html.indexOf('function adventureShouldEnd'));
+assert(padFn.includes("createElement('input')") === false, 'tower pad does not create a text input');
+assert(padFn.includes('.focus()') === false, 'tower pad does not focus a field');
+assert(padFn.includes('tower-answer-display'), 'tower pad paints a non-editable display');
+assert(padFn.includes("createElement('div')"), 'answer area is a plain element');
+assert(!html.includes('tower-answer-input'), 'editable answer input id is gone');
+assert(!html.includes('輸入答案'), 'typing placeholder copy is gone');
+assert(!html.includes('輸入答案後攻擊'), 'hint no longer tells players to type in the blank');
+assert(html.includes('按數字鍵後攻擊'), 'hint points at the keypad');
+assert(html.includes('餘數寫成 7 r 2'), 'division remainder hint stays');
+
 function parsePrompt(q) {
   const m = String(q.prompt).match(/(-?\d+)\s*([+\-×÷])\s*(-?\d+)/);
   if (!m) {
