@@ -3095,6 +3095,271 @@
             .ui-btn, .ui-toast { transition: none; }
         }
 
+        /* Summon altar — this screen only. Blank skins; copy stays HTML.
+           ?v= is the first 8 hex chars of each file's SHA-256. */
+        /* html/body are height:100% with overflow-x hidden, so a tall altar
+           would paint past the fold without scrolling. Grow the document only
+           while this screen is open. */
+        html:has(body.gacha-open) {
+            height: auto;
+            min-height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        body.gacha-open {
+            height: auto;
+            min-height: 100%;
+            overflow-x: hidden;
+            overflow-y: visible;
+            background-color: #070b16;
+            background-image:
+                linear-gradient(180deg, rgba(5, 7, 18, 0.62) 0%, rgba(5, 7, 18, 0.12) 16%, rgba(5, 7, 18, 0.04) 46%, rgba(5, 7, 18, 0.55) 100%),
+                url('assets/bg/ui-gacha-stage-mystic-1920.png?v=2d670fe2');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        body.gacha-open:not(.lobby-open):not(.ranked-open) > header.glass-panel {
+            background: rgba(6, 8, 20, 0.78);
+            border-bottom-color: rgba(243, 156, 18, 0.42);
+            backdrop-filter: blur(10px);
+        }
+        body.gacha-open > footer {
+            background: rgba(6, 8, 20, 0.62);
+            border-top-color: rgba(243, 156, 18, 0.28);
+            color: #e7d3b0;
+        }
+        body.gacha-open > main {
+            max-width: 1080px;
+        }
+        #view-gacha.gacha-altar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.85rem;
+            min-width: 0;
+            width: 100%;
+            color: #f8f4ea;
+            margin-top: 0;
+        }
+        #view-gacha.gacha-altar.hidden { display: none; }
+        .gacha-altar__top {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+        .gacha-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: 1px solid rgba(243, 156, 18, 0.5);
+            background: rgba(8, 10, 24, 0.78);
+            color: #ffe9a8;
+            border-radius: 999px;
+            padding: 0.45rem 0.95rem;
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 1;
+            cursor: pointer;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gacha-back:hover { filter: brightness(1.08); }
+        .gacha-back:active { transform: translateY(1px); }
+        .gacha-back:focus-visible {
+            outline: 3px solid #ffe9a8;
+            outline-offset: 3px;
+        }
+        .gacha-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0.65rem;
+            margin-left: auto;
+        }
+        .gacha-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            min-width: 168px;
+            min-height: 64px;
+            padding: 0.45rem 1.05rem 0.45rem 0.85rem;
+            background: url('assets/bg/ui-gacha-info-pill.png?v=7b1350d9') center / 100% 100% no-repeat;
+            color: #ffffff;
+        }
+        .gacha-pill > i {
+            color: #f1c40f;
+            font-size: 1.25rem;
+            text-shadow: 0 0 8px rgba(243, 156, 18, 0.85);
+        }
+        .gacha-pill__label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #c5cbe0;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+        .gacha-pill__value {
+            font-family: Outfit, 'Noto Sans TC', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: #ffffff;
+            font-variant-numeric: tabular-nums;
+        }
+        .gacha-title {
+            margin: 0;
+            text-align: center;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-size: clamp(1.55rem, 4.2vw, 2.5rem);
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            color: #ffe9a8;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 18px rgba(90, 50, 0, 0.45);
+        }
+        .gacha-stage-core {
+            width: 100%;
+            max-width: 920px;
+            min-height: min(38vh, 380px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #gacha-idle-state.hidden,
+        #gacha-results-grid.hidden { display: none; }
+        .gacha-idle {
+            text-align: center;
+            color: #fff8e8;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+        }
+        #gacha-results-grid {
+            width: 100%;
+        }
+        .gacha-result-card {
+            background: rgba(8, 10, 24, 0.86);
+            border: 1px solid rgba(243, 156, 18, 0.35);
+            border-radius: 1rem;
+            padding: 0.75rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        }
+        .gacha-result-card--mythic {
+            border-color: #f59e0b;
+            box-shadow: 0 0 22px rgba(245, 158, 11, 0.55);
+        }
+        .gacha-result-card:focus-visible {
+            outline: 3px solid #ffe9a8;
+            outline-offset: 2px;
+        }
+        .gacha-controls {
+            width: 100%;
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .gacha-btn-row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+        }
+        .gacha-summon {
+            flex: 1 1 200px;
+            min-height: 76px;
+            border: 0;
+            padding: 0.7rem 1.15rem 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.15rem;
+            cursor: pointer;
+            color: #ffffff;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.15s ease, filter 0.15s ease;
+        }
+        .gacha-summon--single {
+            background-image: url('assets/bg/ui-gacha-btn-single.png?v=d5aeb932');
+        }
+        .gacha-summon--ten {
+            background-image: url('assets/bg/ui-gacha-btn-ten.png?v=0f94a42b');
+        }
+        .gacha-summon__name {
+            font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .gacha-summon__price {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: clamp(0.85rem, 2.2vw, 1rem);
+            font-weight: 800;
+            color: #ffeaa7;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+        }
+        .gacha-summon--ten .gacha-summon__price {
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+        }
+        .gacha-summon:hover { filter: brightness(1.06); transform: translateY(-2px); }
+        .gacha-summon:active { transform: translateY(1px); }
+        .gacha-summon:focus-visible {
+            outline: 3px solid #ffe9a8;
+            outline-offset: 3px;
+        }
+        .gacha-summon:disabled,
+        .gacha-summon.pointer-events-none {
+            opacity: 0.45;
+            transform: none;
+            cursor: not-allowed;
+        }
+        .gacha-hint {
+            margin: 0;
+            width: 100%;
+            min-height: 52px;
+            padding: 0.7rem 1.6rem;
+            background: url('assets/bg/ui-gacha-hint-banner.png?v=4f4a61f4') center / 100% 100% no-repeat;
+            color: #ffe9a8;
+            text-align: center;
+            font-size: clamp(12px, 2.5vw, 15px);
+            font-weight: 800;
+            line-height: 1.45;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.88);
+        }
+        @media (max-width: 640px) {
+            .gacha-pills { width: 100%; justify-content: stretch; }
+            .gacha-pill { flex: 1 1 160px; }
+            .gacha-stage-core { min-height: 18vh; }
+            .gacha-altar { gap: 0.55rem; }
+            .gacha-summon { min-height: 68px; }
+            .gacha-title { letter-spacing: 0.08em; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .gacha-summon, .gacha-back { transition: none; }
+            .gacha-summon:hover { transform: none; }
+        }
+
     </style>
 </head>
 <body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100">
@@ -3630,39 +3895,51 @@
             </div>
         </section>
 
-        <!-- VIEW 2: GACHA SYSTEM -->
-        <section id="view-gacha" class="hidden space-y-6">
-            <div class="flex items-center justify-between">
-                <button onclick="switchView('home')" class="ui-btn ui-btn--secondary text-xs">
-                    <i class="fa-solid fa-arrow-left mr-2"></i>返回主選單
+        <!-- VIEW 2: GACHA — summon altar. Costs and pool stay in drawGacha. -->
+        <section id="view-gacha" class="gacha-altar hidden">
+            <div class="gacha-altar__top">
+                <button type="button" class="gacha-back" onclick="switchView('home')">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>返回主選單
                 </button>
-            </div>
-
-            <div class="ui-panel ui-parchment flex flex-col md:flex-row items-center justify-between gap-4">
-                <div>
-                    <h2 class="text-xl sm:text-2xl md:text-3xl font-black break-words">怪獸祈願召喚機</h2>
-                    <p class="text-xs md:text-sm mt-1">單抽 200 元，十抽 2000 元。十連抽必得 1 個山海經怪獸卡！抽中山海經怪獸將觸發黃金閃光效果！</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <button id="btn-gacha-1" onclick="drawGacha(1)" class="ui-btn ui-btn--primary text-sm">
-                        <i class="fa-solid fa-gem"></i>單抽 (200元)
-                    </button>
-                    <button id="btn-gacha-10" onclick="drawGacha(10)" class="ui-btn ui-btn--lg ui-btn--auto text-sm">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>十連抽 (2000元)
-                    </button>
-                </div>
-            </div>
-
-            <div id="gacha-display-area" class="ui-modal ui-parchment min-h-[350px] flex flex-col items-center justify-center relative">
-                <div id="gacha-idle-state" class="text-center space-y-4">
-                    <div class="ui-icon ui-icon--ornate ui-icon--lg mx-auto mythic-glow">
-                        <i class="fa-solid fa-box-archive"></i>
+                <div class="gacha-pills">
+                    <div class="gacha-pill">
+                        <i class="fa-solid fa-coins" aria-hidden="true"></i>
+                        <div>
+                            <div class="gacha-pill__label">金幣</div>
+                            <div class="gacha-pill__value" id="gacha-gold-value">0</div>
+                        </div>
                     </div>
-                    <p class="text-slate-300 text-sm font-semibold">按下上方按鈕開始召喚怪獸！</p>
+                    <div class="gacha-pill" title="十連抽 10 張內必得 1 張山海經">
+                        <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
+                        <div>
+                            <div class="gacha-pill__label">距離必出次數</div>
+                            <div class="gacha-pill__value" id="gacha-pity-value">10</div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div id="gacha-results-grid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 w-full">
+            <h2 class="gacha-title">怪獸祈願召喚</h2>
+
+            <div id="gacha-display-area" class="gacha-stage-core">
+                <div id="gacha-idle-state" class="gacha-idle">
+                    <p>按下按鈕開始召喚怪獸</p>
                 </div>
+                <div id="gacha-results-grid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full"></div>
+            </div>
+
+            <div class="gacha-controls">
+                <div class="gacha-btn-row">
+                    <button type="button" id="btn-gacha-1" onclick="drawGacha(1)" class="gacha-summon gacha-summon--single">
+                        <span class="gacha-summon__name">單抽</span>
+                        <span class="gacha-summon__price"><i class="fa-solid fa-coins" aria-hidden="true"></i> 200 金幣</span>
+                    </button>
+                    <button type="button" id="btn-gacha-10" onclick="drawGacha(10)" class="gacha-summon gacha-summon--ten">
+                        <span class="gacha-summon__name">十連抽</span>
+                        <span class="gacha-summon__price"><i class="fa-solid fa-coins" aria-hidden="true"></i> 2000 金幣</span>
+                    </button>
+                </div>
+                <p class="gacha-hint">單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個山海經怪獸卡！</p>
             </div>
         </section>
 
@@ -6495,6 +6772,7 @@
             document.getElementById('user-display-name').innerText = currentUser.nickname + (currentUser.isAdmin ? ' (管理員)' : '');
             document.getElementById('user-display-school').innerText = `${currentUser.school} (${currentUser.className}-${currentUser.classNo}號)`;
             document.getElementById('user-gold').innerText = currentUser.gold;
+            try { updateGachaAltarHud(); } catch (e) {}
             document.getElementById('user-exp-packs').innerText = currentUser.expPacks;
             document.getElementById('user-rank-score').innerText = currentUser.rankScore;
             try { renderHeaderAvatar(); } catch (e) {}
@@ -6662,6 +6940,7 @@
             document.body.classList.toggle('ranked-open', viewName === 'ranked');
             document.body.classList.toggle('adventure-open', viewName === 'adventure' || viewName === 'training');
             document.body.classList.toggle('battle-open', viewName === 'battle');
+            document.body.classList.toggle('gacha-open', viewName === 'gacha');
 
             // 進出戰鬥切換 BGM／背景短片（互不干擾）
             if (viewName === 'battle') {
@@ -6677,6 +6956,29 @@
             if (viewName === 'home') updateAdminUiVisibility();
             if (viewName === 'adventure') renderAdventureScreen();
             if (viewName === 'training') renderStrandsGrid();
+            if (viewName === 'gacha') updateGachaAltarHud();
+        }
+
+        /**
+         * 距離必出次數。
+         * 正式池冇跨抽保底計數。山海經硬保底只喺十連：10 張入面必定 1 張
+         * （drawGacha 嘅 guaranteedMythicPos）。倒數因此係十連窗口剩餘張數，
+         * 未抽同抽完都係 10。單抽維持 3%，唔推進呢個數，亦唔用 100 抽 UR。
+         */
+        /* GACHA_GUARANTEE_REMAINING_START */
+        function gachaGuaranteeRemaining() {
+            return 10;
+        }
+        /* GACHA_GUARANTEE_REMAINING_END */
+
+        function updateGachaAltarHud() {
+            const goldEl = document.getElementById('gacha-gold-value');
+            const pityEl = document.getElementById('gacha-pity-value');
+            if (goldEl) {
+                const n = currentUser ? Math.floor(Number(currentUser.gold) || 0) : 0;
+                goldEl.textContent = n.toLocaleString('en-US');
+            }
+            if (pityEl) pityEl.textContent = String(gachaGuaranteeRemaining());
         }
 
         function drawGacha(count) {
@@ -6761,8 +7063,16 @@
 
             results.forEach(item => {
                 const card = document.createElement('div');
-                card.className = `glass-card p-4 rounded-2xl text-center border relative flex flex-col items-center cursor-pointer ${item.isMythic ? 'border-amber-400 mythic-glow gacha-shanhai-flash' : 'border-amber-800/40'}`;
+                card.className = 'gacha-result-card' + (item.isMythic ? ' gacha-result-card--mythic mythic-glow gacha-shanhai-flash' : '');
+                card.setAttribute('role', 'button');
+                card.tabIndex = 0;
                 card.onclick = () => openCardZoomModal(item.id, item.level);
+                card.onkeydown = (ev) => {
+                    if (ev.key === 'Enter' || ev.key === ' ') {
+                        ev.preventDefault();
+                        openCardZoomModal(item.id, item.level);
+                    }
+                };
                 card.innerHTML = `
                     <div class="w-20 h-20 my-2">
                         ${renderMonsterElement(item.imgKey, item.name)}
