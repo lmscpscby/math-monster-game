@@ -113,6 +113,7 @@ assert(
   'collection appends the star-trail ids'
 );
 
+const STAR_CARD_SHA = {};
 const STAR_CARD_FILES = {
   st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png',
   st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png',
@@ -128,8 +129,16 @@ Object.keys(STAR_CARD_FILES).forEach(function (key) {
   const file = STAR_CARD_FILES[key];
   const bytes = fs.readFileSync(path.join(root, file));
   const sha = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
+  STAR_CARD_SHA[key] = sha;
   assert(html.includes(file + '?v=' + sha), key + ' cache-busts ' + file + '?v=' + sha);
 });
+['ed39ca82', '2bb54584', '999ee2a1', '2c8eaf1d', '095c0368', 'c2ff6c64', 'aa7cc52f', 'a027951e', 'dc4e429d'].forEach(function (oldSha) {
+  assert(!html.includes('?v=' + oldSha), 'old cutout hash is gone ' + oldSha);
+});
+const artCss = html.slice(html.indexOf('.monster-art-frame {'), html.indexOf('.gacha-controls'));
+assert(artCss.includes('overflow: hidden'), 'art frames hide overflow');
+assert(artCss.includes('.monster-art-frame > img.monster-art'), 'art frame targets the monster image');
+assert(artCss.includes('object-fit: contain'), 'art frames use object-fit contain');
 
 const fnStart = html.indexOf('/* GACHA_GUARANTEE_REMAINING_START */');
 const fnEnd = html.indexOf('/* GACHA_GUARANTEE_REMAINING_END */');
@@ -372,7 +381,8 @@ const allHtml = cardHtml('monster-collection-grid');
 STAR_IDS.forEach(function (id) {
   assert(allHtml.includes(NAMES[id]), 'collection lists ' + NAMES[id]);
 });
-assert(allHtml.includes('ui-star-card-elden.png?v=ed39ca82'), 'collection renders the cache-busted cutout');
+assert(allHtml.includes('ui-star-card-elden.png?v=' + STAR_CARD_SHA.st_elden), 'collection renders the cache-busted full scene');
+assert(allHtml.includes('monster-art-frame'), 'collection art sits in a clipping frame');
 api.setFilter('mythic');
 api.renderCollection();
 const mythicHtml = cardHtml('monster-collection-grid');

@@ -3498,6 +3498,24 @@
             outline: 3px solid #ffe9a8;
             outline-offset: 2px;
         }
+        /* Full-bleed star-trail / mythic art stays inside square and portrait frames. */
+        .monster-art-frame {
+            position: relative;
+            overflow: hidden;
+            flex: 0 0 auto;
+        }
+        .monster-art-frame > img.monster-art {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+            box-sizing: border-box;
+        }
         .gacha-controls {
             width: 100%;
             max-width: 680px;
@@ -5557,16 +5575,16 @@
             holy_hunter: 'assets/monsters/holy/holy_hunter.png',
             holy_beast: 'assets/monsters/holy/holy_beast.png',
             holy_envoy: 'assets/monsters/holy/holy_envoy.png',
-            // 星軌命途：符文紀元（透明立繪，?v= 檔案 SHA-256 前 8 碼）
-            st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=ed39ca82',
-            st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png?v=2bb54584',
-            st_fey: 'assets/monsters/star-trail/ui-star-card-fey.png?v=999ee2a1',
-            st_lucia: 'assets/monsters/star-trail/ui-star-card-lucia.png?v=2c8eaf1d',
-            st_malakor: 'assets/monsters/star-trail/ui-star-card-malakor.png?v=095c0368',
-            st_noah: 'assets/monsters/star-trail/ui-star-card-noah.png?v=c2ff6c64',
-            st_selina: 'assets/monsters/star-trail/ui-star-card-selina.png?v=aa7cc52f',
-            st_serafina: 'assets/monsters/star-trail/ui-star-card-serafina.png?v=a027951e',
-            st_thorin: 'assets/monsters/star-trail/ui-star-card-thorin.png?v=dc4e429d',
+            // 星軌命途：符文紀元（全幅場景，?v= 檔案 SHA-256 前 8 碼）
+            st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=7d971577',
+            st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png?v=6e97f58e',
+            st_fey: 'assets/monsters/star-trail/ui-star-card-fey.png?v=247c9089',
+            st_lucia: 'assets/monsters/star-trail/ui-star-card-lucia.png?v=4f62f6e8',
+            st_malakor: 'assets/monsters/star-trail/ui-star-card-malakor.png?v=6901c5bb',
+            st_noah: 'assets/monsters/star-trail/ui-star-card-noah.png?v=ea941b12',
+            st_selina: 'assets/monsters/star-trail/ui-star-card-selina.png?v=da683b2a',
+            st_serafina: 'assets/monsters/star-trail/ui-star-card-serafina.png?v=071899a5',
+            st_thorin: 'assets/monsters/star-trail/ui-star-card-thorin.png?v=57db1117',
             // 賽季限定只存 id；立繪唔使用 dataURL。
             season_kirin: 'assets/monsters/season_kirin.jpg'
         };
@@ -7277,7 +7295,7 @@
         function renderMonsterElement(imgKey, nameStr) {
             const imgSrc = BEAST_IMAGES[imgKey];
             if (imgSrc) {
-                return `<img src="${imgSrc}" alt="${nameStr || '怪獸'}" class="w-full h-full object-contain rounded-2xl border-2 border-amber-400/80 shadow-md bg-slate-950/40">`;
+                return `<img src="${imgSrc}" alt="${nameStr || '怪獸'}" class="monster-art w-full h-full object-contain rounded-2xl border-2 border-amber-400/80 shadow-md bg-slate-950/40">`;
             }
             return `<div class="w-full h-full rounded-2xl bg-purple-900 border border-amber-400 flex items-center justify-center font-bold text-xs text-amber-300 p-2 text-center">${nameStr || '魔王Boss'}</div>`;
         }
@@ -7293,7 +7311,9 @@
                     ${runtimeData.title} (${elemText})
                 </div>
                 <div class="relative w-48 h-48 mx-auto my-3">
-                    ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                    <div class="monster-art-frame absolute inset-0 rounded-2xl">
+                        ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                    </div>
                     ${s1Kirin ? '<img class="codex-s1-badge codex-s1-badge--on-art" src="assets/bg/ui-codex-badge-s1-season.png" alt="" decoding="async">' : ''}
                 </div>
                 <h3 class="text-2xl font-black text-white">${runtimeData.name} (Lv.${runtimeData.level})</h3>
@@ -7550,7 +7570,7 @@
                     }
                 };
                 card.innerHTML = `
-                    <div class="w-20 h-20 my-2">
+                    <div class="monster-art-frame w-20 h-20 my-2 rounded-2xl">
                         ${renderMonsterElement(item.imgKey, item.name)}
                     </div>
                     <div class="font-extrabold text-xs text-white mt-1">${item.name}</div>
@@ -7627,7 +7647,7 @@
                             </span>
                         </div>
 
-                        <div onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})" class="w-28 h-28 mx-auto my-2 overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-transform" title="點擊放大觀看">
+                        <div onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})" class="monster-art-frame w-28 h-28 mx-auto my-2 overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-transform" title="點擊放大觀看">
                             ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
                         </div>
 
