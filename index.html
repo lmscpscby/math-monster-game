@@ -1009,16 +1009,186 @@
             background: rgba(12, 78, 118, 0.82);
             border-bottom-color: rgba(186, 230, 253, 0.38);
         }
-        #view-home .lobby-hero {
-            background: linear-gradient(100deg, rgba(12, 74, 110, 0.78), rgba(15, 23, 42, 0.5) 55%, rgba(8, 90, 120, 0.7));
-            border-color: rgba(186, 230, 253, 0.45);
+        /* Lobby hero is a wood-framed carousel. Slide art is 1920×720. */
+        #view-home .lobby-carousel {
+            position: relative;
+            color: #3d2914;
+            background-color: #f4e4c8;
+            border-style: solid;
+            border-width: 18px 22px 16px;
+            border-image: url('assets/bg/ui-shared-panel-medium.png') 32 36 fill stretch;
+            box-shadow: 0 16px 28px rgba(8, 50, 90, 0.28);
+        }
+        .lobby-carousel__viewport {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1920 / 720;
+            overflow: hidden;
+            background: #1a120c;
+        }
+        .lobby-carousel__slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.45s ease;
+        }
+        .lobby-carousel__slide.is-active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+        .lobby-carousel__bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            pointer-events: none;
+            user-select: none;
+        }
+        .lobby-carousel__scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.05) 20%, rgba(12, 8, 4, 0.28) 55%, rgba(12, 8, 4, 0.78) 100%);
+            pointer-events: none;
+        }
+        .lobby-carousel__hit {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            text-align: left;
+        }
+        .lobby-carousel__hit:focus-visible,
+        .lobby-carousel__dot:focus-visible,
+        .lobby-carousel__arrow:focus-visible,
+        .lobby-hero-cta:focus-visible {
+            outline: 3px solid #ffe9a8;
+            outline-offset: 3px;
+        }
+        .lobby-carousel__copy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.35rem;
+            width: min(100%, 46rem);
+            padding: 1rem 1.15rem 1.2rem;
+            pointer-events: none;
+        }
+        .lobby-carousel__slide--welcome .lobby-carousel__copy {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .lobby-carousel__slide--welcome .lobby-hero-cta {
+            pointer-events: auto;
+        }
+        .lobby-carousel__kicker {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            color: #ffe9a8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .lobby-carousel__title,
+        .lobby-carousel__copy h2 {
+            margin: 0;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: clamp(1.35rem, 3.4vw, 2.55rem);
+            line-height: 1.15;
+            letter-spacing: 0.04em;
+            color: #fff8ec;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__sub,
+        .lobby-carousel__copy p {
+            margin: 0;
+            max-width: 40rem;
+            color: #f4e8d4;
+            font-size: clamp(12px, 1.7vw, 14px);
+            line-height: 1.45;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
         }
         #view-home .lobby-hero-cta {
-            background: linear-gradient(90deg, #0f766e, #0891b2);
-            box-shadow: 0 12px 24px -8px rgba(8, 145, 178, 0.55);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.25rem;
+            border-style: solid;
+            border-width: 11px 26px;
+            border-image: url('assets/bg/ui-shared-btn-primary.png') 22 40 fill stretch;
+            background: transparent;
+            color: #fff8ec;
+            font-weight: 900;
+            font-size: 0.95rem;
+            line-height: 1.2;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+            cursor: pointer;
+            pointer-events: auto;
         }
-        #view-home .lobby-hero-cta:hover {
-            background: linear-gradient(90deg, #0d9488, #06b6d4);
+        #view-home .lobby-hero-cta:hover { filter: brightness(1.06); }
+        #view-home .lobby-hero-cta:active { transform: translateY(1px); }
+        .lobby-carousel__nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.35rem 0.2rem 0.1rem;
+        }
+        .lobby-carousel__arrow {
+            border: 0;
+            background: transparent;
+            color: #6b4424;
+            font-weight: 900;
+            font-size: 0.8rem;
+            cursor: pointer;
+            padding: 0.2rem 0.35rem;
+        }
+        .lobby-carousel__arrow:hover { color: #3a2412; }
+        .lobby-carousel__dots {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+        .lobby-carousel__dot {
+            width: 0.7rem;
+            height: 0.7rem;
+            padding: 0;
+            border-radius: 999px;
+            border: 2px solid #8a5a28;
+            background: transparent;
+            cursor: pointer;
+        }
+        .lobby-carousel__dot.is-active {
+            background: #c9923e;
+            border-color: #6b4424;
+        }
+        @media (max-width: 640px) {
+            #view-home .lobby-carousel { border-width: 12px 12px 12px; }
+            .lobby-carousel__copy { padding: 0.45rem 0.6rem 0.55rem; gap: 0.15rem; }
+            .lobby-carousel__copy p,
+            .lobby-carousel__sub,
+            .lobby-carousel__kicker { display: none; }
+            .lobby-carousel__title,
+            .lobby-carousel__copy h2 { font-size: 1.05rem; }
+            #view-home .lobby-hero-cta { border-width: 8px 14px; font-size: 0.78rem; margin-top: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .lobby-carousel__slide { transition: none; }
         }
 
         .island-hub {
@@ -3212,6 +3382,41 @@
             color: #ffffff;
             font-variant-numeric: tabular-nums;
         }
+        .gacha-series-tabs {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .gacha-series-tab {
+            flex: 1 1 220px;
+            max-width: 440px;
+            border-style: solid;
+            border-width: 12px 28px;
+            border-image: url('assets/bg/ui-shared-btn-secondary.png') 18 30 fill stretch;
+            background: transparent;
+            color: #f8ecd4;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: clamp(14px, 2.2vw, 18px);
+            letter-spacing: 0.04em;
+            line-height: 1.2;
+            min-height: 52px;
+            padding: 0.15rem 0.2rem;
+            cursor: pointer;
+            text-shadow: 0 1px 1px rgba(40, 20, 6, 0.7);
+        }
+        .gacha-series-tab.is-active {
+            border-image: url('assets/bg/ui-shared-btn-primary.png') 22 40 fill stretch;
+            color: #fff8ec;
+            text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
+        }
+        .gacha-series-tab:hover { filter: brightness(1.05); }
+        .gacha-series-tab:focus-visible {
+            outline: 3px solid #ffe9a8;
+            outline-offset: 3px;
+        }
         .gacha-title {
             margin: 0;
             text-align: center;
@@ -3222,6 +3427,34 @@
             color: #ffe9a8;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 18px rgba(90, 50, 0, 0.45);
         }
+        .gacha-series-banner {
+            width: 100%;
+            max-width: 920px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.85rem;
+            border: 1px solid rgba(243, 156, 18, 0.5);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+        }
+        .gacha-series-banner[hidden] { display: none !important; }
+        .gacha-series-banner img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .gacha-pool-status {
+            margin: 0;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            background: rgba(20, 12, 6, 0.78);
+            border: 1px solid rgba(243, 156, 18, 0.85);
+            color: #ffe9a8;
+            font-weight: 900;
+            font-size: clamp(14px, 2.4vw, 18px);
+            letter-spacing: 0.08em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+        }
+        .gacha-pool-status[hidden] { display: none !important; }
         .gacha-stage-core {
             width: 100%;
             max-width: 920px;
@@ -3230,6 +3463,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 0.75rem;
         }
         #gacha-idle-state.hidden,
         #gacha-results-grid.hidden { display: none; }
@@ -3354,9 +3588,11 @@
             .gacha-altar { gap: 0.55rem; }
             .gacha-summon { min-height: 68px; }
             .gacha-title { letter-spacing: 0.08em; }
+            .gacha-series-tab { border-width: 10px 16px; letter-spacing: 0.02em; }
+            .gacha-series-banner { border-radius: 0.6rem; }
         }
         @media (prefers-reduced-motion: reduce) {
-            .gacha-summon, .gacha-back { transition: none; }
+            .gacha-summon, .gacha-back, .gacha-series-tab { transition: none; }
             .gacha-summon:hover { transform: none; }
         }
 
@@ -3669,25 +3905,46 @@
 
         <!-- VIEW 1: HOME MENU -->
         <section id="view-home" class="space-y-6">
-            <div class="lobby-hero relative rounded-3xl overflow-hidden glass-panel border-2 shadow-2xl group">
-                <div class="w-full h-64 md:h-80 overflow-hidden relative flex items-center justify-center bg-slate-950">
-                    <img id="main-cover-img" src="" alt="山海數學之戰" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent pointer-events-none"></div>
-                </div>
-                
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div>
-                        <h2 class="text-xl sm:text-3xl md:text-5xl font-black break-words bg-clip-text text-transparent bg-gradient-to-r from-sky-100 via-amber-100 to-white">
-                            歡迎來到數理怪獸世界
-                        </h2>
-                        <p class="text-slate-200 max-w-2xl text-xs md:text-sm mt-1 leading-relaxed">
-                            訓練場分單元挑戰。積分爭霸賽 4 關屬性升級（10LV水/20LV火/30LV草/40LV雷雙BOSS）。冒險塔四座元素神塔，各五層，通關後開無限挑戰。
-                        </p>
+            <div class="lobby-carousel" id="lobby-carousel" tabindex="0" aria-roledescription="carousel" aria-label="大廳宣傳">
+                <div class="lobby-carousel__viewport">
+                    <div class="lobby-carousel__slide lobby-carousel__slide--welcome is-active" data-lobby-slide="0" aria-hidden="false">
+                        <img id="main-cover-img" class="lobby-carousel__bg" src="" alt="">
+                        <div class="lobby-carousel__scrim"></div>
+                        <div class="lobby-carousel__copy">
+                            <h2>歡迎來到數理怪獸世界</h2>
+                            <p>訓練場分單元挑戰。積分爭霸賽 4 關屬性升級。冒險塔通關後開無限挑戰。</p>
+                            <button type="button" onclick="enterAdventure()" class="lobby-hero-cta">
+                                <i class="fa-solid fa-play" aria-hidden="true"></i>
+                                <span>開始冒險</span>
+                            </button>
+                        </div>
                     </div>
-                    <button onclick="enterAdventure()" class="lobby-hero-cta px-6 py-3 text-white font-black text-sm rounded-2xl flex items-center space-x-2 active:scale-95 transition-all">
-                        <i class="fa-solid fa-play"></i>
-                        <span>開始冒險</span>
-                    </button>
+                    <div class="lobby-carousel__slide" data-lobby-slide="1" aria-hidden="true">
+                        <img class="lobby-carousel__bg" src="assets/bg/ui-gacha-stage-mystic-1920.png?v=2d670fe2" alt="">
+                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="前往山海經神獸抽卡">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">祈願召喚</span>
+                                <span class="lobby-carousel__title">山海經神獸</span>
+                                <span class="lobby-carousel__sub">十連抽必得一隻上古神獸</span>
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>前往抽卡</span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="lobby-carousel__slide" data-lobby-slide="2" aria-hidden="true">
+                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="前往星軌命途抽卡">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=13e864c8" alt="星軌命途：符文紀元">
+                        </button>
+                    </div>
+                </div>
+                <div class="lobby-carousel__nav">
+                    <button type="button" class="lobby-carousel__arrow" id="lobby-carousel-prev" aria-label="上一張宣傳">上一張</button>
+                    <div class="lobby-carousel__dots" role="tablist" aria-label="選擇宣傳">
+                        <button type="button" class="lobby-carousel__dot is-active" role="tab" aria-selected="true" aria-label="歡迎" data-lobby-dot="0"></button>
+                        <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="山海經神獸" data-lobby-dot="1"></button>
+                        <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="星軌命途" data-lobby-dot="2"></button>
+                    </div>
+                    <button type="button" class="lobby-carousel__arrow" id="lobby-carousel-next" aria-label="下一張宣傳">下一張</button>
                 </div>
             </div>
 
@@ -3909,7 +4166,7 @@
                             <div class="gacha-pill__value" id="gacha-gold-value">0</div>
                         </div>
                     </div>
-                    <div class="gacha-pill" title="十連抽 10 張內必得 1 張山海經">
+                    <div class="gacha-pill" id="gacha-pity-pill" title="十連抽 10 張內必得 1 張山海經">
                         <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
                         <div>
                             <div class="gacha-pill__label">距離必出次數</div>
@@ -3919,11 +4176,20 @@
                 </div>
             </div>
 
-            <h2 class="gacha-title">怪獸祈願召喚</h2>
+            <div class="gacha-series-tabs" role="tablist" aria-label="召喚卡池">
+                <button type="button" class="gacha-series-tab is-active" role="tab" id="gacha-tab-shanhaijing" data-gacha-series="shanhaijing" aria-selected="true" onclick="setGachaSeries('shanhaijing')">山海經神獸</button>
+                <button type="button" class="gacha-series-tab" role="tab" id="gacha-tab-star-trail" data-gacha-series="star-trail" aria-selected="false" onclick="setGachaSeries('star-trail')">星軌命途：符文紀元</button>
+            </div>
+
+            <h2 class="gacha-title" id="gacha-altar-title">怪獸祈願召喚</h2>
 
             <div id="gacha-display-area" class="gacha-stage-core">
+                <div id="gacha-series-banner" class="gacha-series-banner" hidden>
+                    <img src="assets/bg/ui-gacha-banner-star-trail-1920.png?v=a5fd33bf" alt="星軌命途：符文紀元">
+                </div>
+                <p id="gacha-pool-status" class="gacha-pool-status" hidden>卡池即將開放</p>
                 <div id="gacha-idle-state" class="gacha-idle">
-                    <p>按下按鈕開始召喚怪獸</p>
+                    <p id="gacha-idle-copy">按下按鈕開始召喚怪獸</p>
                 </div>
                 <div id="gacha-results-grid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full"></div>
             </div>
@@ -3939,7 +4205,7 @@
                         <span class="gacha-summon__price"><i class="fa-solid fa-coins" aria-hidden="true"></i> 2000 金幣</span>
                     </button>
                 </div>
-                <p class="gacha-hint">單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個山海經怪獸卡！</p>
+                <p class="gacha-hint" id="gacha-hint">單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個山海經怪獸卡！</p>
             </div>
         </section>
 
@@ -5666,6 +5932,27 @@
             { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' }
         ];
 
+        // Phase 1：星軌命途：符文紀元。立繪未到，名單留空，池關閉。
+        // TODO: 正式名單對齊 SHANHAIJING_BEASTS 形狀後先改 GACHA_POOLS['star-trail'].open。
+        // 唔好喺度填假戰鬥數值。主視覺備用 assets/bg/promo-star-trail-1920.png?v=71adfa44（唔係走馬燈、唔係抽卡橫幅）。
+        const STAR_TRAIL_BEASTS = [];
+        const GACHA_POOLS = {
+            shanhaijing: { series: 'shanhaijing', open: true },
+            'star-trail': { series: 'star-trail', open: false }
+        };
+        const gachaGuaranteeBySeries = {
+            shanhaijing: 10,
+            'star-trail': 10
+        };
+        let activeGachaSeries = 'shanhaijing';
+
+        function gachaPoolOpen(series) {
+            const pool = GACHA_POOLS[series];
+            if (!pool || !pool.open) return false;
+            if (series === 'star-trail' && !STAR_TRAIL_BEASTS.length) return false;
+            return true;
+        }
+
         const ELEMENTAL_EVO_FAMILIES = {
             'fire_base': {
                 familyId: 'fire_base',
@@ -6017,6 +6304,28 @@
                     skillText: mythic.skillText || '神獸衝擊！',
                     imgKey: mythic.imgKey,
                     desc: mythic.desc || '山海經靈獸'
+                };
+            }
+
+            const starTrail = (typeof STAR_TRAIL_BEASTS !== 'undefined' ? STAR_TRAIL_BEASTS : []).find(b => b && b.id === monsterId);
+            if (starTrail) {
+                const lvlFactor = 1 + (level - 1) * 0.12;
+                return {
+                    id: starTrail.id,
+                    name: starTrail.name,
+                    element: starTrail.element || 'holy',
+                    title: starTrail.title || '星軌符文',
+                    color: starTrail.color || '#f6d98a',
+                    isMythic: true,
+                    series: 'star-trail',
+                    level: level,
+                    hp: Math.floor(Number(starTrail.hp) * lvlFactor),
+                    atk: Math.floor(Number(starTrail.atk) * lvlFactor),
+                    def: Math.floor(Number(starTrail.def) * lvlFactor),
+                    spd: Math.floor(Number(starTrail.spd) * lvlFactor),
+                    skillText: starTrail.skillText || '',
+                    imgKey: starTrail.imgKey || starTrail.id,
+                    desc: starTrail.desc || ''
                 };
             }
 
@@ -6793,8 +7102,70 @@
             return '🥉 數理新秀';
         }
 
+        function initLobbyCarousel() {
+            const root = document.getElementById('lobby-carousel');
+            if (!root || root.dataset.ready === '1') return;
+            root.dataset.ready = '1';
+            const slides = Array.prototype.slice.call(root.querySelectorAll('[data-lobby-slide]'));
+            const dots = Array.prototype.slice.call(root.querySelectorAll('[data-lobby-dot]'));
+            let index = 0;
+            let timer = null;
+            const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const INTERVAL = 5500;
+
+            function show(i) {
+                index = (i + slides.length) % slides.length;
+                slides.forEach(function (slide, n) {
+                    const on = n === index;
+                    slide.classList.toggle('is-active', on);
+                    slide.setAttribute('aria-hidden', on ? 'false' : 'true');
+                });
+                dots.forEach(function (dot, n) {
+                    const on = n === index;
+                    dot.classList.toggle('is-active', on);
+                    dot.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+            }
+            function start() {
+                stop();
+                if (reduce || slides.length < 2) return;
+                timer = setInterval(function () { show(index + 1); }, INTERVAL);
+            }
+            function stop() {
+                if (timer) clearInterval(timer);
+                timer = null;
+            }
+            dots.forEach(function (dot) {
+                dot.addEventListener('click', function () {
+                    show(Number(dot.getAttribute('data-lobby-dot')) || 0);
+                    start();
+                });
+            });
+            const prev = document.getElementById('lobby-carousel-prev');
+            const next = document.getElementById('lobby-carousel-next');
+            if (prev) prev.addEventListener('click', function () { show(index - 1); start(); });
+            if (next) next.addEventListener('click', function () { show(index + 1); start(); });
+            root.addEventListener('mouseenter', stop);
+            root.addEventListener('mouseleave', start);
+            root.addEventListener('focusin', stop);
+            root.addEventListener('focusout', function (ev) {
+                if (!root.contains(ev.relatedTarget)) start();
+            });
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) stop();
+                else start();
+            });
+            root.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); start(); }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); start(); }
+            });
+            show(0);
+            start();
+        }
+
         window.onload = function() {
             document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            try { initLobbyCarousel(); } catch (e) {}
             try { startSeasonCountdown(); } catch (e) {}
             try { renderHeaderAvatar(); } catch (e) {}
             try { updateDailyClaimButton(); } catch (e) {}
@@ -6956,33 +7327,121 @@
             if (viewName === 'home') updateAdminUiVisibility();
             if (viewName === 'adventure') renderAdventureScreen();
             if (viewName === 'training') renderStrandsGrid();
-            if (viewName === 'gacha') updateGachaAltarHud();
+            if (viewName === 'gacha') {
+                resetGachaStage();
+                applyGachaSeriesChrome();
+            }
         }
 
         /**
          * 距離必出次數。
-         * 正式池冇跨抽保底計數。山海經硬保底只喺十連：10 張入面必定 1 張
+         * 正式池冇跨抽保底計數。硬保底只喺十連：10 張入面必定 1 張
          * （drawGacha 嘅 guaranteedMythicPos）。倒數因此係十連窗口剩餘張數，
          * 未抽同抽完都係 10。單抽維持 3%，唔推進呢個數，亦唔用 100 抽 UR。
+         * 山海經同星軌各有自己嘅窗口（gachaGuaranteeBySeries），數值而家都係 10。
          */
         /* GACHA_GUARANTEE_REMAINING_START */
-        function gachaGuaranteeRemaining() {
+        function gachaGuaranteeRemaining(series) {
+            if (series === 'star-trail') return 10;
             return 10;
         }
         /* GACHA_GUARANTEE_REMAINING_END */
 
+        const GACHA_HINT_SHANHAI = '單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個山海經怪獸卡！';
+        const GACHA_HINT_STAR = '卡池即將開放。單抽 200 金幣，十抽 2000 金幣。保底同山海經分開計算。';
+
         function updateGachaAltarHud() {
             const goldEl = document.getElementById('gacha-gold-value');
             const pityEl = document.getElementById('gacha-pity-value');
+            const series = activeGachaSeries === 'star-trail' ? 'star-trail' : 'shanhaijing';
             if (goldEl) {
                 const n = currentUser ? Math.floor(Number(currentUser.gold) || 0) : 0;
                 goldEl.textContent = n.toLocaleString('en-US');
             }
-            if (pityEl) pityEl.textContent = String(gachaGuaranteeRemaining());
+            if (pityEl) {
+                const windowLeft = gachaGuaranteeBySeries[series];
+                pityEl.textContent = String(typeof windowLeft === 'number' ? windowLeft : gachaGuaranteeRemaining(series));
+            }
+        }
+
+        function resetGachaStage() {
+            const idle = document.getElementById('gacha-idle-state');
+            const grid = document.getElementById('gacha-results-grid');
+            if (idle) idle.classList.remove('hidden');
+            if (grid) {
+                grid.classList.add('hidden');
+                grid.innerHTML = '';
+            }
+        }
+
+        function syncGachaDrawButtons(forceBusy) {
+            const series = activeGachaSeries === 'star-trail' ? 'star-trail' : 'shanhaijing';
+            const locked = !!forceBusy || !gachaPoolOpen(series);
+            ['btn-gacha-1', 'btn-gacha-10'].forEach(id => {
+                const b = document.getElementById(id);
+                if (!b) return;
+                b.disabled = locked;
+                b.classList.toggle('opacity-60', locked);
+                b.classList.toggle('pointer-events-none', locked);
+                b.setAttribute('aria-disabled', locked ? 'true' : 'false');
+            });
+        }
+
+        function applyGachaSeriesChrome() {
+            const series = activeGachaSeries === 'star-trail' ? 'star-trail' : 'shanhaijing';
+            const star = series === 'star-trail';
+            const open = gachaPoolOpen(series);
+            document.querySelectorAll('[data-gacha-series]').forEach(btn => {
+                const on = btn.getAttribute('data-gacha-series') === series;
+                btn.classList.toggle('is-active', on);
+                btn.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            const banner = document.getElementById('gacha-series-banner');
+            if (banner) banner.hidden = !star;
+            const poolStatus = document.getElementById('gacha-pool-status');
+            if (poolStatus) poolStatus.hidden = !(star && !open);
+            const hint = document.getElementById('gacha-hint');
+            if (hint) hint.textContent = star ? GACHA_HINT_STAR : GACHA_HINT_SHANHAI;
+            const idle = document.getElementById('gacha-idle-state');
+            const idleCopy = document.getElementById('gacha-idle-copy');
+            if (star && !open) {
+                if (idle) idle.classList.add('hidden');
+            } else if (idle && idleCopy) {
+                idleCopy.textContent = '按下按鈕開始召喚怪獸';
+            }
+            const pityPill = document.getElementById('gacha-pity-pill');
+            if (pityPill) {
+                pityPill.title = star
+                    ? '星軌十連窗口，同山海經分開計算'
+                    : '十連抽 10 張內必得 1 張山海經';
+            }
+            syncGachaDrawButtons(false);
+            updateGachaAltarHud();
+        }
+
+        function setGachaSeries(series) {
+            if (!currentUser || gachaBusy) return;
+            activeGachaSeries = series === 'star-trail' ? 'star-trail' : 'shanhaijing';
+            resetGachaStage();
+            applyGachaSeriesChrome();
+        }
+
+        function openGachaSeries(series) {
+            if (!currentUser) {
+                const overlay = document.getElementById('auth-modal-overlay');
+                if (overlay) overlay.classList.remove('hidden');
+                return;
+            }
+            activeGachaSeries = series === 'star-trail' ? 'star-trail' : 'shanhaijing';
+            switchView('gacha');
         }
 
         function drawGacha(count) {
             if (!currentUser || gachaBusy) return;
+            const series = activeGachaSeries === 'star-trail' ? 'star-trail' : 'shanhaijing';
+            // 星軌 Phase 1 未有名單：唔扣金幣、唔寫背包。窗口留喺 gachaGuaranteeBySeries['star-trail']。
+            if (series === 'star-trail' && !gachaPoolOpen(series)) return;
+
             const singleCost = 200;
             const cost = count * singleCost;
 
@@ -6992,10 +7451,7 @@
             }
 
             gachaBusy = true;
-            ['btn-gacha-1', 'btn-gacha-10'].forEach(id => {
-                const b = document.getElementById(id);
-                if (b) { b.disabled = true; b.classList.add('opacity-60', 'pointer-events-none'); }
-            });
+            syncGachaDrawButtons(true);
 
             currentUser.gold -= cost;
             const results = [];
@@ -7016,18 +7472,22 @@
             if (count === 10) {
                 guaranteedMythicPos = Math.floor(Math.random() * 10);
             }
+            gachaGuaranteeBySeries[series] = 10;
+
+            const mythicRoster = series === 'star-trail' ? STAR_TRAIL_BEASTS : SHANHAIJING_BEASTS;
 
             for (let i = 0; i < count; i++) {
                 const rand = Math.random();
                 let drawnItemData;
 
                 if (i === guaranteedMythicPos || rand < 0.03) {
-                    const beast = SHANHAIJING_BEASTS[Math.floor(Math.random() * SHANHAIJING_BEASTS.length)];
+                    const beast = mythicRoster[Math.floor(Math.random() * mythicRoster.length)];
                     drawnItemData = getMonsterRuntimeData(beast.id, 1);
                 } else {
                     const baseItem = poolables[Math.floor(Math.random() * poolables.length)];
                     drawnItemData = getMonsterRuntimeData(baseItem.id, 1);
                 }
+                drawnItemData.series = series;
 
                 const exists = currentUser.ownedMonsters.some(m => m.id === drawnItemData.id);
                 if (exists) {
@@ -7049,10 +7509,7 @@
             renderGachaResults(results, convertedExpCount);
             playSFX(880, 'sine', 0.3);
             gachaBusy = false;
-            ['btn-gacha-1', 'btn-gacha-10'].forEach(id => {
-                const b = document.getElementById(id);
-                if (b) { b.disabled = false; b.classList.remove('opacity-60', 'pointer-events-none'); }
-            });
+            syncGachaDrawButtons(false);
         }
 
         function renderGachaResults(results, convertedExp) {
@@ -7078,7 +7535,7 @@
                         ${renderMonsterElement(item.imgKey, item.name)}
                     </div>
                     <div class="font-extrabold text-xs text-white mt-1">${item.name}</div>
-                    ${item.isMythic ? '<span class="text-[10px] bg-amber-500/40 text-amber-200 font-bold px-2 py-0.5 rounded mt-1 shadow">✨ 山海經神獸</span>' : ''}
+                    ${item.isMythic ? `<span class="text-[10px] bg-amber-500/40 text-amber-200 font-bold px-2 py-0.5 rounded mt-1 shadow">✨ ${item.series === 'star-trail' ? '星軌符文' : '山海經神獸'}</span>` : ''}
                     ${item.isDuplicate ? `<span class="text-[10px] bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded mt-1">+${DUPLICATE_MONSTER_EXP} EXP包 (重複)</span>` : '<span class="text-[10px] bg-pink-500/30 text-pink-200 font-bold px-2 py-0.5 rounded mt-1">NEW 新獲得</span>'}
                 `;
                 grid.appendChild(card);
@@ -7110,6 +7567,7 @@
             const container = document.getElementById('monster-collection-grid');
             container.innerHTML = '';
 
+            // TODO(star-trail): 圖鑑未開第四分頁。STAR_TRAIL_BEASTS 有正式名單後先併入 allList。
             let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'].concat(
                 (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; })
             );
