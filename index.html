@@ -9974,31 +9974,57 @@
             return String((q && q.question) || '').replace(/^【[^】]{0,80}】\s*/, '').length;
         }
 
-        /** 戰鬥抽題：優先有圖；其次短純文字（≤55字）；剔超長同「有圖字冇圖檔」 */
+        /**
+         * 有附圖就唔入戰鬥池。題庫欄位係 image（truthy 即跳，空白字串唔算）。
+         * 同等 URL／附件欄（imageUrl、img、figure、attachment）一併跳，避免改名之後漏。
+         */
+        function imageAttachmentPresent(v) {
+            if (Array.isArray(v)) {
+                for (let i = 0; i < v.length; i++) {
+                    if (imageAttachmentPresent(v[i])) return true;
+                }
+                return false;
+            }
+            if (v && typeof v === 'object') return imageAttachmentPresent(v.url || v.src || v.path || v.href);
+            return !!v;
+        }
+
+        function questionHasAttachedImage(q) {
+            if (!q || typeof q !== 'object') return false;
+            if (q.image) return true;
+            return imageAttachmentPresent(q.imageUrl)
+                || imageAttachmentPresent(q.img)
+                || imageAttachmentPresent(q.figure)
+                || imageAttachmentPresent(q.attachment)
+                || imageAttachmentPresent(q.attachments);
+        }
+
+        /** 黑名單、有圖、題幹叫睇圖但冇圖：三樣都唔好入戰鬥池。 */
+        function battleQuestionEligible(q) {
+            if (!q || isBattleBlacklisted(q)) return false;
+            if (questionHasAttachedImage(q)) return false;
+            if (questionRefsMissingImage(q)) return false;
+            return true;
+        }
+
+        /** 戰鬥抽題：硬跳過有圖題；其餘優先短純文字（≤55字）；仍剔「有圖字冇圖檔」。 */
         function filterBattleQuestionPool(pool) {
             const SHORT_MAX = 55;
-            const withImg = [];
             const shortOk = [];
-            for (let i = 0; i < pool.length; i++) {
+            for (let i = 0; i < (pool ? pool.length : 0); i++) {
                 const q = pool[i];
-                if (!q || isBattleBlacklisted(q)) continue;
-                if (questionRefsMissingImage(q)) continue;
-                if (q.image) {
-                    withImg.push(q);
-                    continue;
-                }
+                if (!battleQuestionEligible(q)) continue;
                 if (questionStemLen(q) <= SHORT_MAX) shortOk.push(q);
             }
-            // 有圖優先；不夠再用短題；再不夠先放寬到 80 字（仍剔缺圖引用）
-            if (withImg.length + shortOk.length >= 8) return withImg.concat(shortOk);
+            if (shortOk.length >= 8) return shortOk;
             const medium = [];
-            for (let i = 0; i < pool.length; i++) {
+            for (let i = 0; i < (pool ? pool.length : 0); i++) {
                 const q = pool[i];
-                if (!q || isBattleBlacklisted(q) || q.image || questionRefsMissingImage(q)) continue;
+                if (!battleQuestionEligible(q)) continue;
                 if (questionStemLen(q) <= 80) medium.push(q);
             }
-            const preferred = withImg.concat(shortOk.length ? shortOk : medium);
-            return preferred.length ? preferred : pool.filter(q => q && !isBattleBlacklisted(q) && !questionRefsMissingImage(q));
+            const preferred = shortOk.length ? shortOk : medium;
+            return preferred.length ? preferred : (pool || []).filter(battleQuestionEligible);
         }
 
         /**
@@ -10086,9 +10112,9 @@
             let pool = filterBattleQuestionPool(matched);
             let fallbackLevel = 'unit';
 
-            // 池太細：先放寬字數（仍剔缺圖），再先全年級。有單元命中就優先用，避免再抽到其他課題。
+            // 池太細：放寬字數。有圖題同缺圖引用繼續剔，唔好因為池細就抽返有圖題。
             if (pool.length < 3 && matched.length) {
-                const wider = matched.filter(q => q && !isBattleBlacklisted(q) && !questionRefsMissingImage(q));
+                const wider = matched.filter(battleQuestionEligible);
                 if (wider.length > pool.length) {
                     pool = wider;
                     fallbackLevel = 'unit-wide';
@@ -10100,21 +10126,14 @@
             }
             if (!pool.length) return null;
 
-            let candidates = pool.filter(q => !usedWordQuestionIds.has(q.id));
+            let candidates = pool.filter(q => battleQuestionEligible(q) && !usedWordQuestionIds.has(q.id));
             if (!candidates.length) {
-                candidates = pool.slice();
                 usedWordQuestionIds.clear();
+                candidates = pool.filter(battleQuestionEligible);
             }
+            if (!candidates.length) return null;
 
-            // 有圖題加權：約 55% 機會優先抽有圖（若有）
-            // 無圖視覺題已由 questionRefsMissingImage 剔除；此處唔再抬無圖睇圖題
-            const imgCands = candidates.filter(q => q.image);
-            let item;
-            if (imgCands.length && Math.random() < 0.55) {
-                item = imgCands[Math.floor(Math.random() * imgCands.length)];
-            } else {
-                item = candidates[Math.floor(Math.random() * candidates.length)];
-            }
+            const item = candidates[Math.floor(Math.random() * candidates.length)];
             usedWordQuestionIds.add(item.id);
 
             const opts = Array.isArray(item.options) ? item.options.slice() : [];
