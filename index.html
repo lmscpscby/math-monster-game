@@ -1099,24 +1099,41 @@
         }
         /* Official plates already bake the large title.
            Scrim stays. Overlay is only a kicker, one subtitle, and the wood CTA. */
+        /* Plate scrim is lighter than the welcome fade (bottom 0.78).
+           星軌／排位 sit a little darker than 山海經. */
         .lobby-carousel__slide--plate .lobby-carousel__scrim {
             z-index: 1;
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.04) 20%, rgba(12, 8, 4, 0.18) 55%, rgba(12, 8, 4, 0.48) 100%);
+        }
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__scrim {
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.02) 20%, rgba(12, 8, 4, 0.14) 55%, rgba(12, 8, 4, 0.42) 100%);
         }
         .lobby-carousel__slide--plate .lobby-carousel__copy {
             position: absolute;
             z-index: 2;
-            left: 4%;
+            left: 3.5%;
             right: auto;
             bottom: 7%;
             width: min(58%, 28rem);
             padding: 0;
-            gap: 0.2rem;
+            gap: 0.4rem;
             pointer-events: none;
         }
-        /* 山海經 title is baked along the bottom center. Keep the lines in the lower left. */
+        /* 山海經 title is baked along the bottom center. Lift the lines clear of those glyphs. */
         .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy {
-            bottom: 8%;
+            bottom: 25%;
             width: min(36%, 16rem);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__kicker {
+            color: #ffe9a8;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__sub {
+            color: #fff8ec;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
         }
         .lobby-carousel__slide--plate .lobby-carousel__copy h2,
         .lobby-carousel__slide--plate .lobby-carousel__title {
@@ -1229,7 +1246,7 @@
             .lobby-carousel__slide--plate .lobby-carousel__kicker,
             .lobby-carousel__slide--plate .lobby-carousel__sub { display: block; }
             .lobby-carousel__slide--plate .lobby-carousel__copy { width: min(62%, 14rem); bottom: 5%; }
-            .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy { width: min(48%, 11rem); bottom: 6%; }
+            .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy { width: min(48%, 11rem); bottom: 25%; }
             .lobby-carousel__title,
             .lobby-carousel__copy h2 { font-size: 1.05rem; }
             #view-home .lobby-hero-cta { border-width: 8px 14px; font-size: 0.78rem; margin-top: 0; }

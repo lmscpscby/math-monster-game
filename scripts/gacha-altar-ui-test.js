@@ -112,7 +112,16 @@ assert(starSlide.includes('>進入祈願<') && starSlide.includes('lobby-hero-ct
 assert((carousel.match(/>進入祈願</g) || []).length === 2, 'only the two gacha plates show 進入祈願');
 assert(rankedSlide.includes('>進入積分爭霸<') && rankedSlide.includes('ranked-btn ranked-btn--primary'), 'ranked slide shows the ranked wood 進入積分爭霸 chip');
 assert(shanSlide.includes('lobby-carousel__scrim') && starSlide.includes('lobby-carousel__scrim') && rankedSlide.includes('lobby-carousel__scrim'), 'poster slides restore the bottom scrim');
-assert(html.includes('linear-gradient(180deg, rgba(12, 8, 4, 0.05) 20%, rgba(12, 8, 4, 0.28) 55%, rgba(12, 8, 4, 0.78) 100%)'), 'scrim keeps the top-light bottom-dark gradient');
+assert(html.includes('linear-gradient(180deg, rgba(12, 8, 4, 0.05) 20%, rgba(12, 8, 4, 0.28) 55%, rgba(12, 8, 4, 0.78) 100%)'), 'welcome scrim keeps the deeper bottom fade');
+assert(html.includes('rgba(12, 8, 4, 0.48) 100%'), 'star and ranked plates use a lighter 0.48 scrim');
+assert(html.includes('rgba(12, 8, 4, 0.42) 100%'), 'shan-hai plate scrim stays lighter at 0.42');
+assert(html.includes('.lobby-carousel__slide--plate .lobby-carousel__kicker'), 'plate kicker has its own type rule');
+assert(html.includes('font-size: 0.8rem') && html.includes('letter-spacing: 0.14em') && html.includes('color: #ffe9a8'), 'plate kicker stays gold, 0.8rem, 0.14em');
+assert(html.includes('font-size: 1.1rem') && html.includes('color: #fff8ec'), 'plate subtitle is the larger warm white');
+assert(html.includes('text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85)'), 'plate lines share the deeper shadow');
+assert(html.includes('left: 3.5%') && html.includes('gap: 0.4rem'), 'plate copy sits inset with the art gap');
+assert(html.includes('.lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy') && html.includes('bottom: 25%'), 'shan-hai copy is lifted off the baked title');
+assert(html.includes('.lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__plate-cta') && html.includes('bottom: 23%'), 'shan-hai CTA stays raised');
 assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__scrim[^{]*\{[^}]*display:\s*none/.test(html), 'plate scrim is not force-hidden');
 assert(html.includes('.lobby-carousel__slide--plate .lobby-carousel__copy h2'), 'plate h2 hide selector remains');
 assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__copy\s*\{[^}]*display:\s*none/.test(html), 'plate copy block is not force-hidden');
