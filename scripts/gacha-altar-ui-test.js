@@ -95,10 +95,28 @@ assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=22694439'), 's
 assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07'), 'ranked slide uses the 1920×720 plate');
 assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
 assert(!carousel.includes('lobby-carousel__kicker'), 'poster slides do not overlay a second title');
-assert(!carousel.includes('前往抽卡'), 'poster slides do not overlay a second CTA');
-assert(carousel.includes("openGachaSeries('shanhaijing')"), 'shan-hai slide deep-links the shanhai pool');
-assert(carousel.includes("openGachaSeries('star-trail')"), 'star-trail slide deep-links the star-trail pool');
-assert(carousel.includes("switchView('ranked')"), 'ranked slide uses the lobby ranked navigation');
+assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a title line');
+assert(!carousel.includes('進入祈願'), 'poster slides do not use 進入祈願');
+assert(!carousel.includes('進入積分爭霸'), 'poster slides do not use 進入積分爭霸');
+function carouselSlide(id) {
+  const token = 'data-lobby-slide="' + id + '"';
+  const start = carousel.indexOf(token);
+  const next = carousel.indexOf('data-lobby-slide="', start + token.length);
+  assert(start >= 0, 'carousel slide ' + id);
+  return carousel.slice(start, next === -1 ? carousel.length : next);
+}
+const shanSlide = carouselSlide('1');
+const starSlide = carouselSlide('2');
+const rankedSlide = carouselSlide('3');
+assert(shanSlide.includes('>前往抽卡<') && shanSlide.includes('lobby-hero-cta'), 'shan-hai slide shows the shared wood 前往抽卡 chip');
+assert(starSlide.includes('>前往抽卡<') && starSlide.includes('lobby-hero-cta'), 'star-trail slide shows the shared wood 前往抽卡 chip');
+assert((carousel.match(/>前往抽卡</g) || []).length === 2, 'only the two gacha plates show 前往抽卡');
+assert(rankedSlide.includes('>進入排位賽<') && rankedSlide.includes('ranked-btn ranked-btn--primary'), 'ranked slide shows the ranked wood 進入排位賽 chip');
+assert(!shanSlide.includes('lobby-carousel__scrim') && !starSlide.includes('lobby-carousel__scrim') && !rankedSlide.includes('lobby-carousel__scrim'), 'poster slides do not add a scrim');
+assert(!shanSlide.includes('lobby-carousel__copy') && !starSlide.includes('lobby-carousel__copy') && !rankedSlide.includes('lobby-carousel__copy'), 'poster slides do not add a copy block');
+assert(shanSlide.includes("openGachaSeries('shanhaijing')"), 'shan-hai slide deep-links the shanhai pool');
+assert(starSlide.includes("openGachaSeries('star-trail')"), 'star-trail slide deep-links the star-trail pool');
+assert(rankedSlide.includes("switchView('ranked')"), 'ranked slide uses the lobby ranked navigation');
 assert(carousel.includes('data-lobby-dot="3"'), 'carousel has a ranked dot');
 assert(carousel.includes('開始冒險'), 'welcome slide still starts the adventure');
 assert(!view.includes('ui-parchment'), 'gacha view leaves the parchment frame');
