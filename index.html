@@ -1097,10 +1097,64 @@
         .lobby-carousel__slide--welcome .lobby-hero-cta {
             pointer-events: auto;
         }
-        /* Official plates already bake the Traditional Chinese title. */
-        .lobby-carousel__slide--plate .lobby-carousel__scrim,
+        /* Official plates already bake the large title.
+           Scrim stays. Overlay is only a kicker, one subtitle, and the wood CTA. */
+        /* Plate scrim is lighter than the welcome fade (bottom 0.78).
+           星軌／排位 sit a little darker than 山海經. */
+        .lobby-carousel__slide--plate .lobby-carousel__scrim {
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.04) 20%, rgba(12, 8, 4, 0.18) 55%, rgba(12, 8, 4, 0.48) 100%);
+        }
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__scrim {
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.02) 20%, rgba(12, 8, 4, 0.14) 55%, rgba(12, 8, 4, 0.42) 100%);
+        }
         .lobby-carousel__slide--plate .lobby-carousel__copy {
+            position: absolute;
+            z-index: 2;
+            left: 3.5%;
+            right: auto;
+            bottom: 7%;
+            width: min(58%, 28rem);
+            padding: 0;
+            gap: 0.4rem;
+            pointer-events: none;
+        }
+        /* 山海經 title is baked along the bottom center. Lift the lines clear of those glyphs. */
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy {
+            bottom: 25%;
+            width: min(36%, 16rem);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__kicker {
+            color: #ffe9a8;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__sub {
+            color: #fff8ec;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__copy h2,
+        .lobby-carousel__slide--plate .lobby-carousel__title {
             display: none;
+        }
+        .lobby-carousel__plate-cta {
+            position: absolute;
+            z-index: 2;
+            right: 3.5%;
+            bottom: 6%;
+            display: flex;
+            pointer-events: none;
+            filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+        }
+        /* 山海經 title is baked along the bottom edge; keep the chip above those glyphs. */
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__plate-cta {
+            bottom: 23%;
+        }
+        .lobby-carousel__hit:hover .lobby-hero-cta,
+        .lobby-carousel__hit:hover .ranked-btn {
+            filter: brightness(1.06);
         }
         .lobby-carousel__kicker {
             font-size: 0.75rem;
@@ -1189,9 +1243,21 @@
             .lobby-carousel__copy p,
             .lobby-carousel__sub,
             .lobby-carousel__kicker { display: none; }
+            .lobby-carousel__slide--plate .lobby-carousel__kicker,
+            .lobby-carousel__slide--plate .lobby-carousel__sub { display: block; }
+            .lobby-carousel__slide--plate .lobby-carousel__copy { width: min(62%, 14rem); bottom: 5%; }
+            .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy { width: min(48%, 11rem); bottom: 25%; }
             .lobby-carousel__title,
             .lobby-carousel__copy h2 { font-size: 1.05rem; }
             #view-home .lobby-hero-cta { border-width: 8px 14px; font-size: 0.78rem; margin-top: 0; }
+            .lobby-carousel__plate-cta { right: 2.5%; bottom: 4%; }
+            .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__plate-cta { bottom: 22%; }
+            .lobby-carousel__plate-cta .ranked-btn--primary {
+                min-width: 0;
+                min-height: 40px;
+                padding: 0.3rem 0.85rem;
+                font-size: 12px;
+            }
         }
         @media (prefers-reduced-motion: reduce) {
             .lobby-carousel__slide { transition: none; }
@@ -3929,18 +3995,42 @@
                         </div>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="1" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="前往山海經神獸抽卡">
+                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="進入祈願，山海經神獸">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-shanhai-1920.png?v=702c9f7d" alt="山海經：神獸之戰">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">神獸卡池・收集經典</span>
+                                <span class="lobby-carousel__sub">挑戰山海，抽出神獸</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>進入祈願</span></span>
+                            </span>
                         </button>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="2" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="前往星軌命途抽卡">
+                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="進入祈願，星軌命途">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=22694439" alt="星軌命途：符文紀元">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">符文紀元・新系列</span>
+                                <span class="lobby-carousel__sub">踏入星軌，開啟祈願</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>進入祈願</span></span>
+                            </span>
                         </button>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="3" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="switchView('ranked')" aria-label="積分爭霸賽，進入積分塔">
+                        <button type="button" class="lobby-carousel__hit" onclick="switchView('ranked')" aria-label="進入積分爭霸">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07" alt="無限召喚：數理之王">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">積分爭霸・證明實力</span>
+                                <span class="lobby-carousel__sub">進入積分塔，競逐排名</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="ranked-btn ranked-btn--primary"><i class="fa-solid fa-trophy" aria-hidden="true"></i><span>進入積分爭霸</span></span>
+                            </span>
                         </button>
                     </div>
                 </div>
