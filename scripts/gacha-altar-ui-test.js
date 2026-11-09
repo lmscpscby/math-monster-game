@@ -112,8 +112,12 @@ assert(shanSlide.includes('>進入祈願<') && shanSlide.includes('lobby-hero-ct
 assert(starSlide.includes('>進入祈願<') && starSlide.includes('lobby-hero-cta'), 'star-trail slide shows the shared wood 進入祈願 chip');
 assert((carousel.match(/>進入祈願</g) || []).length === 2, 'only the two gacha plates show 進入祈願');
 assert(rankedSlide.includes('>進入積分爭霸<') && rankedSlide.includes('ranked-btn ranked-btn--primary'), 'ranked slide shows the ranked wood 進入積分爭霸 chip');
-assert(!shanSlide.includes('lobby-carousel__scrim') && !starSlide.includes('lobby-carousel__scrim') && !rankedSlide.includes('lobby-carousel__scrim'), 'poster slides do not add a scrim');
+assert(shanSlide.includes('lobby-carousel__scrim') && starSlide.includes('lobby-carousel__scrim') && rankedSlide.includes('lobby-carousel__scrim'), 'poster slides restore the bottom scrim');
+assert(html.includes('linear-gradient(180deg, rgba(12, 8, 4, 0.05) 20%, rgba(12, 8, 4, 0.28) 55%, rgba(12, 8, 4, 0.78) 100%)'), 'scrim keeps the top-light bottom-dark gradient');
+assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__scrim[^{]*\{[^}]*display:\s*none/.test(html), 'plate scrim is not force-hidden');
+assert(html.includes('.lobby-carousel__slide--plate .lobby-carousel__copy'), 'plate copy rule remains');
 assert(!shanSlide.includes('lobby-carousel__copy') && !starSlide.includes('lobby-carousel__copy') && !rankedSlide.includes('lobby-carousel__copy'), 'poster slides do not add a copy block');
+assert(!shanSlide.includes('lobby-carousel__kicker') && !starSlide.includes('lobby-carousel__kicker') && !rankedSlide.includes('lobby-carousel__kicker'), 'poster slides do not overlay a kicker');
 assert(shanSlide.includes("openGachaSeries('shanhaijing')"), 'shan-hai slide deep-links the shanhai pool');
 assert(starSlide.includes("openGachaSeries('star-trail')"), 'star-trail slide deep-links the star-trail pool');
 assert(rankedSlide.includes("switchView('ranked')"), 'ranked slide uses the lobby ranked navigation');

@@ -1098,8 +1098,10 @@
             pointer-events: auto;
         }
         /* Official plates already bake the Traditional Chinese title.
-           Scrim and title copy stay off. The only overlay is a wood CTA chip. */
-        .lobby-carousel__slide--plate .lobby-carousel__scrim,
+           Keep the bottom scrim for depth. Title copy stays off; the only text overlay is the wood CTA. */
+        .lobby-carousel__slide--plate .lobby-carousel__scrim {
+            z-index: 1;
+        }
         .lobby-carousel__slide--plate .lobby-carousel__copy {
             display: none;
         }
@@ -3957,6 +3959,7 @@
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="1" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="進入祈願，山海經神獸">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-shanhai-1920.png?v=702c9f7d" alt="山海經：神獸之戰">
+                            <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__plate-cta">
                                 <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>進入祈願</span></span>
                             </span>
@@ -3965,6 +3968,7 @@
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="2" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="進入祈願，星軌命途">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=22694439" alt="星軌命途：符文紀元">
+                            <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__plate-cta">
                                 <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>進入祈願</span></span>
                             </span>
@@ -3973,6 +3977,7 @@
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="3" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" onclick="switchView('ranked')" aria-label="進入積分爭霸">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07" alt="無限召喚：數理之王">
+                            <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__plate-cta">
                                 <span class="ranked-btn ranked-btn--primary"><i class="fa-solid fa-trophy" aria-hidden="true"></i><span>進入積分爭霸</span></span>
                             </span>
