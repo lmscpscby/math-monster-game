@@ -3996,7 +3996,7 @@
             <div class="island-admin-wrap">
                 <button type="button" id="pvp-open-btn" class="ui-btn ui-btn--primary pvp-entry" onclick="switchView('pvp')">
                     <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-                    <span>1v1 對戰</span>
+                    <span>1v1 怪獸對戰</span>
                 </button>
                 <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden island-admin-btn">
                     <i class="fa-solid fa-chart-user" aria-hidden="true"></i>
@@ -4430,17 +4430,17 @@
             </div>
         </section>
 
-        <!-- VIEW 6: PVP LOBBY（PeerJS Cloud 試作，一題） -->
+        <!-- VIEW 6: PVP（PeerJS Cloud。接通後揀獸，多題打到 HP 歸零） -->
         <section id="view-pvp" class="hidden" data-pvp="1">
             <div class="ui-panel ui-parchment pvp-sheet">
                 <div class="pvp-sheet__bar">
                     <button type="button" class="ui-btn ui-btn--secondary ui-btn--compact" onclick="switchView('home')">
                         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回大廳</span>
                     </button>
-                    <p class="pvp-kicker">試作 · PeerJS Cloud</p>
+                    <p class="pvp-kicker">PeerJS Cloud · 怪獸對戰</p>
                 </div>
-                <h2 class="pvp-title">1v1 數學對戰</h2>
-                <p class="pvp-lead">房主開一個短房號，對手輸入房號入嚟。連到之後兩個人答同一條題。</p>
+                <h2 class="pvp-title">1v1 怪獸對戰</h2>
+                <p id="pvp-lead" class="pvp-lead">房主開一個短房號，對手輸入房號入嚟。接通之後各自揀一隻已擁有嘅獸，再一題一題打到其中一邊 HP 歸零。</p>
 
                 <div id="pvp-step-lobby">
                     <div class="pvp-actions">
@@ -4466,18 +4466,57 @@
                     <p id="pvp-room-msg" class="pvp-msg" role="status">等緊對手入房…</p>
                 </div>
 
-                <div id="pvp-step-quiz" class="hidden">
-                    <p id="pvp-quiz-kicker" class="pvp-label">同一條題</p>
-                    <h3 id="pvp-stem" class="pvp-stem"></h3>
-                    <div id="pvp-options" class="pvp-options" role="group" aria-label="答案選項"></div>
-                    <p id="pvp-quiz-msg" class="pvp-msg" role="status"></p>
-                    <div id="pvp-result" class="pvp-result hidden" role="status"></div>
+                <div id="pvp-step-pick" class="hidden">
+                    <p id="pvp-pick-kicker" class="pvp-label">揀出戰獸</p>
+                    <p id="pvp-pick-msg" class="pvp-msg" role="status">揀一隻你擁有嘅獸，再確認出戰。</p>
+                    <div id="pvp-roster" class="pvp-roster"></div>
+                    <p class="pvp-rule">答啱先打到對手，一下大約唔超過佢三成血；8 秒內答啱會再加少少。答錯打唔中，自己扣大約一成二血。</p>
                     <div class="pvp-actions">
-                        <button type="button" id="pvp-again-btn" class="ui-btn ui-btn--primary hidden">返去再開一局</button>
+                        <button type="button" id="pvp-pick-confirm" class="ui-btn ui-btn--primary" disabled>確認出戰</button>
+                        <button type="button" id="pvp-pick-leave" class="ui-btn ui-btn--secondary-alt">離開房間</button>
                     </div>
                 </div>
 
-                <p class="pvp-footnote">純前端試作，經 PeerJS Cloud 做信令。學校 Wi‑Fi 有時會被 NAT／防火牆擋住；之後先需要 TURN，而家未用。</p>
+                <div id="pvp-step-fight" class="hidden">
+                    <p id="pvp-fight-kicker" class="pvp-label">對戰</p>
+                    <div class="pvp-arena">
+                        <article class="pvp-beast pvp-beast--foe" id="pvp-foe">
+                            <p class="pvp-beast__role" id="pvp-foe-role">對手</p>
+                            <div class="pvp-beast__art" id="pvp-foe-art"></div>
+                            <h3 class="pvp-beast__name" id="pvp-foe-name">……</h3>
+                            <p class="pvp-beast__meta" id="pvp-foe-meta"></p>
+                            <div class="pvp-hp" id="pvp-foe-track"><span id="pvp-foe-fill"></span></div>
+                            <p class="pvp-hp__text" id="pvp-foe-hp">HP —</p>
+                            <p class="pvp-beast__hit" id="pvp-foe-hit"></p>
+                        </article>
+                        <p class="pvp-vs" aria-hidden="true">對</p>
+                        <article class="pvp-beast pvp-beast--me" id="pvp-me">
+                            <p class="pvp-beast__role" id="pvp-me-role">我</p>
+                            <div class="pvp-beast__art" id="pvp-me-art"></div>
+                            <h3 class="pvp-beast__name" id="pvp-me-name">……</h3>
+                            <p class="pvp-beast__meta" id="pvp-me-meta"></p>
+                            <div class="pvp-hp" id="pvp-me-track"><span id="pvp-me-fill"></span></div>
+                            <p class="pvp-hp__text" id="pvp-me-hp">HP —</p>
+                            <p class="pvp-beast__hit" id="pvp-me-hit"></p>
+                        </article>
+                    </div>
+                    <p id="pvp-round-label" class="pvp-label">等題目</p>
+                    <div id="pvp-figure" class="pvp-figure hidden">
+                        <img id="pvp-figure-img" alt="題目圖片">
+                        <p id="pvp-figure-fallback" class="pvp-figure__fallback hidden">題目圖片暫時顯示唔到</p>
+                    </div>
+                    <h3 id="pvp-stem" class="pvp-stem"></h3>
+                    <div id="pvp-options" class="pvp-options" role="group" aria-label="答案選項"></div>
+                    <p id="pvp-round-log" class="pvp-log" role="status"></p>
+                    <p id="pvp-quiz-msg" class="pvp-msg" role="status"></p>
+                    <div id="pvp-result" class="pvp-result hidden" role="status"></div>
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-rematch-btn" class="ui-btn ui-btn--primary hidden">再揀獸打過</button>
+                        <button type="button" id="pvp-back-lobby-btn" class="ui-btn ui-btn--secondary hidden">返去大廳</button>
+                    </div>
+                </div>
+
+                <p class="pvp-footnote">純前端，經 PeerJS Cloud 做信令，唔使自建後端，亦唔使 PeerJS key。學校 Wi‑Fi 有時會被 NAT／防火牆擋住；之後先需要 TURN，而家未用。</p>
             </div>
         </section>
 
@@ -4604,7 +4643,7 @@
     <script src="數學試題庫.js"></script>
     <!-- 戰鬥抽題黑名單（A1+B + c_6A16N103b delist；只 skip、唔刪庫） -->
     <script src="unsolvable-blacklist.js"></script>
-    <!-- PeerJS Cloud（公開信令，預設唔使 key）。PVP 邏輯喺 pvp-peer.js，唔改戰鬥主流程。 -->
+    <!-- PeerJS Cloud（公開信令，預設唔使 key）。PVP 邏輯喺 pvp-peer.js。 -->
     <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
     <script src="pvp-peer.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
@@ -10882,7 +10921,156 @@
             }
         }
 
-        /* PVP 對決喺 pvp-peer.js（PeerJS Cloud 試作）。呢度唔再放房間邏輯。 */
+        /* PVP_QUESTION_ISOLATION_START
+           1v1 出題用單人 generateDynamicQuestion，但唔好污染訓練場／爭霸賽嗰份已用題紀錄。
+           戰鬥畫面開住嗰陣直接放棄，等 pvp-peer.js 改用自己嘅加減乘後備題。
+        */
+        var pvpUsedStems = new Set();
+        var pvpUsedWordIds = new Set();
+
+        function battleViewOpenForPvp() {
+            try {
+                return !!(document.body && document.body.classList && document.body.classList.contains('battle-open'));
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function generatePvpQuestion() {
+            if (battleViewOpenForPvp()) return null;
+            if (typeof generateDynamicQuestion !== 'function') return null;
+            var savedQ = new Set(usedQuestionsMap);
+            var savedW = new Set(usedWordQuestionIds);
+            var savedType = lastQuestionTypeIndex;
+            var savedRanked = isRankedMode;
+            var savedStrand = pendingStrandId;
+            var q = null;
+            try {
+                pvpUsedStems.forEach(function (s) { usedQuestionsMap.add(s); });
+                pvpUsedWordIds.forEach(function (id) { usedWordQuestionIds.add(id); });
+                isRankedMode = true;
+                pendingStrandId = null;
+                q = generateDynamicQuestion();
+            } catch (e) {
+                q = null;
+            } finally {
+                usedQuestionsMap.forEach(function (s) {
+                    if (!savedQ.has(s)) pvpUsedStems.add(s);
+                });
+                usedWordQuestionIds.forEach(function (id) {
+                    if (!savedW.has(id)) pvpUsedWordIds.add(id);
+                });
+                usedQuestionsMap.clear();
+                savedQ.forEach(function (s) { usedQuestionsMap.add(s); });
+                usedWordQuestionIds.clear();
+                savedW.forEach(function (id) { usedWordQuestionIds.add(id); });
+                lastQuestionTypeIndex = savedType;
+                isRankedMode = savedRanked;
+                pendingStrandId = savedStrand;
+            }
+            return q;
+        }
+
+        function resetPvpQuestionMemory() {
+            pvpUsedStems.clear();
+            pvpUsedWordIds.clear();
+        }
+        /* PVP_QUESTION_ISOLATION_END */
+
+        /* PVP_ROSTER_START
+           出戰名單＝currentUser.ownedMonsters。數值用 getMonsterRuntimeData（唔加排位 BOSS 加成）。
+           對手只傳 id＋等級，兩邊各自重算，避免對方亂填 ATK／HP。
+        */
+        function resolvePvpBeast(id, level) {
+            var key = String(id || '');
+            if (!/^[a-z0-9_]{1,32}$/.test(key)) return null;
+            var lv = Math.floor(Number(level));
+            if (!(lv >= 1 && lv <= 40)) return null;
+            var data = getMonsterRuntimeData(key, lv, false);
+            if (!data || data.id !== key) return null;
+            if (data.name === '冒險怪獸' && data.imgKey === 'fire_baby') return null;
+            var name = String(data.name || '').replace(/[\u0000-\u001f]/g, '').trim();
+            if (!name || name.length > 32) return null;
+            var element = String(data.element || '');
+            if (!/^[a-z]{1,16}$/.test(element)) return null;
+            var imgKey = String(data.imgKey || '');
+            if (!/^[a-z0-9_]{0,40}$/.test(imgKey)) imgKey = '';
+            var maxHp = Math.floor(Number(data.hp));
+            var atk = Math.floor(Number(data.atk));
+            var def = Math.floor(Number(data.def));
+            if (!(maxHp >= 1 && maxHp <= 99999)) return null;
+            if (!(atk >= 1 && atk <= 99999)) return null;
+            if (!(def >= 0 && def <= 99999)) def = 0;
+            return {
+                id: key,
+                name: name,
+                element: element,
+                level: lv,
+                maxHp: maxHp,
+                atk: atk,
+                def: def,
+                imgKey: imgKey
+            };
+        }
+
+        function listOwnedBeastsForPvp() {
+            var owned = (typeof currentUser !== 'undefined' && currentUser && Array.isArray(currentUser.ownedMonsters))
+                ? currentUser.ownedMonsters
+                : [];
+            var partyOrder = {};
+            if (typeof selectedBattleTeam !== 'undefined' && Array.isArray(selectedBattleTeam)) {
+                selectedBattleTeam.forEach(function (id, i) { partyOrder[id] = i + 1; });
+            }
+            var list = [];
+            var seen = {};
+            owned.forEach(function (om) {
+                if (!om || seen[om.id]) return;
+                var beast = resolvePvpBeast(om.id, om.level || 1);
+                if (!beast) return;
+                seen[beast.id] = 1;
+                if (partyOrder[beast.id]) beast.party = partyOrder[beast.id];
+                list.push(beast);
+            });
+            list.sort(function (a, b) {
+                var ap = a.party || 99;
+                var bp = b.party || 99;
+                if (ap !== bp) return ap - bp;
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            });
+            return list;
+        }
+
+        function pvpBeastImageSrc(imgKey) {
+            if (!/^[a-z0-9_]{1,40}$/.test(String(imgKey || ''))) return '';
+            var src = (typeof BEAST_IMAGES !== 'undefined' && BEAST_IMAGES) ? BEAST_IMAGES[imgKey] : '';
+            if (typeof src !== 'string') return '';
+            if (src.length > 180 || src.indexOf('..') !== -1) return '';
+            if (/[\u0000-\u001f\\"'<>]/.test(src)) return '';
+            if (!/^assets\/monsters\/.+\.(png|jpe?g|webp)$/i.test(src)) return '';
+            return src;
+        }
+
+        function pvpElementLabel(element) {
+            try {
+                if (typeof getElementZh === 'function') {
+                    var zh = getElementZh(element);
+                    if (zh) return String(zh);
+                }
+            } catch (e) {}
+            return '';
+        }
+
+        window.MmgPvpRoster = {
+            listOwned: listOwnedBeastsForPvp,
+            resolve: resolvePvpBeast,
+            imageSrc: pvpBeastImageSrc,
+            elementLabel: pvpElementLabel
+        };
+        /* PVP_ROSTER_END */
+
+        /* PVP 對決喺 pvp-peer.js（PeerJS Cloud）。呢度只提供獸鑑同出題，唔改單人戰鬥流程。 */
     </script>
 </body>
 </html>
