@@ -96,8 +96,8 @@ assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07'), 
 assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
 assert(!carousel.includes('lobby-carousel__kicker'), 'poster slides do not overlay a second title');
 assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a title line');
-assert(!carousel.includes('進入祈願'), 'poster slides do not use 進入祈願');
-assert(!carousel.includes('進入積分爭霸'), 'poster slides do not use 進入積分爭霸');
+assert(!carousel.includes('前往抽卡'), 'poster slides do not keep 前往抽卡');
+assert(!carousel.includes('進入排位賽'), 'poster slides do not keep 進入排位賽');
 function carouselSlide(id) {
   const token = 'data-lobby-slide="' + id + '"';
   const start = carousel.indexOf(token);
@@ -108,10 +108,10 @@ function carouselSlide(id) {
 const shanSlide = carouselSlide('1');
 const starSlide = carouselSlide('2');
 const rankedSlide = carouselSlide('3');
-assert(shanSlide.includes('>前往抽卡<') && shanSlide.includes('lobby-hero-cta'), 'shan-hai slide shows the shared wood 前往抽卡 chip');
-assert(starSlide.includes('>前往抽卡<') && starSlide.includes('lobby-hero-cta'), 'star-trail slide shows the shared wood 前往抽卡 chip');
-assert((carousel.match(/>前往抽卡</g) || []).length === 2, 'only the two gacha plates show 前往抽卡');
-assert(rankedSlide.includes('>進入排位賽<') && rankedSlide.includes('ranked-btn ranked-btn--primary'), 'ranked slide shows the ranked wood 進入排位賽 chip');
+assert(shanSlide.includes('>進入祈願<') && shanSlide.includes('lobby-hero-cta'), 'shan-hai slide shows the shared wood 進入祈願 chip');
+assert(starSlide.includes('>進入祈願<') && starSlide.includes('lobby-hero-cta'), 'star-trail slide shows the shared wood 進入祈願 chip');
+assert((carousel.match(/>進入祈願</g) || []).length === 2, 'only the two gacha plates show 進入祈願');
+assert(rankedSlide.includes('>進入積分爭霸<') && rankedSlide.includes('ranked-btn ranked-btn--primary'), 'ranked slide shows the ranked wood 進入積分爭霸 chip');
 assert(!shanSlide.includes('lobby-carousel__scrim') && !starSlide.includes('lobby-carousel__scrim') && !rankedSlide.includes('lobby-carousel__scrim'), 'poster slides do not add a scrim');
 assert(!shanSlide.includes('lobby-carousel__copy') && !starSlide.includes('lobby-carousel__copy') && !rankedSlide.includes('lobby-carousel__copy'), 'poster slides do not add a copy block');
 assert(shanSlide.includes("openGachaSeries('shanhaijing')"), 'shan-hai slide deep-links the shanhai pool');
