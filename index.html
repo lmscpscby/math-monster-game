@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Monster Gacha Game - 數理怪獸抽卡大冒險</title>
+    <title>無限召喚：數理之王</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pvp-peer.css">
 
     <style>
         html, body {
@@ -1087,14 +1088,64 @@
             padding: 1rem 1.15rem 1.2rem;
             pointer-events: none;
         }
-        .lobby-carousel__slide--welcome .lobby-carousel__copy {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
+        /* Official plates already bake the large title.
+           Scrim stays. Overlay is only a kicker, one subtitle, and the wood CTA.
+           Plate scrim is lighter than the base fade (bottom 0.78).
+           The brand page and 星軌 sit a little darker than 山海經. */
+        .lobby-carousel__slide--plate .lobby-carousel__scrim {
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.04) 20%, rgba(12, 8, 4, 0.18) 55%, rgba(12, 8, 4, 0.48) 100%);
         }
-        .lobby-carousel__slide--welcome .lobby-hero-cta {
-            pointer-events: auto;
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__scrim {
+            background: linear-gradient(180deg, rgba(12, 8, 4, 0.02) 20%, rgba(12, 8, 4, 0.14) 55%, rgba(12, 8, 4, 0.42) 100%);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__copy {
+            position: absolute;
+            z-index: 2;
+            left: 3.5%;
+            right: auto;
+            bottom: 7%;
+            width: min(58%, 28rem);
+            padding: 0;
+            gap: 0.4rem;
+            pointer-events: none;
+        }
+        /* 山海經 title is baked along the bottom center. Lift the lines clear of those glyphs. */
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy {
+            bottom: 25%;
+            width: min(36%, 16rem);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__kicker {
+            color: #ffe9a8;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__sub {
+            color: #fff8ec;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__slide--plate .lobby-carousel__copy h2,
+        .lobby-carousel__slide--plate .lobby-carousel__title {
+            display: none;
+        }
+        .lobby-carousel__plate-cta {
+            position: absolute;
+            z-index: 2;
+            right: 3.5%;
+            bottom: 6%;
+            display: flex;
+            pointer-events: none;
+            filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+        }
+        /* 山海經 title is baked along the bottom edge; keep the chip above those glyphs. */
+        .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__plate-cta {
+            bottom: 23%;
+        }
+        .lobby-carousel__hit:hover .lobby-hero-cta,
+        .lobby-carousel__hit:hover .ranked-btn {
+            filter: brightness(1.06);
         }
         .lobby-carousel__kicker {
             font-size: 0.75rem;
@@ -1183,9 +1234,21 @@
             .lobby-carousel__copy p,
             .lobby-carousel__sub,
             .lobby-carousel__kicker { display: none; }
+            .lobby-carousel__slide--plate .lobby-carousel__kicker,
+            .lobby-carousel__slide--plate .lobby-carousel__sub { display: block; }
+            .lobby-carousel__slide--plate .lobby-carousel__copy { width: min(62%, 14rem); bottom: 5%; }
+            .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy { width: min(48%, 11rem); bottom: 25%; }
             .lobby-carousel__title,
             .lobby-carousel__copy h2 { font-size: 1.05rem; }
             #view-home .lobby-hero-cta { border-width: 8px 14px; font-size: 0.78rem; margin-top: 0; }
+            .lobby-carousel__plate-cta { right: 2.5%; bottom: 4%; }
+            .lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__plate-cta { bottom: 22%; }
+            .lobby-carousel__plate-cta .ranked-btn--primary {
+                min-width: 0;
+                min-height: 40px;
+                padding: 0.3rem 0.85rem;
+                font-size: 12px;
+            }
         }
         @media (prefers-reduced-motion: reduce) {
             .lobby-carousel__slide { transition: none; }
@@ -3442,6 +3505,9 @@
             width: 100%;
             height: auto;
         }
+        .gacha-series-banner img[hidden] {
+            display: none !important;
+        }
         .gacha-pool-status {
             margin: 0;
             padding: 0.4rem 1rem;
@@ -3638,7 +3704,7 @@
                     <i class="fa-solid fa-square-root-variable"></i>
                 </div>
                 <h1 class="text-2xl md:text-3xl font-black">
-                    數理怪獸抽卡大冒險
+                    無限召喚：數理之王
                 </h1>
                 <p class="text-xs md:text-sm mt-1">請登入或註冊帳號以開始遊戲</p>
             </div>
@@ -3857,9 +3923,8 @@
                 </div>
                 <div>
                     <h1 class="font-black text-lg md:text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-200 to-indigo-200">
-                        數理怪獸大冒險
+                        無限召喚：數理之王
                     </h1>
-                    <p class="text-[10px] text-pink-300/80 hidden sm:block">Math Monster Gacha RPG</p>
                 </div>
             </div>
 
@@ -3925,40 +3990,50 @@
         <section id="view-home" class="space-y-6">
             <div class="lobby-carousel" id="lobby-carousel" tabindex="0" aria-roledescription="carousel" aria-label="大廳宣傳">
                 <div class="lobby-carousel__viewport">
-                    <div class="lobby-carousel__slide lobby-carousel__slide--welcome is-active" data-lobby-slide="0" aria-hidden="false">
-                        <img id="main-cover-img" class="lobby-carousel__bg" src="" alt="">
-                        <div class="lobby-carousel__scrim"></div>
-                        <div class="lobby-carousel__copy">
-                            <h2>歡迎來到數理怪獸世界</h2>
-                            <p>訓練場分單元挑戰。積分爭霸賽 4 關屬性升級。冒險塔通關後開無限挑戰。</p>
-                            <button type="button" onclick="enterAdventure()" class="lobby-hero-cta">
-                                <i class="fa-solid fa-play" aria-hidden="true"></i>
-                                <span>開始冒險</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="lobby-carousel__slide" data-lobby-slide="1" aria-hidden="true">
-                        <img class="lobby-carousel__bg" src="assets/bg/ui-gacha-stage-mystic-1920.png?v=2d670fe2" alt="">
-                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="前往山海經神獸抽卡">
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate is-active" data-lobby-slide="0" aria-hidden="false">
+                        <button type="button" class="lobby-carousel__hit" onclick="enterAdventure()" aria-label="開始冒險，進入冒險塔">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07" alt="無限召喚：數理之王">
                             <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__copy">
-                                <span class="lobby-carousel__kicker">祈願召喚</span>
-                                <span class="lobby-carousel__title">山海經神獸</span>
-                                <span class="lobby-carousel__sub">十連抽必得一隻上古神獸</span>
-                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>前往抽卡</span></span>
+                                <span class="lobby-carousel__kicker">無限召喚・數理之王</span>
+                                <span class="lobby-carousel__sub">展開冒險，挑戰數理</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-play" aria-hidden="true"></i><span>開始冒險</span></span>
                             </span>
                         </button>
                     </div>
-                    <div class="lobby-carousel__slide" data-lobby-slide="2" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="前往星軌命途抽卡">
-                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=13e864c8" alt="星軌命途：符文紀元">
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="1" aria-hidden="true">
+                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="進入祈願，山海經神獸">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-shanhai-1920.png?v=702c9f7d" alt="山海經：神獸之戰">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">神獸卡池・收集經典</span>
+                                <span class="lobby-carousel__sub">挑戰山海，抽出神獸</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>進入祈願</span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="2" aria-hidden="true">
+                        <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="進入祈願，星軌命途">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=22694439" alt="星軌命途：符文紀元">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">符文紀元・新系列</span>
+                                <span class="lobby-carousel__sub">踏入星軌，開啟祈願</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>進入祈願</span></span>
+                            </span>
                         </button>
                     </div>
                 </div>
                 <div class="lobby-carousel__nav">
                     <button type="button" class="lobby-carousel__arrow" id="lobby-carousel-prev" aria-label="上一張宣傳">上一張</button>
                     <div class="lobby-carousel__dots" role="tablist" aria-label="選擇宣傳">
-                        <button type="button" class="lobby-carousel__dot is-active" role="tab" aria-selected="true" aria-label="歡迎" data-lobby-dot="0"></button>
+                        <button type="button" class="lobby-carousel__dot is-active" role="tab" aria-selected="true" aria-label="無限召喚：數理之王" data-lobby-dot="0"></button>
                         <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="山海經神獸" data-lobby-dot="1"></button>
                         <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="星軌命途" data-lobby-dot="2"></button>
                     </div>
@@ -4004,6 +4079,10 @@
 
             <!-- PVP 對決擂台：已停用 -->
             <div class="island-admin-wrap">
+                <button type="button" id="pvp-open-btn" class="ui-btn ui-btn--primary pvp-entry" onclick="switchView('pvp')">
+                    <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                    <span>1v1 怪獸對戰</span>
+                </button>
                 <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden island-admin-btn">
                     <i class="fa-solid fa-chart-user" aria-hidden="true"></i>
                     <span>參加人數統計</span>
@@ -4199,11 +4278,12 @@
                 <button type="button" class="gacha-series-tab" role="tab" id="gacha-tab-star-trail" data-gacha-series="star-trail" aria-selected="false" onclick="setGachaSeries('star-trail')">星軌命途：符文紀元</button>
             </div>
 
-            <h2 class="gacha-title" id="gacha-altar-title">怪獸祈願召喚</h2>
+            <h2 class="gacha-title" id="gacha-altar-title" hidden>怪獸祈願召喚</h2>
 
             <div id="gacha-display-area" class="gacha-stage-core">
-                <div id="gacha-series-banner" class="gacha-series-banner" hidden>
-                    <img src="assets/bg/ui-gacha-banner-star-trail-1920.png?v=a5fd33bf" alt="星軌命途：符文紀元">
+                <div id="gacha-series-banner" class="gacha-series-banner">
+                    <img id="gacha-banner-shanhai" src="assets/bg/ui-gacha-banner-shanhai-1920.png?v=60e7eace" alt="山海經：神獸之戰">
+                    <img id="gacha-banner-star" src="assets/bg/ui-gacha-banner-star-trail-1920.png?v=21f1900b" alt="星軌命途：符文紀元" hidden>
                 </div>
                 <p id="gacha-pool-status" class="gacha-pool-status" hidden>卡池即將開放</p>
                 <div id="gacha-idle-state" class="gacha-idle">
@@ -4435,7 +4515,95 @@
             </div>
         </section>
 
-        <!-- VIEW 6: PVP LOBBY — 已停用 -->
+        <!-- VIEW 6: PVP（PeerJS Cloud。接通後揀獸，多題打到 HP 歸零） -->
+        <section id="view-pvp" class="hidden" data-pvp="1">
+            <div class="ui-panel ui-parchment pvp-sheet">
+                <div class="pvp-sheet__bar">
+                    <button type="button" class="ui-btn ui-btn--secondary ui-btn--compact" onclick="switchView('home')">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回大廳</span>
+                    </button>
+                    <p class="pvp-kicker">PeerJS Cloud · 怪獸對戰</p>
+                </div>
+                <h2 class="pvp-title">1v1 怪獸對戰</h2>
+                <p id="pvp-lead" class="pvp-lead">房主開一個短房號，對手輸入房號入嚟。接通之後各自揀一隻已擁有嘅獸，再一題一題打到其中一邊 HP 歸零。</p>
+
+                <div id="pvp-step-lobby">
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-create-btn" class="ui-btn ui-btn--primary">開房</button>
+                    </div>
+                    <form id="pvp-join-form" class="pvp-join">
+                        <label for="pvp-join-code">已有房號</label>
+                        <input id="pvp-join-code" class="ui-field" maxlength="48" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="例如 AB3K">
+                        <button type="submit" id="pvp-join-btn" class="ui-btn ui-btn--secondary">入房</button>
+                    </form>
+                    <p id="pvp-lobby-msg" class="pvp-msg" role="status"></p>
+                </div>
+
+                <div id="pvp-step-room" class="hidden">
+                    <p class="pvp-label">房號</p>
+                    <p id="pvp-room-code" class="pvp-code" aria-live="polite">····</p>
+                    <p id="pvp-room-url" class="pvp-url"></p>
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-copy-code" class="ui-btn ui-btn--secondary ui-btn--compact">複製房號</button>
+                        <button type="button" id="pvp-copy-link" class="ui-btn ui-btn--secondary ui-btn--compact">複製連結</button>
+                        <button type="button" id="pvp-leave-btn" class="ui-btn ui-btn--secondary-alt ui-btn--compact">離開房間</button>
+                    </div>
+                    <p id="pvp-room-msg" class="pvp-msg" role="status">等緊對手入房…</p>
+                </div>
+
+                <div id="pvp-step-pick" class="hidden">
+                    <p id="pvp-pick-kicker" class="pvp-label">揀出戰獸</p>
+                    <p id="pvp-pick-msg" class="pvp-msg" role="status">揀一隻你擁有嘅獸，再確認出戰。</p>
+                    <div id="pvp-roster" class="pvp-roster"></div>
+                    <p class="pvp-rule">答啱先打到對手，一下大約唔超過佢三成血；8 秒內答啱會再加少少。答錯打唔中，自己扣大約一成二血。</p>
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-pick-confirm" class="ui-btn ui-btn--primary" disabled>確認出戰</button>
+                        <button type="button" id="pvp-pick-leave" class="ui-btn ui-btn--secondary-alt">離開房間</button>
+                    </div>
+                </div>
+
+                <div id="pvp-step-fight" class="hidden">
+                    <p id="pvp-fight-kicker" class="pvp-label">對戰</p>
+                    <div class="pvp-arena">
+                        <article class="pvp-beast pvp-beast--foe" id="pvp-foe">
+                            <p class="pvp-beast__role" id="pvp-foe-role">對手</p>
+                            <div class="pvp-beast__art" id="pvp-foe-art"></div>
+                            <h3 class="pvp-beast__name" id="pvp-foe-name">……</h3>
+                            <p class="pvp-beast__meta" id="pvp-foe-meta"></p>
+                            <div class="pvp-hp" id="pvp-foe-track"><span id="pvp-foe-fill"></span></div>
+                            <p class="pvp-hp__text" id="pvp-foe-hp">HP —</p>
+                            <p class="pvp-beast__hit" id="pvp-foe-hit"></p>
+                        </article>
+                        <p class="pvp-vs" aria-hidden="true">對</p>
+                        <article class="pvp-beast pvp-beast--me" id="pvp-me">
+                            <p class="pvp-beast__role" id="pvp-me-role">我</p>
+                            <div class="pvp-beast__art" id="pvp-me-art"></div>
+                            <h3 class="pvp-beast__name" id="pvp-me-name">……</h3>
+                            <p class="pvp-beast__meta" id="pvp-me-meta"></p>
+                            <div class="pvp-hp" id="pvp-me-track"><span id="pvp-me-fill"></span></div>
+                            <p class="pvp-hp__text" id="pvp-me-hp">HP —</p>
+                            <p class="pvp-beast__hit" id="pvp-me-hit"></p>
+                        </article>
+                    </div>
+                    <p id="pvp-round-label" class="pvp-label">等題目</p>
+                    <div id="pvp-figure" class="pvp-figure hidden">
+                        <img id="pvp-figure-img" alt="題目圖片">
+                        <p id="pvp-figure-fallback" class="pvp-figure__fallback hidden">題目圖片暫時顯示唔到</p>
+                    </div>
+                    <h3 id="pvp-stem" class="pvp-stem"></h3>
+                    <div id="pvp-options" class="pvp-options" role="group" aria-label="答案選項"></div>
+                    <p id="pvp-round-log" class="pvp-log" role="status"></p>
+                    <p id="pvp-quiz-msg" class="pvp-msg" role="status"></p>
+                    <div id="pvp-result" class="pvp-result hidden" role="status"></div>
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-rematch-btn" class="ui-btn ui-btn--primary hidden">再揀獸打過</button>
+                        <button type="button" id="pvp-back-lobby-btn" class="ui-btn ui-btn--secondary hidden">返去大廳</button>
+                    </div>
+                </div>
+
+                <p class="pvp-footnote">純前端，經 PeerJS Cloud 做信令，唔使自建後端，亦唔使 PeerJS key。學校 Wi‑Fi 有時會被 NAT／防火牆擋住；之後先需要 TURN，而家未用。</p>
+            </div>
+        </section>
 
     </main>
 
@@ -4553,13 +4721,16 @@
     </div>
 
     <footer class="border-t border-purple-500/20 py-4 text-center text-xs text-slate-400 bg-slate-950/40">
-        Math Monster Gacha Game &copy; 2026 - 全能數理怪獸養成冒險平台
+        無限召喚：數理之王 &copy; 2026
     </footer>
 
     <!-- Word 數學試題庫（G5/G6）；file:// 可用 -->
     <script src="數學試題庫.js"></script>
     <!-- 戰鬥抽題黑名單（A1+B + c_6A16N103b delist；只 skip、唔刪庫） -->
     <script src="unsolvable-blacklist.js"></script>
+    <!-- PeerJS Cloud（公開信令，預設唔使 key）。PVP 邏輯喺 pvp-peer.js。 -->
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="pvp-peer.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
     <script>
         // 老師 Google Sheet 上報 + 跨裝置帳戶：Apps Script /exec URL（改 Code 後必須重新部署新版本）
@@ -7068,6 +7239,7 @@
                 totalQuestions: '',
                 goldDelta: ''
             }));
+            try { if (window.MmgPvp) MmgPvp.offerHashJoin(); } catch (e) {}
         }
 
         function logout() {
@@ -7201,7 +7373,8 @@
         }
 
         window.onload = function() {
-            document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            var coverImg = document.getElementById('main-cover-img');
+            if (coverImg) coverImg.src = BEAST_IMAGES['cover'];
             try { initLobbyCarousel(); } catch (e) {}
             try { startSeasonCountdown(); } catch (e) {}
             try { renderHeaderAvatar(); } catch (e) {}
@@ -7339,7 +7512,7 @@
                 return;
             }
 
-            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked'];
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked', 'pvp'];
             views.forEach(v => {
                 const el = document.getElementById(`view-${v}`);
                 if (el) el.classList.add('hidden');
@@ -7369,6 +7542,11 @@
             if (viewName === 'gacha') {
                 resetGachaStage();
                 applyGachaSeriesChrome();
+            }
+            if (viewName === 'pvp') {
+                try { if (window.MmgPvp) MmgPvp.onEnterView(); } catch (e) {}
+            } else {
+                try { if (window.MmgPvp) MmgPvp.onLeaveView(); } catch (e) {}
             }
         }
 
@@ -7436,7 +7614,13 @@
                 btn.setAttribute('aria-selected', on ? 'true' : 'false');
             });
             const banner = document.getElementById('gacha-series-banner');
-            if (banner) banner.hidden = !star;
+            const shanhaiBanner = document.getElementById('gacha-banner-shanhai');
+            const starBanner = document.getElementById('gacha-banner-star');
+            if (shanhaiBanner) shanhaiBanner.hidden = star;
+            if (starBanner) starBanner.hidden = !star;
+            if (banner) banner.hidden = false;
+            const altarTitle = document.getElementById('gacha-altar-title');
+            if (altarTitle) altarTitle.hidden = !!(banner && !banner.hidden);
             const poolStatus = document.getElementById('gacha-pool-status');
             if (poolStatus) poolStatus.hidden = !(star && !open);
             const hint = document.getElementById('gacha-hint');
@@ -10845,7 +11029,156 @@
             }
         }
 
-        /* PVP 對決擂台：已停用（入口／房間邏輯已移除） */
+        /* PVP_QUESTION_ISOLATION_START
+           1v1 出題用單人 generateDynamicQuestion，但唔好污染訓練場／爭霸賽嗰份已用題紀錄。
+           戰鬥畫面開住嗰陣直接放棄，等 pvp-peer.js 改用自己嘅加減乘後備題。
+        */
+        var pvpUsedStems = new Set();
+        var pvpUsedWordIds = new Set();
+
+        function battleViewOpenForPvp() {
+            try {
+                return !!(document.body && document.body.classList && document.body.classList.contains('battle-open'));
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function generatePvpQuestion() {
+            if (battleViewOpenForPvp()) return null;
+            if (typeof generateDynamicQuestion !== 'function') return null;
+            var savedQ = new Set(usedQuestionsMap);
+            var savedW = new Set(usedWordQuestionIds);
+            var savedType = lastQuestionTypeIndex;
+            var savedRanked = isRankedMode;
+            var savedStrand = pendingStrandId;
+            var q = null;
+            try {
+                pvpUsedStems.forEach(function (s) { usedQuestionsMap.add(s); });
+                pvpUsedWordIds.forEach(function (id) { usedWordQuestionIds.add(id); });
+                isRankedMode = true;
+                pendingStrandId = null;
+                q = generateDynamicQuestion();
+            } catch (e) {
+                q = null;
+            } finally {
+                usedQuestionsMap.forEach(function (s) {
+                    if (!savedQ.has(s)) pvpUsedStems.add(s);
+                });
+                usedWordQuestionIds.forEach(function (id) {
+                    if (!savedW.has(id)) pvpUsedWordIds.add(id);
+                });
+                usedQuestionsMap.clear();
+                savedQ.forEach(function (s) { usedQuestionsMap.add(s); });
+                usedWordQuestionIds.clear();
+                savedW.forEach(function (id) { usedWordQuestionIds.add(id); });
+                lastQuestionTypeIndex = savedType;
+                isRankedMode = savedRanked;
+                pendingStrandId = savedStrand;
+            }
+            return q;
+        }
+
+        function resetPvpQuestionMemory() {
+            pvpUsedStems.clear();
+            pvpUsedWordIds.clear();
+        }
+        /* PVP_QUESTION_ISOLATION_END */
+
+        /* PVP_ROSTER_START
+           出戰名單＝currentUser.ownedMonsters。數值用 getMonsterRuntimeData（唔加排位 BOSS 加成）。
+           對手只傳 id＋等級，兩邊各自重算，避免對方亂填 ATK／HP。
+        */
+        function resolvePvpBeast(id, level) {
+            var key = String(id || '');
+            if (!/^[a-z0-9_]{1,32}$/.test(key)) return null;
+            var lv = Math.floor(Number(level));
+            if (!(lv >= 1 && lv <= 40)) return null;
+            var data = getMonsterRuntimeData(key, lv, false);
+            if (!data || data.id !== key) return null;
+            if (data.name === '冒險怪獸' && data.imgKey === 'fire_baby') return null;
+            var name = String(data.name || '').replace(/[\u0000-\u001f]/g, '').trim();
+            if (!name || name.length > 32) return null;
+            var element = String(data.element || '');
+            if (!/^[a-z]{1,16}$/.test(element)) return null;
+            var imgKey = String(data.imgKey || '');
+            if (!/^[a-z0-9_]{0,40}$/.test(imgKey)) imgKey = '';
+            var maxHp = Math.floor(Number(data.hp));
+            var atk = Math.floor(Number(data.atk));
+            var def = Math.floor(Number(data.def));
+            if (!(maxHp >= 1 && maxHp <= 99999)) return null;
+            if (!(atk >= 1 && atk <= 99999)) return null;
+            if (!(def >= 0 && def <= 99999)) def = 0;
+            return {
+                id: key,
+                name: name,
+                element: element,
+                level: lv,
+                maxHp: maxHp,
+                atk: atk,
+                def: def,
+                imgKey: imgKey
+            };
+        }
+
+        function listOwnedBeastsForPvp() {
+            var owned = (typeof currentUser !== 'undefined' && currentUser && Array.isArray(currentUser.ownedMonsters))
+                ? currentUser.ownedMonsters
+                : [];
+            var partyOrder = {};
+            if (typeof selectedBattleTeam !== 'undefined' && Array.isArray(selectedBattleTeam)) {
+                selectedBattleTeam.forEach(function (id, i) { partyOrder[id] = i + 1; });
+            }
+            var list = [];
+            var seen = {};
+            owned.forEach(function (om) {
+                if (!om || seen[om.id]) return;
+                var beast = resolvePvpBeast(om.id, om.level || 1);
+                if (!beast) return;
+                seen[beast.id] = 1;
+                if (partyOrder[beast.id]) beast.party = partyOrder[beast.id];
+                list.push(beast);
+            });
+            list.sort(function (a, b) {
+                var ap = a.party || 99;
+                var bp = b.party || 99;
+                if (ap !== bp) return ap - bp;
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            });
+            return list;
+        }
+
+        function pvpBeastImageSrc(imgKey) {
+            if (!/^[a-z0-9_]{1,40}$/.test(String(imgKey || ''))) return '';
+            var src = (typeof BEAST_IMAGES !== 'undefined' && BEAST_IMAGES) ? BEAST_IMAGES[imgKey] : '';
+            if (typeof src !== 'string') return '';
+            if (src.length > 180 || src.indexOf('..') !== -1) return '';
+            if (/[\u0000-\u001f\\"'<>]/.test(src)) return '';
+            if (!/^assets\/monsters\/.+\.(png|jpe?g|webp)$/i.test(src)) return '';
+            return src;
+        }
+
+        function pvpElementLabel(element) {
+            try {
+                if (typeof getElementZh === 'function') {
+                    var zh = getElementZh(element);
+                    if (zh) return String(zh);
+                }
+            } catch (e) {}
+            return '';
+        }
+
+        window.MmgPvpRoster = {
+            listOwned: listOwnedBeastsForPvp,
+            resolve: resolvePvpBeast,
+            imageSrc: pvpBeastImageSrc,
+            elementLabel: pvpElementLabel
+        };
+        /* PVP_ROSTER_END */
+
+        /* PVP 對決喺 pvp-peer.js（PeerJS Cloud）。呢度只提供獸鑑同出題，唔改單人戰鬥流程。 */
     </script>
 </body>
 </html>
