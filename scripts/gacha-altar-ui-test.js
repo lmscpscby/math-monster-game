@@ -94,8 +94,7 @@ assert(carousel.includes('ui-lobby-carousel-shanhai-1920.png?v=702c9f7d'), 'shan
 assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=22694439'), 'star-trail slide uses the 1920×720 plate');
 assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07'), 'ranked slide uses the 1920×720 plate');
 assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
-assert(!carousel.includes('lobby-carousel__kicker'), 'poster slides do not overlay a second title');
-assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a title line');
+assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a large title class');
 assert(!carousel.includes('前往抽卡'), 'poster slides do not keep 前往抽卡');
 assert(!carousel.includes('進入排位賽'), 'poster slides do not keep 進入排位賽');
 function carouselSlide(id) {
@@ -115,9 +114,16 @@ assert(rankedSlide.includes('>進入積分爭霸<') && rankedSlide.includes('ran
 assert(shanSlide.includes('lobby-carousel__scrim') && starSlide.includes('lobby-carousel__scrim') && rankedSlide.includes('lobby-carousel__scrim'), 'poster slides restore the bottom scrim');
 assert(html.includes('linear-gradient(180deg, rgba(12, 8, 4, 0.05) 20%, rgba(12, 8, 4, 0.28) 55%, rgba(12, 8, 4, 0.78) 100%)'), 'scrim keeps the top-light bottom-dark gradient');
 assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__scrim[^{]*\{[^}]*display:\s*none/.test(html), 'plate scrim is not force-hidden');
-assert(html.includes('.lobby-carousel__slide--plate .lobby-carousel__copy'), 'plate copy rule remains');
-assert(!shanSlide.includes('lobby-carousel__copy') && !starSlide.includes('lobby-carousel__copy') && !rankedSlide.includes('lobby-carousel__copy'), 'poster slides do not add a copy block');
-assert(!shanSlide.includes('lobby-carousel__kicker') && !starSlide.includes('lobby-carousel__kicker') && !rankedSlide.includes('lobby-carousel__kicker'), 'poster slides do not overlay a kicker');
+assert(html.includes('.lobby-carousel__slide--plate .lobby-carousel__copy h2'), 'plate h2 hide selector remains');
+assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__copy\s*\{[^}]*display:\s*none/.test(html), 'plate copy block is not force-hidden');
+assert(shanSlide.includes('lobby-carousel__kicker') && shanSlide.includes('神獸卡池・收集經典'), 'shan-hai kicker is the approved line');
+assert(shanSlide.includes('lobby-carousel__sub') && shanSlide.includes('挑戰山海，抽出神獸'), 'shan-hai subtitle is the approved line');
+assert(starSlide.includes('lobby-carousel__kicker') && starSlide.includes('符文紀元・新系列'), 'star-trail kicker is the approved line');
+assert(starSlide.includes('lobby-carousel__sub') && starSlide.includes('踏入星軌，開啟祈願'), 'star-trail subtitle is the approved line');
+assert(rankedSlide.includes('lobby-carousel__kicker') && rankedSlide.includes('積分爭霸・證明實力'), 'ranked kicker is the approved line');
+assert(rankedSlide.includes('lobby-carousel__sub') && rankedSlide.includes('進入積分塔，競逐排名'), 'ranked subtitle is the approved line');
+assert(!shanSlide.includes('<h2') && !starSlide.includes('<h2') && !rankedSlide.includes('<h2'), 'poster slides do not overlay an h2');
+assert(!shanSlide.includes('lobby-carousel__title') && !starSlide.includes('lobby-carousel__title') && !rankedSlide.includes('lobby-carousel__title'), 'poster slides do not overlay a large title');
 assert(shanSlide.includes("openGachaSeries('shanhaijing')"), 'shan-hai slide deep-links the shanhai pool');
 assert(starSlide.includes("openGachaSeries('star-trail')"), 'star-trail slide deep-links the star-trail pool');
 assert(rankedSlide.includes("switchView('ranked')"), 'ranked slide uses the lobby ranked navigation');
