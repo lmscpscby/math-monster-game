@@ -30,8 +30,11 @@ function assert(cond, msg) {
 }
 
 const SERIES_ART = {
-  'assets/bg/ui-gacha-banner-star-trail-1920.png': 'a5fd33bf',
-  'assets/bg/ui-lobby-carousel-star-trail-1920.png': '13e864c8',
+  'assets/bg/ui-gacha-banner-shanhai-1920.png': '60e7eace',
+  'assets/bg/ui-gacha-banner-star-trail-1920.png': '21f1900b',
+  'assets/bg/ui-lobby-carousel-shanhai-1920.png': '702c9f7d',
+  'assets/bg/ui-lobby-carousel-star-trail-1920.png': '22694439',
+  'assets/bg/ui-lobby-carousel-ranked-enter-1920.png': 'b4900c07',
   'assets/bg/promo-star-trail-1920.png': '71adfa44'
 };
 
@@ -73,15 +76,31 @@ assert(view.includes('data-gacha-series="shanhaijing"'), 'shanhaijing tab hook')
 assert(view.includes('data-gacha-series="star-trail"'), 'star-trail tab hook');
 assert(view.includes("setGachaSeries('shanhaijing')"), 'shanhaijing tab switches series');
 assert(view.includes("setGachaSeries('star-trail')"), 'star-trail tab switches series');
-assert(view.includes('ui-gacha-banner-star-trail-1920.png?v=a5fd33bf'), 'star-trail stage banner cache-bust');
+assert(view.includes('ui-gacha-banner-shanhai-1920.png?v=60e7eace'), 'shanhai stage banner cache-bust');
+assert(view.includes('ui-gacha-banner-star-trail-1920.png?v=21f1900b'), 'star-trail stage banner cache-bust');
+assert(view.includes('id="gacha-altar-title" hidden'), 'altar heading stays off the baked banner titles');
 assert(view.includes('卡池即將開放'), 'closed pool is labeled on the star-trail stage');
 assert(!view.includes('ui-gacha-banner-star-trail-wide.png'), 'old wide banner is not the stage');
 assert(!html.includes('ui-lobby-carousel-star-trail-1920.png?v=71adfa44'), 'carousel does not use the promo hash');
-assert(html.includes('ui-lobby-carousel-star-trail-1920.png?v=13e864c8'), 'lobby slide uses the 1920×720 plate');
+assert(!html.includes('ui-lobby-carousel-star-trail-1920.png?v=13e864c8'), 'carousel does not keep the previous star-trail plate');
 assert(html.includes("openGachaSeries('star-trail')"), 'star-trail slide opens that tab');
 assert(html.includes("openGachaSeries('shanhaijing')"), 'shanhaijing slide opens that tab');
 assert(html.includes('開始冒險'), 'welcome slide still starts the adventure');
-assert(html.includes('data-lobby-dot="2"'), 'carousel has a third dot');
+const carouselStart = html.indexOf('id="lobby-carousel"');
+const carouselEnd = html.indexOf('class="island-hub"');
+assert(carouselStart >= 0 && carouselEnd > carouselStart, 'lobby carousel markers');
+const carousel = html.slice(carouselStart, carouselEnd);
+assert(carousel.includes('ui-lobby-carousel-shanhai-1920.png?v=702c9f7d'), 'shan-hai slide uses the 1920×720 plate');
+assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=22694439'), 'star-trail slide uses the 1920×720 plate');
+assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07'), 'ranked slide uses the 1920×720 plate');
+assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
+assert(!carousel.includes('lobby-carousel__kicker'), 'poster slides do not overlay a second title');
+assert(!carousel.includes('前往抽卡'), 'poster slides do not overlay a second CTA');
+assert(carousel.includes("openGachaSeries('shanhaijing')"), 'shan-hai slide deep-links the shanhai pool');
+assert(carousel.includes("openGachaSeries('star-trail')"), 'star-trail slide deep-links the star-trail pool');
+assert(carousel.includes("switchView('ranked')"), 'ranked slide uses the lobby ranked navigation');
+assert(carousel.includes('data-lobby-dot="3"'), 'carousel has a ranked dot');
+assert(carousel.includes('開始冒險'), 'welcome slide still starts the adventure');
 assert(!view.includes('ui-parchment'), 'gacha view leaves the parchment frame');
 
 const drawStart = html.indexOf('function drawGacha(count)');

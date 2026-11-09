@@ -1097,6 +1097,11 @@
         .lobby-carousel__slide--welcome .lobby-hero-cta {
             pointer-events: auto;
         }
+        /* Official plates already bake the Traditional Chinese title. */
+        .lobby-carousel__slide--plate .lobby-carousel__scrim,
+        .lobby-carousel__slide--plate .lobby-carousel__copy {
+            display: none;
+        }
         .lobby-carousel__kicker {
             font-size: 0.75rem;
             font-weight: 800;
@@ -3443,6 +3448,9 @@
             width: 100%;
             height: auto;
         }
+        .gacha-series-banner img[hidden] {
+            display: none !important;
+        }
         .gacha-pool-status {
             margin: 0;
             padding: 0.4rem 1rem;
@@ -3920,21 +3928,19 @@
                             </button>
                         </div>
                     </div>
-                    <div class="lobby-carousel__slide" data-lobby-slide="1" aria-hidden="true">
-                        <img class="lobby-carousel__bg" src="assets/bg/ui-gacha-stage-mystic-1920.png?v=2d670fe2" alt="">
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="1" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="前往山海經神獸抽卡">
-                            <span class="lobby-carousel__scrim"></span>
-                            <span class="lobby-carousel__copy">
-                                <span class="lobby-carousel__kicker">祈願召喚</span>
-                                <span class="lobby-carousel__title">山海經神獸</span>
-                                <span class="lobby-carousel__sub">十連抽必得一隻上古神獸</span>
-                                <span class="lobby-hero-cta"><i class="fa-solid fa-egg" aria-hidden="true"></i><span>前往抽卡</span></span>
-                            </span>
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-shanhai-1920.png?v=702c9f7d" alt="山海經：神獸之戰">
                         </button>
                     </div>
-                    <div class="lobby-carousel__slide" data-lobby-slide="2" aria-hidden="true">
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="2" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('star-trail')" aria-label="前往星軌命途抽卡">
-                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=13e864c8" alt="星軌命途：符文紀元">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.png?v=22694439" alt="星軌命途：符文紀元">
+                        </button>
+                    </div>
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="3" aria-hidden="true">
+                        <button type="button" class="lobby-carousel__hit" onclick="switchView('ranked')" aria-label="積分爭霸賽，進入積分塔">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07" alt="無限召喚：數理之王">
                         </button>
                     </div>
                 </div>
@@ -3944,6 +3950,7 @@
                         <button type="button" class="lobby-carousel__dot is-active" role="tab" aria-selected="true" aria-label="歡迎" data-lobby-dot="0"></button>
                         <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="山海經神獸" data-lobby-dot="1"></button>
                         <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="星軌命途" data-lobby-dot="2"></button>
+                        <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="積分爭霸賽" data-lobby-dot="3"></button>
                     </div>
                     <button type="button" class="lobby-carousel__arrow" id="lobby-carousel-next" aria-label="下一張宣傳">下一張</button>
                 </div>
@@ -4186,11 +4193,12 @@
                 <button type="button" class="gacha-series-tab" role="tab" id="gacha-tab-star-trail" data-gacha-series="star-trail" aria-selected="false" onclick="setGachaSeries('star-trail')">星軌命途：符文紀元</button>
             </div>
 
-            <h2 class="gacha-title" id="gacha-altar-title">怪獸祈願召喚</h2>
+            <h2 class="gacha-title" id="gacha-altar-title" hidden>怪獸祈願召喚</h2>
 
             <div id="gacha-display-area" class="gacha-stage-core">
-                <div id="gacha-series-banner" class="gacha-series-banner" hidden>
-                    <img src="assets/bg/ui-gacha-banner-star-trail-1920.png?v=a5fd33bf" alt="星軌命途：符文紀元">
+                <div id="gacha-series-banner" class="gacha-series-banner">
+                    <img id="gacha-banner-shanhai" src="assets/bg/ui-gacha-banner-shanhai-1920.png?v=60e7eace" alt="山海經：神獸之戰">
+                    <img id="gacha-banner-star" src="assets/bg/ui-gacha-banner-star-trail-1920.png?v=21f1900b" alt="星軌命途：符文紀元" hidden>
                 </div>
                 <p id="gacha-pool-status" class="gacha-pool-status" hidden>卡池即將開放</p>
                 <div id="gacha-idle-state" class="gacha-idle">
@@ -7460,7 +7468,13 @@
                 btn.setAttribute('aria-selected', on ? 'true' : 'false');
             });
             const banner = document.getElementById('gacha-series-banner');
-            if (banner) banner.hidden = !star;
+            const shanhaiBanner = document.getElementById('gacha-banner-shanhai');
+            const starBanner = document.getElementById('gacha-banner-star');
+            if (shanhaiBanner) shanhaiBanner.hidden = star;
+            if (starBanner) starBanner.hidden = !star;
+            if (banner) banner.hidden = false;
+            const altarTitle = document.getElementById('gacha-altar-title');
+            if (altarTitle) altarTitle.hidden = !!(banner && !banner.hidden);
             const poolStatus = document.getElementById('gacha-pool-status');
             if (poolStatus) poolStatus.hidden = !(star && !open);
             const hint = document.getElementById('gacha-hint');
