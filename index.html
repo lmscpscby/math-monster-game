@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pvp-peer.css">
 
     <style>
         html, body {
@@ -3986,6 +3987,10 @@
 
             <!-- PVP 對決擂台：已停用 -->
             <div class="island-admin-wrap">
+                <button type="button" id="pvp-open-btn" class="ui-btn ui-btn--primary pvp-entry" onclick="switchView('pvp')">
+                    <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                    <span>1v1 對戰</span>
+                </button>
                 <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden island-admin-btn">
                     <i class="fa-solid fa-chart-user" aria-hidden="true"></i>
                     <span>參加人數統計</span>
@@ -4417,7 +4422,56 @@
             </div>
         </section>
 
-        <!-- VIEW 6: PVP LOBBY — 已停用 -->
+        <!-- VIEW 6: PVP LOBBY（PeerJS Cloud 試作，一題） -->
+        <section id="view-pvp" class="hidden" data-pvp="1">
+            <div class="ui-panel ui-parchment pvp-sheet">
+                <div class="pvp-sheet__bar">
+                    <button type="button" class="ui-btn ui-btn--secondary ui-btn--compact" onclick="switchView('home')">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回大廳</span>
+                    </button>
+                    <p class="pvp-kicker">試作 · PeerJS Cloud</p>
+                </div>
+                <h2 class="pvp-title">1v1 數學對戰</h2>
+                <p class="pvp-lead">房主開一個短房號，對手輸入房號入嚟。連到之後兩個人答同一條題。</p>
+
+                <div id="pvp-step-lobby">
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-create-btn" class="ui-btn ui-btn--primary">開房</button>
+                    </div>
+                    <form id="pvp-join-form" class="pvp-join">
+                        <label for="pvp-join-code">已有房號</label>
+                        <input id="pvp-join-code" class="ui-field" maxlength="48" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="例如 AB3K">
+                        <button type="submit" id="pvp-join-btn" class="ui-btn ui-btn--secondary">入房</button>
+                    </form>
+                    <p id="pvp-lobby-msg" class="pvp-msg" role="status"></p>
+                </div>
+
+                <div id="pvp-step-room" class="hidden">
+                    <p class="pvp-label">房號</p>
+                    <p id="pvp-room-code" class="pvp-code" aria-live="polite">····</p>
+                    <p id="pvp-room-url" class="pvp-url"></p>
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-copy-code" class="ui-btn ui-btn--secondary ui-btn--compact">複製房號</button>
+                        <button type="button" id="pvp-copy-link" class="ui-btn ui-btn--secondary ui-btn--compact">複製連結</button>
+                        <button type="button" id="pvp-leave-btn" class="ui-btn ui-btn--secondary-alt ui-btn--compact">離開房間</button>
+                    </div>
+                    <p id="pvp-room-msg" class="pvp-msg" role="status">等緊對手入房…</p>
+                </div>
+
+                <div id="pvp-step-quiz" class="hidden">
+                    <p id="pvp-quiz-kicker" class="pvp-label">同一條題</p>
+                    <h3 id="pvp-stem" class="pvp-stem"></h3>
+                    <div id="pvp-options" class="pvp-options" role="group" aria-label="答案選項"></div>
+                    <p id="pvp-quiz-msg" class="pvp-msg" role="status"></p>
+                    <div id="pvp-result" class="pvp-result hidden" role="status"></div>
+                    <div class="pvp-actions">
+                        <button type="button" id="pvp-again-btn" class="ui-btn ui-btn--primary hidden">返去再開一局</button>
+                    </div>
+                </div>
+
+                <p class="pvp-footnote">純前端試作，經 PeerJS Cloud 做信令。學校 Wi‑Fi 有時會被 NAT／防火牆擋住；之後先需要 TURN，而家未用。</p>
+            </div>
+        </section>
 
     </main>
 
@@ -4542,6 +4596,9 @@
     <script src="數學試題庫.js"></script>
     <!-- 戰鬥抽題黑名單（A1+B + c_6A16N103b delist；只 skip、唔刪庫） -->
     <script src="unsolvable-blacklist.js"></script>
+    <!-- PeerJS Cloud（公開信令，預設唔使 key）。PVP 邏輯喺 pvp-peer.js，唔改戰鬥主流程。 -->
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="pvp-peer.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
     <script>
         // 老師 Google Sheet 上報 + 跨裝置帳戶：Apps Script /exec URL（改 Code 後必須重新部署新版本）
@@ -7031,6 +7088,7 @@
                 totalQuestions: '',
                 goldDelta: ''
             }));
+            try { if (window.MmgPvp) MmgPvp.offerHashJoin(); } catch (e) {}
         }
 
         function logout() {
@@ -7300,7 +7358,7 @@
                 return;
             }
 
-            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked'];
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked', 'pvp'];
             views.forEach(v => {
                 const el = document.getElementById(`view-${v}`);
                 if (el) el.classList.add('hidden');
@@ -7330,6 +7388,11 @@
             if (viewName === 'gacha') {
                 resetGachaStage();
                 applyGachaSeriesChrome();
+            }
+            if (viewName === 'pvp') {
+                try { if (window.MmgPvp) MmgPvp.onEnterView(); } catch (e) {}
+            } else {
+                try { if (window.MmgPvp) MmgPvp.onLeaveView(); } catch (e) {}
             }
         }
 
@@ -10805,7 +10868,7 @@
             }
         }
 
-        /* PVP 對決擂台：已停用（入口／房間邏輯已移除） */
+        /* PVP 對決喺 pvp-peer.js（PeerJS Cloud 試作）。呢度唔再放房間邏輯。 */
     </script>
 </body>
 </html>
