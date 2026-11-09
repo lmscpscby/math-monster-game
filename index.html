@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Monster Gacha Game - 數理怪獸抽卡大冒險</title>
+    <title>無限召喚：數理之王</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -1088,19 +1088,10 @@
             padding: 1rem 1.15rem 1.2rem;
             pointer-events: none;
         }
-        .lobby-carousel__slide--welcome .lobby-carousel__copy {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-        .lobby-carousel__slide--welcome .lobby-hero-cta {
-            pointer-events: auto;
-        }
         /* Official plates already bake the large title.
-           Scrim stays. Overlay is only a kicker, one subtitle, and the wood CTA. */
-        /* Plate scrim is lighter than the welcome fade (bottom 0.78).
-           星軌／排位 sit a little darker than 山海經. */
+           Scrim stays. Overlay is only a kicker, one subtitle, and the wood CTA.
+           Plate scrim is lighter than the base fade (bottom 0.78).
+           The brand page and 星軌 sit a little darker than 山海經. */
         .lobby-carousel__slide--plate .lobby-carousel__scrim {
             z-index: 1;
             background: linear-gradient(180deg, rgba(12, 8, 4, 0.04) 20%, rgba(12, 8, 4, 0.18) 55%, rgba(12, 8, 4, 0.48) 100%);
@@ -3695,7 +3686,7 @@
                     <i class="fa-solid fa-square-root-variable"></i>
                 </div>
                 <h1 class="text-2xl md:text-3xl font-black">
-                    數理怪獸抽卡大冒險
+                    無限召喚：數理之王
                 </h1>
                 <p class="text-xs md:text-sm mt-1">請登入或註冊帳號以開始遊戲</p>
             </div>
@@ -3914,9 +3905,8 @@
                 </div>
                 <div>
                     <h1 class="font-black text-lg md:text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-200 to-indigo-200">
-                        數理怪獸大冒險
+                        無限召喚：數理之王
                     </h1>
-                    <p class="text-[10px] text-pink-300/80 hidden sm:block">Math Monster Gacha RPG</p>
                 </div>
             </div>
 
@@ -3982,17 +3972,18 @@
         <section id="view-home" class="space-y-6">
             <div class="lobby-carousel" id="lobby-carousel" tabindex="0" aria-roledescription="carousel" aria-label="大廳宣傳">
                 <div class="lobby-carousel__viewport">
-                    <div class="lobby-carousel__slide lobby-carousel__slide--welcome is-active" data-lobby-slide="0" aria-hidden="false">
-                        <img id="main-cover-img" class="lobby-carousel__bg" src="" alt="">
-                        <div class="lobby-carousel__scrim"></div>
-                        <div class="lobby-carousel__copy">
-                            <h2>歡迎來到數理怪獸世界</h2>
-                            <p>訓練場分單元挑戰。積分爭霸賽 4 關屬性升級。冒險塔通關後開無限挑戰。</p>
-                            <button type="button" onclick="enterAdventure()" class="lobby-hero-cta">
-                                <i class="fa-solid fa-play" aria-hidden="true"></i>
-                                <span>開始冒險</span>
-                            </button>
-                        </div>
+                    <div class="lobby-carousel__slide lobby-carousel__slide--plate is-active" data-lobby-slide="0" aria-hidden="false">
+                        <button type="button" class="lobby-carousel__hit" onclick="enterAdventure()" aria-label="開始冒險，進入冒險塔">
+                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07" alt="無限召喚：數理之王">
+                            <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__copy">
+                                <span class="lobby-carousel__kicker">無限召喚・數理之王</span>
+                                <span class="lobby-carousel__sub">展開冒險，挑戰數理</span>
+                            </span>
+                            <span class="lobby-carousel__plate-cta">
+                                <span class="lobby-hero-cta"><i class="fa-solid fa-play" aria-hidden="true"></i><span>開始冒險</span></span>
+                            </span>
+                        </button>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="1" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" onclick="openGachaSeries('shanhaijing')" aria-label="進入祈願，山海經神獸">
@@ -4020,27 +4011,13 @@
                             </span>
                         </button>
                     </div>
-                    <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="3" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="switchView('ranked')" aria-label="進入積分爭霸">
-                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07" alt="無限召喚：數理之王">
-                            <span class="lobby-carousel__scrim"></span>
-                            <span class="lobby-carousel__copy">
-                                <span class="lobby-carousel__kicker">積分爭霸・證明實力</span>
-                                <span class="lobby-carousel__sub">進入積分塔，競逐排名</span>
-                            </span>
-                            <span class="lobby-carousel__plate-cta">
-                                <span class="ranked-btn ranked-btn--primary"><i class="fa-solid fa-trophy" aria-hidden="true"></i><span>進入積分爭霸</span></span>
-                            </span>
-                        </button>
-                    </div>
                 </div>
                 <div class="lobby-carousel__nav">
                     <button type="button" class="lobby-carousel__arrow" id="lobby-carousel-prev" aria-label="上一張宣傳">上一張</button>
                     <div class="lobby-carousel__dots" role="tablist" aria-label="選擇宣傳">
-                        <button type="button" class="lobby-carousel__dot is-active" role="tab" aria-selected="true" aria-label="歡迎" data-lobby-dot="0"></button>
+                        <button type="button" class="lobby-carousel__dot is-active" role="tab" aria-selected="true" aria-label="無限召喚：數理之王" data-lobby-dot="0"></button>
                         <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="山海經神獸" data-lobby-dot="1"></button>
                         <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="星軌命途" data-lobby-dot="2"></button>
-                        <button type="button" class="lobby-carousel__dot" role="tab" aria-selected="false" aria-label="積分爭霸賽" data-lobby-dot="3"></button>
                     </div>
                     <button type="button" class="lobby-carousel__arrow" id="lobby-carousel-next" aria-label="下一張宣傳">下一張</button>
                 </div>
@@ -4726,7 +4703,7 @@
     </div>
 
     <footer class="border-t border-purple-500/20 py-4 text-center text-xs text-slate-400 bg-slate-950/40">
-        Math Monster Gacha Game &copy; 2026 - 全能數理怪獸養成冒險平台
+        無限召喚：數理之王 &copy; 2026
     </footer>
 
     <!-- Word 數學試題庫（G5/G6）；file:// 可用 -->
@@ -7359,7 +7336,8 @@
         }
 
         window.onload = function() {
-            document.getElementById('main-cover-img').src = BEAST_IMAGES['cover'];
+            var coverImg = document.getElementById('main-cover-img');
+            if (coverImg) coverImg.src = BEAST_IMAGES['cover'];
             try { initLobbyCarousel(); } catch (e) {}
             try { startSeasonCountdown(); } catch (e) {}
             try { renderHeaderAvatar(); } catch (e) {}
