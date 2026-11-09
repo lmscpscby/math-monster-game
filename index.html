@@ -3564,6 +3564,24 @@
             outline: 3px solid #ffe9a8;
             outline-offset: 2px;
         }
+        /* Full-bleed star-trail / mythic art stays inside square and portrait frames. */
+        .monster-art-frame {
+            position: relative;
+            overflow: hidden;
+            flex: 0 0 auto;
+        }
+        .monster-art-frame > img.monster-art {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+            box-sizing: border-box;
+        }
         .gacha-controls {
             width: 100%;
             max-width: 680px;
@@ -5728,6 +5746,16 @@
             holy_hunter: 'assets/monsters/holy/holy_hunter.png',
             holy_beast: 'assets/monsters/holy/holy_beast.png',
             holy_envoy: 'assets/monsters/holy/holy_envoy.png',
+            // 星軌命途：符文紀元（全幅場景，?v= 檔案 SHA-256 前 8 碼）
+            st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=7d971577',
+            st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png?v=6e97f58e',
+            st_fey: 'assets/monsters/star-trail/ui-star-card-fey.png?v=247c9089',
+            st_lucia: 'assets/monsters/star-trail/ui-star-card-lucia.png?v=4f62f6e8',
+            st_malakor: 'assets/monsters/star-trail/ui-star-card-malakor.png?v=6901c5bb',
+            st_noah: 'assets/monsters/star-trail/ui-star-card-noah.png?v=ea941b12',
+            st_selina: 'assets/monsters/star-trail/ui-star-card-selina.png?v=da683b2a',
+            st_serafina: 'assets/monsters/star-trail/ui-star-card-serafina.png?v=071899a5',
+            st_thorin: 'assets/monsters/star-trail/ui-star-card-thorin.png?v=57db1117',
             // 賽季限定只存 id；立繪唔使用 dataURL。
             season_kirin: 'assets/monsters/season_kirin.jpg'
         };
@@ -6103,13 +6131,22 @@
             { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' }
         ];
 
-        // Phase 1：星軌命途：符文紀元。立繪未到，名單留空，池關閉。
-        // TODO: 正式名單對齊 SHANHAIJING_BEASTS 形狀後先改 GACHA_POOLS['star-trail'].open。
-        // 唔好喺度填假戰鬥數值。主視覺備用 assets/bg/promo-star-trail-1920.png?v=71adfa44（唔係走馬燈、唔係抽卡橫幅）。
-        const STAR_TRAIL_BEASTS = [];
+        // 星軌命途：符文紀元。能力值同山海經核心同一檔；圖鑑第四分頁未做。
+        // 主視覺備用 assets/bg/promo-star-trail-1920.png?v=71adfa44（唔係走馬燈、唔係抽卡橫幅）。
+        const STAR_TRAIL_BEASTS = [
+            { id: 'st_elden', name: '艾爾德', element: 'holy', title: '聖堂勇士：艾爾德', color: '#fde047', hp: 270, atk: 102, def: 108, spd: 70, skillText: '聖堂聖盾衝鋒！', imgKey: 'st_elden', desc: '聖堂先鋒肩負符文聖盾，以聖輝衝鋒壓住星軌裂隙。' },
+            { id: 'st_elijah', name: '伊利亞', element: 'psy', title: '念力主宰：伊利亞', color: '#818cf8', hp: 185, atk: 116, def: 74, spd: 126, skillText: '念力主宰壓制！', imgKey: 'st_elijah', desc: '念力主宰扭曲星軌軌道，把敵方攻勢按在半空粉碎。' },
+            { id: 'st_fey', name: '菲雅', element: 'grass', title: '翡翠巡林客：菲雅', color: '#22c55e', hp: 172, atk: 110, def: 72, spd: 128, skillText: '翡翠林箭穿心！', imgKey: 'st_fey', desc: '翡翠巡林客守著符文密林，藤蔓箭矢沿星軌追獵來敵。' },
+            { id: 'st_lucia', name: '露西亞', element: 'holy', title: '聖泉祈求者：露西亞', color: '#fbbf24', hp: 210, atk: 96, def: 100, spd: 90, skillText: '聖泉祈願洗禮！', imgKey: 'st_lucia', desc: '聖泉祈求者引符文清泉洗禮，聖光能撫平星軌留下的裂傷。' },
+            { id: 'st_malakor', name: '馬爾科斯', element: 'rock', title: '冥界死靈師：馬爾科斯', color: '#78716c', hp: 288, atk: 100, def: 110, spd: 62, skillText: '冥界死靈召喚！', imgKey: 'st_malakor', desc: '冥界死靈師自墓碑符文喚出殘靈，以岩骸護住己身。' },
+            { id: 'st_noah', name: '諾亞', element: 'fight', title: '符文機工士：諾亞', color: '#f97316', hp: 230, atk: 118, def: 88, spd: 96, skillText: '符文機工連擊！', imgKey: 'st_noah', desc: '符文機工士以機關臂鎧連打，把星軌符文敲成破甲衝擊。' },
+            { id: 'st_selina', name: '席琳娜', element: 'psy', title: '星穹魔導士：席琳娜', color: '#6366f1', hp: 168, atk: 124, def: 72, spd: 116, skillText: '星穹魔導詠唱！', imgKey: 'st_selina', desc: '星穹魔導士展開夜空符文陣，將星光凝成念力光束。' },
+            { id: 'st_serafina', name: '賽拉菲娜', element: 'fire', title: '紅蓮熾舞姬：賽拉菲娜', color: '#dc2626', hp: 164, atk: 125, def: 70, spd: 124, skillText: '紅蓮熾舞焚天！', imgKey: 'st_serafina', desc: '紅蓮熾舞姬踏著符文舞步，熾焰沿星軌燒成一圈火環。' },
+            { id: 'st_thorin', name: '索倫', element: 'thunder', title: '雷霆召喚者：索倫', color: '#eab308', hp: 205, atk: 120, def: 84, spd: 112, skillText: '雷霆召喚天罰！', imgKey: 'st_thorin', desc: '雷霆召喚者召來符文雷靈，電弧順著星軌直劈敵陣。' }
+        ];
         const GACHA_POOLS = {
             shanhaijing: { series: 'shanhaijing', open: true },
-            'star-trail': { series: 'star-trail', open: false }
+            'star-trail': { series: 'star-trail', open: true }
         };
         const gachaGuaranteeBySeries = {
             shanhaijing: 10,
@@ -7431,7 +7468,7 @@
         function renderMonsterElement(imgKey, nameStr) {
             const imgSrc = BEAST_IMAGES[imgKey];
             if (imgSrc) {
-                return `<img src="${imgSrc}" alt="${nameStr || '怪獸'}" class="w-full h-full object-contain rounded-2xl border-2 border-amber-400/80 shadow-md bg-slate-950/40">`;
+                return `<img src="${imgSrc}" alt="${nameStr || '怪獸'}" class="monster-art w-full h-full object-contain rounded-2xl border-2 border-amber-400/80 shadow-md bg-slate-950/40">`;
             }
             return `<div class="w-full h-full rounded-2xl bg-purple-900 border border-amber-400 flex items-center justify-center font-bold text-xs text-amber-300 p-2 text-center">${nameStr || '魔王Boss'}</div>`;
         }
@@ -7447,7 +7484,9 @@
                     ${runtimeData.title} (${elemText})
                 </div>
                 <div class="relative w-48 h-48 mx-auto my-3">
-                    ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                    <div class="monster-art-frame absolute inset-0 rounded-2xl">
+                        ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
+                    </div>
                     ${s1Kirin ? '<img class="codex-s1-badge codex-s1-badge--on-art" src="assets/bg/ui-codex-badge-s1-season.png" alt="" decoding="async">' : ''}
                 </div>
                 <h3 class="text-2xl font-black text-white">${runtimeData.name} (Lv.${runtimeData.level})</h3>
@@ -7526,7 +7565,7 @@
         /* GACHA_GUARANTEE_REMAINING_END */
 
         const GACHA_HINT_SHANHAI = '單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個山海經怪獸卡！';
-        const GACHA_HINT_STAR = '卡池即將開放。單抽 200 金幣，十抽 2000 金幣。保底同山海經分開計算。';
+        const GACHA_HINT_STAR = '單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個星軌符文卡！保底同山海經分開計算。';
 
         function updateGachaAltarHud() {
             const goldEl = document.getElementById('gacha-gold-value');
@@ -7623,7 +7662,7 @@
         function drawGacha(count) {
             if (!currentUser || gachaBusy) return;
             const series = activeGachaSeries === 'star-trail' ? 'star-trail' : 'shanhaijing';
-            // 星軌 Phase 1 未有名單：唔扣金幣、唔寫背包。窗口留喺 gachaGuaranteeBySeries['star-trail']。
+            // 星軌池未開放或名單為空：唔扣金幣、唔寫背包。窗口留喺 gachaGuaranteeBySeries['star-trail']。
             if (series === 'star-trail' && !gachaPoolOpen(series)) return;
 
             const singleCost = 200;
@@ -7715,7 +7754,7 @@
                     }
                 };
                 card.innerHTML = `
-                    <div class="w-20 h-20 my-2">
+                    <div class="monster-art-frame w-20 h-20 my-2 rounded-2xl">
                         ${renderMonsterElement(item.imgKey, item.name)}
                     </div>
                     <div class="font-extrabold text-xs text-white mt-1">${item.name}</div>
@@ -7751,9 +7790,10 @@
             const container = document.getElementById('monster-collection-grid');
             container.innerHTML = '';
 
-            // TODO(star-trail): 圖鑑未開第四分頁。STAR_TRAIL_BEASTS 有正式名單後先併入 allList。
+            // 星軌核心併入圖鑑。第四分頁未做，isMythic 先出現在「山海經神獸」篩選。
             let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'].concat(
-                (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; })
+                (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; }),
+                (typeof STAR_TRAIL_BEASTS !== 'undefined' ? STAR_TRAIL_BEASTS : []).map(function (b) { return b.id; })
             );
 
             allList.forEach(mId => {
@@ -7791,7 +7831,7 @@
                             </span>
                         </div>
 
-                        <div onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})" class="w-28 h-28 mx-auto my-2 overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-transform" title="點擊放大觀看">
+                        <div onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})" class="monster-art-frame w-28 h-28 mx-auto my-2 overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-transform" title="點擊放大觀看">
                             ${renderMonsterElement(runtimeData.imgKey, runtimeData.name)}
                         </div>
 

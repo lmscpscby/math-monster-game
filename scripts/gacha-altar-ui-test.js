@@ -167,9 +167,43 @@ const closedGuard = draw.indexOf("series === 'star-trail'");
 const goldAt = draw.indexOf('currentUser.gold -= cost');
 assert(closedGuard >= 0 && goldAt > closedGuard, 'closed star-trail pool returns before gold is spent');
 assert(html.includes("series: 'star-trail'"), 'pool plumbing records series star-trail');
-assert(html.includes('const STAR_TRAIL_BEASTS = []'), 'no placeholder star-trail roster');
-assert(html.includes("'star-trail': { series: 'star-trail', open: false }"), 'star-trail pool stays closed');
-assert(html.includes('STAR_TRAIL_BEASTS'), 'runtime lookup can read a future star-trail roster');
+const HINT_STAR = '單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個星軌符文卡！保底同山海經分開計算。';
+assert(html.includes(HINT_STAR), 'open star-trail hint matches the shanhaijing rate line');
+assert(!HINT_STAR.includes('卡池即將開放'), 'open hint does not say the pool is closed');
+assert(html.includes("'star-trail': { series: 'star-trail', open: true }"), 'star-trail pool is open');
+assert(!html.includes('const STAR_TRAIL_BEASTS = []'), 'star-trail roster is no longer empty');
+assert(html.includes('STAR_TRAIL_BEASTS'), 'runtime lookup reads the star-trail roster');
+assert(
+  html.includes("(typeof STAR_TRAIL_BEASTS !== 'undefined' ? STAR_TRAIL_BEASTS : []).map(function (b) { return b.id; })"),
+  'collection appends the star-trail ids'
+);
+
+const STAR_CARD_SHA = {};
+const STAR_CARD_FILES = {
+  st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png',
+  st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png',
+  st_fey: 'assets/monsters/star-trail/ui-star-card-fey.png',
+  st_lucia: 'assets/monsters/star-trail/ui-star-card-lucia.png',
+  st_malakor: 'assets/monsters/star-trail/ui-star-card-malakor.png',
+  st_noah: 'assets/monsters/star-trail/ui-star-card-noah.png',
+  st_selina: 'assets/monsters/star-trail/ui-star-card-selina.png',
+  st_serafina: 'assets/monsters/star-trail/ui-star-card-serafina.png',
+  st_thorin: 'assets/monsters/star-trail/ui-star-card-thorin.png'
+};
+Object.keys(STAR_CARD_FILES).forEach(function (key) {
+  const file = STAR_CARD_FILES[key];
+  const bytes = fs.readFileSync(path.join(root, file));
+  const sha = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
+  STAR_CARD_SHA[key] = sha;
+  assert(html.includes(file + '?v=' + sha), key + ' cache-busts ' + file + '?v=' + sha);
+});
+['ed39ca82', '2bb54584', '999ee2a1', '2c8eaf1d', '095c0368', 'c2ff6c64', 'aa7cc52f', 'a027951e', 'dc4e429d'].forEach(function (oldSha) {
+  assert(!html.includes('?v=' + oldSha), 'old cutout hash is gone ' + oldSha);
+});
+const artCss = html.slice(html.indexOf('.monster-art-frame {'), html.indexOf('.gacha-controls'));
+assert(artCss.includes('overflow: hidden'), 'art frames hide overflow');
+assert(artCss.includes('.monster-art-frame > img.monster-art'), 'art frame targets the monster image');
+assert(artCss.includes('object-fit: contain'), 'art frames use object-fit contain');
 
 const fnStart = html.indexOf('/* GACHA_GUARANTEE_REMAINING_START */');
 const fnEnd = html.indexOf('/* GACHA_GUARANTEE_REMAINING_END */');
@@ -182,3 +216,251 @@ assert(context.gachaGuaranteeRemaining('star-trail') === 10, 'star-trail window 
 assert(context.gachaGuaranteeRemaining('shanhaijing') === 10, 'shanhaijing window stays 10');
 assert(!html.includes('冰羽熾天神龍'), 'colleague UR roster is not shipped');
 assert(!html.includes('召喚概率公示'), 'rates disclosure heading is not shipped');
+
+function makeEl() {
+  const el = {
+    hidden: false,
+    innerText: '',
+    textContent: '',
+    className: '',
+    title: '',
+    src: '',
+    alt: '',
+    disabled: false,
+    value: '',
+    style: {},
+    dataset: {},
+    children: [],
+    classList: {
+      add() {},
+      remove() {},
+      toggle() {},
+      contains() { return false; }
+    },
+    setAttribute() {},
+    getAttribute() { return null; },
+    removeAttribute() {},
+    appendChild(child) { this.children.push(child); return child; },
+    addEventListener() {},
+    removeEventListener() {},
+    querySelector() { return makeEl(); },
+    querySelectorAll() { return []; },
+    focus() {},
+    click() {}
+  };
+  Object.defineProperty(el, 'innerHTML', {
+    get() { return this._html || ''; },
+    set(v) {
+      this._html = String(v);
+      this.children = [];
+    }
+  });
+  return el;
+}
+
+function loadGame() {
+  const els = Object.create(null);
+  const storage = Object.create(null);
+  const sandbox = {
+    console,
+    setTimeout,
+    clearTimeout,
+    setInterval,
+    clearInterval,
+    Date,
+    Math: Object.assign(Object.create(Math), {
+      random() { return sandbox.__random(); }
+    }),
+    JSON,
+    Number,
+    String,
+    Boolean,
+    Object,
+    Array,
+    Promise,
+    Error,
+    RegExp,
+    parseInt,
+    parseFloat,
+    isFinite,
+    isNaN,
+    encodeURIComponent,
+    decodeURIComponent,
+    URL,
+    URLSearchParams,
+    alert() {},
+    fetch: async function () {
+      return { ok: false, status: 0, text: async function () { return '{"ok":false}'; } };
+    },
+    localStorage: {
+      getItem(k) { return Object.prototype.hasOwnProperty.call(storage, k) ? storage[k] : null; },
+      setItem(k, v) { storage[k] = String(v); },
+      removeItem(k) { delete storage[k]; }
+    },
+    performance: { now() { return Date.now(); } },
+    navigator: { userAgent: 'node-gacha-test' },
+    __random() { return 0.5; },
+    document: {
+      getElementById(id) {
+        if (!els[id]) els[id] = makeEl();
+        return els[id];
+      },
+      querySelector() { return makeEl(); },
+      querySelectorAll() { return []; },
+      createElement() { return makeEl(); },
+      addEventListener() {},
+      removeEventListener() {},
+      documentElement: makeEl(),
+      body: makeEl()
+    }
+  };
+  sandbox.window = sandbox;
+  sandbox.globalThis = sandbox;
+  vm.createContext(sandbox);
+  const logicAt = html.indexOf('<!-- JAVASCRIPT GAME LOGIC -->');
+  const scriptStart = html.indexOf('<script>', logicAt) + '<script>'.length;
+  const scriptEnd = html.lastIndexOf('</script>');
+  const script = html.slice(scriptStart, scriptEnd) + `
+    globalThis.__test = {
+      setUser(u) { currentUser = u; },
+      setSeries(s) { activeGachaSeries = s; },
+      user() { return currentUser; },
+      pools: GACHA_POOLS,
+      star: STAR_TRAIL_BEASTS,
+      shanhai: SHANHAIJING_BEASTS,
+      images: BEAST_IMAGES,
+      hint: GACHA_HINT_STAR,
+      guarantee: gachaGuaranteeBySeries,
+      poolOpen: gachaPoolOpen,
+      draw: drawGacha,
+      renderCollection: renderMonsterCollection,
+      setFilter(f) { currentFilter = f; },
+      applyChrome: applyGachaSeriesChrome,
+      runtime: getMonsterRuntimeData
+    };
+  `;
+  vm.runInContext(script, sandbox, { filename: 'index.html' });
+  sandbox.__els = els;
+  return sandbox;
+}
+
+const game = loadGame();
+const api = game.__test;
+const STAR_IDS = ['st_elden', 'st_elijah', 'st_fey', 'st_lucia', 'st_malakor', 'st_noah', 'st_selina', 'st_serafina', 'st_thorin'];
+const ELEMENTS = { st_elden: 'holy', st_elijah: 'psy', st_fey: 'grass', st_lucia: 'holy', st_malakor: 'rock', st_noah: 'fight', st_selina: 'psy', st_serafina: 'fire', st_thorin: 'thunder' };
+const NAMES = { st_elden: '艾爾德', st_elijah: '伊利亞', st_fey: '菲雅', st_lucia: '露西亞', st_malakor: '馬爾科斯', st_noah: '諾亞', st_selina: '席琳娜', st_serafina: '賽拉菲娜', st_thorin: '索倫' };
+
+assert(api.star.length === 9, 'STAR_TRAIL_BEASTS length is 9');
+assert(api.poolOpen('star-trail') === true, 'gachaPoolOpen(star-trail) is true');
+assert(api.poolOpen('shanhaijing') === true, 'shanhaijing pool stays open');
+assert(api.hint === HINT_STAR, 'GACHA_HINT_STAR is the open-pool hint');
+assert(api.shanhai.length === 6, 'shanhaijing roster length unchanged');
+
+api.star.forEach(function (beast, index) {
+  const id = STAR_IDS[index];
+  assert(beast.id === id, 'roster order ' + id);
+  assert(beast.imgKey === id, id + ' imgKey matches id');
+  assert(beast.name === NAMES[id], id + ' display name');
+  assert(beast.title.indexOf(NAMES[id]) > 0 && beast.title.indexOf('：') > 0, id + ' title is the full role line');
+  assert(beast.element === ELEMENTS[id], id + ' element');
+  ['hp', 'atk', 'def', 'spd'].forEach(function (stat) {
+    assert(typeof beast[stat] === 'number', id + ' ' + stat + ' is a number');
+  });
+  assert(beast.hp >= 160 && beast.hp <= 300, id + ' hp in shanhaijing band');
+  assert(beast.atk >= 95 && beast.atk <= 125, id + ' atk in shanhaijing band');
+  assert(beast.def >= 70 && beast.def <= 110, id + ' def in shanhaijing band');
+  assert(beast.spd >= 60 && beast.spd <= 130, id + ' spd in shanhaijing band');
+  ['name', 'title', 'skillText', 'desc'].forEach(function (field) {
+    assert(beast[field] && !/[A-Za-z]/.test(beast[field]), id + ' ' + field + ' has no English');
+  });
+  const src = api.images[beast.imgKey] || '';
+  assert(src.indexOf(STAR_CARD_FILES[id] + '?v=') === 0, id + ' image map entry');
+  const runtime = api.runtime(id, 1);
+  assert(runtime && runtime.isMythic === true && runtime.series === 'star-trail', id + ' runtime is a star-trail mythic');
+  assert(runtime.name === beast.name && runtime.imgKey === id, id + ' runtime uses the roster');
+});
+
+function freshUser(gold) {
+  return {
+    school: '測試',
+    className: '6A',
+    classNo: 1,
+    nickname: 'star-trail-test',
+    gold: gold,
+    expPacks: 0,
+    rankScore: 0,
+    ownedMonsters: []
+  };
+}
+
+function cardHtml(id) {
+  const el = game.__els[id];
+  if (!el) return '';
+  return el.children.map(function (child) { return child.innerHTML || ''; }).join('\n');
+}
+
+api.guarantee.shanhaijing = 7;
+api.guarantee['star-trail'] = 4;
+api.setUser(freshUser(5000));
+api.setSeries('star-trail');
+game.__random = function () { return 0; };
+api.draw(1);
+assert(api.user().gold === 4800, 'star-trail single pull costs 200');
+assert(api.user().ownedMonsters.some(function (m) { return m.id === 'st_elden'; }), 'single mythic roll grants st_elden');
+assert(cardHtml('gacha-results-grid').includes('艾爾德'), 'single result shows 艾爾德');
+assert(cardHtml('gacha-results-grid').includes('星軌符文'), 'single mythic is labeled 星軌符文');
+assert(api.guarantee['star-trail'] === 10, 'star-trail window resets on its own draw');
+assert(api.guarantee.shanhaijing === 7, 'shanhaijing window is untouched by a star-trail draw');
+
+api.setSeries('shanhaijing');
+api.setUser(freshUser(5000));
+game.__random = function () { return 0; };
+api.draw(1);
+assert(api.user().ownedMonsters.some(function (m) { return m.id === 'sh1'; }), 'shanhaijing mythic roll still grants 青龍');
+assert(cardHtml('gacha-results-grid').includes('山海經神獸'), 'shanhaijing result keeps its own label');
+assert(!api.user().ownedMonsters.some(function (m) { return String(m.id).indexOf('st_') === 0; }), 'shanhaijing draw does not grant star-trail cards');
+
+api.setSeries('star-trail');
+api.setUser(freshUser(5000));
+api.guarantee.shanhaijing = 7;
+game.__random = function () { return 0.5; };
+api.draw(10);
+const ownedAfterTen = api.user().ownedMonsters.map(function (m) { return m.id; });
+assert(api.user().gold === 3000, 'star-trail ten pull costs 2000');
+assert(ownedAfterTen.indexOf('st_malakor') >= 0, 'ten pull forces one star-trail mythic');
+assert(ownedAfterTen.filter(function (id) { return id.indexOf('st_') === 0; }).length === 1, 'non-guarantee rolls stay on the shared elemental pool');
+assert((cardHtml('gacha-results-grid').match(/星軌符文/g) || []).length === 1, 'ten pull shows exactly one 星軌符文');
+assert(api.guarantee['star-trail'] === 10 && api.guarantee.shanhaijing === 7, 'ten-pull pity stays split by series');
+
+const goldBeforeClosed = api.user().gold;
+api.pools['star-trail'].open = false;
+api.draw(1);
+assert(api.user().gold === goldBeforeClosed, 'closed star-trail pool does not spend gold');
+api.pools['star-trail'].open = true;
+
+api.setUser(freshUser(0));
+api.user().ownedMonsters = [{ id: 'st_elden', level: 1, exp: 0 }];
+api.setFilter('all');
+api.renderCollection();
+const allHtml = cardHtml('monster-collection-grid');
+STAR_IDS.forEach(function (id) {
+  assert(allHtml.includes(NAMES[id]), 'collection lists ' + NAMES[id]);
+});
+assert(allHtml.includes('ui-star-card-elden.png?v=' + STAR_CARD_SHA.st_elden), 'collection renders the cache-busted full scene');
+assert(allHtml.includes('monster-art-frame'), 'collection art sits in a clipping frame');
+api.setFilter('mythic');
+api.renderCollection();
+const mythicHtml = cardHtml('monster-collection-grid');
+assert(mythicHtml.includes('艾爾德') && mythicHtml.includes('青龍'), 'mythic filter shows star-trail with shanhaijing');
+assert(!mythicHtml.includes('火寶寶'), 'mythic filter hides elemental lines');
+api.setFilter('elemental');
+api.renderCollection();
+const elementalHtml = cardHtml('monster-collection-grid');
+assert(elementalHtml.includes('火寶寶') && !elementalHtml.includes('艾爾德'), 'elemental filter hides star-trail cards');
+
+api.setSeries('star-trail');
+api.applyChrome();
+assert(game.__els['gacha-hint'].textContent === HINT_STAR, 'star-trail tab shows the open hint');
+assert(game.__els['gacha-pool-status'].hidden === true, 'open pool hides 卡池即將開放');
+assert(game.__els['btn-gacha-1'].disabled === false && game.__els['btn-gacha-10'].disabled === false, 'open pool enables draw buttons');
+assert(game.__els['gacha-series-banner'].hidden === false, 'star-trail banner stays visible');
