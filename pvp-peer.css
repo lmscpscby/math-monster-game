@@ -181,13 +181,6 @@
     font-weight: 700;
     line-height: 1.5;
 }
-#view-home .island-admin-wrap {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-.pvp-entry {
-    margin: 0.75rem auto 0;
-}
 .pvp-rule {
     margin: 0.75rem 0 0.2rem;
     font-size: 0.82rem;

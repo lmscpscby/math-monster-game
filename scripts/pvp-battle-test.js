@@ -286,8 +286,15 @@ assert(!playerCopy.includes('雲端秘境'), 'player-facing copy no longer says 
 assert(/<h2 class="pvp-title">雲霄決鬥場<\/h2>/.test(html), 'PvP title stays 雲霄決鬥場');
 assert(html.includes('<p class="pvp-subtitle">1v1 怪獸對戰</p>'), 'PvP subtitle keeps the 1v1 mode');
 assert(html.includes('<p class="pvp-kicker">雲霄決鬥場</p>'), 'PvP kicker stays 雲霄決鬥場');
-const openBtn = html.match(/<button[^>]*id="pvp-open-btn"[\s\S]*?<\/button>/);
-assert(openBtn && openBtn[0].includes("switchView('pvp')") && openBtn[0].includes('>雲霄決鬥場<'), 'lobby PvP button stays 雲霄決鬥場');
+assert(!html.includes('id="pvp-open-btn"'), 'lobby duplicate #pvp-open-btn is gone');
+assert(!html.includes('pvp-entry'), 'lobby pvp-entry class is gone');
+const peerCss = fs.readFileSync(path.join(root, 'pvp-peer.css'), 'utf8');
+assert(!peerCss.includes('.pvp-entry') && !peerCss.includes('#view-home .island-admin-wrap'), 'lobby button layout CSS is gone');
+const pvpOpens = html.match(/onclick="switchView\('pvp'\)"/g) || [];
+assert(pvpOpens.length === 1 && cloudBtn && cloudBtn[0].includes("switchView('pvp')"), 'map hotspot is the only control that opens PvP');
+const homeHtml = html.slice(html.indexOf('id="view-home"'), html.indexOf('id="view-pvp"'));
+const homeNameHits = homeHtml.match(/雲霄決鬥場/g) || [];
+assert(homeNameHits.length === 2, 'lobby shows 雲霄決鬥場 only on the plate label and its aria-label, got ' + homeNameHits.length);
 const platePath = path.join(root, 'assets/bg/ui-label-cloudrealm.png');
 const plateHash = crypto.createHash('sha256').update(fs.readFileSync(platePath)).digest('hex');
 assert(plateHash.startsWith('7aa18f34'), 'live plate file is the blank art, got ' + plateHash.slice(0, 8));
