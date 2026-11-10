@@ -257,6 +257,8 @@ assert(viewStart >= 0 && viewEnd > viewStart, 'codex view markers');
 const view = html.slice(viewStart, viewEnd);
 assert(view.includes('data-filter="star-trail"') && view.includes("filterMonsters('star-trail')"), '星軌命途 tab is wired');
 assert(view.includes('>星軌命途：符文紀元<'), '星軌命途 tab label matches the gacha series name');
+assert(view.includes('>星靈覺醒泉<'), 'monsters page title is 星靈覺醒泉');
+assert(!view.includes('怪獸圖鑑') && !view.includes('圖鑑'), 'monsters view no longer says 圖鑑');
 assert(view.includes('>山海經神獸<') && view.includes('>八屬性進化系<') && view.includes('>全部<'), 'existing codex tabs stay');
 assert(!view.includes('st_elden') && !view.includes('艾爾德') && !view.includes('應龍'), 'codex markup does not prelist roster names');
 
