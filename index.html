@@ -1277,14 +1277,33 @@
             user-select: none;
         }
         /* Crisp plates (2026-11-01) are 120px tall. Display ~half that so type matches the old ~56px plates. --plate-ratio is the PNG pixel size. */
-        .island-stage { --label-h: clamp(36px, 9.7%, 60px); }
+        .island-stage {
+            --label-h: clamp(36px, 9.7%, 60px);
+            container-type: size;
+            container-name: island;
+        }
         .island-hotspot--adventure { --x: 52%; --y: 28%; --delay: 0s; --bob-dur: 2.5s; --plate-ratio: 280 / 120; }
         .island-hotspot--arena { --x: 28%; --y: 48%; --delay: 0.35s; --bob-dur: 2.8s; --plate-ratio: 376 / 120; }
         .island-hotspot--training { --x: 22%; --y: 78%; --delay: 0.7s; --bob-dur: 2.3s; --plate-ratio: 280 / 120; }
         .island-hotspot--gacha { --x: 82%; --y: 32%; --delay: 0.15s; --bob-dur: 2.6s; --plate-ratio: 328 / 120; }
         .island-hotspot--recreation { --x: 78%; --y: 78%; --delay: 1.05s; --bob-dur: 2.9s; --plate-ratio: 376 / 120; }
         .island-hotspot--darkforest { --x: 18%; --y: 22%; --delay: 0.5s; --bob-dur: 2.4s; --plate-ratio: 568 / 120; }
-        .island-hotspot--cloudrealm { --x: 62%; --y: 12%; --delay: 0.9s; --bob-dur: 3.1s; --plate-ratio: 568 / 120; }
+        /* 雲霄決鬥場 reuses this plate until @怪獸美術 replaces ui-label-cloudrealm.png
+           (or a new file) with 雲霄決鬥場 baked in, same plate-ratio ~568/120, no「待開發」.
+           --map-x/--map-y must stay in sync with --x/--y and the rename box insets. */
+        .island-hotspot--cloudrealm {
+            --x: 62%;
+            --y: 12%;
+            --delay: 0.9s;
+            --bob-dur: 3.1s;
+            --plate-ratio: 568 / 120;
+            --plate-h: clamp(36px, 9.7cqb, 60px);
+            --plate-w: calc(var(--plate-h) * 568 / 120);
+            --rename-left: 10.5%;
+            --rename-top: 26%;
+            --map-x: calc(0.395 * var(--plate-w) - 62cqi);
+            --map-y: calc(0.24 * var(--plate-h) - 12cqb);
+        }
         .island-hotspot--sunkencity { --x: 48%; --y: 88%; --delay: 1.25s; --bob-dur: 2.7s; --plate-ratio: 568 / 120; }
         .island-hotspot {
             position: absolute;
@@ -1316,7 +1335,6 @@
         }
         /* 待開發 tower plates already carry the semi-transparent treatment. */
         .island-hotspot--darkforest,
-        .island-hotspot--cloudrealm,
         .island-hotspot--sunkencity {
             opacity: 1;
         }
@@ -1359,9 +1377,71 @@
             user-select: none;
             -webkit-user-drag: none;
         }
+        /* Interim title over the baked「雲端秘境（待開發）」glyphs. The map layer
+           stays world-locked while the plate bobs, then the wood wash matches
+           the plate's two flat browns (split at y=69/120) so the wrong words
+           disappear without a new asset. */
+        .island-hotspot--cloudrealm .island-hotspot__bob {
+            position: relative;
+        }
+        .island-hotspot__rename {
+            position: absolute;
+            left: var(--rename-left);
+            top: var(--rename-top);
+            width: 75.5%;
+            height: 52%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .island-hotspot__rename-map,
+        .island-hotspot__rename-wood {
+            position: absolute;
+            inset: 0;
+        }
+        .island-hotspot__rename-map {
+            background-color: rgb(118, 70, 38);
+            background-image: url('assets/bg/lobby-island-map-blank-nolabels.jpg');
+            background-repeat: no-repeat;
+            background-size: 100cqi 100cqb;
+            background-position: var(--map-x) var(--map-y);
+            animation: island-cloudrealm-map var(--bob-dur, 3.1s) ease-in-out infinite;
+            animation-delay: var(--delay, 0.9s);
+        }
+        .island-hotspot__rename-wood {
+            background: linear-gradient(
+                180deg,
+                rgba(118, 70, 38, 0.8235) 0 60.6%,
+                rgba(78, 42, 22, 0.8235) 60.6% 100%
+            );
+        }
+        .island-hotspot__rename-text {
+            position: relative;
+            z-index: 1;
+            color: #fff6e4;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            font-weight: 900;
+            font-size: calc(var(--plate-h) * 0.40);
+            letter-spacing: 0.14em;
+            padding-left: 0.14em;
+            line-height: 1;
+            white-space: nowrap;
+            text-shadow:
+                0 1px 0 #231208,
+                0 -1px 0 #231208,
+                1px 0 0 #231208,
+                -1px 0 0 #231208;
+        }
         @keyframes island-bob {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
+        }
+        @keyframes island-cloudrealm-map {
+            0%, 100% { background-position: var(--map-x) var(--map-y); }
+            50% { background-position: var(--map-x) calc(var(--map-y) + 6px); }
         }
         .island-hub-bar {
             width: min(100%, calc(72vh * 16 / 9));
@@ -1401,8 +1481,8 @@
             outline: 3px solid #fff7d6;
             outline-offset: 3px;
         }
-        .island-hotspot:hover .island-hotspot__bob img,
-        .island-hotspot:focus-visible .island-hotspot__bob img {
+        .island-hotspot:hover .island-hotspot__bob,
+        .island-hotspot:focus-visible .island-hotspot__bob {
             filter: brightness(1.05) drop-shadow(0 10px 14px rgba(8, 40, 24, 0.4));
         }
         .island-hotspot:active .island-hotspot__bob {
@@ -1446,6 +1526,7 @@
                 --label-h: clamp(28px, 14.5%, 40px);
             }
             .island-hotspot--darkforest { --x: 22%; }
+            .island-hotspot--cloudrealm { --plate-h: clamp(28px, 14.5cqb, 40px); }
             .island-hub-bar {
                 width: 100%;
             }
@@ -1455,7 +1536,8 @@
             }
         }
         @media (prefers-reduced-motion: reduce) {
-            .island-hotspot__bob {
+            .island-hotspot__bob,
+            .island-hotspot__rename-map {
                 animation: none;
             }
         }
@@ -4067,8 +4149,15 @@
                     <button type="button" class="island-hotspot island-hotspot--darkforest island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="幽暗密林，待開發">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-darkforest.png?v=af3a4131" alt=""></span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--cloudrealm island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="雲端秘境，待開發">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-cloudrealm.png?v=00bf3990" alt=""></span>
+                    <button type="button" class="island-hotspot island-hotspot--cloudrealm" onclick="switchView('pvp')" aria-label="雲霄決鬥場，1v1 怪獸對戰">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-label-cloudrealm.png?v=00bf3990" alt="">
+                            <span class="island-hotspot__rename">
+                                <span class="island-hotspot__rename-map" aria-hidden="true"></span>
+                                <span class="island-hotspot__rename-wood" aria-hidden="true"></span>
+                                <span class="island-hotspot__rename-text">雲霄決鬥場</span>
+                            </span>
+                        </span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--sunkencity island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="沉沒古城，待開發">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png?v=d96b8d0d" alt=""></span>
@@ -4077,11 +4166,11 @@
                 <p id="home-season-line" class="island-season-line">賽季載入中… · 頭10名：聖光麒麟</p>
             </nav>
 
-            <!-- PVP 對決擂台：已停用 -->
+            <!-- 雲霄決鬥場：島嶼熱點同呢個按鈕都入 1v1 -->
             <div class="island-admin-wrap">
-                <button type="button" id="pvp-open-btn" class="ui-btn ui-btn--primary pvp-entry" onclick="switchView('pvp')">
+                <button type="button" id="pvp-open-btn" class="ui-btn ui-btn--primary pvp-entry" onclick="switchView('pvp')" aria-label="雲霄決鬥場，1v1 怪獸對戰">
                     <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-                    <span>1v1 怪獸對戰</span>
+                    <span>雲霄決鬥場</span>
                 </button>
                 <button id="admin-stats-card" type="button" onclick="openAdminStatsPanel()" class="hidden island-admin-btn">
                     <i class="fa-solid fa-chart-user" aria-hidden="true"></i>
@@ -4522,9 +4611,10 @@
                     <button type="button" class="ui-btn ui-btn--secondary ui-btn--compact" onclick="switchView('home')">
                         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>返回大廳</span>
                     </button>
-                    <p class="pvp-kicker">PeerJS Cloud · 怪獸對戰</p>
+                    <p class="pvp-kicker">雲霄決鬥場</p>
                 </div>
-                <h2 class="pvp-title">1v1 怪獸對戰</h2>
+                <h2 class="pvp-title">雲霄決鬥場</h2>
+                <p class="pvp-subtitle">1v1 怪獸對戰</p>
                 <p id="pvp-lead" class="pvp-lead">房主開一個短房號，對手輸入房號入嚟。接通之後各自揀一隻已擁有嘅獸，再一題一題打到其中一邊 HP 歸零。</p>
 
                 <div id="pvp-step-lobby">
