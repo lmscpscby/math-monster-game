@@ -366,12 +366,16 @@ const NEW_SHAN = {
   sh10: { name: '朱厭', element: 'fight', file: 'assets/monsters/classic/ui-shan-zhuyan.png' },
   sh11: { name: '畢方', element: 'fire', file: 'assets/monsters/classic/ui-shan-bifang.png' },
   sh12: { name: '白澤', element: 'holy', file: 'assets/monsters/classic/ui-shan-baize.png' },
-  sh13: { name: '夔', element: 'thunder', file: 'assets/monsters/classic/ui-shan-kui.png' }
+  sh13: { name: '蘡', element: 'thunder', file: 'assets/monsters/classic/ui-shan-kui.png' }
 };
 Object.keys(NEW_SHAN).forEach(function (id) {
   const spec = NEW_SHAN[id];
   const beast = api.shanhai.find(function (b) { return b.id === id; });
   assert(beast && beast.name === spec.name && beast.element === spec.element && beast.imgKey === id, id + ' roster row');
+  ['name', 'title', 'skillText', 'desc'].forEach(function (field) {
+    assert(String(beast[field]).indexOf('夔') === -1, id + ' ' + field + ' does not say 夔');
+  });
+  if (id === 'sh13') assert(beast.name === '蘡' && beast.skillText.indexOf('蘡') !== -1, 'sh13 name and skill copy say 蘡');
   assert(beast.hp >= 160 && beast.hp <= 300 && beast.atk >= 95 && beast.atk <= 125 && beast.def >= 70 && beast.def <= 110 && beast.spd >= 60 && beast.spd <= 130, id + ' stats stay in the sh1–sh6 band');
   const bytes = fs.readFileSync(path.join(root, spec.file));
   const sha = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
@@ -477,7 +481,7 @@ api.setFilter('mythic');
 api.renderCollection();
 const mythicHtml = cardHtml('monster-collection-grid');
 assert(mythicHtml.includes('艾爾德') && mythicHtml.includes('青龍'), 'mythic filter shows star-trail with shanhaijing');
-['應龍', '朱厭', '畢方', '白澤', '夔'].forEach(function (name) {
+['應龍', '朱厭', '畢方', '白澤', '蘡'].forEach(function (name) {
   assert(allHtml.includes(name), 'collection lists ' + name);
   assert(mythicHtml.includes(name), 'mythic filter lists ' + name);
 });
