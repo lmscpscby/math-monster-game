@@ -1343,11 +1343,36 @@
         }
         .island-hotspot__bob {
             display: block;
+            position: relative;
             width: 100%;
             height: 100%;
             transform-origin: center center;
             animation: island-bob var(--bob-dur, 2.6s) ease-in-out infinite;
             animation-delay: var(--delay, 0s);
+        }
+        /* Blank wood plate; the title is HTML so copy can change without re-baking art.
+           63/120 matches「雲霄決鬥場」on the 120px-tall mock. Noto's em box sits low, so lift 6px at that size (0.095em). */
+        .island-hotspot--cloudrealm .island-hotspot__bob {
+            container-type: size;
+        }
+        .island-hotspot__plate-label {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, calc(-50% - 0.095em));
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+            line-height: 1;
+            font-family: "Noto Sans TC", "Noto Sans CJK TC", sans-serif;
+            font-weight: 700;
+            font-size: calc(100cqh * 63 / 120);
+            color: #fff8e6;
+            text-shadow: 2px 3px 0 rgba(28, 16, 8, 0.82);
+            letter-spacing: 0.02em;
         }
         .island-hotspot__bob img {
             width: 100%;
@@ -4071,7 +4096,10 @@
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-darkforest.png?v=af3a4131" alt=""></span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--cloudrealm" onclick="switchView('pvp')" aria-label="雲霄決鬥場，1v1 怪獸對戰">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-cloudrealm.png?v=1f67b381" alt=""></span>
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-label-cloudrealm.png?v=7aa18f34" alt="">
+                            <span class="island-hotspot__plate-label">雲霄決鬥場</span>
+                        </span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--sunkencity island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="沉沒古城，待開發">
                         <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png?v=d96b8d0d" alt=""></span>
