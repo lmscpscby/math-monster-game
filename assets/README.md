@@ -7,6 +7,6 @@ Copy new files there, then ask the bot to classify, convert, and move into this 
 
 Do not drop new images in the repo root — keep root paths for legacy starters/bosses/mythics only.
 
-## Island plate: 雲霄決鬥場
+## Island wood plates
 
-`assets/bg/ui-label-cloudrealm.png` is the live lobby plate, with「雲霄決鬥場」baked in (568×120). The island hotspot shows that image directly.
+`assets/bg/ui-label-cloudrealm.png` is a blank 568×120 plate (no baked glyphs). The lobby hotspot paints「雲霄決鬥場」in HTML (`.island-hotspot__plate-label`) so the title can change without re-exporting art. Cache-bust with the file's sha256 prefix (`?v=7aa18f34`). Do not ship a preview mock as the live plate.
