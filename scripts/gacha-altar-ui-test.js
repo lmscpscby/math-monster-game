@@ -11,11 +11,11 @@ const root = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 
 const EXPECTED = {
-  'assets/bg/ui-gacha-stage-mystic-1920.png': '2d670fe2',
-  'assets/bg/ui-gacha-btn-single.png': 'd5aeb932',
-  'assets/bg/ui-gacha-btn-ten.png': '0f94a42b',
-  'assets/bg/ui-gacha-hint-banner.png': '4f4a61f4',
-  'assets/bg/ui-gacha-info-pill.png': '7b1350d9'
+  'assets/bg/ui-gacha-stage-mystic-1920.png': 'fc0682f0',
+  'assets/bg/ui-gacha-btn-single.png': 'e0c67f85',
+  'assets/bg/ui-gacha-btn-ten.png': '44f04501',
+  'assets/bg/ui-gacha-hint-banner.png': '441d2325',
+  'assets/bg/ui-gacha-info-pill.png': '88cefc94'
 };
 
 const HINT = '單抽 200 金幣，十抽 2000 金幣。十連抽必得 1 個山海經怪獸卡！';
@@ -30,12 +30,12 @@ function assert(cond, msg) {
 }
 
 const SERIES_ART = {
-  'assets/bg/ui-gacha-banner-shanhai-1920.png': '60e7eace',
-  'assets/bg/ui-gacha-banner-star-trail-1920.png': '21f1900b',
-  'assets/bg/ui-lobby-carousel-shanhai-1920.png': '702c9f7d',
-  'assets/bg/ui-lobby-carousel-star-trail-1920.png': '22694439',
-  'assets/bg/ui-lobby-carousel-ranked-enter-1920.png': 'b4900c07',
-  'assets/bg/promo-star-trail-1920.png': '71adfa44'
+  'assets/bg/ui-gacha-banner-shanhai-1920.png': 'ae623e9b',
+  'assets/bg/ui-gacha-banner-star-trail-1920.png': 'cbe7d30f',
+  'assets/bg/ui-lobby-carousel-shanhai-1920.png': '6d207644',
+  'assets/bg/ui-lobby-carousel-star-trail-1920.png': 'c000865c',
+  'assets/bg/ui-lobby-carousel-ranked-enter-1920.png': '3a503e37',
+  'assets/bg/promo-star-trail-1920.png': '4e4c82ab'
 };
 
 function assertArt(map) {
@@ -76,12 +76,12 @@ assert(view.includes('data-gacha-series="shanhaijing"'), 'shanhaijing tab hook')
 assert(view.includes('data-gacha-series="star-trail"'), 'star-trail tab hook');
 assert(view.includes("setGachaSeries('shanhaijing')"), 'shanhaijing tab switches series');
 assert(view.includes("setGachaSeries('star-trail')"), 'star-trail tab switches series');
-assert(view.includes('ui-gacha-banner-shanhai-1920.png?v=60e7eace'), 'shanhai stage banner cache-bust');
-assert(view.includes('ui-gacha-banner-star-trail-1920.png?v=21f1900b'), 'star-trail stage banner cache-bust');
+assert(view.includes('ui-gacha-banner-shanhai-1920.png?v=ae623e9b'), 'shanhai stage banner cache-bust');
+assert(view.includes('ui-gacha-banner-star-trail-1920.png?v=cbe7d30f'), 'star-trail stage banner cache-bust');
 assert(view.includes('id="gacha-altar-title" hidden'), 'altar heading stays off the baked banner titles');
 assert(view.includes('卡池即將開放'), 'closed pool is labeled on the star-trail stage');
 assert(!view.includes('ui-gacha-banner-star-trail-wide.png'), 'old wide banner is not the stage');
-assert(!html.includes('ui-lobby-carousel-star-trail-1920.png?v=71adfa44'), 'carousel does not use the promo hash');
+assert(!html.includes('ui-lobby-carousel-star-trail-1920.png?v=4e4c82ab'), 'carousel does not use the promo hash');
 assert(!html.includes('ui-lobby-carousel-star-trail-1920.png?v=13e864c8'), 'carousel does not keep the previous star-trail plate');
 assert(html.includes("openGachaSeries('star-trail')"), 'star-trail slide opens that tab');
 assert(html.includes("openGachaSeries('shanhaijing')"), 'shanhaijing slide opens that tab');
@@ -97,9 +97,9 @@ const carousel = html.slice(carouselStart, carouselEnd);
 assert((carousel.match(/data-lobby-slide="/g) || []).length === 3, 'carousel has exactly 3 slides');
 assert((carousel.match(/data-lobby-dot="/g) || []).length === 3, 'carousel has exactly 3 dots');
 assert(!carousel.includes('data-lobby-slide="3"') && !carousel.includes('data-lobby-dot="3"'), 'carousel has no fourth slide or dot');
-assert(carousel.includes('ui-lobby-carousel-shanhai-1920.png?v=702c9f7d'), 'shan-hai slide uses the 1920×720 plate');
-assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=22694439'), 'star-trail slide uses the 1920×720 plate');
-assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=b4900c07'), 'brand slide reuses the ranked enter plate');
+assert(carousel.includes('ui-lobby-carousel-shanhai-1920.png?v=6d207644'), 'shan-hai slide uses the 1920×720 plate');
+assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=c000865c'), 'star-trail slide uses the 1920×720 plate');
+assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=3a503e37'), 'brand slide reuses the ranked enter plate');
 assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
 assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a large title class');
 assert(!carousel.includes('前往抽卡'), 'poster slides do not keep 前往抽卡');

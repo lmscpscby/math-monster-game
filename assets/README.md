@@ -9,4 +9,4 @@ Do not drop new images in the repo root — keep root paths for legacy starters/
 
 ## Island wood plates
 
-`assets/bg/ui-label-cloudrealm.png` is a blank 568×120 plate (no baked glyphs). The lobby hotspot paints「雲霄決鬥場」in HTML (`.island-hotspot__plate-label`) so the title can change without re-exporting art. Cache-bust with the file's sha256 prefix (`?v=7aa18f34`). Do not ship a preview mock as the live plate.
+`assets/bg/ui-label-cloudrealm.png` is a blank 568×120 plate (no baked glyphs). The lobby hotspot paints「雲霄決鬥場」in HTML (`.island-hotspot__plate-label`) so the title can change without re-exporting art. Cache-bust with the file's sha256 prefix (`?v=ace0b984`). Do not ship a preview mock as the live plate.

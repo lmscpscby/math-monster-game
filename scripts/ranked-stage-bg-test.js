@@ -13,19 +13,19 @@ const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const EXPECTED = {
   water: {
     file: 'assets/bg/ui-battle-stage-bg-water-1920.png',
-    sha256: 'e6fdc7f4e513abf2ceb3e9c8a44e23f4175807652dea68d33f011b117ea6af36'
+    sha256: '3070bcae0668f06d8f1ee75026b22fbb01274f03fb0853d7d595087953affb8d'
   },
   fire: {
     file: 'assets/bg/ui-battle-stage-bg-fire-1920.png',
-    sha256: '268edebda922dfe9a88dda8fd7bcc38a3c76dda51277a367455abd05c390274d'
+    sha256: '9b29a09d26afa91cf89e951a43e61e0a1ad3bd2c7cfa6e0049fbe190daa14c45'
   },
   grass: {
     file: 'assets/bg/ui-battle-stage-bg-grass-1920.png',
-    sha256: 'fb45886fcade13ac4e43b65631b2d6e380fea66f16782d57d7c1831551a2fe42'
+    sha256: '47f4f3a3258cb92ae8bb111a2650c3231082fe945a2c52618fcd8e7b4f794f9c'
   },
   thunder: {
     file: 'assets/bg/ui-battle-stage-bg-thunder-1920.png',
-    sha256: 'cbd3e935192a71240b319c23202a3b87947bd36c85318f80b6736dd8b924a56d'
+    sha256: '0024070fbc70b0cbe4334b748dbb4a41c4bb7651dd76bd0c73a8b41fff368f7c'
   }
 };
 

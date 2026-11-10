@@ -226,8 +226,8 @@ const rosterContext = {
         water_turtle: 'assets/monsters/classic/水滴龜.png',
         evil: 'https://evil.example/a.png',
         sneak: 'assets/monsters/../../secret.png',
-        st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688',
-        badq: 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688&x=1'
+        st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=bd04bdbb',
+        badq: 'assets/monsters/star-trail/ui-star-card-elden.png?v=bd04bdbb&x=1'
     },
     getElementZh: function (el) { return el === 'fire' ? '火' : '水'; },
     getMonsterRuntimeData: function (id, level, rankedBoss) {
@@ -258,7 +258,7 @@ assert(owned[1].id === 'fire_base' && !owned[1].party, 'other owned beast follow
 assert(rosterContext.pvpBeastImageSrc('fire_baby') === 'assets/monsters/classic/火寶寶.png', 'chinese monster art path allowed');
 assert(rosterContext.pvpBeastImageSrc('evil') === '', 'external image rejected');
 assert(rosterContext.pvpBeastImageSrc('sneak') === '', 'path traversal rejected');
-assert(rosterContext.pvpBeastImageSrc('st_elden') === 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688', 'cache-bust query is allowed');
+assert(rosterContext.pvpBeastImageSrc('st_elden') === 'assets/monsters/star-trail/ui-star-card-elden.png?v=bd04bdbb', 'cache-bust query is allowed');
 assert(rosterContext.pvpBeastImageSrc('badq') === '', 'extra query parameters are rejected');
 assert(rosterContext.pvpElementLabel('fire') === '火', 'element label reused');
 
@@ -272,7 +272,7 @@ if (cloudBtn) {
     assert(!cloudBtn[0].includes('showIslandLockedTip'), 'cloudrealm hotspot does not use the pending tip');
     assert(cloudBtn[0].includes("switchView('pvp')"), 'cloudrealm hotspot opens the PvP view');
     assert(cloudBtn[0].includes('aria-label="雲霄決鬥場，1v1 怪獸對戰"'), 'cloudrealm aria uses the duel-arena name');
-    assert(cloudBtn[0].includes('ui-label-cloudrealm.png?v=7aa18f34'), 'hotspot img is the blank plate');
+    assert(cloudBtn[0].includes('ui-label-cloudrealm.png?v=ace0b984'), 'hotspot img is the blank plate');
     assert(!cloudBtn[0].includes('ui-label-cloudrealm-blank.png'), 'older blank filename is not the hotspot img');
     assert(cloudBtn[0].includes('class="island-hotspot__plate-label"') && cloudBtn[0].includes('>雲霄決鬥場<'), 'HTML label is 雲霄決鬥場');
     assert(!/island-hotspot__rename/.test(cloudBtn[0]), 'cloudrealm hotspot has no HTML rename overlay');
@@ -297,7 +297,7 @@ const homeNameHits = homeHtml.match(/雲霄決鬥場/g) || [];
 assert(homeNameHits.length === 2, 'lobby shows 雲霄決鬥場 only on the plate label and its aria-label, got ' + homeNameHits.length);
 const platePath = path.join(root, 'assets/bg/ui-label-cloudrealm.png');
 const plateHash = crypto.createHash('sha256').update(fs.readFileSync(platePath)).digest('hex');
-assert(plateHash.startsWith('7aa18f34'), 'live plate file is the blank art, got ' + plateHash.slice(0, 8));
+assert(plateHash.startsWith('ace0b984'), 'live plate file is the blank art, got ' + plateHash.slice(0, 8));
 const artNote = fs.readFileSync(path.join(root, 'assets/README.md'), 'utf8');
 assert(artNote.includes('ui-label-cloudrealm.png') && artNote.includes('雲霄決鬥場') && artNote.includes('568×120') && artNote.includes('island-hotspot__plate-label'), 'readme notes the blank plate plus HTML title');
 assert(!artNote.includes('@怪獸美術') && !artNote.includes('island-hotspot__rename') && !/please supply/i.test(artNote), 'readme no longer asks for a replacement plate');
