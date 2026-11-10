@@ -272,8 +272,8 @@ if (cloudBtn) {
     assert(!cloudBtn[0].includes('showIslandLockedTip'), 'cloudrealm hotspot does not use the pending tip');
     assert(cloudBtn[0].includes("switchView('pvp')"), 'cloudrealm hotspot opens the PvP view');
     assert(cloudBtn[0].includes('aria-label="雲霄決鬥場，1v1 怪獸對戰"'), 'cloudrealm aria uses the duel-arena name');
-    assert(cloudBtn[0].includes('ui-label-cloudrealm.png?v=ace0b984'), 'hotspot img is the blank plate');
-    assert(!cloudBtn[0].includes('ui-label-cloudrealm-blank.png'), 'older blank filename is not the hotspot img');
+    assert(cloudBtn[0].includes('ui-scroll-plate-blank-178.png?v=f22a2191'), 'hotspot img is the shared blank scroll');
+    assert(!cloudBtn[0].includes('ui-label-cloudrealm'), 'cloudrealm no longer uses a baked or per-landmark plate');
     assert(cloudBtn[0].includes('class="island-hotspot__plate-label"') && cloudBtn[0].includes('>雲霄決鬥場<'), 'HTML label is 雲霄決鬥場');
     assert(!/island-hotspot__rename/.test(cloudBtn[0]), 'cloudrealm hotspot has no HTML rename overlay');
     assert(!cloudBtn[0].includes('雲端秘境'), 'cloudrealm control does not say 雲端秘境');
@@ -295,20 +295,83 @@ assert(pvpOpens.length === 1 && cloudBtn && cloudBtn[0].includes("switchView('pv
 const homeHtml = html.slice(html.indexOf('id="view-home"'), html.indexOf('id="view-pvp"'));
 const homeNameHits = homeHtml.match(/雲霄決鬥場/g) || [];
 assert(homeNameHits.length === 2, 'lobby shows 雲霄決鬥場 only on the plate label and its aria-label, got ' + homeNameHits.length);
-const platePath = path.join(root, 'assets/bg/ui-label-cloudrealm.png');
+const platePath = path.join(root, 'assets/bg/ui-scroll-plate-blank-178.png');
 const plateHash = crypto.createHash('sha256').update(fs.readFileSync(platePath)).digest('hex');
-assert(plateHash.startsWith('ace0b984'), 'live plate file is the blank art, got ' + plateHash.slice(0, 8));
+assert(plateHash.startsWith('f22a2191'), 'live scroll plate is the 178×52 blank art, got ' + plateHash.slice(0, 8));
+const mapPath = path.join(root, 'assets/bg/lobby-island-map-blank-nolabels.jpg');
+const mapHash = crypto.createHash('sha256').update(fs.readFileSync(mapPath)).digest('hex');
+assert(mapHash.startsWith('873a121d'), 'live island map hash, got ' + mapHash.slice(0, 8));
+function jpegSize(buf) {
+    let i = 2;
+    while (i + 8 < buf.length) {
+        if (buf[i] !== 0xff) break;
+        const marker = buf[i + 1];
+        if (marker === 0xd8 || marker === 0xd9) { i += 2; continue; }
+        const len = buf.readUInt16BE(i + 2);
+        if (marker >= 0xc0 && marker <= 0xc3) {
+            return { h: buf.readUInt16BE(i + 5), w: buf.readUInt16BE(i + 7) };
+        }
+        i += 2 + len;
+    }
+    return null;
+}
+const mapSize = jpegSize(fs.readFileSync(mapPath));
+assert(mapSize && mapSize.w === 1296 && mapSize.h === 830, 'island map is 1296×830, got ' + JSON.stringify(mapSize));
 const artNote = fs.readFileSync(path.join(root, 'assets/README.md'), 'utf8');
-assert(artNote.includes('ui-label-cloudrealm.png') && artNote.includes('雲霄決鬥場') && artNote.includes('568×120') && artNote.includes('island-hotspot__plate-label'), 'readme notes the blank plate plus HTML title');
+assert(artNote.includes('ui-scroll-plate-blank-178.png') && artNote.includes('178×52') && artNote.includes('雲霄決鬥場') && artNote.includes('1296×830') && artNote.includes('island-hotspot__plate-label'), 'readme notes the shared blank scroll plus HTML title');
 assert(!artNote.includes('@怪獸美術') && !artNote.includes('island-hotspot__rename') && !/please supply/i.test(artNote), 'readme no longer asks for a replacement plate');
-const labelCss = html.slice(html.indexOf('.island-hotspot__plate-label'), html.indexOf('.island-hub-bar'));
+const labelCss = html.slice(html.indexOf('.island-hotspot__plate-label {'), html.indexOf('.island-hotspot__bob img'));
 assert(labelCss.indexOf('font-family: "Noto Sans TC", "Noto Sans CJK TC", sans-serif') !== -1, 'plate label font');
 assert(labelCss.indexOf('font-weight: 700') !== -1, 'plate label weight');
 assert(labelCss.indexOf('color: #fff8e6') !== -1, 'plate label color');
-assert(labelCss.indexOf('text-shadow: 2px 3px 0 rgba(28, 16, 8, 0.82)') !== -1, 'plate label shadow');
-assert(labelCss.indexOf('letter-spacing: 0.02em') !== -1, 'plate label tracking');
+assert(labelCss.indexOf('text-shadow: 2px 3px 0 rgba(28, 16, 8, 0.86)') !== -1, 'plate label shadow');
+assert(labelCss.indexOf('letter-spacing: 0;') !== -1, 'plate label tracking');
 assert(labelCss.indexOf('pointer-events: none') !== -1, 'plate label ignores hits');
-assert(labelCss.indexOf('calc(100cqh * 63 / 120)') !== -1, 'plate label size tracks plate height');
+assert(labelCss.indexOf('calc(100cqh * 67 / 160)') !== -1, 'open plate label size');
+assert(labelCss.indexOf('calc(100cqh * 41 / 160)') !== -1, 'locked plate label size');
+assert(labelCss.indexOf('calc(100cqh * 37 / 160)') !== -1, 'recreation plate label size');
+assert(html.includes('aspect-ratio: 1296 / 830'), 'island stage matches the 1296×830 map');
+assert(html.includes('width: min(100%, calc(72vh * 1296 / 830))'), 'island stage width uses the map ratio');
+assert(html.includes('height: calc(100% * 52 / 830)'), 'plaque height is 52/830 of the stage');
+assert(!html.includes('island-codex-btn') && !html.includes('ui-btn-codex-small'), 'island codex icon is gone');
+assert(!html.includes('小小遊憩'), 'old recreation spelling is gone');
+assert(!html.includes('id="pvp-open-btn"'), 'lobby duplicate #pvp-open-btn stays gone');
+function islandButton(cls) {
+    const match = html.match(new RegExp('<button[^>]*island-hotspot--' + cls + '[\\s\\S]*?<\\/button>'));
+    assert(match, 'island hotspot --' + cls);
+    return match ? match[0] : '';
+}
+const islandLinks = {
+    adventure: "enterAdventure()",
+    arena: "switchView('ranked')",
+    training: "enterTraining()",
+    gacha: "switchView('gacha')",
+    cloudrealm: "switchView('pvp')",
+    spring: "switchView('monsters')"
+};
+Object.keys(islandLinks).forEach(function (cls) {
+    const btn = islandButton(cls);
+    assert(btn.includes(islandLinks[cls]), cls + ' opens ' + islandLinks[cls]);
+    assert(!btn.includes('island-hotspot--locked') && !btn.includes('showIslandLockedTip'), cls + ' is open');
+});
+assert(islandButton('spring').includes('>星靈覺醒泉<'), 'spring plaque says 星靈覺醒泉');
+assert(!islandButton('spring').includes('圖鑑'), 'spring control does not say 圖鑑');
+assert(!islandButton('temple').includes("switchView('monsters')") && !islandButton('temple').includes('enterAdventure'), '知識聖殿 does not open the codex or adventure');
+['recreation', 'darkforest', 'sunkencity', 'desert', 'ocean', 'temple'].forEach(function (cls) {
+    const btn = islandButton(cls);
+    assert(btn.includes('island-hotspot--locked') && btn.includes('showIslandLockedTip(this)') && btn.includes('data-locked-tip="未開放"'), cls + ' is a locked no-op');
+    assert(!btn.includes("switchView(") && !btn.includes('enterAdventure') && !btn.includes('enterTraining'), cls + ' does not navigate');
+});
+assert(islandButton('recreation').includes('>小小休憩區（未開放）<'), 'recreation copy is 小小休憩區');
+assert(islandButton('darkforest').includes('>幽暗密林（未開放）<'), 'forest copy is 密林');
+assert(islandButton('desert').includes('>黃金荒漠（未開放）<'), 'desert plaque is present');
+assert(islandButton('ocean').includes('>遠洋海域（未開放）<'), 'ocean plaque is present');
+assert(islandButton('temple').includes('>知識聖殿（未開放）<'), 'temple plaque is present');
+assert(islandButton('sunkencity').includes('>沉沒古城（未開放）<'), 'sunken plaque is present');
+assert(html.includes('.island-hotspot--training { --x: 50%; --y: 62%;'), '訓練場 sits on the tents');
+assert(html.includes('.island-hotspot--temple { --x: 85%; --y: 86.5%;'), '知識聖殿 sits on the book tower');
+assert(!html.includes('data-locked-tip="待開發"') && !html.includes('data-locked-tip="即將開放"'), 'locked tips say 未開放');
+assert(!/\.island-hotspot--locked\s*\{[^}]*opacity:\s*0\.55/.test(html), 'locked plaques are not dimmed');
 assert(html.indexOf('const STAR_TRAIL_BEASTS = []') === -1, 'star-trail roster is populated');
 assert(html.indexOf("'star-trail': { series: 'star-trail', open: true }") !== -1, 'star-trail pool is open');
 assert(peerSrc.indexOf('floor(自己 ATK × 1.8)') !== -1, 'damage formula stays documented in pvp-peer.js');
