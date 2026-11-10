@@ -357,7 +357,39 @@ assert(api.hint === HINT_STAR, 'GACHA_HINT_STAR is the open-pool hint');
 assert(api.shanhai.length === 11, 'shanhaijing roster includes the five new mythics');
 assert(!api.shanhai.some(function (b) { return b.id === 'sh7' || b.id === 'sh8'; }), 'sh7/sh8 stay reserved for the legacy migration');
 assert(fs.existsSync(path.join(root, '.nojekyll')), '.nojekyll is present so Pages skips Jekyll');
-['assets/bg/lobby-island-map-v2-manus.png', 'assets/bg/lobby-island-map-blank-v1.png', 'assets/bg/battle_bg_crystal_cave_1920x1080.png'].forEach(function (unused) {
+[
+  'assets/bg/lobby-island-map-v2-manus.png',
+  'assets/bg/lobby-island-map-blank-v1.png',
+  'assets/bg/lobby-island-map-v3-nolabels.jpg',
+  'assets/bg/battle_bg_crystal_cave_1920x1080.png',
+  'assets/bg/battle_bg_crystal_cave_loop.mp4',
+  'assets/bg/battle_bg_crystal_cave_loop.webm',
+  'assets/bg/ui-label-codex.png',
+  'assets/bg/badge-arena.png',
+  'assets/bg/icon-arena.png',
+  'assets/bg/badge-codex.png',
+  'assets/bg/icon-codex.png',
+  'assets/bg/badge-gacha.png',
+  'assets/bg/icon-gacha.png',
+  'assets/bg/badge-adventure.png',
+  'assets/bg/icon-adventure.png',
+  'assets/bg/ui-ranked-card-water.png',
+  'assets/bg/ui-ranked-card-grass.png',
+  'assets/bg/ui-ranked-card-fire.png',
+  'assets/bg/ui-ranked-card-thunder.png',
+  'assets/bg/neon-stage-bg_prev.css.bak',
+  'assets/vfx/entrance_ring_cyan.svg',
+  'vfx/fire.png',
+  'vfx/water.png',
+  'vfx/grass.png',
+  'vfx/thunder.png',
+  'vfx/fight.png',
+  'vfx/rock.png',
+  'vfx/psy.png',
+  'vfx/holy.png',
+  'vfx/fire.gif',
+  'vfx/backup-pre-vfx8-20261027/fire_attack_vfx_512.png'
+].forEach(function (unused) {
   assert(!fs.existsSync(path.join(root, unused)), 'unreferenced blob removed ' + unused);
 });
 

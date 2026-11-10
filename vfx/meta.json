@@ -5,8 +5,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "fire.png"
+    "mode": "single-scale-fade"
   },
   "water": {
     "file": "water_attack_vfx_512.png",
@@ -14,8 +13,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "water.png"
+    "mode": "single-scale-fade"
   },
   "grass": {
     "file": "grass_attack_vfx_512.png",
@@ -23,8 +21,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "grass.png"
+    "mode": "single-scale-fade"
   },
   "thunder": {
     "file": "thunder_attack_vfx_512.png",
@@ -32,8 +29,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "thunder.png"
+    "mode": "single-scale-fade"
   },
   "fight": {
     "file": "fight_attack_vfx_512.png",
@@ -41,8 +37,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "fight.png"
+    "mode": "single-scale-fade"
   },
   "rock": {
     "file": "rock_attack_vfx_512.png",
@@ -50,8 +45,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "rock.png"
+    "mode": "single-scale-fade"
   },
   "psy": {
     "file": "psy_attack_vfx_512.png",
@@ -59,8 +53,7 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "psy.png"
+    "mode": "single-scale-fade"
   },
   "holy": {
     "file": "holy_attack_vfx_512.png",
@@ -68,7 +61,6 @@
     "fw": 512,
     "fh": 512,
     "durationMs": 650,
-    "mode": "single-scale-fade",
-    "legacySheet": "holy.png"
+    "mode": "single-scale-fade"
   }
 }
