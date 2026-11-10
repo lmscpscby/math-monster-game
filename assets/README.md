@@ -9,6 +9,4 @@ Do not drop new images in the repo root — keep root paths for legacy starters/
 
 ## Island plate: 雲霄決鬥場
 
-`assets/bg/ui-label-cloudrealm.png` still has baked「雲端秘境（待開發）」. The lobby hotspot covers those glyphs with HTML「雲霄決鬥場」until a new plate lands.
-
-@怪獸美術: please supply a replacement with「雲霄決鬥場」baked in (drop「待開發」). Keep the filename `ui-label-cloudrealm.png`, or send a new file such as `ui-label-duelarena.png`. Plate ratio stays ~568/120. After it ships, the `.island-hotspot__rename` overlay in `index.html` can come off.
+`assets/bg/ui-label-cloudrealm.png` is the live lobby plate, with「雲霄決鬥場」baked in (568×120). The island hotspot shows that image directly.
