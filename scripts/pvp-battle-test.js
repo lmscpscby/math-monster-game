@@ -312,6 +312,18 @@ assert(labelCss.indexOf('calc(100cqh * 63 / 120)') !== -1, 'plate label size tra
 assert(html.indexOf('const STAR_TRAIL_BEASTS = []') === -1, 'star-trail roster is populated');
 assert(html.indexOf("'star-trail': { series: 'star-trail', open: true }") !== -1, 'star-trail pool is open');
 assert(peerSrc.indexOf('floor(自己 ATK × 1.8)') !== -1, 'damage formula stays documented in pvp-peer.js');
+assert(peerSrc.indexOf("var MMG_PVP_RELAY_URL = '';") !== -1, 'relay URL constant stays empty until deploy');
+assert(!/workers\.dev|wss:\/\/[a-z0-9.-]+\.[a-z]{2,}/i.test(peerSrc), 'client does not invent a live relay hostname');
+assert(!/peerjs|new Peer\(|MMG_PVP_PEERJS|\bTURN\b|\bSTUN\b|WebRTC/i.test(peerSrc), '1v1 client no longer depends on PeerJS, STUN, or TURN');
+assert(peerSrc.indexOf('new WebSocket(') !== -1, '1v1 client opens a WebSocket');
+assert(peerSrc.indexOf('未設定對戰中繼網址') !== -1, 'missing relay URL tells the player');
+assert(peerSrc.indexOf('連唔到對戰中繼伺服器') !== -1, 'a failed socket tells the player');
+assert(!/peerjs|PeerJS|\bTURN\b|\bNAT\b/.test(html), 'page no longer names PeerJS, TURN, or NAT');
+assert(!html.includes('unpkg.com/peerjs'), 'PeerJS CDN script is gone');
+assert(html.includes('<script src="pvp-peer.js"></script>'), 'PvP client script stays on the page');
+const foot = html.match(/<p class="pvp-footnote">([^<]*)<\/p>/);
+assert(foot && foot[1].indexOf('WebSocket') !== -1 && foot[1].indexOf('中繼') !== -1, 'footnote describes the encrypted WebSocket relay, got ' + (foot && foot[1]));
+assert(foot && foot[1].indexOf('未填中繼網址') !== -1, 'footnote says a missing relay URL is reported');
 
 if (process.exitCode) {
     console.error('pvp battle tests failed');
