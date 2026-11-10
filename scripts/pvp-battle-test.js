@@ -2,6 +2,7 @@
  * 1v1 怪獸對戰：傷害、同步、出題隔離、獸鑑。
  * node scripts/pvp-battle-test.js
  */
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
@@ -271,9 +272,13 @@ if (cloudBtn) {
     assert(!cloudBtn[0].includes('showIslandLockedTip'), 'cloudrealm hotspot does not use the pending tip');
     assert(cloudBtn[0].includes("switchView('pvp')"), 'cloudrealm hotspot opens the PvP view');
     assert(cloudBtn[0].includes('aria-label="雲霄決鬥場，1v1 怪獸對戰"'), 'cloudrealm aria uses the duel-arena name');
-    assert(cloudBtn[0].includes('>雲霄決鬥場<'), 'cloudrealm plate shows 雲霄決鬥場');
+    assert(cloudBtn[0].includes('ui-label-cloudrealm.png?v=1f67b381'), 'cloudrealm plate is the baked 雲霄決鬥場 asset');
+    assert(!/island-hotspot__rename/.test(cloudBtn[0]), 'cloudrealm hotspot has no HTML rename overlay');
     assert(!cloudBtn[0].includes('雲端秘境'), 'cloudrealm control does not say 雲端秘境');
 }
+assert(!html.includes('island-hotspot__rename'), 'rename overlay markup and CSS are gone');
+assert(!html.includes('island-cloudrealm-map'), 'rename map keyframes are gone');
+assert(!html.includes('--rename-') && !html.includes('--map-x') && !html.includes('--map-y'), 'rename positioning variables are gone');
 const playerCopy = html.replace(/<!--[\s\S]*?-->/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
 assert(!playerCopy.includes('雲端秘境'), 'player-facing copy no longer says 雲端秘境');
 assert(/<h2 class="pvp-title">雲霄決鬥場<\/h2>/.test(html), 'PvP title is 雲霄決鬥場');
@@ -281,8 +286,12 @@ assert(html.includes('<p class="pvp-subtitle">1v1 怪獸對戰</p>'), 'PvP subti
 assert(html.includes('<p class="pvp-kicker">雲霄決鬥場</p>'), 'PvP kicker uses the duel-arena name');
 const openBtn = html.match(/<button[^>]*id="pvp-open-btn"[\s\S]*?<\/button>/);
 assert(openBtn && openBtn[0].includes("switchView('pvp')") && openBtn[0].includes('>雲霄決鬥場<'), 'header/bottom PvP button still opens the same view');
+const platePath = path.join(root, 'assets/bg/ui-label-cloudrealm.png');
+const plateHash = crypto.createHash('sha256').update(fs.readFileSync(platePath)).digest('hex');
+assert(plateHash.startsWith('1f67b381'), 'live plate file matches the baked 雲霄決鬥場 PNG, got ' + plateHash.slice(0, 8));
 const artNote = fs.readFileSync(path.join(root, 'assets/README.md'), 'utf8');
-assert(artNote.includes('@怪獸美術') && artNote.includes('ui-label-cloudrealm') && /568\s*\/\s*120/.test(artNote), 'art note asks for a 568/120 雲霄決鬥場 plate');
+assert(artNote.includes('ui-label-cloudrealm.png') && artNote.includes('雲霄決鬥場') && artNote.includes('568×120'), 'readme notes the live baked 雲霄決鬥場 plate');
+assert(!artNote.includes('@怪獸美術') && !artNote.includes('island-hotspot__rename') && !/please supply/i.test(artNote), 'readme no longer asks for a replacement plate');
 assert(html.indexOf('const STAR_TRAIL_BEASTS = []') === -1, 'star-trail roster is populated');
 assert(html.indexOf("'star-trail': { series: 'star-trail', open: true }") !== -1, 'star-trail pool is open');
 assert(peerSrc.indexOf('floor(自己 ATK × 1.8)') !== -1, 'damage formula stays documented in pvp-peer.js');
