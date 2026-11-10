@@ -11,15 +11,15 @@ const root = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 
 const CARDS = [
-  { cls: 'adventure-card--count', file: 'assets/bg/ui-train-unit-01-count.png', sha256: '6a11e095076006123c0f366d2d495ec89cda7d378dd7cc168deb659bf7cc0de7' },
-  { cls: 'adventure-card--addsub', file: 'assets/bg/ui-train-unit-02-addsub.png', sha256: 'd540831c7e78d6a13d4d1e3aace360c948c199e8029f2ac3b719bab2244846b2' },
-  { cls: 'adventure-card--hundred', file: 'assets/bg/ui-train-unit-03-hundred.png', sha256: '5be7b13df419ea1e4d4bed623226dbfd2e4a48f8919613b32b1351228fca1142' },
-  { cls: 'adventure-card--coins', file: 'assets/bg/ui-train-unit-04-coins.png', sha256: 'ccd211a110d24feb21bd47a16f023018e4142698532870ddf01565bbb83cd366' },
-  { cls: 'adventure-card--length', file: 'assets/bg/ui-train-unit-05-length.png', sha256: '08a01eccbe70d96aa96bb1aa5f618a98fd3bc989d758d6554d0bb71a22fb3865' },
-  { cls: 'adventure-card--time', file: 'assets/bg/ui-train-unit-06-time.png', sha256: 'daa87a9c10b9bd133078d3b43ae5624073086821ba6ced234153aaeb366b63a5' },
-  { cls: 'adventure-card--fractions', file: 'assets/bg/ui-train-unit-07-fractions.png', sha256: 'd045ecf2e42507989687bf1a152b26e0eb470308e4f5a6445b3b99f86efe1121' },
-  { cls: 'adventure-card--measure', file: 'assets/bg/ui-train-unit-08-measure.png', sha256: 'f83c68acf4cf58f76aafb15fd99df8ed820aaa5171183b21af83d5e4794810ae' },
-  { cls: 'adventure-card--algebra', file: 'assets/bg/ui-train-unit-09-algebra.png', sha256: '5400e7fc8b7134e5d597812506f8c9f2e538c69766b9747ae2fa5c4f4728f49e' }
+  { cls: 'adventure-card--count', file: 'assets/bg/ui-train-unit-01-count.png', sha256: '3f3b07d79ed1fa8f9cc1e4ed3c560b22cbd8ded9b9bcef926ba11b247cc486bc' },
+  { cls: 'adventure-card--addsub', file: 'assets/bg/ui-train-unit-02-addsub.png', sha256: 'e16118272e56743c564d3c6c97df647ca0d92aaec8cdb1c6efcc821a09b53679' },
+  { cls: 'adventure-card--hundred', file: 'assets/bg/ui-train-unit-03-hundred.png', sha256: '44a1a7fcde6e883a1e0ec36381940f1ddd6ef36aa25d327c5bc009c9fd4ec098' },
+  { cls: 'adventure-card--coins', file: 'assets/bg/ui-train-unit-04-coins.png', sha256: '85cf77aabf250c77f9e8645538eec7d2212709ca1066040ae2d02a6a588d2196' },
+  { cls: 'adventure-card--length', file: 'assets/bg/ui-train-unit-05-length.png', sha256: 'd9c4168f60a6926e3c9aa6ecab8964165db0d8c1da70c9736b39903aa6ca5929' },
+  { cls: 'adventure-card--time', file: 'assets/bg/ui-train-unit-06-time.png', sha256: '98a762eb12796a01c5d7fa7743589d7838aefab2833538432336afb3e773b73b' },
+  { cls: 'adventure-card--fractions', file: 'assets/bg/ui-train-unit-07-fractions.png', sha256: '0125b41ad9e7fe2c0424f8c3eae0331efdf72c5bf4afe267e15d993495b8f9d5' },
+  { cls: 'adventure-card--measure', file: 'assets/bg/ui-train-unit-08-measure.png', sha256: '1e44d88994f07e65d754331e89963bebf747b57c1d189906d599fc233c87018b' },
+  { cls: 'adventure-card--algebra', file: 'assets/bg/ui-train-unit-09-algebra.png', sha256: '4226ef0a7a35ca6e52966d821fc66aab4ee0095c61dddad8bc686f905e6115ec' }
 ];
 
 function assert(cond, msg) {
@@ -87,7 +87,7 @@ assert(units.G6[8].name.indexOf('方程') >= 0, 'G6 slot 9 title is still its un
 assert(html.includes("title.textContent = u.name"), 'unit titles are HTML text, not baked into the image');
 assert(html.includes("openTeamSelect(u.id, false)"), 'unit cards still open the quiz team select');
 assert(html.includes('ui-adventure-unit-card-scenic-wide.png'), 'shared frame remains the fallback');
-assert(html.includes("ui-adventure-tower-add-fire.png?v=862ab859"), 'adventure fire tower art is unchanged');
-assert(html.includes("ui-adventure-tower-sub-ice.png?v=9f616294"), 'adventure ice tower art is unchanged');
-assert(html.includes("ui-ranked-card-water-scenic-wide.png"), 'ranked scenic cards are unchanged');
+assert(html.includes("ui-adventure-tower-add-fire.png?v=39a271a4"), 'adventure fire tower cache-bust matches the compressed plate');
+assert(html.includes("ui-adventure-tower-sub-ice.png?v=774dcc7c"), 'adventure ice tower cache-bust matches the compressed plate');
+assert(html.includes("ui-ranked-card-water-scenic-wide.png"), 'ranked scenic cards stay on the scenic files');
 assert(!/adventure-tower-card--add[\s\S]{0,180}ui-train-unit-/.test(html), 'tower cards do not use training art');

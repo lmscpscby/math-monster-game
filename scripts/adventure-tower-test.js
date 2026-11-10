@@ -13,25 +13,25 @@ const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const CARDS = {
   addition: {
     file: 'assets/bg/ui-adventure-tower-add-fire.png',
-    sha256: '862ab859d82d4d998704c65729490e1848f70c969de9c85053ee1641479bd9bd',
+    sha256: '39a271a4a6113e34b57b5ce4b6ba0809d14bceb0a146eeec0b2b47b329f0bf24',
     label: '火焰加法塔',
     element: 'fire'
   },
   subtraction: {
     file: 'assets/bg/ui-adventure-tower-sub-ice.png',
-    sha256: '9f6162942eecc8103fb783e695ea052e00a701e89d2c402d88241913f8943b83',
+    sha256: '774dcc7c4e2ea554862d80974977ec78b8d8c463ad97fefe721ad27c0c50cfb8',
     label: '冰霜減法塔',
     element: 'water'
   },
   multiplication: {
     file: 'assets/bg/ui-adventure-tower-mul-emerald.png',
-    sha256: '7cfb7a7fd6beefdf4eb3883424d795f1480f8c10b9df3c0f103f35e6a70fc4f1',
+    sha256: '3f74de9dcf8ca8aa1323418556b7ce3cb17edb35202e98b1247348261b4f87cb',
     label: '翡翠乘法塔',
     element: 'grass'
   },
   division: {
     file: 'assets/bg/ui-adventure-tower-div-thunder.png',
-    sha256: '9a7bfb1323210924977908cc253fa0479ac418dae20f0a18fcb93976def07d67',
+    sha256: 'd1981da612a5653429abddf896edb1eb7002aa716ede8f5c4fa3feb3aa1e16a4',
     label: '雷霆除法塔',
     element: 'thunder'
   }
