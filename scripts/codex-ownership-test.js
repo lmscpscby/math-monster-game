@@ -256,7 +256,7 @@ const viewEnd = html.indexOf('<!-- VIEW 4:');
 assert(viewStart >= 0 && viewEnd > viewStart, 'codex view markers');
 const view = html.slice(viewStart, viewEnd);
 assert(view.includes('data-filter="star-trail"') && view.includes("filterMonsters('star-trail')"), '星軌命途 tab is wired');
-assert(view.includes('>星軌命途<'), '星軌命途 tab label');
+assert(view.includes('>星軌命途：符文紀元<'), '星軌命途 tab label matches the gacha series name');
 assert(view.includes('>山海經神獸<') && view.includes('>八屬性進化系<') && view.includes('>全部<'), 'existing codex tabs stay');
 assert(!view.includes('st_elden') && !view.includes('艾爾德') && !view.includes('應龍'), 'codex markup does not prelist roster names');
 
@@ -276,8 +276,11 @@ function paint(user, filter) {
 
 ['all', 'elemental', 'mythic', 'star-trail'].forEach(function (filter) {
   const rendered = paint(null, filter);
-  assert(rendered.indexOf('尚未發現此系列') !== -1, 'guest ' + filter + ' uses the empty state');
-  assert(rendered.trim() === '尚未發現此系列', 'guest ' + filter + ' is only the empty state');
+  const emptyCopy = filter === 'all' ? '尚未發現任何怪獸' : '尚未發現此系列';
+  const otherCopy = filter === 'all' ? '尚未發現此系列' : '尚未發現任何怪獸';
+  assert(rendered.indexOf(emptyCopy) !== -1, 'guest ' + filter + ' uses ' + emptyCopy);
+  assert(rendered.indexOf(otherCopy) === -1, 'guest ' + filter + ' does not use the other empty line');
+  assert(rendered.trim() === emptyCopy, 'guest ' + filter + ' is only the empty state');
   assertHidden(rendered, 'guest ' + filter, Object.values(STAR).concat(Object.values(SHAN), Object.values(ELEMENTAL), ['聖光麒麟']), Object.keys(STAR).concat(Object.keys(SHAN), NEW_SHAN_IDS));
   hiddenChrome.forEach(function (token) {
     assert(rendered.indexOf(token) === -1, 'guest ' + filter + ' has no locked chrome ' + token);
@@ -356,7 +359,7 @@ assert(elementalTab.indexOf('火寶寶') !== -1, '八屬性 tab shows the owned 
 assertHidden(elementalTab, '八屬性', ['青龍', '應龍', '蘡', '艾爾德', '水滴龜'], ['sh1', 'sh9', 'sh13', 'st_elden', 'water_base']);
 
 const wiped = paint(null, 'all');
-assert(wiped.trim() === '尚未發現此系列', 'logging out to guest clears previously rendered names');
+assert(wiped.trim() === '尚未發現任何怪獸', 'logging out to guest clears previously rendered names');
 assertHidden(wiped, 'after logout', Object.values(STAR).concat(Object.values(SHAN), ['火寶寶', '聖光麒麟']), Object.keys(STAR).concat(Object.keys(SHAN), ['fire_base']));
 
 if (process.exitCode) {

@@ -81,6 +81,45 @@
             width: 4.5rem;
             height: 4.5rem;
         }
+        /* 圖鑑分頁：四個木牌按鈕要留喺標題列入面，窄屏先換行，字唔好撞框。 */
+        .codex-toolbar {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .codex-toolbar__copy {
+            flex: 1 1 14rem;
+            min-width: 0;
+        }
+        .monster-filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.35rem 0.4rem;
+            flex: 1 1 16rem;
+            min-width: 0;
+            max-width: 100%;
+        }
+        .monster-filter-btn.ui-btn {
+            flex: 0 1 auto;
+            white-space: nowrap;
+            font-size: 0.72rem;
+            letter-spacing: 0;
+            line-height: 1.15;
+            max-width: 100%;
+        }
+        .monster-filter-btn.ui-btn--primary,
+        .monster-filter-btn.ui-btn--secondary {
+            border-width: 8px 14px;
+            min-height: 36px;
+            padding: 0 0.2rem;
+        }
+        @media (max-width: 720px) {
+            .monster-filter-row { justify-content: flex-start; }
+            .monster-filter-btn.ui-btn { font-size: 0.68rem; }
+            .monster-filter-btn.ui-btn--primary,
+            .monster-filter-btn.ui-btn--secondary { border-width: 7px 10px; }
+        }
         /* 系列一張都未擁有：只講呢句，唔列出未發現嘅名字。 */
         .codex-empty {
             grid-column: 1 / -1;
@@ -4351,16 +4390,16 @@
                 </button>
             </div>
 
-            <div class="ui-panel ui-parchment flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
+            <div class="ui-panel ui-parchment codex-toolbar flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="codex-toolbar__copy">
                     <h2 class="text-lg sm:text-xl md:text-2xl font-black break-words">怪獸圖鑑與進化養成</h2>
                     <p class="text-xs mt-0.5">點擊卡牌可放大預覽！進化系怪獸進化至 30LV 最終形態，4圍數值凌駕同級山海經神獸！</p>
                 </div>
-                <div class="flex flex-wrap gap-2">
+                <div class="monster-filter-row">
                     <button type="button" data-filter="all" onclick="filterMonsters('all')" class="monster-filter-btn ui-btn ui-btn--primary text-xs">全部</button>
                     <button type="button" data-filter="elemental" onclick="filterMonsters('elemental')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">八屬性進化系</button>
                     <button type="button" data-filter="mythic" onclick="filterMonsters('mythic')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">山海經神獸</button>
-                    <button type="button" data-filter="star-trail" onclick="filterMonsters('star-trail')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">星軌命途</button>
+                    <button type="button" data-filter="star-trail" onclick="filterMonsters('star-trail')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">星軌命途：符文紀元</button>
                 </div>
             </div>
 
@@ -7962,7 +8001,7 @@
                 const empty = document.createElement('p');
                 empty.className = 'codex-empty';
                 empty.setAttribute('role', 'status');
-                empty.innerHTML = '尚未發現此系列';
+                empty.innerHTML = currentFilter === 'all' ? '尚未發現任何怪獸' : '尚未發現此系列';
                 container.appendChild(empty);
             }
         }
