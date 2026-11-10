@@ -20,8 +20,16 @@
     color: #8a5a2b;
 }
 .pvp-title {
-    margin: 0.35rem 0 0.2rem;
+    margin: 0.35rem 0 0.15rem;
     font-size: 1.7rem;
+    line-height: 1.2;
+}
+.pvp-subtitle {
+    margin: 0 0 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #8a5a2b;
 }
 .pvp-lead,
 .pvp-footnote {

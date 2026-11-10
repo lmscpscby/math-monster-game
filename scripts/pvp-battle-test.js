@@ -262,6 +262,27 @@ assert(rosterContext.pvpBeastImageSrc('badq') === '', 'extra query parameters ar
 assert(rosterContext.pvpElementLabel('fire') === '火', 'element label reused');
 
 assert(html.indexOf('id="pvp-step-pick"') !== -1 && html.indexOf('id="pvp-step-fight"') !== -1, 'pick and fight steps exist');
+
+const cloudBtn = html.match(/<button[^>]*island-hotspot--cloudrealm[\s\S]*?<\/button>/);
+assert(cloudBtn, 'cloudrealm hotspot exists');
+if (cloudBtn) {
+    assert(!cloudBtn[0].includes('island-hotspot--locked'), 'cloudrealm hotspot is unlocked');
+    assert(!cloudBtn[0].includes('data-locked-tip'), 'cloudrealm hotspot has no locked tip');
+    assert(!cloudBtn[0].includes('showIslandLockedTip'), 'cloudrealm hotspot does not use the pending tip');
+    assert(cloudBtn[0].includes("switchView('pvp')"), 'cloudrealm hotspot opens the PvP view');
+    assert(cloudBtn[0].includes('aria-label="雲霄決鬥場，1v1 怪獸對戰"'), 'cloudrealm aria uses the duel-arena name');
+    assert(cloudBtn[0].includes('>雲霄決鬥場<'), 'cloudrealm plate shows 雲霄決鬥場');
+    assert(!cloudBtn[0].includes('雲端秘境'), 'cloudrealm control does not say 雲端秘境');
+}
+const playerCopy = html.replace(/<!--[\s\S]*?-->/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
+assert(!playerCopy.includes('雲端秘境'), 'player-facing copy no longer says 雲端秘境');
+assert(/<h2 class="pvp-title">雲霄決鬥場<\/h2>/.test(html), 'PvP title is 雲霄決鬥場');
+assert(html.includes('<p class="pvp-subtitle">1v1 怪獸對戰</p>'), 'PvP subtitle keeps the 1v1 mode');
+assert(html.includes('<p class="pvp-kicker">雲霄決鬥場</p>'), 'PvP kicker uses the duel-arena name');
+const openBtn = html.match(/<button[^>]*id="pvp-open-btn"[\s\S]*?<\/button>/);
+assert(openBtn && openBtn[0].includes("switchView('pvp')") && openBtn[0].includes('>雲霄決鬥場<'), 'header/bottom PvP button still opens the same view');
+const artNote = fs.readFileSync(path.join(root, 'assets/README.md'), 'utf8');
+assert(artNote.includes('@怪獸美術') && artNote.includes('ui-label-cloudrealm') && /568\s*\/\s*120/.test(artNote), 'art note asks for a 568/120 雲霄決鬥場 plate');
 assert(html.indexOf('const STAR_TRAIL_BEASTS = []') === -1, 'star-trail roster is populated');
 assert(html.indexOf("'star-trail': { series: 'star-trail', open: true }") !== -1, 'star-trail pool is open');
 assert(peerSrc.indexOf('floor(自己 ATK × 1.8)') !== -1, 'damage formula stays documented in pvp-peer.js');
