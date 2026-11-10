@@ -224,7 +224,9 @@ const rosterContext = {
         fire_baby: 'assets/monsters/classic/火寶寶.png',
         water_turtle: 'assets/monsters/classic/水滴龜.png',
         evil: 'https://evil.example/a.png',
-        sneak: 'assets/monsters/../../secret.png'
+        sneak: 'assets/monsters/../../secret.png',
+        st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688',
+        badq: 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688&x=1'
     },
     getElementZh: function (el) { return el === 'fire' ? '火' : '水'; },
     getMonsterRuntimeData: function (id, level, rankedBoss) {
@@ -255,10 +257,13 @@ assert(owned[1].id === 'fire_base' && !owned[1].party, 'other owned beast follow
 assert(rosterContext.pvpBeastImageSrc('fire_baby') === 'assets/monsters/classic/火寶寶.png', 'chinese monster art path allowed');
 assert(rosterContext.pvpBeastImageSrc('evil') === '', 'external image rejected');
 assert(rosterContext.pvpBeastImageSrc('sneak') === '', 'path traversal rejected');
+assert(rosterContext.pvpBeastImageSrc('st_elden') === 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688', 'cache-bust query is allowed');
+assert(rosterContext.pvpBeastImageSrc('badq') === '', 'extra query parameters are rejected');
 assert(rosterContext.pvpElementLabel('fire') === '火', 'element label reused');
 
 assert(html.indexOf('id="pvp-step-pick"') !== -1 && html.indexOf('id="pvp-step-fight"') !== -1, 'pick and fight steps exist');
-assert(html.indexOf('STAR_TRAIL_BEASTS = []') !== -1, 'star-trail roster left empty');
+assert(html.indexOf('const STAR_TRAIL_BEASTS = []') === -1, 'star-trail roster is populated');
+assert(html.indexOf("'star-trail': { series: 'star-trail', open: true }") !== -1, 'star-trail pool is open');
 assert(peerSrc.indexOf('floor(自己 ATK × 1.8)') !== -1, 'damage formula stays documented in pvp-peer.js');
 
 if (process.exitCode) {
