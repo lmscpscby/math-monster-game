@@ -81,6 +81,16 @@
             width: 4.5rem;
             height: 4.5rem;
         }
+        /* 系列一張都未擁有：只講呢句，唔列出未發現嘅名字。 */
+        .codex-empty {
+            grid-column: 1 / -1;
+            margin: 0.75rem 0 1.25rem;
+            padding: 2.25rem 1rem;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            color: #f6e2b4;
+        }
 
         .avatar-preset-btn.is-selected {
             border-color: #c9923e;
@@ -4350,6 +4360,7 @@
                     <button type="button" data-filter="all" onclick="filterMonsters('all')" class="monster-filter-btn ui-btn ui-btn--primary text-xs">全部</button>
                     <button type="button" data-filter="elemental" onclick="filterMonsters('elemental')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">八屬性進化系</button>
                     <button type="button" data-filter="mythic" onclick="filterMonsters('mythic')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">山海經神獸</button>
+                    <button type="button" data-filter="star-trail" onclick="filterMonsters('star-trail')" class="monster-filter-btn ui-btn ui-btn--secondary text-xs">星軌命途</button>
                 </div>
             </div>
 
@@ -6169,7 +6180,7 @@
             { id: 'sh13', name: '蘡', element: 'thunder', title: '一足聲震雷獸 (雷)', color: '#eab308', hp: 250, atk: 115, def: 100, spd: 90, skillText: '蘡鼓聲震五百里！', imgKey: 'sh13', desc: '蒼身一足，出入水則風雨，其聲如雷。' }
         ];
 
-        // 星軌命途：符文紀元。能力值同山海經核心同一檔；圖鑑第四分頁未做。
+        // 星軌命途：符文紀元。能力值同山海經核心同一檔。圖鑑「星軌命途」分頁只列出已擁有。
         // 主視覺備用 assets/bg/promo-star-trail-1920.png?v=4e4c82ab（唔係走馬燈、唔係抽卡橫幅）。
         const STAR_TRAIL_BEASTS = [
             { id: 'st_elden', name: '艾爾德', element: 'holy', title: '聖堂勇士：艾爾德', color: '#fde047', hp: 270, atk: 102, def: 108, spd: 70, skillText: '聖堂聖盾衝鋒！', imgKey: 'st_elden', desc: '聖堂先鋒肩負符文聖盾，以聖輝衝鋒壓住星軌裂隙。' },
@@ -7296,6 +7307,7 @@
             try { updateDailyClaimButton(); } catch (e) {}
             updateAdminUiVisibility();
             closeAdminStatsPanel();
+            try { renderMonsterCollection(); } catch (e) {}
         }
 
         function saveCurrentUserData() {
@@ -7495,6 +7507,8 @@
                 } else {
                     restoreLocalSession();
                 }
+            } else {
+                try { renderMonsterCollection(); } catch (e) {}
             }
 
             document.addEventListener('click', function unlockAudio() {
@@ -7823,32 +7837,45 @@
         }
 
         function renderMonsterCollection() {
-            if (!currentUser) return;
             updateMonsterFilterButtons();
             const container = document.getElementById('monster-collection-grid');
+            if (!container) return;
             container.innerHTML = '';
 
-            // 星軌核心併入圖鑑。第四分頁未做，isMythic 先出現在「山海經神獸」篩選。
-            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6', 'sh9', 'sh10', 'sh11', 'sh12', 'sh13'].concat(
-                (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; }),
-                (typeof STAR_TRAIL_BEASTS !== 'undefined' ? STAR_TRAIL_BEASTS : []).map(function (b) { return b.id; })
+            // 圖鑑同背包／祈願用同一份 currentUser.ownedMonsters（{ id, level, exp }）。
+            // 未擁有（包括訪客 currentUser 為 null）唔出卡、唔出名、唔出 data 屬性、唔綁預覽。
+            const ownedList = (currentUser && Array.isArray(currentUser.ownedMonsters)) ? currentUser.ownedMonsters : [];
+            const starIdList = (typeof STAR_TRAIL_BEASTS !== 'undefined' ? STAR_TRAIL_BEASTS : []).map(function (b) { return b.id; });
+            const seasonIdList = (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; });
+            const shanIdList = (typeof SHANHAIJING_BEASTS !== 'undefined' ? SHANHAIJING_BEASTS : []).map(function (b) { return b.id; });
+            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base'].concat(
+                shanIdList,
+                seasonIdList,
+                starIdList
             );
 
+            let shown = 0;
             allList.forEach(mId => {
-                const owned = currentUser.ownedMonsters.find(om => om.id === mId);
-                const monLevel = owned ? Math.min(40, (owned.level || 1)) : 1;
+                const owned = ownedList.find(om => om && om.id === mId);
+                if (!owned) return;
+
+                let series = 'elemental';
+                if (starIdList.indexOf(mId) !== -1) series = 'star-trail';
+                else if (shanIdList.indexOf(mId) !== -1 || seasonIdList.indexOf(mId) !== -1) series = 'mythic';
+
+                if (currentFilter === 'elemental' && series !== 'elemental') return;
+                if (currentFilter === 'mythic' && series !== 'mythic') return;
+                if (currentFilter === 'star-trail' && series !== 'star-trail') return;
+
+                const monLevel = Math.min(40, (owned.level || 1));
                 const runtimeData = getMonsterRuntimeData(mId, monLevel);
-
-                if (currentFilter === 'elemental' && runtimeData.isMythic) return;
-                if (currentFilter === 'mythic' && !runtimeData.isMythic) return;
-
-                const monExp = owned ? (owned.exp || 0) : 0;
+                const monExp = owned.exp || 0;
                 const reqExp = getRequiredExpForNextLevel(monLevel);
                 const expPct = monLevel >= 40 ? 100 : Math.min(100, Math.floor((monExp / reqExp) * 100));
 
                 const card = document.createElement('div');
                 const s1Kirin = mId === 'season_kirin';
-                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${s1Kirin ? 'codex-card--s1 ' : ''}${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : owned ? 'border-amber-700/50 opacity-100' : 'border-slate-800 opacity-40 grayscale'}`;
+                card.className = `glass-card p-4 rounded-3xl flex flex-col justify-between relative border ${s1Kirin ? 'codex-card--s1 ' : ''}${runtimeData.isMythic ? 'border-amber-400/80 bg-amber-950/30 mythic-glow' : 'border-amber-700/50 opacity-100'}`;
 
                 const elemBadge = getElementBadgeClass(runtimeData.element);
                 const seasonSubtitle = String(mId).indexOf('season_') !== 0
@@ -7898,8 +7925,7 @@
                         </div>
                     </div>
 
-                    ${owned ? `
-                        <div class="space-y-2 mt-2 pt-2 border-t border-amber-900/25">
+                    <div class="space-y-2 mt-2 pt-2 border-t border-amber-900/25">
                             <div>
                                 <div class="flex justify-between text-[10px] text-slate-300 mb-1">
                                     <span>EXP: ${monLevel >= 40 ? '已達等級上限' : `${monExp} / ${reqExp}`}</span>
@@ -7926,11 +7952,19 @@
                                 const can = (currentUser.expPacks || 0) >= packsNeed;
                                 return `<button onclick="feedExpPackToNextEvo('${runtimeData.id}')" class="ui-btn ${can ? 'ui-btn--primary' : 'ui-btn--secondary'} w-full text-xs"><i class="fa-solid fa-dna"></i>升級到進化級別（Lv.${nextEvoLv} ${nextName}・${packsNeed}包）</button>`;
                             })()}
-                        </div>
-                    ` : `<div class="text-center text-xs text-slate-400 font-bold py-2 mt-2 border-t border-amber-900/25">${String(mId).indexOf('season_') === 0 ? '未解鎖（賽季頭10名限定）' : '未解鎖 (祈願召喚獲得)'}</div>`}
+                    </div>
                 `;
                 container.appendChild(card);
+                shown += 1;
             });
+
+            if (!shown) {
+                const empty = document.createElement('p');
+                empty.className = 'codex-empty';
+                empty.setAttribute('role', 'status');
+                empty.innerHTML = '尚未發現此系列';
+                container.appendChild(empty);
+            }
         }
 
         let feedExpBusy = false;
