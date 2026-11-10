@@ -504,24 +504,29 @@ api.user().ownedMonsters = [{ id: 'st_elden', level: 1, exp: 0 }];
 api.setFilter('all');
 api.renderCollection();
 const allHtml = cardHtml('monster-collection-grid');
+assert(allHtml.includes('艾爾德'), 'collection lists owned 艾爾德');
 STAR_IDS.forEach(function (id) {
-  assert(allHtml.includes(NAMES[id]), 'collection lists ' + NAMES[id]);
+  if (id === 'st_elden') return;
+  assert(!allHtml.includes(NAMES[id]), 'collection hides unowned ' + NAMES[id]);
 });
 assert(allHtml.includes('ui-star-card-elden.png?v=' + STAR_CARD_SHA.st_elden), 'collection renders the cache-busted full scene');
 assert(allHtml.includes('monster-art-frame'), 'collection art sits in a clipping frame');
+['應龍', '朱厭', '畢方', '白澤', '蘡', '青龍'].forEach(function (name) {
+  assert(!allHtml.includes(name), 'unowned shan hai ' + name + ' stays out of 全部');
+});
 api.setFilter('mythic');
 api.renderCollection();
 const mythicHtml = cardHtml('monster-collection-grid');
-assert(mythicHtml.includes('艾爾德') && mythicHtml.includes('青龍'), 'mythic filter shows star-trail with shanhaijing');
-['應龍', '朱厭', '畢方', '白澤', '蘡'].forEach(function (name) {
-  assert(allHtml.includes(name), 'collection lists ' + name);
-  assert(mythicHtml.includes(name), 'mythic filter lists ' + name);
-});
-assert(!mythicHtml.includes('火寶寶'), 'mythic filter hides elemental lines');
+assert(mythicHtml.includes('尚未發現此系列'), 'mythic tab is empty when only a star-trail card is owned');
+assert(!mythicHtml.includes('艾爾德') && !mythicHtml.includes('青龍') && !mythicHtml.includes('蘡'), 'mythic tab does not list star-trail or unowned shan hai');
+api.setFilter('star-trail');
+api.renderCollection();
+const starHtml = cardHtml('monster-collection-grid');
+assert(starHtml.includes('艾爾德') && !starHtml.includes('伊利亞') && !starHtml.includes('青龍'), 'star-trail tab shows only the owned card');
 api.setFilter('elemental');
 api.renderCollection();
 const elementalHtml = cardHtml('monster-collection-grid');
-assert(elementalHtml.includes('火寶寶') && !elementalHtml.includes('艾爾德'), 'elemental filter hides star-trail cards');
+assert(elementalHtml.includes('尚未發現此系列') && !elementalHtml.includes('火寶寶') && !elementalHtml.includes('艾爾德'), 'elemental tab hides unowned lines and star-trail cards');
 
 api.setSeries('star-trail');
 api.applyChrome();
