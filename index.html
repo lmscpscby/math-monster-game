@@ -5704,6 +5704,11 @@
             sh4: 'assets/monsters/classic/image_3.jpg',
             sh5: 'assets/monsters/classic/九尾狐.jpg',
             sh6: 'assets/monsters/classic/image_5.jpg',
+            sh9: 'assets/monsters/classic/ui-shan-yinglong.png?v=11fb2cc2',
+            sh10: 'assets/monsters/classic/ui-shan-zhuyan.png?v=aa5a3f0e',
+            sh11: 'assets/monsters/classic/ui-shan-bifang.png?v=8679d65f',
+            sh12: 'assets/monsters/classic/ui-shan-baize.png?v=1fc76e82',
+            sh13: 'assets/monsters/classic/ui-shan-kui.png?v=b4051384',
             boss_turtle: 'assets/monsters/classic/龜.jpg',
             boss_dragon: 'assets/monsters/classic/冰龍.jpg',
             boss_pig: 'assets/monsters/classic/豬.jpg',
@@ -5747,15 +5752,15 @@
             holy_beast: 'assets/monsters/holy/holy_beast.png',
             holy_envoy: 'assets/monsters/holy/holy_envoy.png',
             // 星軌命途：符文紀元（全幅場景，?v= 檔案 SHA-256 前 8 碼）
-            st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=7d971577',
-            st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png?v=6e97f58e',
-            st_fey: 'assets/monsters/star-trail/ui-star-card-fey.png?v=247c9089',
-            st_lucia: 'assets/monsters/star-trail/ui-star-card-lucia.png?v=4f62f6e8',
-            st_malakor: 'assets/monsters/star-trail/ui-star-card-malakor.png?v=6901c5bb',
-            st_noah: 'assets/monsters/star-trail/ui-star-card-noah.png?v=ea941b12',
-            st_selina: 'assets/monsters/star-trail/ui-star-card-selina.png?v=da683b2a',
-            st_serafina: 'assets/monsters/star-trail/ui-star-card-serafina.png?v=071899a5',
-            st_thorin: 'assets/monsters/star-trail/ui-star-card-thorin.png?v=57db1117',
+            st_elden: 'assets/monsters/star-trail/ui-star-card-elden.png?v=629c9688',
+            st_elijah: 'assets/monsters/star-trail/ui-star-card-elijah.png?v=538ba314',
+            st_fey: 'assets/monsters/star-trail/ui-star-card-fey.png?v=2b2b6d3b',
+            st_lucia: 'assets/monsters/star-trail/ui-star-card-lucia.png?v=d277c3a4',
+            st_malakor: 'assets/monsters/star-trail/ui-star-card-malakor.png?v=4e021537',
+            st_noah: 'assets/monsters/star-trail/ui-star-card-noah.png?v=16ad8d23',
+            st_selina: 'assets/monsters/star-trail/ui-star-card-selina.png?v=ca338465',
+            st_serafina: 'assets/monsters/star-trail/ui-star-card-serafina.png?v=3e07dd31',
+            st_thorin: 'assets/monsters/star-trail/ui-star-card-thorin.png?v=bf4a0842',
             // 賽季限定只存 id；立繪唔使用 dataURL。
             season_kirin: 'assets/monsters/season_kirin.jpg'
         };
@@ -6128,7 +6133,13 @@
             { id: 'sh3', name: '燭龍', element: 'fire', title: '日夜烈陽神獸 (火)', color: '#dc2626', hp: 260, atk: 125, def: 100, spd: 80, skillText: '燭照萬里之怒！', imgKey: 'sh3', desc: '睜眼為晝，閉眼為夜，掌控烈焰天火。' },
             { id: 'sh4', name: '饕餮', element: 'fire', title: '吞噬上古獸 (火)', color: '#ea580c', hp: 300, atk: 115, def: 110, spd: 60, skillText: '噬天吞地巨口！', imgKey: 'sh4', desc: '羊身人面，腹中蘊藏無盡火核。' },
             { id: 'sh5', name: '九尾狐', element: 'grass', title: '青丘幻空妖狐 (草)', color: '#fbbf24', hp: 160, atk: 105, def: 70, spd: 120, skillText: '九尾魅惑幻影！', imgKey: 'sh5', desc: '青丘靈狐，操縱草木靈氣與幻術。' },
-            { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' }
+            { id: 'sh6', name: '窮奇', element: 'water', title: '疾風凶獸 (水)', color: '#475569', hp: 190, atk: 120, def: 80, spd: 115, skillText: '凶獸狂風撕裂！', imgKey: 'sh6', desc: '狀如虎，有翼，能捲起滔天水龍捲。' },
+            // sh7／sh8 被 migrateLegacyMythicOwned 改寫成進化系，新神獸從 sh9 起。
+            { id: 'sh9', name: '應龍', element: 'water', title: '興雲布雨神龍 (水)', color: '#3b82f6', hp: 230, atk: 118, def: 88, spd: 112, skillText: '應龍興雨怒濤！', imgKey: 'sh9', desc: '有翼之龍，興雲布雨，出則江河暴漲。' },
+            { id: 'sh10', name: '朱厭', element: 'fight', title: '天下大戰凶獸 (格鬥)', color: '#f97316', hp: 240, atk: 122, def: 85, spd: 100, skillText: '朱厭大戰咆哮！', imgKey: 'sh10', desc: '白首赤足，其出現則天下大兵。' },
+            { id: 'sh11', name: '畢方', element: 'fire', title: '焚林獨足神鳥 (火)', color: '#dc2626', hp: 175, atk: 124, def: 72, spd: 122, skillText: '畢方焚林之焰！', imgKey: 'sh11', desc: '狀如鶴，獨足，所到之處山林自燃。' },
+            { id: 'sh12', name: '白澤', element: 'holy', title: '通曉鬼神瑞獸 (聖光)', color: '#fde047', hp: 200, atk: 100, def: 105, spd: 95, skillText: '白澤逢凶化吉！', imgKey: 'sh12', desc: '白身多目，能言鬼神，見者逢凶化吉。' },
+            { id: 'sh13', name: '夔', element: 'thunder', title: '一足聲震雷獸 (雷)', color: '#eab308', hp: 250, atk: 115, def: 100, spd: 90, skillText: '夔鼓聲震五百里！', imgKey: 'sh13', desc: '蒼身一足，出入水則風雨，其聲如雷。' }
         ];
 
         // 星軌命途：符文紀元。能力值同山海經核心同一檔；圖鑑第四分頁未做。
@@ -7791,7 +7802,7 @@
             container.innerHTML = '';
 
             // 星軌核心併入圖鑑。第四分頁未做，isMythic 先出現在「山海經神獸」篩選。
-            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6'].concat(
+            let allList = ['fire_base', 'water_base', 'grass_base', 'thunder_base', 'fight_base', 'rock_base', 'psy_base', 'holy_base', 'sh1', 'sh2', 'sh3', 'sh4', 'sh5', 'sh6', 'sh9', 'sh10', 'sh11', 'sh12', 'sh13'].concat(
                 (typeof SEASON_LIMITED_BEASTS !== 'undefined' ? SEASON_LIMITED_BEASTS : []).map(function (b) { return b.id; }),
                 (typeof STAR_TRAIL_BEASTS !== 'undefined' ? STAR_TRAIL_BEASTS : []).map(function (b) { return b.id; })
             );
@@ -11175,7 +11186,7 @@
             if (typeof src !== 'string') return '';
             if (src.length > 180 || src.indexOf('..') !== -1) return '';
             if (/[\u0000-\u001f\\"'<>]/.test(src)) return '';
-            if (!/^assets\/monsters\/.+\.(png|jpe?g|webp)$/i.test(src)) return '';
+            if (!/^assets\/monsters\/.+\.(png|jpe?g|webp)(\?v=[0-9a-f]{8})?$/i.test(src)) return '';
             return src;
         }
 

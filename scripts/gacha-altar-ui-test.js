@@ -354,7 +354,32 @@ assert(api.star.length === 9, 'STAR_TRAIL_BEASTS length is 9');
 assert(api.poolOpen('star-trail') === true, 'gachaPoolOpen(star-trail) is true');
 assert(api.poolOpen('shanhaijing') === true, 'shanhaijing pool stays open');
 assert(api.hint === HINT_STAR, 'GACHA_HINT_STAR is the open-pool hint');
-assert(api.shanhai.length === 6, 'shanhaijing roster length unchanged');
+assert(api.shanhai.length === 11, 'shanhaijing roster includes the five new mythics');
+assert(!api.shanhai.some(function (b) { return b.id === 'sh7' || b.id === 'sh8'; }), 'sh7/sh8 stay reserved for the legacy migration');
+assert(fs.existsSync(path.join(root, '.nojekyll')), '.nojekyll is present so Pages skips Jekyll');
+['assets/bg/lobby-island-map-v2-manus.png', 'assets/bg/lobby-island-map-blank-v1.png', 'assets/bg/battle_bg_crystal_cave_1920x1080.png'].forEach(function (unused) {
+  assert(!fs.existsSync(path.join(root, unused)), 'unreferenced blob removed ' + unused);
+});
+
+const NEW_SHAN = {
+  sh9: { name: '應龍', element: 'water', file: 'assets/monsters/classic/ui-shan-yinglong.png' },
+  sh10: { name: '朱厭', element: 'fight', file: 'assets/monsters/classic/ui-shan-zhuyan.png' },
+  sh11: { name: '畢方', element: 'fire', file: 'assets/monsters/classic/ui-shan-bifang.png' },
+  sh12: { name: '白澤', element: 'holy', file: 'assets/monsters/classic/ui-shan-baize.png' },
+  sh13: { name: '夔', element: 'thunder', file: 'assets/monsters/classic/ui-shan-kui.png' }
+};
+Object.keys(NEW_SHAN).forEach(function (id) {
+  const spec = NEW_SHAN[id];
+  const beast = api.shanhai.find(function (b) { return b.id === id; });
+  assert(beast && beast.name === spec.name && beast.element === spec.element && beast.imgKey === id, id + ' roster row');
+  assert(beast.hp >= 160 && beast.hp <= 300 && beast.atk >= 95 && beast.atk <= 125 && beast.def >= 70 && beast.def <= 110 && beast.spd >= 60 && beast.spd <= 130, id + ' stats stay in the sh1–sh6 band');
+  const bytes = fs.readFileSync(path.join(root, spec.file));
+  const sha = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
+  assert(api.images[id] === spec.file + '?v=' + sha, id + ' image map cache-bust');
+  assert(bytes.readUInt32BE(16) === 1024 && bytes.readUInt32BE(20) === 1024, id + ' card is 1024×1024');
+  const runtime = api.runtime(id, 1);
+  assert(runtime && runtime.isMythic === true && runtime.name === spec.name && runtime.element === spec.element && runtime.imgKey === id, id + ' battle lookup');
+});
 
 api.star.forEach(function (beast, index) {
   const id = STAR_IDS[index];
@@ -452,6 +477,10 @@ api.setFilter('mythic');
 api.renderCollection();
 const mythicHtml = cardHtml('monster-collection-grid');
 assert(mythicHtml.includes('艾爾德') && mythicHtml.includes('青龍'), 'mythic filter shows star-trail with shanhaijing');
+['應龍', '朱厭', '畢方', '白澤', '夔'].forEach(function (name) {
+  assert(allHtml.includes(name), 'collection lists ' + name);
+  assert(mythicHtml.includes(name), 'mythic filter lists ' + name);
+});
 assert(!mythicHtml.includes('火寶寶'), 'mythic filter hides elemental lines');
 api.setFilter('elemental');
 api.renderCollection();
