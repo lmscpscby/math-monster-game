@@ -214,6 +214,59 @@ assert(merged.subtraction[0] === 2 && merged.division[0] === 1, 'merge unions to
 assert(merged.level === 2 && merged.exp === 10, 'merge keeps higher level');
 assert(context.adventureStarTotal({ adventureProgress: merged }) === 3 + 1 + 2 + 1, 'star total');
 
+assert(context.adventureTeamSelectLabel('火焰加法塔', towers.addition.floors[0]) === '火焰加法塔 · 第一層：1位數 + 1位數', 'picker uses the current floor label');
+assert(context.adventureTeamSelectLabel('雷霆除法塔', towers.division.floors[4]) === '雷霆除法塔 · 第五層：3位數 ÷ 1位數', 'picker uses the fifth-floor label');
+assert(context.adventureTeamSelectLabel('冰霜減法塔', towers.subtraction.floors[5]) === '冰霜減法塔 · 無限', 'endless picker says 無限');
+assert(context.adventureTeamSelectLabel('翡翠乘法塔', null) === '翡翠乘法塔', 'missing floor falls back to the tower name');
+assert(context.adventureRelayIndex(0, 2, 100) === 0, 'a living lead stays in front');
+assert(context.adventureRelayIndex(0, 2, 0) === 1, 'a faint hands off to the second monster');
+assert(context.adventureRelayIndex(1, 2, 0) === -1, 'the last faint wipes a team of two');
+assert(context.adventureRelayIndex(0, 1, 0) === -1, 'a solo faint still ends the run');
+assert(context.adventureBattleShouldEnd(false, 2, 40, 0, 0, 2) === false, 'one faint does not end a two-monster floor');
+assert(context.adventureBattleShouldEnd(false, 2, 40, 0, 1, 2) === true, 'a wiped team ends the floor');
+assert(context.adventureBattleShouldEnd(false, 5, 10, 80, 0, 2) === true, 'five questions still end the floor');
+assert(context.adventureBattleShouldEnd(false, 2, 0, 80, 0, 2) === true, 'a defeated guardian still ends the floor');
+assert(context.adventureBattleShouldEnd(true, 9, 999, 0, 0, 2) === false, 'endless continues while a teammate remains');
+assert(context.adventureBattleShouldEnd(true, 9, 999, 0, 1, 2) === true, 'endless ends when the whole team is down');
+
+const startFn = html.slice(html.indexOf('function startAdventureFloor'), html.indexOf('function currentAdventureTeamLabel'));
+assert(startFn.includes("openTeamSelect('adventure_tower', false)"), 'a floor opens the team picker');
+assert(!startFn.includes('selectedBattleTeam = [monId]'), 'a floor does not lock the team to one monster');
+assert(!startFn.includes('ownedMonsters[0]'), 'a floor does not auto-pick the first owned monster');
+assert(!startFn.includes("switchView('battle')"), 'a floor does not jump straight into battle');
+assert(!startFn.includes('startAdventureClock'), 'the tower clock waits until the team is confirmed');
+assert(!startFn.includes('adventurePresentQuestion'), 'the tower quiz waits until the team is confirmed');
+
+const beginFn = html.slice(html.indexOf('function beginAdventureFloorBattle'), html.indexOf('function paintBattleContextLabels'));
+assert(beginFn.includes('adventureBossForElement(tower.element)'), 'confirm still summons the element boss');
+assert(beginFn.includes("quiz.classList.add('battle-quiz--tower')"), 'confirm still uses the tower keypad');
+assert(beginFn.includes('startAdventureClock()'), 'confirm starts the tower clock');
+assert(beginFn.includes('adventurePresentQuestion()'), 'confirm asks tower questions');
+assert(beginFn.includes('prepareAdventureActiveMonster()'), 'confirm fields the selected team');
+assert(!beginFn.includes('nextBattleQuestion'), 'confirm does not use the training quiz');
+assert(!beginFn.includes('EVIL_BOSSES['), 'confirm does not roll a random training boss');
+
+const confirmFn = html.slice(html.indexOf('function startBattleWithSelectedTeam'), html.indexOf('function setupRankedBossEnemy'));
+const climbAt = confirmFn.indexOf('beginAdventureFloorBattle()');
+const quizAt = confirmFn.indexOf('nextBattleQuestion()');
+assert(climbAt >= 0 && quizAt > climbAt, 'confirm resumes the adventure battle before the training quiz');
+assert(confirmFn.includes('applyBattleStageForEntry()'), 'training and ranked still enter through applyBattleStageForEntry');
+assert(!confirmFn.includes('applyRandomBattleStage()'), 'training and ranked entry does not call applyRandomBattleStage directly');
+
+const openFn = html.slice(html.indexOf('function openTeamSelect'), html.indexOf('function closeTeamSelectModal'));
+assert(openFn.includes('maxAllowedTeamSize = isRanked ? 3 : 2'), 'ranked stays 3; training and adventure stay 2');
+assert(openFn.includes('currentAdventureTeamLabel()'), 'adventure title uses the tower floor label');
+assert(!openFn.includes('readClimbFloor'), 'adventure title does not use the legacy climb floor');
+assert(html.includes("openTeamSelect(u.id, false)"), 'training still opens the 2-monster picker');
+assert(html.includes("openTeamSelect('ranked_mode', true, bossLv)"), 'ranked still opens the 3-monster picker');
+
+const presentFn = html.slice(html.indexOf('function adventurePresentQuestion'), html.indexOf('function submitAdventureAnswer'));
+assert(presentFn.indexOf('adventureSwapFaintedMonster()') >= 0 && presentFn.indexOf('adventureSwapFaintedMonster()') < presentFn.indexOf('adventureShouldEnd()'), 'the next question relays a fainted monster first');
+const submitFn = html.slice(html.indexOf('function submitAdventureAnswer'), html.indexOf('function showAdventureResult'));
+const submitSwap = submitFn.indexOf('adventureSwapFaintedMonster()');
+const submitEnd = submitFn.indexOf('adventureShouldEnd()');
+assert(submitSwap >= 0 && submitEnd > submitSwap, 'a wrong answer relays before the floor can end');
+
 const entryFn = html.slice(html.indexOf('function applyBattleStageForEntry'), html.indexOf('function prefersReducedMotion'));
 assert(entryFn.includes('adventureTowerElement(adventureTowerId)'), 'adventure entry maps the tower element');
 assert(entryFn.includes('applyAdventureElementStage(advElement)'), 'adventure entry tries the elemental plate');

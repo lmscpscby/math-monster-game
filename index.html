@@ -8533,6 +8533,29 @@
             const prog = coerceAdventureProgress(profile && profile.adventureProgress);
             return ADVENTURE_TOWER_IDS.map(function (id) { return prog[id].join(','); }).join(';') + '|' + prog.level + ':' + prog.exp;
         }
+        /** Picker title. Numbered floors use the tower floor label; endless is 無限. */
+        function adventureTeamSelectLabel(towerName, floor) {
+            const name = towerName ? String(towerName) : '冒險塔';
+            if (!floor) return name;
+            if (floor.isEndless) return name + ' · 無限';
+            const title = floor.title ? String(floor.title) : ('第 ' + floor.id + ' 層');
+            return name + ' · ' + title;
+        }
+        /** Next living teammate, or -1 when this faint wipes the party. */
+        function adventureRelayIndex(monsterIndex, teamSize, playerHp) {
+            const size = Math.max(0, Math.floor(Number(teamSize) || 0));
+            let index = Math.floor(Number(monsterIndex) || 0);
+            if (index < 0) index = 0;
+            if (Number(playerHp) > 0) return index;
+            const next = index + 1;
+            if (next < size) return next;
+            return -1;
+        }
+        function adventureBattleShouldEnd(endless, asked, enemyHp, playerHp, monsterIndex, teamSize) {
+            const wiped = !(Number(playerHp) > 0) && adventureRelayIndex(monsterIndex, teamSize, playerHp) < 0;
+            if (endless) return wiped;
+            return Number(asked) >= 5 || Number(enemyHp) <= 0 || wiped;
+        }
         /* ADVENTURE_TOWER_LOGIC_END */
 
         let adventureScreen = 'hub';
@@ -8875,12 +8898,20 @@
 
         function adventureShouldEnd() {
             if (!activePlayerMonster || !activeEnemy) return true;
-            if (adventureEndless) return activePlayerMonster.currentHp <= 0;
-            return adventureAsked >= 5 || activeEnemy.hp <= 0 || activePlayerMonster.currentHp <= 0;
+            const teamSize = (selectedBattleTeam && selectedBattleTeam.length) || 1;
+            return adventureBattleShouldEnd(
+                adventureEndless,
+                adventureAsked,
+                activeEnemy.hp,
+                activePlayerMonster.currentHp,
+                currentMonsterIndex,
+                teamSize
+            );
         }
 
         function adventurePresentQuestion() {
             if (adventureSettled || battleSettled) return;
+            adventureSwapFaintedMonster();
             if (adventureShouldEnd()) {
                 settleAdventureBattle();
                 return;
@@ -8941,6 +8972,7 @@
             paintAdventureBattleHint();
             setTimeout(function () {
                 if (adventureSettled) return;
+                adventureSwapFaintedMonster();
                 if (adventureShouldEnd()) settleAdventureBattle();
                 else adventurePresentQuestion();
             }, 400);
@@ -9107,9 +9139,61 @@
             }
             const floor = tower.floors[idx];
             if (!floor) return;
+            if (!currentUser.ownedMonsters || currentUser.ownedMonsters.length === 0) {
+                alert('你目前沒有任何怪獸，請先到抽卡機召喚怪獸卡！');
+                return;
+            }
             isClimbMode = true;
             isRankedMode = false;
             adventureFloorIndex = idx;
+            openTeamSelect('adventure_tower', false);
+        }
+
+        function currentAdventureTeamLabel() {
+            const tower = ADVENTURE_TOWERS[adventureTowerId];
+            const floor = tower && tower.floors[adventureFloorIndex];
+            return adventureTeamSelectLabel(tower && tower.name, floor);
+        }
+
+        /** Adventure tower HP is a flat 100 pool; relays get a fresh pool too. */
+        function prepareAdventureActiveMonster() {
+            loadPlayerActiveMonster();
+            if (!activePlayerMonster) return;
+            activePlayerMonster.currentHp = 100;
+            activePlayerMonster.maxHp = 100;
+        }
+
+        function adventureSwapFaintedMonster() {
+            if (!activePlayerMonster || activePlayerMonster.currentHp > 0) return false;
+            const team = selectedBattleTeam || [];
+            const next = adventureRelayIndex(currentMonsterIndex, team.length, activePlayerMonster.currentHp);
+            if (next < 0 || next === currentMonsterIndex) return false;
+            currentMonsterIndex = next;
+            prepareAdventureActiveMonster();
+            showSkillPopup('player-skill-popup', '接力登場！');
+            playBattleEntrance('player');
+            updateBattleUI();
+            return true;
+        }
+
+        function beginAdventureFloorBattle() {
+            if (!currentUser) {
+                alert('數據異常，請先重新登入！');
+                return;
+            }
+            const tower = ADVENTURE_TOWERS[adventureTowerId];
+            const floor = tower && tower.floors[adventureFloorIndex];
+            if (!tower || !floor) return;
+            if (!currentUser.ownedMonsters || currentUser.ownedMonsters.length === 0) {
+                alert('你目前沒有任何怪獸，請先到抽卡機召喚怪獸卡！');
+                return;
+            }
+            if (!selectedBattleTeam || selectedBattleTeam.length === 0) {
+                selectedBattleTeam = [currentUser.ownedMonsters[0].id];
+            }
+            closeTeamSelectModal();
+            isClimbMode = true;
+            isRankedMode = false;
             adventureEndless = !!floor.isEndless;
             adventureCombo = 0;
             adventureCorrect = 0;
@@ -9127,15 +9211,8 @@
             currentQuizIndex = 0;
             usedQuestionsMap.clear();
             usedWordQuestionIds.clear();
-
-            const monId = (currentUser.ownedMonsters && currentUser.ownedMonsters[0])
-                ? currentUser.ownedMonsters[0].id
-                : 'fire_base';
-            selectedBattleTeam = [monId];
             currentMonsterIndex = 0;
-            loadPlayerActiveMonster();
-            activePlayerMonster.currentHp = 100;
-            activePlayerMonster.maxHp = 100;
+            prepareAdventureActiveMonster();
 
             const boss = adventureBossForElement(tower.element);
             activeEnemy = {
@@ -9658,7 +9735,7 @@
             if (isRanked) isClimbMode = false;
             let teamTitle = '選擇 2 隻出戰怪獸陣容 (訓練場)';
             if (isRanked) teamTitle = '選擇 3 隻出戰怪獸陣容 (積分爭霸賽)';
-            else if (isClimbMode) teamTitle = '選擇 2 隻出戰怪獸陣容 (冒險塔第 ' + readClimbFloor(currentUser) + ' 層)';
+            else if (isClimbMode) teamTitle = '選擇 2 隻出戰怪獸陣容 (' + currentAdventureTeamLabel() + ')';
             document.getElementById('team-select-modal-title').innerText = teamTitle;
 
             selectedBattleTeam = [];
@@ -9784,6 +9861,10 @@
         }
 
         function startBattleWithSelectedTeam() {
+            if (isClimbMode && adventureTowerId) {
+                beginAdventureFloorBattle();
+                return;
+            }
             restoreBattleTimerChrome();
             if (!currentUser) {
                 alert('數據異常，請先重新登入！');
