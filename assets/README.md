@@ -7,6 +7,8 @@ Copy new files there, then ask the bot to classify, convert, and move into this 
 
 Do not drop new images in the repo root — keep root paths for legacy starters/bosses/mythics only.
 
-## Island wood plates
+## Island scroll plates
 
-`assets/bg/ui-label-cloudrealm.png` is a blank 568×120 plate (no baked glyphs). The lobby hotspot paints「雲霄決鬥場」in HTML (`.island-hotspot__plate-label`) so the title can change without re-exporting art. Cache-bust with the file's sha256 prefix (`?v=ace0b984`). Do not ship a preview mock as the live plate.
+`assets/bg/lobby-island-map-blank-nolabels.jpg` is the blank 1296×830 lobby map (no baked glyphs). `.island-stage` uses `aspect-ratio: 1296 / 830` so hotspot percentages sit on the map.
+
+`assets/bg/ui-scroll-plate-blank-178.png` is a blank 178×52 scroll shared by every lobby hotspot. Titles are HTML (`.island-hotspot__plate-label`), including「雲霄決鬥場」. Cache-bust with each file's sha256 prefix (`?v=873a121d` for the map, `?v=f22a2191` for the plate). Do not ship a labeled preview as the live map or plate.

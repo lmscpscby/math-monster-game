@@ -1308,10 +1308,10 @@
         }
         .island-stage {
             position: relative;
-            width: min(100%, calc(72vh * 16 / 9));
+            width: min(100%, calc(72vh * 1296 / 830));
             max-width: 1100px;
             margin-inline: auto;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 1296 / 830;
             filter: drop-shadow(0 16px 28px rgba(8, 50, 90, 0.35));
         }
         .island-stage__bg {
@@ -1325,25 +1325,25 @@
             pointer-events: none;
             user-select: none;
         }
-        /* Crisp plates (2026-11-01) are 120px tall. Display ~half that so type matches the old ~56px plates. --plate-ratio is the PNG pixel size. */
-        .island-stage {
-            --label-h: clamp(36px, 9.7%, 60px);
-            container-type: size;
-            container-name: island;
-        }
-        .island-hotspot--adventure { --x: 52%; --y: 28%; --delay: 0s; --bob-dur: 2.5s; --plate-ratio: 280 / 120; }
-        .island-hotspot--arena { --x: 28%; --y: 48%; --delay: 0.35s; --bob-dur: 2.8s; --plate-ratio: 376 / 120; }
-        .island-hotspot--training { --x: 22%; --y: 78%; --delay: 0.7s; --bob-dur: 2.3s; --plate-ratio: 280 / 120; }
-        .island-hotspot--gacha { --x: 82%; --y: 32%; --delay: 0.15s; --bob-dur: 2.6s; --plate-ratio: 328 / 120; }
-        .island-hotspot--recreation { --x: 78%; --y: 78%; --delay: 1.05s; --bob-dur: 2.9s; --plate-ratio: 376 / 120; }
-        .island-hotspot--darkforest { --x: 18%; --y: 22%; --delay: 0.5s; --bob-dur: 2.4s; --plate-ratio: 568 / 120; }
-        .island-hotspot--cloudrealm { --x: 62%; --y: 12%; --delay: 0.9s; --bob-dur: 3.1s; --plate-ratio: 568 / 120; }
-        .island-hotspot--sunkencity { --x: 48%; --y: 88%; --delay: 1.25s; --bob-dur: 2.7s; --plate-ratio: 568 / 120; }
+        /* Every plaque is the same 178×52 blank scroll. Centers are % of the 1296×830 map. */
+        .island-hotspot--adventure { --x: 45%; --y: 26.5%; --delay: 0s; --bob-dur: 2.5s; } /* 冒險塔 */
+        .island-hotspot--arena { --x: 29.5%; --y: 54.5%; --delay: 0.35s; --bob-dur: 2.8s; } /* 積分爭霸賽 */
+        .island-hotspot--training { --x: 50%; --y: 62%; --delay: 0.7s; --bob-dur: 2.3s; } /* 訓練場，帳幕 */
+        .island-hotspot--gacha { --x: 87.5%; --y: 32.5%; --delay: 0.15s; --bob-dur: 2.6s; } /* 神獸抽蛋 */
+        .island-hotspot--cloudrealm { --x: 75%; --y: 8.5%; --delay: 0.9s; --bob-dur: 3.1s; } /* 雲霄決鬥場 */
+        .island-hotspot--spring { --x: 20%; --y: 89%; --delay: 0.2s; --bob-dur: 2.7s; } /* 星靈覺醒泉 */
+        .island-hotspot--recreation { --x: 66%; --y: 41.5%; --delay: 1.05s; --bob-dur: 2.9s; } /* 小小休憩區（未開放） */
+        .island-hotspot--darkforest { --x: 27.5%; --y: 27.5%; --delay: 0.5s; --bob-dur: 2.4s; } /* 幽暗密林（未開放） */
+        .island-hotspot--sunkencity { --x: 54.5%; --y: 91.5%; --delay: 1.25s; --bob-dur: 2.7s; } /* 沉沒古城（未開放） */
+        .island-hotspot--desert { --x: 10.5%; --y: 17.5%; --delay: 0.4s; --bob-dur: 2.6s; } /* 黃金荒漠（未開放） */
+        .island-hotspot--ocean { --x: 63%; --y: 54.5%; --delay: 0.8s; --bob-dur: 2.5s; } /* 遠洋海域（未開放） */
+        .island-hotspot--temple { --x: 85%; --y: 86.5%; --delay: 1.1s; --bob-dur: 2.8s; } /* 知識聖殿（未開放） */
         .island-hotspot {
             position: absolute;
             left: var(--x);
             top: var(--y);
-            height: var(--label-h);
+            --plate-ratio: 178 / 52;
+            height: calc(100% * 52 / 830);
             width: auto;
             aspect-ratio: var(--plate-ratio);
             z-index: 2;
@@ -1363,14 +1363,8 @@
             touch-action: manipulation;
         }
         .island-hotspot--locked {
-            opacity: 0.55;
             cursor: not-allowed;
             z-index: 2;
-        }
-        /* 待開發 tower plates already carry the semi-transparent treatment. */
-        .island-hotspot--darkforest,
-        .island-hotspot--sunkencity {
-            opacity: 1;
         }
         .island-hotspot:not(.island-hotspot--locked) {
             z-index: 3;
@@ -1395,20 +1389,18 @@
             position: relative;
             width: 100%;
             height: 100%;
+            container-type: size;
             transform-origin: center center;
             animation: island-bob var(--bob-dur, 2.6s) ease-in-out infinite;
             animation-delay: var(--delay, 0s);
         }
-        /* Blank wood plate; the title is HTML so copy can change without re-baking art.
-           63/120 matches「雲霄決鬥場」on the 120px-tall mock. Noto's em box sits low, so lift 6px at that size (0.095em). */
-        .island-hotspot--cloudrealm .island-hotspot__bob {
-            container-type: size;
-        }
+        /* Blank 178×52 scroll. Open type is 67/160 of the plate (~21.8px on the 1296 map).
+           Noto's em box sits low, so lift about 8% of the font-size. */
         .island-hotspot__plate-label {
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, calc(-50% - 0.095em));
+            transform: translate(-50%, calc(-50% - 0.08em));
             z-index: 1;
             margin: 0;
             padding: 0;
@@ -1418,10 +1410,16 @@
             line-height: 1;
             font-family: "Noto Sans TC", "Noto Sans CJK TC", sans-serif;
             font-weight: 700;
-            font-size: calc(100cqh * 63 / 120);
+            font-size: calc(100cqh * 67 / 160);
             color: #fff8e6;
-            text-shadow: 2px 3px 0 rgba(28, 16, 8, 0.82);
-            letter-spacing: 0.02em;
+            text-shadow: 2px 3px 0 rgba(28, 16, 8, 0.86);
+            letter-spacing: 0;
+        }
+        .island-hotspot--locked .island-hotspot__plate-label {
+            font-size: calc(100cqh * 41 / 160);
+        }
+        .island-hotspot--recreation .island-hotspot__plate-label {
+            font-size: calc(100cqh * 37 / 160);
         }
         .island-hotspot__bob img {
             width: 100%;
@@ -1439,44 +1437,6 @@
         @keyframes island-bob {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
-        }
-        .island-hub-bar {
-            width: min(100%, calc(72vh * 16 / 9));
-            max-width: 1100px;
-            margin: 0 auto 0.45rem;
-            display: flex;
-            justify-content: flex-end;
-        }
-        .island-codex-btn {
-            display: block;
-            height: 60px;
-            width: calc(60px * 240 / 120);
-            margin: 0;
-            padding: 0;
-            border: 0;
-            background: transparent;
-            box-shadow: none;
-            cursor: pointer;
-            line-height: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .island-codex-btn img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-            pointer-events: none;
-            user-select: none;
-            -webkit-user-drag: none;
-        }
-        .island-codex-btn:hover,
-        .island-codex-btn:focus-visible {
-            filter: brightness(1.08);
-            transform: translateY(-1px);
-        }
-        .island-codex-btn:focus-visible {
-            outline: 3px solid #fff7d6;
-            outline-offset: 3px;
         }
         .island-hotspot:hover .island-hotspot__bob,
         .island-hotspot:focus-visible .island-hotspot__bob {
@@ -1520,15 +1480,6 @@
         @media (max-width: 720px) {
             .island-stage {
                 width: 100%;
-                --label-h: clamp(28px, 14.5%, 40px);
-            }
-            .island-hotspot--darkforest { --x: 22%; }
-            .island-hub-bar {
-                width: 100%;
-            }
-            .island-codex-btn {
-                height: 40px;
-                width: calc(40px * 240 / 120);
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -4119,39 +4070,79 @@
             </div>
 
             <nav class="island-hub" aria-label="島嶼大廳">
-                <div class="island-hub-bar">
-                    <button type="button" class="island-codex-btn" onclick="switchView('monsters')" aria-label="圖鑑，進入怪獸圖鑑與隊伍">
-                        <img src="assets/bg/ui-btn-codex-small.png?v=3cb12687" alt="">
-                    </button>
-                </div>
                 <div class="island-stage">
-                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg" alt="">
+                    <img class="island-stage__bg" src="assets/bg/lobby-island-map-blank-nolabels.jpg?v=873a121d" alt="">
                     <button type="button" class="island-hotspot island-hotspot--adventure" onclick="enterAdventure()" aria-label="冒險塔，四座元素神塔">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-adventure.png?v=c6d670e8" alt=""></span>
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">冒險塔</span>
+                        </span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--arena" onclick="switchView('ranked')" aria-label="積分爭霸賽，進入積分塔">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-arena.png?v=94a34407" alt=""></span>
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">積分爭霸賽</span>
+                        </span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--training" onclick="enterTraining()" aria-label="訓練場，分單元挑戰">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-training.png?v=5d4bda4e" alt=""></span>
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">訓練場</span>
+                        </span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--gacha" onclick="switchView('gacha')" aria-label="神獸抽蛋，進入抽卡">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-gacha.png?v=cd7891f2" alt=""></span>
-                    </button>
-                    <button type="button" class="island-hotspot island-hotspot--recreation island-hotspot--locked" data-locked-tip="即將開放" onclick="showIslandLockedTip(this)" aria-label="小小遊憩區，即將開放">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-recreation.png?v=783c639d" alt=""></span>
-                    </button>
-                    <button type="button" class="island-hotspot island-hotspot--darkforest island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="幽暗密林，待開發">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-darkforest.png?v=bb62743f" alt=""></span>
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">神獸抽蛋</span>
+                        </span>
                     </button>
                     <button type="button" class="island-hotspot island-hotspot--cloudrealm" onclick="switchView('pvp')" aria-label="雲霄決鬥場，1v1 怪獸對戰">
                         <span class="island-hotspot__bob">
-                            <img src="assets/bg/ui-label-cloudrealm.png?v=ace0b984" alt="">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
                             <span class="island-hotspot__plate-label">雲霄決鬥場</span>
                         </span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--sunkencity island-hotspot--locked" data-locked-tip="待開發" onclick="showIslandLockedTip(this)" aria-label="沉沒古城，待開發">
-                        <span class="island-hotspot__bob"><img src="assets/bg/ui-label-sunkencity.png?v=9f53dc77" alt=""></span>
+                    <button type="button" class="island-hotspot island-hotspot--spring" onclick="switchView('monsters')" aria-label="星靈覺醒泉，進入收集與進化">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">星靈覺醒泉</span>
+                        </span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--recreation island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="小小休憩區（未開放）">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">小小休憩區（未開放）</span>
+                        </span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--darkforest island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="幽暗密林（未開放）">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">幽暗密林（未開放）</span>
+                        </span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--sunkencity island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="沉沒古城（未開放）">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">沉沒古城（未開放）</span>
+                        </span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--desert island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="黃金荒漠（未開放）">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">黃金荒漠（未開放）</span>
+                        </span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--ocean island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="遠洋海域（未開放）">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">遠洋海域（未開放）</span>
+                        </span>
+                    </button>
+                    <button type="button" class="island-hotspot island-hotspot--temple island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="知識聖殿（未開放）">
+                        <span class="island-hotspot__bob">
+                            <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
+                            <span class="island-hotspot__plate-label">知識聖殿（未開放）</span>
+                        </span>
                     </button>
                 </div>
                 <p id="home-season-line" class="island-season-line">賽季載入中… · 頭10名：聖光麒麟</p>
@@ -4392,7 +4383,7 @@
 
             <div class="ui-panel ui-parchment codex-toolbar flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="codex-toolbar__copy">
-                    <h2 class="text-lg sm:text-xl md:text-2xl font-black break-words">怪獸圖鑑與進化養成</h2>
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-black break-words">星靈覺醒泉</h2>
                     <p class="text-xs mt-0.5">點擊卡牌可放大預覽！進化系怪獸進化至 30LV 最終形態，4圍數值凌駕同級山海經神獸！</p>
                 </div>
                 <div class="monster-filter-row">
@@ -4822,7 +4813,7 @@
         let cloudSaveTimer = null;
 
         function showIslandLockedTip(el) {
-            var msg = '即將開放';
+            var msg = '未開放';
             if (el && el.getAttribute) msg = el.getAttribute('data-locked-tip') || msg;
             showSyncToast(msg);
         }
