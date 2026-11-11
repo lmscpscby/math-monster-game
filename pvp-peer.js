@@ -1,23 +1,13 @@
 /**
- * 1v1 怪獸對戰 — PeerJS Cloud 信令（純前端，無自建後端）。
+ * 1v1 怪獸對戰 — 加密 WebSocket 房間中繼。
  *
- * 預設連去公開 PeerJS Cloud（0.peerjs.com）。唔使申請 key：
- * 留空 MMG_PVP_PEERJS_KEY 就用程式庫內建嘅公開 key「peerjs」。
+ * 對戰訊息經 wss（443）送到 Cloudflare Worker，再由 Durable Object
+ * 轉去同一間房嘅對手。唔經點對點。部署步驟喺 relay/README.md。
  *
- * 如果公開 key 日後被拒，先去 https://peerjs.com/server/cloud
- * 申請免費 key，然後填下面呢個常數，或者喺載入本檔之前設定
- * window.MMG_PVP_PEERJS_KEY。
- *
- * 可選：自建 PeerServer（正式流程唔用）。載入本檔之前設定，例如：
- *   window.MMG_PVP_PEER_CONFIG = {
- *     host: 'your-peer-server.example',
- *     port: 443,
- *     path: '/',
- *     secure: true
- *   };
- *
- * 未加 TURN。預設只靠 PeerJS 自帶嘅 STUN。學校 Wi‑Fi／對稱 NAT
- * 有機會通唔到，之後先至需要 TURN。
+ * 正式中繼係下面 MMG_PVP_RELAY_URL：wss、無路徑、無尾斜線。
+ * 本地 wrangler dev 可以喺載入本檔之前
+ * 設定 window.MMG_PVP_RELAY_URL = 'ws://127.0.0.1:8787'。
+ * 如果個常數留空，開房時會話未設定。
  *
  * 傷害（房主計，再廣播 sync；客人介面以 sync 嘅 HP 作準）：
  * - 答啱先打到對手。
@@ -36,11 +26,12 @@
 (function () {
     'use strict';
 
-    var MMG_PVP_PEERJS_KEY = '';
+    var MMG_PVP_RELAY_URL = 'wss://math-monster-pvp-relay.ayaxysew.workers.dev';
     var CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
     var CODE_LEN = 4;
-    var ID_PREFIX = 'mmg-';
-    var ICE_WAIT_MS = 20000;
+    var CONNECT_WAIT_MS = 12000;
+    var PING_MS = 20000;
+    var MAX_HOST_TRIES = 5;
     var ROUND_GAP_MS = 1700;
     var MAX_ROUNDS = 24;
     var SPEED_MS = 8000;
@@ -53,9 +44,10 @@
             token: 0,
             role: null,
             code: '',
-            peer: null,
-            conn: null,
+            socket: null,
             connected: false,
+            welcomed: false,
+            attempt: 0,
             opponentName: '',
             phase: 'lobby',
             rosterPick: null,
@@ -79,7 +71,8 @@
             rematchSent: false,
             theirRematch: false,
             advanceTimer: null,
-            iceTimer: null
+            connectTimer: null,
+            pingTimer: null
         };
     }
 
@@ -87,26 +80,24 @@
         return document.getElementById(id);
     }
 
-    function resolvedKey() {
-        var fromWindow = (typeof window.MMG_PVP_PEERJS_KEY === 'string')
-            ? window.MMG_PVP_PEERJS_KEY.trim()
+    function relayUrl() {
+        var fromWindow = (typeof window.MMG_PVP_RELAY_URL === 'string')
+            ? window.MMG_PVP_RELAY_URL.trim()
             : '';
-        if (fromWindow) return fromWindow;
-        return String(MMG_PVP_PEERJS_KEY || '').trim();
+        var base = fromWindow || String(MMG_PVP_RELAY_URL || '').trim();
+        return base.replace(/\/+$/, '');
     }
 
-    function makePeer(id) {
-        var opts = {};
-        var key = resolvedKey();
-        if (key) opts.key = key;
-        var extra = window.MMG_PVP_PEER_CONFIG;
-        if (extra && typeof extra === 'object') {
-            ['host', 'port', 'path', 'secure', 'key', 'debug', 'config'].forEach(function (k) {
-                if (extra[k] !== undefined && extra[k] !== null && extra[k] !== '') opts[k] = extra[k];
-            });
-        }
-        if (id) return new Peer(id, opts);
-        return new Peer(opts);
+    function socketUrl(code, role) {
+        return relayUrl() + '/room/' + code + '?role=' + role;
+    }
+
+    function openSocket(code, role) {
+        return new WebSocket(socketUrl(code, role));
+    }
+
+    function canSend() {
+        return !!(state.socket && state.socket.readyState === 1 && state.connected);
     }
 
     function randomCode() {
@@ -580,10 +571,17 @@
         }
     }
 
-    function clearIceTimer() {
-        if (state.iceTimer) {
-            clearTimeout(state.iceTimer);
-            state.iceTimer = null;
+    function clearConnectTimer() {
+        if (state.connectTimer) {
+            clearTimeout(state.connectTimer);
+            state.connectTimer = null;
+        }
+    }
+
+    function clearPing() {
+        if (state.pingTimer) {
+            clearInterval(state.pingTimer);
+            state.pingTimer = null;
         }
     }
 
@@ -596,10 +594,10 @@
 
     function destroySession() {
         state.token += 1;
-        clearIceTimer();
+        clearConnectTimer();
+        clearPing();
         clearAdvance();
-        var conn = state.conn;
-        var peer = state.peer;
+        var socket = state.socket;
         var token = state.token;
         var fresh = emptyState();
         fresh.token = token;
@@ -607,46 +605,42 @@
             if (!Object.prototype.hasOwnProperty.call(fresh, k)) delete state[k];
         });
         Object.keys(fresh).forEach(function (k) { state[k] = fresh[k]; });
-        if (conn) {
-            try { conn.close(); } catch (e) { /* already closed */ }
-        }
-        if (peer) {
-            peer._mmgIgnore = true;
-            try { peer.destroy(); } catch (e) { /* already destroyed */ }
+        if (socket) {
+            try { socket.close(); } catch (e) { /* already closed */ }
         }
     }
 
-    function ensureLib() {
-        if (typeof Peer === 'function') return true;
-        showStep('lobby');
-        setBusy(false);
-        setMsg('pvp-lobby-msg', '載入唔到 PeerJS。請檢查網絡（CDN）再重新整理。', 'error');
-        return false;
+    function ensureRelay() {
+        var url = relayUrl();
+        if (!url) {
+            showStep('lobby');
+            setBusy(false);
+            setMsg('pvp-lobby-msg', '未設定對戰中繼網址。請喺 pvp-peer.js 填 MMG_PVP_RELAY_URL，部署中繼之後先開得到房。', 'error');
+            return false;
+        }
+        if (!/^wss:\/\//i.test(url) && !/^ws:\/\//i.test(url)) {
+            showStep('lobby');
+            setBusy(false);
+            setMsg('pvp-lobby-msg', '對戰中繼網址要係 ws:// 或 wss://。請檢查 MMG_PVP_RELAY_URL。', 'error');
+            return false;
+        }
+        if (typeof WebSocket !== 'function') {
+            showStep('lobby');
+            setBusy(false);
+            setMsg('pvp-lobby-msg', '你部瀏覽器未支援 WebSocket。用新版 Chrome 或 Edge 再試。', 'error');
+            return false;
+        }
+        return true;
     }
 
-    function messageForPeerError(err) {
-        var type = err && err.type;
-        if (type === 'peer-unavailable') {
-            return '搵唔到呢間房。請對吓房號，或者等房主開定房先。';
-        }
-        if (type === 'unavailable-id') {
-            return '房號被人用緊。請再開一次房。';
-        }
-        if (type === 'invalid-key') {
-            return 'PeerJS Cloud 拒絕咗把鎖匙。請喺 pvp-peer.js 填 MMG_PVP_PEERJS_KEY。';
-        }
-        if (type === 'browser-incompatible') {
-            return '你部瀏覽器未支援 WebRTC。用 Chrome 或 Edge 再試。';
-        }
-        if (type === 'invalid-id') {
-            return '房號格式有問題。請再開一次房。';
-        }
-        if (type === 'webrtc') {
-            return '點對點連線失敗。可能係防火牆擋住，請再試。學校網絡之後可能要加 TURN。';
-        }
-        if (type === 'network' || type === 'server-error' || type === 'socket-error' || type === 'socket-closed' || type === 'ssl-unavailable' || type === 'disconnected') {
-            return '連唔到 PeerJS Cloud。請檢查網絡，陣間再試。';
-        }
+    function relayErrorText(eventName) {
+        if (eventName === 'no-room') return '搵唔到呢間房。請對吓房號，或者等房主開定房先。';
+        if (eventName === 'room-full') return '呢間房已經有人。請房主再開一間新房。';
+        if (eventName === 'room-taken') return '房號被人用緊。請再開一次房。';
+        if (eventName === 'invalid-code') return '房號格式有問題。請再開一次房。';
+        if (eventName === 'bad-role') return '入房角色有問題。請離開再開一次。';
+        if (eventName === 'host-gone') return '房主離開咗房間。請返去大廳，等新房號再開。';
+        if (eventName === 'wrong-room') return '房號同中繼對唔上。請離開再開一次。';
         return '連線失敗。請再試一次。';
     }
 
@@ -666,24 +660,41 @@
         return '房號要 4 位字母或數字。請對吓再入。';
     }
 
-    function armIceWatch(token) {
-        clearIceTimer();
-        state.iceTimer = setTimeout(function () {
-            if (state.token !== token || state.connected) return;
-            setMsg(
-                'pvp-room-msg',
-                '連線好耐都未通。可能係 NAT 或防火牆擋住點對點（學校 Wi‑Fi 有時會咁）。可以離開再試；而家未用 TURN。',
-                'error'
-            );
-        }, ICE_WAIT_MS);
+    function armConnectWatch(token, socket) {
+        clearConnectTimer();
+        state.connectTimer = setTimeout(function () {
+            if (state.token !== token || state.socket !== socket || state.welcomed) return;
+            fail('連唔到對戰中繼伺服器。請檢查網絡，陣間再試。');
+        }, CONNECT_WAIT_MS);
     }
 
-    function sendJson(conn, payload) {
+    function armKeepalive(token, socket) {
+        clearPing();
+        state.pingTimer = setInterval(function () {
+            if (state.token !== token || state.socket !== socket) return;
+            if (!state.socket || state.socket.readyState !== 1) return;
+            sendJson({ v: 2, t: 'ping' });
+        }, PING_MS);
+    }
+
+    function sendJson(payload) {
+        if (!state.socket || state.socket.readyState !== 1) return false;
         try {
-            conn.send(payload);
+            state.socket.send(JSON.stringify(payload));
             return true;
         } catch (e) {
             return false;
+        }
+    }
+
+    function parseMsg(data) {
+        if (typeof data !== 'string' || data.length > 40000) return null;
+        try {
+            var msg = JSON.parse(data);
+            if (!msg || typeof msg !== 'object') return null;
+            return msg;
+        } catch (e) {
+            return null;
         }
     }
 
@@ -857,8 +868,8 @@
         state.myBeast = beast;
         state.pickLocked = true;
         state.myHp = beast.maxHp;
-        if (state.conn && state.conn.open) {
-            sendJson(state.conn, { v: 2, t: 'pick', id: beast.id, level: beast.level });
+        if (canSend()) {
+            sendJson({ v: 2, t: 'pick', id: beast.id, level: beast.level });
         }
         showPick();
         setMsg('pvp-pick-msg', '已鎖定「' + beast.name + '」。等對手揀…', 'ok');
@@ -1018,7 +1029,7 @@
         var back = $('pvp-back-lobby-btn');
         if (again) {
             again.classList.toggle('hidden', !state.matchOver);
-            again.disabled = !!state.rematchSent || !(state.conn && state.conn.open);
+            again.disabled = !!state.rematchSent || !canSend();
             again.textContent = state.rematchSent ? '等對手…' : '再揀獸打過';
         }
         if (back) back.classList.toggle('hidden', !state.matchOver);
@@ -1138,7 +1149,7 @@
             winner: winner,
             cap: cap
         };
-        if (state.conn && state.conn.open) sendJson(state.conn, payload);
+        if (canSend()) sendJson(payload);
         applyResolution(payload);
     }
 
@@ -1160,10 +1171,10 @@
         state.myChoice = choice;
         state.myMs = answerMs();
         paintOptions();
-        if (state.conn && state.conn.open) {
+        if (canSend()) {
             var payload = { v: 2, t: 'answer', roundId: state.question.roundId, choice: choice };
             if (state.myMs != null) payload.ms = state.myMs;
-            sendJson(state.conn, payload);
+            sendJson(payload);
         }
         if (!state.theirChoice) setMsg('pvp-quiz-msg', '你揀咗「' + choice + '」。等對手交卷…');
         maybeSettle();
@@ -1171,7 +1182,7 @@
 
     function beginRound() {
         if (state.role !== 'host' || state.matchOver || state.phase !== 'fight') return;
-        if (!state.conn || !state.conn.open || !state.myBeast || !state.theirBeast) return;
+        if (!canSend() || !state.myBeast || !state.theirBeast) return;
         if (state.question && !state.questionSettled) return;
         var next = (state.round || 0) + 1;
         if (next > MAX_ROUNDS) return;
@@ -1181,7 +1192,7 @@
             return;
         }
         state.pendingQuestion = null;
-        sendJson(state.conn, {
+        sendJson({
             v: 2,
             t: 'question',
             roundId: q.roundId,
@@ -1226,62 +1237,67 @@
         var token = state.token;
         var role = state.role;
         var code = state.code;
-        var peer = state.peer;
+        var socket = state.socket;
+        var attempt = state.attempt;
+        var pingTimer = state.pingTimer;
         var fresh = emptyState();
         fresh.token = token;
         fresh.role = role;
         fresh.code = code;
-        fresh.peer = peer;
+        fresh.socket = socket;
         fresh.phase = 'room';
+        fresh.attempt = attempt;
+        fresh.welcomed = true;
+        fresh.pingTimer = pingTimer;
         Object.keys(fresh).forEach(function (k) { state[k] = fresh[k]; });
         showStep('room');
         paintCode(state.code);
         setMsg('pvp-room-msg', text, text ? 'error' : null);
+        sendJson({ v: 2, t: 'wait' });
     }
 
-    function onChannelOpen(conn, token) {
-        if (state.token !== token || state.conn !== conn) return;
+    function markPeerPresent(token) {
+        if (state.token !== token) return;
+        if (state.connected && state.phase !== 'room') return;
         state.connected = true;
-        clearIceTimer();
-        sendJson(conn, { v: 2, t: 'hello', name: myName() });
-        enterPick(null);
+        clearConnectTimer();
+        sendJson({ v: 2, t: 'hello', name: myName() });
+        if (state.phase === 'room') enterPick(null);
         setBusy(false);
     }
 
-    function handleRemoteClose(token) {
-        var wasHost = state.role === 'host';
-        var peer = state.peer;
+    function onPeerLeft(token) {
+        if (state.token !== token) return;
         var over = state.matchOver;
-        state.conn = null;
+        var socket = state.socket;
         state.connected = false;
         clearAdvance();
         if (over) {
+            state.socket = null;
+            clearPing();
+            if (socket) {
+                try { socket.close(); } catch (e) { /* already closed */ }
+            }
             setMsg('pvp-quiz-msg', '對手離開咗房間。', 'error');
             paintRematch();
             return;
         }
-        if (wasHost && peer && !peer.destroyed && !peer._mmgIgnore) {
+        if (state.role === 'host' && socket && socket.readyState === 1) {
             enterRoomWait('對手離開咗。房號仲用得，可以再等人入房。');
             return;
         }
-        setTimeout(function () {
-            if (state.token !== token) return;
-            fail('連線中斷。對手可能離開咗，或者網絡斷開。');
-        }, 50);
+        fail('連線中斷。對手可能離開咗，或者網絡斷開。');
     }
 
-    function onData(msg, token, conn) {
-        if (state.token !== token || state.conn !== conn || !msg || typeof msg !== 'object') return;
+    function onData(msg, token, socket) {
+        if (state.token !== token || state.socket !== socket || !msg || typeof msg !== 'object') return;
         if (msg.t === 'hello') {
             state.opponentName = sanitizeName(msg.name);
             refreshKicker();
             paintCreatureRoles();
             return;
         }
-        if (msg.t === 'full') {
-            fail('呢間房已經有人。請房主再開一間新房。');
-            return;
-        }
+        if (msg.t === 'ping' || msg.t === 'wait') return;
         if (msg.t === 'pick') {
             if (state.phase !== 'pick' || state.theirBeast) return;
             var beast = acceptPick(msg);
@@ -1338,20 +1354,20 @@
 
     function requestRematch() {
         if (!state.matchOver || state.rematchSent) return;
-        if (!state.conn || !state.conn.open) {
+        if (!canSend()) {
             setMsg('pvp-quiz-msg', '連線已經斷開，請返去大廳再開一局。', 'error');
             paintRematch();
             return;
         }
         state.rematchSent = true;
-        sendJson(state.conn, { v: 2, t: 'rematch' });
+        sendJson({ v: 2, t: 'rematch' });
         if (state.theirRematch) startRepick();
         else setMsg('pvp-quiz-msg', '等對手一齊再揀獸…', 'ok');
         paintRematch();
     }
 
     function startRepick() {
-        if (!state.conn || !state.conn.open) {
+        if (!canSend()) {
             setMsg('pvp-quiz-msg', '連線已經斷開，請返去大廳再開一局。', 'error');
             return;
         }
@@ -1359,113 +1375,99 @@
         enterPick(prev);
     }
 
-    function armConn(conn, token) {
-        if (!conn) return;
-        armIceWatch(token);
-        conn.on('data', function (msg) { onData(msg, token, conn); });
-        conn.on('close', function () {
-            if (state.token !== token || state.conn !== conn) return;
-            handleRemoteClose(token);
-        });
-        conn.on('error', function () {
-            if (state.token !== token || state.conn !== conn || state.matchOver) return;
-            var where = state.phase === 'fight' || state.phase === 'pick' ? 'pvp-quiz-msg' : 'pvp-room-msg';
-            if (state.phase === 'pick') where = 'pvp-pick-msg';
-            setMsg(where, '同對手嘅連線出錯。可以離開再試。', 'error');
-        });
-        if (conn.open) onChannelOpen(conn, token);
-        else conn.on('open', function () { onChannelOpen(conn, token); });
+    function onRelay(msg, token, socket) {
+        if (state.token !== token || state.socket !== socket) return;
+        var eventName = String(msg.e || '');
+        if (eventName === 'welcome') {
+            state.welcomed = true;
+            clearConnectTimer();
+            publishHash(state.code);
+            paintCode(state.code);
+            if (state.role === 'host') {
+                setMsg('pvp-room-msg', '房號已開好。叫對手輸入房號，或者將連結傳俾佢。', 'ok');
+                setBusy(false);
+                if (msg.peer) markPeerPresent(token);
+                return;
+            }
+            if (msg.peer) {
+                markPeerPresent(token);
+                return;
+            }
+            fail(relayErrorText('no-room'));
+            return;
+        }
+        if (eventName === 'peer-joined') {
+            markPeerPresent(token);
+            return;
+        }
+        if (eventName === 'peer-left') {
+            onPeerLeft(token);
+            return;
+        }
+        if (eventName === 'pong') return;
+        if (eventName === 'room-taken' && state.role === 'host' && state.attempt < MAX_HOST_TRIES - 1 && !state.welcomed) {
+            var nextTry = state.attempt + 1;
+            state.socket = null;
+            try { socket.close(); } catch (e) { /* server is closing it too */ }
+            setMsg('pvp-room-msg', '房號被人用緊，幫你換緊另一個…');
+            tryHost(token, nextTry);
+            return;
+        }
+        if (eventName === 'room-taken' || eventName === 'room-full' || eventName === 'no-room' || eventName === 'invalid-code' || eventName === 'bad-role' || eventName === 'host-gone' || eventName === 'wrong-room') {
+            fail(relayErrorText(eventName));
+        }
     }
 
-    function handlePeerError(err, token, peer) {
-        if (!peer || peer._mmgIgnore || state.token !== token) return;
-        var type = err && err.type;
-        console.warn('[pvp] PeerJS', type || err);
-        if (type === 'unavailable-id') return;
-        fail(messageForPeerError(err));
-    }
-
-    function watchPeer(peer, token) {
-        peer.on('error', function (err) { handlePeerError(err, token, peer); });
-        peer.on('disconnected', function () {
-            if (state.token !== token || peer._mmgIgnore) return;
-            if (state.connected && state.conn && state.conn.open) return;
-            fail('同 PeerJS Cloud 嘅連線中斷。請再試一次。');
-        });
-    }
-
-    function rejectExtra(conn) {
-        var sendFull = function () {
-            sendJson(conn, { v: 2, t: 'full' });
-            try { conn.close(); } catch (e) { /* ignore */ }
+    function bindSocket(socket, token) {
+        armConnectWatch(token, socket);
+        armKeepalive(token, socket);
+        socket.onmessage = function (ev) {
+            if (state.token !== token || state.socket !== socket) return;
+            var msg = parseMsg(ev && ev.data);
+            if (!msg) return;
+            if (msg.t === 'relay') {
+                onRelay(msg, token, socket);
+                return;
+            }
+            onData(msg, token, socket);
         };
-        if (conn.open) sendFull();
-        else conn.on('open', sendFull);
+        socket.onerror = function () { /* onclose carries the failure */ };
+        socket.onclose = function () {
+            if (state.token !== token || state.socket !== socket) return;
+            if (!state.welcomed) {
+                fail('連唔到對戰中繼伺服器。請檢查網絡，陣間再試。');
+                return;
+            }
+            fail('同對戰中繼伺服器嘅連線中斷。請再試一次。');
+        };
     }
 
     function tryHost(token, attempt) {
         if (state.token !== token) return;
-        if (!ensureLib()) return;
+        if (!ensureRelay()) return;
+        clearPing();
         var code = randomCode();
-        var peer;
+        var socket;
         try {
-            peer = makePeer(ID_PREFIX + code);
+            socket = openSocket(code, 'host');
         } catch (e) {
             fail('開房失敗。請再試一次。');
             return;
         }
-        state.peer = peer;
+        state.socket = socket;
         state.role = 'host';
         state.code = code;
         state.phase = 'room';
+        state.attempt = attempt;
+        state.welcomed = false;
+        state.connected = false;
         paintCode('');
-        setMsg('pvp-room-msg', '等緊 PeerJS Cloud 開房…');
-        var opened = false;
-        peer.on('open', function (id) {
-            if (state.token !== token || state.peer !== peer) return;
-            opened = true;
-            var actual = String(id || '');
-            if (actual.indexOf(ID_PREFIX) === 0) {
-                code = actual.slice(ID_PREFIX.length).toUpperCase();
-                state.code = code;
-            }
-            publishHash(code);
-            paintCode(code);
-            setMsg('pvp-room-msg', '房號已開好。叫對手輸入房號，或者將連結傳俾佢。', 'ok');
-            setBusy(false);
-        });
-        peer.on('connection', function (conn) {
-            if (state.token !== token || state.peer !== peer || state.conn || state.finished) {
-                rejectExtra(conn);
-                return;
-            }
-            state.conn = conn;
-            state.finished = false;
-            state.matchOver = false;
-            armConn(conn, token);
-        });
-        peer.on('error', function (err) {
-            if (!peer || peer._mmgIgnore || state.token !== token || state.peer !== peer) return;
-            if (err && err.type === 'unavailable-id' && attempt < 5 && !opened) {
-                console.warn('[pvp] room id taken, retrying');
-                peer._mmgIgnore = true;
-                if (state.peer === peer) state.peer = null;
-                try { peer.destroy(); } catch (e) { /* ignore */ }
-                setMsg('pvp-room-msg', '房號被人用緊，幫你換緊另一個…');
-                tryHost(token, attempt + 1);
-                return;
-            }
-            handlePeerError(err, token, peer);
-        });
-        peer.on('disconnected', function () {
-            if (state.token !== token || peer._mmgIgnore || state.peer !== peer) return;
-            if (state.connected && state.conn && state.conn.open) return;
-            fail('同 PeerJS Cloud 嘅連線中斷。請再試一次。');
-        });
+        setMsg('pvp-room-msg', '等緊對戰中繼伺服器開房…');
+        bindSocket(socket, token);
     }
 
     function createRoom() {
-        if (!ensureLib()) return;
+        if (!ensureRelay()) return;
         destroySession();
         var token = state.token;
         setBusy(true);
@@ -1481,48 +1483,28 @@
             setMsg('pvp-lobby-msg', explainBadCode(raw), 'error');
             return;
         }
-        if (!ensureLib()) return;
+        if (!ensureRelay()) return;
         destroySession();
         var token = state.token;
-        state.role = 'guest';
-        state.code = code;
-        state.phase = 'room';
-        setBusy(true);
-        showStep('room');
-        paintCode(code);
-        setMsg('pvp-lobby-msg', '');
-        setMsg('pvp-room-msg', '等緊 PeerJS Cloud，跟住入房 ' + code + '…');
-        var peer;
+        var socket;
         try {
-            peer = makePeer(null);
+            socket = openSocket(code, 'guest');
         } catch (e) {
             fail('入房失敗。請再試一次。');
             return;
         }
-        state.peer = peer;
-        watchPeer(peer, token);
-        peer.on('open', function () {
-            if (state.token !== token || state.peer !== peer) return;
-            publishHash(code);
-            var conn;
-            try {
-                conn = peer.connect(ID_PREFIX + code, {
-                    reliable: true,
-                    serialization: 'json',
-                    metadata: { name: myName() }
-                });
-            } catch (e) {
-                fail('入房失敗。請再試一次。');
-                return;
-            }
-            if (!conn) {
-                fail('入房失敗。請再試一次。');
-                return;
-            }
-            state.conn = conn;
-            setMsg('pvp-room-msg', '搵到信令，等緊同房主接通…');
-            armConn(conn, token);
-        });
+        state.socket = socket;
+        state.role = 'guest';
+        state.code = code;
+        state.phase = 'room';
+        state.welcomed = false;
+        state.connected = false;
+        setBusy(true);
+        showStep('room');
+        paintCode(code);
+        setMsg('pvp-lobby-msg', '');
+        setMsg('pvp-room-msg', '等緊對戰中繼伺服器，跟住入房 ' + code + '…');
+        bindSocket(socket, token);
     }
 
     function leaveToLobby(note) {
@@ -1608,7 +1590,7 @@
 
     function onEnterView() {
         bindUi();
-        if (state.peer) return;
+        if (state.socket) return;
         showStep('lobby');
         setBusy(false);
         var code = codeFromHash();
@@ -1619,7 +1601,7 @@
     function onLeaveView() {
         var view = $('view-pvp');
         if (view && !view.classList.contains('hidden')) return;
-        if (!state.peer && !state.conn) return;
+        if (!state.socket) return;
         destroySession();
         clearHash();
         showStep('lobby');

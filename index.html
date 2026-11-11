@@ -4582,7 +4582,7 @@
             </div>
         </section>
 
-        <!-- VIEW 6: PVP（PeerJS Cloud。接通後揀獸，多題打到 HP 歸零） -->
+        <!-- VIEW 6: PVP（WebSocket 房間中繼。接通後揀獸，多題打到 HP 歸零） -->
         <section id="view-pvp" class="hidden" data-pvp="1">
             <div class="ui-panel ui-parchment pvp-sheet">
                 <div class="pvp-sheet__bar">
@@ -4669,7 +4669,7 @@
                     </div>
                 </div>
 
-                <p class="pvp-footnote">純前端，經 PeerJS Cloud 做信令，唔使自建後端，亦唔使 PeerJS key。學校 Wi‑Fi 有時會被 NAT／防火牆擋住；之後先需要 TURN，而家未用。</p>
+                <p class="pvp-footnote">對戰訊息經加密 WebSocket（wss，443）送到中繼伺服器，再轉去同一間房嘅對手，唔使兩部機直接連線。未填中繼網址，或者連唔上伺服器，畫面會直接講明。</p>
             </div>
         </section>
 
@@ -4796,8 +4796,7 @@
     <script src="數學試題庫.js"></script>
     <!-- 戰鬥抽題黑名單（A1+B + c_6A16N103b delist；只 skip、唔刪庫） -->
     <script src="unsolvable-blacklist.js"></script>
-    <!-- PeerJS Cloud（公開信令，預設唔使 key）。PVP 邏輯喺 pvp-peer.js。 -->
-    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <!-- PVP 邏輯喺 pvp-peer.js（加密 WebSocket 房間中繼，網址係 MMG_PVP_RELAY_URL）。 -->
     <script src="pvp-peer.js"></script>
     <!-- JAVASCRIPT GAME LOGIC -->
     <script>
@@ -11299,7 +11298,7 @@
         };
         /* PVP_ROSTER_END */
 
-        /* PVP 對決喺 pvp-peer.js（PeerJS Cloud）。呢度只提供獸鑑同出題，唔改單人戰鬥流程。 */
+        /* PVP 對決喺 pvp-peer.js（WebSocket 房間中繼）。呢度只提供獸鑑同出題，唔改單人戰鬥流程。 */
     </script>
 </body>
 </html>
