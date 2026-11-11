@@ -2,7 +2,7 @@
 
 GitHub Pages cannot host a WebSocket server. This Cloudflare Worker accepts encrypted WebSocket connections on port 443 and relays one 1v1 room through a Durable Object. It does not grade maths, and it does not use PeerJS, STUN, or TURN.
 
-The browser origin is **not** filled in here. `pvp-peer.js` ships with an empty `MMG_PVP_RELAY_URL`. Deploy this worker, copy the hostname Wrangler prints, then set that constant before shipping the frontend. A client with no relay URL refuses to open a room and says so.
+`pvp-peer.js` sets `MMG_PVP_RELAY_URL` to `wss://math-monster-pvp-relay.ayaxysew.workers.dev` (no path, no trailing slash). A client with that constant cleared refuses to open a room and says so.
 
 ## Routes
 
@@ -42,7 +42,7 @@ Wrangler serves `http://127.0.0.1:8787` and accepts WebSockets at `ws://127.0.0.
 <script>window.MMG_PVP_RELAY_URL = 'ws://127.0.0.1:8787';</script>
 ```
 
-Or temporarily set `MMG_PVP_RELAY_URL` in `pvp-peer.js`. Do not commit a live hostname.
+That window value overrides the constant for the local page only.
 
 ## Deploy
 
@@ -53,12 +53,10 @@ npx wrangler@4 login
 npx wrangler@4 deploy
 ```
 
-The first deploy applies the `v1` Durable Object migration in `wrangler.toml` (`RoomRelay`, SQLite-backed). Wrangler prints the live `https://…` hostname. The game needs the same host with the `wss://` scheme and no path (port 443), for example `https://math-monster-pvp-relay.<account>.workers.dev` becomes:
+The first deploy applies the `v1` Durable Object migration in `wrangler.toml` (`RoomRelay`, SQLite-backed). The live origin is already in `pvp-peer.js`:
 
 ```javascript
-var MMG_PVP_RELAY_URL = 'wss://math-monster-pvp-relay.<account>.workers.dev';
+var MMG_PVP_RELAY_URL = 'wss://math-monster-pvp-relay.ayaxysew.workers.dev';
 ```
 
-Put that in `pvp-peer.js` (the `MMG_PVP_RELAY_URL` constant). No `/room` suffix, no PeerJS key, no TURN server. The Pages site is https, so the constant must be `wss://`, not `ws://`.
-
-Leave the pull request unmerged until that constant points at the deployed worker. Merging the client with an empty URL makes 雲霄決鬥場 refuse to open rooms.
+No `/room` suffix and no trailing slash. The Pages site is https, so the constant stays `wss://`.

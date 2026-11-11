@@ -394,15 +394,16 @@ async function testClient(roomMod) {
         hostB.leave();
     }
 
-    const plain = loadClient({ rooms: new Map(), sockets: [] }, createMockWebSocket({ rooms: new Map(), sockets: [] }, roomMod), { relayUrl: '' });
+    const deployedWorld = { rooms: new Map(), sockets: [] };
+    const deployed = loadClient(deployedWorld, createMockWebSocket(deployedWorld, roomMod), { relayUrl: '' });
     try {
-        plain.api.createRoom();
-        assert(plain.el('pvp-lobby-msg').textContent.indexOf('未設定對戰中繼網址') !== -1, 'missing URL is honest');
-        assert(plain.debug().code === '', 'missing URL does not invent a room');
-        plain.api.joinRoom('AB3K');
-        assert(plain.el('pvp-lobby-msg').textContent.indexOf('未設定對戰中繼網址') !== -1, 'joining also refuses a missing URL');
+        deployed.api.createRoom();
+        await tick();
+        const deployedCode = deployed.debug().code;
+        assert(/^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{4}$/.test(deployedCode), 'an empty window override keeps the deployed constant, got ' + deployedCode);
+        assert(deployedWorld.sockets[0].url === 'wss://math-monster-pvp-relay.ayaxysew.workers.dev/room/' + deployedCode + '?role=host', 'host dials the deployed origin with no path suffix, got ' + deployedWorld.sockets[0].url);
     } finally {
-        plain.leave();
+        deployed.leave();
     }
 
     const badScheme = loadClient({ rooms: new Map(), sockets: [] }, createMockWebSocket({ rooms: new Map(), sockets: [] }, roomMod), { relayUrl: 'https://example.test/relay' });
@@ -438,7 +439,8 @@ async function testClient(roomMod) {
 }
 
 function testSources() {
-    assert(peerSrc.indexOf("var MMG_PVP_RELAY_URL = '';") !== -1, 'relay URL constant is empty');
+    assert(peerSrc.indexOf("var MMG_PVP_RELAY_URL = 'wss://math-monster-pvp-relay.ayaxysew.workers.dev';") !== -1, 'relay URL is the deployed wss origin');
+    assert(peerSrc.indexOf('未設定對戰中繼網址') !== -1, 'a cleared constant still explains a missing URL');
     assert(!/peerjs|new Peer\(|MMG_PVP_PEERJS|\bTURN\b|\bSTUN\b|WebRTC/i.test(peerSrc), 'client source has no PeerJS or TURN');
     assert(!/peerjs|PeerJS|\bTURN\b|\bNAT\b/.test(html), 'page has no PeerJS, TURN, or NAT wording');
     assert(!html.includes('unpkg.com/peerjs'), 'page does not load PeerJS');

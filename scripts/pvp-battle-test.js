@@ -375,8 +375,7 @@ assert(!/\.island-hotspot--locked\s*\{[^}]*opacity:\s*0\.55/.test(html), 'locked
 assert(html.indexOf('const STAR_TRAIL_BEASTS = []') === -1, 'star-trail roster is populated');
 assert(html.indexOf("'star-trail': { series: 'star-trail', open: true }") !== -1, 'star-trail pool is open');
 assert(peerSrc.indexOf('floor(自己 ATK × 1.8)') !== -1, 'damage formula stays documented in pvp-peer.js');
-assert(peerSrc.indexOf("var MMG_PVP_RELAY_URL = '';") !== -1, 'relay URL constant stays empty until deploy');
-assert(!/workers\.dev|wss:\/\/[a-z0-9.-]+\.[a-z]{2,}/i.test(peerSrc), 'client does not invent a live relay hostname');
+assert(peerSrc.indexOf("var MMG_PVP_RELAY_URL = 'wss://math-monster-pvp-relay.ayaxysew.workers.dev';") !== -1, 'relay URL is the deployed wss origin');
 assert(!/peerjs|new Peer\(|MMG_PVP_PEERJS|\bTURN\b|\bSTUN\b|WebRTC/i.test(peerSrc), '1v1 client no longer depends on PeerJS, STUN, or TURN');
 assert(peerSrc.indexOf('new WebSocket(') !== -1, '1v1 client opens a WebSocket');
 assert(peerSrc.indexOf('未設定對戰中繼網址') !== -1, 'missing relay URL tells the player');

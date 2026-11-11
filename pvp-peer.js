@@ -4,11 +4,10 @@
  * 對戰訊息經 wss（443）送到 Cloudflare Worker，再由 Durable Object
  * 轉去同一間房嘅對手。唔經點對點。部署步驟喺 relay/README.md。
  *
- * 填部署之後 Wrangler 印出嚟嘅來源（唔好加 /room，亦唔好估一個網址）：
- *   var MMG_PVP_RELAY_URL = 'wss://<wrangler-printed-host>';
- * 留空就開房時如實話俾玩家知未設定。本地 wrangler dev 可以喺載入本檔之前
+ * 正式中繼係下面 MMG_PVP_RELAY_URL：wss、無路徑、無尾斜線。
+ * 本地 wrangler dev 可以喺載入本檔之前
  * 設定 window.MMG_PVP_RELAY_URL = 'ws://127.0.0.1:8787'。
- * Pages 係 https，正式網址一定要 wss://。
+ * 如果個常數留空，開房時會話未設定。
  *
  * 傷害（房主計，再廣播 sync；客人介面以 sync 嘅 HP 作準）：
  * - 答啱先打到對手。
@@ -27,7 +26,7 @@
 (function () {
     'use strict';
 
-    var MMG_PVP_RELAY_URL = '';
+    var MMG_PVP_RELAY_URL = 'wss://math-monster-pvp-relay.ayaxysew.workers.dev';
     var CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
     var CODE_LEN = 4;
     var CONNECT_WAIT_MS = 12000;
