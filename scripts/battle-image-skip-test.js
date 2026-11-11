@@ -55,8 +55,38 @@ vm.runInContext(drawSrc + [
 ].join('\n'), ctx, { filename: 'battle-draw.js' });
 
 const bank = ctx.WORD_QUESTION_BANK;
-assert(Array.isArray(bank) && bank.length > 1000, 'question bank loaded');
+assert(Array.isArray(bank) && bank.length === 3826, 'question bank size changed: ' + bank.length);
 assert(ctx.BATTLE_UNSOLVABLE_BLACKLIST.length === 177, 'blacklist stays at the 177-id union');
+
+const gradeCounts = {};
+bank.forEach(q => { gradeCounts[q.grade] = (gradeCounts[q.grade] || 0) + 1; });
+assert(gradeCounts[1] === 256 && gradeCounts[2] === 322 && gradeCounts[3] === 246 && gradeCounts[4] === 390 && gradeCounts[5] === 2432 && gradeCounts[6] === 180,
+    'grade counts changed: ' + JSON.stringify(gradeCounts));
+const expectedG6 = [];
+for (let lesson = 1; lesson <= 9; lesson++) {
+    for (let n = 1; n <= 20; n++) expectedG6.push('6P_L0' + lesson + '_Q' + String(n).padStart(2, '0'));
+}
+const liveG6 = bank.filter(q => q.grade === 6);
+assert(liveG6.map(q => q.id).join(',') === expectedG6.join(','), 'live grade 6 is not the 180-question draft');
+assert(!bank.some(q => q.grade === 6 && /^6[AB]/.test(String(q.id || ''))), 'old grade-6 id still in the live bank');
+const longStemIds = ['6P_L06_Q13', '6P_L06_Q14', '6P_L07_Q17', '6P_L07_Q20', '6P_L08_Q16', '6P_L08_Q20'];
+longStemIds.forEach(id => {
+    const q = liveG6.find(item => item.id === id);
+    assert(q, 'missing long stem ' + id);
+    assert(ctx.questionStemLen(q) > 80, id + ' stem is not longer than 80');
+    assert(!ctx.questionHasAttachedImage(q), id + ' should not carry an image');
+});
+assert(!html.includes('GRADE6_ARCHIVED') && !html.includes('archives/grade6'), 'archive must not be loaded by index.html');
+['pvp-peer.js', 'unsolvable-blacklist.js', '數學試題庫.js'].forEach(name => {
+    const text = fs.readFileSync(path.join(root, name), 'utf8');
+    assert(!text.includes('GRADE6_ARCHIVED') && !text.includes('archives/grade6'), name + ' references the grade-6 archive');
+});
+assert(liveG6.every(q => !ctx.questionHasAttachedImage(q)), 'a live grade-6 question still has an image');
+const g6Eligible = liveG6.filter(ctx.battleQuestionEligible);
+assert(g6Eligible.length === 179, 'grade-6 drawable under battle eligibility: ' + g6Eligible.length);
+const g6Blocked = liveG6.filter(q => !ctx.battleQuestionEligible(q)).map(q => q.id);
+assert(g6Blocked.join(',') === '6P_L07_Q18', 'unexpected ineligible grade-6 ids: ' + g6Blocked.join(','));
+assert(ctx.questionRefsMissingImage(liveG6.find(q => q.id === '6P_L07_Q18')), '6P_L07_Q18 is excluded by the existing figure-stem rule');
 
 const fixture = [
     { id: 'plain', question: '3 + 4 = ?', options: ['7', '8'], answer: '7' },
@@ -121,6 +151,7 @@ let beforeEligible = 0;
 let afterEligible = 0;
 let shortEligible = 0;
 let mediumEligible = 0;
+const longEligible = [];
 const byPair = new Map();
 for (let i = 0; i < bank.length; i++) {
     const q = bank[i];
@@ -141,7 +172,7 @@ for (let i = 0; i < bank.length; i++) {
         const n = ctx.questionStemLen(q);
         if (n <= 55) shortEligible++;
         else if (n <= 80) mediumEligible++;
-        else assert(false, 'text question longer than 80: ' + q.id);
+        else longEligible.push(q.id);
     }
     const pairKey = 'G' + q.grade + '\t' + (q.unitKey || '(none)');
     if (!byPair.has(pairKey)) byPair.set(pairKey, { grade: q.grade, unitKey: q.unitKey || '(none)', before: 0, after: 0 });
@@ -149,11 +180,13 @@ for (let i = 0; i < bank.length; i++) {
     if (before) row.before++;
     if (after) row.after++;
 }
-assert(imageTruth === 1086, 'bank image count changed: ' + imageTruth);
-assert(imageAlreadyBl === 14, 'blacklisted image count changed: ' + imageAlreadyBl);
+assert(imageTruth === 908, 'bank image count changed: ' + imageTruth);
+assert(imageAlreadyBl === 9, 'blacklisted image count changed: ' + imageAlreadyBl);
 assert(skippedSolely === imageTruth - imageAlreadyBl, 'sole image skips should be every non-blacklisted image');
 assert(beforeEligible - skippedSolely === afterEligible, 'remaining eligible = previous eligible minus sole image skips');
-assert(shortEligible + mediumEligible === afterEligible, 'every remaining text question is within 80 characters');
+assert(shortEligible + mediumEligible + longEligible.length === afterEligible, 'eligible length buckets do not add up');
+assert(longEligible.join(',') === '6P_L06_Q13,6P_L06_Q14,6P_L07_Q17,6P_L07_Q20,6P_L08_Q16,6P_L08_Q20',
+    'long text questions changed: ' + longEligible.join(','));
 
 const filteredAll = ctx.filterBattleQuestionPool(bank);
 assert(filteredAll.every(q => !q.image && ctx.battleQuestionEligible(q)), 'full-bank filter still returns an image');
@@ -201,7 +234,7 @@ const battleNewlyEmpty = battleRows.filter(r => r.before > 0 && r.after === 0).m
 const battleAlreadyEmpty = battleRows.filter(r => r.before === 0 && r.after === 0).map(r => r.id);
 const battleNear = battleRows.filter(r => r.after > 0 && r.after < 3).map(r => r.id);
 assert(battleNewlyEmpty.join(',') === 'g1_u5,g2_u4,g3_u3,g4_u4', 'newly empty battle units changed: ' + battleNewlyEmpty.join(','));
-assert(battleAlreadyEmpty.join(',') === 'g2_u6,g4_u5,g5_u1', 'already empty battle units changed: ' + battleAlreadyEmpty.join(','));
+assert(battleAlreadyEmpty.join(',') === 'g2_u6,g4_u5,g5_u1,g6_u3,g6_u6,g6_u7', 'already empty battle units changed: ' + battleAlreadyEmpty.join(','));
 assert(battleNear.join(',') === 'g3_u6', 'near-empty battle units changed: ' + battleNear.join(','));
 
 ctx.usedWordQuestionIds = new Set();
@@ -224,6 +257,8 @@ battleRows.forEach(row => {
 
 const lines = [];
 lines.push('bank ' + bank.length);
+lines.push('grades ' + JSON.stringify(gradeCounts));
+lines.push('long_eligible ' + longEligible.join(','));
 lines.push('image_truthy ' + imageTruth);
 lines.push('image_already_blacklisted ' + imageAlreadyBl);
 lines.push('skipped_solely_by_image_rule ' + skippedSolely);
