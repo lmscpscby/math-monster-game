@@ -1,0 +1,37 @@
+{
+  "archived_at": "2026-11-12",
+  "reason": "更換五年級題庫：舊題先收藏，桌面 P5 八份工作紙作新草稿；尚未上架。此快照檔案日期為 2026-11-09；六年級已於 11-11 更換，本檔內舊 G6 不一併收藏。",
+  "count": 2432,
+  "source_file": "/workspace/imports/數學試題庫_live.js",
+  "source_file_note": "Nov 9 snapshot; G5=2432 is the current live Grade 5 set (unchanged when G6 was replaced). File total still includes pre-replace G6 and must not be treated as the current live-site total.",
+  "source_file_total": 5816,
+  "source_file_grade_counts": {
+    "5": 2432,
+    "6": 2170,
+    "1": 256,
+    "2": 322,
+    "3": 246,
+    "4": 390
+  },
+  "id_style": {
+    "old_docx": 2142,
+    "form_style": 290
+  },
+  "unitKey_counts": {
+    "general": 708,
+    "area": 390,
+    "fraction": 338,
+    "volume": 299,
+    "algebra": 245,
+    "decimal": 203,
+    "large_numbers": 146,
+    "circle": 63,
+    "time": 12,
+    "stats": 10,
+    "solid_cross_section": 8,
+    "speed": 6,
+    "volume_intro": 2,
+    "approx_estimate": 1,
+    "algebra_symbols_1": 1
+  }
+}

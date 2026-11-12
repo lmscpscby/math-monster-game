@@ -55,12 +55,12 @@ vm.runInContext(drawSrc + [
 ].join('\n'), ctx, { filename: 'battle-draw.js' });
 
 const bank = ctx.WORD_QUESTION_BANK;
-assert(Array.isArray(bank) && bank.length === 3826, 'question bank size changed: ' + bank.length);
+assert(Array.isArray(bank) && bank.length === 1554, 'question bank size changed: ' + bank.length);
 assert(ctx.BATTLE_UNSOLVABLE_BLACKLIST.length === 177, 'blacklist stays at the 177-id union');
 
 const gradeCounts = {};
 bank.forEach(q => { gradeCounts[q.grade] = (gradeCounts[q.grade] || 0) + 1; });
-assert(gradeCounts[1] === 256 && gradeCounts[2] === 322 && gradeCounts[3] === 246 && gradeCounts[4] === 390 && gradeCounts[5] === 2432 && gradeCounts[6] === 180,
+assert(gradeCounts[1] === 256 && gradeCounts[2] === 322 && gradeCounts[3] === 246 && gradeCounts[4] === 390 && gradeCounts[5] === 160 && gradeCounts[6] === 180,
     'grade counts changed: ' + JSON.stringify(gradeCounts));
 const expectedG6 = [];
 for (let lesson = 1; lesson <= 9; lesson++) {
@@ -76,11 +76,71 @@ longStemIds.forEach(id => {
     assert(ctx.questionStemLen(q) > 80, id + ' stem is not longer than 80');
     assert(!ctx.questionHasAttachedImage(q), id + ' should not carry an image');
 });
-assert(!html.includes('GRADE6_ARCHIVED') && !html.includes('archives/grade6'), 'archive must not be loaded by index.html');
+const expectedG5 = [];
+for (let lesson = 1; lesson <= 8; lesson++) {
+    for (let n = 1; n <= 20; n++) expectedG5.push('5P_L0' + lesson + '_Q' + String(n).padStart(2, '0'));
+}
+const liveG5 = bank.filter(q => q.grade === 5 || q.grade === '5');
+assert(liveG5.length === 160, 'live grade 5 count: ' + liveG5.length);
+assert(liveG5.map(q => q.id).join(',') === expectedG5.join(','), 'live grade 5 is not the 160-question draft');
+assert(liveG5.every(q => q.grade === 5), 'a grade-5 item is not numeric grade 5');
+assert(!bank.some(q => /^5(A|B|DA|DB)_/.test(String(q.id || '')) || /^5[AB]/.test(String(q.id || ''))), 'old grade-5 id still in the live bank');
+const g5UnitCounts = {};
+liveG5.forEach(q => { g5UnitCounts[q.unitKey] = (g5UnitCounts[q.unitKey] || 0) + 1; });
+assert(g5UnitCounts.large_numbers === 20 && g5UnitCounts.fraction === 60 && g5UnitCounts.decimal === 20
+    && g5UnitCounts.area === 20 && g5UnitCounts.solid_cross_section === 20 && g5UnitCounts.algebra === 20
+    && Object.keys(g5UnitCounts).length === 6,
+    'grade-5 unitKeys changed: ' + JSON.stringify(g5UnitCounts));
+assert(liveG5.filter(q => q.unitKey === 'solid_cross_section').every(q => q.topic === '立體圖形'), 'L07 retagged away from 立體圖形');
+assert(!liveG5.some(q => q.unitKey === 'volume' || q.unitKey === 'volume_intro'), 'a new grade-5 item is tagged volume');
+const g5LongStemIds = ['5P_L06_Q14', '5P_L06_Q20', '5P_L07_Q10', '5P_L07_Q20'];
+g5LongStemIds.forEach(id => {
+    const q = liveG5.find(item => item.id === id);
+    assert(q, 'missing long stem ' + id);
+    assert(ctx.questionStemLen(q) > 80, id + ' stem is not longer than 80');
+    assert(ctx.battleQuestionEligible(q), id + ' was hard-dropped');
+    assert(!ctx.questionHasAttachedImage(q), id + ' should not carry an image');
+});
+const g5FigureDescribedIds = ['5P_L06_Q13', '5P_L07_Q09', '5P_L07_Q10', '5P_L07_Q13', '5P_L07_Q20'];
+g5FigureDescribedIds.forEach(id => {
+    const q = liveG5.find(item => item.id === id);
+    assert(q, 'missing figure-described stem ' + id);
+    assert(!ctx.questionHasAttachedImage(q), id + ' should not carry an image');
+    assert(!ctx.questionStemExpectsFigure(q), id + ' is treated as a missing figure');
+    assert(ctx.battleQuestionEligible(q), id + ' is not battle-eligible');
+});
+const g5Preferred = ctx.filterBattleQuestionPool(liveG5);
+assert(g5Preferred.length === liveG5.filter(q => ctx.questionStemLen(q) <= 55).length, 'grade-5 short preference changed');
+g5LongStemIds.forEach(id => {
+    assert(!g5Preferred.some(q => q.id === id), id + ' left the short-stem preference and was dropped from the bank');
+});
+assert(!html.includes('GRADE6_ARCHIVED') && !html.includes('archives/grade6'), 'grade-6 archive must not be loaded by index.html');
+assert(!html.includes('GRADE5_ARCHIVED') && !html.includes('archives/grade5'), 'grade-5 archive must not be loaded by index.html');
 ['pvp-peer.js', 'unsolvable-blacklist.js', '數學試題庫.js'].forEach(name => {
     const text = fs.readFileSync(path.join(root, name), 'utf8');
     assert(!text.includes('GRADE6_ARCHIVED') && !text.includes('archives/grade6'), name + ' references the grade-6 archive');
+    assert(!text.includes('GRADE5_ARCHIVED') && !text.includes('archives/grade5'), name + ' references the grade-5 archive');
 });
+const g5ArchiveDir = path.join(root, 'archives/grade5_2026-11-12');
+['grade5_archived.js', 'grade5_archived.json', 'README.md', 'manifest.json'].forEach(name => {
+    assert(fs.existsSync(path.join(g5ArchiveDir, name)), 'missing grade-5 archive file ' + name);
+});
+const g5ArchiveCtx = { window: {} };
+vm.createContext(g5ArchiveCtx);
+vm.runInContext(fs.readFileSync(path.join(g5ArchiveDir, 'grade5_archived.js'), 'utf8'), g5ArchiveCtx, { filename: 'grade5_archived.js' });
+const g5Archived = g5ArchiveCtx.window.GRADE5_ARCHIVED_QUESTION_BANK;
+const g5ArchivedJson = JSON.parse(fs.readFileSync(path.join(g5ArchiveDir, 'grade5_archived.json'), 'utf8'));
+const g5Manifest = JSON.parse(fs.readFileSync(path.join(g5ArchiveDir, 'manifest.json'), 'utf8'));
+assert(Array.isArray(g5Archived) && g5Archived.length === 2432, 'grade-5 js archive count: ' + (g5Archived && g5Archived.length));
+assert(g5ArchivedJson.length === 2432 && g5Manifest.count === 2432, 'grade-5 json archive count drifted');
+assert(JSON.stringify(g5Archived) === JSON.stringify(g5ArchivedJson), 'grade-5 js and json archives differ');
+const liveIds = new Set(bank.map(q => q.id));
+assert(g5Archived.every(q => q.grade === 5 && !liveIds.has(q.id)), 'archived grade-5 id still in the live bank');
+assert(liveG5.every(q => !ctx.questionHasAttachedImage(q)), 'a live grade-5 question still has an image');
+const g5Eligible = liveG5.filter(ctx.battleQuestionEligible);
+assert(g5Eligible.length === 160, 'grade-5 drawable under battle eligibility: ' + g5Eligible.length);
+const g5Blocked = liveG5.filter(q => !ctx.battleQuestionEligible(q)).map(q => q.id);
+assert(g5Blocked.join(',') === '', 'unexpected ineligible grade-5 ids: ' + g5Blocked.join(','));
 assert(liveG6.every(q => !ctx.questionHasAttachedImage(q)), 'a live grade-6 question still has an image');
 const g6Eligible = liveG6.filter(ctx.battleQuestionEligible);
 assert(g6Eligible.length === 179, 'grade-6 drawable under battle eligibility: ' + g6Eligible.length);
@@ -180,12 +240,12 @@ for (let i = 0; i < bank.length; i++) {
     if (before) row.before++;
     if (after) row.after++;
 }
-assert(imageTruth === 908, 'bank image count changed: ' + imageTruth);
-assert(imageAlreadyBl === 9, 'blacklisted image count changed: ' + imageAlreadyBl);
+assert(imageTruth === 723, 'bank image count changed: ' + imageTruth);
+assert(imageAlreadyBl === 1, 'blacklisted image count changed: ' + imageAlreadyBl);
 assert(skippedSolely === imageTruth - imageAlreadyBl, 'sole image skips should be every non-blacklisted image');
 assert(beforeEligible - skippedSolely === afterEligible, 'remaining eligible = previous eligible minus sole image skips');
 assert(shortEligible + mediumEligible + longEligible.length === afterEligible, 'eligible length buckets do not add up');
-assert(longEligible.join(',') === '6P_L06_Q13,6P_L06_Q14,6P_L07_Q17,6P_L07_Q20,6P_L08_Q16,6P_L08_Q20',
+assert(longEligible.join(',') === '5P_L06_Q14,5P_L06_Q20,5P_L07_Q10,5P_L07_Q20,6P_L06_Q13,6P_L06_Q14,6P_L07_Q17,6P_L07_Q20,6P_L08_Q16,6P_L08_Q20',
     'long text questions changed: ' + longEligible.join(','));
 
 const filteredAll = ctx.filterBattleQuestionPool(bank);
