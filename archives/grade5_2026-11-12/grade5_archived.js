@@ -1,0 +1,36921 @@
+window.GRADE5_ARCHIVED_QUESTION_BANK = [
+  {
+    "id": "5A15N101a_01C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "235904",
+      "700000",
+      "200000",
+      "718325"
+    ],
+    "answer": "718325"
+  },
+  {
+    "id": "5A15N101a_02C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "200000",
+      "700000",
+      "235904",
+      "718325"
+    ],
+    "answer": "235904"
+  },
+  {
+    "id": "5A15N101a_03C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "235904",
+      "700000",
+      "5246178"
+    ],
+    "answer": "5246178"
+  },
+  {
+    "id": "5A15N101a_04C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "700000",
+      "1690537",
+      "235904"
+    ],
+    "answer": "1690537"
+  },
+  {
+    "id": "5A15N101a_05C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "700000",
+      "235904",
+      "35862146"
+    ],
+    "answer": "35862146"
+  },
+  {
+    "id": "5A15N101a_06C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "235904",
+      "700000",
+      "84205637"
+    ],
+    "answer": "84205637"
+  },
+  {
+    "id": "5A15N101a_07C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "700000",
+      "718325",
+      "437138968",
+      "235904"
+    ],
+    "answer": "437138968"
+  },
+  {
+    "id": "5A15N101a_08C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "235904",
+      "219530740",
+      "700000"
+    ],
+    "answer": "219530740"
+  },
+  {
+    "id": "5A15N101a_09C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 用中國數字表示以下各數的讀法。",
+    "options": [
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "六千零四十五萬"
+    ],
+    "answer": "三百六十二萬四千五百一十六"
+  },
+  {
+    "id": "5A15N101a_09C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 (a)3624516讀作 （ ）。",
+    "options": [
+      "四百七十三萬二千",
+      "六千零四十五萬",
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六"
+    ],
+    "answer": "五億一千八百二十三萬四千八百六十三"
+  },
+  {
+    "id": "5A15N101a_10C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 用中國數字表示以下各數的讀法。",
+    "options": [
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六",
+      "六千零四十五萬",
+      "四百七十三萬二千"
+    ],
+    "answer": "四百七十三萬二千"
+  },
+  {
+    "id": "5A15N101a_10C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 (a)4732000讀作 （ ）。",
+    "options": [
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六",
+      "六千零四十五萬"
+    ],
+    "answer": "六千零四十五萬"
+  },
+  {
+    "id": "5A15N101a_11C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 用中國數字表示以下各數的讀法。",
+    "options": [
+      "四百七十三萬二千",
+      "三百六十二萬四千五百一十六",
+      "九十一萬二千零六",
+      "五億一千八百二十三萬四千八百六十三"
+    ],
+    "answer": "九十一萬二千零六"
+  },
+  {
+    "id": "5A15N101a_11C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 (a)912006讀作 （ ）。",
+    "options": [
+      "五億一千八百二十三萬四千八百六十三",
+      "四百七十三萬二千",
+      "三百六十二萬四千五百一十六",
+      "八億四千五百九十四萬八千七百"
+    ],
+    "answer": "八億四千五百九十四萬八千七百"
+  },
+  {
+    "id": "5A15N101a_12C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 用中國數字表示以下各數的讀法。",
+    "options": [
+      "五千三百二十萬九千四百七十八",
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三"
+    ],
+    "answer": "五千三百二十萬九千四百七十八"
+  },
+  {
+    "id": "5A15N101a_12C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 (a)53209478讀作 （ ）。",
+    "options": [
+      "四百七十三萬二千",
+      "六億三千零八十四萬一千九百三十五",
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六"
+    ],
+    "answer": "六億三千零八十四萬一千九百三十五"
+  },
+  {
+    "id": "5A15N101a_13C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 用中國數字表示以下各數的讀法。",
+    "options": [
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "八千一百萬零二百八十四"
+    ],
+    "answer": "八千一百萬零二百八十四"
+  },
+  {
+    "id": "5A15N101a_13C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 (a)81000284讀作 （ ）。",
+    "options": [
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "七億七千三百萬四千六百四十",
+      "五億一千八百二十三萬四千八百六十三"
+    ],
+    "answer": "七億七千三百萬四千六百四十"
+  },
+  {
+    "id": "5A15N101a_14C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 用中國數字表示以下各數的讀法。",
+    "options": [
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六",
+      "二千零三十萬"
+    ],
+    "answer": "二千零三十萬"
+  },
+  {
+    "id": "5A15N101a_14C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字表示以下各數的讀法。 (a)20300000讀作 （ ）。",
+    "options": [
+      "一億三千六百七十萬八千零九十",
+      "三百六十二萬四千五百一十六",
+      "五億一千八百二十三萬四千八百六十三",
+      "四百七十三萬二千"
+    ],
+    "answer": "一億三千六百七十萬八千零九十"
+  },
+  {
+    "id": "5A15N101a_15C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字寫出40320509。 （ ）",
+    "options": [
+      "四千零三十二萬零五百零九",
+      "五億一千八百二十三萬四千八百六十三",
+      "四百七十三萬二千",
+      "三百六十二萬四千五百一十六"
+    ],
+    "answer": "四千零三十二萬零五百零九"
+  },
+  {
+    "id": "5A15N101a_16C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字寫出600741000。 （ ）",
+    "options": [
+      "六億零七十四萬一千",
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六"
+    ],
+    "answer": "六億零七十四萬一千"
+  },
+  {
+    "id": "5A15N101a_17C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字寫出93702005。 （ ）",
+    "options": [
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "九千三百七十萬二千零五"
+    ],
+    "answer": "九千三百七十萬二千零五"
+  },
+  {
+    "id": "5A15N101a_18C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字寫出592004800。 （ ）",
+    "options": [
+      "五億一千八百二十三萬四千八百六十三",
+      "四百七十三萬二千",
+      "五億九千二百萬四千八百",
+      "三百六十二萬四千五百一十六"
+    ],
+    "answer": "五億九千二百萬四千八百"
+  },
+  {
+    "id": "5A15N101a_19C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某網頁的瀏覽人次達654390000人次， 即 （ ） 人次。(用中國數字表示)",
+    "options": [
+      "五億一千八百二十三萬四千八百六十三",
+      "六億五千四百三十九萬",
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千"
+    ],
+    "answer": "六億五千四百三十九萬"
+  },
+  {
+    "id": "5A15N101a_20C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某交通工具上星期的載客量是245598740人次， 即 （ ） 人次。(用中國數字表示)",
+    "options": [
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "二億四千五百五十九萬八千七百四十",
+      "五億一千八百二十三萬四千八百六十三"
+    ],
+    "answer": "二億四千五百五十九萬八千七百四十"
+  },
+  {
+    "id": "5A15N101a_21C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某工廠全年共製造皮鞋100403503雙， 即 （ ） 雙。(用中國數字表示)",
+    "options": [
+      "四百七十三萬二千",
+      "五億一千八百二十三萬四千八百六十三",
+      "三百六十二萬四千五百一十六",
+      "一億零四十萬三千五百零三"
+    ],
+    "answer": "一億零四十萬三千五百零三"
+  },
+  {
+    "id": "5A15N101a_22C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某公司去年的營業額是898327000元， 即 （ ） 元。(用中國數字表示)",
+    "options": [
+      "三百六十二萬四千五百一十六",
+      "四百七十三萬二千",
+      "八億九千八百三十二萬七千",
+      "五億一千八百二十三萬四千八百六十三"
+    ],
+    "answer": "八億九千八百三十二萬七千"
+  },
+  {
+    "id": "5A15N101a_23C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 （ ）。 用阿拉伯數字表示以下各數的寫法。",
+    "options": [
+      "235904",
+      "718325",
+      "439752",
+      "700000"
+    ],
+    "answer": "439752"
+  },
+  {
+    "id": "5A15N101a_23C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 （ ）。 (a)四十三萬九千七百五十二寫作 （ ）。",
+    "options": [
+      "168924315",
+      "718325",
+      "700000",
+      "235904"
+    ],
+    "answer": "168924315"
+  },
+  {
+    "id": "5A15N101a_24C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 用阿拉伯數字表示以下各數的寫法。",
+    "options": [
+      "700000",
+      "6001483",
+      "235904",
+      "718325"
+    ],
+    "answer": "6001483"
+  },
+  {
+    "id": "5A15N101a_24C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 (a)六百萬一千四百八十三寫作 （ ）。",
+    "options": [
+      "243402562",
+      "235904",
+      "700000",
+      "718325"
+    ],
+    "answer": "243402562"
+  },
+  {
+    "id": "5A15N101a_25C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 用阿拉伯數字表示以下各數的寫法。",
+    "options": [
+      "59600104",
+      "718325",
+      "700000",
+      "235904"
+    ],
+    "answer": "59600104"
+  },
+  {
+    "id": "5A15N101a_25C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 (a)五千九百六十萬零一百零四寫作 （ ）。",
+    "options": [
+      "718325",
+      "235904",
+      "385640899",
+      "700000"
+    ],
+    "answer": "385640899"
+  },
+  {
+    "id": "5A15N101a_26C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 用阿拉伯數字表示以下各數的寫法。",
+    "options": [
+      "718325",
+      "700000",
+      "470900",
+      "235904"
+    ],
+    "answer": "470900"
+  },
+  {
+    "id": "5A15N101a_26C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字表示以下各數的寫法。 (a)四十七萬零九百寫作 （ ）。",
+    "options": [
+      "718325",
+      "700000",
+      "235904",
+      "923720000"
+    ],
+    "answer": "923720000"
+  },
+  {
+    "id": "5A15N101a_27C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字寫出「二千零六萬七千零四」。 （ ）",
+    "options": [
+      "718325",
+      "20067004",
+      "700000",
+      "235904"
+    ],
+    "answer": "20067004"
+  },
+  {
+    "id": "5A15N101a_28C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字寫出「八億五千零二十萬三千六百二十一」。 （ ）",
+    "options": [
+      "850203621",
+      "700000",
+      "718325",
+      "235904"
+    ],
+    "answer": "850203621"
+  },
+  {
+    "id": "5A15N101a_29C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字寫出「六千二百萬零八百三十四」。 （ ）",
+    "options": [
+      "718325",
+      "62000834",
+      "235904",
+      "700000"
+    ],
+    "answer": "62000834"
+  },
+  {
+    "id": "5A15N101a_30C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字寫出「一億零六百二十萬三千零五」。 （ ）",
+    "options": [
+      "235904",
+      "718325",
+      "700000",
+      "106203005"
+    ],
+    "answer": "106203005"
+  },
+  {
+    "id": "5A15N101a_31C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某暢銷書籍在全世界賣出五百七十萬九千二百零二本， 即 （ ） 本。(用阿拉伯數字表示)",
+    "options": [
+      "235904",
+      "718325",
+      "5709202",
+      "700000"
+    ],
+    "answer": "5709202"
+  },
+  {
+    "id": "5A15N101a_32C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "籌款節目共籌得善款三千二百五十三萬二千七百九十元， 即 （ ） 元。(用阿拉伯數字表示)",
+    "options": [
+      "700000",
+      "718325",
+      "32532790",
+      "235904"
+    ],
+    "answer": "32532790"
+  },
+  {
+    "id": "5A15N101a_33C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某城市的人口是一千五百三十四萬六千人， 即 （ ） 人。(用阿拉伯數字表示)",
+    "options": [
+      "235904",
+      "718325",
+      "700000",
+      "15346000"
+    ],
+    "answer": "15346000"
+  },
+  {
+    "id": "5A15N101a_34C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "直至2021年1月，菲律賓的人口是一億一千五百零二萬八千人， 即 （ ） 人。(用阿拉伯數字表示)",
+    "options": [
+      "235904",
+      "115028000",
+      "700000",
+      "718325"
+    ],
+    "answer": "115028000"
+  },
+  {
+    "id": "5A15N101a_35C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "某國家去年的人口是三億八千七百萬人， 即 （ ） 人。(用阿拉伯數字表示)",
+    "options": [
+      "718325",
+      "387000000",
+      "235904",
+      "700000"
+    ],
+    "answer": "387000000"
+  },
+  {
+    "id": "5A15N101a_36C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "700000",
+      "635417",
+      "235904",
+      "718325"
+    ],
+    "answer": "635417"
+  },
+  {
+    "id": "5A15N101a_37C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "235904",
+      "718325",
+      "700000",
+      "2681509"
+    ],
+    "answer": "2681509"
+  },
+  {
+    "id": "5A15N101a_38C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "700000",
+      "35524050",
+      "235904"
+    ],
+    "answer": "35524050"
+  },
+  {
+    "id": "5A15N101a_39C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "235904",
+      "512438671",
+      "718325",
+      "700000"
+    ],
+    "answer": "512438671"
+  },
+  {
+    "id": "5A15N101a_40C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "700000",
+      "235904",
+      "240385607"
+    ],
+    "answer": "240385607"
+  },
+  {
+    "id": "5A15N101a_41C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "235904",
+      "718325",
+      "700000",
+      "627057500"
+    ],
+    "answer": "627057500"
+  },
+  {
+    "id": "5A15N101a_42C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "718325",
+      "235904",
+      "700000",
+      "231400658"
+    ],
+    "answer": "231400658"
+  },
+  {
+    "id": "5A15N101a_43C_041N#num",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "203075806",
+      "235904",
+      "700000",
+      "718325"
+    ],
+    "answer": "203075806"
+  },
+  {
+    "id": "5A15N101a_44C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在125794563這個數中， 在125794563這個數中，",
+    "options": [
+      "700000",
+      "235904",
+      "200000",
+      "718325"
+    ],
+    "answer": "700000"
+  },
+  {
+    "id": "5A15N101a_44C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在125794563這個數中， (a)「（ ）」在十萬位，表示 （ ）。",
+    "options": [
+      "1",
+      "7",
+      "5",
+      "2"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A15N101a_44C_041N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在125794563這個數中， (b)「2」在 （ ） 位，表示 （ ）。",
+    "options": [
+      "20000000",
+      "235904",
+      "718325",
+      "700000"
+    ],
+    "answer": "20000000"
+  },
+  {
+    "id": "5A15N101a_45C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在605712348這個數中， 在605712348這個數中，",
+    "options": [
+      "5000000",
+      "718325",
+      "700000",
+      "235904"
+    ],
+    "answer": "5000000"
+  },
+  {
+    "id": "5A15N101a_45C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在605712348這個數中， (a)「（ ）」在百萬位，表示 （ ）。",
+    "options": [
+      "7",
+      "2",
+      "1",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A15N101a_45C_041N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在605712348這個數中， (b)「7」在 （ ） 位，表示 （ ）。",
+    "options": [
+      "235904",
+      "200000",
+      "718325",
+      "700000"
+    ],
+    "answer": "700000"
+  },
+  {
+    "id": "5A15N101a_46C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在574610283這個數中， 在574610283這個數中，",
+    "options": [
+      "235904",
+      "500000000",
+      "700000",
+      "718325"
+    ],
+    "answer": "500000000"
+  },
+  {
+    "id": "5A15N101a_46C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在574610283這個數中， (a)億位數字是 （ ），表示 （ ）。",
+    "options": [
+      "7",
+      "2",
+      "1",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A15N101a_46C_041N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在574610283這個數中， (b)（ ） 位數字是4，表示 （ ）。",
+    "options": [
+      "235904",
+      "700000",
+      "4000000",
+      "718325"
+    ],
+    "answer": "4000000"
+  },
+  {
+    "id": "5A15N101a_47C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在123456789這個數中， 在123456789這個數中，",
+    "options": [
+      "718325",
+      "235904",
+      "20000000",
+      "700000"
+    ],
+    "answer": "20000000"
+  },
+  {
+    "id": "5A15N101a_47C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在123456789這個數中， (a)千萬位數字是 （ ），表示 （ ）。",
+    "options": [
+      "2",
+      "7",
+      "1",
+      "5"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A15N101a_47C_041N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在123456789這個數中， (b)（ ） 位數字是1，表示 （ ）。",
+    "options": [
+      "235904",
+      "100000000",
+      "700000",
+      "718325"
+    ],
+    "answer": "100000000"
+  },
+  {
+    "id": "5A15N101a_48C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在982037465這個數中， 在982037465這個數中，",
+    "options": [
+      "700000",
+      "718325",
+      "900000000",
+      "235904"
+    ],
+    "answer": "900000000"
+  },
+  {
+    "id": "5A15N101a_48C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在982037465這個數中， (a)「（ ）」在億位，表示 （ ）。",
+    "options": [
+      "7",
+      "2",
+      "9",
+      "5"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A15N101a_48C_041N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在982037465這個數中， (b)「8」在 （ ） 位，表示 （ ）。",
+    "options": [
+      "235904",
+      "718325",
+      "700000",
+      "80000000"
+    ],
+    "answer": "80000000"
+  },
+  {
+    "id": "5A15N101a_49C_042N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在452637150這個數中， 在452637150這個數中，",
+    "options": [
+      "400000000",
+      "235904",
+      "718325",
+      "700000"
+    ],
+    "answer": "400000000"
+  },
+  {
+    "id": "5A15N101a_49C_042N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在452637150這個數中， (a)「（ ）」在億位，表示 （ ）。",
+    "options": [
+      "7",
+      "4",
+      "2",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A15N101a_49C_042N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在452637150這個數中， (b)「6」在 （ ） 位，表示 （ ）。",
+    "options": [
+      "700000",
+      "718325",
+      "235904",
+      "600000"
+    ],
+    "answer": "600000"
+  },
+  {
+    "id": "5A15N101a_54C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最小的六位數是 （ ）。",
+    "options": [
+      "700000",
+      "235904",
+      "718325",
+      "100000"
+    ],
+    "answer": "100000"
+  },
+  {
+    "id": "5A15N101a_55C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最小的八位數是 （ ）。",
+    "options": [
+      "718325",
+      "235904",
+      "700000",
+      "10000000"
+    ],
+    "answer": "10000000"
+  },
+  {
+    "id": "5A15N101a_56C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最大的七位數是 （ ）。",
+    "options": [
+      "718325",
+      "700000",
+      "235904",
+      "9999999"
+    ],
+    "answer": "9999999"
+  },
+  {
+    "id": "5A15N101a_57C_041N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最大的九位數是 （ ）。",
+    "options": [
+      "999999999",
+      "700000",
+      "718325",
+      "235904"
+    ],
+    "answer": "999999999"
+  },
+  {
+    "id": "5A15N101a_58C_042N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最小的七位奇數是 （ ）。",
+    "options": [
+      "700000",
+      "1000001",
+      "235904",
+      "718325"
+    ],
+    "answer": "1000001"
+  },
+  {
+    "id": "5A15N101a_59C_042N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最大的八位偶數是 （ ）。",
+    "options": [
+      "700000",
+      "99999998",
+      "235904",
+      "718325"
+    ],
+    "answer": "99999998"
+  },
+  {
+    "id": "5A15N101a_60C_042N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最大的六位數與最小的七位數相差 （ ）。",
+    "options": [
+      "1",
+      "2",
+      "7",
+      "5"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A15N101a_61C_042N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "最小的九位數與最大的八位數相差 （ ）。",
+    "options": [
+      "1",
+      "5",
+      "7",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A15N101a_62C_121N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 200001，200002，200003，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "700000",
+      "235904",
+      "200005",
+      "718325"
+    ],
+    "answer": "200005"
+  },
+  {
+    "id": "5A15N101a_63C_121N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 542300，542400，542500，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "235904",
+      "700000",
+      "542700",
+      "718325"
+    ],
+    "answer": "542700"
+  },
+  {
+    "id": "5A15N101a_64C_121N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 6253800，（ ），6255800，6256800，（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "718325",
+      "235904",
+      "6257800",
+      "700000"
+    ],
+    "answer": "6257800"
+  },
+  {
+    "id": "5A15N101a_65C_122N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 587000，588000，589000，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "718325",
+      "591000",
+      "700000",
+      "235904"
+    ],
+    "answer": "591000"
+  },
+  {
+    "id": "5A15N101a_66C_121N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 352471，352470，352469，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "718325",
+      "235904",
+      "700000",
+      "352468"
+    ],
+    "answer": "352468"
+  },
+  {
+    "id": "5A15N101a_67C_121N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 6324773，6324763，6324753，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "235904",
+      "700000",
+      "6324743",
+      "718325"
+    ],
+    "answer": "6324743"
+  },
+  {
+    "id": "5A15N101a_68C_121N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 754500，754000，（ ），（ ），752500 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "700000",
+      "753500",
+      "235904",
+      "718325"
+    ],
+    "answer": "753500"
+  },
+  {
+    "id": "5A15N101a_69C_122N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 8684000，8674000，8664000，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "235904",
+      "8654000",
+      "700000",
+      "718325"
+    ],
+    "answer": "8654000"
+  },
+  {
+    "id": "5A15N101a_70C_122N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 50000002，50000001，50000000，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "235904",
+      "700000",
+      "718325",
+      "49999999"
+    ],
+    "answer": "49999999"
+  },
+  {
+    "id": "5A15N101a_71C_122N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "依規律填一填，然後把答案圈起來。 624710，624510，624310，（ ），（ ） 這是（ 順數 / 倒數 ）。",
+    "options": [
+      "235904",
+      "718325",
+      "624110",
+      "700000"
+    ],
+    "answer": "624110"
+  },
+  {
+    "id": "5A15N101a_72C_061N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "(a)奇數：（ ）",
+    "options": [
+      "58422009",
+      "700000",
+      "235904",
+      "718325"
+    ],
+    "answer": "58422009"
+  },
+  {
+    "id": "5A15N101a_72C_061N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "(b)偶數：（ ）",
+    "options": [
+      "6320170",
+      "235904",
+      "700000",
+      "718325"
+    ],
+    "answer": "6320170"
+  },
+  {
+    "id": "5A15N101a_73C_061N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "(a)奇數：（ ）",
+    "options": [
+      "700000",
+      "47852023",
+      "718325",
+      "235904"
+    ],
+    "answer": "47852023"
+  },
+  {
+    "id": "5A15N101a_73C_061N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "(b)偶數：（ ）",
+    "options": [
+      "700000",
+      "235904",
+      "718325",
+      "2201545"
+    ],
+    "answer": "2201545"
+  },
+  {
+    "id": "5A15N101a_74C_061N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "(a)奇數：（ ）",
+    "options": [
+      "718325",
+      "235904",
+      "700000",
+      "57462015"
+    ],
+    "answer": "57462015"
+  },
+  {
+    "id": "5A15N101a_74C_061N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "(b)偶數：（ ）",
+    "options": [
+      "235904",
+      "718325",
+      "85478520",
+      "700000"
+    ],
+    "answer": "85478520"
+  },
+  {
+    "id": "5A15N101a_75C_051N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把 > 或 < 填在圈內。 把 > 或 < 填在圈內。",
+    "options": [
+      "7",
+      "718325",
+      "700000",
+      ">"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A15N101a_75C_051N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把 > 或 < 填在圈內。 (a) 296200 289920",
+    "options": [
+      "700000",
+      "718325",
+      "<",
+      "7"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A15N101a_76C_051N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把 > 或 < 填在圈內。 把 > 或 < 填在圈內。",
+    "options": [
+      "718325",
+      "<",
+      "700000",
+      "7"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A15N101a_76C_051N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把 > 或 < 填在圈內。 (a) 320178 3032541",
+    "options": [
+      "718325",
+      ">",
+      "700000",
+      "7"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A15N101a_77C_051N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把 > 或 < 填在圈內。 把 > 或 < 填在圈內。",
+    "options": [
+      "7",
+      "<",
+      "700000",
+      "718325"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A15N101a_77C_051N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把 > 或 < 填在圈內。 (a) 90000210 90002100",
+    "options": [
+      "718325",
+      "700000",
+      "7",
+      ">"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A15N101a_78C_111N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把206147、201674和2000476由大至小排列。 答案︰（ ），（ ），（ ） （最大） （最小）",
+    "options": [
+      "235904",
+      "2000476",
+      "718325",
+      "700000"
+    ],
+    "answer": "2000476"
+  },
+  {
+    "id": "5A15N101a_79C_111N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把3025000、2500030和300025由大至小排列。 答案︰（ ），（ ），（ ） （最大） （最小）",
+    "options": [
+      "235904",
+      "718325",
+      "3025000",
+      "700000"
+    ],
+    "answer": "3025000"
+  },
+  {
+    "id": "5A15N101a_80C_111N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把630147、301476和360741由小至大排列。 答案︰（ ），（ ），（ ） （最小） （最大）",
+    "options": [
+      "700000",
+      "630147",
+      "718325",
+      "235904"
+    ],
+    "answer": "630147"
+  },
+  {
+    "id": "5A15N101a_81C_111N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把8014785、7814085和8014587由小至大排列。 答案︰（ ），（ ），（ ） （最小） （最大）",
+    "options": [
+      "235904",
+      "718325",
+      "700000",
+      "8014785"
+    ],
+    "answer": "8014785"
+  },
+  {
+    "id": "5A15N101a_82C_112N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把以下各數由大至小排列出來。（答案以阿拉伯數字表示） 答案︰（ ），（ ），（ ） （最大） （最小）",
+    "options": [
+      "718325",
+      "235904",
+      "307000009",
+      "700000"
+    ],
+    "answer": "307000009"
+  },
+  {
+    "id": "5A15N101a_83C_112N",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把以下各數由大至小排列出來。（答案以阿拉伯數字表示） 答案︰（ ），（ ），（ ） （最大） （最小）",
+    "options": [
+      "四百七十三萬二千",
+      "三百六十二萬四千五百一十六",
+      "九百六十三萬四千",
+      "五億一千八百二十三萬四千八百六十三"
+    ],
+    "answer": "九百六十三萬四千"
+  },
+  {
+    "id": "5A15N101a_84C_042N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "利用以下六張數卡組成指定的六位數，把答案填在橫線上。 利用以下六張數卡組成指定的六位數，把答案填在橫線上。",
+    "options": [
+      "6",
+      "5",
+      "2",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A15N101a_84C_042N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "利用以下六張數卡組成指定的六位數，把答案填在橫線上。 (a)最小的六位數：（ ）",
+    "options": [
+      "7",
+      "3",
+      "2",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A15N101a_84C_042N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "利用以下六張數卡組成指定的六位數，把答案填在橫線上。 (b)最大的六位奇數：（ ）",
+    "options": [
+      "7",
+      "2",
+      "5",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A15N101a_85C_042N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "利用以下八張數卡組成指定的八位數，把答案填在橫線上。 利用以下八張數卡組成指定的八位數，把答案填在橫線上。",
+    "options": [
+      "5",
+      "1",
+      "2",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A15N101a_85C_042N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "利用以下八張數卡組成指定的八位數，把答案填在橫線上。 (a)最大的八位奇數：（ ）",
+    "options": [
+      "7",
+      "2",
+      "5",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A15N101a_85C_042N#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "利用以下八張數卡組成指定的八位數，把答案填在橫線上。 (b)最小的八位偶數：（ ）",
+    "options": [
+      "5",
+      "9",
+      "7",
+      "2"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A15N101a_86C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "（ ） (a)上面的數中，所有比500000大的奇數有： （ ）",
+    "options": [
+      "718325",
+      "235904",
+      "850020",
+      "700000"
+    ],
+    "answer": "850020"
+  },
+  {
+    "id": "5A15N101a_86C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "（ ） (b)上面的數中，比六十萬大，但比九十萬小的數有 （ ） 個。",
+    "options": [
+      "235904",
+      "700000",
+      "718325",
+      "458713"
+    ],
+    "answer": "458713"
+  },
+  {
+    "id": "5A15N101a_87C_041N#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "（ ） (a)上面的數中，所有比一千萬大的偶數有： （ ）",
+    "options": [
+      "235904",
+      "700000",
+      "6301478",
+      "718325"
+    ],
+    "answer": "6301478"
+  },
+  {
+    "id": "5A15N101a_87C_041N#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "（ ） (b)上面的數中，比五百萬大，但比七百萬小的數有 （ ） 個。",
+    "options": [
+      "700000",
+      "852014",
+      "235904",
+      "718325"
+    ],
+    "answer": "852014"
+  },
+  {
+    "id": "5A15N101f_01C_041P#a",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在3054480這個數中， 在3054480這個數中，",
+    "options": [
+      "3",
+      "5",
+      "2",
+      "7"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A15N101f_01C_041P#b",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在3054480這個數中， (a)「（ ）」在百萬位，表示的數值是 （ ）。",
+    "options": [
+      "718325",
+      "3000000",
+      "700000",
+      "235904"
+    ],
+    "answer": "3000000"
+  },
+  {
+    "id": "5A15N101f_01C_041P#c",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "在3054480這個數中， (b)兩個「4」表示的數值相差 （ ）。",
+    "options": [
+      "718325",
+      "235904",
+      "3600",
+      "700000"
+    ],
+    "answer": "3600"
+  },
+  {
+    "id": "5A15N101f_02C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用阿拉伯數字寫出「五億零二百六十萬三千零九」。 （ ）",
+    "options": [
+      "700000",
+      "718325",
+      "502603009",
+      "235904"
+    ],
+    "answer": "502603009"
+  },
+  {
+    "id": "5A15N101f_03C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用中國數字寫出86500000。 （ ）",
+    "options": [
+      "五億一千八百二十三萬四千八百六十三",
+      "四百七十三萬二千",
+      "八千六百五十萬",
+      "三百六十二萬四千五百一十六"
+    ],
+    "answer": "八千六百五十萬"
+  },
+  {
+    "id": "5A15N101f_04C_111P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "把以下各數由小至大排列。 7208723217099498230 （ ），（ ），（ ） （最小）（最大）",
+    "options": [
+      "235904",
+      "3217099",
+      "718325",
+      "700000"
+    ],
+    "answer": "3217099"
+  },
+  {
+    "id": "5A15N101f_05C_112P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "100000004最少要減去多少才是一個八位數？ （ ）",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A15N101f_06C_112P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用上面的數卡組成三個大於「七百八十萬」的七位奇數，並把它們由大 至小排列出來。 （ ），（ ），（ ） （最大）（最小）",
+    "options": [
+      "或其他合理答案。",
+      "700000",
+      "718325",
+      "235904"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A15N101f_15C_082P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用以上六張數卡組成一個最大的六位奇數，這個奇數是甚麼？",
+    "options": [
+      "876031",
+      "876103",
+      "876301",
+      "876310"
+    ],
+    "answer": "876031"
+  },
+  {
+    "id": "5A15N101f_16C_082P",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "c_5A15N101a.docx",
+    "topic": "5A15N101a  多位數",
+    "question": "用以上八張數卡組成一個最小的八位偶數，這個偶數是甚麼？",
+    "options": [
+      "10356792",
+      "10235796",
+      "12356790",
+      "10235679"
+    ],
+    "answer": "10235679"
+  },
+  {
+    "id": "5A15N102a_01C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把65214取近似值至百位是 （ ）。",
+    "options": [
+      "65200",
+      "457000",
+      "100000",
+      "56000"
+    ],
+    "answer": "65200"
+  },
+  {
+    "id": "5A15N102a_02C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把55748取近似值至千位是 （ ）。",
+    "options": [
+      "100000",
+      "65200",
+      "457000",
+      "56000"
+    ],
+    "answer": "56000"
+  },
+  {
+    "id": "5A15N102a_03C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把99100取近似值至萬位是 （ ）。",
+    "options": [
+      "100000",
+      "65200",
+      "457000",
+      "56000"
+    ],
+    "answer": "100000"
+  },
+  {
+    "id": "5A15N102a_04C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把456789取近似值至千位是 （ ）。",
+    "options": [
+      "65200",
+      "457000",
+      "56000",
+      "100000"
+    ],
+    "answer": "457000"
+  },
+  {
+    "id": "5A15N102a_05C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把125678取近似值至萬位是 （ ）。",
+    "options": [
+      "65200",
+      "130000",
+      "56000",
+      "100000"
+    ],
+    "answer": "130000"
+  },
+  {
+    "id": "5A15N102a_06C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把832547取近似值至十萬位是 （ ）。",
+    "options": [
+      "100000",
+      "65200",
+      "800000",
+      "56000"
+    ],
+    "answer": "800000"
+  },
+  {
+    "id": "5A15N102a_07C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把970023取近似值至十萬位是 （ ）。",
+    "options": [
+      "65200",
+      "100000",
+      "56000",
+      "1000000"
+    ],
+    "answer": "1000000"
+  },
+  {
+    "id": "5A15N102a_08C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把1030400取近似值至十萬位是 （ ）。",
+    "options": [
+      "100000",
+      "1000000",
+      "65200",
+      "56000"
+    ],
+    "answer": "1000000"
+  },
+  {
+    "id": "5A15N102a_09C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把5832698取近似值至百萬位是 （ ）。",
+    "options": [
+      "6000000",
+      "65200",
+      "100000",
+      "56000"
+    ],
+    "answer": "6000000"
+  },
+  {
+    "id": "5A15N102a_10C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把9534701取近似值至百萬位是 （ ）。",
+    "options": [
+      "100000",
+      "65200",
+      "56000",
+      "10000000"
+    ],
+    "answer": "10000000"
+  },
+  {
+    "id": "5A15N102a_11C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把39471542取近似值至萬位是 （ ）。",
+    "options": [
+      "39470000",
+      "65200",
+      "100000",
+      "56000"
+    ],
+    "answer": "39470000"
+  },
+  {
+    "id": "5A15N102a_12C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把62859670取近似值至十萬位是 （ ）。",
+    "options": [
+      "62900000",
+      "100000",
+      "65200",
+      "56000"
+    ],
+    "answer": "62900000"
+  },
+  {
+    "id": "5A15N102a_13C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把84783324取近似值至百萬位是 （ ）。",
+    "options": [
+      "56000",
+      "100000",
+      "85000000",
+      "65200"
+    ],
+    "answer": "85000000"
+  },
+  {
+    "id": "5A15N102a_14C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把39995234取近似值至萬位是 （ ）。",
+    "options": [
+      "65200",
+      "40000000",
+      "56000",
+      "100000"
+    ],
+    "answer": "40000000"
+  },
+  {
+    "id": "5A15N102a_15C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把96100863取近似值至千萬位是 （ ）。",
+    "options": [
+      "130000",
+      "100000000",
+      "100000",
+      "457000"
+    ],
+    "answer": "100000000"
+  },
+  {
+    "id": "5A15N102a_16C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把632154791取近似值至十萬位是 （ ）。",
+    "options": [
+      "130000",
+      "632200000",
+      "100000",
+      "457000"
+    ],
+    "answer": "632200000"
+  },
+  {
+    "id": "5A15N102a_17C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把432801795取近似值至億位是 （ ）。",
+    "options": [
+      "400000000",
+      "100000",
+      "457000",
+      "130000"
+    ],
+    "answer": "400000000"
+  },
+  {
+    "id": "5A15N102a_18C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把778625354取近似值至億位是 （ ）。",
+    "options": [
+      "800000000",
+      "457000",
+      "100000",
+      "130000"
+    ],
+    "answer": "800000000"
+  },
+  {
+    "id": "5A15N102a_19C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把996000014取近似值至千萬位是 （ ）。",
+    "options": [
+      "1000000000",
+      "10000000",
+      "6000000",
+      "1000000"
+    ],
+    "answer": "1000000000"
+  },
+  {
+    "id": "5A15N102a_20C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "把999996852取近似值至萬位是 （ ）。",
+    "options": [
+      "10000000",
+      "1000000000",
+      "6000000",
+      "1000000"
+    ],
+    "answer": "1000000000"
+  },
+  {
+    "id": "5A15N102a_28C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "直至2020年1月，香港的人口約是7500700人，即約有 （ ） 人。(取近似值至萬位)",
+    "options": [
+      "7500000",
+      "65200",
+      "100000",
+      "56000"
+    ],
+    "answer": "7500000"
+  },
+  {
+    "id": "5A15N102a_29C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "直至2021年1月，日本的人口約是125570000人，即約有 （ ） 人。(取近似值至十萬位)",
+    "options": [
+      "457000",
+      "100000",
+      "130000",
+      "125600000"
+    ],
+    "answer": "125600000"
+  },
+  {
+    "id": "5A15N102a_30C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "直至2020年6月，加拿大的人口約是38114000人，即約有 （ ） 人。(取近似值至百萬位)",
+    "options": [
+      "100000",
+      "56000",
+      "38000000",
+      "65200"
+    ],
+    "answer": "38000000"
+  },
+  {
+    "id": "5A15N102a_31C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "某暢銷書籍在全世界賣出242577523冊，即約賣出書籍（ ） 冊。(取近似值至萬位)",
+    "options": [
+      "100000",
+      "457000",
+      "130000",
+      "242580000"
+    ],
+    "answer": "242580000"
+  },
+  {
+    "id": "5A15N102a_32C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "某交通工具上星期的載客量是854348427人次，即約 （ ） 人次。(取近似值至萬位)",
+    "options": [
+      "100000",
+      "854350000",
+      "457000",
+      "130000"
+    ],
+    "answer": "854350000"
+  },
+  {
+    "id": "5A15N102a_33C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "籌款節目共籌得善款24565858元，即籌得約 （ ） 元。(取近似值至十萬位)",
+    "options": [
+      "56000",
+      "24600000",
+      "65200",
+      "100000"
+    ],
+    "answer": "24600000"
+  },
+  {
+    "id": "5A15N102a_34C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "公司全年的營業額是587665254元，即約 （ ） 元。 (取近似值至億位)",
+    "options": [
+      "600000000",
+      "457000",
+      "100000",
+      "130000"
+    ],
+    "answer": "600000000"
+  },
+  {
+    "id": "5A15N102a_35C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102a.docx",
+    "topic": "5A15N102a  近似值",
+    "question": "網頁的瀏覽人次達67525100人次，即約 （ ） 人次。 (取近似值至萬位)",
+    "options": [
+      "100000",
+      "56000",
+      "67530000",
+      "65200"
+    ],
+    "answer": "67530000"
+  },
+  {
+    "id": "5A15N102b_01C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 估計下面圓點的數量。",
+    "options": [
+      "40",
+      "12",
+      "8",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A15N102b_01C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 (a)把圓點平均分成 （ ） 份。",
+    "options": [
+      "8",
+      "12",
+      "40",
+      "5"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A15N102b_01C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 (b)其中一份有圓點 （ ） 個。",
+    "options": [
+      "5",
+      "40",
+      "8",
+      "或 7"
+    ],
+    "answer": "或 7"
+  },
+  {
+    "id": "5A15N102b_02C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 估計下面圓點的數量。",
+    "options": [
+      "40",
+      "12",
+      "5",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A15N102b_02C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 (a)把圓點平均分成 （ ） 份。",
+    "options": [
+      "或 11",
+      "或 7",
+      "40",
+      "或 35"
+    ],
+    "answer": "或 11"
+  },
+  {
+    "id": "5A15N102b_02C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 (b)其中一份有圓點 （ ） 個。",
+    "options": [
+      "12",
+      "5",
+      "8",
+      "40"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A15N102b_03C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 估計下面圓點的數量。",
+    "options": [
+      "8",
+      "5",
+      "6",
+      "40"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A15N102b_03C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 (a)把圓點平均分成 （ ） 份。",
+    "options": [
+      "40",
+      "或 14",
+      "或 7",
+      "或 35"
+    ],
+    "answer": "或 14"
+  },
+  {
+    "id": "5A15N102b_03C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 (b)其中一份有圓點 （ ） 個。",
+    "options": [
+      "15",
+      "5",
+      "40",
+      "8"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5A15N102b_04C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面星星的數量。 估計下面星星的數量。",
+    "options": [
+      "10",
+      "8",
+      "40",
+      "5"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A15N102b_04C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面星星的數量。 (a)把星星平均分成 （ ） 份。",
+    "options": [
+      "或 35",
+      "或 7",
+      "40",
+      "或 11"
+    ],
+    "answer": "或 11"
+  },
+  {
+    "id": "5A15N102b_04C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面星星的數量。 (b)其中一份有星星 （ ） 顆。",
+    "options": [
+      "100",
+      "8",
+      "40",
+      "5"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5A15N102b_05C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面星星的數量。 估計下面星星的數量。",
+    "options": [
+      "5",
+      "20",
+      "40",
+      "8"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5A15N102b_05C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面星星的數量。 (a)把星星平均分成 （ ） 份。",
+    "options": [
+      "或 7",
+      "8",
+      "或 5",
+      "5"
+    ],
+    "answer": "或 5"
+  },
+  {
+    "id": "5A15N102b_05C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面星星的數量。 (b)其中一份有星星 （ ） 顆。",
+    "options": [
+      "5",
+      "4",
+      "8",
+      "40"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A15N102b_06C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面方塊的數量。 上圖約有方塊 （ ） 個。 估計下面方塊的數量。",
+    "options": [
+      "40",
+      "或 35",
+      "按實際情況作答。",
+      "或 7"
+    ],
+    "answer": "按實際情況作答。"
+  },
+  {
+    "id": "5A15N102b_06C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面方塊的數量。 上圖約有方塊 （ ） 個。 (a)把上圖平均分成 （ ） 份，並畫線表示。",
+    "options": [
+      "8",
+      "40",
+      "5",
+      "12"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A15N102b_06C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面方塊的數量。 上圖約有方塊 （ ） 個。 (b)其中一份有方塊 （ ） 個。",
+    "options": [
+      "5",
+      "8",
+      "12",
+      "40"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A15N102b_07C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 上圖約有圓點 （ ） 個。 估計下面圓點的數量。",
+    "options": [
+      "40",
+      "按實際情況作答。",
+      "或 7",
+      "或 35"
+    ],
+    "answer": "按實際情況作答。"
+  },
+  {
+    "id": "5A15N102b_07C_041N#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 上圖約有圓點 （ ） 個。 (a)把上圖平均分成 （ ） 份，並畫線表示。",
+    "options": [
+      "8",
+      "10",
+      "5",
+      "40"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A15N102b_07C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面圓點的數量。 上圖約有圓點 （ ） 個。 (b)其中一份有圓點 （ ） 個。",
+    "options": [
+      "12",
+      "40",
+      "5",
+      "8"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A15N102b_12C_041N#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "12",
+      "100",
+      "96",
+      "40"
+    ],
+    "answer": "100",
+    "image": "q-images/5A15N102b_12C_041N__num.webp"
+  },
+  {
+    "id": "5A15N102b_13C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "校務處職員正在點算環保紙。 較高的一疊環保紙約有 （ ） 張。",
+    "options": [
+      "40",
+      "或 35",
+      "或 7",
+      "有500張"
+    ],
+    "answer": "有500張"
+  },
+  {
+    "id": "5A15N102b_14C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "校務處職員正在點算環保紙。 較高的一疊環保紙約有 （ ） 張。",
+    "options": [
+      "或 35",
+      "或 7",
+      "40",
+      "有300張"
+    ],
+    "answer": "有300張"
+  },
+  {
+    "id": "5A15N102b_15C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "收銀員正在點算紙幣。 較高的一疊紙幣約有 （ ） 張。",
+    "options": [
+      "40",
+      "有100張",
+      "或 35",
+      "或 7"
+    ],
+    "answer": "有100張"
+  },
+  {
+    "id": "5A15N102b_16C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "收銀員正在點算紙幣。 較高的一疊紙幣約有 （ ） 張。",
+    "options": [
+      "或 35",
+      "40",
+      "或 7",
+      "有50張"
+    ],
+    "answer": "有50張"
+  },
+  {
+    "id": "5A15N102b_17C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "職員正在點算紙碟。 較高的一疊紙碟約有 （ ） 個。",
+    "options": [
+      "或 35",
+      "或 7",
+      "有100個",
+      "40"
+    ],
+    "answer": "有100個"
+  },
+  {
+    "id": "5A15N102b_18C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "職員正在點算紙碟。 右面兩疊紙碟約共有 （ ） 個。",
+    "options": [
+      "有200個",
+      "或 35",
+      "或 7",
+      "40"
+    ],
+    "answer": "有200個"
+  },
+  {
+    "id": "5A15N102b_19C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是設計師以圖案設計出的圖書的其中一頁，全書有50頁。估計這本書約有圖案多少個。 (a)這頁有 （ ） 行圖案。",
+    "options": [
+      "40",
+      "或 35",
+      "或 7",
+      "或 11"
+    ],
+    "answer": "或 11"
+  },
+  {
+    "id": "5A15N102b_19C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是設計師以圖案設計出的圖書的其中一頁，全書有50頁。估計這本書約有圖案多少個。 (b)其中一行有圖案 （ ） 個。",
+    "options": [
+      "8",
+      "40",
+      "5",
+      "12"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A15N102b_20C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是設計師以圖案設計出的圖書的其中一頁，全書有80頁。估計這本書約有圖案多少個。 (a)這頁有 （ ） 行圖案。",
+    "options": [
+      "或 7",
+      "40",
+      "或 35",
+      "或 14"
+    ],
+    "answer": "或 14"
+  },
+  {
+    "id": "5A15N102b_20C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是設計師以圖案設計出的圖書的其中一頁，全書有80頁。估計這本書約有圖案多少個。 (b)其中一行有圖案 （ ） 個。",
+    "options": [
+      "5",
+      "40",
+      "8",
+      "15"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5A15N102b_21C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是圖書《青蛙王子》的其中一頁，全書有16頁。估計這本書約有文字多少個。 (a)這頁有 （ ） 行文字。",
+    "options": [
+      "5",
+      "12",
+      "40",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A15N102b_21C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是圖書《青蛙王子》的其中一頁，全書有16頁。估計這本書約有文字多少個。 (b)其中一行有文字 （ ） 個。(包括標點符號)",
+    "options": [
+      "或 9",
+      "5",
+      "8",
+      "或 7"
+    ],
+    "answer": "或 9"
+  },
+  {
+    "id": "5A15N102b_22C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是圖書《十二兄弟》的其中一頁，全書有18頁。估計這本書約有文字多少個。 (a)這頁有 （ ） 行文字。",
+    "options": [
+      "8",
+      "12",
+      "40",
+      "5"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A15N102b_22C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "下面是圖書《十二兄弟》的其中一頁，全書有18頁。估計這本書約有文字多少個。 (b)其中一行有文字 （ ） 個。(包括標點符號)",
+    "options": [
+      "或 35",
+      "40",
+      "或 7",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A15N102b_23C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面機械人的數量。 估計下面機械人的數量。",
+    "options": [
+      "或 7",
+      "按實際情況作答。",
+      "40",
+      "或 35"
+    ],
+    "answer": "按實際情況作答。"
+  },
+  {
+    "id": "5A15N102b_23C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面機械人的數量。 (a) 其中一層有機械人 （ ） 個。",
+    "options": [
+      "5",
+      "40",
+      "8",
+      "11"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5A15N102b_23C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A15N102b.docx",
+    "topic": "5A15N102b  大數量的估計",
+    "question": "估計下面機械人的數量。 (b) 上圖約有機械人 （ ） 個。",
+    "options": [
+      "40",
+      "5",
+      "8",
+      "44"
+    ],
+    "answer": "44",
+    "image": "q-images/5A15N102b_23C_041N__c.webp"
+  },
+  {
+    "id": "5A25N203a_01C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      ">",
+      "<",
+      "1",
+      "2"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_02C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      ">",
+      "<",
+      "2"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_03C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      "2",
+      ">",
+      "<"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_04C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      "2",
+      ">",
+      "<"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_05C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "<",
+      ">",
+      "2",
+      "1"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_06C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "2",
+      ">",
+      "<",
+      "1"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_07C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "<",
+      "2",
+      ">",
+      "1"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_08C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      ">",
+      "<",
+      "2"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_09C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      "2",
+      ">",
+      "<"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_10C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "<",
+      "2",
+      "1",
+      ">"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_11C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      ">",
+      "<",
+      "2"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_12C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "1",
+      "<",
+      ">",
+      "2"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_13C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 1",
+    "options": [
+      "<",
+      "2",
+      "1",
+      ">"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_14C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 2",
+    "options": [
+      ">",
+      "1",
+      "<",
+      "2"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_15C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 3",
+    "options": [
+      ">",
+      "1",
+      "2",
+      "<"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_16C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 1 2",
+    "options": [
+      "2",
+      ">",
+      "1",
+      "<"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_17C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。",
+    "options": [
+      "<",
+      ">",
+      "2",
+      "1"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_18C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 4 1",
+    "options": [
+      ">",
+      "<",
+      "2",
+      "1"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_19C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 1 1",
+    "options": [
+      ">",
+      "2",
+      "<",
+      "1"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_20C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 2 2",
+    "options": [
+      "1",
+      "<",
+      ">",
+      "2"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_21C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 3 3",
+    "options": [
+      "<",
+      "2",
+      "1",
+      ">"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_22C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 4 4",
+    "options": [
+      "<",
+      ">",
+      "2",
+      "1"
+    ],
+    "answer": "<"
+  },
+  {
+    "id": "5A25N203a_23C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在方格內填上 > 或 <。 5 5",
+    "options": [
+      ">",
+      "<",
+      "2",
+      "1"
+    ],
+    "answer": ">"
+  },
+  {
+    "id": "5A25N203a_56C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由小至大排列出來。 2 ， 2 ， 1 （ ） < （ ） < （ ）",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N203a_57C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由小至大排列出來。 3 ， 4 ， 3 （ ） < （ ） < （ ）",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N203a_58C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由大至小排列出來。 ， ， （ ） > （ ） > （ ）",
+    "options": [
+      "4",
+      "1",
+      "8",
+      "2"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N203a_59C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由大至小排列出來。 2 ， 2 ， 2 （ ） > （ ） > （ ）",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N203a_60C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由大至小排列出來。 4 ， 4 ， 4 （ ） > （ ） > （ ）",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N203a_61C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由小至大排列出來。 1 ， 1 ， 1 （ ） < （ ） < （ ）",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N203a_62C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各數由大至小排列出來。 4 ， 4 ， （ ） > （ ） > （ ）",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N203a_63C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各數由大至小排列出來。 ， 3 ， 3 （ ） > （ ） > （ ）",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N203a_64C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各數由大至小排列出來。 2 ， ， 1 （ ） > （ ） > （ ）",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N203a_65C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各數由大至小排列出來。 ， 3 ， 3 （ ） > （ ） > （ ）",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N203a_66C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各數由小至大排列出來。 ， 5 ， （ ） < （ ） < （ ）",
+    "options": [
+      "2",
+      "5",
+      "4",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N203a_67C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由小至大排列出來。 5 ， 5 ， （ ） < （ ） < （ ）",
+    "options": [
+      "2",
+      "1",
+      "5",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N203a_68C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由小至大排列出來。 6 ， ， 6 （ ） < （ ） < （ ）",
+    "options": [
+      "6",
+      "4",
+      "2",
+      "1"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N203a_69C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由小至大排列出來。 ， 7 ， 7 （ ） < （ ） < （ ）",
+    "options": [
+      "1",
+      "7",
+      "2",
+      "4"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N203a_73C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把三個分數由大至小排列如下： ， ， （最大）（最小） 空格裏的分數可能是 （ ）。（寫出其中一個可能答案）",
+    "options": [
+      "嘉寶",
+      "我吃了整塊朱古力的 。",
+      "11",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_74C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把三個分數由小至大排列如下： ， ， （最小）（最大） 空格裏的分數可能是 （ ）。（寫出兩個可能答案）",
+    "options": [
+      "我吃了整塊朱古力的 。",
+      "11",
+      "嘉寶",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_75C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把三個分數由小至大排列如下： ， ， （最小）（最大） 空格裏的分數可能是 （ ）。（寫出兩個可能答案）",
+    "options": [
+      "11",
+      "我吃了整塊朱古力的 。",
+      "或其他合理答案。",
+      "嘉寶"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_76C_052P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在空格內填上整數，使以下三個分數成為真分數，並由小至大排列。 ，， (最小)(最大)",
+    "options": [
+      "我吃了整塊朱古力的 。",
+      "嘉寶",
+      "或其他合理答案。",
+      "11"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_77C_052P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在空格內填上整數，使以下三個分數成為真分數，並由小至大排列。 ，， (最小)(最大)",
+    "options": [
+      "11",
+      "我吃了整塊朱古力的 。",
+      "嘉寶",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_78C_052P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在空格內填上整數，使以下三個分數成為真分數，並由大至小排列。 ，， (最大)(最小)",
+    "options": [
+      "11",
+      "或其他合理答案。",
+      "我吃了整塊朱古力的 。",
+      "嘉寶"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_79C_111P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "誰吃得最少朱古力及誰吃得最多？ （ ） 吃得最少，而 （ ） 吃得最多。",
+    "options": [
+      "我吃了整塊朱古力的 。",
+      "我喝了整盒果汁的 。",
+      "或其他合理答案。",
+      "= 1，牌子A的容量是"
+    ],
+    "answer": "我吃了整塊朱古力的 。"
+  },
+  {
+    "id": "5A25N203a_80C_111P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "誰喝得最少果汁及誰喝得最多？ （ ） 喝得最少，而 （ ） 喝得最多。",
+    "options": [
+      "我喝了整盒果汁的 。",
+      "或其他合理答案。",
+      "我吃了整塊朱古力的 。",
+      "11"
+    ],
+    "answer": "我喝了整盒果汁的 。"
+  },
+  {
+    "id": "5A25N203a_83C_111P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "把以下各分數由大至小排列出來。 3 ， 3 ， 答案︰（ ），（ ），（ ） （最大） （最小）",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N203a_84C_052P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "在空格內填上適當的整數。 比 小。",
+    "options": [
+      "11",
+      "我吃了整塊朱古力的 。",
+      "嘉寶",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_85C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "比 大。 (a) * 小於/ 等於 / 大於 2。（* 圈出答案）",
+    "options": [
+      "11",
+      "或其他合理答案。",
+      "嘉寶",
+      "我吃了整塊朱古力的 。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A25N203a_85C_122P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N203a.docx",
+    "topic": "",
+    "question": "比 大。 (b)在空格內填上適當的整數。 比 大。",
+    "options": [
+      "4",
+      "1",
+      "5",
+      "2"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N204a_12C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1",
+      "+ 1",
+      "3 + 2",
+      "4 + 2"
+    ],
+    "answer": "4 + 2"
+  },
+  {
+    "id": "5A25N204a_14C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2",
+      "4 + 2",
+      "2 + 1",
+      "+ 1"
+    ],
+    "answer": "3 + 2"
+  },
+  {
+    "id": "5A25N204a_15C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "1 + 7 = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1",
+      "+ 1",
+      "1 + 7",
+      "4 + 2"
+    ],
+    "answer": "1 + 7"
+  },
+  {
+    "id": "5A25N204a_16C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + 4 = （ ） = （ ） = （ ）",
+    "options": [
+      "4 + 4",
+      "2 + 1",
+      "+ 1",
+      "4 + 2"
+    ],
+    "answer": "4 + 4"
+  },
+  {
+    "id": "5A25N204a_17C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "+",
+      "1",
+      "3 +",
+      "2 + 1"
+    ],
+    "answer": "3 +"
+  },
+  {
+    "id": "5A25N204a_18C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "+ + = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1",
+      "+  +",
+      "+ 1",
+      "4 + 2"
+    ],
+    "answer": "+  +"
+  },
+  {
+    "id": "5A25N204a_21C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "1 + 1 + 2 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1",
+      "4 + 2",
+      "2 + 2",
+      "+ 1"
+    ],
+    "answer": "2 + 2"
+  },
+  {
+    "id": "5A25N204a_22C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 4 + 3 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "4 + 2",
+      "2 + 4 + 3",
+      "+ 1",
+      "2 + 1"
+    ],
+    "answer": "2 + 4 + 3"
+  },
+  {
+    "id": "5A25N204a_23C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "+ 1 + 2 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1",
+      "4 + 2",
+      "+ 1",
+      "+ 1 + 2"
+    ],
+    "answer": "+ 1 + 2"
+  },
+  {
+    "id": "5A25N204a_24C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + + 1 = （ ） = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "4 +  + 1",
+      "2 + 1",
+      "+ 1",
+      "4 + 2"
+    ],
+    "answer": "4 +  + 1"
+  },
+  {
+    "id": "5A25N204a_25C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 5 + = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "4 + 2",
+      "2 + 1",
+      "3 + 5 +",
+      "+ 1"
+    ],
+    "answer": "3 + 5 +"
+  },
+  {
+    "id": "5A25N204a_26C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 1 + 3 = （ ） = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1 + 3",
+      "2 + 1",
+      "+ 1",
+      "4 + 2"
+    ],
+    "answer": "2 + 1 + 3"
+  },
+  {
+    "id": "5A25N204a_27C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + 2 + 3 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "4 + 2 + 3",
+      "2 + 1",
+      "+ 1",
+      "4 + 2"
+    ],
+    "answer": "4 + 2 + 3"
+  },
+  {
+    "id": "5A25N204a_28C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "1 + 4 + 3 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1",
+      "4 + 2",
+      "1 + 4 + 3",
+      "+ 1"
+    ],
+    "answer": "1 + 4 + 3"
+  },
+  {
+    "id": "5A25N204a_29C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 1 + 1 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 + 1 + 1",
+      "2 + 1",
+      "4 + 2",
+      "+ 1"
+    ],
+    "answer": "2 + 1 + 1"
+  },
+  {
+    "id": "5A25N204a_55C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 1 + 1 = （ ）",
+    "options": [
+      "1",
+      "6",
+      "5",
+      "3"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N204a_56C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "1 + 3 + 2 = （ ）",
+    "options": [
+      "7",
+      "6",
+      "3",
+      "1"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N204a_57C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + 3 + 4 = （ ）",
+    "options": [
+      "1",
+      "11",
+      "6",
+      "3"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5A25N204a_61C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 1 + 2 = （ ）",
+    "options": [
+      "7",
+      "3",
+      "6",
+      "1"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N204a_62C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 1 + 1 = （ ）",
+    "options": [
+      "6",
+      "1",
+      "5",
+      "3"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N204a_63C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + 3 + 2 = （ ）",
+    "options": [
+      "3",
+      "1",
+      "10",
+      "6"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A25N204a_78C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 4 = ? 答案約是︰ （ ） + （ ） = （ ） 3 + 4 = （ ）",
+    "options": [
+      "8",
+      "6",
+      "1",
+      "3"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N204a_79C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 2 = ? 答案約是︰ （ ） + （ ） = （ ） 2 + 2 = （ ）",
+    "options": [
+      "1",
+      "5",
+      "6",
+      "3"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N204a_80C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "5 + 3 = ? 答案約是︰ （ ） + （ ） = （ ） 5 + 3 = （ ）",
+    "options": [
+      "9",
+      "3",
+      "6",
+      "1"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A25N204a_81C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 4 = ? 答案約是︰ （ ） + （ ） = （ ） 3 + 4 = （ ）",
+    "options": [
+      "8",
+      "3",
+      "1",
+      "6"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N204a_82C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 3 = ? 答案約是︰ （ ） + （ ） = （ ） 2 + 3 = （ ）",
+    "options": [
+      "3",
+      "7",
+      "1",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N204a_83C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "1 + 2 + 1 = ? 答案約是︰ （ ） + （ ） + （ ） = （ ） 1 + 2 + 1 = （ ）",
+    "options": [
+      "6",
+      "7",
+      "1",
+      "3"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N204a_84C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "2 + 1 + = ? 答案約是︰ （ ） + （ ） + （ ） = （ ） 2 + 1 + = （ ）",
+    "options": [
+      "3",
+      "7",
+      "1",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N204a_85C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 2 + 1 = ? 答案約是︰ （ ） + （ ） + （ ） = （ ） 3 + 2 + 1 = （ ）",
+    "options": [
+      "3",
+      "7",
+      "1",
+      "6"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N204a_86C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "4 + 2 + 1 = ? 答案約是︰ （ ） + （ ） + （ ） = （ ） 4 + 2 + 1 = （ ）",
+    "options": [
+      "8",
+      "6",
+      "3",
+      "1"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N204a_87C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204a.docx",
+    "topic": "",
+    "question": "3 + 1 + 2 = ? 答案約是︰ （ ） + （ ） + （ ） = （ ） 3 + 1 + 2 = （ ）",
+    "options": [
+      "7",
+      "1",
+      "3",
+      "6"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N204b_02C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "家中有橙汁 5 升和蘋果汁 升，這兩種果汁共有 升。",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N204b_03C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "詠欣昨天玩拼圖用了1 小時，今天玩拼圖用了2 小時。她兩天玩 拼圖共用了 小時。",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "6"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N204b_04C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "家裏原有牛奶 2 L，媽媽再購入 1 L。家裏現有牛奶 L。",
+    "options": [
+      "6",
+      "1",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N204b_05C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "哥哥昨天喝水1 升，今天比昨天多喝 升。他今天喝了水 升。",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "6"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N204b_07C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "偉文昨天圍繞運動場跑了1 圈，今天比昨天多跑2 圈，他今天圍繞 運動場跑了 圈。",
+    "options": [
+      "6",
+      "4",
+      "1",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N204b_08C_051P",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "教育小學上午的上課時間是2 小時，下午的上課時間是1 小時，而午膳時間是1 小時。教育小學每天的上課和午膳時間共 小時。",
+    "options": [
+      "6",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N204b_09C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "李小姐今天上午工作4 小時，午膳用去1 小時，下午再工作 4 小時。李小姐今天工作和午膳共用去 小時。",
+    "options": [
+      "3",
+      "1",
+      "6",
+      "10"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A25N204b_10C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "小巴司機駕駛2 小時，休息 小時，再駕駛1 小時。他駕駛和休息共用去 小時。",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N204b_11C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "舅母在凍肉店買了雞肉1 公斤、牛肉2 公斤和豬肉 公斤。 她共買了肉類 公斤。",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N204b_12C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "文俊的身高是1 米，哥哥比文俊高 米，爸爸又比哥哥高 米。 爸爸的身高是 米。",
+    "options": [
+      "3",
+      "6",
+      "1",
+      "4"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N204b_14C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "雪櫃裏有 升橙汁、1 升蘋果汁和 升牛奶。雪櫃裏共有果汁 升。",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "6"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N204b_15C_052P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "黃先生昨天上午工作3 小時，下午再工作5 小時，乘坐交通工具共 用去1 小時。黃先生昨天共工作了 小時。",
+    "options": [
+      "3",
+      "1",
+      "8",
+      "6"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N204b_16C_052P",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "育才小學上午的上課時間是3 小時，下午的上課時間是1 小時， 而午膳時間是1 小時。育才小學每天的上課時間共 小時。",
+    "options": [
+      "4",
+      "3",
+      "6",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N204b_17C_052P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "的士司機駕駛1 小時，午膳用去1 小時，再駕駛2 小時。他駕駛 共用去 小時。",
+    "options": [
+      "1",
+      "3",
+      "6",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N204b_18C_052P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "陳小姐有銀色絲帶4 米，金色絲帶比銀色絲帶長7 米。陳小姐共有 絲帶 米。",
+    "options": [
+      "3",
+      "6",
+      "16",
+      "1"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "5A25N204b_30C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "媽媽今天上午喝了水2 杯，下午喝了水4 杯，她今天共喝了水 多少杯？",
+    "options": [
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "2 + 4=2 + 4=6她今天共喝了水6 杯。"
+    ],
+    "answer": "2 + 4=2 + 4=6她今天共喝了水6 杯。"
+  },
+  {
+    "id": "5A25N204b_33C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "柏康喝了蘋果汁 升，子賢比柏康多喝 升。子賢喝了蘋果汁多少升？",
+    "options": [
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "+ = + =子賢喝了蘋果汁  升。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。"
+    ],
+    "answer": "+ = + =子賢喝了蘋果汁  升。"
+  },
+  {
+    "id": "5A25N204b_34C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "媽媽重55 公斤，爸爸比媽媽重5 公斤。爸爸重多少公斤？",
+    "options": [
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "55 + 5= 55 + 5= 60爸爸重60 公斤。"
+    ],
+    "answer": "55 + 5= 55 + 5= 60爸爸重60 公斤。"
+  },
+  {
+    "id": "5A25N204b_35C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "子欣去年重35 公斤，今年的體重比去年增加2 公斤。子欣今年重多少公斤？",
+    "options": [
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "35 + 2= 35 + 2= 37子欣今年重37 公斤。"
+    ],
+    "answer": "35 + 2= 35 + 2= 37子欣今年重37 公斤。"
+  },
+  {
+    "id": "5A25N204b_36C_031P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "慧欣買了兩個西瓜。第一個西瓜重4 kg，第二個西瓜比第一個重 1 kg，第二個西瓜重多少kg？",
+    "options": [
+      "1 + 1 + =1 + 1 + =2=2=3他在這三項活動共用去3 小時。",
+      "4 + 1=4 + 1=5第二個西瓜重5 kg。",
+      "+  + = +  + = + = + =三種顏色手工紙共佔全疊的 。",
+      "5 + 5 + 1=10 + 1=11 + 1=12他兩天買零食共用去12 元。"
+    ],
+    "answer": "4 + 1=4 + 1=5第二個西瓜重5 kg。"
+  },
+  {
+    "id": "5A25N204b_37C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "弟弟的身高是1 米，姊姊比弟弟高 米。姊姊的身高是多少米？",
+    "options": [
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "1 + = 1 + = 1姊姊的身高是1 米。"
+    ],
+    "answer": "1 + = 1 + = 1姊姊的身高是1 米。"
+  },
+  {
+    "id": "5A25N204b_39C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "弟弟高1 米，比哥哥矮 米，哥哥高多少米？",
+    "options": [
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "1 + =1 + =1哥哥高1 米。"
+    ],
+    "answer": "1 + =1 + =1哥哥高1 米。"
+  },
+  {
+    "id": "5A25N204b_40C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "哥哥吃去蛋糕 個後，餘下蛋糕 1 個。原有蛋糕多少個？",
+    "options": [
+      "+ 1= + 1=1=1原有蛋糕1 個。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。"
+    ],
+    "answer": "+ 1= + 1=1=1原有蛋糕1 個。"
+  },
+  {
+    "id": "5A25N204b_41C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "妹妹做手工用去絲帶2 米後，餘下絲帶1 米。原有絲帶多少米？",
+    "options": [
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "2 + 1=2 + 1=3原有絲帶3 米。"
+    ],
+    "answer": "2 + 1=2 + 1=3原有絲帶3 米。"
+  },
+  {
+    "id": "5A25N204b_42C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "弟弟喝去橙汁 升後，餘下橙汁1 升。原有橙汁多少升？",
+    "options": [
+      "+ 1= + 1=1原有橙汁1 升。",
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。"
+    ],
+    "answer": "+ 1= + 1=1原有橙汁1 升。"
+  },
+  {
+    "id": "5A25N204b_43C_032P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "義工原有10公斤食物，上午派發了4 公斤給老人院的長者，下午 派發了3 公斤給獨居長者，上午和下午共派發了食物多少公斤？",
+    "options": [
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "4 + 3=4 + 3=7上午和下午共派發了食物7 公斤。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。"
+    ],
+    "answer": "4 + 3=4 + 3=7上午和下午共派發了食物7 公斤。"
+  },
+  {
+    "id": "5A25N204b_44C_032P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "家中原有6升牛奶。爸爸喝去 升，弟弟喝去1 升。兩人共喝去牛奶多少升？",
+    "options": [
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。",
+      "+ 1= + 1=1兩人共喝去牛奶1 升。",
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。"
+    ],
+    "answer": "+ 1= + 1=1兩人共喝去牛奶1 升。"
+  },
+  {
+    "id": "5A25N204b_58C_121N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "自擬一道異分母分數加法應用題，並列式計算。（答案以最簡分數表示） 文傑上午上興趣班用去 小時，午膳用去 小時，下午再上興趣班用去 小時。他 （ ）？",
+    "options": [
+      "1 + 2=1 + 2=3他上興趣班共用去3 小時。",
+      "1 + 2=1 + 2=3媽媽共用去麪粉3 kg。",
+      "1 + 1=1 + 1=2=2兩個表演共長2 小時。",
+      "5 + 4=5 + 4=9兩天共跑了9 公里。"
+    ],
+    "answer": "1 + 2=1 + 2=3他上興趣班共用去3 小時。"
+  },
+  {
+    "id": "5A25N204b_59C_051P",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "某航班由A城飛往B城，用了4 小時，在B城逗留1 小時後，該航班用了3 小時由B城飛往C城。該航班飛行和在B城逗留的時間 共 小時。",
+    "options": [
+      "9",
+      "1",
+      "6",
+      "3"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A25N204b_60C_052P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "媽媽在超級市場買了西瓜3 公斤、葡萄 公斤和蝦 公斤。 媽媽在超級市場買了西瓜3 公斤、葡萄 公斤和蝦 公斤。",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N204b_60C_052P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "媽媽在超級市場買了西瓜3 公斤、葡萄 公斤和蝦 公斤。 (a)她共買了水果 公斤。",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N204b_61C_052P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "一瓶橙汁有 L。一瓶蘋果汁比一瓶橙汁多 L。買橙汁和蘋果汁各 一瓶，共有 L。",
+    "options": [
+      "1",
+      "6",
+      "4",
+      "3"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N204b_62C_051N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "北潭涌家樂徑長1 km，比薄扶林家樂徑短2 km。 北潭涌家樂徑長1 km，比薄扶林家樂徑短2 km。",
+    "options": [
+      "4",
+      "6",
+      "3",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N204b_62C_051N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N204b.docx",
+    "topic": "",
+    "question": "北潭涌家樂徑長1 km，比薄扶林家樂徑短2 km。 (a)薄扶林家樂徑長 km。",
+    "options": [
+      "6",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N205a_09C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "2 – = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–",
+      "1",
+      "2 –",
+      "1 –"
+    ],
+    "answer": "2 –"
+  },
+  {
+    "id": "5A25N205a_12C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "3 – 1 = （ ） = （ ） = （ ）",
+    "options": [
+      "1 –",
+      "3 – 1",
+      "5 –",
+      "3 –"
+    ],
+    "answer": "3 – 1"
+  },
+  {
+    "id": "5A25N205a_13C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "3 – 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "1 –",
+      "5 –",
+      "3 –",
+      "3 – 2"
+    ],
+    "answer": "3 – 2"
+  },
+  {
+    "id": "5A25N205a_14C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "7 – 4 = （ ） = （ ） = （ ）",
+    "options": [
+      "5 –",
+      "7 – 4",
+      "1 –",
+      "3 –"
+    ],
+    "answer": "7 – 4"
+  },
+  {
+    "id": "5A25N205a_15C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "– – = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "1 –",
+      "–  –",
+      "5 –",
+      "3 –"
+    ],
+    "answer": "–  –"
+  },
+  {
+    "id": "5A25N205a_16C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "– – = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "5 –",
+      "3 –",
+      "1 –",
+      "–  –"
+    ],
+    "answer": "–  –"
+  },
+  {
+    "id": "5A25N205a_17C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "10 – – = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "1 –",
+      "3 –",
+      "10 –  –",
+      "5 –"
+    ],
+    "answer": "10 –  –"
+  },
+  {
+    "id": "5A25N205a_18C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "5 – – = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "5 –  –",
+      "5 –",
+      "3 –",
+      "1 –"
+    ],
+    "answer": "5 –  –"
+  },
+  {
+    "id": "5A25N205a_19C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "8 – 6 – = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "1",
+      "–",
+      "2 –",
+      "1 –"
+    ],
+    "answer": "2 –"
+  },
+  {
+    "id": "5A25N205a_20C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "2 – – 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 –  – 1",
+      "3 –",
+      "1 –",
+      "5 –"
+    ],
+    "answer": "2 –  – 1"
+  },
+  {
+    "id": "5A25N205a_21C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "10 – 4 – 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "3 –",
+      "5 –",
+      "1 –",
+      "6 – 2"
+    ],
+    "answer": "6 – 2"
+  },
+  {
+    "id": "5A25N205a_22C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "7 – 1 – 3 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 –",
+      "5 –",
+      "7 – 1 – 3",
+      "1 –"
+    ],
+    "answer": "7 – 1 – 3"
+  },
+  {
+    "id": "5A25N205a_23C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "4 – 1 – 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "5 –",
+      "1 –",
+      "4 – 1 – 1",
+      "3 –"
+    ],
+    "answer": "4 – 1 – 1"
+  },
+  {
+    "id": "5A25N205a_24C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "5 – 2 – 1 = （ ） = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 –",
+      "5 –",
+      "1 –",
+      "5 – 2 – 1"
+    ],
+    "answer": "5 – 2 – 1"
+  },
+  {
+    "id": "5A25N205a_25C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "6 – 3 – 1 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "6 – 3 – 1",
+      "3 –",
+      "1 –",
+      "5 –"
+    ],
+    "answer": "6 – 3 – 1"
+  },
+  {
+    "id": "5A25N205a_26C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "9 – – 5 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "8 –  – 5",
+      "1 –",
+      "3 –",
+      "5 –"
+    ],
+    "answer": "8 –  – 5"
+  },
+  {
+    "id": "5A25N205a_27C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "7 – 2 – = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "1 –",
+      "5 –",
+      "3 –",
+      "6 – 2 –"
+    ],
+    "answer": "6 – 2 –"
+  },
+  {
+    "id": "5A25N205a_28C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "8 – 3 – 1 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 –",
+      "1 –",
+      "7 – 3 – 1",
+      "5 –"
+    ],
+    "answer": "7 – 3 – 1"
+  },
+  {
+    "id": "5A25N205a_29C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "13 – 4 – 6 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "5 –",
+      "12 – 4 – 6",
+      "3 –",
+      "1 –"
+    ],
+    "answer": "12 – 4 – 6"
+  },
+  {
+    "id": "5A25N205a_52C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "11 – – 3 = （ ）",
+    "options": [
+      "8",
+      "1",
+      "3",
+      "4"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N205a_54C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "4 – 1 – 1 = （ ）",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205a_55C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "8 – 3 – 2 = （ ）",
+    "options": [
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N205a_56C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "5 – 1 – 2 = （ ）",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205a_57C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "9 – 3 – 4 = （ ）",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205a_58C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "7 – 1 – 1 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "2"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N205a_59C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "13 – – 3 = （ ）",
+    "options": [
+      "1",
+      "8",
+      "3",
+      "4"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N205a_62C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "10 – 3 – 4 = （ ）",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205a_63C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "4 – 1 – 1 = （ ）",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205a_78C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "5 − 2 = ? 答案約是︰ （ ） − （ ） = （ ） 5 − 2 = （ ）",
+    "options": [
+      "4",
+      "1",
+      "5",
+      "3"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N205a_79C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "4 − 3 = ? 答案約是︰ （ ） − （ ） = （ ） 4 − 3 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N205a_80C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "4 − 2 = ? 答案約是︰ （ ） − （ ） = （ ） 4 − 2 = （ ）",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N205a_81C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "6 − 1 = ? 答案約是︰ （ ） − （ ） = （ ） 6 − 1 = （ ）",
+    "options": [
+      "6",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N205a_82C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "7 − 5 = ? 答案約是︰ （ ） − （ ） = （ ） 7 − 5 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N205a_83C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "9 − 2 − 2 = ? 答案約是︰ （ ） − （ ） − （ ） = （ ） 9 − 2 − 2 = （ ）",
+    "options": [
+      "3",
+      "4",
+      "10",
+      "1"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A25N205a_84C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "5 − 2 − = ? 答案約是︰ （ ） − （ ） − （ ） = （ ） 5 − 2 − = （ ）",
+    "options": [
+      "1",
+      "4",
+      "3",
+      "13"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5A25N205a_85C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "5 − 1 − 1 = ? 答案約是︰ （ ） − （ ） − （ ） = （ ） 5 − 1 − 1 = （ ）",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N205a_86C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "8 − 2 − 1 = ? 答案約是︰ （ ） − （ ） − （ ） = （ ） 8 − 2 − 1 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "9",
+      "1"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A25N205a_87C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "4 − 2 − 1 = ? 答案約是︰ （ ） − （ ） − （ ） = （ ） 4 − 2 − 1 = （ ）",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N205a_93C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205a.docx",
+    "topic": "",
+    "question": "7 – 3 – 2 = （ ）",
+    "options": [
+      "4",
+      "2",
+      "1",
+      "3"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_01C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "家中原有砂糖2 公斤，做甜品用去 公斤，還餘砂糖 公斤。",
+    "options": [
+      "55",
+      "2",
+      "3",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N205b_02C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "一盒果汁有1 升，文俊喝去 升後，還餘果汁 升。",
+    "options": [
+      "2",
+      "55",
+      "1",
+      "3"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_03C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "澆水壺原有水4 升，用去1 升後，澆水壺現有水 升。",
+    "options": [
+      "2",
+      "55",
+      "3",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N205b_04C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "志聰為生日會準備了2 L汽水和1 L橙汁。橙汁比汽水少 L。",
+    "options": [
+      "2",
+      "3",
+      "55",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_06C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "媽媽昨天編織圍巾用了1 小時，今天用了3 小時。她今天比昨天 多用了 小時。",
+    "options": [
+      "55",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N205b_08C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "一圈緩跑徑長3 km。何先生打算繞緩跑徑跑一圈，他已跑了 1 km，還餘 km。",
+    "options": [
+      "3",
+      "2",
+      "55",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_09C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "文迪想買一個售63 元的水壺，尚欠7 元。文迪有 元。",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "55"
+    ],
+    "answer": "55"
+  },
+  {
+    "id": "5A25N205b_10C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "餅店原有麪粉8 kg，師傅做蛋糕用去麪粉4 kg，做麪包又用去麪粉 1 kg，還餘麪粉 kg。",
+    "options": [
+      "2",
+      "55",
+      "3",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_11C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "飲品店原有奶茶20升，上午售出7 升，下午又售出9 升，還餘 奶茶 升。",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "55"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N205b_12C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "俊希有53 元，購買文具用去20 元，購買零食又用去18 元， 還餘款項 元。",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "14"
+    ],
+    "answer": "14"
+  },
+  {
+    "id": "5A25N205b_14C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "雜貨店有泰國米10 公斤，比日本米少3 公斤，但比越南米多 4 公斤。雜貨店有越南米 公斤。",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N205b_17C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "爸爸高1 米。哥哥比爸爸矮 米，但比弟弟高 米。弟弟高 米。",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "55"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_18C_052P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "一瓶牛奶有1 升，爸爸和媽媽分別喝了 升，還餘牛奶 升。",
+    "options": [
+      "55",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N205b_19C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "一輛玩具車售49 元。一架玩具飛機比一輛玩具車便宜9 元， 一艘玩具船比一輛玩具車便宜5 元。一架玩具飛機比一艘玩具船 便宜 元。",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "55"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N205b_20C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "爸爸重73 kg。媽媽比爸爸輕12 kg，而妹妹比爸爸輕23 kg， 妹妹比媽媽輕 kg。",
+    "options": [
+      "11",
+      "2",
+      "1",
+      "3"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5A25N205b_30C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "原有蛋糕 個，哥哥吃去 個，還餘蛋糕多少個？",
+    "options": [
+      "− = − ==魔術表演比話劇表演長  小時。",
+      "2 − =2 − =2還餘橙汁2 升。",
+      "1 − =1 − = 1弟弟高1 米。",
+      "− = − =還餘蛋糕  個。"
+    ],
+    "answer": "− = − =還餘蛋糕  個。"
+  },
+  {
+    "id": "5A25N205b_31C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "原有橙汁2 升，弟弟喝去 升，還餘橙汁多少升？",
+    "options": [
+      "2 − 1=2 − 1=1 − 1=還餘絲帶  米。",
+      "3 − 1=3 − 1=2=2還餘花生油2 升。",
+      "2 − =2 − =2還餘橙汁2 升。",
+      "− = − =還餘蛋糕  個。"
+    ],
+    "answer": "2 − =2 − =2還餘橙汁2 升。"
+  },
+  {
+    "id": "5A25N205b_37C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "哥哥高1 米，比弟弟高 米，弟弟高多少米？",
+    "options": [
+      "1 − =1 − = 1弟弟高1 米。",
+      "2 − =2 − =2還餘橙汁2 升。",
+      "3 − 1=3 − 1=2=2還餘花生油2 升。",
+      "− = − =還餘蛋糕  個。"
+    ],
+    "answer": "1 − =1 − = 1弟弟高1 米。"
+  },
+  {
+    "id": "5A25N205b_38C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "姊姊今年的體重是44 公斤，今年的體重比去年上升了2 公斤。 她去年的體重是多少公斤？",
+    "options": [
+      "44 − 2= 44 − 2=42她去年的體重是42 公斤。",
+      "2 − 1=2 − 1=1 − 1=還餘絲帶  米。",
+      "3 − 1=3 − 1=2=2還餘花生油2 升。",
+      "− = − ==魔術表演比話劇表演長  小時。"
+    ],
+    "answer": "44 − 2= 44 − 2=42她去年的體重是42 公斤。"
+  },
+  {
+    "id": "5A25N205b_50C_032N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N205b.docx",
+    "topic": "",
+    "question": "永賢高1 米，彩兒高1 米，心悠高1 米，永賢和心悠相差多少米？",
+    "options": [
+      "1 − 1=1 − 1=永賢和心悠相差  米。",
+      "3 − 1=3 − 1=2=2還餘花生油2 升。",
+      "2 − =2 − =2還餘橙汁2 升。",
+      "− = − =還餘蛋糕  個。"
+    ],
+    "answer": "1 − 1=1 − 1=永賢和心悠相差  米。"
+  },
+  {
+    "id": "5A25N206a_01C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "+ – = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "+  –",
+      "–  +",
+      "5 – 1",
+      "3 + 2 – 1"
+    ],
+    "answer": "+  –"
+  },
+  {
+    "id": "5A25N206a_05C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "3 + 2 – 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "5 – 1",
+      "–  +",
+      "+  –",
+      "3 + 2 – 1"
+    ],
+    "answer": "3 + 2 – 1"
+  },
+  {
+    "id": "5A25N206a_06C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "4 + 2 – 3 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "4 + 2 – 3",
+      "–  +",
+      "+  –",
+      "3 + 2 – 1"
+    ],
+    "answer": "4 + 2 – 3"
+  },
+  {
+    "id": "5A25N206a_07C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "4 – 3 + 2 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "4 – 3 + 2",
+      "+  –",
+      "3 + 2 – 1"
+    ],
+    "answer": "4 – 3 + 2"
+  },
+  {
+    "id": "5A25N206a_08C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – 1 + 3 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2 – 1",
+      "–  +",
+      "+  –",
+      "5 – 1 + 3"
+    ],
+    "answer": "5 – 1 + 3"
+  },
+  {
+    "id": "5A25N206a_09C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "3 – 1 + 1 = （ ） = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2 – 1",
+      "–  +",
+      "+  –",
+      "3 – 1 + 1"
+    ],
+    "answer": "3 – 1 + 1"
+  },
+  {
+    "id": "5A25N206a_12C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 – 2 + 1 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "+  –",
+      "2 + 1 – 2",
+      "–  +",
+      "3 + 2 – 1"
+    ],
+    "answer": "2 + 1 – 2"
+  },
+  {
+    "id": "5A25N206a_13C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "6 – – 2 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "+  –",
+      "3 + 2 – 1",
+      "5 –  – 2"
+    ],
+    "answer": "5 –  – 2"
+  },
+  {
+    "id": "5A25N206a_14C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "7 – – 5 = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "3 + 2 – 1",
+      "6 –  – 5",
+      "+  –"
+    ],
+    "answer": "6 –  – 5"
+  },
+  {
+    "id": "5A25N206a_15C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "4 – 1 – 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2 – 1",
+      "3 – 1 – 1",
+      "+  –",
+      "–  +"
+    ],
+    "answer": "3 – 1 – 1"
+  },
+  {
+    "id": "5A25N206a_16C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "9 – 2 – 5 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2 – 1",
+      "–  +",
+      "+  –",
+      "8 – 2 – 5"
+    ],
+    "answer": "8 – 2 – 5"
+  },
+  {
+    "id": "5A25N206a_17C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – ( + ) = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "3 + 2 – 1",
+      "5 – ( + )",
+      "+  –"
+    ],
+    "answer": "5 – ( + )"
+  },
+  {
+    "id": "5A25N206a_18C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "3 – ( + ) = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 – ( + )",
+      "3 + 2 – 1",
+      "–  +",
+      "+  –"
+    ],
+    "answer": "3 – ( + )"
+  },
+  {
+    "id": "5A25N206a_19C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "10 – (4 + ) = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "3 + 2 – 1",
+      "+  –",
+      "10 – (4 + )"
+    ],
+    "answer": "10 – (4 + )"
+  },
+  {
+    "id": "5A25N206a_20C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "8 – ( + 2) = （ ） = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "+  –",
+      "8 – ( + 2)",
+      "3 + 2 – 1"
+    ],
+    "answer": "8 – ( + 2)"
+  },
+  {
+    "id": "5A25N206a_22C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "+ ( – ) = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "+ ( – )",
+      "+  –",
+      "–  +",
+      "3 + 2 – 1"
+    ],
+    "answer": "+ ( – )"
+  },
+  {
+    "id": "5A25N206a_23C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 + (1 – ) = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2 – 1",
+      "+  –",
+      "2 + (1 – )",
+      "–  +"
+    ],
+    "answer": "2 + (1 – )"
+  },
+  {
+    "id": "5A25N206a_24C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "1 + (4 – ) = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "3 + 2 – 1",
+      "+  –",
+      "1 + (4 – )"
+    ],
+    "answer": "1 + (4 – )"
+  },
+  {
+    "id": "5A25N206a_25C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "4 – (2 – ) = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "4 – (1 – )",
+      "+  –",
+      "–  +",
+      "3 + 2 – 1"
+    ],
+    "answer": "4 – (1 – )"
+  },
+  {
+    "id": "5A25N206a_26C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "11 – (12 – ) = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "–  +",
+      "3 + 2 – 1",
+      "+  –",
+      "11 – (11 – )"
+    ],
+    "answer": "11 – (11 – )"
+  },
+  {
+    "id": "5A25N206a_27C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 – (3 – 2) = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 – (2 – 2)",
+      "–  +",
+      "3 + 2 – 1",
+      "+  –"
+    ],
+    "answer": "2 – (2 – 2)"
+  },
+  {
+    "id": "5A25N206a_28C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – (4 – 2) = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "3 + 2 – 1",
+      "–  +",
+      "+  –",
+      "5 – (3 – 2)"
+    ],
+    "answer": "5 – (3 – 2)"
+  },
+  {
+    "id": "5A25N206a_33C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "3 + 2 – 1 = （ ）",
+    "options": [
+      "7",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206a_34C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 + 3 – 1 = （ ）",
+    "options": [
+      "7",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206a_35C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – 1 + 4 = （ ）",
+    "options": [
+      "8",
+      "4",
+      "3",
+      "1"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N206a_36C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 – 2 + 3 = （ ）",
+    "options": [
+      "7",
+      "4",
+      "3",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206a_38C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – 4 + 4 = （ ）",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N206a_39C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "1 – 2 + 4 = （ ）",
+    "options": [
+      "7",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206a_40C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 – 2 + 1 = （ ）",
+    "options": [
+      "3",
+      "4",
+      "7",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206a_45C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "8 – 1 – 3 = （ ）",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N206a_47C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – ( + ) = （ ）",
+    "options": [
+      "4",
+      "1",
+      "7",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206a_48C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 – ( + ) = （ ）",
+    "options": [
+      "3",
+      "1",
+      "7",
+      "4"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206a_50C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "8 – ( + 5) = （ ）",
+    "options": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N206a_53C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "2 + (2 – ) = （ ）",
+    "options": [
+      "1",
+      "4",
+      "7",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206a_54C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 + (1 – ) = （ ）",
+    "options": [
+      "1",
+      "6",
+      "3",
+      "4"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N206a_55C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "6 – (4 – ) = （ ）",
+    "options": [
+      "3",
+      "7",
+      "1",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206a_56C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "9 – (2 – ) = （ ）",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N206a_57C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "7 – (5 – 3) = （ ）",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N206a_58C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "10 – (3 – 2) = （ ）",
+    "options": [
+      "4",
+      "10",
+      "1",
+      "3"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A25N206a_59C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "+ – = ? 答案約是︰ （ ） + （ ） – （ ） = （ ） + – = （ ）",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "7"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206a_60C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "1 + 3 – 2 = ? 答案約是︰ （ ） + （ ） – （ ） = （ ） 1 + 3 – 2 = （ ）",
+    "options": [
+      "3",
+      "1",
+      "7",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206a_61C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "5 – 2 + 3 = ? 答案約是︰ （ ） – （ ） + （ ） = （ ） 5 – 2 + 3 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "7",
+      "1"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A25N206a_62C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "4 – 1 + 1 = ? 答案約是︰ （ ） – （ ） + （ ） = （ ） 4 – 1 + 1 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N206a_63C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "1 – 3 + 4 = ? 答案約是︰ （ ） – （ ） + （ ） = （ ） 1 – 3 + 4 = （ ）",
+    "options": [
+      "7",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206a_64C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "6 – – 5 = ? 答案約是︰ （ ） – （ ） – （ ） = （ ） 6 – – 5 = （ ）",
+    "options": [
+      "4",
+      "6",
+      "1",
+      "3"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N206a_65C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "4 – 1 – 1 = ? 答案約是︰ （ ） – （ ） – （ ） = （ ） 4 – 1 – 1 = （ ）",
+    "options": [
+      "4",
+      "7",
+      "1",
+      "3"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206a_68C_021N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "+ ( – ) = ? 答案約是︰ （ ） + ( （ ） – （ ） ) = （ ） + ( – ) = （ ）",
+    "options": [
+      "3",
+      "7",
+      "4",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206a_72C_011P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "6 – 4 + 1 = （ ）",
+    "options": [
+      "1",
+      "4",
+      "3",
+      "7"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206a_74C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "（ ） – (2 + ) =",
+    "options": [
+      "3",
+      "1",
+      "7",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206a_75C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "1 + 2 – （ ） = 1",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N206a_80C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "在圈內填 + 或 –，使算式成立。 7 3 1 = 8",
+    "options": [
+      "–",
+      "+  –",
+      "–  +",
+      "+"
+    ],
+    "answer": "–"
+  },
+  {
+    "id": "5A25N206a_81C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206a.docx",
+    "topic": "",
+    "question": "在圈內填 + 或 –，使算式成立。 4 1 1 =",
+    "options": [
+      "+",
+      "–  +",
+      "+  –",
+      "–"
+    ],
+    "answer": "–"
+  },
+  {
+    "id": "5A25N206b_01C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "家裏原有醬油 升，用去 升後，買回1 升，現有醬油 升。",
+    "options": [
+      "6",
+      "2",
+      "1",
+      "5"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206b_02C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "麪包店原有牛油1 kg，做麪包用去1 kg，再購入5 kg，現有牛油 kg。",
+    "options": [
+      "1",
+      "6",
+      "5",
+      "2"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N206b_03C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "家中原有花生油6 L，用去2 L後，買回2 L，家中現有花生油 L。",
+    "options": [
+      "2",
+      "5",
+      "6",
+      "1"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A25N206b_04C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "水壺內原有水2 升，媽媽倒出1 升後，再加入水1 升。水壺內現有水 升。",
+    "options": [
+      "1",
+      "6",
+      "2",
+      "5"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N206b_05C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "子健有兩瓶蒸餾水，分別有 L和 1 L。他喝去 L後，還餘蒸餾水 L。",
+    "options": [
+      "1",
+      "2",
+      "6",
+      "5"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N206b_06C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "弟弟有30 元，妹妹有24 元。他們合資購買了46 元的禮物送給爸爸後，還餘 元。",
+    "options": [
+      "1",
+      "5",
+      "8",
+      "6"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A25N206b_07C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "每包手工紙的數量相同。姊姊原有藍色手工紙2 包和紅色手工紙 包。她摺紙鶴用去手工紙 包後，還餘手工紙 包。",
+    "options": [
+      "6",
+      "3",
+      "5",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206b_08C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "雪櫃裏原有橙汁2 L和蘋果汁1 L。爸爸喝去蘋果汁 L，雪櫃裏還餘果汁 L。",
+    "options": [
+      "5",
+      "1",
+      "4",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206b_09C_051N",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "巴士司機駕駛2 小時，休息用去 小時，再駕駛2 小時。他的駕駛時間比休息時間多 小時。",
+    "options": [
+      "1",
+      "4",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206b_10C_051N",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "樂民小學上午的上課時間是2 小時，下午的上課時間是1 小時， 而午膳時間是1 小時。該小學每天的上課時間比午膳時間多 小時。",
+    "options": [
+      "3",
+      "1",
+      "5",
+      "6"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A25N206b_11C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "在跳遠比賽中，冠軍的成績是5 米，季軍的成績比冠軍少 米，而亞軍的成績比季軍多 米。亞軍的成績是 米。",
+    "options": [
+      "1",
+      "6",
+      "5",
+      "2"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A25N206b_12C_051P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "浩賢高1 米，他比詠雯高 米，文迪比詠雯高 米。文迪高 米。",
+    "options": [
+      "2",
+      "1",
+      "5",
+      "6"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206b_13C_052N",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "偉強昨天畫畫用去3 小時，跑步用去的時間比畫畫少2 小時，他在這兩項活動共用去 小時。",
+    "options": [
+      "4",
+      "1",
+      "6",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A25N206b_14C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "嘉兒重45 公斤，她比曉晴重2 公斤。她們共重 公斤。",
+    "options": [
+      "88",
+      "5",
+      "1",
+      "6"
+    ],
+    "answer": "88"
+  },
+  {
+    "id": "5A25N206b_15C_052N",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "王小姐昨天上午工作4 小時，下午再工作2 小時。她今天工作了 8 小時。王小姐昨天和今天的工作時間相差 小時。",
+    "options": [
+      "5",
+      "6",
+      "1",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A25N206b_17C_052N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "曾先生為八達通卡增值50元，他用這張卡買飲品用去8 元後，還有餘額43 元。曾先生的八達通卡內原有餘額 元。",
+    "options": [
+      "5",
+      "2",
+      "6",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A25N206b_45C_122N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A25N206b.docx",
+    "topic": "",
+    "question": "子傑 (a)根據上圖，子傑的身高是 米。(以最簡帶分數作答)",
+    "options": [
+      "5",
+      "2",
+      "6",
+      "1"
+    ],
+    "answer": "1",
+    "image": "q-images/5A25N206b_45C_122N__b.webp"
+  },
+  {
+    "id": "5A35M107a_04C_041N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） cm。 (a)平行四邊形的底是 （ ） cm， 對應的高是 （ ） cm。",
+    "options": [
+      "30 cm",
+      "18",
+      "30",
+      "18 cm"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M107a_04C_041N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） cm。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18",
+      "18 cm",
+      "30",
+      "30 cm"
+    ],
+    "answer": "18 cm"
+  },
+  {
+    "id": "5A35M107a_05C_041N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） cm。 (a)平行四邊形的底是 （ ） cm， 對應的高是 （ ） cm。",
+    "options": [
+      "30 cm",
+      "30",
+      "15 cm",
+      "18 cm"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5A35M107a_05C_041N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） cm。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18 cm",
+      "8 cm",
+      "30 cm",
+      "30"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M107a_06C_041N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） m。 (a)平行四邊形的底是 （ ） m， 對應的高是 （ ） m。",
+    "options": [
+      "15 m",
+      "18 cm",
+      "30 cm",
+      "30"
+    ],
+    "answer": "15 m"
+  },
+  {
+    "id": "5A35M107a_06C_041N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） m。 (b)平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "18 cm",
+      "30",
+      "30 cm",
+      "6 m"
+    ],
+    "answer": "6 m"
+  },
+  {
+    "id": "5A35M107a_07C_041N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） m。 (a)平行四邊形的底是 （ ） m， 對應的高是 （ ） m。",
+    "options": [
+      "30 cm",
+      "30",
+      "20 m",
+      "18 cm"
+    ],
+    "answer": "20 m"
+  },
+  {
+    "id": "5A35M107a_07C_041N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "對應的高是 （ ） m。 (b)平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "30 cm",
+      "30",
+      "42 m",
+      "18 cm"
+    ],
+    "answer": "42 m"
+  },
+  {
+    "id": "5A35M107a_08C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "10 cm",
+      "30 cm",
+      "30",
+      "18 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M107a_09C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18 cm",
+      "18",
+      "30",
+      "30 cm"
+    ],
+    "answer": "18 cm"
+  },
+  {
+    "id": "5A35M107a_10C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "30 cm",
+      "9 m",
+      "18 cm",
+      "30"
+    ],
+    "answer": "9 m"
+  },
+  {
+    "id": "5A35M107a_11C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18 cm",
+      "30",
+      "22 cm",
+      "30 cm"
+    ],
+    "answer": "22 cm"
+  },
+  {
+    "id": "5A35M107a_12C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "18 cm",
+      "30",
+      "30 cm",
+      "14 m"
+    ],
+    "answer": "14 m"
+  },
+  {
+    "id": "5A35M107a_13C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "30 cm",
+      "18 cm",
+      "30",
+      "35 cm"
+    ],
+    "answer": "35 cm"
+  },
+  {
+    "id": "5A35M107a_14C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "20 cm",
+      "30",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M107a_15C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18 cm",
+      "25 cm",
+      "30 cm",
+      "30"
+    ],
+    "answer": "25 cm"
+  },
+  {
+    "id": "5A35M107a_16C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "13 m",
+      "18 cm",
+      "30",
+      "30 cm"
+    ],
+    "answer": "13 m"
+  },
+  {
+    "id": "5A35M107a_17C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18",
+      "18 cm",
+      "30",
+      "30 cm"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M107a_18C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18",
+      "30 cm",
+      "18 cm",
+      "30"
+    ],
+    "answer": "18 cm"
+  },
+  {
+    "id": "5A35M107a_19C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "15 cm",
+      "18 cm",
+      "30 cm",
+      "30"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5A35M107a_20C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "18 cm",
+      "8 m",
+      "30 cm",
+      "30"
+    ],
+    "answer": "8 m"
+  },
+  {
+    "id": "5A35M107a_21C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "24 cm",
+      "30 cm",
+      "18 cm",
+      "30"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5A35M107a_22C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "15 m2",
+      "30 cm",
+      "30",
+      "18 cm"
+    ],
+    "answer": "15 m2"
+  },
+  {
+    "id": "5A35M107a_23C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "30",
+      "30 cm",
+      "18 cm",
+      "48 cm2"
+    ],
+    "answer": "48 cm2"
+  },
+  {
+    "id": "5A35M107a_24C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "18 cm",
+      "30",
+      "30 cm",
+      "40 cm2"
+    ],
+    "answer": "40 cm2"
+  },
+  {
+    "id": "5A35M107a_25C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "30",
+      "288 cm2",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "288 cm2"
+  },
+  {
+    "id": "5A35M107a_26C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "30",
+      "18 cm",
+      "30 cm",
+      "286 cm2"
+    ],
+    "answer": "286 cm2"
+  },
+  {
+    "id": "5A35M107a_27C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "180 m2",
+      "30",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "180 m2"
+  },
+  {
+    "id": "5A35M107a_28C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "95 cm2",
+      "30",
+      "18 cm",
+      "30 cm"
+    ],
+    "answer": "95 cm2"
+  },
+  {
+    "id": "5A35M107a_29C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "30",
+      "609 cm2",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "609 cm2"
+  },
+  {
+    "id": "5A35M107a_30C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下面哪個平行四邊形的面積與其他的不同？ （ ）",
+    "options": [
+      "D",
+      "30 cm",
+      "30",
+      "18 cm"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "5A35M107a_31C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下面哪個平行四邊形的面積與其他的不同？ （ ）",
+    "options": [
+      "30 cm",
+      "D",
+      "30",
+      "18 cm"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "5A35M107a_34C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由一個平行四邊形和兩個直角三角形組成。 上圖的正方形由一個平行四邊形和兩個直角三角形組成。",
+    "options": [
+      "30",
+      "30 cm",
+      "18 cm",
+      "5 cm"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5A35M107a_34C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由一個平行四邊形和兩個直角三角形組成。 (a)正方形的面積是 （ ） cm2。",
+    "options": [
+      "30 cm",
+      "10 cm",
+      "30",
+      "18 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M107a_34C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由一個平行四邊形和兩個直角三角形組成。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "18",
+      "30",
+      "540",
+      "100"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5A35M107a_35C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由一個平行四邊形和兩個直角三角形組成。 上圖的正方形由一個平行四邊形和兩個直角三角形組成。",
+    "options": [
+      "30 cm",
+      "18 cm",
+      "30",
+      "14 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M107a_35C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由一個平行四邊形和兩個直角三角形組成。 (a)正方形的面積是 （ ） cm2。",
+    "options": [
+      "4 cm",
+      "30",
+      "18 cm",
+      "30 cm"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "id": "5A35M107a_35C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由一個平行四邊形和兩個直角三角形組成。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "540",
+      "196",
+      "30",
+      "18"
+    ],
+    "answer": "196"
+  },
+  {
+    "id": "5A35M107a_36C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的長方形由兩個直角三角形和一個平行四邊形組成。 上圖的長方形由兩個直角三角形和一個平行四邊形組成。",
+    "options": [
+      "16 cm",
+      "30",
+      "18 cm",
+      "30 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M107a_36C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的長方形由兩個直角三角形和一個平行四邊形組成。 (a)長方形的面積是 （ ） cm2。",
+    "options": [
+      "6 cm",
+      "30",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5A35M107a_36C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的長方形由兩個直角三角形和一個平行四邊形組成。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "30",
+      "540",
+      "18",
+      "96"
+    ],
+    "answer": "96"
+  },
+  {
+    "id": "5A35M107a_37C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的長方形由兩個直角三角形和一個平行四邊形組成。 上圖的長方形由兩個直角三角形和一個平行四邊形組成。",
+    "options": [
+      "14 cm",
+      "30",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M107a_37C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的長方形由兩個直角三角形和一個平行四邊形組成。 (a)長方形的面積是 （ ） cm2。",
+    "options": [
+      "30 cm",
+      "30",
+      "24 cm",
+      "18 cm"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5A35M107a_37C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的長方形由兩個直角三角形和一個平行四邊形組成。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "30 cm",
+      "30",
+      "18 cm",
+      "5 cm"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5A35M107a_38C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的平行四邊形由兩個直角三角形和一個正方形組成。 上圖的平行四邊形由兩個直角三角形和一個正方形組成。",
+    "options": [
+      "18 m",
+      "30 cm",
+      "18 cm",
+      "30"
+    ],
+    "answer": "18 m"
+  },
+  {
+    "id": "5A35M107a_38C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的平行四邊形由兩個直角三角形和一個正方形組成。 (a)正方形的面積是 （ ） m2。",
+    "options": [
+      "30",
+      "18 cm",
+      "30 cm",
+      "5 m"
+    ],
+    "answer": "5 m"
+  },
+  {
+    "id": "5A35M107a_38C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的平行四邊形由兩個直角三角形和一個正方形組成。 (b)平行四邊形的面積是 （ ） m2。",
+    "options": [
+      "18",
+      "30",
+      "324",
+      "540"
+    ],
+    "answer": "324"
+  },
+  {
+    "id": "5A35M107a_39C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的平行四邊形由兩個直角三角形和一個正方形組成。 上圖的平行四邊形由兩個直角三角形和一個正方形組成。",
+    "options": [
+      "30 cm",
+      "18 cm",
+      "32 cm",
+      "30"
+    ],
+    "answer": "32 cm"
+  },
+  {
+    "id": "5A35M107a_39C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的平行四邊形由兩個直角三角形和一個正方形組成。 (a)正方形的面積是 （ ） cm2。",
+    "options": [
+      "18 cm",
+      "30",
+      "8 cm",
+      "30 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M107a_39C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的平行四邊形由兩個直角三角形和一個正方形組成。 (b)平行四邊形的面積是 （ ） cm2。",
+    "options": [
+      "576",
+      "540",
+      "18",
+      "30"
+    ],
+    "answer": "576"
+  },
+  {
+    "id": "5A35M107a_46C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的底是3厘米，高是2厘米，它的面積是多少平方厘米？ （ ） 平方厘米",
+    "options": [
+      "30",
+      "6",
+      "540",
+      "18"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A35M107a_47C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的底是8 m，高是3 m，它的面積是多少m2？ （ ） m2",
+    "options": [
+      "24",
+      "30",
+      "540",
+      "18"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5A35M107a_48C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的底是15 cm，高是4 cm，它的面積是多少cm2？ （ ） cm2",
+    "options": [
+      "18",
+      "540",
+      "30",
+      "60"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5A35M107a_49C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的底是12 m，高是5 m，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "30",
+      "30 cm",
+      "60 m2",
+      "18 cm"
+    ],
+    "answer": "60 m2"
+  },
+  {
+    "id": "5A35M107a_50C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的底是10厘米，高是8厘米，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "30 cm",
+      "30",
+      "18 cm",
+      "80平方厘米"
+    ],
+    "answer": "80平方厘米"
+  },
+  {
+    "id": "5A35M107a_51C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的底是9 cm，高比底短3 cm，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "18 cm",
+      "30",
+      "54 cm2",
+      "30 cm"
+    ],
+    "answer": "54 cm2"
+  },
+  {
+    "id": "5A35M107a_52C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的面積是36 cm2，高是4 cm，對應的底是 （ ） cm。",
+    "options": [
+      "30",
+      "18",
+      "540",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A35M107a_53C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的面積是75 m2，高是3 m，對應的底是 （ ） m。",
+    "options": [
+      "540",
+      "30",
+      "18",
+      "25"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": "5A35M107a_54C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的面積是40 cm2，底是8 cm，對應的高是 （ ） cm。",
+    "options": [
+      "5",
+      "540",
+      "18",
+      "30"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A35M107a_55C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形的面積是78 cm2，底是13 cm，對應的高是 （ ） cm。",
+    "options": [
+      "540",
+      "18",
+      "30",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A35M107a_58C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖平行四邊形草地的面積是112平方米。 下圖平行四邊形草地的面積是112平方米。",
+    "options": [
+      "18 cm",
+      "8米",
+      "30 cm",
+      "30"
+    ],
+    "answer": "8米"
+  },
+  {
+    "id": "5A35M107a_58C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖平行四邊形草地的面積是112平方米。 (a)以8米為高，對應的底是 （ ） 米。",
+    "options": [
+      "30 cm",
+      "？米",
+      "30",
+      "18 cm"
+    ],
+    "answer": "？米"
+  },
+  {
+    "id": "5A35M107a_58C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖平行四邊形草地的面積是112平方米。 (b)工人沿草地的外圍建築圍欄，圍欄的材料費是每米100元。建築整個圍欄需付材料費 （ ） 元。",
+    "options": [
+      "10米",
+      "30 cm",
+      "30",
+      "18 cm"
+    ],
+    "answer": "10米"
+  },
+  {
+    "id": "5A35M107a_59C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖平行四邊形遊樂場的面積是702平方米。 下圖平行四邊形遊樂場的面積是702平方米。",
+    "options": [
+      "30",
+      "26米",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "26米"
+  },
+  {
+    "id": "5A35M107a_59C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖平行四邊形遊樂場的面積是702平方米。 (a)以26米為高，對應的底是 （ ） 米。",
+    "options": [
+      "30 cm",
+      "？米",
+      "30",
+      "18 cm"
+    ],
+    "answer": "？米"
+  },
+  {
+    "id": "5A35M107a_59C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖平行四邊形遊樂場的面積是702平方米。 (b)志聰沿着遊樂場的外圍跑了6圈，他共跑了 （ ） 米。",
+    "options": [
+      "30",
+      "30 cm",
+      "30米",
+      "18 cm"
+    ],
+    "answer": "30米"
+  },
+  {
+    "id": "5A35M107a_60C_042N#num",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "540",
+      "18",
+      "30",
+      "100"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5A35M107a_61C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖是一張長方形手工紙。 下圖是一張長方形手工紙。",
+    "options": [
+      "18",
+      "30",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M107a_61C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖是一張長方形手工紙。 (a)長方形手工紙的面積是 （ ） cm2。",
+    "options": [
+      "30",
+      "18 cm",
+      "30 cm",
+      "8 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M107a_61C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "下圖是一張長方形手工紙。 (b)子俊沿虛線把這張手工紙分割成4個大小相同的長方形，每個長方形的面積是 （ ） cm2。",
+    "options": [
+      "30",
+      "18",
+      "240",
+      "540"
+    ],
+    "answer": "240"
+  },
+  {
+    "id": "5A35M107a_64C_081N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "右面的平行四邊形的面積是多少cm2？",
+    "options": [
+      "26 cm2",
+      "52 cm2",
+      "132 cm2",
+      "120 cm2"
+    ],
+    "answer": "120 cm2"
+  },
+  {
+    "id": "5A35M107a_67C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "右圖由8張大小相同的平行四邊形紙拼砌而成。如果右圖的面積是952 cm2，每張平行四邊形紙的高是7 cm，每張紙對應的底是多少cm？",
+    "options": [
+      "119 cm",
+      "136 cm",
+      "17 cm",
+      "34 cm"
+    ],
+    "answer": "17 cm"
+  },
+  {
+    "id": "5A35M107a_68C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖由12張大小相同的平行四邊形紙拼砌而成。如果上圖的面積是 960 cm2，每張平行四邊形紙的高是8 cm，每張紙對應的底是多少cm？",
+    "options": [
+      "8 cm",
+      "10 cm",
+      "9 cm",
+      "11 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M107a_69C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖由6張大小相同的平行四邊形卡紙拼砌而成。如果每張卡紙的高是8 cm，上圖的面積是多少cm2？",
+    "options": [
+      "288 cm2",
+      "432 cm2",
+      "216 cm2",
+      "576 cm2"
+    ],
+    "answer": "288 cm2"
+  },
+  {
+    "id": "5A35M107a_75C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖中，大平行四邊形的底和高都是小平行四邊形的2倍，陰影部分的面積是多少cm2？",
+    "options": [
+      "48 cm2",
+      "96 cm2",
+      "144 cm2",
+      "192 cm2"
+    ],
+    "answer": "48 cm2"
+  },
+  {
+    "id": "5A35M107a_76C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "求上圖平行四邊形的面積。",
+    "options": [
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。",
+      "這是一組平行線"
+    ],
+    "answer": "16 × 10=160上圖平行四邊形的面積是160 cm2。"
+  },
+  {
+    "id": "5A35M107a_77C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "求上圖平行四邊形的面積。",
+    "options": [
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。",
+      "這是一組平行線",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。"
+    ],
+    "answer": "30 × 19=570上圖平行四邊形的面積是570 cm2。"
+  },
+  {
+    "id": "5A35M107a_78C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是多少平方米？",
+    "options": [
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "這是一組平行線",
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。"
+    ],
+    "answer": "2 × 2=4上圖平行四邊形的面積是4平方米。"
+  },
+  {
+    "id": "5A35M107a_79C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖平行四邊形的面積是多少cm2？",
+    "options": [
+      "這是一組平行線",
+      "13 × 18=234上圖平行四邊形的面積是234 cm2。",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。",
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。"
+    ],
+    "answer": "13 × 18=234上圖平行四邊形的面積是234 cm2。"
+  },
+  {
+    "id": "5A35M107a_80C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "求上圖平行四邊形的面積。",
+    "options": [
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。",
+      "這是一組平行線",
+      "4 × 6=24上圖平行四邊形的面積是24平方厘米。"
+    ],
+    "answer": "4 × 6=24上圖平行四邊形的面積是24平方厘米。"
+  },
+  {
+    "id": "5A35M107a_81C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "求上圖平行四邊形的面積。",
+    "options": [
+      "6 × 11=66上圖平行四邊形的面積是66平方米。",
+      "這是一組平行線",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。",
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。"
+    ],
+    "answer": "6 × 11=66上圖平行四邊形的面積是66平方米。"
+  },
+  {
+    "id": "5A35M107a_82C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "平行四邊形貼紙的底是5厘米，高是4厘米，它的面積是多少平方厘米？",
+    "options": [
+      "4 × 6=24上圖平行四邊形的面積是24平方厘米。",
+      "5 × 4=20它的面積是20平方厘米。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "6 × 11=66上圖平行四邊形的面積是66平方米。"
+    ],
+    "answer": "5 × 4=20它的面積是20平方厘米。"
+  },
+  {
+    "id": "5A35M107a_85C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "平行四邊形草地的面積是135平方米，而底是9米，求對應的高。",
+    "options": [
+      "6 × 11=66上圖平行四邊形的面積是66平方米。",
+      "4 × 6=24上圖平行四邊形的面積是24平方厘米。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "135 ÷ 9=15對應的高是15米。"
+    ],
+    "answer": "135 ÷ 9=15對應的高是15米。"
+  },
+  {
+    "id": "5A35M107a_86C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "平行四邊形毛巾的面積是836 cm2，而底是22 cm，求對應的高。",
+    "options": [
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。",
+      "836 ÷ 22=38對應的高是38 cm。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。"
+    ],
+    "answer": "836 ÷ 22=38對應的高是38 cm。"
+  },
+  {
+    "id": "5A35M107a_87C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "平行四邊形卡紙的面積是96 cm2，而高是8 cm，求對應的底。",
+    "options": [
+      "4 × 6=24上圖平行四邊形的面積是24平方厘米。",
+      "6 × 11=66上圖平行四邊形的面積是66平方米。",
+      "96 ÷ 8=12對應的底是12 cm。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。"
+    ],
+    "answer": "96 ÷ 8=12對應的底是12 cm。"
+  },
+  {
+    "id": "5A35M107a_88C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "平行四邊形畫紙的面積是735平方厘米，而高是21厘米，求對應的底。",
+    "options": [
+      "735 ÷ 21=35對應的底是35厘米。",
+      "6 × 11=66上圖平行四邊形的面積是66平方米。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "4 × 6=24上圖平行四邊形的面積是24平方厘米。"
+    ],
+    "answer": "735 ÷ 21=35對應的底是35厘米。"
+  },
+  {
+    "id": "5A35M107a_90C_032N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "兒童遊樂場的地上剛好鋪設了軟墊50塊，而軟墊之間沒有重疊。 遊樂場的面積是多少m2？",
+    "options": [
+      "16 × 10=160上圖平行四邊形的面積是160 cm2。",
+      "30 × 19=570上圖平行四邊形的面積是570 cm2。",
+      "2 × 2=4上圖平行四邊形的面積是4平方米。",
+      "2 × 1 × 50=100 遊樂場的面積是100 m2。"
+    ],
+    "answer": "2 × 1 × 50=100 遊樂場的面積是100 m2。"
+  },
+  {
+    "id": "5A35M107a_91C_102N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "在下面的方格紙上畫出一個面積是16 cm2的平行四邊形。",
+    "options": [
+      "或其他合理答案。",
+      "30",
+      "18 cm",
+      "30 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A35M107a_92C_102N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "在下面的方格紙上畫出一個面積是21 cm2的平行四邊形。",
+    "options": [
+      "或其他合理答案。",
+      "30 cm",
+      "18 cm",
+      "30"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A35M107a_93C_102N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "在下面的方格紙上畫出一個面積是30 cm2的平行四邊形。",
+    "options": [
+      "30",
+      "或其他合理答案。",
+      "18 cm",
+      "30 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A35M107a_94C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "（ ） （ ） 平行四邊形的面積是 （ ）。 (a)量度下面平行四邊形的底和高的長度。",
+    "options": [
+      "3",
+      "30",
+      "540",
+      "18"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A35M107a_95C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "（ ） （ ） 平行四邊形的面積是 （ ）。 (a)量度下面平行四邊形的底和高的長度。",
+    "options": [
+      "_______ cm",
+      "30 cm",
+      "30",
+      "18 cm"
+    ],
+    "answer": "_______ cm"
+  },
+  {
+    "id": "5A35M107a_96C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖是一個平行四邊形，它的面積是 （ ） cm2。",
+    "options": [
+      "30",
+      "20 cm",
+      "30 cm",
+      "18 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M107a_97C_122P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由三角形A、三角形C和平行四邊形B組成。 上圖的正方形由三角形A、三角形C和平行四邊形B組成。",
+    "options": [
+      "12 cm",
+      "30 cm",
+      "18 cm",
+      "30"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5A35M107a_97C_122P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由三角形A、三角形C和平行四邊形B組成。 (a)A是一個* 直角 / 等腰 / 等邊 三角形。（* 圈出答案）",
+    "options": [
+      "30",
+      "30 cm",
+      "18 cm",
+      "5 cm"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5A35M107a_97C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖的正方形由三角形A、三角形C和平行四邊形B組成。 (b)平行四邊形B的面積是 （ ） cm2。",
+    "options": [
+      "30 cm",
+      "B",
+      "30",
+      "18 cm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M107a_98C_112P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "李先生租了一塊平行四邊形農田，它的底是3米，高4米。如果每月的租金是每平方米$75，他每月需付租金多少？ 答案︰$ （ ）",
+    "options": [
+      "540",
+      "30",
+      "18",
+      "900"
+    ],
+    "answer": "900"
+  },
+  {
+    "id": "5A35M107a_99C_112P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "一個平行四邊形花圃的底是5米，高6米。園丁在花圃上每平方米擺放6個花盆，這個花圃上共可擺放花盆多少個？ 答案︰（ ） 個",
+    "options": [
+      "180",
+      "540",
+      "18",
+      "30"
+    ],
+    "answer": "180"
+  },
+  {
+    "id": "5A35M107f_05C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖是由X、Y和Z三個平行四邊形組成，以下哪項是錯誤的？",
+    "options": [
+      "X和Z的面積相等。",
+      "Z的面積比X的小。",
+      "Y的面積是Z的2倍。",
+      "X的面積是Y的一半。"
+    ],
+    "answer": "Z的面積比X的小。",
+    "image": "q-images/5A35M107f_05C_082P.webp"
+  },
+  {
+    "id": "5A35M107f_06C_081N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M107a.docx",
+    "topic": "5A35M107a  平行四邊形的面積",
+    "question": "上圖中，哪兩個平行四邊形的面積相等？",
+    "options": [
+      "P和R",
+      "Q和S",
+      "Q和R",
+      "P和Q"
+    ],
+    "answer": "P和Q",
+    "image": "q-images/5A35M107f_06C_081N.webp"
+  },
+  {
+    "id": "5A35M108a_04C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (a)上圖三角形的底是 （ ） cm，對應的高是 （ ） cm。",
+    "options": [
+      "15 cm",
+      "8 cm",
+      "17 cm",
+      "或 8"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M108a_04C_121N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (b)列式計算三角形的面積。 （ ） = （ ） 三角形的面積是 （ ）。",
+    "options": [
+      "15 cm",
+      "8 cm",
+      "17 cm",
+      "或 8"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5A35M108a_05C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (a)上圖三角形的底是 （ ） m，對應的高是 （ ） m。",
+    "options": [
+      "8 cm",
+      "17 cm",
+      "15 cm",
+      "3 m"
+    ],
+    "answer": "3 m"
+  },
+  {
+    "id": "5A35M108a_05C_121N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (b)列式計算三角形的面積。 （ ） = （ ） 三角形的面積是 （ ）。",
+    "options": [
+      "12 m",
+      "17 cm",
+      "15 cm",
+      "8 cm"
+    ],
+    "answer": "12 m"
+  },
+  {
+    "id": "5A35M108a_06C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (a)上圖三角形的底是 （ ） cm，對應的高是 （ ） cm。",
+    "options": [
+      "12 cm",
+      "8 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5A35M108a_06C_121N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (b)列式計算三角形的面積。 （ ） = （ ） 三角形的面積是 （ ）。",
+    "options": [
+      "17 cm",
+      "8 cm",
+      "9 cm",
+      "15 cm"
+    ],
+    "answer": "9 cm"
+  },
+  {
+    "id": "5A35M108a_07C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (a)上圖三角形的底是 （ ） m，對應的高是 （ ） m。",
+    "options": [
+      "9 m",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "9 m"
+  },
+  {
+    "id": "5A35M108a_07C_121N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "（ ） = （ ） 三角形的面積是 （ ）。 (b)列式計算三角形的面積。 （ ） = （ ） 三角形的面積是 （ ）。",
+    "options": [
+      "17 m",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "17 m"
+  },
+  {
+    "id": "5A35M108a_08C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "17 cm",
+      "或 8",
+      "8 cm",
+      "15 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M108a_09C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "17 cm",
+      "8 cm",
+      "26 cm",
+      "15 cm"
+    ],
+    "answer": "26 cm"
+  },
+  {
+    "id": "5A35M108a_10C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "8 cm",
+      "16 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M108a_11C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） m2。",
+    "options": [
+      "18 m",
+      "15 cm",
+      "8 cm",
+      "17 cm"
+    ],
+    "answer": "18 m"
+  },
+  {
+    "id": "5A35M108a_12C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "20 cm",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M108a_13C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "17 cm",
+      "8 cm",
+      "39 cm",
+      "15 cm"
+    ],
+    "answer": "39 cm"
+  },
+  {
+    "id": "5A35M108a_14C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "15 cm",
+      "7 cm",
+      "8 cm",
+      "17 cm"
+    ],
+    "answer": "7 cm"
+  },
+  {
+    "id": "5A35M108a_15C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "或 8",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "17 cm"
+  },
+  {
+    "id": "5A35M108a_16C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "17 cm",
+      "15 cm",
+      "8 cm",
+      "21 cm"
+    ],
+    "answer": "21 cm"
+  },
+  {
+    "id": "5A35M108a_17C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "40 cm",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "40 cm"
+  },
+  {
+    "id": "5A35M108a_18C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "15 cm",
+      "17 cm",
+      "40 cm",
+      "8 cm"
+    ],
+    "answer": "40 cm"
+  },
+  {
+    "id": "5A35M108a_19C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "8 cm",
+      "17 cm",
+      "30 cm",
+      "15 cm"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M108a_20C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） m2。",
+    "options": [
+      "17 cm",
+      "15 cm",
+      "36 m",
+      "8 cm"
+    ],
+    "answer": "36 m"
+  },
+  {
+    "id": "5A35M108a_21C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） m2。",
+    "options": [
+      "17 cm",
+      "52 m",
+      "15 cm",
+      "8 cm"
+    ],
+    "answer": "52 m"
+  },
+  {
+    "id": "5A35M108a_22C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "15 cm",
+      "8 cm",
+      "17 cm",
+      "25 cm"
+    ],
+    "answer": "25 cm"
+  },
+  {
+    "id": "5A35M108a_23C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ） cm2。",
+    "options": [
+      "39 cm",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "39 cm"
+  },
+  {
+    "id": "5A35M108a_24C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "8 cm",
+      "17 cm",
+      "15 cm",
+      "210 cm2"
+    ],
+    "answer": "210 cm2"
+  },
+  {
+    "id": "5A35M108a_25C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "8 cm",
+      "17 cm",
+      "15 cm",
+      "117 m2"
+    ],
+    "answer": "117 m2"
+  },
+  {
+    "id": "5A35M108a_26C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "60 cm2",
+      "8 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "60 cm2"
+  },
+  {
+    "id": "5A35M108a_27C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "8 cm",
+      "420 cm2",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "420 cm2"
+  },
+  {
+    "id": "5A35M108a_28C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "84 m2",
+      "17 cm",
+      "8 cm",
+      "15 cm"
+    ],
+    "answer": "84 m2"
+  },
+  {
+    "id": "5A35M108a_29C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "8 cm",
+      "15 cm",
+      "17 cm",
+      "210 cm2"
+    ],
+    "answer": "210 cm2"
+  },
+  {
+    "id": "5A35M108a_30C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "15 cm",
+      "8 cm",
+      "17 cm",
+      "336 cm2"
+    ],
+    "answer": "336 cm2"
+  },
+  {
+    "id": "5A35M108a_31C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖三角形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "15 cm",
+      "17 cm",
+      "300 cm2",
+      "8 cm"
+    ],
+    "answer": "300 cm2"
+  },
+  {
+    "id": "5A35M108a_34C_041P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由正方形A和直角三角形B組成。 上圖的梯形由正方形A和直角三角形B組成。",
+    "options": [
+      "17 cm",
+      "15 cm",
+      "8 cm",
+      "14 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M108a_34C_041P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由正方形A和直角三角形B組成。 (a)正方形A的面積是 （ ） cm2。",
+    "options": [
+      "A",
+      "8 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_34C_041P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由正方形A和直角三角形B組成。 (b)三角形B的面積是 （ ） cm2。",
+    "options": [
+      "B",
+      "17 cm",
+      "15 cm",
+      "8 cm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M108a_35C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的長方形由三角形A和B組成。 上圖的長方形由三角形A和B組成。",
+    "options": [
+      "8 cm",
+      "17 cm",
+      "24 cm",
+      "15 cm"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5A35M108a_35C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的長方形由三角形A和B組成。 (a)A是一個* 直角 / 等腰 / 等邊 三角形。（* 圈出答案）",
+    "options": [
+      "17 cm",
+      "8 cm",
+      "10 cm",
+      "15 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M108a_35C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的長方形由三角形A和B組成。 (b)三角形B的面積是 （ ） cm2。",
+    "options": [
+      "8 cm",
+      "A",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_36C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的正方形由三角形A和B組成。 上圖的正方形由三角形A和B組成。",
+    "options": [
+      "17 cm",
+      "8 cm",
+      "15 cm",
+      "28 cm"
+    ],
+    "answer": "28 cm"
+  },
+  {
+    "id": "5A35M108a_36C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的正方形由三角形A和B組成。 (a)A是一個* 不等邊 / 等腰直角 / 等邊 三角形。（* 圈出答案）",
+    "options": [
+      "8 cm",
+      "A",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_36C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的正方形由三角形A和B組成。 (b)三角形B的面積是 （ ） cm2。",
+    "options": [
+      "B",
+      "17 cm",
+      "15 cm",
+      "8 cm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M108a_37C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖的長方形由正方形A和三角形B、C組成。 （* 圈出答案） 右圖的長方形由正方形A和三角形B、C組成。",
+    "options": [
+      "6 cm",
+      "8 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5A35M108a_37C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖的長方形由正方形A和三角形B、C組成。 （* 圈出答案） (a)B是一個* 等腰 / 等邊 / 直角 三角形。 （* 圈出答案）",
+    "options": [
+      "15 cm",
+      "17 cm",
+      "8 cm",
+      "A"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_37C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖的長方形由正方形A和三角形B、C組成。 （* 圈出答案） (b)B的面積是 （ ） cm2。",
+    "options": [
+      "15 cm",
+      "17 cm",
+      "B",
+      "8 cm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M108a_38C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖的長方形由三角形A、B和正方形C組成。 三角形。（* 圈出答案） 右圖的長方形由三角形A、B和正方形C組成。",
+    "options": [
+      "8 cm",
+      "17 cm",
+      "8 m",
+      "15 cm"
+    ],
+    "answer": "8 m"
+  },
+  {
+    "id": "5A35M108a_38C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖的長方形由三角形A、B和正方形C組成。 三角形。（* 圈出答案） (a)B是一個* 等腰直角 / 等邊 / 不等邊 三角形。（* 圈出答案）",
+    "options": [
+      "17 cm",
+      "A",
+      "8 cm",
+      "15 cm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_38C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖的長方形由三角形A、B和正方形C組成。 三角形。（* 圈出答案） (b)B的面積是 （ ） m2。",
+    "options": [
+      "B",
+      "15 cm",
+      "8 cm",
+      "17 cm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M108a_39C_041P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由平行四邊形A和直角三角形B組成。 上圖的梯形由平行四邊形A和直角三角形B組成。",
+    "options": [
+      "8 cm",
+      "14 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M108a_39C_041P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由平行四邊形A和直角三角形B組成。 (a)A的面積是 （ ） cm2。",
+    "options": [
+      "A",
+      "8 cm",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_39C_041P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由平行四邊形A和直角三角形B組成。 (b)B的面積是 （ ） cm2。",
+    "options": [
+      "17 cm",
+      "15 cm",
+      "B",
+      "8 cm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M108a_40C_041P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由直角三角形A和平行四邊形B組成。 上圖的梯形由直角三角形A和平行四邊形B組成。",
+    "options": [
+      "15 cm",
+      "11 cm",
+      "8 cm",
+      "17 cm"
+    ],
+    "answer": "11 cm"
+  },
+  {
+    "id": "5A35M108a_40C_041P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由直角三角形A和平行四邊形B組成。 (a)A的面積是 （ ） cm2。",
+    "options": [
+      "A",
+      "8 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M108a_40C_041P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的梯形由直角三角形A和平行四邊形B組成。 (b)B的面積是 （ ） cm2。",
+    "options": [
+      "17 cm",
+      "8 cm",
+      "15 cm",
+      "B"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M108a_41C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的正方形由兩個直角三角形和一個等腰三角形組成。正方形的周界是40 cm。 上圖的正方形由兩個直角三角形和一個等腰三角形組成。正方形的周界是40 cm。",
+    "options": [
+      "8",
+      "100",
+      "60",
+      "15"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5A35M108a_41C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖的正方形由兩個直角三角形和一個等腰三角形組成。正方形的周界是40 cm。 (a)正方形的面積是 （ ） cm2。",
+    "options": [
+      "15",
+      "60",
+      "50",
+      "8"
+    ],
+    "answer": "50"
+  },
+  {
+    "id": "5A35M108a_42C_042P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由三角形X、Y和Z組成。 上圖由三角形X、Y和Z組成。",
+    "options": [
+      "X",
+      "15 cm",
+      "17 cm",
+      "8 cm"
+    ],
+    "answer": "X"
+  },
+  {
+    "id": "5A35M108a_42C_042P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由三角形X、Y和Z組成。 (a)三角形 （ ） 的面積最大，面積是 （ ） m2。",
+    "options": [
+      "Y",
+      "8 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "answer": "Y"
+  },
+  {
+    "id": "5A35M108a_42C_042P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由三角形X、Y和Z組成。 (b)三角形 （ ） 的面積最小，面積是 （ ） m2。",
+    "options": [
+      "17 cm",
+      "15 cm",
+      "Z",
+      "8 cm"
+    ],
+    "answer": "Z"
+  },
+  {
+    "id": "5A35M108a_43C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的高是12厘米，底是9厘米，它的面積是多少平方厘米？ （ ） 平方厘米",
+    "options": [
+      "54",
+      "8",
+      "15",
+      "60"
+    ],
+    "answer": "54"
+  },
+  {
+    "id": "5A35M108a_44C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的底是8 m，高是19 m，它的面積是多少m2？ （ ） m2",
+    "options": [
+      "8",
+      "60",
+      "15",
+      "76"
+    ],
+    "answer": "76"
+  },
+  {
+    "id": "5A35M108a_45C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的高是24 cm，底是5 cm，它的面積是多少cm2？ （ ） cm2",
+    "options": [
+      "8",
+      "3",
+      "15",
+      "60"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5A35M108a_46C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的底是16米，高是9米，它的面積是多少平方米？ （ ） 平方米",
+    "options": [
+      "15",
+      "60",
+      "72",
+      "8"
+    ],
+    "answer": "72"
+  },
+  {
+    "id": "5A35M108a_47C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的高是3米，底是6米，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "8 cm",
+      "15 cm",
+      "9平方米",
+      "17 cm"
+    ],
+    "answer": "9平方米"
+  },
+  {
+    "id": "5A35M108a_48C_112N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的底是8 m，底是高的一半，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "15 cm",
+      "8 cm",
+      "64 m2",
+      "17 cm"
+    ],
+    "answer": "64 m2"
+  },
+  {
+    "id": "5A35M108a_49C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一張三角形餐墊的底是35 cm，對應的高是14 cm，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "15 cm",
+      "17 cm",
+      "8 cm",
+      "245 cm2"
+    ],
+    "answer": "245 cm2"
+  },
+  {
+    "id": "5A35M108a_50C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的高是14 m，對應的底是10 m，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "15 cm",
+      "70 m2",
+      "8 cm",
+      "17 cm"
+    ],
+    "answer": "70 m2"
+  },
+  {
+    "id": "5A35M108a_51C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的高是36 cm，底比高短12 cm，它的面積是 （ ） cm2。",
+    "options": [
+      "432",
+      "8",
+      "15",
+      "60"
+    ],
+    "answer": "432"
+  },
+  {
+    "id": "5A35M108a_52C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的底是25 cm，高比底短13 cm，它的面積是 （ ） cm2。",
+    "options": [
+      "60",
+      "15",
+      "8",
+      "150"
+    ],
+    "answer": "150"
+  },
+  {
+    "id": "5A35M108a_53C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的高是28 m，高比底長14 m，它的面積是 （ ） m2。",
+    "options": [
+      "8",
+      "60",
+      "15",
+      "196"
+    ],
+    "answer": "196"
+  },
+  {
+    "id": "5A35M108a_54C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "一個三角形的底是34 cm，底比高短6 cm，它的面積是 （ ） cm2。",
+    "options": [
+      "15",
+      "8",
+      "60",
+      "680"
+    ],
+    "answer": "680"
+  },
+  {
+    "id": "5A35M108a_55C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "把一個正方形如右圖分割成三個三角形， 三角形B的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "8 cm",
+      "2 cm2",
+      "17 cm",
+      "15 cm"
+    ],
+    "answer": "2 cm2"
+  },
+  {
+    "id": "5A35M108a_56C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "嘉怡用4張大小相同的三角形卡紙拼砌出一個大三角形，如右圖所示。每張卡紙的底是12 cm，對應的高比底長5 cm。 (a)每張卡紙的高是 （ ） cm。",
+    "options": [
+      "60",
+      "15",
+      "8",
+      "17"
+    ],
+    "answer": "17"
+  },
+  {
+    "id": "5A35M108a_56C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "嘉怡用4張大小相同的三角形卡紙拼砌出一個大三角形，如右圖所示。每張卡紙的底是12 cm，對應的高比底長5 cm。 (b)每張卡紙的面積是 （ ） cm2。",
+    "options": [
+      "15",
+      "60",
+      "102",
+      "8"
+    ],
+    "answer": "102"
+  },
+  {
+    "id": "5A35M108a_58C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖三角形的面積是多少cm2？",
+    "options": [
+      "15 cm2",
+      "40 cm2",
+      "20 cm2",
+      "30 cm2"
+    ],
+    "answer": "15 cm2"
+  },
+  {
+    "id": "5A35M108a_60C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖三角形的面積是多少cm2？",
+    "options": [
+      "360 cm2",
+      "250 cm2",
+      "290 cm2",
+      "720 cm2"
+    ],
+    "answer": "720 cm2"
+  },
+  {
+    "id": "5A35M108a_63C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖中，R和S是兩個三角形。S的底是R的一半。如果R的面積是 72 cm2，S的面積是多少cm2？",
+    "options": [
+      "9 cm2",
+      "36 cm2",
+      "24 cm2",
+      "18 cm2"
+    ],
+    "answer": "9 cm2"
+  },
+  {
+    "id": "5A35M108a_65C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由一個正方形和一個三角形組成。三角形的面積是60 cm2，它的高是多少cm？",
+    "options": [
+      "12 cm",
+      "10 cm",
+      "24 cm",
+      "6 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M108a_68C_082N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "三角形原來的高是8米，現把高加長2米，底不變，新三角形的面積是20平方米。三角形的底是多少米？",
+    "options": [
+      "2米",
+      "10米",
+      "4米",
+      "8米"
+    ],
+    "answer": "2米"
+  },
+  {
+    "id": "5A35M108a_69C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "右圖陰影部分的面積是多少cm2？",
+    "options": [
+      "72 cm2",
+      "60 cm2",
+      "108 cm2",
+      "36 cm2"
+    ],
+    "answer": "108 cm2"
+  },
+  {
+    "id": "5A35M108a_72C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由三個三角形X、Y和Z所組成，以下哪一項是正確的？",
+    "options": [
+      "X的面積最大。",
+      "Y的面積最大。",
+      "Z的面積最大。",
+      "X、Y和Z的面積相等。"
+    ],
+    "answer": "X的面積最大。"
+  },
+  {
+    "id": "5A35M108a_73C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由三個三角形X、Y和Z所組成，以下哪一項是正確的？",
+    "options": [
+      "Y的面積最大。",
+      "Z的面積最大。",
+      "X的面積最大。",
+      "X、Y和Z的面積相等。"
+    ],
+    "answer": "X的面積最大。"
+  },
+  {
+    "id": "5A35M108a_78C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "上圖由三個邊長6 cm的正方形組成，陰影部分的面積是多少cm2？",
+    "options": [
+      "54 cm2",
+      "36 cm2",
+      "48 cm2",
+      "64 cm2"
+    ],
+    "answer": "36 cm2"
+  },
+  {
+    "id": "5A35M108a_85C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "求上圖平行四邊形中，陰影部分的面積。",
+    "options": [
+      "A的面積是54 m2，B的面積是55 m2，C的面積是30 m2。",
+      "10  5  2=25三角形的面積是25 cm2。",
+      "12 × 8 ÷ 2 =48陰影部分的面積是48 cm2。",
+      "28 × 11 ÷ 2=154陰影部分的面積是154 cm2。"
+    ],
+    "answer": "12 × 8 ÷ 2 =48陰影部分的面積是48 cm2。"
+  },
+  {
+    "id": "5A35M108a_87C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "求上圖三角形的面積。",
+    "options": [
+      "10  4  2=20上圖三角形的面積是20 cm2。",
+      "40  12  2=240上圖三角形的面積是240 cm2。",
+      "每塊三角形木板高6 cm，高是底的一半。",
+      "10  5  2=25三角形的面積是25 cm2。"
+    ],
+    "answer": "10  5  2=25三角形的面積是25 cm2。"
+  },
+  {
+    "id": "5A35M108a_88C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "求上圖三角形的面積。",
+    "options": [
+      "10  5  2=25三角形的面積是25 cm2。",
+      "40  12  2=240上圖三角形的面積是240 cm2。",
+      "每塊三角形木板高6 cm，高是底的一半。",
+      "10  4  2=20上圖三角形的面積是20 cm2。"
+    ],
+    "answer": "10  4  2=20上圖三角形的面積是20 cm2。"
+  },
+  {
+    "id": "5A35M108a_89C_031P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "求上圖三角形的面積。",
+    "options": [
+      "10  5  2=25三角形的面積是25 cm2。",
+      "40  12  2=240上圖三角形的面積是240 cm2。",
+      "10  4  2=20上圖三角形的面積是20 cm2。",
+      "每塊三角形木板高6 cm，高是底的一半。"
+    ],
+    "answer": "40  12  2=240上圖三角形的面積是240 cm2。"
+  },
+  {
+    "id": "5A35M108a_90C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "可兒家中有一張底是2米，高是1米的三角形地毯，它的面積是多少平方米？",
+    "options": [
+      "10  4  2=20上圖三角形的面積是20 cm2。",
+      "2 × 1  2=1它的面積是1平方米。",
+      "10  5  2=25三角形的面積是25 cm2。",
+      "或 8 × 15 ÷ 2"
+    ],
+    "answer": "2 × 1  2=1它的面積是1平方米。"
+  },
+  {
+    "id": "5A35M108a_91C_031N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M108a.docx",
+    "topic": "",
+    "question": "三角形旗幟的底是12 cm，對應的高是16 cm，求旗幟的面積。",
+    "options": [
+      "12 × 8 ÷ 2 =48陰影部分的面積是48 cm2。",
+      "12 × 16 ÷ 2=96旗幟的面積是96 cm2。",
+      "A的面積是54 m2，B的面積是55 m2，C的面積是30 m2。",
+      "28 × 11 ÷ 2=154陰影部分的面積是154 cm2。"
+    ],
+    "answer": "12 × 16 ÷ 2=96旗幟的面積是96 cm2。"
+  },
+  {
+    "id": "5A35M109a_04C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "6 m",
+      "14 m",
+      "8 m"
+    ],
+    "answer": "1 cm"
+  },
+  {
+    "id": "5A35M109a_05C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "8 m",
+      "6 m",
+      "1 cm",
+      "14 m"
+    ],
+    "answer": "1 cm"
+  },
+  {
+    "id": "5A35M109a_06C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "8 m",
+      "6 m",
+      "1 cm",
+      "14 m"
+    ],
+    "answer": "1 cm"
+  },
+  {
+    "id": "5A35M109a_07C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "6 m",
+      "8 m",
+      "14 m",
+      "1 cm"
+    ],
+    "answer": "14 m"
+  },
+  {
+    "id": "5A35M109a_08C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "28 cm",
+      "8 m",
+      "1 cm"
+    ],
+    "answer": "28 cm"
+  },
+  {
+    "id": "5A35M109a_09C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "17 cm",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "17 cm"
+  },
+  {
+    "id": "5A35M109a_10C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "21 m",
+      "8 m"
+    ],
+    "answer": "21 m"
+  },
+  {
+    "id": "5A35M109a_11C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "12 cm",
+      "8 m",
+      "1 cm"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5A35M109a_12C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "6 m",
+      "24 m",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "24 m"
+  },
+  {
+    "id": "5A35M109a_13C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "8 m",
+      "7 cm",
+      "1 cm"
+    ],
+    "answer": "7 cm"
+  },
+  {
+    "id": "5A35M109a_14C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "20 cm",
+      "6 m",
+      "8 m"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M109a_15C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "6 m",
+      "8 m",
+      "22 cm"
+    ],
+    "answer": "22 cm"
+  },
+  {
+    "id": "5A35M109a_16C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "20 m",
+      "8 m"
+    ],
+    "answer": "20 m"
+  },
+  {
+    "id": "5A35M109a_17C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "1 cm",
+      "8 m",
+      "23 m",
+      "6 m"
+    ],
+    "answer": "23 m"
+  },
+  {
+    "id": "5A35M109a_18C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "8 m",
+      "22 cm",
+      "6 m",
+      "1 cm"
+    ],
+    "answer": "22 cm"
+  },
+  {
+    "id": "5A35M109a_19C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "6 m",
+      "25 cm",
+      "8 m"
+    ],
+    "answer": "25 cm"
+  },
+  {
+    "id": "5A35M109a_20C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "19 cm",
+      "8 m"
+    ],
+    "answer": "19 cm"
+  },
+  {
+    "id": "5A35M109a_21C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "20 cm",
+      "8 m",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M109a_22C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "30 cm",
+      "8 m",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M109a_23C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "13 m",
+      "1 cm",
+      "8 m",
+      "6 m"
+    ],
+    "answer": "13 m"
+  },
+  {
+    "id": "5A35M109a_24C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） m2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "14 m",
+      "8 m"
+    ],
+    "answer": "14 m"
+  },
+  {
+    "id": "5A35M109a_25C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "8 m",
+      "1 cm",
+      "30 cm",
+      "6 m"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M109a_26C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是 （ ） cm2。",
+    "options": [
+      "8 m",
+      "20 cm",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M109a_27C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "以下哪個梯形的面積與其他的不同？ （ ）",
+    "options": [
+      "5",
+      "D",
+      "2",
+      "1 cm"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "5A35M109a_28C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "以下哪個梯形的面積與其他的不同？ （ ）",
+    "options": [
+      "5",
+      "2",
+      "1 cm",
+      "D"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "5A35M109a_31C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的高是11厘米，上底是7厘米，下底是9厘米，它的面積是多少平方厘米？ （ ） 平方厘米",
+    "options": [
+      "9",
+      "88",
+      "5",
+      "2"
+    ],
+    "answer": "88"
+  },
+  {
+    "id": "5A35M109a_32C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的上底是8 m，下底是16 m，高是9 m，它的面積是多少m2？ （ ） m2",
+    "options": [
+      "2",
+      "5",
+      "9",
+      "108"
+    ],
+    "answer": "108"
+  },
+  {
+    "id": "5A35M109a_33C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的上底是10 cm，下底是15 cm，高是4 cm，它的面積是多少cm2？ （ ） cm2",
+    "options": [
+      "5",
+      "9",
+      "2",
+      "50"
+    ],
+    "answer": "50"
+  },
+  {
+    "id": "5A35M109a_34C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的上底是3 cm，下底是5 cm，高是13 cm，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "8 m",
+      "6 m",
+      "52 cm2",
+      "1 cm"
+    ],
+    "answer": "52 cm2"
+  },
+  {
+    "id": "5A35M109a_35C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的高是8 cm，它的上底與下底之和是22 cm，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "6 m",
+      "1 cm",
+      "8 m",
+      "88 cm2"
+    ],
+    "answer": "88 cm2"
+  },
+  {
+    "id": "5A35M109a_36C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的高是15 cm，它的上底與下底之和是24 cm，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "8 m",
+      "1 cm",
+      "180 cm2",
+      "6 m"
+    ],
+    "answer": "180 cm2"
+  },
+  {
+    "id": "5A35M109a_37C_112N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的高是16米，上底是6米，上底比下底長2米，求它的面積。 （ ）（答案需寫上單位）",
+    "options": [
+      "1 cm",
+      "6 m",
+      "80平方米",
+      "8 m"
+    ],
+    "answer": "80平方米"
+  },
+  {
+    "id": "5A35M109a_38C_112N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的高是9 cm，上底是14 cm，上底比下底短4 cm，求它的面積。 （ ）（答案需寫上單位）",
+    "options": [
+      "1 cm",
+      "6 m",
+      "144 cm2",
+      "8 m"
+    ],
+    "answer": "144 cm2"
+  },
+  {
+    "id": "5A35M109a_39C_112N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的上底是4 cm，上底是下底的一半，高是上底和下底的總和，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "72 cm2",
+      "1 cm",
+      "8 m",
+      "6 m"
+    ],
+    "answer": "72 cm2"
+  },
+  {
+    "id": "5A35M109a_40C_112N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "一個梯形的高是12厘米，上底是3厘米，下底比上底長5厘米，它的面積是多少？ （ ）（答案需寫上單位）",
+    "options": [
+      "8 m",
+      "1 cm",
+      "6 m",
+      "66平方厘米"
+    ],
+    "answer": "66平方厘米"
+  },
+  {
+    "id": "5A35M109a_41C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖是一個等腰梯形，它的周界是38 m。它的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "8 m",
+      "6 m",
+      "72 m2",
+      "1 cm"
+    ],
+    "answer": "72 m2"
+  },
+  {
+    "id": "5A35M109a_42C_041P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三角形A和平行四邊形B組成。 上圖的梯形由三角形A和平行四邊形B組成。",
+    "options": [
+      "8 m",
+      "6 m",
+      "6 cm",
+      "1 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5A35M109a_42C_041P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三角形A和平行四邊形B組成。 (a)A的面積是 （ ） cm2。",
+    "options": [
+      "15 cm",
+      "8 m",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5A35M109a_42C_041P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三角形A和平行四邊形B組成。 (b)梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "14 cm",
+      "8 m"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M109a_43C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三角形A和平行四邊形B組成。 上圖的梯形由三角形A和平行四邊形B組成。",
+    "options": [
+      "6 m",
+      "10 cm",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M109a_43C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三角形A和平行四邊形B組成。 (a)A是一個* 直角 / 等腰 / 等邊 三角形。（* 圈出答案）",
+    "options": [
+      "6 m",
+      "22 cm",
+      "8 m",
+      "1 cm"
+    ],
+    "answer": "22 cm"
+  },
+  {
+    "id": "5A35M109a_43C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三角形A和平行四邊形B組成。 (b)梯形的面積是 （ ） cm2。",
+    "options": [
+      "2",
+      "1 cm",
+      "5",
+      "A"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M109a_44C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的六邊形由兩個大小相同的梯形組成。 上圖的六邊形由兩個大小相同的梯形組成。",
+    "options": [
+      "10 cm",
+      "6 m",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M109a_44C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的六邊形由兩個大小相同的梯形組成。 (a)每個梯形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "8 m",
+      "6 m",
+      "16 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M109a_44C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的六邊形由兩個大小相同的梯形組成。 (b)六邊形的面積是 （ ） cm2。",
+    "options": [
+      "5",
+      "9",
+      "104",
+      "2"
+    ],
+    "answer": "104"
+  },
+  {
+    "id": "5A35M109a_45C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的六邊形由四個大小相同的梯形組成。 上圖的六邊形由四個大小相同的梯形組成。",
+    "options": [
+      "16 cm",
+      "1 cm",
+      "6 m",
+      "8 m"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M109a_45C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的六邊形由四個大小相同的梯形組成。 (a)每個梯形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "8 m",
+      "6 m",
+      "30 cm"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5A35M109a_45C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的六邊形由四個大小相同的梯形組成。 (b)六邊形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "8 m",
+      "20 cm",
+      "1 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M109a_46C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的長方形由一個梯形和一個三角形組成。 上圖的長方形由一個梯形和一個三角形組成。",
+    "options": [
+      "1 cm",
+      "8 m",
+      "2 cm",
+      "6 m"
+    ],
+    "answer": "2 cm"
+  },
+  {
+    "id": "5A35M109a_46C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的長方形由一個梯形和一個三角形組成。 (a)長方形的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "4 cm",
+      "8 m",
+      "6 m"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "id": "5A35M109a_46C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的長方形由一個梯形和一個三角形組成。 (b)梯形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "8 cm",
+      "8 m",
+      "1 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M109a_47C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的正方形由一個梯形和一個三角形組成。 上圖的正方形由一個梯形和一個三角形組成。",
+    "options": [
+      "8 m",
+      "13 cm",
+      "6 m",
+      "1 cm"
+    ],
+    "answer": "13 cm"
+  },
+  {
+    "id": "5A35M109a_47C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的正方形由一個梯形和一個三角形組成。 (a)正方形的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "18 cm",
+      "8 m"
+    ],
+    "answer": "18 cm"
+  },
+  {
+    "id": "5A35M109a_47C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的正方形由一個梯形和一個三角形組成。 (b)梯形的面積是 （ ） cm2。",
+    "options": [
+      "9",
+      "324",
+      "5",
+      "2"
+    ],
+    "answer": "324"
+  },
+  {
+    "id": "5A35M109a_48C_042P#num",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "161",
+      "66",
+      "190",
+      "55"
+    ],
+    "answer": "161"
+  },
+  {
+    "id": "5A35M109a_49C_042N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "美婷把兩個大小相同的梯形組成一個六邊形。六邊形的周界是50厘米。 美婷把兩個大小相同的梯形組成一個六邊形。六邊形的周界是50厘米。",
+    "options": [
+      "1 cm",
+      "10厘米",
+      "6 m",
+      "8 m"
+    ],
+    "answer": "10厘米"
+  },
+  {
+    "id": "5A35M109a_49C_042N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "美婷把兩個大小相同的梯形組成一個六邊形。六邊形的周界是50厘米。 (a)每個梯形的下底是17厘米，上底是 （ ） 厘米。",
+    "options": [
+      "5",
+      "1 cm",
+      "2",
+      "8厘米"
+    ],
+    "answer": "8厘米"
+  },
+  {
+    "id": "5A35M109a_49C_042N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "美婷把兩個大小相同的梯形組成一個六邊形。六邊形的周界是50厘米。 (b)六邊形的面積是 （ ） 平方厘米。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "8 m",
+      "17厘米"
+    ],
+    "answer": "17厘米"
+  },
+  {
+    "id": "5A35M109a_52C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖梯形的面積是多少cm2？",
+    "options": [
+      "352 cm2",
+      "512 cm2",
+      "256 cm2",
+      "320 cm2"
+    ],
+    "answer": "320 cm2"
+  },
+  {
+    "id": "5A35M109a_58C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "下圖是一個邊長10 cm的正方形。現把它分割成一個長方形和兩個大小不同的梯形，較小的梯形的面積是多少cm2？",
+    "options": [
+      "36 cm2",
+      "12 cm2",
+      "16 cm2",
+      "48 cm2"
+    ],
+    "answer": "16 cm2"
+  },
+  {
+    "id": "5A35M109a_59C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "下圖是一個邊長8 cm的正方形。現把它分割成一個長方形和兩個大小不同的梯形，較大的梯形的面積是多少cm2？",
+    "options": [
+      "12 cm2",
+      "30 cm2",
+      "18 cm2",
+      "22 cm2"
+    ],
+    "answer": "18 cm2"
+  },
+  {
+    "id": "5A35M109a_60C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖中，小梯形的上底、下底和高都是大梯形的一半，求小梯形的面積。",
+    "options": [
+      "4 cm2",
+      "16 cm2",
+      "32 cm2",
+      "8 cm2"
+    ],
+    "answer": "32 cm2"
+  },
+  {
+    "id": "5A35M109a_61C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "下圖中，大梯形的上底、下底和高都是小梯形的3倍，小梯形的面積是多少cm2？",
+    "options": [
+      "432 cm2",
+      "54 cm2",
+      "36 cm2",
+      "486 cm2"
+    ],
+    "answer": "36 cm2"
+  },
+  {
+    "id": "5A35M109a_63C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "下列哪個圖形的面積最小？ A. B. C. D.",
+    "options": [
+      "8 m",
+      "1 cm",
+      "6 m",
+      "11 cm"
+    ],
+    "answer": "11 cm"
+  },
+  {
+    "id": "5A35M109a_79C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖由三角形A和梯形B組成。 上圖由三角形A和梯形B組成。",
+    "options": [
+      "1 cm",
+      "5",
+      "A",
+      "2"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M109a_79C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖由三角形A和梯形B組成。 (a)三角形A的面積是 （ ） cm2。",
+    "options": [
+      "6 m",
+      "1 cm",
+      "8 m",
+      "4 cm"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "id": "5A35M109a_79C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖由三角形A和梯形B組成。 (b)上圖的面積是多少cm2？",
+    "options": [
+      "B",
+      "1 cm",
+      "2",
+      "5"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M109a_80C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖由三角形A和梯形B組成。 上圖由三角形A和梯形B組成。",
+    "options": [
+      "1 cm",
+      "2",
+      "5",
+      "A"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A35M109a_80C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖由三角形A和梯形B組成。 (a)三角形A的面積是 （ ） cm2。",
+    "options": [
+      "1 cm",
+      "6 cm",
+      "8 m",
+      "6 m"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5A35M109a_80C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖由三角形A和梯形B組成。 (b)上圖的面積是多少cm2？",
+    "options": [
+      "5",
+      "B",
+      "1 cm",
+      "2"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5A35M109a_87C_122P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖是一個梯形，陰影部分的面積是24 cm2。 右圖是一個梯形，陰影部分的面積是24 cm2。",
+    "options": [
+      "6 cm",
+      "6 m",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5A35M109a_87C_122P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖是一個梯形，陰影部分的面積是24 cm2。 (a)梯形的高是 （ ） cm。",
+    "options": [
+      "8 m",
+      "21 cm",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "21 cm"
+  },
+  {
+    "id": "5A35M109a_87C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖是一個梯形，陰影部分的面積是24 cm2。 (b)梯形的面積是多少cm2？",
+    "options": [
+      "9",
+      "8",
+      "2",
+      "5"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A35M109a_88C_122P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖是一個梯形，陰影部分的面積是380 cm2。 右圖是一個梯形，陰影部分的面積是380 cm2。",
+    "options": [
+      "1 cm",
+      "38 cm",
+      "6 m",
+      "8 m"
+    ],
+    "answer": "38 cm"
+  },
+  {
+    "id": "5A35M109a_88C_122P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖是一個梯形，陰影部分的面積是380 cm2。 (a)梯形的高是 （ ） cm。",
+    "options": [
+      "1 cm",
+      "6 m",
+      "14 cm",
+      "8 m"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M109a_88C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖是一個梯形，陰影部分的面積是380 cm2。 (b)梯形的面積是多少cm2？",
+    "options": [
+      "9",
+      "2",
+      "20",
+      "5"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5A35M109a_89C_122N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "下面的梯形是區先生設計的遊戲室平面圖。 下面的梯形是區先生設計的遊戲室平面圖。",
+    "options": [
+      "1 m",
+      "1 cm",
+      "5",
+      "2"
+    ],
+    "answer": "1 m"
+  },
+  {
+    "id": "5A35M109a_89C_122N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "下面的梯形是區先生設計的遊戲室平面圖。 (a) 遊戲室的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "7 m",
+      "5",
+      "1 cm",
+      "2"
+    ],
+    "answer": "7 m"
+  },
+  {
+    "id": "5A35M109a_90C_102N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "在方格紙上繪畫一個有直角的梯形，而它的面積比梯形A大。",
+    "options": [
+      "8 m",
+      "或其他合理答案。",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A35M109a_91C_102N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "在方格紙上繪畫一個面積是20 cm2的梯形。",
+    "options": [
+      "6 m",
+      "或其他合理答案。",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5A35M109a_92C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "（ ） （ ） 梯形的面積是 （ ）。 (a)量度下面梯形的上底、下底和高的長度。",
+    "options": [
+      "7",
+      "5",
+      "2",
+      "9"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A35M109a_92C_121N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "（ ） （ ） 梯形的面積是 （ ）。 (b)列式計算上面梯形的面積。 （ ） （ ） 梯形的面積是 （ ）。",
+    "options": [
+      "2",
+      "5",
+      "9",
+      "66"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A35M109a_93C_121N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "（ ） 梯形的面積是 （ ）。 (a)量度右面梯形的上底、下底和高的長度。",
+    "options": [
+      "_____ cm",
+      "8 m",
+      "1 cm",
+      "6 m"
+    ],
+    "answer": "_____ cm"
+  },
+  {
+    "id": "5A35M109a_93C_121N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "（ ） 梯形的面積是 （ ）。 (b)列式計算右面梯形的面積。（ ） （ ） 梯形的面積是 （ ）。",
+    "options": [
+      "6 m",
+      "______cm",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "______cm"
+  },
+  {
+    "id": "5A35M109a_94C_041P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三個大小相同的三角形組成。 上圖的梯形由三個大小相同的三角形組成。",
+    "options": [
+      "8 m",
+      "16 cm",
+      "6 m",
+      "1 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M109a_94C_041P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三個大小相同的三角形組成。 (a)每個三角形的面積是 （ ） cm2。",
+    "options": [
+      "8 m",
+      "1 cm",
+      "6 m",
+      "15 cm"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5A35M109a_94C_041P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖的梯形由三個大小相同的三角形組成。 (b)梯形的面積是 （ ） cm2。",
+    "options": [
+      "120",
+      "5",
+      "9",
+      "2"
+    ],
+    "answer": "120"
+  },
+  {
+    "id": "5A35M109a_97C_112P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "右圖由兩個面積分別是81 cm2和36 cm2 的正方形組成。陰影部分的面積是多少 cm2？ 答案︰（ ） cm2",
+    "options": [
+      "6 m",
+      "3 cm",
+      "1 cm",
+      "8 m"
+    ],
+    "answer": "3 cm"
+  },
+  {
+    "id": "5A35M109a_98C_111N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M109a.docx",
+    "topic": "5A35M109a  梯形的面積",
+    "question": "上圖梯形的面積是多少cm2？ 答案︰（ ） cm2",
+    "options": [
+      "2 cm",
+      "1 cm",
+      "6 m",
+      "8 m"
+    ],
+    "answer": "2 cm"
+  },
+  {
+    "id": "5A35M110a_01C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "8 cm",
+      "34 cm",
+      "22 cm",
+      "14 cm"
+    ],
+    "answer": "34 cm"
+  },
+  {
+    "id": "5A35M110a_02C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "27 cm",
+      "34 cm",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "27 cm"
+  },
+  {
+    "id": "5A35M110a_03C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "14 cm",
+      "34 cm",
+      "22 cm",
+      "49 cm"
+    ],
+    "answer": "49 cm"
+  },
+  {
+    "id": "5A35M110a_04C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "14 cm",
+      "22 cm",
+      "48 cm",
+      "34 cm"
+    ],
+    "answer": "48 cm"
+  },
+  {
+    "id": "5A35M110a_05C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "16 cm",
+      "34 cm",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M110a_06C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖的面積是 （ ） cm2。",
+    "options": [
+      "34 cm",
+      "14 cm",
+      "22 cm",
+      "8 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M110a_07C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "22 cm",
+      "14 cm",
+      "8 cm",
+      "34 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M110a_08C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "22 cm",
+      "34 cm",
+      "14 cm",
+      "18 cm"
+    ],
+    "answer": "18 cm"
+  },
+  {
+    "id": "5A35M110a_09C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖的面積是 （ ） cm2。",
+    "options": [
+      "14 cm",
+      "34 cm",
+      "22 cm",
+      "28 cm"
+    ],
+    "answer": "28 cm"
+  },
+  {
+    "id": "5A35M110a_10C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） cm2。",
+    "options": [
+      "28 cm",
+      "22 cm",
+      "14 cm",
+      "34 cm"
+    ],
+    "answer": "28 cm"
+  },
+  {
+    "id": "5A35M110a_11C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的面積是 （ ） m2。",
+    "options": [
+      "34 cm",
+      "14 cm",
+      "32 m",
+      "22 cm"
+    ],
+    "answer": "32 m"
+  },
+  {
+    "id": "5A35M110a_12C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ） cm2。",
+    "options": [
+      "22 cm",
+      "8 cm",
+      "14 cm",
+      "34 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M110a_13C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ） m2。",
+    "options": [
+      "13 m",
+      "14 cm",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "13 m"
+  },
+  {
+    "id": "5A35M110a_14C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖陰影部分的面積是 （ ） cm2。",
+    "options": [
+      "22 cm",
+      "14 cm",
+      "40 cm",
+      "34 cm"
+    ],
+    "answer": "40 cm"
+  },
+  {
+    "id": "5A35M110a_15C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖陰影部分的面積是 （ ） m2。",
+    "options": [
+      "14 cm",
+      "22 cm",
+      "34 cm",
+      "30 m"
+    ],
+    "answer": "30 m"
+  },
+  {
+    "id": "5A35M110a_16C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖多邊形的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "22 cm",
+      "14 cm",
+      "49 cm2"
+    ],
+    "answer": "49 cm2"
+  },
+  {
+    "id": "5A35M110a_17C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "22 cm",
+      "85 cm2",
+      "34 cm",
+      "14 cm"
+    ],
+    "answer": "85 cm2"
+  },
+  {
+    "id": "5A35M110a_18C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "22 cm",
+      "165 m2",
+      "34 cm",
+      "14 cm"
+    ],
+    "answer": "165 m2"
+  },
+  {
+    "id": "5A35M110a_19C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖多邊形的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "189 m2",
+      "14 cm",
+      "22 cm",
+      "34 cm"
+    ],
+    "answer": "189 m2"
+  },
+  {
+    "id": "5A35M110a_20C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "14 cm",
+      "320 cm2",
+      "22 cm"
+    ],
+    "answer": "320 cm2"
+  },
+  {
+    "id": "5A35M110a_21C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖多邊形的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "22 cm",
+      "113 cm2",
+      "14 cm"
+    ],
+    "answer": "113 cm2"
+  },
+  {
+    "id": "5A35M110a_22C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖的多邊形由兩個大小相同的梯形拼成。上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "34 cm",
+      "208 cm2",
+      "22 cm"
+    ],
+    "answer": "208 cm2"
+  },
+  {
+    "id": "5A35M110a_23C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "195 cm2",
+      "14 cm",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "195 cm2"
+  },
+  {
+    "id": "5A35M110a_24C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖多邊形的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "34 cm",
+      "48 cm2",
+      "22 cm"
+    ],
+    "answer": "48 cm2"
+  },
+  {
+    "id": "5A35M110a_25C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從一張平行四邊形紙剪去兩個相同的小平行四邊形，得出上面的 多邊形。多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "528 cm2",
+      "22 cm",
+      "14 cm"
+    ],
+    "answer": "528 cm2"
+  },
+  {
+    "id": "5A35M110a_26C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "22 cm",
+      "34 cm",
+      "16 m2"
+    ],
+    "answer": "16 m2"
+  },
+  {
+    "id": "5A35M110a_27C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "22 cm",
+      "183 cm2",
+      "14 cm",
+      "34 cm"
+    ],
+    "answer": "183 cm2"
+  },
+  {
+    "id": "5A35M110a_28C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "14 cm",
+      "99 m2",
+      "22 cm"
+    ],
+    "answer": "99 m2"
+  },
+  {
+    "id": "5A35M110a_29C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "181 cm2",
+      "14 cm",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "181 cm2"
+  },
+  {
+    "id": "5A35M110a_30C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從一張梯形紙剪去一個平行四邊形，得出上面的多邊形。多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "264 cm2",
+      "14 cm",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "264 cm2"
+  },
+  {
+    "id": "5A35M110a_31C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從一張梯形紙剪去一個平行四邊形，得出右面的多邊形。 多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "22 cm",
+      "34 cm",
+      "14 cm",
+      "366 cm2"
+    ],
+    "answer": "366 cm2"
+  },
+  {
+    "id": "5A35M110a_32C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "126 cm2",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "126 cm2"
+  },
+  {
+    "id": "5A35M110a_33C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "46 m2",
+      "22 cm",
+      "34 cm"
+    ],
+    "answer": "46 m2"
+  },
+  {
+    "id": "5A35M110a_34C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從一張平行四邊形紙剪去一個三角形，得出上面的多邊形。多邊形的 面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "252 cm2",
+      "22 cm",
+      "14 cm"
+    ],
+    "answer": "252 cm2"
+  },
+  {
+    "id": "5A35M110a_35C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從一張平行四邊形紙剪去一個 三角形，得出右面的多邊形。 多邊形的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "1140 cm2",
+      "22 cm",
+      "14 cm"
+    ],
+    "answer": "1140 cm2"
+  },
+  {
+    "id": "5A35M110a_36C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "99 cm2",
+      "22 cm",
+      "14 cm"
+    ],
+    "answer": "99 cm2"
+  },
+  {
+    "id": "5A35M110a_37C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "156 cm2",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "156 cm2"
+  },
+  {
+    "id": "5A35M110a_38C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "60 m2",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "60 m2"
+  },
+  {
+    "id": "5A35M110a_39C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖多邊形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "306 cm2",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "306 cm2"
+  },
+  {
+    "id": "5A35M110a_40C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖菱形的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "48 cm2",
+      "34 cm",
+      "22 cm",
+      "14 cm"
+    ],
+    "answer": "48 cm2"
+  },
+  {
+    "id": "5A35M110a_41C_041N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖正方形的面積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "22 cm",
+      "72 cm2",
+      "14 cm"
+    ],
+    "answer": "72 cm2"
+  },
+  {
+    "id": "5A35M110a_42C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是神秘屋的平面圖，它的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "14 cm",
+      "127 m2",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "127 m2"
+  },
+  {
+    "id": "5A35M110a_43C_042P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖由兩個大小相同的等腰直角三角形及一個正方形組成。正方形的邊長是 14 cm。右圖的面積是 （ ） cm2。",
+    "options": [
+      "8 cm",
+      "34 cm",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5A35M110a_44C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖由四個大小相同的等腰三角形及一個正方形組成。正方形的邊長是12 cm。上圖的面積是 （ ） cm2。",
+    "options": [
+      "34 cm",
+      "22 cm",
+      "10 cm",
+      "14 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5A35M110a_45C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從下圖的梯形剪出一個最大的正方形後，餘下部分的面積是多少cm2？",
+    "options": [
+      "8 cm2",
+      "36 cm2",
+      "21 cm2",
+      "49 cm2"
+    ],
+    "answer": "36 cm2"
+  },
+  {
+    "id": "5A35M110a_46C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從下圖的梯形剪出一個最大的正方形後，餘下部分的面積是多少m2？",
+    "options": [
+      "9 m2",
+      "36 m2",
+      "45 m2",
+      "81 m2"
+    ],
+    "answer": "36 m2"
+  },
+  {
+    "id": "5A35M110a_48C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "在圖中，正方形手工紙剪去一個三角形，餘下部分的面積是多少cm2？",
+    "options": [
+      "208 cm2",
+      "232 cm2",
+      "160 cm2",
+      "256 cm2"
+    ],
+    "answer": "256 cm2"
+  },
+  {
+    "id": "5A35M110a_49C_081P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "從一張正方形手工紙剪出一個直角三角形，如下圖所示。餘下部分的面積是多少cm2？",
+    "options": [
+      "436 cm2",
+      "460 cm2",
+      "420 cm2",
+      "508 cm2"
+    ],
+    "answer": "436 cm2"
+  },
+  {
+    "id": "5A35M110a_50C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖多邊形的面積是多少cm2？",
+    "options": [
+      "494 cm2",
+      "524 cm2",
+      "478 cm2",
+      "414 cm2"
+    ],
+    "answer": "414 cm2"
+  },
+  {
+    "id": "5A35M110a_51C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖多邊形的面積是多少cm2？",
+    "options": [
+      "320 cm2",
+      "244 cm2",
+      "220 cm2",
+      "280 cm2"
+    ],
+    "answer": "220 cm2"
+  },
+  {
+    "id": "5A35M110a_55C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "下圖的正方形中，陰影部分的面積是多少cm2？",
+    "options": [
+      "24 cm2",
+      "13 cm2",
+      "36 cm2",
+      "72 cm2"
+    ],
+    "answer": "36 cm2"
+  },
+  {
+    "id": "5A35M110a_56C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "在上圖的長方形中，陰影部分的面積是多少cm2？",
+    "options": [
+      "128 cm2",
+      "64 cm2",
+      "48 cm2",
+      "32 cm2"
+    ],
+    "answer": "64 cm2"
+  },
+  {
+    "id": "5A35M110a_57C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "下圖由三個大小相同的長方形組成，陰影部分的面積是多少cm2？",
+    "options": [
+      "96 cm2",
+      "72 cm2",
+      "84 cm2",
+      "60 cm2"
+    ],
+    "answer": "84 cm2"
+  },
+  {
+    "id": "5A35M110a_64C_121P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是一塊草地的平面圖。 上圖是一塊草地的平面圖。",
+    "options": [
+      "14 cm",
+      "34 cm",
+      "6 m",
+      "22 cm"
+    ],
+    "answer": "6 m"
+  },
+  {
+    "id": "5A35M110a_64C_121P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是一塊草地的平面圖。 (a)這塊草地的面積是多少m2？",
+    "options": [
+      "22 cm",
+      "34 cm",
+      "2 m",
+      "14 cm"
+    ],
+    "answer": "2 m"
+  },
+  {
+    "id": "5A35M110a_64C_121P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是一塊草地的平面圖。 (b)俊傑沿着草地的外圍跑了18圈，他共跑了 （ ） m。",
+    "options": [
+      "15 m",
+      "14 cm",
+      "22 cm",
+      "34 cm"
+    ],
+    "answer": "15 m"
+  },
+  {
+    "id": "5A35M110a_69C_121P#num",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "738",
+      "567",
+      "352",
+      "684"
+    ],
+    "answer": "352"
+  },
+  {
+    "id": "5A35M110a_70C_031P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖是一個平行四邊形。 右圖是一個平行四邊形。",
+    "options": [
+      "22 cm",
+      "14 cm",
+      "12 cm",
+      "34 cm"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5A35M110a_70C_031P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖是一個平行四邊形。 (a) 平行四邊形的面積是多少cm2？",
+    "options": [
+      "34 cm",
+      "14 cm",
+      "15 cm",
+      "22 cm"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5A35M110a_70C_031P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "右圖是一個平行四邊形。 (b) 陰影部分的面積是多少cm2？",
+    "options": [
+      "21 cm",
+      "34 cm",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "21 cm"
+  },
+  {
+    "id": "5A35M110a_71C_031P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是一個梯形。 上圖是一個梯形。",
+    "options": [
+      "14 cm",
+      "22 cm",
+      "34 cm",
+      "16 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5A35M110a_71C_031P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是一個梯形。 (a) 梯形的面積是多少cm2？",
+    "options": [
+      "8 cm",
+      "14 cm",
+      "34 cm",
+      "22 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5A35M110a_71C_031P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "上圖是一個梯形。 (b) 陰影部分的面積是多少cm2？",
+    "options": [
+      "6 cm",
+      "22 cm",
+      "14 cm",
+      "34 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5A35M110a_72C_032N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "依指示利用以下兩種方法計算上圖陰影部分的面積。 依指示利用以下兩種方法計算上圖陰影部分的面積。",
+    "options": [
+      "14 cm",
+      "21 cm",
+      "22 cm",
+      "34 cm"
+    ],
+    "answer": "21 cm"
+  },
+  {
+    "id": "5A35M110a_72C_032N#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "依指示利用以下兩種方法計算上圖陰影部分的面積。 (a) 分割法(b) 填補法",
+    "options": [
+      "22 cm",
+      "14 cm",
+      "34 cm",
+      "20 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M110a_74C_122P#num",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "567",
+      "484",
+      "738",
+      "684"
+    ],
+    "answer": "484"
+  },
+  {
+    "id": "5A35M110a_75C_122P#num",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "400",
+      "567",
+      "684",
+      "738"
+    ],
+    "answer": "400",
+    "image": "q-images/5A35M110a_75C_122P__num.webp"
+  },
+  {
+    "id": "5A35M110a_76C_122P#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "下圖是陳伯伯在綠色天地租用耕地的平面圖。 這塊耕地的平面圖。 下圖是陳伯伯在綠色天地租用耕地的平面圖。",
+    "options": [
+      "22 cm",
+      "4 m",
+      "14 cm",
+      "34 cm"
+    ],
+    "answer": "4 m",
+    "image": "q-images/5A35M110a_76C_122P__a.webp"
+  },
+  {
+    "id": "5A35M110a_76C_122P#b",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "下圖是陳伯伯在綠色天地租用耕地的平面圖。 這塊耕地的平面圖。 (a)這塊耕地的面積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "34 cm",
+      "3 m",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "3 m",
+    "image": "q-images/5A35M110a_76C_122P__b.webp"
+  },
+  {
+    "id": "5A35M110a_76C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "下圖是陳伯伯在綠色天地租用耕地的平面圖。 這塊耕地的平面圖。 (b)這塊耕地每月的租金是每平方米150元，陳伯伯每月需付租金 （ ） 元。",
+    "options": [
+      "34 cm",
+      "14 cm",
+      "22 cm",
+      "5 m"
+    ],
+    "answer": "5 m",
+    "image": "q-images/5A35M110a_76C_122P__c.webp"
+  },
+  {
+    "id": "5A35M110a_77C_041P#num",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "684",
+      "567",
+      "738",
+      "25"
+    ],
+    "answer": "25",
+    "image": "q-images/5A35M110a_77C_041P__num.webp"
+  },
+  {
+    "id": "5A35M110a_78C_041P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "一張長方形卡紙剪去4個大小和形狀都相同的三角形後，餘下部分的 面積是 （ ） cm2。",
+    "options": [
+      "34 cm",
+      "20 cm",
+      "14 cm",
+      "22 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5A35M110a_85C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A35M110a.docx",
+    "topic": "5A35M110a  多邊形的面積",
+    "question": "把三個底是9 cm，高12 cm的平行四邊形重疊成一個新圖形，如上圖所示。 （ ） cm2。 (b)重疊後整個圖形的面積是多少cm2？",
+    "options": [
+      "22 cm",
+      "14 cm",
+      "34 cm",
+      "9 cm"
+    ],
+    "answer": "9 cm"
+  },
+  {
+    "id": "5A45N311a_31C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "6 × 15 = （ ） = （ ）",
+    "options": [
+      "12",
+      "× 6",
+      "× 15",
+      "× 20"
+    ],
+    "answer": "× 15"
+  },
+  {
+    "id": "5A45N311a_42C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "10 × 4 = （ ） = （ ）",
+    "options": [
+      "× 20",
+      "12",
+      "10 ×",
+      "× 6"
+    ],
+    "answer": "10 ×"
+  },
+  {
+    "id": "5A45N311a_43C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "12 × 1 = （ ） = （ ）",
+    "options": [
+      "× 6",
+      "12 ×",
+      "12",
+      "× 20"
+    ],
+    "answer": "12 ×"
+  },
+  {
+    "id": "5A45N311a_71C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "15 × = 12",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A45N311a_74C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "10 × 4 = 44",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A45N311a_89C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 1 × 6 = ? 結果約是： （ ） × （ ） = （ ） 1 × 6 = （ ）",
+    "options": [
+      "2",
+      "3",
+      "12",
+      "1"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A45N311a_90C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 3 × 10 = ? 結果約是： （ ） × （ ） = （ ） 3 × 10 = （ ）",
+    "options": [
+      "32",
+      "1",
+      "3",
+      "2"
+    ],
+    "answer": "32"
+  },
+  {
+    "id": "5A45N311a_91C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 2 × 8 = ? 結果約是： （ ） × （ ） = （ ） 2 × 8 = （ ）",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "24"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5A45N311a_92C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 9 × 2 = ? 結果約是： （ ） × （ ） = （ ） 9 × 2 = （ ）",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "20"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5A45N311a_93C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 5 × 4 = ? 結果約是： （ ） × （ ） = （ ） 5 × 4 = （ ）",
+    "options": [
+      "2",
+      "3",
+      "21",
+      "1"
+    ],
+    "answer": "21"
+  },
+  {
+    "id": "5A45N311a_94C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 6 × 5 = ? 結果約是： （ ） × （ ） = （ ） 6 × 5 = （ ）",
+    "options": [
+      "2",
+      "3",
+      "36",
+      "1"
+    ],
+    "answer": "36"
+  },
+  {
+    "id": "5A45N311a_95C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 8 × 7 = ? 結果約是： （ ） × （ ） = （ ） 8 × 7 = （ ）",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "64"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "5A45N311a_96C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 12 × 4 = ? 結果約是： （ ） × （ ） = （ ） 12 × 4 = （ ）",
+    "options": [
+      "1",
+      "2",
+      "52",
+      "3"
+    ],
+    "answer": "52"
+  },
+  {
+    "id": "5A45N311a_97C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 20 × 1 = ? 結果約是： （ ） × （ ） = （ ） 20 × 1 = （ ）",
+    "options": [
+      "1",
+      "24",
+      "3",
+      "2"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5A45N311a_98C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "先估算，再計算。 18 × 10 = ? 結果約是： （ ） × （ ） = （ ） 18 × 10 = （ ）",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "187"
+    ],
+    "answer": "187"
+  },
+  {
+    "id": "5A45N311f_04C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 14 × = 10",
+    "options": [
+      "7",
+      "3",
+      "1",
+      "2"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A45N311f_05C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 × 3 =",
+    "options": [
+      "1",
+      "9",
+      "3",
+      "2"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A45N311f_06C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 1 × 4 = 7",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A45N311f_07C_122P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "柏文在計算 × 5時，錯誤地計算為 + 5。 （* 圈出答案） 柏文在計算 × 5時，錯誤地計算為 + 5。",
+    "options": [
+      "× 6",
+      "3",
+      "4 /",
+      "2"
+    ],
+    "answer": "4 /"
+  },
+  {
+    "id": "5A45N311f_07C_122P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "柏文在計算 × 5時，錯誤地計算為 + 5。 （* 圈出答案） (a)原來算式的結果是 （ ）。",
+    "options": [
+      "3",
+      "× 6",
+      "1 /",
+      "2"
+    ],
+    "answer": "1 /"
+  },
+  {
+    "id": "5A45N311f_08C_122P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "嘉妍在計算3 × 2 時，錯誤地計算為3 + 2。 （* 圈出答案） 嘉妍在計算3 × 2 時，錯誤地計算為3 + 2。",
+    "options": [
+      "2 /",
+      "× 6",
+      "2",
+      "3"
+    ],
+    "answer": "2 /"
+  },
+  {
+    "id": "5A45N311f_08C_122P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N311a.docx",
+    "topic": "5A45N311a  整數與分數的乘法",
+    "question": "嘉妍在計算3 × 2 時，錯誤地計算為3 + 2。 （* 圈出答案） (a)原來算式的結果是 （ ）。",
+    "options": [
+      "3",
+      "1",
+      "8",
+      "2"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A45N312a_81C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 4 × 3 = ? 結果約是： （ ） × （ ） = （ ） 4 × 3 = （ ）",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "16"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "5A45N312a_82C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 5 × 2 = ? 結果約是： （ ） × （ ） = （ ） 5 × 2 = （ ）",
+    "options": [
+      "5",
+      "3",
+      "1",
+      "18"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5A45N312a_83C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 8 × 1 = ? 結果約是： （ ） × （ ） = （ ） 8 × 1 = （ ）",
+    "options": [
+      "5",
+      "10",
+      "1",
+      "3"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A45N312a_84C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 9 × 6 = ? 結果約是： （ ） × （ ） = （ ） 9 × 6 = （ ）",
+    "options": [
+      "1",
+      "63",
+      "3",
+      "5"
+    ],
+    "answer": "63"
+  },
+  {
+    "id": "5A45N312a_85C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 2 × 3 = ? 結果約是： （ ） × （ ） = （ ） 2 × 3 = （ ）",
+    "options": [
+      "8",
+      "1",
+      "5",
+      "3"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5A45N312a_86C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 12 × 3 = ? 結果約是： （ ） × （ ） = （ ） 12 × 3 = （ ）",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "52"
+    ],
+    "answer": "52"
+  },
+  {
+    "id": "5A45N312a_87C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 20 × 1 = ? 結果約是： （ ） × （ ） = （ ） 20 × 1 = （ ）",
+    "options": [
+      "3",
+      "5",
+      "1",
+      "23"
+    ],
+    "answer": "23"
+  },
+  {
+    "id": "5A45N312a_88C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 × 2 = ? 結果約是： （ ） × （ ） = （ ） × 2 = （ ）",
+    "options": [
+      "5",
+      "2",
+      "3",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5A45N312a_89C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 × 4 = ? 結果約是： （ ） × （ ） = （ ） × 4 = （ ）",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A45N312a_90C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "先估算，再計算。 13 × = ? 結果約是： （ ） × （ ） = （ ） 13 × = （ ）",
+    "options": [
+      "3",
+      "13",
+      "5",
+      "1"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5A45N312f_04C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 1 × 3 = 6",
+    "options": [
+      "1",
+      "5",
+      "3",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A45N312f_05C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 × =",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A45N312f_06C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 1 × =",
+    "options": [
+      "5",
+      "1",
+      "9",
+      "3"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A45N312f_07C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 × 2 = 2",
+    "options": [
+      "11",
+      "3",
+      "1",
+      "5"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5A45N312f_08C_122P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "希兒在計算1 × 2 時，錯誤地計算為 × 2。 （* 圈出答案） 希兒在計算1 × 2 時，錯誤地計算為 × 2。",
+    "options": [
+      "2      /",
+      "19",
+      "10",
+      "38"
+    ],
+    "answer": "2      /"
+  },
+  {
+    "id": "5A45N312f_08C_122P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N312a.docx",
+    "topic": "5A45N312a  分數與分數的乘法",
+    "question": "希兒在計算1 × 2 時，錯誤地計算為 × 2。 （* 圈出答案） (a)原來算式的結果是 （ ）。",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A45N313a_22C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "× 8 × 5 = （ ） = （ ）",
+    "options": [
+      "× 2 ×",
+      "×  ×",
+      "× 8 ×",
+      "× 3 ×"
+    ],
+    "answer": "× 8 ×"
+  },
+  {
+    "id": "5A45N313a_23C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "× 2 × 3 = （ ） = （ ）",
+    "options": [
+      "×  ×",
+      "×  × 5",
+      "× 3 ×",
+      "× 2 ×"
+    ],
+    "answer": "× 2 ×"
+  },
+  {
+    "id": "5A45N313a_25C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "15 × × 3 = （ ） = （ ）",
+    "options": [
+      "15 ×  ×",
+      "× 2 ×",
+      "× 3 ×",
+      "×  ×"
+    ],
+    "answer": "15 ×  ×"
+  },
+  {
+    "id": "5A45N313a_27C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "4 × × 6 = （ ） = （ ）",
+    "options": [
+      "×  ×",
+      "×  × 6",
+      "× 3 ×",
+      "× 2 ×"
+    ],
+    "answer": "×  × 6"
+  },
+  {
+    "id": "5A45N313a_29C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "15 × 4 × = （ ） = （ ）",
+    "options": [
+      "15 ×  ×",
+      "×  ×",
+      "× 2 ×",
+      "× 3 ×"
+    ],
+    "answer": "15 ×  ×"
+  },
+  {
+    "id": "5A45N313a_64C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 9 × × = 6",
+    "options": [
+      "3",
+      "2",
+      "6",
+      "1"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A45N313a_65C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313a.docx",
+    "topic": "5A45N313a  三個分數的乘法",
+    "question": "把適當的數填在方格內，使算式成立。 × 1 × =",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "10"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A45N313b_02C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "公園裏有75棵樹，其中 是木棉樹。公園裏有木棉樹 （ ） 棵。",
+    "options": [
+      "77",
+      "30",
+      "120",
+      "490"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "5A45N313b_03C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "在中文考試中，家強得84分，可晴所得的分數是家強的 ，可晴得 （ ） 分。",
+    "options": [
+      "30",
+      "77",
+      "490",
+      "120"
+    ],
+    "answer": "77"
+  },
+  {
+    "id": "5A45N313b_04C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "五年級有學生225人，其中女生佔 。五年級有女生 （ ） 人。",
+    "options": [
+      "30",
+      "77",
+      "490",
+      "120"
+    ],
+    "answer": "120"
+  },
+  {
+    "id": "5A45N313b_05C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "某學校有學生686人，參加陸運會比賽的學生佔全校的 。 參加陸運會比賽的學生有 （ ） 人。",
+    "options": [
+      "77",
+      "30",
+      "120",
+      "490"
+    ],
+    "answer": "490"
+  },
+  {
+    "id": "5A45N313b_06C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "樂天合唱團有團員154人，其中 是女生，即有女生 （ ） 人。",
+    "options": [
+      "99",
+      "30",
+      "120",
+      "77"
+    ],
+    "answer": "99"
+  },
+  {
+    "id": "5A45N313b_07C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "哥哥有漫畫78本，子晴有的漫畫是哥哥的 ，子晴有漫畫 （ ） 本。",
+    "options": [
+      "77",
+      "65",
+      "120",
+      "30"
+    ],
+    "answer": "65"
+  },
+  {
+    "id": "5A45N313b_08C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "偉文用780元買了一部遊戲機。三個月後，他以買入價的 賣給 二手商店。他賣給二手商店的價錢是 （ ） 元。",
+    "options": [
+      "30",
+      "585",
+      "120",
+      "77"
+    ],
+    "answer": "585"
+  },
+  {
+    "id": "5A45N313b_09C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "停車場有車位580個，私家車車位佔全部車位的 ，私家車車位有 （ ） 個。",
+    "options": [
+      "120",
+      "77",
+      "30",
+      "464"
+    ],
+    "answer": "464"
+  },
+  {
+    "id": "5A45N313b_10C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "每包絲帶有5卷，每卷長 1 米。老師買了一包絲帶，即共買了絲帶 （ ） 米。",
+    "options": [
+      "30",
+      "9",
+      "120",
+      "77"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A45N313b_11C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "右面等邊三角形的周界是 （ ） cm。",
+    "options": [
+      "30",
+      "4 cm",
+      "120",
+      "77"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "id": "5A45N313b_12C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "表哥在郊遊徑上來回走了2次， 共走了 （ ） 公里。",
+    "options": [
+      "郊遊徑全長 3 公里",
+      "77",
+      "30",
+      "120"
+    ],
+    "answer": "郊遊徑全長 3 公里"
+  },
+  {
+    "id": "5A45N313b_14C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "每包麪粉重 1 公斤，做蛋糕一個需用麪粉 包，即需用麪粉 （ ） 公斤。",
+    "options": [
+      "77",
+      "120",
+      "30",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A45N313b_15C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一包黃豆重 1 公斤，5 包黃豆共重 （ ） 公斤。",
+    "options": [
+      "120",
+      "30",
+      "9",
+      "77"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A45N313b_16C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "右面長方形的面積是 （ ） m2。",
+    "options": [
+      "30",
+      "120",
+      "77",
+      "4 m"
+    ],
+    "answer": "4 m"
+  },
+  {
+    "id": "5A45N313b_17C_041N#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "(a)右面正方形的周界是 （ ） cm。",
+    "options": [
+      "120",
+      "2 cm",
+      "77",
+      "30"
+    ],
+    "answer": "2 cm"
+  },
+  {
+    "id": "5A45N313b_17C_041N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "(b)右面正方形的面積是 （ ） cm2。",
+    "options": [
+      "30",
+      "77",
+      "120",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5A45N313b_19C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "大福商場有商鋪115間，已租出的商鋪佔全部的 ，即已租出商鋪 （ ） 間。",
+    "options": [
+      "120",
+      "77",
+      "30",
+      "69"
+    ],
+    "answer": "69"
+  },
+  {
+    "id": "5A45N313b_20C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "某大廈有住客640個，其中的 已登記做選民。該大廈有 （ ） 個住客已登記做選民。",
+    "options": [
+      "30",
+      "77",
+      "160",
+      "120"
+    ],
+    "answer": "160"
+  },
+  {
+    "id": "5A45N313b_21C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "5A班有學生36個，其中的 參加足球班， 參加籃球班。 5A班有 （ ） 個學生參加足球班。",
+    "options": [
+      "120",
+      "30",
+      "77",
+      "16"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "5A45N313b_22C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一籃水果有21個，橙佔全部的 ，芒果佔全部的 。這籃水果有芒果 （ ） 個。",
+    "options": [
+      "77",
+      "6",
+      "120",
+      "30"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A45N313b_23C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "俊賢買了16包軟糖，其中的 是牛奶味， 是果汁味。俊賢買了 果汁味軟糖 （ ） 包。",
+    "options": [
+      "6",
+      "30",
+      "77",
+      "120"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A45N313b_24C_041P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "某旅行團的成人收費是每位800元，小童收費是成人的 。該旅行團共有40人參加，其中的 是成人。 (a)每位小童的收費是 （ ） 元。",
+    "options": [
+      "77",
+      "490",
+      "120",
+      "30"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "5A45N313b_26C_122P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "文珊上星期温習用了16小時，其中的 用於温習中文， 用於温習英文，餘下的時間温習數學。 (a)文珊上星期温習中文用了 （ ） 小時。",
+    "options": [
+      "77",
+      "120",
+      "30",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A45N313b_26C_122P#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "文珊上星期温習用了16小時，其中的 用於温習中文， 用於温習英文，餘下的時間温習數學。 (b)文珊上星期温習英文用了 （ ） 小時。",
+    "options": [
+      "4",
+      "30",
+      "120",
+      "77"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A45N313b_27C_042P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "每包肉丸重 1 公斤。 （ ） 公斤。 （ ） 元。 每包肉丸重 1 公斤。",
+    "options": [
+      "4",
+      "77",
+      "120",
+      "30"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A45N313b_30C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "出席運動日的學生有954人， 是女生，其中參加比賽的女生有 。 參加比賽的女生有 （ ） 人。",
+    "options": [
+      "159",
+      "120",
+      "77",
+      "30"
+    ],
+    "answer": "159"
+  },
+  {
+    "id": "5A45N313b_31C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "葡萄每公斤售 22 元，每袋葡萄有 公斤。叔叔買了3袋葡萄， 共需付 （ ） 元。",
+    "options": [
+      "30",
+      "77",
+      "120",
+      "51"
+    ],
+    "answer": "51"
+  },
+  {
+    "id": "5A45N313b_32C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "表哥每星期只在星期六和日上班，每天工作 8 小時，每小時的工資是 48元。他每星期可得工資 （ ） 元。",
+    "options": [
+      "816",
+      "30",
+      "77",
+      "120"
+    ],
+    "answer": "816"
+  },
+  {
+    "id": "5A45N313b_54C_031N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一包砂糖重 公斤，媽媽做蛋糕用了砂糖 包。媽媽做蛋糕用了砂糖多少公斤？",
+    "options": [
+      "× =  × =  媽媽做蛋糕用了砂糖  公斤。",
+      "× 30=  × 30= = 2 一箱米粉共重 2 公斤。",
+      "960 ×  = 840，家謙的得分是840分，",
+      "54 × = 54 × = 24參加長跑比賽的學生共有24人。"
+    ],
+    "answer": "× =  × =  媽媽做蛋糕用了砂糖  公斤。"
+  },
+  {
+    "id": "5A45N313b_55C_031N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一瓶橙汁有 1 升，弟弟喝去 瓶。弟弟喝去橙汁多少升？",
+    "options": [
+      "1 × =  × =  弟弟喝去橙汁  升。",
+      "25 × 1= 25 × = = 42 需付 42 元。",
+      "960 ×  = 840，家謙的得分是840分，",
+      "× 30=  × 30= = 2 一箱米粉共重 2 公斤。"
+    ],
+    "answer": "1 × =  × =  弟弟喝去橙汁  升。"
+  },
+  {
+    "id": "5A45N313b_57C_031P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "子華有儲蓄850元，把全部的五分之三購買一盒模型。這盒模型售 多少元？",
+    "options": [
+      "138 × = 138 × = 115她上星期用去零用錢115元。",
+      "850 × = 850 × = 510這盒模型售510元。",
+      "864 ×  = 648，景輝的得分是648分，比希文的得分672分少",
+      "960 ×  = 840，家謙的得分是840分，"
+    ],
+    "answer": "850 × = 850 × = 510這盒模型售510元。"
+  },
+  {
+    "id": "5A45N313b_58C_032N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "每公斤豬肉售 50 元，每公斤牛肉售120元。媽媽買了牛肉 公斤，需付多少元？",
+    "options": [
+      "× 30=  × 30= = 2 一箱米粉共重 2 公斤。",
+      "54 × = 54 × = 24參加長跑比賽的學生共有24人。",
+      "120 × = 120 × = 90需付90元。",
+      "960 ×  = 840，家謙的得分是840分，"
+    ],
+    "answer": "120 × = 120 × = 90需付90元。"
+  },
+  {
+    "id": "5A45N313b_59C_032P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "公園裏有80棵樹，其中的 是松樹， 是楓樹。公園裏有楓樹多少棵？",
+    "options": [
+      "80 × = 80 × = 20公園裏有楓樹20棵。",
+      "138 × = 138 × = 115她上星期用去零用錢115元。",
+      "960 ×  = 840，家謙的得分是840分，",
+      "54 × = 54 × = 24參加長跑比賽的學生共有24人。"
+    ],
+    "answer": "80 × = 80 × = 20公園裏有楓樹20棵。"
+  },
+  {
+    "id": "5A45N313b_61C_032P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "涼茶鋪原有60升涼茶，早上賣去全部涼茶的 ，下午賣去全部涼茶的。下午賣去涼茶多少升？",
+    "options": [
+      "60 × = 60 × = 36 下午賣去涼茶36升。",
+      "864 ×  = 648，景輝的得分是648分，比希文的得分672分少",
+      "138 × = 138 × = 115她上星期用去零用錢115元。",
+      "960 ×  = 840，家謙的得分是840分，"
+    ],
+    "answer": "60 × = 60 × = 36 下午賣去涼茶36升。"
+  },
+  {
+    "id": "5A45N313b_69C_122P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "某工人把864 kg的貨物分類，其中 是空運貨物， 是陸運貨物，餘下的是船運貨物。 2元，所需的包裝成本是 （ ） 元。 (a)空運貨物有多少kg？",
+    "options": [
+      "30",
+      "120",
+      "108",
+      "77"
+    ],
+    "answer": "108"
+  },
+  {
+    "id": "5A45N313b_70C_041P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "嘉妍有2包幾何條。每包有30支，其中 的長度是10 cm，餘下的長度是8 cm。 （ ） cm。 (a)她有 （ ） 支長10 cm的幾何條。",
+    "options": [
+      "77",
+      "30",
+      "120",
+      "35"
+    ],
+    "answer": "35"
+  },
+  {
+    "id": "5A45N313b_71C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "每公斤葡萄售 48 元。林太太買了上圖的葡萄，需付 （ ） 元。",
+    "options": [
+      "77",
+      "30",
+      "120",
+      "72"
+    ],
+    "answer": "72",
+    "image": "q-images/5A45N313b_71C_042P.webp"
+  },
+  {
+    "id": "5A45N313b_72C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "子賢用了2 小時上網，其中 的時間做網上功課。他做網上功課用 了 （ ） 小時。",
+    "options": [
+      "77",
+      "1",
+      "30",
+      "120"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5A45N313b_73C_121P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一包手工紙有45張，其中 是綠色， 是紫色，餘下的是粉紅色。 有 （ ） 張。（* 圈出答案） 一包手工紙有45張，其中 是綠色， 是紫色，餘下的是粉紅色。",
+    "options": [
+      "10",
+      "30",
+      "77",
+      "120"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5A45N313b_73C_121P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一包手工紙有45張，其中 是綠色， 是紫色，餘下的是粉紅色。 有 （ ） 張。（* 圈出答案） (a)紫色手工紙有 （ ） 張。",
+    "options": [
+      "77",
+      "20",
+      "120",
+      "30"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5A45N313b_78C_031P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A45N313b.docx",
+    "topic": "5A45N313b  分數乘法的應用",
+    "question": "一瓶橙汁有 L，一瓶牛奶的容量是一瓶橙汁的1 倍。家中有牛奶 瓶，即家中有牛奶多少L？",
+    "options": [
+      "138 × = 138 × = 115她上星期用去零用錢115元。",
+      "960 ×  = 840，家謙的得分是840分，",
+      "54 × = 54 × = 24參加長跑比賽的學生共有24人。",
+      "× 1 × = ×  × =1即家中有牛奶1 L。"
+    ],
+    "answer": "× 1 × = ×  × =1即家中有牛奶1 L。"
+  },
+  {
+    "id": "5A55A114a_12C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示橙的重量。 橙重 （ ） 克。",
+    "options": [
+      "y cm",
+      "R",
+      "H",
+      "x cm"
+    ],
+    "answer": "H"
+  },
+  {
+    "id": "5A55A114a_13C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示水杯的重量。 水杯重 （ ） 克。",
+    "options": [
+      "x cm",
+      "R",
+      "y cm",
+      "H"
+    ],
+    "answer": "R"
+  },
+  {
+    "id": "5A55A114a_14C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示長方形的長和闊。 用代數符號表示長方形的長和闊。",
+    "options": [
+      "R cm",
+      "S cm",
+      "x cm",
+      "y cm"
+    ],
+    "answer": "y cm"
+  },
+  {
+    "id": "5A55A114a_14C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示長方形的長和闊。 (a)長方形長 （ ） 厘米。",
+    "options": [
+      "x cm",
+      "y cm",
+      "S cm",
+      "R cm"
+    ],
+    "answer": "x cm"
+  },
+  {
+    "id": "5A55A114a_14C_042N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示長方形的長和闊。 (b)長方形闊 （ ） 厘米。",
+    "options": [
+      "x",
+      "H",
+      "y cm",
+      "R"
+    ],
+    "answer": "x"
+  },
+  {
+    "id": "5A55A114a_15C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示長方形的長和闊。 用代數符號表示長方形的長和闊。",
+    "options": [
+      "x cm",
+      "S cm",
+      "y cm",
+      "R cm"
+    ],
+    "answer": "S cm"
+  },
+  {
+    "id": "5A55A114a_15C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示長方形的長和闊。 (a)長方形長 （ ） 厘米。",
+    "options": [
+      "x cm",
+      "S cm",
+      "y cm",
+      "R cm"
+    ],
+    "answer": "R cm"
+  },
+  {
+    "id": "5A55A114a_15C_042N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數符號表示長方形的長和闊。 (b)長方形闊 （ ） 厘米。",
+    "options": [
+      "y cm",
+      "x cm",
+      "H",
+      "R"
+    ],
+    "answer": "R"
+  },
+  {
+    "id": "5A55A114a_16C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示共有蘋果多少個。 和 N個3個 代數式：（ ）",
+    "options": [
+      "N + 3",
+      "y cm",
+      "x cm",
+      "S cm"
+    ],
+    "answer": "N + 3"
+  },
+  {
+    "id": "5A55A114a_17C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示共有蘋果多少個。 和 6個k個 代數式：（ ）",
+    "options": [
+      "S cm",
+      "x cm",
+      "6 + k",
+      "y cm"
+    ],
+    "answer": "6 + k"
+  },
+  {
+    "id": "5A55A114a_18C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示共有糖果多少顆。 和 p顆5顆 代數式：（ ）",
+    "options": [
+      "S cm",
+      "p + 5",
+      "x cm",
+      "y cm"
+    ],
+    "answer": "p + 5"
+  },
+  {
+    "id": "5A55A114a_19C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示共有波子多少粒。 和 T粒4粒 代數式：（ ）",
+    "options": [
+      "y cm",
+      "T + 4",
+      "S cm",
+      "x cm"
+    ],
+    "answer": "T + 4"
+  },
+  {
+    "id": "5A55A114a_20C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示共有梨多少個。 和 2個S個 代數式：（ ）",
+    "options": [
+      "2 + S",
+      "S cm",
+      "x cm",
+      "y cm"
+    ],
+    "answer": "2 + S"
+  },
+  {
+    "id": "5A55A114a_21C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示共有紙多少張。 和 y張8張 代數式：（ ）",
+    "options": [
+      "y cm",
+      "S cm",
+      "y + 8",
+      "x cm"
+    ],
+    "answer": "y + 8"
+  },
+  {
+    "id": "5A55A114a_22C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示茄子重多少克。 代數式：（ ）",
+    "options": [
+      "A + 5",
+      "S cm",
+      "x cm",
+      "y cm"
+    ],
+    "answer": "A + 5"
+  },
+  {
+    "id": "5A55A114a_23C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示還餘紙多少張。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "p – 10",
+      "S cm",
+      "x cm"
+    ],
+    "answer": "p – 10"
+  },
+  {
+    "id": "5A55A114a_24C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示還餘菊花茶多少盒。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "6 – m",
+      "S cm",
+      "x cm"
+    ],
+    "answer": "6 – m"
+  },
+  {
+    "id": "5A55A114a_25C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示還有果汁多少毫升。 代數式：（ ）",
+    "options": [
+      "900 – Y",
+      "x cm",
+      "S cm",
+      "y cm"
+    ],
+    "answer": "900 – Y"
+  },
+  {
+    "id": "5A55A114a_26C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示還餘茶包多少個。 代數式：（ ）",
+    "options": [
+      "x cm",
+      "d – 15",
+      "S cm",
+      "y cm"
+    ],
+    "answer": "d – 15"
+  },
+  {
+    "id": "5A55A114a_27C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示還有多少人在等候的士。 p人上的士後代數式：（ ）",
+    "options": [
+      "y cm",
+      "x cm",
+      "S cm",
+      "15人排隊等候的士"
+    ],
+    "answer": "15人排隊等候的士"
+  },
+  {
+    "id": "5A55A114a_28C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示完成比賽的運動員人數。 M人未能完成比賽代數式：（ ） 有運動員120人參加",
+    "options": [
+      "x cm",
+      "S cm",
+      "120 – M",
+      "y cm"
+    ],
+    "answer": "120 – M"
+  },
+  {
+    "id": "5A55A114a_29C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示車上還有乘客多少個。 2個乘客下車 車上原有乘客x個 代數式：（ ）",
+    "options": [
+      "x cm",
+      "S cm",
+      "y cm",
+      "x – 2"
+    ],
+    "answer": "x – 2"
+  },
+  {
+    "id": "5A55A114a_30C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示吃去後餘下餅乾多少塊。 原有餅乾t塊 代數式：（ ）",
+    "options": [
+      "x cm",
+      "t – 1",
+      "S cm",
+      "y cm"
+    ],
+    "answer": "t – 1"
+  },
+  {
+    "id": "5A55A114a_31C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示k瓶汽水共有多少升。 代數式：（ ） 2升",
+    "options": [
+      "H",
+      "y cm",
+      "2k",
+      "R"
+    ],
+    "answer": "2k"
+  },
+  {
+    "id": "5A55A114a_32C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示9瓶果汁共有多少升。 代數式：（ ） M升",
+    "options": [
+      "y cm",
+      "9M",
+      "R",
+      "H"
+    ],
+    "answer": "9M"
+  },
+  {
+    "id": "5A55A114a_33C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示P串魚丸共有多少粒。 代數式：（ ） 5粒",
+    "options": [
+      "y cm",
+      "H",
+      "R",
+      "5P"
+    ],
+    "answer": "5P"
+  },
+  {
+    "id": "5A55A114a_34C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示s串燒賣共有多少粒。 代數式：（ ） 4粒",
+    "options": [
+      "y cm",
+      "R",
+      "H",
+      "4s"
+    ],
+    "answer": "4s"
+  },
+  {
+    "id": "5A55A114a_35C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示購買y枚郵票需付多少元。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "R",
+      "H",
+      "2y"
+    ],
+    "answer": "2y"
+  },
+  {
+    "id": "5A55A114a_36C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示購買6盒餅乾需付多少元。 代數式：（ ）",
+    "options": [
+      "H",
+      "y cm",
+      "6H",
+      "R"
+    ],
+    "answer": "6H"
+  },
+  {
+    "id": "5A55A114a_37C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示購買R張生日卡需付多少元。 代數式：（ ）",
+    "options": [
+      "20R",
+      "H",
+      "R",
+      "y cm"
+    ],
+    "answer": "20R"
+  },
+  {
+    "id": "5A55A114a_38C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示倩兒吃了餅乾多少塊。 代數式：（ ）",
+    "options": [
+      "S cm",
+      "y cm",
+      "我吃了2盒餅乾。",
+      "x cm"
+    ],
+    "answer": "我吃了2盒餅乾。"
+  },
+  {
+    "id": "5A55A114a_39C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "茶壺的售價是茶杯的P倍。用代數式表示茶壺售多少元。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "30P",
+      "R",
+      "H"
+    ],
+    "answer": "30P"
+  },
+  {
+    "id": "5A55A114a_40C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "把這袋櫻桃平均分給6人。用代數式表示每人分得櫻桃多少粒。 代數式：（ ）",
+    "options": [
+      "x 粒",
+      "R",
+      "H",
+      "y cm"
+    ],
+    "answer": "x 粒"
+  },
+  {
+    "id": "5A55A114a_43C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "這瓶果汁剛好倒滿8個杯子。用代數式表示每個杯子有果汁多少升。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "R",
+      "K升",
+      "H"
+    ],
+    "answer": "K升"
+  },
+  {
+    "id": "5A55A114a_44C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示每朵玫瑰售多少元。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "我用m元買了這束玫瑰。",
+      "x cm",
+      "S cm"
+    ],
+    "answer": "我用m元買了這束玫瑰。"
+  },
+  {
+    "id": "5A55A114a_45C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示每朵鬱金香售多少元。 代數式：（ ）",
+    "options": [
+      "我用P元買了這束鬱金香。",
+      "S cm",
+      "x cm",
+      "y cm"
+    ],
+    "answer": "我用P元買了這束鬱金香。"
+  },
+  {
+    "id": "5A55A114a_47C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示每瓶花生油售多少元。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "$K",
+      "R",
+      "H"
+    ],
+    "answer": "$K"
+  },
+  {
+    "id": "5A55A114a_48C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "王太太用了全盒利是封的 。用代數式表示她用了利是封多少個。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "一箱紙有k張。",
+      "一盒利是封有m個。",
+      "x cm"
+    ],
+    "answer": "一盒利是封有m個。"
+  },
+  {
+    "id": "5A55A114a_49C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "老師今天用了全箱紙的 。用代數式表示老師用了紙多少張。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "一盒利是封有m個。",
+      "x cm",
+      "一箱紙有k張。"
+    ],
+    "answer": "一箱紙有k張。"
+  },
+  {
+    "id": "5A55A114a_50C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示哥哥一年後是多少歲。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "S cm",
+      "我比妹妹大3歲。",
+      "x cm"
+    ],
+    "answer": "我比妹妹大3歲。"
+  },
+  {
+    "id": "5A55A114a_52C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示生菜重多少克。 代數式：（ ）",
+    "options": [
+      "S cm",
+      "A + 12",
+      "y cm",
+      "x cm"
+    ],
+    "answer": "A + 12"
+  },
+  {
+    "id": "5A55A114a_53C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示兩盒牛奶相差多少毫升。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "S cm",
+      "900 – x",
+      "x cm"
+    ],
+    "answer": "900 – x"
+  },
+  {
+    "id": "5A55A114a_54C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示弟弟與姊姊相差多少歲。 代數式：（ ）",
+    "options": [
+      "S cm",
+      "x cm",
+      "y cm",
+      "我今年12歲。"
+    ],
+    "answer": "我今年12歲。"
+  },
+  {
+    "id": "5A55A114a_55C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示她吃了餅乾多少塊。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "S cm",
+      "x cm",
+      "這盒餅乾有k塊。"
+    ],
+    "answer": "這盒餅乾有k塊。"
+  },
+  {
+    "id": "5A55A114a_56C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示買半打午餐肉需付多少元。 代數式：（ ）",
+    "options": [
+      "y cm",
+      "R",
+      "H",
+      "6y"
+    ],
+    "answer": "6y"
+  },
+  {
+    "id": "5A55A114a_57C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示玩具熊重多少克。 代數式：（ ）",
+    "options": [
+      "R",
+      "H",
+      "3x",
+      "y cm"
+    ],
+    "answer": "3x"
+  },
+  {
+    "id": "5A55A114a_58C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示一個五元硬幣重多少克。 代數式：（ ）",
+    "options": [
+      "x",
+      "R",
+      "H",
+      "y cm"
+    ],
+    "answer": "x"
+  },
+  {
+    "id": "5A55A114a_59C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "老師把這瓶幸運星平均分給芷晴和三個同學。用代數式表示每人分得幸運星多少粒。 代數式：（ ）",
+    "options": [
+      "x cm",
+      "y cm",
+      "有幸運星K粒",
+      "S cm"
+    ],
+    "answer": "有幸運星K粒"
+  },
+  {
+    "id": "5A55A114a_60C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "老師把這盒圖釘每一打分成一份。用代數式表示圖釘分成多少份。 代數式：（ ）",
+    "options": [
+      "R",
+      "y cm",
+      "P粒",
+      "H"
+    ],
+    "answer": "P粒"
+  },
+  {
+    "id": "5A55A114a_62C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "「b + b + b」可寫成 （ ）。",
+    "options": [
+      "R",
+      "H",
+      "y cm",
+      "3b"
+    ],
+    "answer": "3b"
+  },
+  {
+    "id": "5A55A114a_63C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "「h + h + h + h + h」可寫成 （ ）。",
+    "options": [
+      "y cm",
+      "R",
+      "H",
+      "5h"
+    ],
+    "answer": "5h"
+  },
+  {
+    "id": "5A55A114a_64C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "「a 15」可寫成 （ ）。",
+    "options": [
+      "R",
+      "H",
+      "y cm",
+      "15a"
+    ],
+    "answer": "15a"
+  },
+  {
+    "id": "5A55A114a_79C_111P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "以下哪道是代數式？把所有代表答案的英文字母寫在橫線上。 A. 25 + f B. 7 – b C. 9 × 9 D. E. 60 – 45 F. 35d （ ）",
+    "options": [
+      "y cm",
+      "S cm",
+      "x cm",
+      "A，B，D，F"
+    ],
+    "answer": "A，B，D，F"
+  },
+  {
+    "id": "5A55A114a_81C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "每盒白紙厚P cm，用代數式表示3盒白紙共厚多少cm。 代數式︰（ ）",
+    "options": [
+      "y cm",
+      "x cm",
+      "P cm",
+      "S cm"
+    ],
+    "answer": "P cm"
+  },
+  {
+    "id": "5A55A114a_82C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示上圖共有布偶多少個。 代數式︰（ ）",
+    "options": [
+      "x cm",
+      "S cm",
+      "y cm",
+      "1 + d"
+    ],
+    "answer": "1 + d",
+    "image": "q-images/5A55A114a_82C_041N.webp"
+  },
+  {
+    "id": "5A55A114a_83C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "用代數式表示菠蘿重多少g。 代數式︰（ ）",
+    "options": [
+      "2A",
+      "R",
+      "y cm",
+      "H"
+    ],
+    "answer": "2A"
+  },
+  {
+    "id": "5A55A114a_84C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "把這些紙星星平均分給嘉妍、嘉敏和嘉俊，用代數式表示嘉妍分到紙星星多少顆。 代數式︰（ ）",
+    "options": [
+      "y cm",
+      "s顆",
+      "H",
+      "R"
+    ],
+    "answer": "s顆"
+  },
+  {
+    "id": "5A55A114a_85C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "一盒粉筆原有B枝，用去10枝後，用代數式表示還餘粉筆多少枝。 代數式︰（ ）",
+    "options": [
+      "x cm",
+      "y cm",
+      "S cm",
+      "B – 10"
+    ],
+    "answer": "B – 10"
+  },
+  {
+    "id": "5A55A114a_86C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114a.docx",
+    "topic": "5A55A114a  代數符號及代數式",
+    "question": "一條繩子長Y m，把它平均剪成4段，用代數式表示每段繩子長多少m。 代數式︰（ ）",
+    "options": [
+      "H",
+      "R",
+      "Y m",
+      "y cm"
+    ],
+    "answer": "Y m"
+  },
+  {
+    "id": "5A55A114b_36C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "下面直行和橫行的運算結果都是一樣的。把代數符號代表的數填在橫線上。 P 6 + 14 8 P = （ ）",
+    "options": [
+      "30",
+      "3",
+      "12",
+      "15"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A55A114b_37C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "下面直行和橫行的運算結果都是一樣的。把代數符號代表的數填在橫線上。 10 5 6 a a = （ ）",
+    "options": [
+      "30",
+      "15",
+      "12",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A55A114b_38C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "下面直行和橫行的運算結果都是一樣的。把代數符號代表的數填在橫線上。 B 20 4 3 B = （ ）",
+    "options": [
+      "30",
+      "3",
+      "15",
+      "12"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5A55A114b_39C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "下面直行和橫行的運算結果都是一樣的。把代數符號代表的數填在橫線上。 35 12 – 7 N N = （ ）",
+    "options": [
+      "3",
+      "15",
+      "30",
+      "12"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "5A55A114b_40C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "如果x = 10，那麼4x的值是 （ ）。",
+    "options": [
+      "3",
+      "15",
+      "12",
+      "40"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "5A55A114b_41C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "如果T = 8，那麼10 + T – 6的值是 （ ）。",
+    "options": [
+      "12",
+      "30",
+      "3",
+      "15"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5A55A114b_42C_042P#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "觀察以下的算式︰ 觀察以下的算式︰",
+    "options": [
+      "4M+N097",
+      "12",
+      "15",
+      "30"
+    ],
+    "answer": "4M+N097"
+  },
+  {
+    "id": "5A55A114b_42C_042P#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "觀察以下的算式︰ (a)M所代表的數是 （ ）。",
+    "options": [
+      "15",
+      "12",
+      "3",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5A55A114b_42C_042P#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "觀察以下的算式︰ (b)N所代表的數是 （ ）。",
+    "options": [
+      "5",
+      "3",
+      "15",
+      "12"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5A55A114b_45C_082P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A114b.docx",
+    "topic": "5A55A114b  代數式的數值",
+    "question": "觀察以上的算式，找出 的值。",
+    "options": [
+      "10",
+      "5",
+      "3",
+      "6"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A55A115a_01C_041N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 依題意把代數式填在橫線上。",
+    "options": [
+      "9 – b",
+      "f + 2",
+      "16c",
+      "3 + a"
+    ],
+    "answer": "3 + a"
+  },
+  {
+    "id": "5A55A115a_01C_041N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (a)「3加a」（ ）",
+    "options": [
+      "f + 2",
+      "16c",
+      "3 + a",
+      "9 – b"
+    ],
+    "answer": "16c"
+  },
+  {
+    "id": "5A55A115a_02C_041N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 依題意把代數式填在橫線上。",
+    "options": [
+      "3 + a",
+      "f + 2",
+      "9 – b",
+      "16c"
+    ],
+    "answer": "f + 2"
+  },
+  {
+    "id": "5A55A115a_02C_041N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (a)「f加2」（ ）",
+    "options": [
+      "f + 2",
+      "9 – b",
+      "16c",
+      "3 + a"
+    ],
+    "answer": "9 – b"
+  },
+  {
+    "id": "5A55A115a_02C_041N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (b)「9減b」（ ）",
+    "options": [
+      "f + 2",
+      "3 + a",
+      "16c",
+      "10n"
+    ],
+    "answer": "10n"
+  },
+  {
+    "id": "5A55A115a_03C_041N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 依題意把代數式填在橫線上。",
+    "options": [
+      "3 + a",
+      "6 + d",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "6 + d"
+  },
+  {
+    "id": "5A55A115a_03C_041N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (a)「6加d」（ ）",
+    "options": [
+      "f + 2",
+      "16c",
+      "3 + a",
+      "e – 2"
+    ],
+    "answer": "e – 2"
+  },
+  {
+    "id": "5A55A115a_03C_041N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (b)「e減2」（ ）",
+    "options": [
+      "3 + a",
+      "7R",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "7R"
+  },
+  {
+    "id": "5A55A115a_04C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 依題意把代數式填在橫線上。",
+    "options": [
+      "16c",
+      "5 + k",
+      "3 + a",
+      "f + 2"
+    ],
+    "answer": "5 + k"
+  },
+  {
+    "id": "5A55A115a_04C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (a)「5加k」（ ）",
+    "options": [
+      "3 + a",
+      "g",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "g"
+  },
+  {
+    "id": "5A55A115a_04C_042N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (b)「g乘以1」（ ）",
+    "options": [
+      "16c",
+      "f + 2",
+      "D – 45",
+      "3 + a"
+    ],
+    "answer": "D – 45"
+  },
+  {
+    "id": "5A55A115a_05C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 依題意把代數式填在橫線上。",
+    "options": [
+      "f + 2",
+      "16c",
+      "10 – y",
+      "3 + a"
+    ],
+    "answer": "10 – y"
+  },
+  {
+    "id": "5A55A115a_05C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (a)「10減y」（ ）",
+    "options": [
+      "f + 2",
+      "16c",
+      "33F",
+      "3 + a"
+    ],
+    "answer": "33F"
+  },
+  {
+    "id": "5A55A115a_06C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "依題意把代數式填在橫線上。 (a)「B加12」（ ） (b)「H乘以 」（ ） (c)「30除以t」（ ）",
+    "options": [
+      "16c",
+      "3 + a",
+      "B + 12",
+      "f + 2"
+    ],
+    "answer": "B + 12"
+  },
+  {
+    "id": "5A55A115a_07C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 一枝原子筆售k元，一枝鉛筆售6元。陳老師各買一枝，他需付 （ ） 元。",
+    "options": [
+      "f + 2",
+      "(k + 6)",
+      "16c",
+      "3 + a"
+    ],
+    "answer": "(k + 6)"
+  },
+  {
+    "id": "5A55A115a_09C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 每張音樂會門票的售價是R元，何小姐買5張音樂會門票需付（ ） 元。",
+    "options": [
+      "f + 2",
+      "5R",
+      "3 + a",
+      "16c"
+    ],
+    "answer": "5R"
+  },
+  {
+    "id": "5A55A115a_12C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 芷柔今年11歲，媽媽的歲數是她的Y倍。媽媽今年 （ ） 歲。",
+    "options": [
+      "f + 2",
+      "16c",
+      "3 + a",
+      "11Y"
+    ],
+    "answer": "11Y"
+  },
+  {
+    "id": "5A55A115a_13C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 花店裏有太陽花18朵，售出w朵後，餘下太陽花 （ ） 朵。",
+    "options": [
+      "(18 – w)",
+      "f + 2",
+      "3 + a",
+      "16c"
+    ],
+    "answer": "(18 – w)"
+  },
+  {
+    "id": "5A55A115a_14C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 每朵花售M元，爸爸買了右面的花， 需付 （ ） 元。",
+    "options": [
+      "f + 2",
+      "3 + a",
+      "16c",
+      "3M"
+    ],
+    "answer": "3M"
+  },
+  {
+    "id": "5A55A115a_15C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 曉晴有貼紙8張，心柔比曉晴多S張，心柔有貼紙 （ ） 張。",
+    "options": [
+      "16c",
+      "f + 2",
+      "3 + a",
+      "(S + 8)"
+    ],
+    "answer": "(S + 8)"
+  },
+  {
+    "id": "5A55A115a_16C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 雪櫃裏有汽水12瓶。爸爸和媽媽共喝了F瓶，還餘汽水 （ ） 瓶。",
+    "options": [
+      "f + 2",
+      "(12 – F)",
+      "16c",
+      "3 + a"
+    ],
+    "answer": "(12 – F)"
+  },
+  {
+    "id": "5A55A115a_17C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 樹比詠恩高80厘米， 即高 （ ） 厘米。",
+    "options": [
+      "3 + a",
+      "f + 2",
+      "16c",
+      "(h + 80)"
+    ],
+    "answer": "(h + 80)"
+  },
+  {
+    "id": "5A55A115a_19C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 媽媽用去c隻雞蛋後，餘下右面的雞蛋。 原有雞蛋 （ ） 隻。",
+    "options": [
+      "(1 + c)",
+      "3 + a",
+      "f + 2",
+      "16c"
+    ],
+    "answer": "(1 + c)"
+  },
+  {
+    "id": "5A55A115a_20C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 爸爸買了右面的牛奶，喝去d毫升後， 還餘牛奶 （ ） 毫升。",
+    "options": [
+      "(800 – d)",
+      "16c",
+      "3 + a",
+      "f + 2"
+    ],
+    "answer": "(800 – d)"
+  },
+  {
+    "id": "5A55A115a_22C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 每張立體影院的門票售90元，購買D張門票需付 （ ） 元。",
+    "options": [
+      "90D",
+      "3 + a",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "90D"
+  },
+  {
+    "id": "5A55A115a_23C_042P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 梁老師有鉛筆6枝和顏色筆y枝，而顏色筆比鉛筆多。這兩款筆的數量 相差 （ ） 枝。",
+    "options": [
+      "16c",
+      "3 + a",
+      "f + 2",
+      "(y – 6)"
+    ],
+    "answer": "(y – 6)"
+  },
+  {
+    "id": "5A55A115a_24C_042P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 安琪的錢箱是空的，她每天把m元放入錢箱。一星期後，錢箱內有 （ ） 元。",
+    "options": [
+      "16c",
+      "3 + a",
+      "7m",
+      "f + 2"
+    ],
+    "answer": "7m"
+  },
+  {
+    "id": "5A55A115a_25C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 正方形的邊長是p厘米，它的周界是 （ ） 厘米。",
+    "options": [
+      "f + 2",
+      "16c",
+      "3 + a",
+      "4p"
+    ],
+    "answer": "4p"
+  },
+  {
+    "id": "5A55A115a_26C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 長方形長6厘米，闊w厘米。長方形的面積是 （ ） 平方厘米。",
+    "options": [
+      "16c",
+      "f + 2",
+      "6w",
+      "3 + a"
+    ],
+    "answer": "6w"
+  },
+  {
+    "id": "5A55A115a_28C_042P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 美兒把一半的軟糖分給妹妹後，妹妹有軟糖y粒。美兒原有軟糖 （ ） 粒。",
+    "options": [
+      "f + 2",
+      "2y",
+      "3 + a",
+      "16c"
+    ],
+    "answer": "2y"
+  },
+  {
+    "id": "5A55A115a_29C_042N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 絲帶長1米，用去R厘米後，還餘絲帶 （ ） 厘米。",
+    "options": [
+      "(100 – R)",
+      "f + 2",
+      "3 + a",
+      "16c"
+    ],
+    "answer": "(100 – R)"
+  },
+  {
+    "id": "5A55A115a_30C_041N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 把代數式填在橫線上。",
+    "options": [
+      "f + 2",
+      "$n",
+      "3 + a",
+      "16c"
+    ],
+    "answer": "$n"
+  },
+  {
+    "id": "5A55A115a_30C_041N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (a)每個蘋果售 （ ） 元。",
+    "options": [
+      "16c",
+      "f + 2",
+      "$m",
+      "3 + a"
+    ],
+    "answer": "$m"
+  },
+  {
+    "id": "5A55A115a_30C_041N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (b)媽媽買了蘋果4袋，她需付 （ ） 元。",
+    "options": [
+      "4m",
+      "16c",
+      "3 + a",
+      "f + 2"
+    ],
+    "answer": "4m"
+  },
+  {
+    "id": "5A55A115a_31C_041N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 把代數式填在橫線上。",
+    "options": [
+      "3 + a",
+      "$m",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "$m"
+  },
+  {
+    "id": "5A55A115a_31C_041N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (a)文清買膠紙座1個，她需付 （ ） 元。",
+    "options": [
+      "16c",
+      "$k",
+      "f + 2",
+      "3 + a"
+    ],
+    "answer": "$k"
+  },
+  {
+    "id": "5A55A115a_31C_041N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (b)嘉兒買剪刀兩把，她需付 （ ） 元。",
+    "options": [
+      "$n",
+      "3 + a",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "$n"
+  },
+  {
+    "id": "5A55A115a_32C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 把代數式填在橫線上。",
+    "options": [
+      "3 + a",
+      "f + 2",
+      "$R",
+      "16c"
+    ],
+    "answer": "$R"
+  },
+  {
+    "id": "5A55A115a_32C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (a)每瓶花生油售 （ ） 元。",
+    "options": [
+      "f + 2",
+      "16c",
+      "3 + a",
+      "2R"
+    ],
+    "answer": "2R"
+  },
+  {
+    "id": "5A55A115a_33C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 右面的長方形由兩個正方形拼砌而成。 把代數式填在橫線上。 右面的長方形由兩個正方形拼砌而成。",
+    "options": [
+      "f + 2",
+      "y cm",
+      "16c",
+      "3 + a"
+    ],
+    "answer": "y cm"
+  },
+  {
+    "id": "5A55A115a_33C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 右面的長方形由兩個正方形拼砌而成。 (a)長方形的長是 （ ） cm。",
+    "options": [
+      "f + 2",
+      "16c",
+      "2y",
+      "3 + a"
+    ],
+    "answer": "2y"
+  },
+  {
+    "id": "5A55A115a_33C_042N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 右面的長方形由兩個正方形拼砌而成。 (b)長方形的周界是 （ ） cm。",
+    "options": [
+      "3 + a",
+      "16c",
+      "f + 2",
+      "6y"
+    ],
+    "answer": "6y"
+  },
+  {
+    "id": "5A55A115a_34C_042N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 把代數式填在橫線上。",
+    "options": [
+      "16c",
+      "3 + a",
+      "A",
+      "f + 2"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5A55A115a_34C_042N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (a)正方形A的周界是 （ ） cm。",
+    "options": [
+      "C",
+      "16c",
+      "f + 2",
+      "3 + a"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5A55A115a_34C_042N#c",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 (b)菱形B的周界是 （ ） cm。",
+    "options": [
+      "n cm",
+      "3 + a",
+      "16c",
+      "f + 2"
+    ],
+    "answer": "n cm"
+  },
+  {
+    "id": "5A55A115a_46C_082N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "右圖中三角形的面積是多少cm2？",
+    "options": [
+      "6h cm2",
+      "2h cm2",
+      "cm2",
+      "3h cm2"
+    ],
+    "answer": "3h cm2"
+  },
+  {
+    "id": "5A55A115a_52C_041P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 樂之在上次的數學測驗得88分，今次比上次進步了m分。她在今次的 數學測驗得 （ ） 分。",
+    "options": [
+      "(88 + m)",
+      "16c",
+      "f + 2",
+      "3 + a"
+    ],
+    "answer": "(88 + m)"
+  },
+  {
+    "id": "5A55A115a_53C_042P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 子諾每天吃1隻雞蛋，吃了D天後，家中還餘一打雞蛋。家中原有 雞蛋（ ） 隻。",
+    "options": [
+      "16c",
+      "3 + a",
+      "(D + 12)",
+      "f + 2"
+    ],
+    "answer": "(D + 12)"
+  },
+  {
+    "id": "5A55A115a_56C_112P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "把代數式填在橫線上。 雪兒有$100，比嘉妍多$x。嘉妍用去$25後，還餘款項多少？ 答案︰$ （ ）",
+    "options": [
+      "f + 2",
+      "(75 – x)",
+      "3 + a",
+      "16c"
+    ],
+    "answer": "(75 – x)"
+  },
+  {
+    "id": "5A55A115a_57C_082P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5A55A115a.docx",
+    "topic": "5A55A115a  用代數式表示加法、減法、乘法和除法",
+    "question": "上圖是一個長方形，沿虛線把一個三角形剪出，該三角形的面積是多少cm2？",
+    "options": [
+      "4h cm2",
+      "8h cm2",
+      "(h + 9) cm2",
+      "2h cm2"
+    ],
+    "answer": "8h cm2",
+    "image": "q-images/5A55A115a_57C_082P.webp"
+  },
+  {
+    "id": "5A65D116a_02C_121N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示4月各場足球比賽的入場人數。 （把答案圈起來） （ ） 人。 以下的複合棒形圖顯示4月各場足球比賽的入場人數。",
+    "options": [
+      "4月各場足球比賽的入場人數",
+      "兩間分店上星期售出各種蛋糕所得的款項",
+      "人數（人）",
+      "款項（元）"
+    ],
+    "answer": "4月各場足球比賽的入場人數"
+  },
+  {
+    "id": "5A65D116a_03C_121N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示過去四年全港小學的入學人數。 ( 多 / 少 ) 人。（把答案圈起來） 以下的複合棒形圖顯示過去四年全港小學的入學人數。",
+    "options": [
+      "入學人數（萬人）",
+      "過去四年全港小學的入學人數",
+      "29000 / 2.9萬",
+      "30000 / 3萬"
+    ],
+    "answer": "30000 / 3萬"
+  },
+  {
+    "id": "5A65D116a_03C_121N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示過去四年全港小學的入學人數。 ( 多 / 少 ) 人。（把答案圈起來） (a) 年入學的女生人數最多，共有 人。",
+    "options": [
+      "2018",
+      "8000",
+      "2000",
+      "1000"
+    ],
+    "answer": "2018"
+  },
+  {
+    "id": "5A65D116a_03C_121N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示過去四年全港小學的入學人數。 ( 多 / 少 ) 人。（把答案圈起來） (b) 年入學的男生人數最少，共有 人。",
+    "options": [
+      "過去四年全港小學的入學人數",
+      "入學人數（萬人）",
+      "30000 / 3萬",
+      "29000 / 2.9萬"
+    ],
+    "answer": "過去四年全港小學的入學人數"
+  },
+  {
+    "id": "5A65D116a_04C_121N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某電子公司過去五年智能電話的生產數量。 以下的複合棒形圖顯示某電子公司過去五年智能電話的生產數量。",
+    "options": [
+      "8000",
+      "96",
+      "0",
+      "1000"
+    ],
+    "answer": "96"
+  },
+  {
+    "id": "5A65D116a_04C_121N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某電子公司過去五年智能電話的生產數量。 (a) 年智能電話的生產數量最多，有 萬部。",
+    "options": [
+      "2019",
+      "1000",
+      "8000",
+      "2000"
+    ],
+    "answer": "2019"
+  },
+  {
+    "id": "5A65D116a_04C_121N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某電子公司過去五年智能電話的生產數量。 (b)在 年下半年，該公司沒有生產智能電話。",
+    "options": [
+      "8000",
+      "0",
+      "1000",
+      "60"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5A65D116a_05C_121N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某工廠過去四個月運動鞋的生產數量。 以下的複合棒形圖顯示某工廠過去四個月運動鞋的生產數量。",
+    "options": [
+      "入學人數（萬人）",
+      "2000 / 0.2萬",
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數"
+    ],
+    "answer": "2000 / 0.2萬"
+  },
+  {
+    "id": "5A65D116a_05C_121N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某工廠過去四個月運動鞋的生產數量。 (a)四月男裝運動鞋的生產數量比三月 ( 多 / 少 ) 雙。（把答案圈起來）",
+    "options": [
+      "0",
+      "蛋糕",
+      "月份",
+      "8000"
+    ],
+    "answer": "月份"
+  },
+  {
+    "id": "5A65D116a_05C_121N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某工廠過去四個月運動鞋的生產數量。 (b)一月女裝運動鞋的生產數量是男裝運動鞋的 倍。",
+    "options": [
+      "0",
+      "8000",
+      "2000",
+      "1000"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_06C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "電台以「一人一票」的方式在網站上進行「我最喜愛的男歌手」選舉，結果如下： 每小格代表 萬張。 (a)橫軸的每大格代表選票 萬張， 每小格代表 萬張。",
+    "options": [
+      "1000",
+      "8000",
+      "6",
+      "0"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A65D116a_06C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "電台以「一人一票」的方式在網站上進行「我最喜愛的男歌手」選舉，結果如下： 每小格代表 萬張。 (b) 號男歌手所得的選票最多，有 萬張。",
+    "options": [
+      "30000 / 3萬",
+      "兩間分店上星期售出各種蛋糕所得的款項",
+      "4月各場足球比賽的入場人數",
+      "「我最喜愛的男歌手」的選舉結果"
+    ],
+    "answer": "「我最喜愛的男歌手」的選舉結果"
+  },
+  {
+    "id": "5A65D116a_07C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示兩個屋苑過去四個月回收廢紙的重量。 以下的複合棒形圖顯示兩個屋苑過去四個月回收廢紙的重量。",
+    "options": [
+      "30000 / 3萬",
+      "五",
+      "入學人數（萬人）",
+      "過去四年全港小學的入學人數"
+    ],
+    "answer": "五"
+  },
+  {
+    "id": "5A65D116a_07C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示兩個屋苑過去四個月回收廢紙的重量。 (a)都會花園在 月回收廢紙的重量最多，有 公斤。",
+    "options": [
+      "8000",
+      "蛋糕",
+      "0",
+      "月份"
+    ],
+    "answer": "月份"
+  },
+  {
+    "id": "5A65D116a_07C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示兩個屋苑過去四個月回收廢紙的重量。 (b)都會花園在七月回收廢紙的重量比城市新邨的 ( 重 / 輕 ) 公斤。（把答案圈起來）",
+    "options": [
+      "0",
+      "2000",
+      "8000",
+      "1000"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_08C_121P#a",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "濕地公園統計了「遊客最喜愛的動物」，每名遊客只能選擇一種動物，結果如下 濕地公園統計了「遊客最喜愛的動物」，每名遊客只能選擇一種動物，結果如下",
+    "options": [
+      "1000",
+      "濕地公園遊客最喜愛的動物",
+      "8000",
+      "2000"
+    ],
+    "answer": "濕地公園遊客最喜愛的動物"
+  },
+  {
+    "id": "5A65D116a_08C_121P#b",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "濕地公園統計了「遊客最喜愛的動物」，每名遊客只能選擇一種動物，結果如下 (a)喜愛 和 的人數相同。",
+    "options": [
+      "8000",
+      "動物種類",
+      "1000",
+      "蛋糕"
+    ],
+    "answer": "動物種類"
+  },
+  {
+    "id": "5A65D116a_08C_121P#c",
+    "grade": 5,
+    "unitKey": "stats",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "濕地公園統計了「遊客最喜愛的動物」，每名遊客只能選擇一種動物，結果如下 (b)喜愛 的人數是喜愛招潮蟹的人數的2倍。",
+    "options": [
+      "0",
+      "8000",
+      "1000",
+      "2000"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_09C_121P#a",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "某團體調查了一些青少年每天的上網時間，結果如下 某團體調查了一些青少年每天的上網時間，結果如下",
+    "options": [
+      "0",
+      "1000",
+      "6",
+      "8000"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5A65D116a_09C_121P#b",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "某團體調查了一些青少年每天的上網時間，結果如下 (a)上網少於1小時的女生比男生 ( 多 / 少 )。（把答案圈起來）",
+    "options": [
+      "1000",
+      "蛋糕",
+      "青少年每天的上網時間",
+      "8000"
+    ],
+    "answer": "青少年每天的上網時間"
+  },
+  {
+    "id": "5A65D116a_09C_121P#c",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "某團體調查了一些青少年每天的上網時間，結果如下 (b)上網2小時至少於3小時的女生和男生人數相差 萬人。",
+    "options": [
+      "人數（萬人）",
+      "入學人數（萬人）",
+      "過去四年全港小學的入學人數",
+      "30000 / 3萬"
+    ],
+    "answer": "人數（萬人）"
+  },
+  {
+    "id": "5A65D116a_10C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示水果店過去兩個月售出各種水果所得的款項。 以下的複合棒形圖顯示水果店過去兩個月售出各種水果所得的款項。",
+    "options": [
+      "蘋果",
+      "8000",
+      "0",
+      "蛋糕"
+    ],
+    "answer": "蘋果"
+  },
+  {
+    "id": "5A65D116a_10C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示水果店過去兩個月售出各種水果所得的款項。 (a)上月售出 所得的款項最多，有 萬元。",
+    "options": [
+      "8000",
+      "0",
+      "1000",
+      "7.2"
+    ],
+    "answer": "7.2"
+  },
+  {
+    "id": "5A65D116a_10C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示水果店過去兩個月售出各種水果所得的款項。 (b)本月售出 所得的款項最少，有 萬元。",
+    "options": [
+      "水果",
+      "8000",
+      "0",
+      "蛋糕"
+    ],
+    "answer": "水果"
+  },
+  {
+    "id": "5A65D116a_11C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某區最近兩星期通過各條街道的車輛數量。 以下的複合棒形圖顯示某區最近兩星期通過各條街道的車輛數量。",
+    "options": [
+      "1500",
+      "1000",
+      "8000",
+      "2000"
+    ],
+    "answer": "1500"
+  },
+  {
+    "id": "5A65D116a_11C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某區最近兩星期通過各條街道的車輛數量。 (a)上星期通過 的車輛最少，有 輛。",
+    "options": [
+      "樹林街",
+      "蛋糕",
+      "8000",
+      "0"
+    ],
+    "answer": "樹林街"
+  },
+  {
+    "id": "5A65D116a_11C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示某區最近兩星期通過各條街道的車輛數量。 (b)本星期通過安海道的車輛比本星期通過榮福道的 ( 多 / 少 ) 輛。（把答案圈起來）",
+    "options": [
+      "1000",
+      "8000",
+      "3000",
+      "2000"
+    ],
+    "answer": "3000"
+  },
+  {
+    "id": "5A65D116a_12C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示家活麪店一月至四月售出的兩款粉麪的數量。 以下的複合棒形圖顯示家活麪店一月至四月售出的兩款粉麪的數量。",
+    "options": [
+      "30000 / 3萬",
+      "入學人數（萬人）",
+      "過去四年全港小學的入學人數",
+      "一"
+    ],
+    "answer": "一"
+  },
+  {
+    "id": "5A65D116a_12C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示家活麪店一月至四月售出的兩款粉麪的數量。 (a) 月和 月售出這兩款的粉麪的總數量相同。",
+    "options": [
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數",
+      "四",
+      "入學人數（萬人）"
+    ],
+    "answer": "四"
+  },
+  {
+    "id": "5A65D116a_12C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示家活麪店一月至四月售出的兩款粉麪的數量。 (b) 月售出這兩款的粉麪總數量最多，共有 碗。",
+    "options": [
+      "家活麪店一月至四月售出的兩款粉麪的數量",
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數",
+      "入學人數（萬人）"
+    ],
+    "answer": "家活麪店一月至四月售出的兩款粉麪的數量"
+  },
+  {
+    "id": "5A65D116a_13C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "某團體調查了小學生最常玩的遊戲類型，每個接受調查的小學生只可選擇一種遊戲類型，結果如下 (a)最常玩 的女生最多，有 萬人。",
+    "options": [
+      "8000",
+      "1000",
+      "3.8",
+      "0"
+    ],
+    "answer": "3.8"
+  },
+  {
+    "id": "5A65D116a_13C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "某團體調查了小學生最常玩的遊戲類型，每個接受調查的小學生只可選擇一種遊戲類型，結果如下 (b)最常玩的 的男生比女生多。",
+    "options": [
+      "3",
+      "0",
+      "8000",
+      "1000"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5A65D116a_14C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示陳先生和梁先生上月的支出。 收入 ( 足夠 / 不足夠 ) 應付上月的支出。（把答案圈起來） 以下的複合棒形圖顯示陳先生和梁先生上月的支出。",
+    "options": [
+      "1000",
+      "1400",
+      "2000",
+      "8000"
+    ],
+    "answer": "1400"
+  },
+  {
+    "id": "5A65D116a_14C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示陳先生和梁先生上月的支出。 收入 ( 足夠 / 不足夠 ) 應付上月的支出。（把答案圈起來） (a)上月梁先生在 的支出最少，有 元。",
+    "options": [
+      "8000",
+      "0",
+      "蛋糕",
+      "交通"
+    ],
+    "answer": "交通"
+  },
+  {
+    "id": "5A65D116a_14C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示陳先生和梁先生上月的支出。 收入 ( 足夠 / 不足夠 ) 應付上月的支出。（把答案圈起來） (b)上月陳先生在租金和娛樂的支出相差 元。",
+    "options": [
+      "1000",
+      "陳先生和梁先生上月的支出",
+      "2000",
+      "8000"
+    ],
+    "answer": "陳先生和梁先生上月的支出"
+  },
+  {
+    "id": "5A65D116a_15C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示味美拉麪店其中2間分店上半年的營業額。 以下的複合棒形圖顯示味美拉麪店其中2間分店上半年的營業額。",
+    "options": [
+      "入學人數（萬人）",
+      "過去四年全港小學的入學人數",
+      "30000 / 3萬",
+      "四"
+    ],
+    "answer": "四"
+  },
+  {
+    "id": "5A65D116a_15C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示味美拉麪店其中2間分店上半年的營業額。 (a)屯門分店在 月的營業額最多，有 萬元。",
+    "options": [
+      "8000",
+      "0",
+      "月份",
+      "蛋糕"
+    ],
+    "answer": "月份"
+  },
+  {
+    "id": "5A65D116a_15C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示味美拉麪店其中2間分店上半年的營業額。 (b)在三月， 分店的營業額較少。",
+    "options": [
+      "8000",
+      "1000",
+      "0",
+      "2000"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_16C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示2019年香港島各區的居住人口。 以下的複合棒形圖顯示2019年香港島各區的居住人口。",
+    "options": [
+      "東區",
+      "蛋糕",
+      "0",
+      "8000"
+    ],
+    "answer": "東區"
+  },
+  {
+    "id": "5A65D116a_16C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示2019年香港島各區的居住人口。 (a)最多男性居住在 ，有 萬人。",
+    "options": [
+      "香港島各區",
+      "8000",
+      "蛋糕",
+      "1000"
+    ],
+    "answer": "香港島各區"
+  },
+  {
+    "id": "5A65D116a_16C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示2019年香港島各區的居住人口。 (b)居住在灣仔和南區的女性人數相差 萬人。",
+    "options": [
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數",
+      "人數（萬人）",
+      "入學人數（萬人）"
+    ],
+    "answer": "人數（萬人）"
+  },
+  {
+    "id": "5A65D116a_17C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示飲品批發商這兩星期各種飲品的銷量。 以下的複合棒形圖顯示飲品批發商這兩星期各種飲品的銷量。",
+    "options": [
+      "3800",
+      "2000",
+      "1000",
+      "8000"
+    ],
+    "answer": "3800"
+  },
+  {
+    "id": "5A65D116a_17C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示飲品批發商這兩星期各種飲品的銷量。 (a)上星期售出最多的飲品是 ，有 箱。",
+    "options": [
+      "0",
+      "8000",
+      "蛋糕",
+      "檸檬茶"
+    ],
+    "answer": "檸檬茶"
+  },
+  {
+    "id": "5A65D116a_17C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示飲品批發商這兩星期各種飲品的銷量。 (b)這兩星期菊花茶和橙汁的總銷量相差 箱。",
+    "options": [
+      "兩間分店上星期售出各種蛋糕所得的款項",
+      "30000 / 3萬",
+      "4月各場足球比賽的入場人數",
+      "飲品批發商這兩星期各種飲品的銷售"
+    ],
+    "answer": "飲品批發商這兩星期各種飲品的銷售"
+  },
+  {
+    "id": "5A65D116a_18C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "甜品店調查了顧客最喜愛的雪糕口味，結果如下： 人。（把答案圈起來） 甜品店調查了顧客最喜愛的雪糕口味，結果如下",
+    "options": [
+      "1000",
+      "2000",
+      "3400",
+      "8000"
+    ],
+    "answer": "3400"
+  },
+  {
+    "id": "5A65D116a_18C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "甜品店調查了顧客最喜愛的雪糕口味，結果如下： 人。（把答案圈起來） (a)最多女顧客喜愛 味雪糕，有 人。",
+    "options": [
+      "蛋糕",
+      "8000",
+      "草莓",
+      "0"
+    ],
+    "answer": "草莓"
+  },
+  {
+    "id": "5A65D116a_18C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "甜品店調查了顧客最喜愛的雪糕口味，結果如下： 人。（把答案圈起來） (b)最喜愛 味雪糕的男顧客人數和最喜愛 味雪糕的女顧客人數相同。",
+    "options": [
+      "顧客最喜愛的雪糕口味",
+      "蛋糕",
+      "8000",
+      "1000"
+    ],
+    "answer": "顧客最喜愛的雪糕口味"
+  },
+  {
+    "id": "5A65D116a_19C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示科學館今年一月至四月的入場人次。 以下的複合棒形圖顯示科學館今年一月至四月的入場人次。",
+    "options": [
+      "入學人數（萬人）",
+      "過去四年全港小學的入學人數",
+      "2000 / 0.2萬",
+      "30000 / 3萬"
+    ],
+    "answer": "2000 / 0.2萬"
+  },
+  {
+    "id": "5A65D116a_19C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示科學館今年一月至四月的入場人次。 (a)縱軸的每大格代表 萬人次，每小格代表 人次。",
+    "options": [
+      "科學館今年一月至四月的入場人次",
+      "入學人數（萬人）",
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數"
+    ],
+    "answer": "科學館今年一月至四月的入場人次"
+  },
+  {
+    "id": "5A65D116a_19C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示科學館今年一月至四月的入場人次。 (b) 月的入場人次最多，共有 萬人。",
+    "options": [
+      "8000",
+      "月份",
+      "蛋糕",
+      "0"
+    ],
+    "answer": "月份"
+  },
+  {
+    "id": "5A65D116a_20C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示工廠上半年兩種布偶的生產數量。 以下的複合棒形圖顯示工廠上半年兩種布偶的生產數量。",
+    "options": [
+      "68000 / 6.8萬",
+      "入學人數（萬人）",
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數"
+    ],
+    "answer": "68000 / 6.8萬"
+  },
+  {
+    "id": "5A65D116a_20C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示工廠上半年兩種布偶的生產數量。 (a)生產最多布偶的月份是 月，共生產了 個。",
+    "options": [
+      "4月各場足球比賽的入場人數",
+      "30000 / 3萬",
+      "工廠上半年兩種布偶的生產數量",
+      "兩間分店上星期售出各種蛋糕所得的款項"
+    ],
+    "answer": "工廠上半年兩種布偶的生產數量"
+  },
+  {
+    "id": "5A65D116a_20C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_1.docx",
+    "topic": "5A65D116a  闡釋複合棒形圖",
+    "question": "以下的複合棒形圖顯示工廠上半年兩種布偶的生產數量。 (b)二月和三月生產狗布偶的數量相差 個。",
+    "options": [
+      "30000 / 3萬",
+      "過去四年全港小學的入學人數",
+      "入學人數（萬人）",
+      "生產數量（萬個）"
+    ],
+    "answer": "生產數量（萬個）"
+  },
+  {
+    "id": "5A65D116a_21C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示飲品公司上半年兩種茶類飲品的生產數量。 各生產了 萬瓶。 萬瓶。 以下的複合棒形圖顯示飲品公司上半年兩種茶類飲品的生產數量。",
+    "options": [
+      "二月",
+      "數量（萬瓶）",
+      "三",
+      "五"
+    ],
+    "answer": "三"
+  },
+  {
+    "id": "5A65D116a_21C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示飲品公司上半年兩種茶類飲品的生產數量。 各生產了 萬瓶。 萬瓶。 (a) 月和 月兩種茶類飲品的生產總數量相同， 各生產了 萬瓶。",
+    "options": [
+      "數量（萬瓶）",
+      "二月",
+      "五",
+      "三"
+    ],
+    "answer": "五"
+  },
+  {
+    "id": "5A65D116a_21C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示飲品公司上半年兩種茶類飲品的生產數量。 各生產了 萬瓶。 萬瓶。 (b)一月和六月兩種茶類飲品的生產總數量相差 萬瓶。",
+    "options": [
+      "4000 / 0.4萬",
+      "過去五年中文科考試的考生人數",
+      "某城市兩個景點下半年的遊客人數",
+      "飲品公司上半年兩種茶類飲品的生產數量"
+    ],
+    "answer": "飲品公司上半年兩種茶類飲品的生產數量"
+  },
+  {
+    "id": "5A65D116a_22C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示某城市兩個景點下半年的遊客人數。 （ ） 月和 （ ） 月 以下的複合棒形圖顯示某城市兩個景點下半年的遊客人數。",
+    "options": [
+      "30",
+      "10",
+      "0",
+      "3.5"
+    ],
+    "answer": "3.5"
+  },
+  {
+    "id": "5A65D116a_22C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示某城市兩個景點下半年的遊客人數。 （ ） 月和 （ ） 月 (b)大瀑布下半年的遊客總人數是 萬人。",
+    "options": [
+      "30",
+      "20",
+      "10",
+      "0"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_23C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示過去五年中文科考試的考生人數。 以下的複合棒形圖顯示過去五年中文科考試的考生人數。",
+    "options": [
+      "過去五年中文科考試的考生人數",
+      "二月",
+      "數量（萬瓶）",
+      "一月"
+    ],
+    "answer": "過去五年中文科考試的考生人數"
+  },
+  {
+    "id": "5A65D116a_23C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示過去五年中文科考試的考生人數。 (a)2020年的男考生人數比2019的男考生人數 ( 多 / 少 ) 人。（把答案圈起來）",
+    "options": [
+      "數量（萬瓶）",
+      "三",
+      "五",
+      "年份"
+    ],
+    "answer": "年份"
+  },
+  {
+    "id": "5A65D116a_23C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示過去五年中文科考試的考生人數。 (b)2016年至2020年中文科考試的考生人數持續 ( 增加 / 減少 )。（把答案圈起來）",
+    "options": [
+      "30",
+      "0",
+      "10",
+      "20"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_24C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示兩段影片這四個月的收看次數。 以下的複合棒形圖顯示兩段影片這四個月的收看次數。",
+    "options": [
+      "數量（萬瓶）",
+      "月份",
+      "五",
+      "三"
+    ],
+    "answer": "月份"
+  },
+  {
+    "id": "5A65D116a_24C_121P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示兩段影片這四個月的收看次數。 (a)《極速賽車》九月的收看次數比八月 ( 多 / 少 ) 次。（把答案圈起來）",
+    "options": [
+      "30",
+      "收看次數（次）",
+      "數量（萬瓶）",
+      "月份"
+    ],
+    "answer": "收看次數（次）"
+  },
+  {
+    "id": "5A65D116a_24C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示兩段影片這四個月的收看次數。 (b)八月《極速賽車》的收看次數是《叢林冒險》的 倍。",
+    "options": [
+      "三",
+      "六月",
+      "數量（萬瓶）",
+      "五"
+    ],
+    "answer": "六月"
+  },
+  {
+    "id": "5A65D116a_25C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示某城市過去五個月的外遊人數。 即預計九月有 萬人外遊。 我認為應在 月推出優惠，因為 。 以下的複合棒形圖顯示某城市過去五個月的外遊人數。",
+    "options": [
+      "30",
+      "0",
+      "98",
+      "10"
+    ],
+    "answer": "98"
+  },
+  {
+    "id": "5A65D116a_25C_122P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示某城市過去五個月的外遊人數。 即預計九月有 萬人外遊。 我認為應在 月推出優惠，因為 。 (a) 月外遊的人數最多，共有 萬人。",
+    "options": [
+      "三",
+      "數量（萬瓶）",
+      "四",
+      "五"
+    ],
+    "answer": "四"
+  },
+  {
+    "id": "5A65D116a_25C_122P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示某城市過去五個月的外遊人數。 即預計九月有 萬人外遊。 我認為應在 月推出優惠，因為 。 (b) 月外遊的男性佔該月外遊的總人數的 。",
+    "options": [
+      "30",
+      "0",
+      "60",
+      "10"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5A65D116a_27C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示零食店上半年餅乾和薯片的銷量。 以下的複合棒形圖顯示零食店上半年餅乾和薯片的銷量。",
+    "options": [
+      "五",
+      "三",
+      "二",
+      "數量（萬瓶）"
+    ],
+    "answer": "二"
+  },
+  {
+    "id": "5A65D116a_27C_122P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示零食店上半年餅乾和薯片的銷量。 (a) 月餅乾的銷量最高，售出 包。",
+    "options": [
+      "30",
+      "20",
+      "5200",
+      "10"
+    ],
+    "answer": "5200"
+  },
+  {
+    "id": "5A65D116a_27C_122P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示零食店上半年餅乾和薯片的銷量。 (b) 月和 月薯片的銷量相同，各售出 包。",
+    "options": [
+      "三",
+      "數量（萬瓶）",
+      "五",
+      "月份"
+    ],
+    "answer": "月份"
+  },
+  {
+    "id": "5A65D116a_28C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示工廠上半年生產紙張的數量和售出的數量。 ( 同意 / 不同意 )，因為 。 以下的複合棒形圖顯示工廠上半年生產紙張的數量和售出的數量。",
+    "options": [
+      "10",
+      "30",
+      "0",
+      "85"
+    ],
+    "answer": "85"
+  },
+  {
+    "id": "5A65D116a_28C_122P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示工廠上半年生產紙張的數量和售出的數量。 ( 同意 / 不同意 )，因為 。 (a) 月售出的紙張最多，售出了 萬張。",
+    "options": [
+      "二月",
+      "數量（萬瓶）",
+      "五",
+      "三"
+    ],
+    "answer": "五"
+  },
+  {
+    "id": "5A65D116a_29C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示快餐店這兩星期各款食物的銷量。 是90萬元，上星期售出雞扒包所得的收入是 萬元。 以下的複合棒形圖顯示快餐店這兩星期各款食物的銷量。",
+    "options": [
+      "4.4",
+      "0",
+      "30",
+      "10"
+    ],
+    "answer": "4.4"
+  },
+  {
+    "id": "5A65D116a_29C_122P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示快餐店這兩星期各款食物的銷量。 是90萬元，上星期售出雞扒包所得的收入是 萬元。 (a)本星期售出最多的食物是 ，有 萬個。",
+    "options": [
+      "三",
+      "五",
+      "雞扒包",
+      "數量（萬瓶）"
+    ],
+    "answer": "雞扒包"
+  },
+  {
+    "id": "5A65D116a_31C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示纜車上半年的乘客數量。 公司在三月的收入是 （ ） 萬元。 以下的複合棒形圖顯示纜車上半年的乘客數量。",
+    "options": [
+      "10",
+      "4",
+      "0",
+      "30"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5A65D116a_31C_122P#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "以下的複合棒形圖顯示纜車上半年的乘客數量。 公司在三月的收入是 （ ） 萬元。 (b)三月乘搭纜車的小童人數佔該月全部乘客的 。（答案以最簡分數表示）",
+    "options": [
+      "30",
+      "0",
+      "20",
+      "10"
+    ],
+    "answer": "0"
+  },
+  {
+    "id": "5A65D116a_34C_082P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "根據上圖，2022年狗的數量比2020年多／少幾隻？",
+    "options": [
+      "多5萬隻",
+      "少5萬隻",
+      "多10萬隻",
+      "少10萬隻"
+    ],
+    "answer": "多10萬隻"
+  },
+  {
+    "id": "5A65D116a_36C_081P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "根據上圖，哪一個月份的團友總人數剛好是七月的一半？",
+    "options": [
+      "五月",
+      "九月",
+      "八月",
+      "六月"
+    ],
+    "answer": "五月"
+  },
+  {
+    "id": "5A65D116a_37C_122P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D116a_2.docx",
+    "topic": "",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "30",
+      "800",
+      "20",
+      "10"
+    ],
+    "answer": "800"
+  },
+  {
+    "id": "5A65D117a_29C_122N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5A65D117a.docx",
+    "topic": "5A65D117a  製作複合棒形圖",
+    "question": "以下的棒形圖顯示快餐店上星期售出各款快餐的收入。 快餐種類 A餐 B餐 C餐 午市收入（元） 晚市收入（元） 以下的棒形圖顯示快餐店上星期售出各款快餐的收入。",
+    "options": [
+      "6",
+      "1000",
+      "0",
+      "8000"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B15S101a_03C_121P#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右面的圖形是一個圓和它的圓心。 這條半徑的長度是 （ ） mm。 右面的圖形是一個圓和它的圓心。",
+    "options": [
+      "15",
+      "50",
+      "XZ",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S101a_03C_121P#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右面的圖形是一個圓和它的圓心。 這條半徑的長度是 （ ） mm。 (a)在圓上繪畫一條半徑。",
+    "options": [
+      "50",
+      "2",
+      "18",
+      "15"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B15S101a_04C_121P#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右面的圖形是一個圓和它的圓心。 這條直徑的長度是 （ ） mm。 右面的圖形是一個圓和它的圓心。",
+    "options": [
+      "15",
+      "50",
+      "或其他合理答案。",
+      "XZ"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S101a_04C_121P#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右面的圖形是一個圓和它的圓心。 這條直徑的長度是 （ ） mm。 (a)在圓上繪畫一條直徑。",
+    "options": [
+      "15",
+      "50",
+      "2",
+      "18"
+    ],
+    "answer": "50"
+  },
+  {
+    "id": "5B15S101a_08C_121P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "50",
+      "24",
+      "18",
+      "15"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B15S101a_17C_041N#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，H點是圓心，OL、PM和QN都是線段。 下圖中，H點是圓心，OL、PM和QN都是線段。",
+    "options": [
+      "W",
+      "Y",
+      "P",
+      "X"
+    ],
+    "answer": "P"
+  },
+  {
+    "id": "5B15S101a_17C_041N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，H點是圓心，OL、PM和QN都是線段。 (a)（ ） 和 （ ） 都是圓的直徑。",
+    "options": [
+      "W",
+      "X",
+      "Y",
+      "K"
+    ],
+    "answer": "K"
+  },
+  {
+    "id": "5B15S101a_17C_041N#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，H點是圓心，OL、PM和QN都是線段。 (b)這個圓的直徑是11.6厘米，半徑是 （ ） 厘米。",
+    "options": [
+      "W",
+      "N",
+      "Y",
+      "X"
+    ],
+    "answer": "N"
+  },
+  {
+    "id": "5B15S101a_20C_041N#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心。 右圖中，O點是圓心。",
+    "options": [
+      "直徑",
+      "X",
+      "Y",
+      "W"
+    ],
+    "answer": "直徑"
+  },
+  {
+    "id": "5B15S101a_20C_041N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心。 (a)QR是圓的 （ ）。",
+    "options": [
+      "O",
+      "X",
+      "W",
+      "Y"
+    ],
+    "answer": "O"
+  },
+  {
+    "id": "5B15S101a_20C_041N#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心。 (b)OP是圓的 （ ）。",
+    "options": [
+      "X",
+      "P",
+      "W",
+      "Y"
+    ],
+    "answer": "P"
+  },
+  {
+    "id": "5B15S101a_21C_041N#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心，AC是一條線段。 和 （ ） 都是圓的半徑。 右圖中，O點是圓心，AC是一條線段。",
+    "options": [
+      "W",
+      "AC",
+      "X",
+      "Y"
+    ],
+    "answer": "AC"
+  },
+  {
+    "id": "5B15S101a_21C_041N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心，AC是一條線段。 和 （ ） 都是圓的半徑。 (a)（ ） 是圓的直徑。",
+    "options": [
+      "W",
+      "Y",
+      "X",
+      "A"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5B15S101a_30C_121P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "15",
+      "27",
+      "18",
+      "50"
+    ],
+    "answer": "27"
+  },
+  {
+    "id": "5B15S101a_31C_081P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，圓的直徑是8 cm。DG長8 cm，FI長8 cm，而EH長7.2 cm。 (a)圖中哪一點是圓心？ (b)以下哪一條線段是半徑？",
+    "options": [
+      "BG B. AB C. AI D. CH",
+      "B",
+      "任何一點都不是",
+      "C"
+    ],
+    "answer": "BG B. AB C. AI D. CH"
+  },
+  {
+    "id": "5B15S101a_32C_081P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心，哪一條線段是直徑？",
+    "options": [
+      "PR",
+      "OS",
+      "PS",
+      "QR"
+    ],
+    "answer": "OS"
+  },
+  {
+    "id": "5B15S101a_33C_081P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心，哪一條線段是直徑？",
+    "options": [
+      "BD",
+      "AB",
+      "AD",
+      "BC"
+    ],
+    "answer": "AD"
+  },
+  {
+    "id": "5B15S101a_34C_081P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心，哪一條線段是半徑？",
+    "options": [
+      "XY",
+      "YZ",
+      "OW",
+      "OY"
+    ],
+    "answer": "OW"
+  },
+  {
+    "id": "5B15S101a_35C_081P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心，哪一條線段是半徑？",
+    "options": [
+      "OL",
+      "IK",
+      "HJ",
+      "HI"
+    ],
+    "answer": "OL"
+  },
+  {
+    "id": "5B15S101a_36C_082P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，正方形內有一個圓，O點是圓心。以下哪條線段的長度與正方形的邊長相等？",
+    "options": [
+      "OI",
+      "OA",
+      "GF",
+      "GE"
+    ],
+    "answer": "GF"
+  },
+  {
+    "id": "5B15S101a_37C_082P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，正方形內有一個圓，O點是圓心。以下哪條線段的長度與正方形的邊長相等？",
+    "options": [
+      "LQ",
+      "IN",
+      "KN",
+      "HJ"
+    ],
+    "answer": "HJ"
+  },
+  {
+    "id": "5B15S101a_39C_121P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "右圖中，O點是圓心。 (a)OR是圓的 （ ）。 (b)以下哪條線段是直徑？",
+    "options": [
+      "PT",
+      "QS",
+      "PR",
+      "RS"
+    ],
+    "answer": "PT"
+  },
+  {
+    "id": "5B15S101a_44C_121P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，AB和PQ都是圓內最長的線段。 下圖中，AB和PQ都是圓內最長的線段。",
+    "options": [
+      "W",
+      "X",
+      "Y",
+      "B"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B15S101a_44C_121P#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，AB和PQ都是圓內最長的線段。 (a)OA是圓的（ 圓心 / 半徑 / 直徑 ）。",
+    "options": [
+      "W",
+      "A",
+      "X",
+      "Y"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5B15S101a_44C_121P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "下圖中，AB和PQ都是圓內最長的線段。 (b)PQ長10 cm，OA長 （ ） cm。",
+    "options": [
+      "Y",
+      "W",
+      "O",
+      "X"
+    ],
+    "answer": "O"
+  },
+  {
+    "id": "5B15S101a_45C_121P#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "老師畫了兩個圓。Y點是小圓的圓心，Z點是大圓的圓心。 老師畫了兩個圓。Y點是小圓的圓心，Z點是大圓的圓心。",
+    "options": [
+      "X",
+      "Y",
+      "Z",
+      "W"
+    ],
+    "answer": "Y"
+  },
+  {
+    "id": "5B15S101a_45C_121P#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "老師畫了兩個圓。Y點是小圓的圓心，Z點是大圓的圓心。 (a)XZ是小圓的（ 半徑 / 直徑 / 圓周 ）。",
+    "options": [
+      "Y",
+      "X",
+      "Z",
+      "W"
+    ],
+    "answer": "Z"
+  },
+  {
+    "id": "5B15S101a_45C_121P#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "老師畫了兩個圓。Y點是小圓的圓心，Z點是大圓的圓心。 (b)大圓的直徑是XY長度的 （ ） 倍。",
+    "options": [
+      "W",
+      "Z",
+      "X",
+      "Y"
+    ],
+    "answer": "X"
+  },
+  {
+    "id": "5B15S101a_48C_092N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101a.docx",
+    "topic": "5B15S101a  圓的認識",
+    "question": "判斷以下句子，正確的，在圈內加✓；不正確的加。 (a)圓上所有點跟圓心的距離都相同。 (b)半徑的長度是直徑的一半。 (c)半徑是圓內最長的線段。",
+    "options": [
+      "Y",
+      "✓",
+      "X",
+      "W"
+    ],
+    "answer": "✓"
+  },
+  {
+    "id": "5B15S101b_01C_041N#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "10",
+      "12",
+      "48",
+      "24"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B15S101b_02C_041N#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "12",
+      "10",
+      "24",
+      "48"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B15S101b_03C_041N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖由三個大小相同的圓組成，所有圓心都在線段AB上。如果AB長18 cm， 每個圓的半徑都是 （ ） cm。",
+    "options": [
+      "A",
+      "Y",
+      "B",
+      "X"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B15S101b_04C_041P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "48",
+      "10",
+      "12",
+      "24"
+    ],
+    "answer": "48"
+  },
+  {
+    "id": "5B15S101b_05C_041P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "48",
+      "24",
+      "10",
+      "12"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5B15S101b_06C_041N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖中，正方形內有一個圓，O點是圓心。正方形的周界是32 cm。圓的半徑是 （ ） cm。",
+    "options": [
+      "B",
+      "X",
+      "A",
+      "O"
+    ],
+    "answer": "O"
+  },
+  {
+    "id": "5B15S101b_07C_041N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖中，正方形內有一個圓。正方形的周界是56 cm。圓的半徑是 （ ） cm。",
+    "options": [
+      "7",
+      "10",
+      "6",
+      "12"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B15S101b_08C_041N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "上圖由四個大小相同的圓組成，每個圓的半徑是5 cm。柏康把所有圓心連起成一個菱形。菱形的周界是 （ ） cm。",
+    "options": [
+      "40",
+      "10",
+      "12",
+      "6"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "5B15S101b_09C_112N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖由三個大小相同的圓組成。X點、Y點和Z點分別是各圓的圓心，每個圓的半徑都是1 cm。 （ ） cm (a)三角形XYZ是一個 （ ） 三角形。",
+    "options": [
+      "X",
+      "Y",
+      "A",
+      "B"
+    ],
+    "answer": "Y"
+  },
+  {
+    "id": "5B15S101b_09C_112N#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖由三個大小相同的圓組成。X點、Y點和Z點分別是各圓的圓心，每個圓的半徑都是1 cm。 （ ） cm (b)三角形XYZ的周界是多少cm？ （ ） cm",
+    "options": [
+      "B",
+      "X",
+      "A",
+      "Z"
+    ],
+    "answer": "Z"
+  },
+  {
+    "id": "5B15S101b_11C_042N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖由兩個大小相同的大圓和一個小圓組成。 A點、B點和C點分別是三個圓的圓心，大圓和小圓的半徑分別是8 cm和6 cm。三角形ABC的面積是 （ ） cm2。",
+    "options": [
+      "112",
+      "10",
+      "12",
+      "6"
+    ],
+    "answer": "112"
+  },
+  {
+    "id": "5B15S101b_12C_112N#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "12",
+      "64",
+      "10",
+      "48"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "5B15S101b_14C_112N#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "右圖中，正方形內有一個圓，O點是圓心。正方形的周界是20 cm。  （ ） cm （ ） cm 右圖中，正方形內有一個圓，O點是圓心。正方形的周界是20 cm。",
+    "options": [
+      "A",
+      "X",
+      "O",
+      "B"
+    ],
+    "answer": "O"
+  },
+  {
+    "id": "5B15S101b_15C_122P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "12",
+      "10",
+      "48",
+      "36"
+    ],
+    "answer": "36"
+  },
+  {
+    "id": "5B15S101b_16C_112P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "12",
+      "256",
+      "10",
+      "48"
+    ],
+    "answer": "256"
+  },
+  {
+    "id": "5B15S101b_23C_082P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "下圖的長方形內有一個大圓和三個大小相同的小圓。如果小圓的半徑是2 cm，長方形的面積是多少cm2？",
+    "options": [
+      "192 cm2",
+      "144 cm2",
+      "48 cm2",
+      "168 cm2"
+    ],
+    "answer": "192 cm2"
+  },
+  {
+    "id": "5B15S101b_30C_032P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "下圖中，X點和Y點分別是大圓和小圓的圓心，這兩點都在同一線段上。大圓的直徑是24 cm，小圓的半徑是多少cm？",
+    "options": [
+      "14 ÷ 2 × 4=28正方形WOYZ的周界是28 cm。",
+      "66 ÷ 3=22每個圓的直徑是22 cm。",
+      "4 × 2 × 4=32正方形的周界是32 cm。",
+      "24 ÷ 2 ÷ 2=6小圓的半徑是6 cm。"
+    ],
+    "answer": "24 ÷ 2 ÷ 2=6小圓的半徑是6 cm。"
+  },
+  {
+    "id": "5B15S101b_33C_032N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "下圖由三個大小相同的圓組成，P點、Q點和R點是它們的圓心。如果三角形PQR的周界是66 cm，每個圓的直徑是多少cm？",
+    "options": [
+      "4 × 2 × 4=32正方形的周界是32 cm。",
+      "24 ÷ 2 ÷ 2=6小圓的半徑是6 cm。",
+      "66 ÷ 3=22每個圓的直徑是22 cm。",
+      "14 ÷ 2 × 4=28正方形WOYZ的周界是28 cm。"
+    ],
+    "answer": "66 ÷ 3=22每個圓的直徑是22 cm。"
+  },
+  {
+    "id": "5B15S101b_39C_032N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "仲謙以O點為中心點畫了右面的圓和正方形，圓內最長的線段長14 cm。 仲謙以O點為中心點畫了右面的圓和正方形，圓內最長的線段長14 cm。",
+    "options": [
+      "A",
+      "B",
+      "O",
+      "X"
+    ],
+    "answer": "O"
+  },
+  {
+    "id": "5B15S101b_39C_032N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "仲謙以O點為中心點畫了右面的圓和正方形，圓內最長的線段長14 cm。 (a)正方形WOYZ的周界是多少cm？",
+    "options": [
+      "X",
+      "W",
+      "A",
+      "B"
+    ],
+    "answer": "W"
+  },
+  {
+    "id": "5B15S101b_39C_032N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "仲謙以O點為中心點畫了右面的圓和正方形，圓內最長的線段長14 cm。 (b)正方形WOYZ的面積是多少cm2？",
+    "options": [
+      "A",
+      "Y",
+      "B",
+      "X"
+    ],
+    "answer": "X"
+  },
+  {
+    "id": "5B15S101b_41C_112P",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "子賢在一張長方形紙上畫了6個大小相同的圓，如上圖所示。這個長方形的面積是多少cm2？ 答案︰（ ） cm2",
+    "options": [
+      "12 cm",
+      "48",
+      "12",
+      "10"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5B15S101b_45C_082P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "卓軒在上圖的梯形卡紙上畫一個最大的圓，該圓的半徑是多少？",
+    "options": [
+      "12 cm",
+      "15 cm",
+      "21 cm",
+      "24 cm"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5B15S101b_46C_082P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S101b.docx",
+    "topic": "5B15S101b  有關圓的問題",
+    "question": "上圖中，X、Y和Z分別是三個圓的圓心，而且都在同一條線段上。XY長多少？",
+    "options": [
+      "3 cm",
+      "2 cm",
+      "8 cm",
+      "6 cm"
+    ],
+    "answer": "2 cm"
+  },
+  {
+    "id": "5B15S102a_01C_101N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用5角硬幣的協助，繪畫一個圓。",
+    "options": [
+      "(b)",
+      "按實際情況作答。",
+      "或其他合理答案。",
+      "1 cm"
+    ],
+    "answer": "按實際情況作答。"
+  },
+  {
+    "id": "5B15S102a_02C_101N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用 棋子的協助，繪畫一個圓。",
+    "options": [
+      "按實際情況作答。",
+      "1 cm",
+      "或其他合理答案。",
+      "(b)"
+    ],
+    "answer": "按實際情況作答。"
+  },
+  {
+    "id": "5B15S102a_03C_101N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規，以「‧」為圓心，繪畫一個比原有圓小的圓。",
+    "options": [
+      "1 cm",
+      "或其他合理答案。",
+      "按實際情況作答。",
+      "(b)"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_04C_101N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規，以「‧」為圓心，繪畫一個比原有圓大的圓。",
+    "options": [
+      "1 cm",
+      "或其他合理答案。",
+      "(b)",
+      "按實際情況作答。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_05C_101N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規，在方格紙上繪畫一個直徑是6 cm的圓。",
+    "options": [
+      "1 cm",
+      "(b)",
+      "或其他合理答案。",
+      "按實際情況作答。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_06C_101N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規，在方格紙上繪畫一個半徑是2 cm的圓。",
+    "options": [
+      "(b)",
+      "1 cm",
+      "或其他合理答案。",
+      "按實際情況作答。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_13C_102N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規分別繪畫兩個圓，使P點同時在兩個圓的圓周上。",
+    "options": [
+      "1 cm",
+      "或其他合理答案。",
+      "(b)",
+      "按實際情況作答。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_16C_122N#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "(a)分別以MO和NO為直徑，各繪畫一個小圓。",
+    "options": [
+      "2",
+      "36",
+      "3",
+      "55"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B15S102a_16C_122N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "(b)以O點為圓心，MN為直徑，繪畫一個大圓。",
+    "options": [
+      "1 cm",
+      "或其他合理答案。",
+      "按實際情況作答。",
+      "M"
+    ],
+    "answer": "M"
+  },
+  {
+    "id": "5B15S102a_16C_122N#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "(c)大圓的直徑是小圓的直徑的 （ ） 倍。",
+    "options": [
+      "按實際情況作答。",
+      "或其他合理答案。",
+      "O",
+      "1 cm"
+    ],
+    "answer": "O"
+  },
+  {
+    "id": "5B15S102a_17C_102N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規，在方格紙上繪畫一個半徑是1 cm和一個直徑是4 cm的圓，而X點同時在兩個圓上。",
+    "options": [
+      "按實際情況作答。",
+      "1 cm",
+      "或其他合理答案。",
+      "(b)"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_18C_102N",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "利用圓規，在方格紙上繪畫一個半徑是3 cm和一個直徑是6 cm的圓，而Y點同時在兩個圓上。",
+    "options": [
+      "按實際情況作答。",
+      "1 cm",
+      "(b)",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B15S102a_19C_122N#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "54",
+      "55",
+      "56",
+      "36"
+    ],
+    "answer": "55"
+  },
+  {
+    "id": "5B15S102a_20C_122N#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "35",
+      "37",
+      "36",
+      "55"
+    ],
+    "answer": "36"
+  },
+  {
+    "id": "5B15S102a_21C_122N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "而且大小相同的圓。 （ ） cm。 (a)在右面的長方形內繪畫兩個最大 而且大小相同的圓。",
+    "options": [
+      "1 cm",
+      "按實際情況作答。",
+      "3 cm",
+      "或其他合理答案。"
+    ],
+    "answer": "3 cm"
+  },
+  {
+    "id": "5B15S102a_21C_122N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "而且大小相同的圓。 （ ） cm。 (b)這兩個圓的直徑分別是 （ ） cm。",
+    "options": [
+      "1 cm",
+      "按實際情況作答。",
+      "或其他合理答案。",
+      "6 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B15S102a_22C_122N#a",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "(a)以D為圓心，AE為直徑，繪畫一個圓。",
+    "options": [
+      "或其他合理答案。",
+      "按實際情況作答。",
+      "1 cm",
+      "(a)"
+    ],
+    "answer": "(a)"
+  },
+  {
+    "id": "5B15S102a_22C_122N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "(b)以C為圓心，AD為直徑，繪畫一個圓。",
+    "options": [
+      "或其他合理答案。",
+      "(b)",
+      "按實際情況作答。",
+      "1 cm"
+    ],
+    "answer": "(b)"
+  },
+  {
+    "id": "5B15S102a_22C_122N#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B15S102a.docx",
+    "topic": "5B15S102a  繪畫圓",
+    "question": "(c)以B為圓心，AC為直徑，繪畫一個圓。",
+    "options": [
+      "或其他合理答案。",
+      "(c)",
+      "1 cm",
+      "按實際情況作答。"
+    ],
+    "answer": "(c)"
+  },
+  {
+    "id": "5B25N503a_01C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "5 ÷ 25 = （ ） = （ ）",
+    "options": [
+      "5",
+      "2",
+      "9",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_02C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "2 ÷ 10 = （ ） = （ ）",
+    "options": [
+      "5",
+      "2",
+      "9",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_03C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "4 ÷ 18 = （ ） = （ ）",
+    "options": [
+      "5",
+      "9",
+      "1",
+      "2"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B25N503a_04C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "6 ÷ 27 = （ ） = （ ）",
+    "options": [
+      "9",
+      "1",
+      "2",
+      "5"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B25N503a_05C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "18 ÷ 26 = （ ） = （ ）",
+    "options": [
+      "9",
+      "1",
+      "13",
+      "5"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5B25N503a_06C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "9 ÷ 6 = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = = 1新裝汽水的容量是舊裝汽水的1 倍。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。",
+      "= = 綠豆的重量是紅豆的 。"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N503a_07C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "34 ÷ 14 = （ ） = （ ） = （ ）",
+    "options": [
+      "= = = 1新裝汽水的容量是舊裝汽水的1 倍。",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。",
+      "= = 綠豆的重量是紅豆的 。"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N503a_08C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "55 ÷ 22 = （ ） = （ ） = （ ）",
+    "options": [
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = = 1新裝汽水的容量是舊裝汽水的1 倍。",
+      "= = 綠豆的重量是紅豆的 。"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N503a_17C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "32 ÷ 12 = （ ）",
+    "options": [
+      "17",
+      "13",
+      "3　　或",
+      "2　　或"
+    ],
+    "answer": "2　　或"
+  },
+  {
+    "id": "5B25N503a_24C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "運動室內有足球4個和籃球5個。 足球的數量比籃球的數量是 （ ） 比 （ ）。",
+    "options": [
+      "2",
+      "5",
+      "9",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_25C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "展文家中有湯碗5個和杯子7個。 湯碗的數量比杯的數量是 （ ） 比 （ ）。",
+    "options": [
+      "7",
+      "5",
+      "1",
+      "9"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N503a_26C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "媽媽買了蘋果4個和橙7個。 橙的數量比蘋果的數量是 （ ） 比 （ ）。",
+    "options": [
+      "9",
+      "5",
+      "7",
+      "1"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N503a_27C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "志文買了牛角包3個和雞尾包6個。 雞尾包的數量比牛角包的數量是 （ ） 比 （ ）。",
+    "options": [
+      "或 2比1",
+      "17",
+      "2　　或",
+      "13"
+    ],
+    "answer": "或 2比1"
+  },
+  {
+    "id": "5B25N503a_28C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "嘉熙筆袋內有鉛筆2枝和原子筆5枝。 原子筆的數量比鉛筆的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "原子筆",
+      "9",
+      "1"
+    ],
+    "answer": "原子筆"
+  },
+  {
+    "id": "5B25N503a_29C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "紅綠燈前有私家車5輛和巴士3輛。 紅綠燈前有私家車5輛和巴士3輛。",
+    "options": [
+      "1",
+      "5",
+      "私家車",
+      "9"
+    ],
+    "answer": "私家車"
+  },
+  {
+    "id": "5B25N503a_29C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "紅綠燈前有私家車5輛和巴士3輛。 (a)私家車的數量比巴士的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "1",
+      "巴士",
+      "9"
+    ],
+    "answer": "巴士"
+  },
+  {
+    "id": "5B25N503a_29C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "紅綠燈前有私家車5輛和巴士3輛。 (b)巴士的數量比私家車的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "1",
+      "2",
+      "9"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_30C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小賣部剛剛售出了牛奶2盒和檸檬茶6盒。 小賣部剛剛售出了牛奶2盒和檸檬茶6盒。",
+    "options": [
+      "13",
+      "2　　或",
+      "或 1比3",
+      "17"
+    ],
+    "answer": "或 1比3"
+  },
+  {
+    "id": "5B25N503a_30C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小賣部剛剛售出了牛奶2盒和檸檬茶6盒。 (a)牛奶的數量比檸檬茶的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "9",
+      "1",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_30C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小賣部剛剛售出了牛奶2盒和檸檬茶6盒。 (b)檸檬茶的數量比牛奶的數量是 （ ） 比 （ ）。",
+    "options": [
+      "1",
+      "9",
+      "5",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B25N503a_31C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "俊賢和朋友借了乒乓球拍8塊和羽毛球拍2塊。 俊賢和朋友借了乒乓球拍8塊和羽毛球拍2塊。",
+    "options": [
+      "乒乓球拍",
+      "2　　或",
+      "13",
+      "17"
+    ],
+    "answer": "乒乓球拍"
+  },
+  {
+    "id": "5B25N503a_31C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "俊賢和朋友借了乒乓球拍8塊和羽毛球拍2塊。 (a)乒乓球拍的數量比羽毛球拍的數量是 （ ） 比 （ ）。",
+    "options": [
+      "17",
+      "13",
+      "2　　或",
+      "羽毛球拍"
+    ],
+    "answer": "羽毛球拍"
+  },
+  {
+    "id": "5B25N503a_31C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "俊賢和朋友借了乒乓球拍8塊和羽毛球拍2塊。 (b)羽毛球拍的數量比乒乓球拍的數量是 （ ） 比 （ ）。",
+    "options": [
+      "或 4比1",
+      "2　　或",
+      "13",
+      "17"
+    ],
+    "answer": "或 4比1"
+  },
+  {
+    "id": "5B25N503a_32C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "薄餅店在午飯時段售出芝士薄餅25個和煙肉薄餅33個。 薄餅店在午飯時段售出芝士薄餅25個和煙肉薄餅33個。",
+    "options": [
+      "25",
+      "5",
+      "9",
+      "1"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": "5B25N503a_32C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "薄餅店在午飯時段售出芝士薄餅25個和煙肉薄餅33個。 (a)芝士薄餅的數量比煙肉薄餅的數量是 （ ） 比 （ ）。",
+    "options": [
+      "1",
+      "5",
+      "33",
+      "9"
+    ],
+    "answer": "33"
+  },
+  {
+    "id": "5B25N503a_33C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "學校圖書館今天借出了小說70本和科學書23本。 學校圖書館今天借出了小說70本和科學書23本。",
+    "options": [
+      "1",
+      "5",
+      "70",
+      "9"
+    ],
+    "answer": "70"
+  },
+  {
+    "id": "5B25N503a_33C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "學校圖書館今天借出了小說70本和科學書23本。 (a)小說的數量比科學書的數量是 （ ） 比 （ ）。",
+    "options": [
+      "23",
+      "1",
+      "5",
+      "9"
+    ],
+    "answer": "23"
+  },
+  {
+    "id": "5B25N503a_34C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "麪包店上午售出菠蘿包81個和雞尾包63個。 麪包店上午售出菠蘿包81個和雞尾包63個。",
+    "options": [
+      "或 9比7",
+      "13",
+      "2　　或",
+      "17"
+    ],
+    "answer": "或 9比7"
+  },
+  {
+    "id": "5B25N503a_34C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "麪包店上午售出菠蘿包81個和雞尾包63個。 (a)菠蘿包的數量比雞尾包的數量是 （ ） 比 （ ）。",
+    "options": [
+      "9",
+      "63",
+      "1",
+      "5"
+    ],
+    "answer": "63"
+  },
+  {
+    "id": "5B25N503a_34C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "麪包店上午售出菠蘿包81個和雞尾包63個。 (b)雞尾包的數量比菠蘿包的數量是 （ ） 比 （ ）。",
+    "options": [
+      "1",
+      "81",
+      "9",
+      "5"
+    ],
+    "answer": "81"
+  },
+  {
+    "id": "5B25N503a_35C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "貨架上有檸檬茶120盒和菊花茶108盒。 貨架上有檸檬茶120盒和菊花茶108盒。",
+    "options": [
+      "17",
+      "13",
+      "2　　或",
+      "或 10比9"
+    ],
+    "answer": "或 10比9"
+  },
+  {
+    "id": "5B25N503a_35C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "貨架上有檸檬茶120盒和菊花茶108盒。 (a)檸檬茶的數量比菊花茶的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "120",
+      "9",
+      "1"
+    ],
+    "answer": "120"
+  },
+  {
+    "id": "5B25N503a_35C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "貨架上有檸檬茶120盒和菊花茶108盒。 (b)菊花茶的數量比檸檬茶的數量是 （ ） 比 （ ）。",
+    "options": [
+      "1",
+      "108",
+      "9",
+      "5"
+    ],
+    "answer": "108"
+  },
+  {
+    "id": "5B25N503a_36C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "曲奇店下午售出牛油曲奇360塊和果仁曲奇288塊。 曲奇店下午售出牛油曲奇360塊和果仁曲奇288塊。",
+    "options": [
+      "17",
+      "13",
+      "2　　或",
+      "或 5比4"
+    ],
+    "answer": "或 5比4"
+  },
+  {
+    "id": "5B25N503a_36C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "曲奇店下午售出牛油曲奇360塊和果仁曲奇288塊。 (a)牛油曲奇的數量比果仁曲奇的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "1",
+      "288",
+      "9"
+    ],
+    "answer": "288"
+  },
+  {
+    "id": "5B25N503a_36C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "曲奇店下午售出牛油曲奇360塊和果仁曲奇288塊。 (b)果仁曲奇的數量比牛油曲奇的數量是 （ ） 比 （ ）。",
+    "options": [
+      "9",
+      "5",
+      "360",
+      "1"
+    ],
+    "answer": "360"
+  },
+  {
+    "id": "5B25N503a_37C_051N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "逸朗有水果味軟糖8粒和牛奶味軟糖13粒。 逸朗有水果味軟糖8粒和牛奶味軟糖13粒。",
+    "options": [
+      "5",
+      "9",
+      "1",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B25N503a_37C_051N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "逸朗有水果味軟糖8粒和牛奶味軟糖13粒。 (a)水果味軟糖的數量比牛奶味軟糖的數量是 。",
+    "options": [
+      "13",
+      "1",
+      "5",
+      "9"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5B25N503a_38C_051N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一籃水果有梨6個和芒果4個。 一籃水果有梨6個和芒果4個。",
+    "options": [
+      "1",
+      "5",
+      "9",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N503a_38C_051N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一籃水果有梨6個和芒果4個。 (a)梨的數量比芒果的數量是 。",
+    "options": [
+      "5",
+      "1",
+      "2",
+      "9"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_39C_051N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一盒雜錦餅乾有威化餅8包和夾心餅12包。 一盒雜錦餅乾有威化餅8包和夾心餅12包。",
+    "options": [
+      "5",
+      "9",
+      "2",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_39C_051N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一盒雜錦餅乾有威化餅8包和夾心餅12包。 (a)威化餅的數量比夾心餅的數量是 。",
+    "options": [
+      "9",
+      "3",
+      "1",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N503a_40C_051N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小結他班有男學生14個和女學生10個。 小結他班有男學生14個和女學生10個。",
+    "options": [
+      "1",
+      "9",
+      "5",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N503a_40C_051N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小結他班有男學生14個和女學生10個。 (a)男學生的數量比女學生的數量是 。",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_41C_051N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "公園內有松樹36棵和楓樹22棵。 公園內有松樹36棵和楓樹22棵。",
+    "options": [
+      "18",
+      "9",
+      "5",
+      "1"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B25N503a_41C_051N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "公園內有松樹36棵和楓樹22棵。 (a)松樹的數量比楓樹的數量是 。",
+    "options": [
+      "1",
+      "11",
+      "5",
+      "9"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B25N503a_42C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "樂基家中有午餐肉3罐和沙甸魚4罐。 午餐肉的數量是沙甸魚的 。",
+    "options": [
+      "5",
+      "9",
+      "1",
+      "沙甸魚"
+    ],
+    "answer": "沙甸魚"
+  },
+  {
+    "id": "5B25N503a_43C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "媽媽買了番茄5個和馬鈴薯3個。 番茄的數量是馬鈴薯的 倍。",
+    "options": [
+      "9",
+      "5",
+      "1",
+      "馬鈴薯"
+    ],
+    "answer": "馬鈴薯"
+  },
+  {
+    "id": "5B25N503a_44C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "雪櫃裏有汽水12罐和橙汁8罐。 汽水的數量是橙汁的 倍。",
+    "options": [
+      "汽水",
+      "9",
+      "5",
+      "1"
+    ],
+    "answer": "汽水"
+  },
+  {
+    "id": "5B25N503a_45C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "芷明和家人共有智能電話6部和平板電腦2部。 平板電腦的數量是智能電話的 。",
+    "options": [
+      "2　　或",
+      "智能電話",
+      "17",
+      "13"
+    ],
+    "answer": "智能電話"
+  },
+  {
+    "id": "5B25N503a_46C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "老師為大食會準備了豆漿2盒和果汁5盒。 果汁的數量是豆漿的 倍。",
+    "options": [
+      "1",
+      "豆漿",
+      "5",
+      "9"
+    ],
+    "answer": "豆漿"
+  },
+  {
+    "id": "5B25N503a_57C_111N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "紅色木棒長10厘米，藍色木棒長21厘米。藍色木棒的長度是紅色木棒的多少倍？  倍",
+    "options": [
+      "9",
+      "5",
+      "2",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_58C_111N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "諾恆有玩具貨車15輛和玩具巴士10輛。玩具貨車的數量是玩具巴士的多少倍？  倍",
+    "options": [
+      "5",
+      "2",
+      "9",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N503a_59C_111N",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "子恆做運動用了54分鐘，樂兒用了32分鐘。子恆做運動所用的時間是樂兒的多少倍？  倍",
+    "options": [
+      "2",
+      "1",
+      "5",
+      "9"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N503a_60C_111N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一包薯片售15元，一盒曲奇售115元。一盒曲奇的售價是一包薯片的多少倍？  倍",
+    "options": [
+      "7",
+      "5",
+      "9",
+      "1"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N503a_61C_111N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "姐姐做蛋糕用去砂糖50克和麪粉580克。用去麪粉的重量是砂糖的多少倍？  倍",
+    "options": [
+      "11",
+      "1",
+      "5",
+      "9"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B25N503a_62C_112N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "雪櫃內原有檸檬20個和奇異果8個，用去檸檬6個後，現有檸檬的數量是奇異果的多少倍？  倍",
+    "options": [
+      "1",
+      "9",
+      "2",
+      "5"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N503a_63C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "婷婷做蛋糕用了草莓18粒和藍莓44粒。 (a) 草莓的數量是藍莓的 。 (b) 藍莓的數量是草莓的 倍。",
+    "options": [
+      "5",
+      "2",
+      "1",
+      "9"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_64C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "五年級戴眼鏡的學生有54個，沒有戴眼鏡的學生有66個。 (a) 戴眼鏡的學生人數是沒有戴眼鏡的學生的 (b) 沒有戴眼鏡的學生人數是戴眼鏡的學生的 倍。",
+    "options": [
+      "9",
+      "5",
+      "1",
+      "2"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N503a_65C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一枝鉛筆重8克，一塊膠擦重20克。 (a) 鉛筆的重量是膠擦的 。 (b) 膠擦的重量是鉛筆的 倍。",
+    "options": [
+      "1",
+      "9",
+      "5",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_66C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一本書長21 cm，一張海報長56 cm。 (a) 書的長度是海報的 。 (b) 海報的長度是書的 倍。",
+    "options": [
+      "2",
+      "1",
+      "9",
+      "5"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_67C_051N",
+    "grade": 5,
+    "unitKey": "time",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "博文和瀚林上學分別需時18分鐘和39分鐘。 (a) 博文上學的時間是瀚林的 。 (b) 瀚林上學的時間是博文的 倍。",
+    "options": [
+      "5",
+      "2",
+      "9",
+      "1"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N503a_68C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "甜品店內有紅豆15公斤和綠豆3公斤。綠豆的重量是紅豆的幾分之幾？",
+    "options": [
+      "= = 2元硬幣的數量是5元硬幣的 。",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = 綠豆的重量是紅豆的 。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。"
+    ],
+    "answer": "= = 綠豆的重量是紅豆的 。"
+  },
+  {
+    "id": "5B25N503a_71C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "卓輝有兩種硬幣，2元硬幣有14個，5元硬幣有18個。2元硬幣的數量是5元硬幣的幾分之幾？",
+    "options": [
+      "= = 2元硬幣的數量是5元硬幣的 。",
+      "= = 綠豆的重量是紅豆的 。",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。"
+    ],
+    "answer": "= = 2元硬幣的數量是5元硬幣的 。"
+  },
+  {
+    "id": "5B25N503a_72C_031N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "西瓜重3公斤，蜜瓜重2公斤。西瓜的重量是蜜瓜的多少倍？",
+    "options": [
+      "= 1西瓜的重量是蜜瓜的1 倍。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。",
+      "= = 綠豆的重量是紅豆的 。",
+      "答案可以最簡假分數或最簡帶分數表示。"
+    ],
+    "answer": "= 1西瓜的重量是蜜瓜的1 倍。"
+  },
+  {
+    "id": "5B25N503a_73C_032N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "雪櫃內有梨8個，桃比梨多4個。梨的數量是桃的幾分之幾？",
+    "options": [
+      "或 1比3",
+      "= = 梨的數量是桃的 。",
+      "或 2比1",
+      "答案可以最簡假分數或最簡帶分數表示。"
+    ],
+    "answer": "= = 梨的數量是桃的 。"
+  },
+  {
+    "id": "5B25N503a_74C_032N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "腰果的重量是花生的幾分之幾？",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = 腰果的重量是花生的 。",
+      "= = 綠豆的重量是紅豆的 。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。"
+    ],
+    "answer": "= = 腰果的重量是花生的 。"
+  },
+  {
+    "id": "5B25N503a_75C_031N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一輛玩具汽車重450 g，一架玩具飛機重690 g。 一輛玩具汽車重450 g，一架玩具飛機重690 g。",
+    "options": [
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。",
+      "= = 玩具汽車的重量是玩具飛機的 。",
+      "= = 綠豆的重量是紅豆的 。",
+      "答案可以最簡假分數或最簡帶分數表示。"
+    ],
+    "answer": "= = 玩具汽車的重量是玩具飛機的 。"
+  },
+  {
+    "id": "5B25N503a_75C_031N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一輛玩具汽車重450 g，一架玩具飛機重690 g。 (a) 玩具汽車的重量是玩具飛機的幾分之幾？",
+    "options": [
+      "5",
+      "9",
+      "15",
+      "1"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B25N503a_75C_031N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一輛玩具汽車重450 g，一架玩具飛機重690 g。 (b) 玩具飛機的重量是玩具汽車的多少倍？",
+    "options": [
+      "1",
+      "9",
+      "23",
+      "5"
+    ],
+    "answer": "23"
+  },
+  {
+    "id": "5B25N503a_76C_031N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "在數學比賽中，子賢得到60分，卓楠得到84分。 在數學比賽中，子賢得到60分，卓楠得到84分。",
+    "options": [
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。",
+      "= = 綠豆的重量是紅豆的 。",
+      "= = 子賢的得分是卓楠的 。",
+      "答案可以最簡假分數或最簡帶分數表示。"
+    ],
+    "answer": "= = 子賢的得分是卓楠的 。"
+  },
+  {
+    "id": "5B25N503a_76C_031N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "在數學比賽中，子賢得到60分，卓楠得到84分。 (a) 子賢的得分是卓楠的幾分之幾？",
+    "options": [
+      "2",
+      "1",
+      "9",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_76C_031N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "在數學比賽中，子賢得到60分，卓楠得到84分。 (b) 卓楠的得分是子賢的多少倍？",
+    "options": [
+      "5",
+      "9",
+      "1",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N503a_77C_031N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小賣部上午售出檸檬茶48盒和豆奶28盒。 小賣部上午售出檸檬茶48盒和豆奶28盒。",
+    "options": [
+      "= = 豆奶的銷量是檸檬茶的 。",
+      "= = 綠豆的重量是紅豆的 。",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "= = = 1售出漢堡包的數量是熱狗的1 倍。"
+    ],
+    "answer": "= = 豆奶的銷量是檸檬茶的 。"
+  },
+  {
+    "id": "5B25N503a_77C_031N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小賣部上午售出檸檬茶48盒和豆奶28盒。 (a) 豆奶的銷量是檸檬茶的幾分之幾？",
+    "options": [
+      "7",
+      "5",
+      "1",
+      "9"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N503a_77C_031N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "小賣部上午售出檸檬茶48盒和豆奶28盒。 (b) 檸檬茶的銷量是豆奶的多少倍？",
+    "options": [
+      "1",
+      "5",
+      "12",
+      "9"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B25N503a_81C_121N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "媽媽買了以下的壽司。 蝦壽司︰ 玉子壽司︰ 三文魚壽司︰ 媽媽買了以下的壽司。 蝦壽司︰ 玉子壽司︰ 三文魚壽司︰",
+    "options": [
+      "5",
+      "1",
+      "6",
+      "9"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B25N503a_81C_121N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "媽媽買了以下的壽司。 蝦壽司︰ 玉子壽司︰ 三文魚壽司︰ (a)蝦壽司的數量比玉子壽司的數量是 （ ） 比 （ ）。",
+    "options": [
+      "2",
+      "5",
+      "1",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B25N503a_81C_121N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "媽媽買了以下的壽司。 蝦壽司︰ 玉子壽司︰ 三文魚壽司︰ (b)三文魚壽司的數量比（ 蝦 / 玉子 ）壽司的數量是 。",
+    "options": [
+      "13",
+      "或 2比3",
+      "17",
+      "2　　或"
+    ],
+    "answer": "或 2比3"
+  },
+  {
+    "id": "5B25N503a_82C_122N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一個水果籃共有水果10個，其中有5個梨、3個火龍果，剩下的是哈密瓜。 一個水果籃共有水果10個，其中有5個梨、3個火龍果，剩下的是哈密瓜。",
+    "options": [
+      "2",
+      "5",
+      "1",
+      "9"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N503a_82C_122N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一個水果籃共有水果10個，其中有5個梨、3個火龍果，剩下的是哈密瓜。 (a)梨的數量比火龍果的數量是 。",
+    "options": [
+      "1",
+      "5",
+      "3",
+      "9"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N503a_82C_122N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "一個水果籃共有水果10個，其中有5個梨、3個火龍果，剩下的是哈密瓜。 (b)哈密瓜的數量比梨的數量是 。",
+    "options": [
+      "5",
+      "2 倍",
+      "9",
+      "1"
+    ],
+    "answer": "2 倍"
+  },
+  {
+    "id": "5B25N503a_83C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "貨倉有排球16個、足球18個和籃球42個。 貨倉有排球16個、足球18個和籃球42個。",
+    "options": [
+      "13",
+      "2　　或",
+      "17",
+      "或 3比7"
+    ],
+    "answer": "或 3比7"
+  },
+  {
+    "id": "5B25N503a_83C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "貨倉有排球16個、足球18個和籃球42個。 (a)足球的數量比籃球的數量是 （ ） 比 （ ）。",
+    "options": [
+      "5",
+      "2 倍",
+      "1",
+      "9"
+    ],
+    "answer": "2 倍"
+  },
+  {
+    "id": "5B25N503a_83C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B25N503a.docx",
+    "topic": "5B25N503a  整數除以整數，兩個數的關係",
+    "question": "貨倉有排球16個、足球18個和籃球42個。 (b)籃球的數量是足球的 （ ）。",
+    "options": [
+      "42",
+      "9",
+      "5",
+      "1"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": "5B25N503b_11C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N503b.docx",
+    "topic": "5B25N503b  分數除以整數",
+    "question": "2 ÷ 7 = （ ） = （ ） = （ ）",
+    "options": [
+      "2",
+      "÷ 7",
+      "×",
+      "1"
+    ],
+    "answer": "÷ 7"
+  },
+  {
+    "id": "5B25N503b_12C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N503b.docx",
+    "topic": "5B25N503b  分數除以整數",
+    "question": "2 ÷ 5 = （ ） = （ ） = （ ）",
+    "options": [
+      "1",
+      "÷ 5",
+      "×",
+      "2"
+    ],
+    "answer": "÷ 5"
+  },
+  {
+    "id": "5B25N503b_13C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N503b.docx",
+    "topic": "5B25N503b  分數除以整數",
+    "question": "4 ÷ 14 = （ ） = （ ） = （ ）",
+    "options": [
+      "÷ 14",
+      "÷ 2",
+      "÷ 4",
+      "÷ 7"
+    ],
+    "answer": "÷ 14"
+  },
+  {
+    "id": "5B25N503b_50C_042N#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N503b.docx",
+    "topic": "5B25N503b  分數除以整數",
+    "question": "計算3 ÷ 3時，柏文錯誤地計算為3 × 3。 計算3 ÷ 3時，柏文錯誤地計算為3 × 3。",
+    "options": [
+      "1 或",
+      "2",
+      "×",
+      "1"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N503b_50C_042N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N503b.docx",
+    "topic": "5B25N503b  分數除以整數",
+    "question": "計算3 ÷ 3時，柏文錯誤地計算為3 × 3。 (a)柏文的計算結果是 （ ）。",
+    "options": [
+      "×",
+      "1",
+      "8 或",
+      "2"
+    ],
+    "answer": "8 或"
+  },
+  {
+    "id": "5B25N503b_50C_042N#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N503b.docx",
+    "topic": "5B25N503b  分數除以整數",
+    "question": "計算3 ÷ 3時，柏文錯誤地計算為3 × 3。 (b)正確答案是 （ ），與柏文的計算結果相差 （ ）。",
+    "options": [
+      "2",
+      "3",
+      "10",
+      "1"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B25N504a_07C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "24 ÷ 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "21",
+      "3 × 7",
+      "2 ×"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N504a_08C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "4 ÷ 7 = （ ） = （ ） = （ ）",
+    "options": [
+      "2 ×",
+      "1",
+      "4 ÷",
+      "3"
+    ],
+    "answer": "4 ÷"
+  },
+  {
+    "id": "5B25N504a_09C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "3 ÷ 5 = （ ） = （ ） = （ ）",
+    "options": [
+      "1",
+      "3 ÷",
+      "3",
+      "2 ×"
+    ],
+    "answer": "3 ÷"
+  },
+  {
+    "id": "5B25N504a_10C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "9 ÷ 4 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "3 × 7",
+      "21",
+      "2 ×"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N504a_11C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "10 ÷ 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "10 ÷",
+      "21",
+      "3 × 7",
+      "2 ×"
+    ],
+    "answer": "10 ÷"
+  },
+  {
+    "id": "5B25N504a_12C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "15 ÷ 3 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "3 × 7",
+      "2 ×",
+      "21"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N504a_13C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "21 ÷ 10 = （ ） = （ ） = （ ）",
+    "options": [
+      "3 × 7",
+      "21",
+      "2 ×",
+      "21 ÷"
+    ],
+    "answer": "21 ÷"
+  },
+  {
+    "id": "5B25N504a_14C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "28 ÷ 1 = （ ） = （ ） = （ ）",
+    "options": [
+      "21",
+      "3 × 7",
+      "28 ÷",
+      "2 ×"
+    ],
+    "answer": "28 ÷"
+  },
+  {
+    "id": "5B25N504a_15C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "40 ÷ 6 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "21",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "2 ×",
+      "3 × 7"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N504a_16C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "48 ÷ 5 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "2 ×",
+      "3 × 7",
+      "21"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N504a_17C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "24 ÷ 3 .= （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "21",
+      "2 ×",
+      "3 × 7"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N504a_34C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "36 ÷ 20 = （ ）",
+    "options": [
+      "3",
+      "1 或",
+      "2 ×",
+      "1"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N504a_35C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "33 ÷ 27 = （ ）",
+    "options": [
+      "1",
+      "2 ×",
+      "1 或",
+      "3"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N504a_39C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504a.docx",
+    "topic": "5B25N504a  整數除以分數",
+    "question": "20 ÷ = 36",
+    "options": [
+      "21",
+      "9",
+      "3",
+      "1"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B25N504b_20C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "24 ÷ = （ ） = （ ） = （ ）",
+    "options": [
+      "28",
+      "1",
+      "2",
+      "5"
+    ],
+    "answer": "28"
+  },
+  {
+    "id": "5B25N504b_22C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "1 ÷ 9 = （ ） = （ ） = （ ）",
+    "options": [
+      "2",
+      "1",
+      "×",
+      "÷"
+    ],
+    "answer": "÷"
+  },
+  {
+    "id": "5B25N504b_25C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "8 ÷ 1 = （ ） = （ ） = （ ）",
+    "options": [
+      "×",
+      "÷",
+      "1",
+      "2"
+    ],
+    "answer": "÷"
+  },
+  {
+    "id": "5B25N504b_74C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "4 ÷ 1 = ? 結果約是： （ ） ÷ （ ） = （ ） 4 ÷ 1 = （ ）",
+    "options": [
+      "4",
+      "5",
+      "2",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N504b_75C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "7 ÷ 2 = ? 結果約是： （ ） ÷ （ ） = （ ） 7 ÷ 2 = （ ）",
+    "options": [
+      "8",
+      "1",
+      "2",
+      "5"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B25N504b_76C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "8 ÷ 2 = ? 結果約是： （ ） ÷ （ ） = （ ） 8 ÷ 2 = （ ）",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B25N504b_77C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "40 ÷ 1 = ? 結果約是： （ ） ÷ （ ） = （ ） 40 ÷ 1 = （ ）",
+    "options": [
+      "5",
+      "1",
+      "40",
+      "2"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "5B25N504b_78C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "15 ÷ 3 = ? 結果約是： （ ） ÷ （ ） = （ ） 15 ÷ 3 = （ ）",
+    "options": [
+      "16",
+      "1",
+      "5",
+      "2"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "5B25N504b_79C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "11 ÷ 2 = ? 結果約是： （ ） ÷ （ ） = （ ） 11 ÷ 2 = （ ）",
+    "options": [
+      "12",
+      "1",
+      "5",
+      "2"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B25N504b_80C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "41 ÷ 6 = ? 結果約是： （ ） ÷ （ ） = （ ） 41 ÷ 6 = （ ）",
+    "options": [
+      "42",
+      "5",
+      "1",
+      "2"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": "5B25N504b_81C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "12 ÷ 3 = ? 結果約是： （ ） ÷ （ ） = （ ） 12 ÷ 3 = （ ）",
+    "options": [
+      "2",
+      "12",
+      "1",
+      "5"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B25N504b_82C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "18 ÷ 3 = ? 結果約是： （ ） ÷ （ ） = （ ） 18 ÷ 3 = （ ）",
+    "options": [
+      "5",
+      "2",
+      "18",
+      "1"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B25N504b_83C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "15 ÷ 3 = ? 結果約是： （ ） ÷ （ ） = （ ） 15 ÷ 3 = （ ）",
+    "options": [
+      "16",
+      "5",
+      "2",
+      "1"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "5B25N504b_84C_021N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "10 ÷ 5 = ? 結果約是： （ ） ÷ （ ） = （ ） 10 ÷ 5 = （ ）",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "10"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B25N504b_95C_122N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "計算 ÷ 3 時，敏希錯誤地計算為 × 3。 (a)敏希的計算結果是 （ ）。 (b)正確答案是 （ ），比敏希的計算結果（ 大 / 小 ）。",
+    "options": [
+      "×",
+      "1",
+      "2 或",
+      "2"
+    ],
+    "answer": "2 或"
+  },
+  {
+    "id": "5B25N504b_96C_112N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N504b.docx",
+    "topic": "5B25N504b  分數除以分數",
+    "question": "如果 1 ÷ = 3，那麼 ★ =？ 答案︰（ ）",
+    "options": [
+      "2",
+      "4",
+      "1",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N505a_03C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "21 ÷ ÷ 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "21 ×  ×",
+      "11",
+      "×  ×",
+      "21 ÷  ÷"
+    ],
+    "answer": "21 ÷  ÷"
+  },
+  {
+    "id": "5B25N505a_04C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "÷ ÷ 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "21 ÷  ÷",
+      "21 ×  ×",
+      "×  ×",
+      "答案可以最簡假分數或最簡帶分數表示。"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N505a_05C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "÷ 1 ÷ = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "21 ×  ×",
+      "×  ×",
+      "21 ÷  ÷",
+      "答案可以最簡假分數或最簡帶分數表示。"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N505a_06C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "16 ÷ ÷ = （ ） = （ ） = （ ）",
+    "options": [
+      "×  ×",
+      "21 ×  ×",
+      "× 3 ×",
+      "21 ÷  ÷"
+    ],
+    "answer": "× 3 ×"
+  },
+  {
+    "id": "5B25N505a_07C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "3 ÷ ÷ 11 = （ ） = （ ） = （ ）",
+    "options": [
+      "21 ×  ×",
+      "÷  ÷ 11",
+      "×  ×",
+      "21 ÷  ÷"
+    ],
+    "answer": "÷  ÷ 11"
+  },
+  {
+    "id": "5B25N505a_08C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "5 ÷ ÷ = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "21 ×  ×",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "21 ÷  ÷",
+      "×  ×"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N505a_09C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "2 ÷ 3 ÷ = （ ） = （ ） = （ ）",
+    "options": [
+      "21 ÷  ÷",
+      "×  ×",
+      "21 ×  ×",
+      "÷ 3 ÷"
+    ],
+    "answer": "÷ 3 ÷"
+  },
+  {
+    "id": "5B25N505a_10C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "1 ÷ ÷ = （ ） = （ ） = （ ）",
+    "options": [
+      "÷  ÷",
+      "21 ×  ×",
+      "×  ×",
+      "21 ÷  ÷"
+    ],
+    "answer": "÷  ÷"
+  },
+  {
+    "id": "5B25N505a_22C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "15 ÷ 4 ÷ = （ ）",
+    "options": [
+      "5 或",
+      "×  ×",
+      "1",
+      "4"
+    ],
+    "answer": "5 或"
+  },
+  {
+    "id": "5B25N505a_35C_112N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505a.docx",
+    "topic": "5B25N505a  三個數的除法運算（包括分數和整數）",
+    "question": "如果 1 ÷ ÷ = 4，那麼 ★ =？ 答案︰（ ）",
+    "options": [
+      "11",
+      "3",
+      "1",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N505b_01C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "每本字典厚3 厘米。書店店員把貨倉的字典存貨疊起，共高48厘米，即貨倉共有字典 （ ） 本。",
+    "options": [
+      "15",
+      "45",
+      "1",
+      "3"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B25N505b_02C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "工人把5 公斤魷魚絲每 公斤包裝成一包，共可包裝成 （ ） 包。",
+    "options": [
+      "45",
+      "3",
+      "15",
+      "1"
+    ],
+    "answer": "45"
+  },
+  {
+    "id": "5B25N505b_04C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "餐廳有豆漿40升，平均倒入25個容器中。每個容器有豆漿 （ ） 升。",
+    "options": [
+      "45",
+      "3",
+      "1",
+      "15"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N505b_05C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "摩天輪平均每小時轉動3 周。如果摩天輪轉動4 周，需要 （ ） 小時。",
+    "options": [
+      "1",
+      "3",
+      "15",
+      "45"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N505b_06C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "家聰有橙汁 升，他把橙汁每 升裝成一杯，共可裝成 （ ） 杯。",
+    "options": [
+      "1",
+      "15",
+      "3",
+      "45"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N505b_07C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "緩跑徑一圈長 公里，嘉進沿緩跑徑跑了2公里，即他跑了 （ ） 圈。",
+    "options": [
+      "15",
+      "45",
+      "1",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N505b_08C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "雜貨店內有白米54公斤，店主把白米每4 公斤裝成一袋，共可把白米裝成 （ ） 袋。",
+    "options": [
+      "12",
+      "1",
+      "15",
+      "45"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B25N505b_10C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "老師買了4塊售價相同的膠擦，共需付18 元。每塊膠擦售 （ ） 元。",
+    "options": [
+      "1",
+      "15",
+      "45",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N505b_11C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "一部機器每次可包裝雜豆48公斤，它先把雜豆每 公斤裝成一包，然後每8包裝成一箱。這部機器每次共可包裝雜豆 （ ） 箱。",
+    "options": [
+      "1",
+      "15",
+      "45",
+      "3"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B25N505b_12C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "雜貨店內有3箱重量相同的米粉，共重14 公斤。如果每包米粉重 公斤，一箱米粉共有 （ ） 包。",
+    "options": [
+      "45",
+      "12",
+      "15",
+      "1"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B25N505b_13C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "零食店店長把16 公斤花生平均分成4袋，再把其中一袋每 公斤分成一包，共可分成 （ ） 包。",
+    "options": [
+      "1",
+      "15",
+      "45",
+      "41"
+    ],
+    "answer": "41"
+  },
+  {
+    "id": "5B25N505b_14C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "一條長4 米的木條，最多可以鋸成長 米的木條 （ ） 條。",
+    "options": [
+      "18",
+      "45",
+      "1",
+      "15"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B25N505b_15C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "廚師把3 升特飲注入容量是 升的杯子，最多可注滿杯子 （ ） 個。",
+    "options": [
+      "15",
+      "45",
+      "9",
+      "1"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B25N505b_16C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "智浩把 升蘋果汁倒進一些容量是 升的杯子，最多可以倒滿（ ） 杯。",
+    "options": [
+      "45",
+      "3",
+      "15",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N505b_17C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "哥哥摺一粒幸運星需要2 分鐘。他用50分鐘摺幸運星，最多可以摺出幸運星 （ ） 粒。",
+    "options": [
+      "1",
+      "15",
+      "18",
+      "45"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B25N505b_18C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "一個等邊三角形的周界是4 cm，它的邊長是 （ ） cm。",
+    "options": [
+      "1",
+      "3",
+      "45",
+      "15"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N505b_19C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "經理把19 升豆漿每 升分成一瓶，然後把全部豆漿平均放在4個盤子上，每個盤子上有豆漿 （ ） 瓶。",
+    "options": [
+      "6",
+      "15",
+      "1",
+      "45"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B25N505b_20C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "1 打西餅的售價是99元，每件西餅的售價相同。每件西餅的售價是 （ ） 元。",
+    "options": [
+      "15",
+      "45",
+      "5",
+      "1"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N505b_21C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "做一個蝴蝶結需用金絲帶 米，包一份禮物需用銀絲帶 米。媽媽有金絲帶 米和銀絲帶1 米，她最多可包禮物 （ ） 份。",
+    "options": [
+      "45",
+      "1",
+      "2",
+      "15"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N505b_22C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "做一個摺紙勞作要用1 張手工紙。嘉駿用36張手工紙做勞作，並把所有勞作每8個裝成一盒。他最少需要盒子 （ ） 個才能把所有勞作裝好。",
+    "options": [
+      "1",
+      "15",
+      "45",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N505b_23C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "右面是一塊長方形地毯。地毯的面積是3 m2，長是2 m，闊是 （ ） m。",
+    "options": [
+      "2 m",
+      "45",
+      "15",
+      "1"
+    ],
+    "answer": "2 m"
+  },
+  {
+    "id": "5B25N505b_41C_031P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "一袋8小包裝的紅莓乾共重 kg，每小包裝紅莓乾重多少kg？",
+    "options": [
+      "2 ÷ 6= ÷ 6= × =每包麪粉重  公斤。",
+      "23 ÷ 1= ÷ = × ==12最多可包裝成12袋。",
+      "÷ 8= × =每小包裝紅莓乾重  kg。",
+      "1 ÷ 3= ÷ 3= × =每個瓶子有橙汁  L。"
+    ],
+    "answer": "÷ 8= × =每小包裝紅莓乾重  kg。"
+  },
+  {
+    "id": "5B25N505b_43C_031N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "敏琪有棉花糖 包，她把棉花糖每 包分給一人，她共可分給多少人？",
+    "options": [
+      "÷ = × 14=10她共可分給10人。",
+      "23 ÷ 1= ÷ = × ==12最多可包裝成12袋。",
+      "1 ÷ 3= ÷ 3= × =每個瓶子有橙汁  L。",
+      "2 ÷ 6= ÷ 6= × =每包麪粉重  公斤。"
+    ],
+    "answer": "÷ = × 14=10她共可分給10人。"
+  },
+  {
+    "id": "5B25N505b_56C_122P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "姊姊用40 元購買2 公斤麪粉。 姊姊用40 元購買2 公斤麪粉。",
+    "options": [
+      "18",
+      "1",
+      "15",
+      "45"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B25N505b_56C_122P#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "姊姊用40 元購買2 公斤麪粉。 (b)姊姊把麪粉每 公斤裝成一袋，最少需要袋子多少個？",
+    "options": [
+      "1",
+      "45",
+      "3",
+      "15"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N505b_58C_032N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "房間地面鋪了200塊相同的長方形地磚，它們的總面積是6平方米，每塊地磚闊 米，每塊地磚長多少米？",
+    "options": [
+      "2 ÷ 6= ÷ 6= × =每包麪粉重  公斤。",
+      "6 ÷ 200 ÷ =6 ×  × =每塊地磚長  米。",
+      "23 ÷ 1= ÷ = × ==12最多可包裝成12袋。",
+      "1 ÷ 3= ÷ 3= × =每個瓶子有橙汁  L。"
+    ],
+    "answer": "6 ÷ 200 ÷ =6 ×  × =每塊地磚長  米。"
+  },
+  {
+    "id": "5B25N505b_59C_122N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "每公斤白米售11 元，每公斤麪粉售18 元。 答案︰（ 能 / 不能 ），因為 （ ） （ ）（把答案圈起來） (a)家朗付92元買白米，共買了白米多少公斤？",
+    "options": [
+      "3",
+      "15",
+      "45",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N505b_64C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "裝飾一棵聖誕樹需用彩帶2 米。現有彩帶10 米，共可裝飾聖誕樹 （ ） 棵。",
+    "options": [
+      "4",
+      "15",
+      "1",
+      "45"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N505b_65C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "一桶油漆有12 升，裝修工人已用了半桶，即用了油漆 （ ） 升。",
+    "options": [
+      "15",
+      "6",
+      "45",
+      "1"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B25N505b_66C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "每枝筆售5 元。樂婷有50元，她用一半的款項購買筆，最多可買到筆 （ ） 枝。",
+    "options": [
+      "1",
+      "15",
+      "45",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N505b_71C_031P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N505b.docx",
+    "topic": "5B25N505b  分數除法的應用",
+    "question": "媽媽把一袋重1 kg的紅米平均分成3包，每包有紅米多少kg？",
+    "options": [
+      "1 ÷ 3= ÷ 3= × =每個瓶子有橙汁  L。",
+      "1 ÷ 3= × = 每包有紅米  kg。",
+      "23 ÷ 1= ÷ = × ==12最多可包裝成12袋。",
+      "2 ÷ 6= ÷ 6= × =每包麪粉重  公斤。"
+    ],
+    "answer": "1 ÷ 3= × = 每包有紅米  kg。"
+  },
+  {
+    "id": "5B25N506a_02C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "× 2 ÷ = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "× ( 2 – 1 )",
+      "2 ÷ (  +  )",
+      "1 ÷ (  –  )"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N506a_03C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "8 ÷ × 2 = （ ） = （ ） = （ ）",
+    "options": [
+      "×  ×",
+      "×  ÷",
+      "8 ÷  ×",
+      "8 ×  ×"
+    ],
+    "answer": "8 ÷  ×"
+  },
+  {
+    "id": "5B25N506a_04C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "3 ÷ × = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "1 ÷ (  –  )",
+      "× ( 2 – 1 )",
+      "2 ÷ (  +  )"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N506a_05C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "– × = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "×  ×",
+      "–  ×",
+      "8 ÷  ×",
+      "×  ÷"
+    ],
+    "answer": "–  ×"
+  },
+  {
+    "id": "5B25N506a_06C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "× ( 3 – 1 ) = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "×  ×",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "×  ÷",
+      "× ( 2 – 1 )"
+    ],
+    "answer": "× ( 2 – 1 )"
+  },
+  {
+    "id": "5B25N506a_07C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "+ 1 ÷ 6 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "+  ÷ 6",
+      "×  ÷",
+      "×  ×",
+      "8 ÷  ×"
+    ],
+    "answer": "+  ÷ 6"
+  },
+  {
+    "id": "5B25N506a_08C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "8 + 3 × 1 = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "8 ÷  ×",
+      "8 + 3 ×",
+      "×  ×",
+      "×  ÷"
+    ],
+    "answer": "8 + 3 ×"
+  },
+  {
+    "id": "5B25N506a_09C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "2 ÷ ( + ) = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "× ( 2 – 1 )",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "2 ÷ (  +  )",
+      "1 ÷ (  –  )"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N506a_11C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "( 3 + ) × = （ ） = （ ） = （ ） = （ ） = （ ）",
+    "options": [
+      "2 ÷ (  +  )",
+      "答案可以最簡假分數或最簡帶分數表示。",
+      "1 ÷ (  –  )",
+      "× ( 2 – 1 )"
+    ],
+    "answer": "答案可以最簡假分數或最簡帶分數表示。"
+  },
+  {
+    "id": "5B25N506a_16C_011P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "2 + 6 × 3 = （ ）",
+    "options": [
+      "×  ÷",
+      "×  ×",
+      "20 或",
+      "8 ÷  ×"
+    ],
+    "answer": "20 或"
+  },
+  {
+    "id": "5B25N506a_20C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "1 × ( + ) = （ ）",
+    "options": [
+      "1 或",
+      "2",
+      "1",
+      "×  ×"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_21C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "( 1 + ) × = （ ）",
+    "options": [
+      "1 或",
+      "2",
+      "×  ×",
+      "1"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_22C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "1 × ( 5 + ) = （ ）",
+    "options": [
+      "×  ×",
+      "1",
+      "2",
+      "6 或"
+    ],
+    "answer": "6 或"
+  },
+  {
+    "id": "5B25N506a_25C_011P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "9 – 10 × = （ ）",
+    "options": [
+      "×  ×",
+      "1",
+      "2",
+      "1 或"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_27C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "( 7 – 5 ) × = （ ）",
+    "options": [
+      "×  ×",
+      "1",
+      "2",
+      "1 或"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_28C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "4 × ( 6 – 3 ) = （ ）",
+    "options": [
+      "×  ×",
+      "1",
+      "9 或",
+      "2"
+    ],
+    "answer": "9 或"
+  },
+  {
+    "id": "5B25N506a_32C_011P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "3 ÷ 9 + 4 = （ ）",
+    "options": [
+      "2",
+      "×  ×",
+      "1",
+      "4 或"
+    ],
+    "answer": "4 或"
+  },
+  {
+    "id": "5B25N506a_36C_011P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "6 ÷ 2 – 1 = （ ）",
+    "options": [
+      "1 或",
+      "×  ×",
+      "1",
+      "2"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_39C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "3 ÷ ( 3 – ) = （ ）",
+    "options": [
+      "1",
+      "2",
+      "×  ×",
+      "1 或"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_40C_011N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "5 ÷ ( 2 – ) = （ ）",
+    "options": [
+      "×  ×",
+      "1",
+      "2",
+      "2 或"
+    ],
+    "answer": "2 或"
+  },
+  {
+    "id": "5B25N506a_41C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "在以下算式中加上適當的運算符號，使算式成立。 = 0",
+    "options": [
+      "1",
+      "×  ×",
+      "–",
+      "2"
+    ],
+    "answer": "–"
+  },
+  {
+    "id": "5B25N506a_42C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "在以下算式中加上適當的運算符號，使算式成立。 = 1",
+    "options": [
+      "2",
+      "1",
+      "×  ×",
+      "÷"
+    ],
+    "answer": "÷"
+  },
+  {
+    "id": "5B25N506a_43C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "在以下算式中加上適當的運算符號，使算式成立。 = 1",
+    "options": [
+      "×  ×",
+      "÷",
+      "2",
+      "1"
+    ],
+    "answer": "÷"
+  },
+  {
+    "id": "5B25N506a_44C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "在以下算式中加上適當的運算符號，使算式成立。 = 2",
+    "options": [
+      "×  ×",
+      "÷",
+      "2",
+      "1"
+    ],
+    "answer": "÷"
+  },
+  {
+    "id": "5B25N506a_45C_052N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "在以下算式中加上適當的運算符號，使算式成立。 = 1",
+    "options": [
+      "1",
+      "2",
+      "×  ×",
+      "÷"
+    ],
+    "answer": "÷"
+  },
+  {
+    "id": "5B25N506a_48C_042N#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "計算2 ÷ (2 – )時，嘉妍錯誤地計算為2 ÷ 2 – 。 計算2 ÷ (2 – )時，嘉妍錯誤地計算為2 ÷ 2 – 。",
+    "options": [
+      "2",
+      "1 或",
+      "1",
+      "×  ×"
+    ],
+    "answer": "1 或"
+  },
+  {
+    "id": "5B25N506a_48C_042N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506a.docx",
+    "topic": "5B25N506a  分數四則混合運算",
+    "question": "計算2 ÷ (2 – )時，嘉妍錯誤地計算為2 ÷ 2 – 。 (a)嘉妍的計算結果是 （ ）。",
+    "options": [
+      "1",
+      "21",
+      "3",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N506b_01C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "每包白米重8 公斤。義工把4包白米每 公斤包裝成一袋，共可包裝成 （ ） 袋。",
+    "options": [
+      "7",
+      "6",
+      "48",
+      "19"
+    ],
+    "answer": "48"
+  },
+  {
+    "id": "5B25N506b_02C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "每瓶菊花茶有 升。把5 瓶菊花茶每 升分成一杯，共可分成（ ） 杯。",
+    "options": [
+      "19",
+      "7",
+      "6",
+      "48"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B25N506b_04C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "3枝售價相同的原子筆共售16 元，每枝熒光筆售11 元。一枝熒光筆比一枝原子筆貴 （ ） 元。",
+    "options": [
+      "48",
+      "6",
+      "7",
+      "19"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B25N506b_05C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "每公斤菜心售16元。爸爸付50元買了菜心1 公斤，應找回 （ ） 元。",
+    "options": [
+      "19",
+      "48",
+      "6",
+      "7"
+    ],
+    "answer": "19"
+  },
+  {
+    "id": "5B25N506b_06C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "每打雞蛋售30 元。媽媽付20元買了 打雞蛋，應找回（ ） 元。",
+    "options": [
+      "48",
+      "7",
+      "4",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N506b_07C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "農場有蘿蔔180公斤。農夫把 的蘿蔔平均放在10個籃子裏，每個籃子有蘿蔔 （ ） 公斤。",
+    "options": [
+      "10",
+      "6",
+      "7",
+      "48"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B25N506b_08C_041P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一道牆長8 米。工人每小時可把1 米的牆髹上油漆。6小時後，未髹油漆的牆長 （ ） 米。",
+    "options": [
+      "48",
+      "1",
+      "6",
+      "7"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_09C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一輛巴士內有乘客99個，其中 的乘客在上層。巴士下層有乘客 （ ） 個。",
+    "options": [
+      "54",
+      "7",
+      "48",
+      "6"
+    ],
+    "answer": "54"
+  },
+  {
+    "id": "5B25N506b_10C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "學校有學生720個，其中的 是步行上學的，不是步行上學的學生有 （ ） 個。",
+    "options": [
+      "270",
+      "6",
+      "48",
+      "7"
+    ],
+    "answer": "270"
+  },
+  {
+    "id": "5B25N506b_11C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "五年級有學生140個，其中戴眼鏡的學生佔全級的 ，沒有戴眼鏡的學生有 （ ） 個。",
+    "options": [
+      "80",
+      "48",
+      "7",
+      "6"
+    ],
+    "answer": "80"
+  },
+  {
+    "id": "5B25N506b_12C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "上午進入圖書館的學生有81個，下午進入圖書館的學生人數是上午的1 倍。全日進入圖書館的學生有 （ ） 個。",
+    "options": [
+      "6",
+      "198",
+      "7",
+      "48"
+    ],
+    "answer": "198"
+  },
+  {
+    "id": "5B25N506b_13C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "大廈上週回收了200個膠瓶，本週回收的膠瓶比上週的多 。本週回收了膠瓶 （ ） 個。",
+    "options": [
+      "275",
+      "48",
+      "7",
+      "6"
+    ],
+    "answer": "275"
+  },
+  {
+    "id": "5B25N506b_14C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "瓶子內原有480 mL水，梓文不小心打翻瓶子後，瓶子內的水減少了 。瓶子內還有水 （ ） mL。",
+    "options": [
+      "80",
+      "6",
+      "48",
+      "7"
+    ],
+    "answer": "80"
+  },
+  {
+    "id": "5B25N506b_15C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "小賣部有紙包飲品210盒，檸檬茶佔全部的 ，餘下的是豆奶。小賣部有豆奶 （ ） 盒。",
+    "options": [
+      "48",
+      "7",
+      "60",
+      "6"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5B25N506b_16C_042N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "上學期有135人報名參加手工藝班，下學期的參加人數比上學期的少 。下學期有 （ ） 人報名參加手工藝班。",
+    "options": [
+      "48",
+      "81",
+      "6",
+      "7"
+    ],
+    "answer": "81"
+  },
+  {
+    "id": "5B25N506b_17C_042P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "肉店有豬排63公斤和雞排54公斤。店主把 的雞排平均分成24袋，每袋有雞排 （ ） 公斤。",
+    "options": [
+      "7",
+      "1",
+      "6",
+      "48"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_19C_122P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "運動室有84個球，其中 是乒乓球， 是足球。乒乓球比足球（ 多 / 少 ）（ ） 個。",
+    "options": [
+      "48",
+      "6",
+      "4",
+      "7"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B25N506b_20C_122P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "自動售賣機內有飲品72瓶，其中 是運動飲品， 是果汁。運動飲品比果汁（ 多 / 少 ）（ ） 瓶。",
+    "options": [
+      "6",
+      "48",
+      "28",
+      "7"
+    ],
+    "answer": "28"
+  },
+  {
+    "id": "5B25N506b_21C_122P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "甜品店有水果110個，其中 是芒果， 是火龍果。芒果比火龍果 （ 多 / 少 ）（ ） 個。",
+    "options": [
+      "6",
+      "7",
+      "14",
+      "48"
+    ],
+    "answer": "14"
+  },
+  {
+    "id": "5B25N506b_27C_031P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "零食店有葡萄乾9公斤。店主把 的葡萄乾平均分成18袋，每袋有葡萄乾多少公斤？",
+    "options": [
+      "1 × 6 ÷ = × 6 ÷ = × 6 × =13共可裝成13罐。",
+      "9 ×  ÷ 18=9 ×  × =每袋有葡萄乾  公斤。",
+      "12 ×  ÷ = ×  ÷ = ×  × =16共可裝成16瓶。",
+      "4 ×  ÷ 3= ×  ÷ 3= ×  × =每份藍莓重  kg。"
+    ],
+    "answer": "9 ×  ÷ 18=9 ×  × =每袋有葡萄乾  公斤。"
+  },
+  {
+    "id": "5B25N506b_45C_031P#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "兆恆為燒烤活動買了魚丸1 公斤、牛丸 公斤和貢丸 公斤。 (b)每公斤肉丸售100元。兆恆付250元買肉丸，應找回多少元？",
+    "options": [
+      "6",
+      "48",
+      "1",
+      "7"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_46C_031N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "7盒牛奶共有8 升，每盒的份量相同。 (a)一個瓶子最多可盛 盒牛奶，這個瓶子最多可盛牛奶多少升？",
+    "options": [
+      "7",
+      "1",
+      "6",
+      "48"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_46C_031N#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "7盒牛奶共有8 升，每盒的份量相同。 (b)做一份布丁需用牛奶 盒。柏賢有一盒牛奶，共可做布丁多少份？",
+    "options": [
+      "7",
+      "2",
+      "48",
+      "6"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N506b_47C_031N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一包果汁糖有30粒，其中 是橙味， 是檸檬味。 (a)共有橙味和檸檬味果汁糖多少粒？",
+    "options": [
+      "3",
+      "6",
+      "48",
+      "7"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B25N506b_47C_031N#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一包果汁糖有30粒，其中 是橙味， 是檸檬味。 (b)橙味和檸檬味果汁糖相差多少粒？",
+    "options": [
+      "7",
+      "48",
+      "6",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_48C_031N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一盒砂糖有350 g，媽媽用 盒做蛋糕，用了 盒做果凍。 (a)做蛋糕和果凍共用了砂糖多少g？",
+    "options": [
+      "10",
+      "7",
+      "6",
+      "48"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B25N506b_48C_031N#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一盒砂糖有350 g，媽媽用 盒做蛋糕，用了 盒做果凍。 (b)做蛋糕和果凍用去的砂糖相差多少g？",
+    "options": [
+      "7",
+      "6",
+      "48",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_49C_032N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "外婆買了16個水果，其中 是蘋果， 是奇異果， 是桃。 (a)共有奇異果和桃多少個？",
+    "options": [
+      "7",
+      "2",
+      "6",
+      "48"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B25N506b_49C_032N#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "外婆買了16個水果，其中 是蘋果， 是奇異果， 是桃。 (b)蘋果和奇異果相差多少個？",
+    "options": [
+      "7",
+      "6",
+      "1",
+      "48"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_50C_032N#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "媽媽原有300元，她用了其中的 買午餐， 買零食， 買白米。 (a)媽媽買零食和白米共用了多少元？",
+    "options": [
+      "48",
+      "6",
+      "7",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_50C_032N#c",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "媽媽原有300元，她用了其中的 買午餐， 買零食， 買白米。 (b)媽媽買午餐和白米的款項相差多少元？",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "48"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B25N506b_55C_041N",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "4包紅豆共重 1 kg，每包的重量相同。林太太買了3包紅豆， 共重 （ ） kg。",
+    "options": [
+      "1",
+      "6",
+      "7",
+      "48"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B25N506b_56C_041P#a",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "鞋架上有鞋72對，球鞋佔 ，皮鞋佔 。 鞋架上有鞋72對，球鞋佔 ，皮鞋佔 。",
+    "options": [
+      "48",
+      "54",
+      "7",
+      "6"
+    ],
+    "answer": "54"
+  },
+  {
+    "id": "5B25N506b_56C_041P#b",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "鞋架上有鞋72對，球鞋佔 ，皮鞋佔 。 (a)鞋架上共有球鞋和皮鞋 （ ） 對。",
+    "options": [
+      "7",
+      "6",
+      "48",
+      "30"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "5B25N506b_57C_122P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一包手工紙有50張，佩敏用去8張，嘉言用去餘下的 ，嘉言用去的手工紙比佩敏的（ 多 / 少 ）（ ） 張。",
+    "options": [
+      "48",
+      "6",
+      "10",
+      "7"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B25N506b_58C_112P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "店員把4 L紅茶和 L牛奶混合調製成奶茶，然後把奶茶倒進容量是 L的杯子，最多可倒滿多少杯？ 答案︰（ ） 杯",
+    "options": [
+      "6",
+      "48",
+      "19",
+      "7"
+    ],
+    "answer": "19"
+  },
+  {
+    "id": "5B25N506b_62C_032P",
+    "grade": 5,
+    "unitKey": "fraction",
+    "source": "c_5B25N506b.docx",
+    "topic": "5B25N506b  分數四則混合運算的應用",
+    "question": "一包曲奇餅，弟弟吃去全部的 ，妹妹吃去餘下的 。妹妹吃去全部曲奇餅的幾分之幾？",
+    "options": [
+      "4 ×  ÷ 3= ×  ÷ 3= ×  × =每份藍莓重  kg。",
+      "12 ×  ÷ = ×  ÷ = ×  × =16共可裝成16瓶。",
+      "9 ×  ÷ 18=9 ×  × =每袋有葡萄乾  公斤。",
+      "(1 – ) × = × =妹妹吃去全部曲奇餅的 。"
+    ],
+    "answer": "(1 – ) × = × =妹妹吃去全部曲奇餅的 。"
+  },
+  {
+    "id": "5B35S207a_11C_101N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "以下四角柱中，平行於底的截面是甚麼形狀？把答案畫在框內。",
+    "options": [
+      "六邊",
+      "或",
+      "四邊",
+      "或 長方"
+    ],
+    "answer": "或"
+  },
+  {
+    "id": "5B35S207a_15C_101N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "以下四角錐中，平行於底的截面是甚麼形狀？把答案畫在框內。",
+    "options": [
+      "或",
+      "六邊",
+      "四邊",
+      "或 長方"
+    ],
+    "answer": "或"
+  },
+  {
+    "id": "5B35S207a_21C_102N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "以下立體圖形中，平行於底的截面是甚麼形狀？把答案畫在框內。",
+    "options": [
+      "四邊",
+      "或",
+      "或 長方",
+      "六邊"
+    ],
+    "answer": "或"
+  },
+  {
+    "id": "5B35S207a_23C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把下面兩個相同的圓錐從不同位置沿虛線切開後，可得到兩個平行於底的截面。根據右圖，可得到哪個大小的截面？寫出代表答案的英文字母。",
+    "options": [
+      "四邊",
+      "B",
+      "六邊",
+      "或 長方"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B35S207a_24C_051N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把下面兩個相同的角錐從不同位置沿虛線切開後，可得到兩個平行於底的截面。根據右圖，可得到哪個大小的截面？寫出代表答案的英文字母。",
+    "options": [
+      "六邊",
+      "四邊",
+      "B",
+      "或 長方"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B35S207a_38C_112N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "右圖是一個三角柱。 （ ） （ ）（答案需寫上單位） 右圖是一個三角柱。",
+    "options": [
+      "六邊",
+      "或 長方",
+      "四邊",
+      "4 cm"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "id": "5B35S207a_38C_112N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "右圖是一個三角柱。 （ ） （ ）（答案需寫上單位） (b)這個截面的面積是多少cm2？ （ ）（答案需寫上單位）",
+    "options": [
+      "6 cm",
+      "四邊",
+      "或 長方",
+      "六邊"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B35S207a_39C_112N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "上圖是一個四角錐。 （ ） （ ）（答案需寫上單位） 上圖是一個四角錐。",
+    "options": [
+      "17.5 cm",
+      "四邊",
+      "或 長方",
+      "六邊"
+    ],
+    "answer": "17.5 cm"
+  },
+  {
+    "id": "5B35S207a_40C_112P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "150",
+      "48",
+      "36",
+      "54"
+    ],
+    "answer": "48",
+    "image": "q-images/5B35S207a_40C_112P__num.webp"
+  },
+  {
+    "id": "5B35S207a_41C_112P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "36",
+      "54",
+      "150",
+      "48"
+    ],
+    "answer": "150",
+    "image": "q-images/5B35S207a_41C_112P__num.webp"
+  },
+  {
+    "id": "5B35S207a_42C_121N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上面的三角錐沿虛線切開後，可得到兩個平行於底的截面A和B。 把上面的三角錐沿虛線切開後，可得到兩個平行於底的截面A和B。",
+    "options": [
+      "四邊",
+      "或 長方",
+      "A",
+      "六邊"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5B35S207a_42C_121N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上面的三角錐沿虛線切開後，可得到兩個平行於底的截面A和B。 (a)這兩個截面的形狀都是 （ ） 形。",
+    "options": [
+      "B",
+      "四邊",
+      "六邊",
+      "或 長方"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B35S207a_42C_121N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上面的三角錐沿虛線切開後，可得到兩個平行於底的截面A和B。 (b)比較兩個截面的大小，截面（ A / B ）較大。",
+    "options": [
+      "五邊",
+      "六邊",
+      "三角",
+      "四邊"
+    ],
+    "answer": "三角"
+  },
+  {
+    "id": "5B35S207a_43C_121N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "(a)右圖是一個（ 六角錐 / 六角柱 ）， 它的底是一個 （ ） 形。 (b)沿切板把該立體切開後，可得到平行於底的截面。該截面是一個 （ ） 形。",
+    "options": [
+      "三角",
+      "六邊",
+      "四邊",
+      "五邊"
+    ],
+    "answer": "六邊",
+    "image": "q-images/5B35S207a_43C_121N.webp"
+  },
+  {
+    "id": "5B35S207a_44C_122N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上圖的四角柱沿着虛線切開，可得到平行於底的截面R和S。 把上圖的四角柱沿着虛線切開，可得到平行於底的截面R和S。",
+    "options": [
+      "四邊",
+      "六邊",
+      "S",
+      "或 長方"
+    ],
+    "answer": "S"
+  },
+  {
+    "id": "5B35S207a_44C_122N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上圖的四角柱沿着虛線切開，可得到平行於底的截面R和S。 (a)兩個截面的形狀都是 （ ） 形。",
+    "options": [
+      "六邊",
+      "四邊",
+      "或 長方",
+      "9 cm"
+    ],
+    "answer": "9 cm"
+  },
+  {
+    "id": "5B35S207a_44C_122N#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上圖的四角柱沿着虛線切開，可得到平行於底的截面R和S。 (b)截面R的面積是 （ ） cm2。",
+    "options": [
+      "四邊",
+      "15 cm",
+      "或 長方",
+      "六邊"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5B35S207a_46C_112N#a",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "答案︰（ ） 答案︰（ ） (a)把以上各立體沿平行於底的方向切開後，哪個/些立體所得的截面是三角形？ 答案︰（ ）",
+    "options": [
+      "B",
+      "六邊",
+      "四邊",
+      "或 長方"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B35S207a_48C_081N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S207a.docx",
+    "topic": "5B35S207a  立體圖形的截面",
+    "question": "把上圖的圓錐沿着虛線切開，可得到四個平行於底的截面。沿哪條虛線切開所得的截面最大？ A. 虛線W B. 虛線X C. 虛線Y D. 虛線Z",
+    "options": [
+      "六邊",
+      "Z",
+      "或 長方",
+      "四邊"
+    ],
+    "answer": "Z",
+    "image": "q-images/5B35S207a_48C_081N.webp"
+  },
+  {
+    "id": "5B35S208a_01C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個五角柱，它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "15",
+      "10",
+      "12",
+      "7"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B35S208a_02C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個六角錐，它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "15",
+      "12",
+      "10",
+      "7"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B35S208a_03C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個三角柱，它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "12",
+      "10",
+      "15",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B35S208a_04C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個四角錐，它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "10",
+      "15",
+      "12",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B35S208a_05C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個 （ ），它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "四角柱",
+      "三角錐",
+      "三角柱",
+      "六角柱"
+    ],
+    "answer": "六角柱"
+  },
+  {
+    "id": "5B35S208a_06C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個 （ ），它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "三角柱",
+      "六角柱",
+      "四角柱",
+      "三角錐"
+    ],
+    "answer": "三角錐"
+  },
+  {
+    "id": "5B35S208a_07C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個 （ ），它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "三角柱",
+      "三角錐",
+      "六角柱",
+      "四角柱"
+    ],
+    "answer": "三角柱"
+  },
+  {
+    "id": "5B35S208a_08C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個 （ ），它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "三角柱",
+      "四角柱",
+      "六角柱",
+      "三角錐"
+    ],
+    "answer": "四角柱"
+  },
+  {
+    "id": "5B35S208a_09C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個 （ ），它有 （ ） 條稜 和 （ ） 個頂點。",
+    "options": [
+      "三角錐",
+      "六角錐",
+      "六角柱",
+      "三角柱"
+    ],
+    "answer": "六角錐"
+  },
+  {
+    "id": "5B35S208a_10C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個四角柱的支架，這個立體圖形有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "12",
+      "10",
+      "7",
+      "15"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B35S208a_11C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個六角柱的支架，這個立體圖形有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "15",
+      "12",
+      "10",
+      "18"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B35S208a_12C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個三角錐的支架，這個立體圖形有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "12",
+      "6",
+      "10",
+      "15"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B35S208a_13C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "右圖是一個四角錐的支架，這個立體圖形有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "8",
+      "10",
+      "15",
+      "12"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B35S208a_16C_042P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "以上的6個平面圖形是一個立體圖形的所有面，該立體圖形是 （ ），它有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "三角柱",
+      "六角柱",
+      "三角錐",
+      "四角柱"
+    ],
+    "answer": "四角柱"
+  },
+  {
+    "id": "5B35S208a_17C_042P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "以上的7個平面圖形是一個立體圖形的所有面，該立體圖形是 （ ），它有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "六角錐",
+      "三角錐",
+      "三角柱",
+      "六角柱"
+    ],
+    "answer": "六角錐"
+  },
+  {
+    "id": "5B35S208a_18C_042P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "以上的7個平面圖形是一個立體圖形的所有面，該立體圖形是 （ ），它有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "三角錐",
+      "六角柱",
+      "三角柱",
+      "五角柱"
+    ],
+    "answer": "五角柱"
+  },
+  {
+    "id": "5B35S208a_19C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "詠欣利用8粒泥膠和12枝竹簽做了一個四角柱的支架。 她最少要多用 （ ） 粒泥膠和 （ ） 枝竹簽才可把該四角柱改砌成一個五角柱。",
+    "options": [
+      "12",
+      "10",
+      "3",
+      "15"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B35S208a_20C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "柏康利用7粒泥膠和12枝竹簽做了一個六角錐的支架。 他最少要多用 （ ） 粒泥膠和 （ ） 枝竹簽才可把該六角錐改砌成一個六角柱。",
+    "options": [
+      "12",
+      "6",
+      "10",
+      "15"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B35S208a_21C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "芷琪利用泥膠和竹簽做了一個五角錐的支架。她把該五角錐改砌成一個三角錐，會餘下 （ ） 粒泥膠和 （ ） 枝竹簽。",
+    "options": [
+      "4",
+      "10",
+      "15",
+      "12"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B35S208a_22C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "家朗利用泥膠和竹簽做了一個六角錐的支架。他把該六角錐改砌成一個三角柱，會餘下 （ ） 粒泥膠和 （ ） 枝竹簽。",
+    "options": [
+      "10",
+      "3",
+      "15",
+      "12"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B35S208a_23C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "美欣利用泥膠和竹簽做了一個四角錐的支架。她把該四角錐改砌成一個五角柱，最少還欠 （ ） 粒泥膠和 （ ） 枝竹簽。",
+    "options": [
+      "15",
+      "10",
+      "12",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B35S208a_24C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "俊賢利用泥膠和竹簽做了一個三角柱的支架。他把該三角柱改砌成一個六角錐，最少還欠 （ ） 粒泥膠和 （ ） 枝竹簽。",
+    "options": [
+      "12",
+      "15",
+      "10",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B35S208a_25C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "把一個五角錐支架改砌成一個三角錐 支架，需要拿走 （ ） 粒泥膠 和 （ ） 枝竹簽。",
+    "options": [
+      "12",
+      "10",
+      "15",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B35S208a_26C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "把一個四角柱支架改砌成一個四角錐 支架，需要拿走 （ ） 粒泥膠 和 （ ） 枝竹簽。",
+    "options": [
+      "15",
+      "4",
+      "10",
+      "12"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B35S208a_27C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "把一個六角柱支架改砌成一個三角錐 支架，需要拿走 （ ） 粒泥膠 和 （ ） 枝竹簽。",
+    "options": [
+      "15",
+      "10",
+      "12",
+      "7"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B35S208a_28C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "一個 （ ） 柱有6個頂點和9條稜。",
+    "options": [
+      "三角",
+      "三角錐",
+      "六角柱",
+      "三角柱"
+    ],
+    "answer": "三角"
+  },
+  {
+    "id": "5B35S208a_29C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "一個 （ ） 柱有12個頂點和18條稜。",
+    "options": [
+      "六角柱",
+      "三角錐",
+      "六角",
+      "三角柱"
+    ],
+    "answer": "六角"
+  },
+  {
+    "id": "5B35S208a_30C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "一個 （ ） 錐有5個頂點和8條稜。",
+    "options": [
+      "四角",
+      "三角柱",
+      "三角錐",
+      "六角柱"
+    ],
+    "answer": "四角"
+  },
+  {
+    "id": "5B35S208a_31C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "一個 （ ） 錐有4個頂點和6條稜。",
+    "options": [
+      "三角柱",
+      "三角錐",
+      "三角",
+      "六角柱"
+    ],
+    "answer": "三角"
+  },
+  {
+    "id": "5B35S208a_32C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "某角柱有8個頂點，它是 （ ） 柱，它有 （ ） 條稜。",
+    "options": [
+      "三角錐",
+      "三角柱",
+      "四角",
+      "六角柱"
+    ],
+    "answer": "四角"
+  },
+  {
+    "id": "5B35S208a_33C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "某角柱有10個頂點，它是 （ ） 柱，它有 （ ） 條稜。",
+    "options": [
+      "六角柱",
+      "三角錐",
+      "三角柱",
+      "五角"
+    ],
+    "answer": "五角"
+  },
+  {
+    "id": "5B35S208a_34C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "某角錐有6個頂點，它是 （ ） 錐，它有 （ ） 條稜。",
+    "options": [
+      "三角柱",
+      "五角",
+      "六角柱",
+      "三角錐"
+    ],
+    "answer": "五角"
+  },
+  {
+    "id": "5B35S208a_35C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "某角錐有7個頂點，它是 （ ） 錐，它有 （ ） 條稜。",
+    "options": [
+      "三角錐",
+      "六角柱",
+      "三角柱",
+      "六角"
+    ],
+    "answer": "六角"
+  },
+  {
+    "id": "5B35S208a_36C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "每粒膠珠售8角，每條膠棒售1元。如果用膠珠和膠棒做一個四角柱 的支架，最少需要材料費 （ ） 元 （ ） 角。",
+    "options": [
+      "10",
+      "12",
+      "18",
+      "15"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B35S208a_37C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "膠珠每粒售6角，膠棒每條售2元。如果用膠珠和膠棒做一個六角錐 的支架，最少需要材料費 （ ） 元 （ ） 角。",
+    "options": [
+      "28",
+      "10",
+      "12",
+      "15"
+    ],
+    "answer": "28"
+  },
+  {
+    "id": "5B35S208a_38C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "某立體圖形有12條稜，該立體圖形可能是 （ ） 角柱或 （ ） 角錐。",
+    "options": [
+      "三角錐",
+      "六角柱",
+      "三角柱",
+      "四"
+    ],
+    "answer": "四"
+  },
+  {
+    "id": "5B35S208a_39C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "某立體圖形有6個頂點，該立體圖形可能是 （ ） 角柱或 （ ） 角錐。",
+    "options": [
+      "五",
+      "三角柱",
+      "六角柱",
+      "三角錐"
+    ],
+    "answer": "五"
+  },
+  {
+    "id": "5B35S208a_54C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "觀察下面用膠珠和膠棒製成的立體圖形支架。 需要材料費 （ ） 元。 觀察下面用膠珠和膠棒製成的立體圖形支架。",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B35S208a_54C_042P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "觀察下面用膠珠和膠棒製成的立體圖形支架。 需要材料費 （ ） 元。 (b)膠珠每粒售2元，膠棒每條售1元。如果想製作上面的立體圖形， 需要材料費 （ ） 元。",
+    "options": [
+      "12",
+      "15",
+      "10",
+      "28"
+    ],
+    "answer": "28"
+  },
+  {
+    "id": "5B35S208a_55C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "觀察下面用膠珠和膠棒製成的立體圖形支架。 立體圖形，共需要材料費 （ ） 元。 觀察下面用膠珠和膠棒製成的立體圖形支架。",
+    "options": [
+      "5",
+      "15",
+      "12",
+      "10"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B35S208a_58C_041P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "上圖是一個 （ ） 的支架，這個立體圖形有 （ ） 個頂點，（ ） 條稜和 （ ） 個面。",
+    "options": [
+      "三角柱",
+      "三角錐",
+      "六角錐",
+      "六角柱"
+    ],
+    "answer": "六角錐"
+  },
+  {
+    "id": "5B35S208a_59C_122P",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "上圖是一個（ 角錐 / 角柱 ），它有 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "12",
+      "7",
+      "10",
+      "15"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B35S208a_60C_122P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "嘉敏買了膠棒10條和膠珠6粒。 答案︰（ ） 錐 嘉敏買了膠棒10條和膠珠6粒。",
+    "options": [
+      "五角",
+      "三角柱",
+      "三角錐",
+      "六角柱"
+    ],
+    "answer": "五角"
+  },
+  {
+    "id": "5B35S208a_60C_122P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S208a.docx",
+    "topic": "5B35S208a  立體圖形的頂點和稜",
+    "question": "嘉敏買了膠棒10條和膠珠6粒。 答案︰（ ） 錐 (a)嘉敏用所有膠棒和膠珠剛好砌出一個角錐。她砌出哪種立體圖形？ 答案︰（ ） 錐",
+    "options": [
+      "10",
+      "15",
+      "25",
+      "12"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": "5B35S209a_01C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "右面是一個長方體，它有 （ ） 個面、 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "6",
+      "12",
+      "5",
+      "8"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B35S209a_02C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "右面是一個正方體，它有 （ ） 個面、 （ ） 個頂點和 （ ） 條稜。",
+    "options": [
+      "6",
+      "5",
+      "8",
+      "12"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B35S209a_15C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某正方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該正方體的摺紙圖樣。",
+    "options": [
+      "2 cm",
+      "或其他合理答案。",
+      "12",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_16C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某正方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該正方體的摺紙圖樣。",
+    "options": [
+      "或其他合理答案。",
+      "2 cm",
+      "12",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_17C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某正方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該正方體的摺紙圖樣。",
+    "options": [
+      "1 cm",
+      "12",
+      "2 cm",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_18C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某正方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該正方體的摺紙圖樣。",
+    "options": [
+      "2 cm",
+      "或其他合理答案。",
+      "12",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_19C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某長方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該長方體的摺紙圖樣。",
+    "options": [
+      "1 cm",
+      "2 cm",
+      "或其他合理答案。",
+      "12"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_20C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某長方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該長方體的摺紙圖樣。",
+    "options": [
+      "或其他合理答案。",
+      "12",
+      "2 cm",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_21C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某長方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該長方體的摺紙圖樣。",
+    "options": [
+      "12",
+      "1 cm",
+      "或其他合理答案。",
+      "2 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_22C_101N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "灰色方格是某長方體的摺紙圖樣的一部分。在方格紙上加畫一個適當的面，完成該長方體的摺紙圖樣。",
+    "options": [
+      "1 cm",
+      "12",
+      "或其他合理答案。",
+      "2 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_23C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "在以下的方格紙上繪畫一個邊長是2 cm的正方體的摺紙圖樣。",
+    "options": [
+      "或其他合理答案。",
+      "2 cm",
+      "12",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_24C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "在以下的方格紙上繪畫一個邊長是3 cm的正方體的摺紙圖樣。",
+    "options": [
+      "2 cm",
+      "12",
+      "1 cm",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_25C_102P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "在方格紙上加畫兩個適當的面，完成長方體的摺紙圖樣。",
+    "options": [
+      "12",
+      "或其他合理答案。",
+      "2 cm",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_26C_102P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "在方格紙上加畫兩個適當的面，完成長方體的摺紙圖樣。",
+    "options": [
+      "或其他合理答案。",
+      "2 cm",
+      "1 cm",
+      "12"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_27C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "根據下面的正方體，在以下的方格紙上繪畫出它的摺紙圖樣。",
+    "options": [
+      "12",
+      "2 cm",
+      "或其他合理答案。",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_28C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "根據下面的正方體，在以下的方格紙上繪畫出它的摺紙圖樣。",
+    "options": [
+      "2 cm",
+      "12",
+      "或其他合理答案。",
+      "1 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_29C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "根據下面的長方體，在以下的方格紙上繪畫出它的摺紙圖樣。",
+    "options": [
+      "12",
+      "或其他合理答案。",
+      "1 cm",
+      "2 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_30C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "根據下面的長方體，在以下的方格紙上繪畫出它的摺紙圖樣。",
+    "options": [
+      "12",
+      "1 cm",
+      "或其他合理答案。",
+      "2 cm"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_48C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "上圖是一個正方體盒子的摺紙圖樣。當把它摺成盒子後，如果摺紙圖樣中寫有英文字母「Q」的一面是正方體的底部，那麼在它的頂部的英文字母是甚麼？",
+    "options": [
+      "R",
+      "S",
+      "U",
+      "T"
+    ],
+    "answer": "T"
+  },
+  {
+    "id": "5B35S209a_49C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "上圖是一個正方體盒子的摺紙圖樣。當把它摺成盒子後，如果摺紙圖樣中寫有英文字母「Y」的一面是正方體的底部，那麼在它的頂部的英文字母是甚麼？",
+    "options": [
+      "X",
+      "W",
+      "V",
+      "U"
+    ],
+    "answer": "V"
+  },
+  {
+    "id": "5B35S209a_50C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "把一個正方體盒子剪開後，得出一個摺紙圖樣，如上圖所示。如果寫有數字「5」的一面是正方體盒子的頂部，那麼在它的底部是哪一個數字？",
+    "options": [
+      "4",
+      "6",
+      "2",
+      "1"
+    ],
+    "answer": "1",
+    "image": "q-images/5B35S209a_50C_082P.webp"
+  },
+  {
+    "id": "5B35S209a_51C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "把一個正方體盒子剪開後，得出一個摺紙圖樣，如上圖所示。如果寫有數字「3」的一面是正方體盒子的頂部，那麼在它的底部是哪一個數字？",
+    "options": [
+      "2",
+      "6",
+      "4",
+      "5"
+    ],
+    "answer": "5",
+    "image": "q-images/5B35S209a_51C_082P.webp"
+  },
+  {
+    "id": "5B35S209a_52C_082N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "以下哪個摺紙圖樣可以摺成一個合適的禮盒來放這盒月餅？ A. B. C. D.",
+    "options": [
+      "我想把這盒月餅放入一個禮盒裏。",
+      "或其他合理答案。",
+      "12",
+      "我想把這個魔方放在一個盒子裏。"
+    ],
+    "answer": "我想把這盒月餅放入一個禮盒裏。"
+  },
+  {
+    "id": "5B35S209a_53C_082N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "以下哪個摺紙圖樣可以摺成一個合適的盒子來放這個魔方？ A. B. C. D.",
+    "options": [
+      "12",
+      "或其他合理答案。",
+      "我想把這個魔方放在一個盒子裏。",
+      "我想把這盒月餅放入一個禮盒裏。"
+    ],
+    "answer": "我想把這個魔方放在一個盒子裏。"
+  },
+  {
+    "id": "5B35S209a_54C_041P#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "(a)以下6個平面圖形是一個立體圖形的所有面，該立體圖形是（ ）。",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "正方體"
+    ],
+    "answer": "正方體"
+  },
+  {
+    "id": "5B35S209a_54C_041P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "(b)以下3個平面圖形是一個立體圖形的所有面，該立體圖形是（ ）。",
+    "options": [
+      "6",
+      "圓柱",
+      "8",
+      "12"
+    ],
+    "answer": "圓柱"
+  },
+  {
+    "id": "5B35S209a_55C_121P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "上圖是一個（ 正方體 / 長方體 ）的支架，這個立體圖形有 （ ） 個頂點，（ ） 條稜和 （ ） 個面。",
+    "options": [
+      "6",
+      "12",
+      "8",
+      "5"
+    ],
+    "answer": "12",
+    "image": "q-images/5B35S209a_55C_121P.webp"
+  },
+  {
+    "id": "5B35S209a_56C_122P#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "一盒「幾何棒」有8粒膠珠和12條長10 cm的膠棒。 一盒「幾何棒」有8粒膠珠和12條長10 cm的膠棒。",
+    "options": [
+      "或其他合理答案。",
+      "1 cm",
+      "2 cm",
+      "12"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_56C_122P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "一盒「幾何棒」有8粒膠珠和12條長10 cm的膠棒。 (a)紫盈利用這盒「幾何棒」砌成一個正方體。在以下的方格紙上繪畫出這個正方體的摺紙圖樣。",
+    "options": [
+      "1 cm",
+      "5 cm",
+      "12",
+      "或其他合理答案。"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5B35S209a_56C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "一盒「幾何棒」有8粒膠珠和12條長10 cm的膠棒。 (b)這個摺紙圖樣的面積是 （ ） cm2。",
+    "options": [
+      "6",
+      "12",
+      "8",
+      "600"
+    ],
+    "answer": "600"
+  },
+  {
+    "id": "5B35S209a_57C_122P#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "一盒「幾何棒」有8粒膠珠、4條長8 cm的膠棒和8條長4 cm的膠棒。 一盒「幾何棒」有8粒膠珠、4條長8 cm的膠棒和8條長4 cm的膠棒。",
+    "options": [
+      "2 cm",
+      "或其他合理答案。",
+      "1 cm",
+      "12"
+    ],
+    "answer": "或其他合理答案。"
+  },
+  {
+    "id": "5B35S209a_57C_122P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "一盒「幾何棒」有8粒膠珠、4條長8 cm的膠棒和8條長4 cm的膠棒。 (a)文傑利用這盒「幾何棒」砌成一個長方體。在以下的方格紙上繪畫出這個長方體的摺紙圖樣。",
+    "options": [
+      "或其他合理答案。",
+      "4 cm",
+      "12",
+      "1 cm"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "id": "5B35S209a_57C_122P#c",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "一盒「幾何棒」有8粒膠珠、4條長8 cm的膠棒和8條長4 cm的膠棒。 (b)這個摺紙圖樣的面積是 （ ） cm2。",
+    "options": [
+      "8",
+      "12",
+      "6",
+      "160"
+    ],
+    "answer": "160"
+  },
+  {
+    "id": "5B35S209a_58C_102P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B35S209a.docx",
+    "topic": "5B35S209a  正方體、長方體和圓柱的摺紙圖樣",
+    "question": "上圖是一個長方體禮物盒，在以下的方格紙上繪畫出這個禮物盒的摺紙圖樣。",
+    "options": [
+      "2 cm",
+      "1 cm",
+      "12",
+      "或其他合理答案。"
+    ],
+    "answer": "或其他合理答案。",
+    "image": "q-images/5B35S209a_58C_102P.webp"
+  },
+  {
+    "id": "5B35S210a_05C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，A、B和C都是球上的點。 下面是一個球，O點是球心，A、B和C都是球上的點。",
+    "options": [
+      "C",
+      "B",
+      "O",
+      "A"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5B35S210a_05C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，A、B和C都是球上的點。 (a)A點和O點的距離是 （ ） cm。",
+    "options": [
+      "O",
+      "A",
+      "C",
+      "B"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B35S210a_05C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，A、B和C都是球上的點。 (b)B點和O點的距離是 （ ） cm。",
+    "options": [
+      "B",
+      "C",
+      "O",
+      "A"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B35S210a_06C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，H、I和J都是球上的點。 下面是一個球，O點是球心，H、I和J都是球上的點。",
+    "options": [
+      "H",
+      "B",
+      "C",
+      "A"
+    ],
+    "answer": "H"
+  },
+  {
+    "id": "5B35S210a_06C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，H、I和J都是球上的點。 (a)H點和O點的距離是 （ ） cm。",
+    "options": [
+      "C",
+      "I",
+      "A",
+      "B"
+    ],
+    "answer": "I"
+  },
+  {
+    "id": "5B35S210a_06C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，H、I和J都是球上的點。 (b)I點和O點的距離是 （ ） cm。",
+    "options": [
+      "A",
+      "C",
+      "J",
+      "B"
+    ],
+    "answer": "J"
+  },
+  {
+    "id": "5B35S210a_07C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，X、Y和Z都是球上的點。 下面是一個球，O點是球心，X、Y和Z都是球上的點。",
+    "options": [
+      "A",
+      "C",
+      "X",
+      "B"
+    ],
+    "answer": "X"
+  },
+  {
+    "id": "5B35S210a_07C_041N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，X、Y和Z都是球上的點。 (a)X點和O點的距離是 （ ） cm。",
+    "options": [
+      "B",
+      "A",
+      "C",
+      "Y"
+    ],
+    "answer": "Y"
+  },
+  {
+    "id": "5B35S210a_07C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，X、Y和Z都是球上的點。 (b)Y點和O點的距離是 （ ） cm。",
+    "options": [
+      "C",
+      "Z",
+      "A",
+      "B"
+    ],
+    "answer": "Z"
+  },
+  {
+    "id": "5B35S210a_16C_081N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，A、B、C、D和E都是在球上的點。以下哪兩點的距離與其他的不一定相同？",
+    "options": [
+      "D和E",
+      "A和O",
+      "C和O",
+      "B和O"
+    ],
+    "answer": "B和O"
+  },
+  {
+    "id": "5B35S210a_17C_081N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，P、Q、R、S和T都是在球上的點。以下哪兩點的距離與其他的不一定相同？",
+    "options": [
+      "Q和R",
+      "P和O",
+      "S和O",
+      "T和O"
+    ],
+    "answer": "Q和R"
+  },
+  {
+    "id": "5B35S210a_18C_081N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "下面是一個球，O點是球心，U、V、W、X和Y都是在球上的點。以下哪兩點的距離與其他的不一定相同？",
+    "options": [
+      "Y和O",
+      "V和O",
+      "W和X",
+      "U和O"
+    ],
+    "answer": "V和O"
+  },
+  {
+    "id": "5B35S210a_19C_081N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "在下面的球中，O點是球心。沿着虛線把這個球切開，得出截面J和K，其中截面J穿過球心。以下哪項描述是不正確的？",
+    "options": [
+      "截面K是一個圓。",
+      "截面J是一個圓。",
+      "截面K比截面J小。",
+      "截面J比截面K小。"
+    ],
+    "answer": "截面J比截面K小。"
+  },
+  {
+    "id": "5B35S210a_20C_081N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "在下面的球中，O點是球心。沿着虛線把這個球切開，得出截面X、Y和Z，其中截面Y穿過球心。以下哪項描述是不正確的？",
+    "options": [
+      "截面X不是一個圓。",
+      "截面Y比截面X大。",
+      "截面Y比截面Z大。",
+      "截面Z是一個圓。"
+    ],
+    "answer": "截面Y比截面Z大。"
+  },
+  {
+    "id": "5B35S210a_24C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "一個球的中心點稱為 （ ）。",
+    "options": [
+      "B",
+      "C",
+      "球心",
+      "A"
+    ],
+    "answer": "球心"
+  },
+  {
+    "id": "5B35S210a_25C_041N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "從不同位置把一個球切開，所得的截面形狀都是 （ ）。",
+    "options": [
+      "8 cm",
+      "或 圓形",
+      "3 cm",
+      "5 cm"
+    ],
+    "answer": "或 圓形"
+  },
+  {
+    "id": "5B35S210a_26C_042N#b",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "上面的球中，O點是球心，A是球上的點。O點和A點的距離是17 cm。把這個球切開後得出一個最大的圓形截面。 (a)該圓形截面的圓心是這個球的 （ ）。",
+    "options": [
+      "3 cm",
+      "5 cm",
+      "17 cm",
+      "8 cm"
+    ],
+    "answer": "17 cm"
+  },
+  {
+    "id": "5B35S210a_26C_042N#c",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "上面的球中，O點是球心，A是球上的點。O點和A點的距離是17 cm。把這個球切開後得出一個最大的圓形截面。 (b)該圓形截面的直徑是 （ ） cm。",
+    "options": [
+      "C",
+      "B",
+      "A",
+      "O"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5B35S210a_27C_061N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B35S210a.docx",
+    "topic": "5B35S210a  球",
+    "question": "上面是一個球，O點是球心，X、Y和Z都是在球上的點。 （ OX / OY / OZ / XZ ）的長度一定相等。 （圈出所有答案）",
+    "options": [
+      "B",
+      "Z",
+      "A",
+      "C"
+    ],
+    "answer": "Z"
+  },
+  {
+    "id": "5B45N412a_01C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "12 × 10 = （ ）",
+    "options": [
+      "120",
+      "64",
+      "17",
+      "8"
+    ],
+    "answer": "120"
+  },
+  {
+    "id": "5B45N412a_02C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "6.4 × 10 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "8",
+      "17"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "5B45N412a_03C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.8 × 10 = （ ）",
+    "options": [
+      "17",
+      "8",
+      "64",
+      "120"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B45N412a_04C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1.7 × 10 = （ ）",
+    "options": [
+      "17",
+      "64",
+      "8",
+      "120"
+    ],
+    "answer": "17"
+  },
+  {
+    "id": "5B45N412a_05C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.07 × 10 = （ ）",
+    "options": [
+      "64",
+      "8",
+      "120",
+      "0.7"
+    ],
+    "answer": "0.7"
+  },
+  {
+    "id": "5B45N412a_06C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.36 × 10 = （ ）",
+    "options": [
+      "3.6",
+      "64",
+      "120",
+      "8"
+    ],
+    "answer": "3.6"
+  },
+  {
+    "id": "5B45N412a_07C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1.87 × 10 = （ ）",
+    "options": [
+      "17",
+      "64",
+      "18.7",
+      "120"
+    ],
+    "answer": "18.7"
+  },
+  {
+    "id": "5B45N412a_08C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "54.14 × 10 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "541.4",
+      "17"
+    ],
+    "answer": "541.4"
+  },
+  {
+    "id": "5B45N412a_09C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10.08 × 10 = （ ）",
+    "options": [
+      "120",
+      "100.8",
+      "17",
+      "64"
+    ],
+    "answer": "100.8"
+  },
+  {
+    "id": "5B45N412a_10C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10 × 0.7 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "7",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B45N412a_11C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10 × 1.5 = （ ）",
+    "options": [
+      "120",
+      "64",
+      "15",
+      "8"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B45N412a_12C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10 × 0.04 = （ ）",
+    "options": [
+      "0.4",
+      "64",
+      "120",
+      "8"
+    ],
+    "answer": "0.4"
+  },
+  {
+    "id": "5B45N412a_13C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10 × 0.38 = （ ）",
+    "options": [
+      "120",
+      "64",
+      "8",
+      "3.8"
+    ],
+    "answer": "3.8"
+  },
+  {
+    "id": "5B45N412a_14C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10 × 2.04 = （ ）",
+    "options": [
+      "17",
+      "20.4",
+      "64",
+      "120"
+    ],
+    "answer": "20.4"
+  },
+  {
+    "id": "5B45N412a_15C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "10 × 15.6 = （ ）",
+    "options": [
+      "8",
+      "156",
+      "64",
+      "120"
+    ],
+    "answer": "156"
+  },
+  {
+    "id": "5B45N412a_16C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "71 × 100 = （ ）",
+    "options": [
+      "7100",
+      "120",
+      "64",
+      "17"
+    ],
+    "answer": "7100"
+  },
+  {
+    "id": "5B45N412a_17C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.05 × 100 = （ ）",
+    "options": [
+      "5",
+      "120",
+      "64",
+      "8"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B45N412a_18C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.32 × 100 = （ ）",
+    "options": [
+      "64",
+      "8",
+      "32",
+      "120"
+    ],
+    "answer": "32"
+  },
+  {
+    "id": "5B45N412a_19C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "3.41 × 100 = （ ）",
+    "options": [
+      "341",
+      "120",
+      "8",
+      "64"
+    ],
+    "answer": "341"
+  },
+  {
+    "id": "5B45N412a_20C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "6.07 × 100 = （ ）",
+    "options": [
+      "607",
+      "120",
+      "64",
+      "8"
+    ],
+    "answer": "607"
+  },
+  {
+    "id": "5B45N412a_21C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "52.31 × 100 = （ ）",
+    "options": [
+      "120",
+      "17",
+      "64",
+      "5231"
+    ],
+    "answer": "5231"
+  },
+  {
+    "id": "5B45N412a_22C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "20.87 × 100 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "2087",
+      "17"
+    ],
+    "answer": "2087"
+  },
+  {
+    "id": "5B45N412a_23C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "100 × 0.4 = （ ）",
+    "options": [
+      "64",
+      "8",
+      "120",
+      "40"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "5B45N412a_24C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "100 × 1.6 = （ ）",
+    "options": [
+      "8",
+      "120",
+      "64",
+      "160"
+    ],
+    "answer": "160"
+  },
+  {
+    "id": "5B45N412a_25C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "100 × 0.47 = （ ）",
+    "options": [
+      "64",
+      "8",
+      "120",
+      "47"
+    ],
+    "answer": "47"
+  },
+  {
+    "id": "5B45N412a_26C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "100 × 6.15 = （ ）",
+    "options": [
+      "615",
+      "64",
+      "8",
+      "120"
+    ],
+    "answer": "615"
+  },
+  {
+    "id": "5B45N412a_27C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "100 × 24.68 = （ ）",
+    "options": [
+      "2468",
+      "120",
+      "17",
+      "64"
+    ],
+    "answer": "2468"
+  },
+  {
+    "id": "5B45N412a_28C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "61 × 1000 = （ ）",
+    "options": [
+      "61000",
+      "64",
+      "120",
+      "17"
+    ],
+    "answer": "61000"
+  },
+  {
+    "id": "5B45N412a_29C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.8 × 1000 = （ ）",
+    "options": [
+      "8",
+      "800",
+      "64",
+      "120"
+    ],
+    "answer": "800"
+  },
+  {
+    "id": "5B45N412a_30C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "7.5 × 1000 = （ ）",
+    "options": [
+      "120",
+      "64",
+      "7500",
+      "17"
+    ],
+    "answer": "7500"
+  },
+  {
+    "id": "5B45N412a_31C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "8.2 × 1000 = （ ）",
+    "options": [
+      "8200",
+      "64",
+      "120",
+      "17"
+    ],
+    "answer": "8200"
+  },
+  {
+    "id": "5B45N412a_32C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.06 × 1000 = （ ）",
+    "options": [
+      "64",
+      "60",
+      "8",
+      "120"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5B45N412a_33C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.14 × 1000 = （ ）",
+    "options": [
+      "8",
+      "64",
+      "140",
+      "120"
+    ],
+    "answer": "140"
+  },
+  {
+    "id": "5B45N412a_34C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "2.57 × 1000 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "17",
+      "2570"
+    ],
+    "answer": "2570"
+  },
+  {
+    "id": "5B45N412a_35C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1000 × 0.9 = （ ）",
+    "options": [
+      "120",
+      "64",
+      "900",
+      "8"
+    ],
+    "answer": "900"
+  },
+  {
+    "id": "5B45N412a_36C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1000 × 0.04 = （ ）",
+    "options": [
+      "40",
+      "8",
+      "64",
+      "120"
+    ],
+    "answer": "40"
+  },
+  {
+    "id": "5B45N412a_37C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1000 × 0.17 = （ ）",
+    "options": [
+      "170",
+      "120",
+      "64",
+      "8"
+    ],
+    "answer": "170"
+  },
+  {
+    "id": "5B45N412a_38C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1000 × 6.3 = （ ）",
+    "options": [
+      "6300",
+      "64",
+      "17",
+      "120"
+    ],
+    "answer": "6300"
+  },
+  {
+    "id": "5B45N412a_39C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1000 × 9.04 = （ ）",
+    "options": [
+      "9040",
+      "64",
+      "120",
+      "17"
+    ],
+    "answer": "9040"
+  },
+  {
+    "id": "5B45N412a_40C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.5 × （ ） = 5",
+    "options": [
+      "64",
+      "8",
+      "10",
+      "120"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B45N412a_41C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1.07 × （ ） = 10.7",
+    "options": [
+      "8",
+      "120",
+      "64",
+      "10"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B45N412a_42C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.06 × （ ） = 6",
+    "options": [
+      "100",
+      "8",
+      "64",
+      "120"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5B45N412a_43C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "6.45 × （ ） = 645",
+    "options": [
+      "100",
+      "120",
+      "64",
+      "8"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5B45N412a_44C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "2.64 × （ ） = 2640",
+    "options": [
+      "64",
+      "120",
+      "17",
+      "1000"
+    ],
+    "answer": "1000"
+  },
+  {
+    "id": "5B45N412a_45C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.38 × （ ） = 380",
+    "options": [
+      "17",
+      "120",
+      "1000",
+      "64"
+    ],
+    "answer": "1000"
+  },
+  {
+    "id": "5B45N412a_46C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "9 × 0.1 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "8",
+      "0.9"
+    ],
+    "answer": "0.9"
+  },
+  {
+    "id": "5B45N412a_47C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "18 × 0.1 = （ ）",
+    "options": [
+      "120",
+      "1.8",
+      "64",
+      "8"
+    ],
+    "answer": "1.8"
+  },
+  {
+    "id": "5B45N412a_48C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "630 × 0.1 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "8",
+      "63"
+    ],
+    "answer": "63"
+  },
+  {
+    "id": "5B45N412a_49C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "1050 × 0.1 = （ ）",
+    "options": [
+      "8",
+      "120",
+      "64",
+      "105"
+    ],
+    "answer": "105"
+  },
+  {
+    "id": "5B45N412a_50C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "2.5 × 0.1 = （ ）",
+    "options": [
+      "64",
+      "17",
+      "120",
+      "0.25"
+    ],
+    "answer": "0.25"
+  },
+  {
+    "id": "5B45N412a_51C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.67 × 0.1 = （ ）",
+    "options": [
+      "0.067",
+      "64",
+      "120",
+      "17"
+    ],
+    "answer": "0.067"
+  },
+  {
+    "id": "5B45N412a_52C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "4.33 × 0.1 = （ ）",
+    "options": [
+      "0.433",
+      "17",
+      "120",
+      "64"
+    ],
+    "answer": "0.433"
+  },
+  {
+    "id": "5B45N412a_53C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "82.92 × 0.1 = （ ）",
+    "options": [
+      "17",
+      "8.292",
+      "120",
+      "64"
+    ],
+    "answer": "8.292"
+  },
+  {
+    "id": "5B45N412a_54C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.1 × 20 = （ ）",
+    "options": [
+      "8",
+      "120",
+      "64",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B45N412a_55C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.1 × 0.7 = （ ）",
+    "options": [
+      "17",
+      "120",
+      "0.07",
+      "64"
+    ],
+    "answer": "0.07"
+  },
+  {
+    "id": "5B45N412a_56C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.1 × 6.04 = （ ）",
+    "options": [
+      "17",
+      "0.604",
+      "64",
+      "120"
+    ],
+    "answer": "0.604"
+  },
+  {
+    "id": "5B45N412a_57C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.1 × 34.77 = （ ）",
+    "options": [
+      "120",
+      "3.477",
+      "17",
+      "64"
+    ],
+    "answer": "3.477"
+  },
+  {
+    "id": "5B45N412a_58C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "5 × 0.01 = （ ）",
+    "options": [
+      "17",
+      "0.05",
+      "120",
+      "64"
+    ],
+    "answer": "0.05"
+  },
+  {
+    "id": "5B45N412a_59C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "22 × 0.01 = （ ）",
+    "options": [
+      "17",
+      "0.22",
+      "64",
+      "120"
+    ],
+    "answer": "0.22"
+  },
+  {
+    "id": "5B45N412a_60C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "60 × 0.01 = （ ）",
+    "options": [
+      "8",
+      "0.6",
+      "120",
+      "64"
+    ],
+    "answer": "0.6"
+  },
+  {
+    "id": "5B45N412a_61C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "300 × 0.01 = （ ）",
+    "options": [
+      "3",
+      "8",
+      "120",
+      "64"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B45N412a_62C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "4500 × 0.01 = （ ）",
+    "options": [
+      "120",
+      "8",
+      "64",
+      "45"
+    ],
+    "answer": "45"
+  },
+  {
+    "id": "5B45N412a_63C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.34 × 0.01 = （ ）",
+    "options": [
+      "3.6",
+      "0.0034",
+      "0.7",
+      "120"
+    ],
+    "answer": "0.0034"
+  },
+  {
+    "id": "5B45N412a_64C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "12.5 × 0.01 = （ ）",
+    "options": [
+      "64",
+      "0.125",
+      "120",
+      "17"
+    ],
+    "answer": "0.125"
+  },
+  {
+    "id": "5B45N412a_65C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.01 × 20 = （ ）",
+    "options": [
+      "120",
+      "0.2",
+      "8",
+      "64"
+    ],
+    "answer": "0.2"
+  },
+  {
+    "id": "5B45N412a_66C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.01 × 624 = （ ）",
+    "options": [
+      "120",
+      "64",
+      "6.24",
+      "17"
+    ],
+    "answer": "6.24"
+  },
+  {
+    "id": "5B45N412a_67C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.01 × 1.58 = （ ）",
+    "options": [
+      "120",
+      "3.6",
+      "0.0158",
+      "0.7"
+    ],
+    "answer": "0.0158"
+  },
+  {
+    "id": "5B45N412a_68C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.01 × 22.07 = （ ）",
+    "options": [
+      "0.2207",
+      "0.7",
+      "3.6",
+      "120"
+    ],
+    "answer": "0.2207"
+  },
+  {
+    "id": "5B45N412a_69C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "6700 × 0.001 = （ ）",
+    "options": [
+      "64",
+      "120",
+      "6.7",
+      "8"
+    ],
+    "answer": "6.7"
+  },
+  {
+    "id": "5B45N412a_70C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "857 × 0.001 = （ ）",
+    "options": [
+      "64",
+      "17",
+      "0.857",
+      "120"
+    ],
+    "answer": "0.857"
+  },
+  {
+    "id": "5B45N412a_71C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "240 × 0.001 = （ ）",
+    "options": [
+      "17",
+      "120",
+      "64",
+      "0.24"
+    ],
+    "answer": "0.24"
+  },
+  {
+    "id": "5B45N412a_72C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "30.7 × 0.001 = （ ）",
+    "options": [
+      "120",
+      "0.7",
+      "3.6",
+      "0.0307"
+    ],
+    "answer": "0.0307"
+  },
+  {
+    "id": "5B45N412a_73C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.001 × 500 = （ ）",
+    "options": [
+      "0.5",
+      "64",
+      "120",
+      "8"
+    ],
+    "answer": "0.5"
+  },
+  {
+    "id": "5B45N412a_74C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.001 × 6830 = （ ）",
+    "options": [
+      "17",
+      "6.83",
+      "120",
+      "64"
+    ],
+    "answer": "6.83"
+  },
+  {
+    "id": "5B45N412a_75C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.001 × 78.04 = （ ）",
+    "options": [
+      "0.07804",
+      "18.7",
+      "541.4",
+      "100.8"
+    ],
+    "answer": "0.07804"
+  },
+  {
+    "id": "5B45N412a_76C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "14 × （ ） = 1.4",
+    "options": [
+      "64",
+      "0.1",
+      "120",
+      "8"
+    ],
+    "answer": "0.1"
+  },
+  {
+    "id": "5B45N412a_77C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "250 × （ ） = 25",
+    "options": [
+      "64",
+      "120",
+      "0.1",
+      "8"
+    ],
+    "answer": "0.1"
+  },
+  {
+    "id": "5B45N412a_78C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "86 × （ ） = 0.86",
+    "options": [
+      "0.01",
+      "64",
+      "120",
+      "17"
+    ],
+    "answer": "0.01"
+  },
+  {
+    "id": "5B45N412a_79C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "7500 × （ ） = 7.5",
+    "options": [
+      "64",
+      "120",
+      "17",
+      "0.001"
+    ],
+    "answer": "0.001"
+  },
+  {
+    "id": "5B45N412a_80C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "104.3 × （ ） = 1.043",
+    "options": [
+      "0.01",
+      "120",
+      "64",
+      "17"
+    ],
+    "answer": "0.01"
+  },
+  {
+    "id": "5B45N412a_81C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "60.4 × （ ） = 0.0604",
+    "options": [
+      "0.001",
+      "17",
+      "120",
+      "64"
+    ],
+    "answer": "0.001"
+  },
+  {
+    "id": "5B45N412a_91C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "23 × 0.01 × 10 = （ ）",
+    "options": [
+      "8",
+      "64",
+      "120",
+      "2.3"
+    ],
+    "answer": "2.3"
+  },
+  {
+    "id": "5B45N412a_92C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "0.945 × 1000 × 0.1 = （ ）",
+    "options": [
+      "120",
+      "94.5",
+      "64",
+      "17"
+    ],
+    "answer": "94.5"
+  },
+  {
+    "id": "5B45N412a_93C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "（ ） × 100 = 50.8",
+    "options": [
+      "0.508",
+      "17",
+      "64",
+      "120"
+    ],
+    "answer": "0.508"
+  },
+  {
+    "id": "5B45N412a_94C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "如果251 × ■ = 2.51，那麼40 × ■ = （ ）。",
+    "options": [
+      "64",
+      "0.4",
+      "8",
+      "120"
+    ],
+    "answer": "0.4"
+  },
+  {
+    "id": "5B45N412a_95C_042N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412a.docx",
+    "topic": "5B45N412a  與10、100、1000、0.1、0.01、0.001的乘法運算",
+    "question": "如果▲ × 6.7 = 670，那麼86 × ▲ × 0.001 = （ ）。",
+    "options": [
+      "120",
+      "64",
+      "8",
+      "8.6"
+    ],
+    "answer": "8.6"
+  },
+  {
+    "id": "5B45N412b_01C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.06米 = （ ） 厘米",
+    "options": [
+      "150",
+      "246",
+      "6",
+      "800"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B45N412b_02C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "1.5米 = （ ） 厘米",
+    "options": [
+      "246",
+      "150",
+      "6",
+      "800"
+    ],
+    "answer": "150"
+  },
+  {
+    "id": "5B45N412b_03C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "2.46米 = （ ） 厘米",
+    "options": [
+      "800",
+      "246",
+      "6",
+      "150"
+    ],
+    "answer": "246"
+  },
+  {
+    "id": "5B45N412b_04C_011N",
+    "grade": 5,
+    "unitKey": "speed",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.8公里 = （ ） 米",
+    "options": [
+      "6",
+      "150",
+      "246",
+      "800"
+    ],
+    "answer": "800"
+  },
+  {
+    "id": "5B45N412b_05C_011N",
+    "grade": 5,
+    "unitKey": "speed",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "3.871公里 = （ ） 米",
+    "options": [
+      "150",
+      "800",
+      "246",
+      "3871"
+    ],
+    "answer": "3871"
+  },
+  {
+    "id": "5B45N412b_06C_011N",
+    "grade": 5,
+    "unitKey": "speed",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.05公里 = （ ） 米",
+    "options": [
+      "6",
+      "246",
+      "150",
+      "50"
+    ],
+    "answer": "50"
+  },
+  {
+    "id": "5B45N412b_07C_011N",
+    "grade": 5,
+    "unitKey": "speed",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "1.064公里 = （ ） 米",
+    "options": [
+      "150",
+      "800",
+      "246",
+      "1064"
+    ],
+    "answer": "1064"
+  },
+  {
+    "id": "5B45N412b_08C_011N",
+    "grade": 5,
+    "unitKey": "speed",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.037公里 = （ ） 米",
+    "options": [
+      "6",
+      "37",
+      "150",
+      "246"
+    ],
+    "answer": "37"
+  },
+  {
+    "id": "5B45N412b_09C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "6.2厘米 = （ ） 毫米",
+    "options": [
+      "6",
+      "246",
+      "150",
+      "62"
+    ],
+    "answer": "62"
+  },
+  {
+    "id": "5B45N412b_10C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.9厘米 = （ ） 毫米",
+    "options": [
+      "9",
+      "246",
+      "6",
+      "150"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B45N412b_11C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "12.3厘米 = （ ） 毫米",
+    "options": [
+      "246",
+      "6",
+      "150",
+      "123"
+    ],
+    "answer": "123"
+  },
+  {
+    "id": "5B45N412b_12C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.637升 = （ ） 毫升",
+    "options": [
+      "637",
+      "246",
+      "6",
+      "150"
+    ],
+    "answer": "637"
+  },
+  {
+    "id": "5B45N412b_13C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "40.03升 = （ ） 毫升",
+    "options": [
+      "150",
+      "800",
+      "40030",
+      "246"
+    ],
+    "answer": "40030"
+  },
+  {
+    "id": "5B45N412b_14C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "1.84升 = （ ） 毫升",
+    "options": [
+      "800",
+      "150",
+      "1840",
+      "246"
+    ],
+    "answer": "1840"
+  },
+  {
+    "id": "5B45N412b_15C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "5.7升 = （ ） 毫升",
+    "options": [
+      "246",
+      "5700",
+      "150",
+      "800"
+    ],
+    "answer": "5700"
+  },
+  {
+    "id": "5B45N412b_16C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "25.3升 = （ ） 毫升",
+    "options": [
+      "800",
+      "25300",
+      "150",
+      "246"
+    ],
+    "answer": "25300"
+  },
+  {
+    "id": "5B45N412b_17C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "6.834公斤 = （ ） 克",
+    "options": [
+      "246",
+      "150",
+      "6834",
+      "800"
+    ],
+    "answer": "6834"
+  },
+  {
+    "id": "5B45N412b_18C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "4.05公斤 = （ ） 克",
+    "options": [
+      "4050",
+      "800",
+      "246",
+      "150"
+    ],
+    "answer": "4050"
+  },
+  {
+    "id": "5B45N412b_19C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "0.67公斤 = （ ） 克",
+    "options": [
+      "670",
+      "246",
+      "150",
+      "6"
+    ],
+    "answer": "670"
+  },
+  {
+    "id": "5B45N412b_20C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "40.8公斤 = （ ） 克",
+    "options": [
+      "246",
+      "150",
+      "800",
+      "40800"
+    ],
+    "answer": "40800"
+  },
+  {
+    "id": "5B45N412b_21C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "右面的西瓜重 （ ） kg， 即重 （ ） g。",
+    "options": [
+      "800",
+      "1.2 kg",
+      "246",
+      "150"
+    ],
+    "answer": "1.2 kg"
+  },
+  {
+    "id": "5B45N412b_22C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "右面的青椒共重 （ ） kg， 即共重 （ ） g。",
+    "options": [
+      "0.34 kg",
+      "150",
+      "246",
+      "800"
+    ],
+    "answer": "0.34 kg"
+  },
+  {
+    "id": "5B45N412b_23C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "右面的牛角包重 （ ） kg， 即重 （ ） g。",
+    "options": [
+      "150",
+      "246",
+      "800",
+      "0.097 kg"
+    ],
+    "answer": "0.097 kg"
+  },
+  {
+    "id": "5B45N412b_26C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "攪拌機重 （ ） 克。",
+    "options": [
+      "800",
+      "150",
+      "246",
+      "重1.4公斤"
+    ],
+    "answer": "重1.4公斤"
+  },
+  {
+    "id": "5B45N412b_27C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "筆盒厚 （ ） 毫米。",
+    "options": [
+      "246",
+      "150",
+      "4.7厘米",
+      "800"
+    ],
+    "answer": "4.7厘米"
+  },
+  {
+    "id": "5B45N412b_28C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "紙夾闊 （ ） mm。",
+    "options": [
+      "800",
+      "0.9 cm",
+      "246",
+      "150"
+    ],
+    "answer": "0.9 cm"
+  },
+  {
+    "id": "5B45N412b_29C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "原子筆長15.2厘米，即長 （ ） 毫米。",
+    "options": [
+      "800",
+      "150",
+      "246",
+      "15.2厘米"
+    ],
+    "answer": "15.2厘米"
+  },
+  {
+    "id": "5B45N412b_30C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "一盒蘋果汁有 （ ） mL。",
+    "options": [
+      "800",
+      "150",
+      "0.225 L",
+      "246"
+    ],
+    "answer": "0.225 L"
+  },
+  {
+    "id": "5B45N412b_31C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "一盒橙汁有 （ ） 毫升。",
+    "options": [
+      "150",
+      "1100",
+      "246",
+      "800"
+    ],
+    "answer": "1100"
+  },
+  {
+    "id": "5B45N412b_32C_011N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "杯子的容量是 （ ） mL。",
+    "options": [
+      "容量是0.36 L。",
+      "246",
+      "150",
+      "800"
+    ],
+    "answer": "容量是0.36 L。"
+  },
+  {
+    "id": "5B45N412b_33C_011N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "栢喬有200塊右圖的積木。 這個小熊模型重 （ ） kg。 栢喬有200塊右圖的積木。",
+    "options": [
+      "150",
+      "0.03 kg",
+      "246",
+      "800"
+    ],
+    "answer": "0.03 kg",
+    "image": "q-images/5B45N412b_33C_011N__a.webp"
+  },
+  {
+    "id": "5B45N412b_33C_011N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "栢喬有200塊右圖的積木。 這個小熊模型重 （ ） kg。 (a)每塊積木重 （ ） g。",
+    "options": [
+      "150",
+      "246",
+      "30",
+      "6"
+    ],
+    "answer": "30",
+    "image": "q-images/5B45N412b_33C_011N__b.webp"
+  },
+  {
+    "id": "5B45N412b_33C_011N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "栢喬有200塊右圖的積木。 這個小熊模型重 （ ） kg。 (b)栢喬用其中100塊積木砌成一個小熊模型， 這個小熊模型重 （ ） kg。",
+    "options": [
+      "150",
+      "6",
+      "3",
+      "246"
+    ],
+    "answer": "3",
+    "image": "q-images/5B45N412b_33C_011N__c.webp"
+  },
+  {
+    "id": "5B45N412b_34C_011N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "工廠有4000粒右圖的波子。 每份波子重 （ ） 公斤。 工廠有4000粒右圖的波子。",
+    "options": [
+      "0.005 kg",
+      "150",
+      "800",
+      "246"
+    ],
+    "answer": "0.005 kg",
+    "image": "q-images/5B45N412b_34C_011N__a.webp"
+  },
+  {
+    "id": "5B45N412b_34C_011N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "工廠有4000粒右圖的波子。 每份波子重 （ ） 公斤。 (a)每粒波子重 （ ） 克。",
+    "options": [
+      "6",
+      "150",
+      "5",
+      "246"
+    ],
+    "answer": "5",
+    "image": "q-images/5B45N412b_34C_011N__b.webp"
+  },
+  {
+    "id": "5B45N412b_35C_011N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "媽媽為大食會準備了18罐右圖的橙汁。 橙汁 （ ） 升。 媽媽為大食會準備了18罐右圖的橙汁。",
+    "options": [
+      "0.275升",
+      "150",
+      "800",
+      "246"
+    ],
+    "answer": "0.275升"
+  },
+  {
+    "id": "5B45N412b_35C_011N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "媽媽為大食會準備了18罐右圖的橙汁。 橙汁 （ ） 升。 (a)每罐橙汁有 （ ） 毫升。",
+    "options": [
+      "246",
+      "150",
+      "6",
+      "275"
+    ],
+    "answer": "275"
+  },
+  {
+    "id": "5B45N412b_35C_011N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "媽媽為大食會準備了18罐右圖的橙汁。 橙汁 （ ） 升。 (b)小朋友共喝了橙汁10罐，即共喝了 橙汁 （ ） 升。",
+    "options": [
+      "800",
+      "246",
+      "2.75",
+      "150"
+    ],
+    "answer": "2.75"
+  },
+  {
+    "id": "5B45N412b_36C_011N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "餐廳有40個右圖的瓶子。 共盛了檸檬水 （ ） L。 餐廳有40個右圖的瓶子。",
+    "options": [
+      "150",
+      "容量是1.05 L。",
+      "246",
+      "800"
+    ],
+    "answer": "容量是1.05 L。",
+    "image": "q-images/5B45N412b_36C_011N__a.webp"
+  },
+  {
+    "id": "5B45N412b_36C_011N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "餐廳有40個右圖的瓶子。 共盛了檸檬水 （ ） L。 (a)每個瓶子的容量是 （ ） mL。",
+    "options": [
+      "1050",
+      "150",
+      "800",
+      "246"
+    ],
+    "answer": "1050",
+    "image": "q-images/5B45N412b_36C_011N__b.webp"
+  },
+  {
+    "id": "5B45N412b_36C_011N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "餐廳有40個右圖的瓶子。 共盛了檸檬水 （ ） L。 (b)侍應把其中10個瓶子盛滿檸檬水，即 共盛了檸檬水 （ ） L。",
+    "options": [
+      "800",
+      "150",
+      "246",
+      "10.5"
+    ],
+    "answer": "10.5",
+    "image": "q-images/5B45N412b_36C_011N__c.webp"
+  },
+  {
+    "id": "5B45N412b_37C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "每個杯子的容量是0.48 L，爸爸把10個杯子注滿水， 即共注水 （ ） mL。",
+    "options": [
+      "246",
+      "150",
+      "4800",
+      "800"
+    ],
+    "answer": "4800"
+  },
+  {
+    "id": "5B45N412b_38C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "每瓶柔順劑有2.3升，洗衣工場上月用去柔順劑100瓶， 即共用去柔順劑 （ ） 毫升。",
+    "options": [
+      "800",
+      "246",
+      "230000",
+      "150"
+    ],
+    "answer": "230000"
+  },
+  {
+    "id": "5B45N412b_39C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "一座大廈每層高3.04米，共高100層，即共高 （ ） 厘米。",
+    "options": [
+      "800",
+      "246",
+      "30400",
+      "150"
+    ],
+    "answer": "30400"
+  },
+  {
+    "id": "5B45N412b_40C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "每張畫紙厚0.07厘米，一疊100張的畫紙厚 （ ） 毫米。",
+    "options": [
+      "150",
+      "70",
+      "6",
+      "246"
+    ],
+    "answer": "70"
+  },
+  {
+    "id": "5B45N412b_41C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "每本筆記簿重0.19 kg，10本筆記簿共重 （ ） g。",
+    "options": [
+      "1900",
+      "800",
+      "150",
+      "246"
+    ],
+    "answer": "1900"
+  },
+  {
+    "id": "5B45N412b_42C_012N",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "每杯果凍重0.21公斤，工廠生產了果凍1000杯， 即共生產了果凍 （ ） 克。",
+    "options": [
+      "246",
+      "150",
+      "800",
+      "210000"
+    ],
+    "answer": "210000"
+  },
+  {
+    "id": "5B45N412b_44C_041N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "把答案填在橫線上。 把答案填在橫線上。",
+    "options": [
+      "150",
+      "246",
+      "2140",
+      "800"
+    ],
+    "answer": "2140"
+  },
+  {
+    "id": "5B45N412b_44C_041N#b",
+    "grade": 5,
+    "unitKey": "speed",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "把答案填在橫線上。 (a) 2.14公里 = （ ） 米",
+    "options": [
+      "6",
+      "58",
+      "150",
+      "246"
+    ],
+    "answer": "58"
+  },
+  {
+    "id": "5B45N412b_44C_041N#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "把答案填在橫線上。 (b) 0.058 kg = （ ） g",
+    "options": [
+      "800",
+      "246",
+      "1005",
+      "150"
+    ],
+    "answer": "1005"
+  },
+  {
+    "id": "5B45N412b_45C_042N#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "李太太買了上圖的葡萄和香蕉。 李太太買了上圖的葡萄和香蕉。",
+    "options": [
+      "150",
+      "700",
+      "246",
+      "6"
+    ],
+    "answer": "700",
+    "image": "q-images/5B45N412b_45C_042N__a.webp"
+  },
+  {
+    "id": "5B45N412b_45C_042N#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B45N412b.docx",
+    "topic": "5B45N412b  單位轉換",
+    "question": "李太太買了上圖的葡萄和香蕉。 (a) 葡萄重 （ ） 克。",
+    "options": [
+      "150",
+      "1120",
+      "246",
+      "800"
+    ],
+    "answer": "1120",
+    "image": "q-images/5B45N412b_45C_042N__b.webp"
+  },
+  {
+    "id": "5B45N413a_01C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "0.6 × 9 = （ ）",
+    "options": [
+      "37",
+      "5.4",
+      "47.2",
+      "1.2"
+    ],
+    "answer": "5.4"
+  },
+  {
+    "id": "5B45N413a_02C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "0.3 × 4 = （ ）",
+    "options": [
+      "5.4",
+      "47.2",
+      "37",
+      "1.2"
+    ],
+    "answer": "1.2"
+  },
+  {
+    "id": "5B45N413a_03C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "5.9 × 8 = （ ）",
+    "options": [
+      "37",
+      "5.4",
+      "47.2",
+      "1.2"
+    ],
+    "answer": "47.2"
+  },
+  {
+    "id": "5B45N413a_04C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "7.4 × 5 = （ ）",
+    "options": [
+      "47.2",
+      "37",
+      "1.2",
+      "5.4"
+    ],
+    "answer": "37"
+  },
+  {
+    "id": "5B45N413a_05C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "6 × 2.7 = （ ）",
+    "options": [
+      "1.2",
+      "5.4",
+      "47.2",
+      "16.2"
+    ],
+    "answer": "16.2"
+  },
+  {
+    "id": "5B45N413a_06C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "4 × 3.5 = （ ）",
+    "options": [
+      "47.2",
+      "1.2",
+      "14",
+      "5.4"
+    ],
+    "answer": "14"
+  },
+  {
+    "id": "5B45N413a_07C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "1.8 × 12 = （ ）",
+    "options": [
+      "21.6",
+      "1.2",
+      "5.4",
+      "47.2"
+    ],
+    "answer": "21.6"
+  },
+  {
+    "id": "5B45N413a_08C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "2.4 × 36 = （ ）",
+    "options": [
+      "5.4",
+      "47.2",
+      "86.4",
+      "1.2"
+    ],
+    "answer": "86.4"
+  },
+  {
+    "id": "5B45N413a_09C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "31 × 5.8 = （ ）",
+    "options": [
+      "5.4",
+      "47.2",
+      "179.8",
+      "1.2"
+    ],
+    "answer": "179.8"
+  },
+  {
+    "id": "5B45N413a_10C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "70 × 4.2 = （ ）",
+    "options": [
+      "1.2",
+      "294",
+      "47.2",
+      "5.4"
+    ],
+    "answer": "294"
+  },
+  {
+    "id": "5B45N413a_11C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "23.6 × 7 = （ ）",
+    "options": [
+      "1.2",
+      "47.2",
+      "5.4",
+      "165.2"
+    ],
+    "answer": "165.2"
+  },
+  {
+    "id": "5B45N413a_12C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "54.3 × 5 = （ ）",
+    "options": [
+      "1.2",
+      "5.4",
+      "271.5",
+      "47.2"
+    ],
+    "answer": "271.5"
+  },
+  {
+    "id": "5B45N413a_13C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "20.7 × 24 = （ ）",
+    "options": [
+      "1.2",
+      "496.8",
+      "47.2",
+      "5.4"
+    ],
+    "answer": "496.8"
+  },
+  {
+    "id": "5B45N413a_14C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "48.9 × 11 = （ ）",
+    "options": [
+      "5.4",
+      "1.2",
+      "47.2",
+      "537.9"
+    ],
+    "answer": "537.9"
+  },
+  {
+    "id": "5B45N413a_15C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "0.08 × 9 = （ ）",
+    "options": [
+      "5.4",
+      "1.2",
+      "0.72",
+      "47.2"
+    ],
+    "answer": "0.72"
+  },
+  {
+    "id": "5B45N413a_16C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "4 × 0.06 = （ ）",
+    "options": [
+      "5.4",
+      "1.2",
+      "0.24",
+      "47.2"
+    ],
+    "answer": "0.24"
+  },
+  {
+    "id": "5B45N413a_17C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "0.33 × 5 = （ ）",
+    "options": [
+      "5.4",
+      "1.2",
+      "47.2",
+      "1.65"
+    ],
+    "answer": "1.65"
+  },
+  {
+    "id": "5B45N413a_18C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "6 × 0.47 = （ ）",
+    "options": [
+      "2.82",
+      "47.2",
+      "5.4",
+      "1.2"
+    ],
+    "answer": "2.82"
+  },
+  {
+    "id": "5B45N413a_19C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "2.31 × 7 = （ ）",
+    "options": [
+      "47.2",
+      "1.2",
+      "16.17",
+      "5.4"
+    ],
+    "answer": "16.17"
+  },
+  {
+    "id": "5B45N413a_20C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "8.44 × 9 = （ ）",
+    "options": [
+      "75.96",
+      "5.4",
+      "47.2",
+      "1.2"
+    ],
+    "answer": "75.96"
+  },
+  {
+    "id": "5B45N413a_21C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "0.63 × 27 = （ ）",
+    "options": [
+      "5.4",
+      "1.2",
+      "17.01",
+      "47.2"
+    ],
+    "answer": "17.01"
+  },
+  {
+    "id": "5B45N413a_22C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "1.72 × 15 = （ ）",
+    "options": [
+      "5.4",
+      "47.2",
+      "1.2",
+      "25.8"
+    ],
+    "answer": "25.8"
+  },
+  {
+    "id": "5B45N413a_23C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "43 × 6.28 = （ ）",
+    "options": [
+      "5.4",
+      "270.04",
+      "1.2",
+      "47.2"
+    ],
+    "answer": "270.04"
+  },
+  {
+    "id": "5B45N413a_44C_052N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "×",
+      "47.2",
+      "5.4",
+      "1.2"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_45C_052N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "5.4",
+      "47.2",
+      "1.2",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_46C_052N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "47.2",
+      "1.2",
+      "×",
+      "5.4"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_47C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "5.4",
+      "×",
+      "47.2",
+      "1.2"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_48C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "5.4",
+      "×",
+      "1.2",
+      "47.2"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_49C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "5.4",
+      "47.2",
+      "×",
+      "1.2"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_50C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "1.2",
+      "5.4",
+      "47.2",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_51C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "5.4",
+      "1.2",
+      "×",
+      "47.2"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N413a_52C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "先估算，再計算。 19.8 × 4 =？ 結果約是： （ ） × （ ） = （ ） 19.8 × 4 = （ ）",
+    "options": [
+      "1.2",
+      "5.4",
+      "47.2",
+      "79.2"
+    ],
+    "answer": "79.2"
+  },
+  {
+    "id": "5B45N413a_53C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "先估算，再計算。 2.4 × 17 =？ 結果約是： （ ） × （ ） = （ ） 2.4 × 17 = （ ）",
+    "options": [
+      "47.2",
+      "5.4",
+      "40.8",
+      "1.2"
+    ],
+    "answer": "40.8"
+  },
+  {
+    "id": "5B45N413a_54C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "先估算，再計算。 29.6 × 51 =？ 結果約是： （ ） × （ ） = （ ） 29.6 × 51 = （ ）",
+    "options": [
+      "1509.6",
+      "47.2",
+      "5.4",
+      "1.2"
+    ],
+    "answer": "1509.6"
+  },
+  {
+    "id": "5B45N413a_55C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "先估算，再計算。 7.94 × 8 =？ 結果約是： （ ） × （ ） = （ ） 7.94 × 8 = （ ）",
+    "options": [
+      "5.4",
+      "1.2",
+      "47.2",
+      "63.52"
+    ],
+    "answer": "63.52"
+  },
+  {
+    "id": "5B45N413a_56C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "先估算，再計算。 1.89 × 21 =？ 結果約是： （ ） × （ ） = （ ） 1.89 × 21 = （ ）",
+    "options": [
+      "47.2",
+      "1.2",
+      "39.69",
+      "5.4"
+    ],
+    "answer": "39.69"
+  },
+  {
+    "id": "5B45N413a_57C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "先估算，再計算。 8.12 × 69 =？ 結果約是： （ ） × （ ） = （ ） 8.12 × 69 = （ ）",
+    "options": [
+      "5.4",
+      "560.28",
+      "1.2",
+      "47.2"
+    ],
+    "answer": "560.28"
+  },
+  {
+    "id": "5B45N413a_72C_042P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "在計算2.6 × 5時，希文錯誤地計算為26 × 5。 在計算2.6 × 5時，希文錯誤地計算為26 × 5。",
+    "options": [
+      "1.2",
+      "5.4",
+      "47.2",
+      "130"
+    ],
+    "answer": "130"
+  },
+  {
+    "id": "5B45N413a_72C_042P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "在計算2.6 × 5時，希文錯誤地計算為26 × 5。 (a) 希文的計算結果是 （ ）。",
+    "options": [
+      "47.2",
+      "10",
+      "5.4",
+      "1.2"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B45N413a_73C_122P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "在計算6 × 0.11時，嘉駿錯誤地計算為6 × 1.1，如上圖所示。 在計算6 × 0.11時，嘉駿錯誤地計算為6 × 1.1，如上圖所示。",
+    "options": [
+      "5.4",
+      "47.2",
+      "6×1.16.6",
+      "1.2"
+    ],
+    "answer": "6×1.16.6",
+    "image": "q-images/5B45N413a_73C_122P__a.webp"
+  },
+  {
+    "id": "5B45N413a_73C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "在計算6 × 0.11時，嘉駿錯誤地計算為6 × 1.1，如上圖所示。 (a) 正確答案是 （ ）。",
+    "options": [
+      "5.4",
+      "47.2",
+      "0.66",
+      "1.2"
+    ],
+    "answer": "0.66",
+    "image": "q-images/5B45N413a_73C_122P__b.webp"
+  },
+  {
+    "id": "5B45N413a_73C_122P#c",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "在計算6 × 0.11時，嘉駿錯誤地計算為6 × 1.1，如上圖所示。 (b) 嘉駿的計算結果比正確答案（ 大 / 小 ）（ ）。",
+    "options": [
+      "5.94",
+      "47.2",
+      "1.2",
+      "5.4"
+    ],
+    "answer": "5.94",
+    "image": "q-images/5B45N413a_73C_122P__c.webp"
+  },
+  {
+    "id": "5B45N413a_74C_122N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "把5和9填在方格內，使算式的結果最大，並把結果填在橫線上。 .6 × = （ ）",
+    "options": [
+      "1.2",
+      "50.4",
+      "47.2",
+      "5.4"
+    ],
+    "answer": "50.4"
+  },
+  {
+    "id": "5B45N413a_80C_082N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "用上面的數卡和小數點卡組成一個最小的兩位小數，這個兩位小數乘以9的結果是多少？",
+    "options": [
+      "124.2",
+      "16.47",
+      "12.42",
+      "1.38"
+    ],
+    "answer": "1.38"
+  },
+  {
+    "id": "5B45N413a_81C_082N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N413a.docx",
+    "topic": "5B45N413a  小數與整數相乘",
+    "question": "用上面的數卡和小數點卡組成一個最大的一位小數，這個一位小數乘以4的結果是多少？",
+    "options": [
+      "227.6",
+      "386",
+      "96.5",
+      "38.6"
+    ],
+    "answer": "96.5"
+  },
+  {
+    "id": "5B45N414a_01C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.3 × 0.9 = （ ）",
+    "options": [
+      "0.27",
+      "0.92",
+      "6.08",
+      "0.2"
+    ],
+    "answer": "0.27"
+  },
+  {
+    "id": "5B45N414a_02C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.4 × 0.5 = （ ）",
+    "options": [
+      "0.2",
+      "6.08",
+      "0.92",
+      "0.27"
+    ],
+    "answer": "0.2"
+  },
+  {
+    "id": "5B45N414a_03C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "7.6 × 0.8 = （ ）",
+    "options": [
+      "0.2",
+      "6.08",
+      "0.92",
+      "0.27"
+    ],
+    "answer": "6.08"
+  },
+  {
+    "id": "5B45N414a_04C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "2.3 × 0.4 = （ ）",
+    "options": [
+      "6.08",
+      "0.92",
+      "0.27",
+      "0.2"
+    ],
+    "answer": "0.92"
+  },
+  {
+    "id": "5B45N414a_05C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "8.4 × 8.3 = （ ）",
+    "options": [
+      "0.27",
+      "6.08",
+      "69.72",
+      "0.2"
+    ],
+    "answer": "69.72"
+  },
+  {
+    "id": "5B45N414a_06C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "7.1 × 3.6 = （ ）",
+    "options": [
+      "0.2",
+      "6.08",
+      "0.27",
+      "25.56"
+    ],
+    "answer": "25.56"
+  },
+  {
+    "id": "5B45N414a_07C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "21.3 × 0.7 = （ ）",
+    "options": [
+      "6.08",
+      "0.2",
+      "0.27",
+      "14.91"
+    ],
+    "answer": "14.91"
+  },
+  {
+    "id": "5B45N414a_08C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "50.6 × 0.9 = （ ）",
+    "options": [
+      "0.2",
+      "0.27",
+      "45.54",
+      "6.08"
+    ],
+    "answer": "45.54"
+  },
+  {
+    "id": "5B45N414a_09C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.6 × 14.8 = （ ）",
+    "options": [
+      "0.2",
+      "8.88",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "8.88"
+  },
+  {
+    "id": "5B45N414a_10C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.5 × 30.4 = （ ）",
+    "options": [
+      "6.08",
+      "15.2",
+      "0.2",
+      "0.27"
+    ],
+    "answer": "15.2"
+  },
+  {
+    "id": "5B45N414a_11C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "21.7 × 5.2 = （ ）",
+    "options": [
+      "6.08",
+      "0.2",
+      "0.27",
+      "112.84"
+    ],
+    "answer": "112.84"
+  },
+  {
+    "id": "5B45N414a_12C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "18.1 × 6.9 = （ ）",
+    "options": [
+      "124.89",
+      "6.08",
+      "0.2",
+      "0.27"
+    ],
+    "answer": "124.89"
+  },
+  {
+    "id": "5B45N414a_13C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "4.8 × 33.5 = （ ）",
+    "options": [
+      "0.2",
+      "160.8",
+      "0.27",
+      "6.08"
+    ],
+    "answer": "160.8"
+  },
+  {
+    "id": "5B45N414a_14C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "3.2 × 10.6 = （ ）",
+    "options": [
+      "0.27",
+      "33.92",
+      "0.2",
+      "6.08"
+    ],
+    "answer": "33.92"
+  },
+  {
+    "id": "5B45N414a_15C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "1.47 × 0.3 = （ ）",
+    "options": [
+      "0.441",
+      "0.2",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "0.441"
+  },
+  {
+    "id": "5B45N414a_16C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "5.25 × 0.6 = （ ）",
+    "options": [
+      "6.08",
+      "3.15",
+      "0.2",
+      "0.27"
+    ],
+    "answer": "3.15"
+  },
+  {
+    "id": "5B45N414a_17C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "3.9 × 0.05 = （ ）",
+    "options": [
+      "0.2",
+      "6.08",
+      "0.27",
+      "0.195"
+    ],
+    "answer": "0.195"
+  },
+  {
+    "id": "5B45N414a_18C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "6.1 × 0.04 = （ ）",
+    "options": [
+      "0.2",
+      "6.08",
+      "0.27",
+      "0.244"
+    ],
+    "answer": "0.244"
+  },
+  {
+    "id": "5B45N414a_19C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "52.4 × 0.07 = （ ）",
+    "options": [
+      "3.668",
+      "0.27",
+      "0.2",
+      "6.08"
+    ],
+    "answer": "3.668"
+  },
+  {
+    "id": "5B45N414a_20C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "80.2 × 0.05 = （ ）",
+    "options": [
+      "0.27",
+      "4.01",
+      "0.2",
+      "6.08"
+    ],
+    "answer": "4.01"
+  },
+  {
+    "id": "5B45N414a_21C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.06 × 48.1 = （ ）",
+    "options": [
+      "0.2",
+      "2.928",
+      "0.27",
+      "6.08"
+    ],
+    "answer": "2.928"
+  },
+  {
+    "id": "5B45N414a_22C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.04 × 20.5 = （ ）",
+    "options": [
+      "0.27",
+      "6.08",
+      "0.2",
+      "0.82"
+    ],
+    "answer": "0.82"
+  },
+  {
+    "id": "5B45N414a_23C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "5.48 × 6.1 = （ ）",
+    "options": [
+      "0.27",
+      "0.2",
+      "33.428",
+      "6.08"
+    ],
+    "answer": "33.428"
+  },
+  {
+    "id": "5B45N414a_24C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "7.23 × 1.2 = （ ）",
+    "options": [
+      "6.08",
+      "8.676",
+      "0.27",
+      "0.2"
+    ],
+    "answer": "8.676"
+  },
+  {
+    "id": "5B45N414a_25C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.27 × 82.4 = （ ）",
+    "options": [
+      "0.2",
+      "0.27",
+      "6.08",
+      "22.248"
+    ],
+    "answer": "22.248"
+  },
+  {
+    "id": "5B45N414a_26C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "6.6 × 8.43 = （ ）",
+    "options": [
+      "6.08",
+      "0.27",
+      "55.638",
+      "0.2"
+    ],
+    "answer": "55.638"
+  },
+  {
+    "id": "5B45N414a_27C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "15.7 × 0.23 = （ ）",
+    "options": [
+      "6.08",
+      "0.2",
+      "0.27",
+      "3.611"
+    ],
+    "answer": "3.611"
+  },
+  {
+    "id": "5B45N414a_28C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.45 × 7.4 = （ ）",
+    "options": [
+      "3.33",
+      "6.08",
+      "0.2",
+      "0.27"
+    ],
+    "answer": "3.33"
+  },
+  {
+    "id": "5B45N414a_29C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.02 × 0.09 = （ ）",
+    "options": [
+      "0.0018",
+      "0.2",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "0.0018"
+  },
+  {
+    "id": "5B45N414a_30C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.45 × 0.03 = （ ）",
+    "options": [
+      "0.27",
+      "6.08",
+      "0.2",
+      "0.0135"
+    ],
+    "answer": "0.0135"
+  },
+  {
+    "id": "5B45N414a_31C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "7.03 × 0.16 = （ ）",
+    "options": [
+      "1.1248",
+      "0.27",
+      "0.2",
+      "6.08"
+    ],
+    "answer": "1.1248"
+  },
+  {
+    "id": "5B45N414a_32C_011P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.25 × 3.94 = （ ）",
+    "options": [
+      "6.08",
+      "0.2",
+      "0.27",
+      "0.985"
+    ],
+    "answer": "0.985"
+  },
+  {
+    "id": "5B45N414a_33C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "5.1 × 0.9 ≈ （ ）（答案取至十分位）",
+    "options": [
+      "0.27",
+      "4.6",
+      "6.08",
+      "0.2"
+    ],
+    "answer": "4.6"
+  },
+  {
+    "id": "5B45N414a_34C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "4.6 × 0.07 ≈ （ ）（答案取至十分位）",
+    "options": [
+      "6.08",
+      "0.27",
+      "0.2",
+      "0.3"
+    ],
+    "answer": "0.3"
+  },
+  {
+    "id": "5B45N414a_35C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "7.08 × 6.5 ≈ （ ）（答案取至十分位）",
+    "options": [
+      "6.08",
+      "0.27",
+      "0.2",
+      "46.0"
+    ],
+    "answer": "46.0"
+  },
+  {
+    "id": "5B45N414a_36C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "3.72 × 0.88 ≈ （ ）（答案取至十分位）",
+    "options": [
+      "0.2",
+      "0.27",
+      "6.08",
+      "3.3"
+    ],
+    "answer": "3.3"
+  },
+  {
+    "id": "5B45N414a_37C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "2.81 × 0.3 ≈ （ ）（答案取至百分位）",
+    "options": [
+      "6.08",
+      "0.84",
+      "0.27",
+      "0.2"
+    ],
+    "answer": "0.84"
+  },
+  {
+    "id": "5B45N414a_38C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "5.5 × 0.43 ≈ （ ）（答案取至百分位）",
+    "options": [
+      "6.08",
+      "2.37",
+      "0.27",
+      "0.2"
+    ],
+    "answer": "2.37"
+  },
+  {
+    "id": "5B45N414a_39C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "1.92 × 7.8 ≈ （ ）（答案取至百分位）",
+    "options": [
+      "0.27",
+      "6.08",
+      "0.2",
+      "14.98"
+    ],
+    "answer": "14.98"
+  },
+  {
+    "id": "5B45N414a_40C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "1.52 × 0.94 ≈ （ ）（答案取至百分位）",
+    "options": [
+      "0.2",
+      "1.43",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "1.43"
+  },
+  {
+    "id": "5B45N414a_41C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.8 × 0.7 ≈ （ ）（答案取至小數點後一個位）",
+    "options": [
+      "6.08",
+      "0.27",
+      "0.2",
+      "0.6"
+    ],
+    "answer": "0.6"
+  },
+  {
+    "id": "5B45N414a_42C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "9.1 × 0.09 ≈ （ ）（答案取至小數點後一個位）",
+    "options": [
+      "6.08",
+      "0.8",
+      "0.2",
+      "0.27"
+    ],
+    "answer": "0.8"
+  },
+  {
+    "id": "5B45N414a_43C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.35 × 0.35 ≈ （ ）（答案取至小數點後一個位）",
+    "options": [
+      "0.1",
+      "6.08",
+      "0.27",
+      "0.2"
+    ],
+    "answer": "0.1"
+  },
+  {
+    "id": "5B45N414a_44C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "10.7 × 0.93 ≈ （ ）（答案取至小數點後一個位）",
+    "options": [
+      "0.2",
+      "10.0",
+      "0.27",
+      "6.08"
+    ],
+    "answer": "10.0"
+  },
+  {
+    "id": "5B45N414a_45C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.25 × 0.7 ≈ （ ）（答案取至小數點後兩個位）",
+    "options": [
+      "6.08",
+      "0.2",
+      "0.27",
+      "0.18"
+    ],
+    "answer": "0.18"
+  },
+  {
+    "id": "5B45N414a_46C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "3.08 × 4.2 ≈ （ ）（答案取至小數點後兩個位）",
+    "options": [
+      "0.2",
+      "12.94",
+      "0.27",
+      "6.08"
+    ],
+    "answer": "12.94"
+  },
+  {
+    "id": "5B45N414a_47C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "8.2 × 1.79 ≈ （ ）（答案取至小數點後兩個位）",
+    "options": [
+      "14.68",
+      "0.27",
+      "0.2",
+      "6.08"
+    ],
+    "answer": "14.68"
+  },
+  {
+    "id": "5B45N414a_48C_011N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "0.54 × 7.26 ≈ （ ）（答案取至小數點後兩個位）",
+    "options": [
+      "39.2",
+      "0.27",
+      "0.2",
+      "6.08"
+    ],
+    "answer": "39.2"
+  },
+  {
+    "id": "5B45N414a_70C_052N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "0.2",
+      "0.27",
+      "6.08",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_71C_052N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "0.2",
+      "0.27",
+      "6.08",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_72C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "0.2",
+      "×",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_73C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "0.2",
+      "0.27",
+      "6.08",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_74C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "0.27",
+      "6.08",
+      "0.2",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_75C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "0.27",
+      "0.2",
+      "×",
+      "6.08"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_76C_052P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把適當的數字填在空格內。",
+    "options": [
+      "6.08",
+      "0.2",
+      "0.27",
+      "×"
+    ],
+    "answer": "×"
+  },
+  {
+    "id": "5B45N414a_77C_021N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "先估算，再計算。 4.3 × 6.6 =？ 結果約是： （ ） × （ ） = （ ） 4.3 × 6.6 = （ ）",
+    "options": [
+      "28.38",
+      "0.2",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "28.38"
+  },
+  {
+    "id": "5B45N414a_97C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "子健在計算「21.2 × 0.4」的時候，錯誤地把題目計算為「2.12 × 0.4」。 (a) 正確答案是 （ ）。",
+    "options": [
+      "0.2",
+      "7.632",
+      "0.27",
+      "6.08"
+    ],
+    "answer": "7.632"
+  },
+  {
+    "id": "5B45N414a_98C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "思欣在計算「1.7 × 3.6」的時候，錯誤地把題目計算為「1.7 × 36」。 (a) 正確答案是 （ ）。",
+    "options": [
+      "55.08",
+      "0.2",
+      "6.08",
+      "0.27"
+    ],
+    "answer": "55.08"
+  },
+  {
+    "id": "5B45N414a_99C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "洛兒在計算「9.56 × 2.5」的時候，錯誤地把題目計算為「95.6 × 2.5」。 (a) 正確答案是 （ ）。",
+    "options": [
+      "215.1",
+      "6.08",
+      "0.27",
+      "0.2"
+    ],
+    "answer": "215.1"
+  },
+  {
+    "id": "5B45N414f_01C_111N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "計算0.72 × 3.04，答案取至小數點後兩個位。 答案︰（ ）",
+    "options": [
+      "6.08",
+      "2.19",
+      "0.2",
+      "0.27"
+    ],
+    "answer": "2.19"
+  },
+  {
+    "id": "5B45N414f_02C_111N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "計算5.58 × 0.9，答案取至小數點後一個位。 答案︰（ ）",
+    "options": [
+      "0.27",
+      "6.08",
+      "5.0",
+      "0.2"
+    ],
+    "answer": "5.0"
+  },
+  {
+    "id": "5B45N414f_03C_111N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "計算4.6 × 0.33，答案取至十分位。 答案︰（ ）",
+    "options": [
+      "6.08",
+      "0.2",
+      "1.5",
+      "0.27"
+    ],
+    "answer": "1.5"
+  },
+  {
+    "id": "5B45N414f_04C_122N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414a.docx",
+    "topic": "5B45N414a  小數與小數相乘",
+    "question": "把4、5和8填在方格內，使算式的結果最大，並把算式的答案填在橫線上。 2. × . = （ ）",
+    "options": [
+      "0.2",
+      "0.27",
+      "6.08",
+      "21"
+    ],
+    "answer": "21"
+  },
+  {
+    "id": "5B45N414b_01C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "浩維在高高便利店兼職一天，可得 （ ） 元。",
+    "options": [
+      "0.6 × 4=2.4即共買了砂糖2.4公斤。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50"
+    ],
+    "answer": "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元"
+  },
+  {
+    "id": "5B45N414b_02C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一粒珠子重3.9克，26粒共重 （ ） 克。",
+    "options": [
+      "216",
+      "101.4",
+      "56.1",
+      "3.6"
+    ],
+    "answer": "101.4"
+  },
+  {
+    "id": "5B45N414b_03C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一座大廈每層高3.3米。升降機由頂樓下降17層，升降機下降了 （ ） 米。",
+    "options": [
+      "216",
+      "3.6",
+      "56.1",
+      "101.4"
+    ],
+    "answer": "56.1"
+  },
+  {
+    "id": "5B45N414b_04C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一個杯子的容量是0.45升，一個水瓶的容量是一個杯子的8倍。 一個水瓶的容量是 （ ） 升。",
+    "options": [
+      "101.4",
+      "3.6",
+      "216",
+      "56.1"
+    ],
+    "answer": "3.6"
+  },
+  {
+    "id": "5B45N414b_05C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一個水盆的容量是4.8升，一個魚缸的容量是一個水盆的16倍。 一個魚缸的容量是 （ ） 升。",
+    "options": [
+      "101.4",
+      "76.8",
+      "216",
+      "56.1"
+    ],
+    "answer": "76.8"
+  },
+  {
+    "id": "5B45N414b_06C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一個水桶的容量是27.5升，一個浴缸的容量是一個水桶的9.2倍。 一個浴缸的容量是 （ ） 升。",
+    "options": [
+      "56.1",
+      "216",
+      "101.4",
+      "253"
+    ],
+    "answer": "253"
+  },
+  {
+    "id": "5B45N414b_07C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "兄妹3人合資買一盒拼圖，每人需付52.3元。 這盒拼圖的售價是 （ ） 元。",
+    "options": [
+      "156.9",
+      "56.1",
+      "216",
+      "101.4"
+    ],
+    "answer": "156.9"
+  },
+  {
+    "id": "5B45N414b_08C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一枝竹簽長8.3厘米。子俊把15枝竹簽緊貼頭尾排成一直行，這直行 共長 （ ） 厘米。",
+    "options": [
+      "124.5",
+      "56.1",
+      "101.4",
+      "216"
+    ],
+    "answer": "124.5"
+  },
+  {
+    "id": "5B45N414b_09C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "黃小姐上月工作22天，每天工作8.5小時。 黃小姐上月工作 （ ） 小時。",
+    "options": [
+      "216",
+      "187",
+      "56.1",
+      "101.4"
+    ],
+    "answer": "187"
+  },
+  {
+    "id": "5B45N414b_10C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一本補充練習售34.5元，嘉晴買了3本，共需付 （ ） 元。",
+    "options": [
+      "216",
+      "101.4",
+      "103.5",
+      "56.1"
+    ],
+    "answer": "103.5"
+  },
+  {
+    "id": "5B45N414b_11C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每卷絲帶長10.6米。樂心買了4卷，她買了絲帶 （ ） 米。",
+    "options": [
+      "101.4",
+      "56.1",
+      "216",
+      "42.4"
+    ],
+    "answer": "42.4"
+  },
+  {
+    "id": "5B45N414b_12C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "爸爸買白菜1.2公斤，需付 （ ） 元。",
+    "options": [
+      "216",
+      "每公斤20.5元",
+      "101.4",
+      "56.1"
+    ],
+    "answer": "每公斤20.5元"
+  },
+  {
+    "id": "5B45N414b_13C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每公斤牛油蛋糕用牛油0.24公斤，一個重1.6公斤的牛油蛋糕，需用 牛油 （ ） 公斤。（把答案取至小數點後兩個位）",
+    "options": [
+      "101.4",
+      "0.38",
+      "216",
+      "56.1"
+    ],
+    "answer": "0.38"
+  },
+  {
+    "id": "5B45N414b_14C_041N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每公斤牛肉售64.8元。媽媽買了0.4公斤，需付 （ ） 元。（把答案取至十分位）",
+    "options": [
+      "216",
+      "56.1",
+      "25.9",
+      "101.4"
+    ],
+    "answer": "25.9"
+  },
+  {
+    "id": "5B45N414b_15C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一枝原子筆售9.9元。思琪買了原子筆五枝，共需付 （ ）。（答案需寫上單位）",
+    "options": [
+      "101.4",
+      "49.5元",
+      "56.1",
+      "216"
+    ],
+    "answer": "49.5元"
+  },
+  {
+    "id": "5B45N414b_16C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一盒朱古力重0.21 kg。爸爸買了朱古力三盒，即共買了朱古力 （ ）。（答案需寫上單位）",
+    "options": [
+      "101.4",
+      "216",
+      "56.1",
+      "0.63 kg"
+    ],
+    "answer": "0.63 kg"
+  },
+  {
+    "id": "5B45N414b_17C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一套洗髮套裝有洗頭水0.8 L和護髮素0.55 L。媽媽買了洗髮套裝 兩套，即共買了護髮素 （ ）。（答案需寫上單位）",
+    "options": [
+      "56.1",
+      "216",
+      "101.4",
+      "1.1 L"
+    ],
+    "answer": "1.1 L"
+  },
+  {
+    "id": "5B45N414b_18C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "卓軒每天儲蓄7.8元，他一星期儲蓄了 （ ） 元。",
+    "options": [
+      "54.6",
+      "101.4",
+      "56.1",
+      "216"
+    ],
+    "answer": "54.6"
+  },
+  {
+    "id": "5B45N414b_19C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每瓶汽水有0.35升。爸爸買了一打汽水，即共買了汽水 （ ） 升。",
+    "options": [
+      "56.1",
+      "216",
+      "101.4",
+      "4.2"
+    ],
+    "answer": "4.2"
+  },
+  {
+    "id": "5B45N414b_20C_042P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一件蛋糕售29.8元，買半打蛋糕共需付 （ ） 元。",
+    "options": [
+      "101.4",
+      "216",
+      "178.8",
+      "56.1"
+    ],
+    "answer": "178.8"
+  },
+  {
+    "id": "5B45N414b_21C_042P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "做一朵絲帶花需用絲帶0.75 m， 做一打絲帶花需用絲帶 （ ） m。",
+    "options": [
+      "9",
+      "3.6",
+      "216",
+      "56.1"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B45N414b_23C_042P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "甲、乙兩個小巴站之間的路程是17.2公里。小巴在甲、乙兩個小巴站之間來回行駛一次（來回一次即是從甲站駛往乙站，再返回甲站）。小巴共行駛了 （ ） 公里。",
+    "options": [
+      "17.2公里",
+      "56.1",
+      "216",
+      "101.4"
+    ],
+    "answer": "17.2公里"
+  },
+  {
+    "id": "5B45N414b_24C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "正方形田地的邊長是4.9米，田地的周界是 （ ） 米。",
+    "options": [
+      "101.4",
+      "216",
+      "56.1",
+      "19.6"
+    ],
+    "answer": "19.6"
+  },
+  {
+    "id": "5B45N414b_25C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "右圖是一個正方形花圃。 花圃的周界是 （ ） 米。",
+    "options": [
+      "7.9米",
+      "101.4",
+      "216",
+      "56.1"
+    ],
+    "answer": "7.9米",
+    "image": "q-images/5B45N414b_25C_042N.webp"
+  },
+  {
+    "id": "5B45N414b_26C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "棋子的面是一個圓。 這個面的半徑是1.6 cm，它的直徑是 （ ） cm。",
+    "options": [
+      "3.2",
+      "56.1",
+      "101.4",
+      "216"
+    ],
+    "answer": "3.2"
+  },
+  {
+    "id": "5B45N414b_27C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "正方形磁磚的邊長是6.8 cm。磁磚的面積是 （ ） cm2。",
+    "options": [
+      "216",
+      "101.4",
+      "46.24",
+      "56.1"
+    ],
+    "answer": "46.24"
+  },
+  {
+    "id": "5B45N414b_28C_042N#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一個正方形講台的邊長是2.65米。 一個正方形講台的邊長是2.65米。",
+    "options": [
+      "101.4",
+      "56.1",
+      "10.6米",
+      "216"
+    ],
+    "answer": "10.6米"
+  },
+  {
+    "id": "5B45N414b_28C_042N#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一個正方形講台的邊長是2.65米。 (a)講台的周界是 （ ）。（答案需寫上單位）",
+    "options": [
+      "7.02平方米",
+      "216",
+      "101.4",
+      "56.1"
+    ],
+    "answer": "7.02平方米"
+  },
+  {
+    "id": "5B45N414b_29C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "製作一盤果凍需用果凍粉240克，廚師想製作果凍30盤，共需用 果凍粉 （ ） 公斤。",
+    "options": [
+      "56.1",
+      "216",
+      "101.4",
+      "7.2"
+    ],
+    "answer": "7.2"
+  },
+  {
+    "id": "5B45N414b_30C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "菜心每公斤售22.5元。張太太買菜心800克，需付 （ ） 元。",
+    "options": [
+      "101.4",
+      "216",
+      "56.1",
+      "18"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B45N414b_31C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一塊正方形玻璃的邊長是180 cm，面積是 （ ） m2。",
+    "options": [
+      "56.1",
+      "3.24",
+      "216",
+      "101.4"
+    ],
+    "answer": "3.24"
+  },
+  {
+    "id": "5B45N414b_32C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一張長方形地毯長0.9米，闊55厘米，面積是 （ ） 平方米。（把答案取至百分位）",
+    "options": [
+      "216",
+      "0.50",
+      "101.4",
+      "56.1"
+    ],
+    "answer": "0.50"
+  },
+  {
+    "id": "5B45N414b_33C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每個碗的容量是310毫升。一個瓶子可盛六碗半水，瓶子的容量是 （ ） 升。（把答案取至小數點後一個位）",
+    "options": [
+      "101.4",
+      "56.1",
+      "2.0",
+      "216"
+    ],
+    "answer": "2.0"
+  },
+  {
+    "id": "5B45N414b_34C_112P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每公斤蟹售140元。媽媽買右面的蟹，需付多少元？ 需付 （ ） 元。",
+    "options": [
+      "168",
+      "216",
+      "56.1",
+      "101.4"
+    ],
+    "answer": "168"
+  },
+  {
+    "id": "5B45N414b_35C_112P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每公斤南瓜售16.7元。媽媽買右面的南瓜，需付多少元？ 需付 （ ） 元。（把答案取至十分位）",
+    "options": [
+      "56.1",
+      "101.4",
+      "216",
+      "53.4"
+    ],
+    "answer": "53.4"
+  },
+  {
+    "id": "5B45N414b_37C_112N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "好味餐廳聘請了3個兼職職員，他們上星期合共工作了22.5小時。餐廳共需付薪金多少元？ 餐廳共需付薪金 （ ） 元。",
+    "options": [
+      "0.6 × 4=2.4即共買了砂糖2.4公斤。",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元"
+    ],
+    "answer": "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元"
+  },
+  {
+    "id": "5B45N414b_39C_042P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "閃電文具店 太陽文具店 家欣在太陽文具店買鉛筆6枝。 （ ） 元。 閃電文具店 太陽文具店 家欣在太陽文具店買鉛筆6枝。",
+    "options": [
+      "101.4",
+      "216",
+      "鉛筆每枝售3.7元",
+      "56.1"
+    ],
+    "answer": "鉛筆每枝售3.7元"
+  },
+  {
+    "id": "5B45N414b_39C_042P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "閃電文具店 太陽文具店 家欣在太陽文具店買鉛筆6枝。 （ ） 元。 (a)家欣共需付 （ ） 元。",
+    "options": [
+      "101.4",
+      "216",
+      "鉛筆6枝售25元",
+      "56.1"
+    ],
+    "answer": "鉛筆6枝售25元"
+  },
+  {
+    "id": "5B45N414b_39C_042P#c",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "閃電文具店 太陽文具店 家欣在太陽文具店買鉛筆6枝。 （ ） 元。 (b)家欣在太陽文具店買鉛筆6枝比在閃電文具店買節省 （ ） 元。",
+    "options": [
+      "56.1",
+      "101.4",
+      "22.2",
+      "216"
+    ],
+    "answer": "22.2"
+  },
+  {
+    "id": "5B45N414b_40C_042P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "(a)叔叔買豆漿4盒，共需付 （ ） 元。",
+    "options": [
+      "56.1",
+      "蘋果汁5.2元",
+      "216",
+      "101.4"
+    ],
+    "answer": "蘋果汁5.2元"
+  },
+  {
+    "id": "5B45N414b_40C_042P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "(b)叔叔用一張50元紙幣付款買豆漿4盒，店員應找回 （ ） 元給他。",
+    "options": [
+      "菊花茶4.5元",
+      "216",
+      "56.1",
+      "101.4"
+    ],
+    "answer": "菊花茶4.5元"
+  },
+  {
+    "id": "5B45N414b_49C_082P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "詠芝利用上面全部四張卡拼出了一個最小的兩位小數，而浩然則利用上面其中三張卡拼出了一個最大的一位小數，他們所拼出的數的積是多少？",
+    "options": [
+      "6.4",
+      "32.38",
+      "16.64",
+      "160"
+    ],
+    "answer": "6.4"
+  },
+  {
+    "id": "5B45N414b_51C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每包砂糖重0.6公斤。媽媽買了4包，即共買了砂糖多少公斤？",
+    "options": [
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "0.6 × 4=2.4即共買了砂糖2.4公斤。"
+    ],
+    "answer": "0.6 × 4=2.4即共買了砂糖2.4公斤。"
+  },
+  {
+    "id": "5B45N414b_52C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每瓶花生油有0.95升。一排花生油有3瓶，即共有花生油多少升？",
+    "options": [
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "0.95 × 3=2.85即共有花生油2.85升。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元"
+    ],
+    "answer": "0.95 × 3=2.85即共有花生油2.85升。"
+  },
+  {
+    "id": "5B45N414b_53C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "陳小姐每小時的薪金是72元。陳小姐工作8.5小時，共得薪金多少元？",
+    "options": [
+      "72 × 8.5=612共得薪金612元。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元"
+    ],
+    "answer": "72 × 8.5=612共得薪金612元。"
+  },
+  {
+    "id": "5B45N414b_54C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "餐廳甲的評分是2.3分，餐廳乙的評分是餐廳甲的2倍。餐廳乙的評分是多少分？",
+    "options": [
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "2.3 × 2=4.6餐廳乙的評分是4.6分。",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元"
+    ],
+    "answer": "2.3 × 2=4.6餐廳乙的評分是4.6分。"
+  },
+  {
+    "id": "5B45N414b_55C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "花瓶的容量是0.8升，澆水壺的容量是花瓶的2.4倍。澆水壺的容量是多少升？",
+    "options": [
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "0.8 × 2.4=1.92澆水壺的容量是1.92升。"
+    ],
+    "answer": "0.8 × 2.4=1.92澆水壺的容量是1.92升。"
+  },
+  {
+    "id": "5B45N414b_56C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "紅色絲帶長0.64米，紫色絲帶的長度是紅色絲帶的1.25倍。紫色絲帶長多少米？",
+    "options": [
+      "0.64 × 1.25=0.8紫色絲帶長0.8米。",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50"
+    ],
+    "answer": "0.64 × 1.25=0.8紫色絲帶長0.8米。"
+  },
+  {
+    "id": "5B45N414b_57C_031N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每升橙汁含糖16.7克。一瓶3.5升的橙汁，含糖多少克？（把答案取至小數點後一個位）",
+    "options": [
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "16.7 × 3.5=58.45≈58.5含糖58.5克。"
+    ],
+    "answer": "16.7 × 3.5=58.45≈58.5含糖58.5克。"
+  },
+  {
+    "id": "5B45N414b_61C_032N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每件西餅售8.6元。媽媽買西餅一打，共需付多少元？",
+    "options": [
+      "8.6 × 12=103.2共需付103.2元。",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元"
+    ],
+    "answer": "8.6 × 12=103.2共需付103.2元。"
+  },
+  {
+    "id": "5B45N414b_62C_032N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "一盒南瓜湯有1.3升，爸爸做晚飯用了南瓜湯1盒半，即用了南瓜湯多少升？",
+    "options": [
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "1.3 × 1.5=1.95即用了南瓜湯1.95升。"
+    ],
+    "answer": "1.3 × 1.5=1.95即用了南瓜湯1.95升。"
+  },
+  {
+    "id": "5B45N414b_65C_032P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "浩峯買三文治5件，共需付多少元？",
+    "options": [
+      "0.6 × 4=2.4即共買了砂糖2.4公斤。",
+      "13.4 × 5=67共需付67元。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "0.95 × 3=2.85即共有花生油2.85升。"
+    ],
+    "answer": "13.4 × 5=67共需付67元。"
+  },
+  {
+    "id": "5B45N414b_68C_032P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每公斤西瓜售12.8元。媽媽買右面的西瓜，需付多少元？（把答案取至十分位）",
+    "options": [
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "12.8 × 2.6=33.28≈33.3需付33.3元。",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50"
+    ],
+    "answer": "12.8 × 2.6=33.28≈33.3需付33.3元。"
+  },
+  {
+    "id": "5B45N414b_69C_032N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "正方形野餐墊的邊長是1.68 m，它的周界是多少m？",
+    "options": [
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "1.68 × 4=6.72它的周界是6.72 m。"
+    ],
+    "answer": "1.68 × 4=6.72它的周界是6.72 m。"
+  },
+  {
+    "id": "5B45N414b_70C_032N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "長方形桌布長2.3米，闊1.1米。桌布的面積是多少平方米？",
+    "options": [
+      "2.3 × 1.1=2.53桌布的面積是2.53平方米。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50"
+    ],
+    "answer": "2.3 × 1.1=2.53桌布的面積是2.53平方米。"
+  },
+  {
+    "id": "5B45N414b_71C_032N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "平行四邊形鏡子的底是54 cm，高是32.5 cm。鏡子的面積是多少cm2？",
+    "options": [
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "54 × 32.5=1755鏡子的面積是1755 cm2。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元"
+    ],
+    "answer": "54 × 32.5=1755鏡子的面積是1755 cm2。"
+  },
+  {
+    "id": "5B45N414b_73C_032P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "本星期買果汁，可享「買2罐，多送1罐」的優惠。在這優惠下，詠晴想得到果汁7罐，共需付多少元？",
+    "options": [
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "11.9 × 5=59.5共需付59.5元。"
+    ],
+    "answer": "11.9 × 5=59.5共需付59.5元。"
+  },
+  {
+    "id": "5B45N414b_74C_122P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "千千超級市場 平平超級市場 心如到甜筒售價較便宜的超級市場，買了甜筒6枝。 千千超級市場 平平超級市場 心如到甜筒售價較便宜的超級市場，買了甜筒6枝。",
+    "options": [
+      "56.1",
+      "101.4",
+      "甜筒每支$19.20",
+      "216"
+    ],
+    "answer": "甜筒每支$19.20"
+  },
+  {
+    "id": "5B45N414b_74C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "千千超級市場 平平超級市場 心如到甜筒售價較便宜的超級市場，買了甜筒6枝。 (a)心如共需付多少元？",
+    "options": [
+      "101.4",
+      "甜筒每支$18.80",
+      "56.1",
+      "216"
+    ],
+    "answer": "甜筒每支$18.80"
+  },
+  {
+    "id": "5B45N414b_74C_122P#c",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "千千超級市場 平平超級市場 心如到甜筒售價較便宜的超級市場，買了甜筒6枝。 (b)心如付200元買甜筒，應找回 （ ） 元。",
+    "options": [
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "18.8 × 6=112.8心如共需付112.8元。",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元"
+    ],
+    "answer": "18.8 × 6=112.8心如共需付112.8元。"
+  },
+  {
+    "id": "5B45N414b_75C_122P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "答案︰（ ） 元 (a)爸爸購買牛排0.8公斤，他需付 （ ） 元。（把答案取至十分位）",
+    "options": [
+      "216",
+      "雞翼每公斤$52.40",
+      "101.4",
+      "56.1"
+    ],
+    "answer": "雞翼每公斤$52.40"
+  },
+  {
+    "id": "5B45N414b_75C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "答案︰（ ） 元 (b)媽媽付150元，購買牛丸和雞翼各1公斤，應找回多少元？ 答案︰（ ） 元",
+    "options": [
+      "101.4",
+      "216",
+      "56.1",
+      "牛排每公斤$94.60"
+    ],
+    "answer": "牛排每公斤$94.60"
+  },
+  {
+    "id": "5B45N414b_76C_122P#a",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "她需付 （ ） 元。 圈出找回的款項。 (a)媽媽購買右面的牛奶3盒，她需付多少元？ 她需付 （ ） 元。",
+    "options": [
+      "216",
+      "101.4",
+      "$25.60",
+      "56.1"
+    ],
+    "answer": "$25.60"
+  },
+  {
+    "id": "5B45N414b_76C_122P#b",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "她需付 （ ） 元。 圈出找回的款項。 (b)媽媽付1張 ，應找回多少？ 圈出找回的款項。",
+    "options": [
+      "216",
+      "101.4",
+      "56.1",
+      "76.8"
+    ],
+    "answer": "76.8"
+  },
+  {
+    "id": "5B45N414b_80C_122N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "自擬題目︰利用以下資料自擬一道小數乘法的題目，並列式計算。 媽媽買了（ 芝麻包 / 牛角包 / 菠蘿包 ）（ ） 個，共需付多少元？",
+    "options": [
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "7.2 × 6=43.2共需付43.2元。",
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元"
+    ],
+    "answer": "7.2 × 6=43.2共需付43.2元。"
+  },
+  {
+    "id": "5B45N414b_81C_042P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "家軒每天用0.5小時閱讀，用0.25小時畫畫。 他一星期共用了 （ ） 小時畫畫。",
+    "options": [
+      "1.75",
+      "56.1",
+      "101.4",
+      "216"
+    ],
+    "answer": "1.75"
+  },
+  {
+    "id": "5B45N414b_82C_042P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "媽媽每天買咖啡用去32.5元，乘搭巴士用去16.2元。 在四月，她買咖啡共用去 （ ） 元。",
+    "options": [
+      "216",
+      "101.4",
+      "56.1",
+      "975"
+    ],
+    "answer": "975"
+  },
+  {
+    "id": "5B45N414b_83C_042N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每條幾何條長5.35 cm。嘉儀用一些幾何條拼砌出一個菱形， 該菱形的周界最短是 （ ） cm。",
+    "options": [
+      "21.4",
+      "216",
+      "56.1",
+      "101.4"
+    ],
+    "answer": "21.4"
+  },
+  {
+    "id": "5B45N414b_84C_041P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每包芝士有12片，每片重16.5克。一包芝士共重 （ ） 克。",
+    "options": [
+      "216",
+      "56.1",
+      "198",
+      "101.4"
+    ],
+    "answer": "198"
+  },
+  {
+    "id": "5B45N414b_85C_112P",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每公斤豬扒售88.8元。林太太購買上圖中的豬扒，她需付多少元？（答案取至小數點後一個位） 答案︰（ ） 元",
+    "options": [
+      "216",
+      "101.4",
+      "56.1",
+      "53.3"
+    ],
+    "answer": "53.3",
+    "image": "q-images/5B45N414b_85C_112P.webp"
+  },
+  {
+    "id": "5B45N414b_90C_032N",
+    "grade": 5,
+    "unitKey": "decimal",
+    "source": "c_5B45N414b.docx",
+    "topic": "5B45N414b  小數乘法的應用",
+    "question": "每圈緩跑徑長1.41公里。敬輝沿着緩跑徑跑了3圈半，他共跑了多少公里？",
+    "options": [
+      "好味餐廳誠聘兼職每天工作4.5小時薪金：每小時52元",
+      "高高便利店誠聘兼職每天工作4.5小時薪金︰每小時48元",
+      "運費每1公斤（不足1公斤亦以1公斤收費計算）$9.50",
+      "1.41 × 3.5=4.935他共跑了4.935公里。"
+    ],
+    "answer": "1.41 × 3.5=4.935他共跑了4.935公里。"
+  },
+  {
+    "id": "5B55M215a_03C_061N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "圖書A的體積比圖書B的 ( 大 / 小 )。",
+    "options": [
+      "A",
+      "B",
+      "1",
+      "C"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B55M215a_06C_061N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "書櫃A的體積比書櫃B的 ( 大 / 小 )。",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "1"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B55M215a_13C_061N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "雪糕 ( A / B / C ) 的體積最小。",
+    "options": [
+      "C",
+      "B",
+      "1",
+      "A"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_14C_061N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "手袋 ( A / B / C ) 的體積最小。",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "1"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_17C_061N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "西瓜 ( A / B / C ) 的體積最大。",
+    "options": [
+      "B",
+      "A",
+      "C",
+      "1"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_18C_061N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "量杯 ( A / B / C ) 內液體的體積最大。",
+    "options": [
+      "B",
+      "1",
+      "A",
+      "C"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_25C_051N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各件食物依體積由大至小排列，在方格內填1至3。（1代表最大，3代表最小。）",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M215a_26C_051N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各個櫃子依體積由大至小排列，在方格內填1至3。（1代表最大，3代表最小。）",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M215a_27C_051N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各條魚依體積由大至小排列，在方格內填1至3。（1代表最大，3代表最小。）",
+    "options": [
+      "4",
+      "2",
+      "1",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M215a_28C_051N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各個水果依體積由小至大排列，在方格內填1至3。（1代表最小，3代表最大。）",
+    "options": [
+      "4",
+      "2",
+      "1",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M215a_29C_051N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各物件依體積由小至大排列，在方格內填1至3。（1代表最小，3代表最大。）",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M215a_30C_051N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各款糖果依體積由小至大排列，在方格內填1至3。（1代表最小，3代表最大。）",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M215a_31C_052N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各物件依體積由大至小排列，在方格內填1至4。（1代表最大，4代表最小。）",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "2"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B55M215a_32C_052N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各食物依體積由大至小排列，在方格內填1至4。（1代表最大，4代表最小。）",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B55M215a_33C_052N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各種交通工具依體積由小至大排列，在方格內填1至4。（1代表最小，4代表最大。）",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B55M215a_34C_052N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把以下各動物依體積由小至大排列，在方格內填1至4。（1代表最小，4代表最大。）",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B55M215a_35C_111N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三盒棋依體積由小至大排列，寫出代表答案的英文字母。 答案︰（ ），（ ），（ ）（最小）（最大）",
+    "options": [
+      "A",
+      "B",
+      "1",
+      "C"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_36C_111N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三個水壺依體積由小至大排列，寫出代表答案的英文字母。 答案︰（ ），（ ），（ ）（最小）（最大）",
+    "options": [
+      "B",
+      "C",
+      "A",
+      "1"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_37C_111N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三種食物依體積由小至大排列，寫出代表答案的英文字母。 答案︰（ ），（ ），（ ）（最小）（最大）",
+    "options": [
+      "B",
+      "1",
+      "C",
+      "A"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_38C_111N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三包零食依體積由大至小排列，寫出代表答案的英文字母。 答案︰（ ），（ ），（ ）（最大）（最小）",
+    "options": [
+      "B",
+      "C",
+      "1",
+      "A"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_39C_111N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三件玩具依體積由大至小排列，寫出代表答案的英文字母。 答案︰（ ），（ ），（ ）（最大）（最小）",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "1"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_40C_111N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三個容器內的水依體積由大至小排列，寫出代表答案的英文字母。 答案︰（ ），（ ），（ ）（最大）（最小）",
+    "options": [
+      "C",
+      "A",
+      "B",
+      "1"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M215a_41C_112N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面三個水果依體積由大至小排列。 答案︰（ ） 瓜，（ ） 瓜，（ ） 瓜（最大）（最小）",
+    "options": [
+      "750 g",
+      "西瓜",
+      "680 g",
+      "430 g"
+    ],
+    "answer": "750 g"
+  },
+  {
+    "id": "5B55M215a_42C_112N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "把上面四個球依體積由小至大排列。 答案︰（ ） 球，（ ） 球，（ ） 球，（ ） 球（最小）（最大）",
+    "options": [
+      "足球",
+      "B",
+      "A",
+      "C"
+    ],
+    "answer": "足球"
+  },
+  {
+    "id": "5B55M215a_43C_102N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M215a.docx",
+    "topic": "5B55M215a  體積的認識",
+    "question": "上圖是三個形狀和大小都相同的量杯，量杯A和B分別盛了一些水。在量杯C上塗色表示盛了一些水，而水的體積比量杯A內的水的體積小，但比量杯B內的水的體積大。",
+    "options": [
+      "（或其他合理答案。）",
+      "750 g",
+      "西瓜",
+      "430 g"
+    ],
+    "answer": "（或其他合理答案。）",
+    "image": "q-images/5B55M215a_43C_102N.webp"
+  },
+  {
+    "id": "5B55M216a_01C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1立方厘米的數粒砌成。 立體的體積是 （ ） 立方厘米。",
+    "options": [
+      "12",
+      "10",
+      "9",
+      "6"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B55M216a_02C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1立方厘米的數粒砌成。 立體的體積是 （ ） 立方厘米。",
+    "options": [
+      "10",
+      "9",
+      "6",
+      "12"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B55M216a_03C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1立方厘米的數粒砌成。 立體的體積是 （ ） 立方厘米。",
+    "options": [
+      "10",
+      "12",
+      "9",
+      "6"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B55M216a_04C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "9",
+      "10",
+      "6"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B55M216a_05C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "6",
+      "12",
+      "11"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B55M216a_06C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "6",
+      "13",
+      "10"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5B55M216a_07C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "12 cm3",
+      "10",
+      "12",
+      "11"
+    ],
+    "answer": "12 cm3"
+  },
+  {
+    "id": "5B55M216a_08C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "12",
+      "17 cm3",
+      "11",
+      "10"
+    ],
+    "answer": "17 cm3"
+  },
+  {
+    "id": "5B55M216a_09C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "19 cm3"
+    ],
+    "answer": "19 cm3"
+  },
+  {
+    "id": "5B55M216a_10C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 立體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "13 cm3",
+      "10",
+      "12",
+      "11"
+    ],
+    "answer": "13 cm3"
+  },
+  {
+    "id": "5B55M216a_11C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "18",
+      "12",
+      "6",
+      "10"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B55M216a_12C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "12",
+      "10",
+      "22"
+    ],
+    "answer": "22"
+  },
+  {
+    "id": "5B55M216a_13C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "24",
+      "10",
+      "12"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5B55M216a_14C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是3 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "30",
+      "6",
+      "10"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "5B55M216a_15C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是3 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "33",
+      "6",
+      "10",
+      "12"
+    ],
+    "answer": "33"
+  },
+  {
+    "id": "5B55M216a_16C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是3 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "6",
+      "39",
+      "10"
+    ],
+    "answer": "39"
+  },
+  {
+    "id": "5B55M216a_17C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是4 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "44",
+      "6",
+      "10"
+    ],
+    "answer": "44"
+  },
+  {
+    "id": "5B55M216a_18C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是4 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "12",
+      "6",
+      "52"
+    ],
+    "answer": "52"
+  },
+  {
+    "id": "5B55M216a_19C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是4 cm3的數粒砌成。 立體的體積是 （ ） cm3。",
+    "options": [
+      "60",
+      "6",
+      "12",
+      "10"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5B55M216a_20C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下各立體由體積是1立方厘米的數粒砌成。 立體P的體積是 （ ） 立方厘米。 立體Q的體積是 （ ） 立方厘米。 以下各立體由體積是1立方厘米的數粒砌成。",
+    "options": [
+      "10",
+      "9",
+      "6",
+      "12"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B55M216a_21C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下各立體由體積是1立方厘米的數粒砌成。 立體M的體積是 （ ） 立方厘米。 立體N的體積是 （ ） 立方厘米。 以下各立體由體積是1立方厘米的數粒砌成。",
+    "options": [
+      "8",
+      "12",
+      "10",
+      "6"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B55M216a_22C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下各立體由體積是1立方厘米的數粒砌成。 立體X的體積是 （ ） 立方厘米。 立體Y的體積是 （ ） 立方厘米。 以下各立體由體積是1立方厘米的數粒砌成。",
+    "options": [
+      "12",
+      "6",
+      "11",
+      "10"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B55M216a_23C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 以下的立體由體積是1 cm3的數粒砌成。",
+    "options": [
+      "6",
+      "10",
+      "Y",
+      "12"
+    ],
+    "answer": "Y"
+  },
+  {
+    "id": "5B55M216a_23C_121N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (a)立體X的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "10",
+      "X",
+      "6"
+    ],
+    "answer": "X"
+  },
+  {
+    "id": "5B55M216a_23C_121N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (b)立體Y的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "10",
+      "12",
+      "11"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B55M216a_24C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 以下的立體由體積是1 cm3的數粒砌成。",
+    "options": [
+      "10",
+      "6",
+      "B",
+      "12"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "5B55M216a_24C_121N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (a)立體A的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "10",
+      "A",
+      "6"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5B55M216a_24C_121N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (b)立體B的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "12",
+      "6",
+      "13"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5B55M216a_25C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 以下的立體由體積是1 cm3的數粒砌成。",
+    "options": [
+      "12",
+      "N",
+      "6",
+      "10"
+    ],
+    "answer": "N"
+  },
+  {
+    "id": "5B55M216a_25C_121N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (a)立體M的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "M",
+      "12",
+      "10"
+    ],
+    "answer": "M"
+  },
+  {
+    "id": "5B55M216a_25C_121N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (b)立體N的體積是 （ ） cm3。",
+    "options": [
+      "11",
+      "10",
+      "6",
+      "12"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B55M216a_26C_121N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 以下的立體由體積是1 cm3的數粒砌成。",
+    "options": [
+      "6",
+      "Q",
+      "10",
+      "12"
+    ],
+    "answer": "Q"
+  },
+  {
+    "id": "5B55M216a_26C_121N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (a)立體P的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "12",
+      "P",
+      "10"
+    ],
+    "answer": "P"
+  },
+  {
+    "id": "5B55M216a_26C_121N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 (b)立體Q的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "9",
+      "6",
+      "10"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B55M216a_29C_122N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 以下的立體由體積是2 cm3的數粒砌成。",
+    "options": [
+      "10",
+      "6",
+      "12",
+      "Y"
+    ],
+    "answer": "Y"
+  },
+  {
+    "id": "5B55M216a_29C_122N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (a)立體X的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "6",
+      "X",
+      "12"
+    ],
+    "answer": "X"
+  },
+  {
+    "id": "5B55M216a_29C_122N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (b)立體Y的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "6",
+      "24",
+      "10"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5B55M216a_30C_122N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 以下的立體由體積是2 cm3的數粒砌成。",
+    "options": [
+      "10",
+      "6",
+      "12",
+      "Q"
+    ],
+    "answer": "Q"
+  },
+  {
+    "id": "5B55M216a_30C_122N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (a)立體P的體積是 （ ） cm3。",
+    "options": [
+      "P",
+      "10",
+      "6",
+      "12"
+    ],
+    "answer": "P"
+  },
+  {
+    "id": "5B55M216a_30C_122N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (b)立體Q的體積是 （ ） cm3。",
+    "options": [
+      "20",
+      "12",
+      "10",
+      "6"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5B55M216a_31C_122N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 以下的立體由體積是2 cm3的數粒砌成。",
+    "options": [
+      "S",
+      "6",
+      "10",
+      "12"
+    ],
+    "answer": "S"
+  },
+  {
+    "id": "5B55M216a_31C_122N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (a)立體R的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "12",
+      "R",
+      "6"
+    ],
+    "answer": "R"
+  },
+  {
+    "id": "5B55M216a_31C_122N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (b)立體S的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "6",
+      "18",
+      "10"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B55M216a_32C_122N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 以下的立體由體積是2 cm3的數粒砌成。",
+    "options": [
+      "P",
+      "6",
+      "10",
+      "12"
+    ],
+    "answer": "P"
+  },
+  {
+    "id": "5B55M216a_32C_122N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (a)立體P的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "10",
+      "12",
+      "Q"
+    ],
+    "answer": "Q"
+  },
+  {
+    "id": "5B55M216a_32C_122N#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 (b)立體Q的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "20",
+      "6",
+      "12"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5B55M216a_33C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 體積最大的是立體 ( A / B / C )，它的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "10",
+      "30",
+      "6"
+    ],
+    "answer": "30"
+  },
+  {
+    "id": "5B55M216a_34C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 體積最大的是立體 ( D / E / F )，它的體積是 （ ） cm3。",
+    "options": [
+      "52",
+      "12",
+      "6",
+      "10"
+    ],
+    "answer": "52"
+  },
+  {
+    "id": "5B55M216a_35C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是3 cm3的數粒砌成。 體積最大的是立體 ( S / T / R )，它的體積是 （ ） cm3。",
+    "options": [
+      "6",
+      "10",
+      "12",
+      "84"
+    ],
+    "answer": "84"
+  },
+  {
+    "id": "5B55M216a_36C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是4 cm3的數粒砌成。 體積最大的是立體 ( X / Y / Z )，它的體積是 （ ） cm3。",
+    "options": [
+      "100",
+      "12",
+      "6",
+      "10"
+    ],
+    "answer": "100"
+  },
+  {
+    "id": "5B55M216a_37C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 體積最小的是立體 ( A / B / C )， 它的體積與體積最大的立體相差 （ ） cm3。",
+    "options": [
+      "12",
+      "C",
+      "10",
+      "6"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M216a_38C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是1 cm3的數粒砌成。 體積最小的是立體 ( D / E / F )， 它的體積與體積最大的立體相差 （ ） cm3。",
+    "options": [
+      "6",
+      "12",
+      "F",
+      "10"
+    ],
+    "answer": "F"
+  },
+  {
+    "id": "5B55M216a_39C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 體積最小的是立體 ( P / Q / R )， 它的體積與體積最大的立體相差 （ ） cm3。",
+    "options": [
+      "9",
+      "12",
+      "10",
+      "6"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B55M216a_40C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是2 cm3的數粒砌成。 體積最小的是立體 ( A / B / C )， 它的體積與體積最大的立體相差 （ ） cm3。",
+    "options": [
+      "C",
+      "12",
+      "10",
+      "6"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "5B55M216a_41C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是5 cm3的數粒砌成。 體積最小的是立體 ( X / Y / Z )， 它與體積最大的立體相差 （ ） cm3。",
+    "options": [
+      "20",
+      "6",
+      "12",
+      "10"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5B55M216a_42C_122P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "以下的立體由體積是6 cm3的數粒砌成。 體積最大的是立體 ( P / Q / R )， 它與體積最小的立體相差 （ ） cm3。",
+    "options": [
+      "6",
+      "18",
+      "12",
+      "10"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B55M216a_69C_041P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "10",
+      "11",
+      "立方米 / m3",
+      "12"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_69C_041P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一個書櫃的體積約是3 （ ）。",
+    "options": [
+      "10",
+      "11",
+      "立方厘米 / cm3",
+      "12"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_70C_041P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "12",
+      "立方米 / m3",
+      "11",
+      "10"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_70C_041P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一個火車車廂的體積約是100 （ ）。",
+    "options": [
+      "11",
+      "12",
+      "10",
+      "立方厘米 / cm3"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_71C_041P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "12",
+      "10",
+      "11",
+      "立方米 / m3"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_71C_041P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一張雙人牀的體積約是1 （ ）。",
+    "options": [
+      "立方厘米 / cm3",
+      "12",
+      "11",
+      "10"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_72C_041P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "11",
+      "10",
+      "12",
+      "立方厘米 / cm3"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_72C_041P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一罐曲奇的體積約是4500 （ ）。",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "立方米 / m3"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_73C_041P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "11",
+      "10",
+      "立方厘米 / cm3",
+      "12"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_73C_041P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一部智能電話的體積約是84 （ ）。",
+    "options": [
+      "11",
+      "立方米 / m3",
+      "12",
+      "10"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_74C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "11",
+      "立方厘米 / cm3",
+      "10",
+      "12"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_74C_042P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一盒雪糕的體積約是2100 （ ）。",
+    "options": [
+      "克 / g",
+      "11",
+      "12",
+      "10"
+    ],
+    "answer": "克 / g"
+  },
+  {
+    "id": "5B55M216a_74C_042P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (b)一個氣球的重量約是2 （ ）。",
+    "options": [
+      "10",
+      "立方米 / m3",
+      "11",
+      "12"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_75C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "11",
+      "10",
+      "立方米 / m3",
+      "12"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_75C_042P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一部洗衣機的體積約是1 （ ）。",
+    "options": [
+      "立方厘米 / cm3",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_75C_042P#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (b)一個膠紙座的體積約是200 （ ）。",
+    "options": [
+      "10",
+      "厘米 / cm",
+      "12",
+      "11"
+    ],
+    "answer": "厘米 / cm"
+  },
+  {
+    "id": "5B55M216a_76C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "毫升 / mL",
+      "12",
+      "10",
+      "11"
+    ],
+    "answer": "毫升 / mL"
+  },
+  {
+    "id": "5B55M216a_76C_042P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一罐橙汁的容量約是330 （ ）。",
+    "options": [
+      "11",
+      "10",
+      "12",
+      "立方厘米 / cm3"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_76C_042P#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (b)一個筆盒的體積約是400 （ ）。",
+    "options": [
+      "12",
+      "立方米 / m3",
+      "10",
+      "11"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_77C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "11",
+      "12",
+      "升 / L",
+      "10"
+    ],
+    "answer": "升 / L"
+  },
+  {
+    "id": "5B55M216a_77C_042P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一個電飯煲的容量約是5 （ ）。",
+    "options": [
+      "立方厘米 / cm3",
+      "12",
+      "10",
+      "11"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_77C_042P#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (b)一部計算機的體積約是60 （ ）。",
+    "options": [
+      "12",
+      "11",
+      "米 / m",
+      "10"
+    ],
+    "answer": "米 / m"
+  },
+  {
+    "id": "5B55M216a_78C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "12",
+      "11",
+      "10",
+      "立方厘米 / cm3"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_78C_042P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一本圖書的體積約是150 （ ）。",
+    "options": [
+      "克 / g",
+      "12",
+      "11",
+      "10"
+    ],
+    "answer": "克 / g"
+  },
+  {
+    "id": "5B55M216a_78C_042P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (b)一個筆袋約重20 （ ）。",
+    "options": [
+      "立方米 / m3",
+      "12",
+      "11",
+      "10"
+    ],
+    "answer": "立方米 / m3"
+  },
+  {
+    "id": "5B55M216a_79C_042P#a",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 在下列各項填上適當的度量單位。",
+    "options": [
+      "12",
+      "11",
+      "10",
+      "米 / m"
+    ],
+    "answer": "米 / m"
+  },
+  {
+    "id": "5B55M216a_79C_042P#b",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (a)一個花園的長度約是19 （ ）。",
+    "options": [
+      "10",
+      "公斤 / kg",
+      "12",
+      "11"
+    ],
+    "answer": "公斤 / kg"
+  },
+  {
+    "id": "5B55M216a_79C_042P#c",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "在下列各項填上適當的度量單位。 (b)弟弟的體重是35 （ ）。",
+    "options": [
+      "立方厘米 / cm3",
+      "10",
+      "12",
+      "11"
+    ],
+    "answer": "立方厘米 / cm3"
+  },
+  {
+    "id": "5B55M216a_80C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "上圖的立體由 拼砌而成，每個 的體積是1 cm3。立體的體積 是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "10",
+      "12",
+      "11",
+      "13 cm3"
+    ],
+    "answer": "13 cm3"
+  },
+  {
+    "id": "5B55M216a_81C_042N#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "上圖的立體由 拼砌而成，每個 的體積是1 cm3。 上圖的立體由 拼砌而成，每個 的體積是1 cm3。",
+    "options": [
+      "12",
+      "10",
+      "17",
+      "6"
+    ],
+    "answer": "17"
+  },
+  {
+    "id": "5B55M216a_81C_042N#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "上圖的立體由 拼砌而成，每個 的體積是1 cm3。 (a)立體的體積是 （ ） cm3。",
+    "options": [
+      "10",
+      "6",
+      "9",
+      "12"
+    ],
+    "answer": "10"
+  },
+  {
+    "id": "5B55M216a_83C_122P#num",
+    "grade": 5,
+    "unitKey": "general",
+    "source": "c_5B55M216a.docx",
+    "topic": "5B55M216a  立方厘米和立方米",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "60"
+    ],
+    "answer": "60"
+  },
+  {
+    "id": "5B55M217a_01C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "1 cm",
+      "2 cm",
+      "12"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B55M217a_02C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ） cm3。",
+    "options": [
+      "7 cm",
+      "2 cm",
+      "1 cm",
+      "6 cm"
+    ],
+    "answer": "7 cm"
+  },
+  {
+    "id": "5B55M217a_03C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ） m3。",
+    "options": [
+      "6 cm",
+      "2 cm",
+      "1 cm",
+      "30 m"
+    ],
+    "answer": "30 m"
+  },
+  {
+    "id": "5B55M217a_04C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ） 立方米。",
+    "options": [
+      "720",
+      "28",
+      "12",
+      "84"
+    ],
+    "answer": "84"
+  },
+  {
+    "id": "5B55M217a_05C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "1 cm",
+      "5187 m3",
+      "2 cm",
+      "6 cm"
+    ],
+    "answer": "5187 m3"
+  },
+  {
+    "id": "5B55M217a_06C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "2 cm",
+      "1 cm",
+      "6 cm",
+      "816 立方厘米"
+    ],
+    "answer": "816 立方厘米"
+  },
+  {
+    "id": "5B55M217a_07C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "2 cm",
+      "192 cm3",
+      "6 cm",
+      "1 cm"
+    ],
+    "answer": "192 cm3"
+  },
+  {
+    "id": "5B55M217a_08C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "長方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "6 cm",
+      "1 cm",
+      "2 cm",
+      "60 m3"
+    ],
+    "answer": "60 m3"
+  },
+  {
+    "id": "5B55M217a_09C_041P#num",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "720",
+      "7680",
+      "12",
+      "28"
+    ],
+    "answer": "7680",
+    "image": "q-images/5B55M217a_09C_041P__num.webp"
+  },
+  {
+    "id": "5B55M217a_10C_041P#num",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "12",
+      "28",
+      "720",
+      "576"
+    ],
+    "answer": "576",
+    "image": "q-images/5B55M217a_10C_041P__num.webp"
+  },
+  {
+    "id": "5B55M217a_11C_041P#num",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "算柱／圖形所表示的數是？",
+    "options": [
+      "1694",
+      "720",
+      "28",
+      "12"
+    ],
+    "answer": "1694",
+    "image": "q-images/5B55M217a_11C_041P__num.webp"
+  },
+  {
+    "id": "5B55M217a_14C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體盒子長10 cm，闊10 cm，高4 cm。它的體積是 （ ） cm3。",
+    "options": [
+      "28",
+      "720",
+      "400",
+      "12"
+    ],
+    "answer": "400"
+  },
+  {
+    "id": "5B55M217a_15C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一塊長方體積木長8 cm，闊4 cm，高3 cm。它的體積是 （ ） cm3。",
+    "options": [
+      "28",
+      "96",
+      "720",
+      "12"
+    ],
+    "answer": "96"
+  },
+  {
+    "id": "5B55M217a_16C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長6 m，闊2 m，高4 m。它的體積是 （ ） m3。",
+    "options": [
+      "720",
+      "28",
+      "12",
+      "48"
+    ],
+    "answer": "48"
+  },
+  {
+    "id": "5B55M217a_17C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長2米，闊6米，高9米。它的體積是 （ ） 立方米。",
+    "options": [
+      "12",
+      "720",
+      "108",
+      "28"
+    ],
+    "answer": "108"
+  },
+  {
+    "id": "5B55M217a_18C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一塊長方體膠板長0.3米，闊20厘米，高3厘米。它的體積是 （ ） 立方厘米。",
+    "options": [
+      "12",
+      "720",
+      "1800",
+      "28"
+    ],
+    "answer": "1800"
+  },
+  {
+    "id": "5B55M217a_19C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長和闊都是4米，高200厘米。它的體積是 （ ） 立方米。",
+    "options": [
+      "720",
+      "12",
+      "28",
+      "32"
+    ],
+    "answer": "32"
+  },
+  {
+    "id": "5B55M217a_20C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體鐵盒長25 cm，闊0.25 m，高6 cm。它的體積是 （ ） cm3。",
+    "options": [
+      "3750",
+      "12",
+      "28",
+      "720"
+    ],
+    "answer": "3750"
+  },
+  {
+    "id": "5B55M217a_21C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長8厘米，闊6厘米，高比闊少2厘米。它的體積是 （ ） 立方厘米。",
+    "options": [
+      "12",
+      "28",
+      "720",
+      "192"
+    ],
+    "answer": "192"
+  },
+  {
+    "id": "5B55M217a_22C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長8 m，高7 m，闊比高多5 m。它的體積是 （ ） m3。",
+    "options": [
+      "672",
+      "28",
+      "720",
+      "12"
+    ],
+    "answer": "672"
+  },
+  {
+    "id": "5B55M217a_23C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體發泡膠闊16 cm，高12 cm，長比高少2 cm。它的體積是 （ ） cm3。",
+    "options": [
+      "28",
+      "1920",
+      "12",
+      "720"
+    ],
+    "answer": "1920"
+  },
+  {
+    "id": "5B55M217a_24C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長是闊的兩倍，闊16 cm，高5 cm。它的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "28",
+      "2560",
+      "720"
+    ],
+    "answer": "2560"
+  },
+  {
+    "id": "5B55M217a_25C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長12 cm，闊10 cm，高是長的 。它的體積是 （ ） cm3。",
+    "options": [
+      "12",
+      "360",
+      "720",
+      "28"
+    ],
+    "answer": "360"
+  },
+  {
+    "id": "5B55M217a_26C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長25 cm，闊是長的 ，高9 cm。它的體積是 （ ） cm3。",
+    "options": [
+      "28",
+      "12",
+      "2250",
+      "720"
+    ],
+    "answer": "2250"
+  },
+  {
+    "id": "5B55M217a_27C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右圖長方體的體積是168 cm3， 它的高是 （ ） cm。",
+    "options": [
+      "6 cm",
+      "1 cm",
+      "高是多少cm？",
+      "2 cm"
+    ],
+    "answer": "高是多少cm？"
+  },
+  {
+    "id": "5B55M217a_28C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右圖長方體的體積是540 cm3， 它的長是 （ ） cm。",
+    "options": [
+      "1 cm",
+      "2 cm",
+      "長是多少cm？",
+      "6 cm"
+    ],
+    "answer": "長是多少cm？"
+  },
+  {
+    "id": "5B55M217a_29C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右圖長方體的體積是455 cm3， 它的長是 （ ） cm。",
+    "options": [
+      "長是多少cm？",
+      "6 cm",
+      "1 cm",
+      "2 cm"
+    ],
+    "answer": "長是多少cm？"
+  },
+  {
+    "id": "5B55M217a_30C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右圖長方體的體積是270 m3， 它的長是 （ ） m。",
+    "options": [
+      "6 cm",
+      "2 cm",
+      "1 cm",
+      "長是多少m？"
+    ],
+    "answer": "長是多少m？"
+  },
+  {
+    "id": "5B55M217a_31C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右圖長方體的體積是880 cm3， 它的闊是 （ ） cm。",
+    "options": [
+      "闊是多少cm？",
+      "6 cm",
+      "1 cm",
+      "2 cm"
+    ],
+    "answer": "闊是多少cm？"
+  },
+  {
+    "id": "5B55M217a_32C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右圖長方體的體積是162 m3， 它的闊是 （ ） m。",
+    "options": [
+      "闊是多少m？",
+      "1 cm",
+      "6 cm",
+      "2 cm"
+    ],
+    "answer": "闊是多少m？"
+  },
+  {
+    "id": "5B55M217a_33C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長是5米，高是14米，體積是420立方米。 長方體的闊是 （ ） 米。",
+    "options": [
+      "6",
+      "12",
+      "28",
+      "720"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B55M217a_34C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的闊是15 cm，高是6 cm，體積是990 cm3。 長方體的長是 （ ） cm。",
+    "options": [
+      "12",
+      "28",
+      "720",
+      "11"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B55M217a_35C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的高是6 cm，闊是4 cm，體積是600 cm3。 長方體的長是 （ ） cm。",
+    "options": [
+      "28",
+      "720",
+      "12",
+      "25"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": "5B55M217a_36C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長是7米，闊是7米，體積是147立方米。 長方體的高是 （ ） 米。",
+    "options": [
+      "28",
+      "3",
+      "12",
+      "720"
+    ],
+    "answer": "3"
+  },
+  {
+    "id": "5B55M217a_37C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長是6 cm，闊是2 cm，體積是12 cm3。 長方體的高是 （ ） cm。",
+    "options": [
+      "720",
+      "28",
+      "12",
+      "1"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B55M217a_38C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長是4 cm，闊是長的3倍，體積是192 cm3。 長方體的高是 （ ） cm。",
+    "options": [
+      "4",
+      "720",
+      "12",
+      "28"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B55M217a_39C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體的長是14米，闊比長少5米，體積是252立方米。 長方體的高是 （ ） 米。",
+    "options": [
+      "720",
+      "2",
+      "28",
+      "12"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B55M217a_40C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "上面兩個長方體的體積相等。長方體B的闊是 （ ） 厘米。",
+    "options": [
+      "6 cm",
+      "闊是多少厘米？",
+      "1 cm",
+      "2 cm"
+    ],
+    "answer": "闊是多少厘米？"
+  },
+  {
+    "id": "5B55M217a_43C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面的長方體長5米，闊4米，體積是60立方米，它的高是多少米？",
+    "options": [
+      "2米",
+      "4米",
+      "3米",
+      "5米"
+    ],
+    "answer": "5米"
+  },
+  {
+    "id": "5B55M217a_44C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面的長方體盒子長8厘米，闊5厘米，體積是120立方厘米，它的高是多少厘米？",
+    "options": [
+      "15厘米",
+      "107厘米",
+      "3厘米",
+      "5厘米"
+    ],
+    "answer": "5厘米"
+  },
+  {
+    "id": "5B55M217a_47C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面的糖果禮盒是一個長方體，它的體積是多少cm3？",
+    "options": [
+      "30 × 20 × 15=9000右面長方體紙盒的體積是9000 cm3。",
+      "12 × 9 × 4=432它的體積是432立方厘米。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "16 × 8 × 5=640它的體積是640 m3。"
+    ],
+    "answer": "36 × 8 × 24=6912它的體積是6912 cm3。"
+  },
+  {
+    "id": "5B55M217a_48C_031P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面的茶包盒是一個長方體，它的體積是多少立方厘米？",
+    "options": [
+      "16 × 8 × 5=640它的體積是640 m3。",
+      "9 × 7 × 15=945它的體積是945 cm3。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "12 × 9 × 4=432它的體積是432立方厘米。"
+    ],
+    "answer": "12 × 9 × 4=432它的體積是432立方厘米。"
+  },
+  {
+    "id": "5B55M217a_50C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長16 m，闊8 m，高5 m，它的體積是多少m3？",
+    "options": [
+      "16 × 8 × 5=640它的體積是640 m3。",
+      "9 × 7 × 15=945它的體積是945 cm3。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "12 × 9 × 4=432它的體積是432立方厘米。"
+    ],
+    "answer": "16 × 8 × 5=640它的體積是640 m3。"
+  },
+  {
+    "id": "5B55M217a_51C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長9 cm，闊7 cm，高15 cm，它的體積是多少cm3？",
+    "options": [
+      "9 × 7 × 15=945它的體積是945 cm3。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "16 × 8 × 5=640它的體積是640 m3。",
+      "12 × 9 × 4=432它的體積是432立方厘米。"
+    ],
+    "answer": "9 × 7 × 15=945它的體積是945 cm3。"
+  },
+  {
+    "id": "5B55M217a_60C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面長方體積木的體積是60 cm3，它的高是多少cm？",
+    "options": [
+      "16 × 8 × 5=640它的體積是640 m3。",
+      "12 × 9 × 4=432它的體積是432立方厘米。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "60 ÷ 4 ÷ 3=15 ÷ 3=5它的高是5 cm。"
+    ],
+    "answer": "60 ÷ 4 ÷ 3=15 ÷ 3=5它的高是5 cm。"
+  },
+  {
+    "id": "5B55M217a_61C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面長方體盒子的體積是312立方厘米，它的闊是多少厘米？",
+    "options": [
+      "312 ÷ 13 ÷ 6=24 ÷ 6=4它的闊是4厘米。",
+      "12 × 9 × 4=432它的體積是432立方厘米。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "30 × 20 × 15=9000右面長方體紙盒的體積是9000 cm3。"
+    ],
+    "answer": "312 ÷ 13 ÷ 6=24 ÷ 6=4它的闊是4厘米。"
+  },
+  {
+    "id": "5B55M217a_62C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "右面長方體的體積是90 m3，它的高是多少m？",
+    "options": [
+      "36 × 8 × 24=6912它的體積是6912 cm3。",
+      "16 × 8 × 5=640它的體積是640 m3。",
+      "12 × 9 × 4=432它的體積是432立方厘米。",
+      "90 ÷ 5 ÷ 6=18 ÷ 6=3它的高是3 m。"
+    ],
+    "answer": "90 ÷ 5 ÷ 6=18 ÷ 6=3它的高是3 m。"
+  },
+  {
+    "id": "5B55M217a_64C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體長7米，闊5米，體積是105立方米。長方體高多少米？",
+    "options": [
+      "12 × 9 × 4=432它的體積是432立方厘米。",
+      "105 ÷ 7 ÷ 5=15 ÷ 5=3長方體高3米。",
+      "16 × 8 × 5=640它的體積是640 m3。",
+      "36 × 8 × 24=6912它的體積是6912 cm3。"
+    ],
+    "answer": "105 ÷ 7 ÷ 5=15 ÷ 5=3長方體高3米。"
+  },
+  {
+    "id": "5B55M217a_70C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "上圖長方體的體積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "1 cm",
+      "6 cm",
+      "2 cm",
+      "512 cm3"
+    ],
+    "answer": "512 cm3"
+  },
+  {
+    "id": "5B55M217a_71C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體闊6厘米，長是闊的3倍，高是闊的一半，長方體的體積是 （ ） 立方厘米。",
+    "options": [
+      "28",
+      "720",
+      "12",
+      "324"
+    ],
+    "answer": "324"
+  },
+  {
+    "id": "5B55M217a_72C_042P#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體蛋糕的體積是900 cm3，沿虛線把它垂直切去一部分（如上圖所示）。 一個長方體蛋糕的體積是900 cm3，沿虛線把它垂直切去一部分（如上圖所示）。",
+    "options": [
+      "6 cm",
+      "2 cm",
+      "1 cm",
+      "長多少？"
+    ],
+    "answer": "長多少？"
+  },
+  {
+    "id": "5B55M217a_72C_042P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體蛋糕的體積是900 cm3，沿虛線把它垂直切去一部分（如上圖所示）。 (a) 餘下部分的體積是 （ ） cm3。",
+    "options": [
+      "切去部分",
+      "6 cm",
+      "2 cm",
+      "1 cm"
+    ],
+    "answer": "切去部分"
+  },
+  {
+    "id": "5B55M217a_72C_042P#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個長方體蛋糕的體積是900 cm3，沿虛線把它垂直切去一部分（如上圖所示）。 (b) 切去部分的長是 （ ） cm。",
+    "options": [
+      "6 cm",
+      "1 cm",
+      "2 cm",
+      "10 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5B55M217a_74C_082P",
+    "grade": 5,
+    "unitKey": "circle",
+    "source": "c_5B55M217a.docx",
+    "topic": "5B55M217a  長方體的體積",
+    "question": "一個圓柱罐頭的直徑是4 cm，高8 cm，剛好可以放進一個長方體盒子內，這個長方體盒子的體積最小是多少cm3？",
+    "options": [
+      "128 cm3",
+      "32 cm3",
+      "64 cm3",
+      "256 cm3"
+    ],
+    "answer": "128 cm3"
+  },
+  {
+    "id": "5B55M217b_01C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ） cm3。",
+    "options": [
+      "13米",
+      "343",
+      "7 cm",
+      "2197"
+    ],
+    "answer": "7 cm"
+  },
+  {
+    "id": "5B55M217b_02C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ） 立方米。",
+    "options": [
+      "343",
+      "1331",
+      "2197",
+      "3375"
+    ],
+    "answer": "2197"
+  },
+  {
+    "id": "5B55M217b_03C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ） 立方厘米。",
+    "options": [
+      "343",
+      "2197",
+      "3375",
+      "1331"
+    ],
+    "answer": "3375"
+  },
+  {
+    "id": "5B55M217b_04C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "上圖正方體的體積是 （ ） cm3。",
+    "options": [
+      "343",
+      "13米",
+      "11 cm",
+      "7 cm"
+    ],
+    "answer": "11 cm"
+  },
+  {
+    "id": "5B55M217b_05C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "上圖正方體的體積是 （ ） 立方米。",
+    "options": [
+      "2197",
+      "1000",
+      "343",
+      "3375"
+    ],
+    "answer": "1000"
+  },
+  {
+    "id": "5B55M217b_06C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "上圖正方體的體積是 （ ） m3。",
+    "options": [
+      "13米",
+      "343",
+      "7 cm",
+      "9 m"
+    ],
+    "answer": "9 m"
+  },
+  {
+    "id": "5B55M217b_07C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "512 m3",
+      "7 cm",
+      "343",
+      "13米"
+    ],
+    "answer": "512 m3"
+  },
+  {
+    "id": "5B55M217b_08C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "343",
+      "216 cm3",
+      "13米",
+      "7 cm"
+    ],
+    "answer": "216 cm3"
+  },
+  {
+    "id": "5B55M217b_09C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "7 cm",
+      "343 立方米",
+      "13米",
+      "343"
+    ],
+    "answer": "343 立方米"
+  },
+  {
+    "id": "5B55M217b_10C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "正方體的體積是 （ ） m3。",
+    "options": [
+      "2 m",
+      "343",
+      "7 cm",
+      "13米"
+    ],
+    "answer": "2 m"
+  },
+  {
+    "id": "5B55M217b_11C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "右面正方體積木的邊長是2 cm， 它的體積是 （ ） cm3。",
+    "options": [
+      "2 cm",
+      "343",
+      "7 cm",
+      "13米"
+    ],
+    "answer": "2 cm"
+  },
+  {
+    "id": "5B55M217b_12C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "右面正方體積木的邊長是3厘米， 它的體積是 （ ） 立方厘米。",
+    "options": [
+      "13米",
+      "343",
+      "7 cm",
+      "3厘米"
+    ],
+    "answer": "3厘米"
+  },
+  {
+    "id": "5B55M217b_13C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "右面正方體的邊長是16 m， 它的體積是 （ ） m3。",
+    "options": [
+      "4096",
+      "2197",
+      "3375",
+      "343"
+    ],
+    "answer": "4096"
+  },
+  {
+    "id": "5B55M217b_14C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體紙盒的邊長是20 cm，它的體積是 （ ） cm3。",
+    "options": [
+      "2197",
+      "343",
+      "3375",
+      "8000"
+    ],
+    "answer": "8000"
+  },
+  {
+    "id": "5B55M217b_15C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體溫室的邊長是4米，它的體積是 （ ） 立方米。",
+    "options": [
+      "343",
+      "64",
+      "2197",
+      "3375"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "5B55M217b_16C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體膠盒的邊長是21 cm，它的體積是 （ ） cm3。",
+    "options": [
+      "2197",
+      "9261",
+      "3375",
+      "343"
+    ],
+    "answer": "9261"
+  },
+  {
+    "id": "5B55M217b_17C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體紙箱的邊長是100厘米，它的體積是 （ ） 立方米。",
+    "options": [
+      "1",
+      "3375",
+      "343",
+      "2197"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B55M217b_18C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "天宇製作了兩個正方體紙盒，大正方體紙盒的邊長是16 cm，大正方體紙盒的邊長是小正方體紙盒的4倍。小正方體紙盒的體積是 （ ） cm3。",
+    "options": [
+      "13米",
+      "343",
+      "7 cm",
+      "16 cm"
+    ],
+    "answer": "16 cm"
+  },
+  {
+    "id": "5B55M217b_19C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "王老師購買了兩款正方體積木，小正方體積木的邊長是3 cm，大正方體積木的邊長是小正方體積木的3倍。大正方體積木的體積是 （ ） cm3。",
+    "options": [
+      "343",
+      "13米",
+      "3 cm",
+      "7 cm"
+    ],
+    "answer": "3 cm"
+  },
+  {
+    "id": "5B55M217b_20C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "有兩個正方體，小正方體的邊長是5 cm，大正方體的邊長比小正方體的多2 cm。大正方體的體積是 （ ） cm3。",
+    "options": [
+      "5 cm",
+      "13米",
+      "343",
+      "7 cm"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5B55M217b_21C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個立體圖形有6個面，每個面都是邊長12 cm的正方形，這個立體圖 形的體積是 （ ） cm3。",
+    "options": [
+      "343",
+      "1728",
+      "3375",
+      "2197"
+    ],
+    "answer": "1728"
+  },
+  {
+    "id": "5B55M217b_22C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個立體圖形有6個面，每個面都是邊長8 cm的正方形，這個立體 圖形的體積是 （ ） cm3。",
+    "options": [
+      "343",
+      "2197",
+      "3375",
+      "512"
+    ],
+    "answer": "512"
+  },
+  {
+    "id": "5B55M217b_23C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個立體圖形有6個面，每個面都是邊長2 cm、面積是4 cm2的 正方形，這個立體圖形的體積是 （ ） cm3。",
+    "options": [
+      "2197",
+      "8",
+      "343",
+      "3375"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B55M217b_24C_042N",
+    "grade": 5,
+    "unitKey": "area",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個立體圖形有6個面，每個面都是邊長4米、面積是16平方米的 正方形，這個立體圖形的體積是 （ ） 立方米。",
+    "options": [
+      "64",
+      "343",
+      "2197",
+      "3375"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "5B55M217b_25C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個立體圖形有6個面，每個面都是周界是80厘米的正方形，這個 立體圖形的體積是 （ ） cm3。",
+    "options": [
+      "3375",
+      "8000",
+      "343",
+      "2197"
+    ],
+    "answer": "8000"
+  },
+  {
+    "id": "5B55M217b_26C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個立體圖形有6個面，每個面都是周界是32 cm的正方形，這個 立體圖形的體積是 （ ） cm3。",
+    "options": [
+      "2197",
+      "343",
+      "3375",
+      "512"
+    ],
+    "answer": "512"
+  },
+  {
+    "id": "5B55M217b_28C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "右圖正方體的體積是多少cm3？",
+    "options": [
+      "2187 cm3",
+      "6561 cm3",
+      "81 cm3",
+      "729 cm3"
+    ],
+    "answer": "729 cm3"
+  },
+  {
+    "id": "5B55M217b_31C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "右圖正方體的體積是",
+    "options": [
+      "216 m2。",
+      "36 m3。",
+      "216 m3。",
+      "36 m2。"
+    ],
+    "answer": "36 m2。"
+  },
+  {
+    "id": "5B55M217b_34C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體盒子的邊長是9厘米，它的體積是多少立方厘米？",
+    "options": [
+      "9 × 9 × 9=729它的體積是729立方厘米。",
+      "5 × 5 × 5=125它的體積是125 cm3。",
+      "4 × 4 × 4=64它的體積是64 cm3。",
+      "11 × 11 × 11=1331它的體積是1331立方米。"
+    ],
+    "answer": "9 × 9 × 9=729它的體積是729立方厘米。"
+  },
+  {
+    "id": "5B55M217b_35C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體盒子的邊長是4 cm，它的體積是多少cm3？",
+    "options": [
+      "4 × 4 × 4=64它的體積是64 cm3。",
+      "9 × 9 × 9=729它的體積是729立方厘米。",
+      "11 × 11 × 11=1331它的體積是1331立方米。",
+      "5 × 5 × 5=125它的體積是125 cm3。"
+    ],
+    "answer": "4 × 4 × 4=64它的體積是64 cm3。"
+  },
+  {
+    "id": "5B55M217b_36C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體的邊長是11米，它的體積是多少立方米？",
+    "options": [
+      "9 × 9 × 9=729它的體積是729立方厘米。",
+      "5 × 5 × 5=125它的體積是125 cm3。",
+      "11 × 11 × 11=1331它的體積是1331立方米。",
+      "4 × 4 × 4=64它的體積是64 cm3。"
+    ],
+    "answer": "11 × 11 × 11=1331它的體積是1331立方米。"
+  },
+  {
+    "id": "5B55M217b_37C_031N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "一個正方體盒子的邊長是5 cm，它的體積是多少cm3？",
+    "options": [
+      "4 × 4 × 4=64它的體積是64 cm3。",
+      "11 × 11 × 11=1331它的體積是1331立方米。",
+      "5 × 5 × 5=125它的體積是125 cm3。",
+      "9 × 9 × 9=729它的體積是729立方厘米。"
+    ],
+    "answer": "5 × 5 × 5=125它的體積是125 cm3。"
+  },
+  {
+    "id": "5B55M217b_43C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "上圖正方體有 （ ） 條稜，它的體積是 （ ） cm3。",
+    "options": [
+      "343",
+      "5 cm",
+      "7 cm",
+      "13米"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5B55M217b_44C_112P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "如果一個正方體所有稜的總長度是36 cm，這個正方體的體積是多少cm3？ 答案︰（ ） cm3",
+    "options": [
+      "3375",
+      "2197",
+      "27",
+      "343"
+    ],
+    "answer": "27"
+  },
+  {
+    "id": "5B55M217b_46C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217b.docx",
+    "topic": "5B55M217b  正方體的體積",
+    "question": "上圖是一塊長方體牛油。從這塊牛油中切出一塊最大的正方體牛油，正方體牛油的體積是多少cm3？",
+    "options": [
+      "160 cm3",
+      "96 cm3",
+      "16 cm3",
+      "64 cm3"
+    ],
+    "answer": "64 cm3"
+  },
+  {
+    "id": "5B55M217c_01C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "家俊把3個大小相同的正方體拼砌成右面的 長方體，它的體積是 （ ） 立方厘米。",
+    "options": [
+      "24",
+      "2厘米",
+      "10 cm",
+      "2000"
+    ],
+    "answer": "2厘米"
+  },
+  {
+    "id": "5B55M217c_02C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "右圖是一個長方體，它由兩個大小相同的正方體拼砌而成，它的體積是 （ ） cm3。",
+    "options": [
+      "24",
+      "10 cm",
+      "2000",
+      "2厘米"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5B55M217c_03C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上面的長方體由三個正方體拼砌而成，該長方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "10 cm",
+      "24",
+      "2厘米",
+      "192 立方厘米"
+    ],
+    "answer": "192 立方厘米"
+  },
+  {
+    "id": "5B55M217c_04C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上面的長方體由4個大小相同的正方體拼砌而成，該長方體的體積是 （ ）。（答案需寫上單位）",
+    "options": [
+      "108 cm3",
+      "24",
+      "10 cm",
+      "2厘米"
+    ],
+    "answer": "108 cm3"
+  },
+  {
+    "id": "5B55M217c_05C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "把一個邊長是10 cm的正方體切成兩個大小相同的長方體，每個長方 體的體積是 （ ） cm3。",
+    "options": [
+      "24",
+      "2000",
+      "216",
+      "500"
+    ],
+    "answer": "500"
+  },
+  {
+    "id": "5B55M217c_06C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "嘉希把3個長4 cm、闊3 cm、高6 cm的長方體拼砌成一個大長方體， 如上圖所示。大長方體的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "10 cm",
+      "24",
+      "2厘米"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B55M217c_08C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上面的大長方體由3個邊長是8 cm的正方體和一個長是6 cm、闊是 8 cm和高是24 cm的長方體組成。大長方體的體積是 （ ） cm3。",
+    "options": [
+      "2厘米",
+      "24 cm",
+      "24",
+      "10 cm"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5B55M217c_38C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上圖長方體由5個大小相同的正方體組成。長方體的體積是 （ ）。 （答案需寫上單位）",
+    "options": [
+      "2厘米",
+      "10 cm",
+      "320 cm3",
+      "24"
+    ],
+    "answer": "320 cm3"
+  },
+  {
+    "id": "5B55M217c_39C_042P#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上圖是一個長方體，它由2個形狀和大小相同的小長方體和1個正方體組成。 上圖是一個長方體，它由2個形狀和大小相同的小長方體和1個正方體組成。",
+    "options": [
+      "24",
+      "2厘米",
+      "10 cm",
+      "15 cm"
+    ],
+    "answer": "15 cm"
+  },
+  {
+    "id": "5B55M217c_39C_042P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上圖是一個長方體，它由2個形狀和大小相同的小長方體和1個正方體組成。 (a) 每個小長方體的體積是 （ ） cm3。",
+    "options": [
+      "10 cm",
+      "5 cm",
+      "2厘米",
+      "24"
+    ],
+    "answer": "5 cm"
+  },
+  {
+    "id": "5B55M217c_39C_042P#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上圖是一個長方體，它由2個形狀和大小相同的小長方體和1個正方體組成。 (b) 上圖的體積是 （ ） cm3。",
+    "options": [
+      "500",
+      "250",
+      "2000",
+      "24"
+    ],
+    "answer": "250"
+  },
+  {
+    "id": "5B55M217c_41C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M217c.docx",
+    "topic": "5B55M217c  進一步解與長方體和正方體體積有關的應用題",
+    "question": "上圖的長方體木條剛好可分割成10個正方體，其中每個正方體的體積是27 cm3。木條長多少cm？ A.30 cmB.135 cm C.270 cmD.810 cm",
+    "options": [
+      "2厘米",
+      "10 cm",
+      "24",
+      "3 cm"
+    ],
+    "answer": "3 cm"
+  },
+  {
+    "id": "5B55M218a_01C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體由兩個長方體拼砌而成，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "108",
+      "3 cm",
+      "9 cm",
+      "6 cm"
+    ],
+    "answer": "9 cm"
+  },
+  {
+    "id": "5B55M218a_02C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體由一個正方體和一個長方體拼砌而成，這個立體的體 積是 （ ） cm3。",
+    "options": [
+      "9 cm",
+      "8 cm",
+      "6 cm",
+      "3 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5B55M218a_03C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "9 cm",
+      "6 cm",
+      "3 cm",
+      "7 cm"
+    ],
+    "answer": "7 cm"
+  },
+  {
+    "id": "5B55M218a_04C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "3 cm",
+      "6 cm",
+      "9 cm",
+      "12 cm"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5B55M218a_05C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體由兩個長方體組成，這個 立體的體積是 （ ） 立方米。",
+    "options": [
+      "3 cm",
+      "9 cm",
+      "6 cm",
+      "8米"
+    ],
+    "answer": "8米"
+  },
+  {
+    "id": "5B55M218a_06C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體由兩個長方體組成，這個 立體的體積是 （ ） 立方米。",
+    "options": [
+      "100",
+      "1224",
+      "320",
+      "108"
+    ],
+    "answer": "1224"
+  },
+  {
+    "id": "5B55M218a_07C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體可分割成兩個長方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "10 cm",
+      "9 cm",
+      "3 cm"
+    ],
+    "answer": "10 cm"
+  },
+  {
+    "id": "5B55M218a_08C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "14 cm",
+      "3 cm",
+      "9 cm",
+      "6 cm"
+    ],
+    "answer": "14 cm"
+  },
+  {
+    "id": "5B55M218a_09C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） m3。",
+    "options": [
+      "3 cm",
+      "11 m",
+      "6 cm",
+      "9 cm"
+    ],
+    "answer": "11 m"
+  },
+  {
+    "id": "5B55M218a_10C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） 立方米。",
+    "options": [
+      "1128",
+      "100",
+      "320",
+      "108"
+    ],
+    "answer": "1128"
+  },
+  {
+    "id": "5B55M218a_11C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "3 cm",
+      "9 cm",
+      "20 cm",
+      "6 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5B55M218a_12C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "8 cm",
+      "6 cm",
+      "9 cm",
+      "3 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5B55M218a_13C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "3 cm",
+      "9 cm",
+      "16 cm"
+    ],
+    "answer": "16 cm",
+    "image": "q-images/5B55M218a_13C_041N.webp"
+  },
+  {
+    "id": "5B55M218a_14C_041N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） m3。",
+    "options": [
+      "9 cm",
+      "11 m",
+      "3 cm",
+      "6 cm"
+    ],
+    "answer": "11 m",
+    "image": "q-images/5B55M218a_14C_041N.webp"
+  },
+  {
+    "id": "5B55M218a_15C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "9 cm",
+      "6 cm",
+      "3 cm",
+      "18 cm"
+    ],
+    "answer": "18 cm",
+    "image": "q-images/5B55M218a_15C_041P.webp"
+  },
+  {
+    "id": "5B55M218a_16C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "12 cm",
+      "3 cm",
+      "9 cm"
+    ],
+    "answer": "12 cm",
+    "image": "q-images/5B55M218a_16C_042P.webp"
+  },
+  {
+    "id": "5B55M218a_17C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "18 cm",
+      "9 cm",
+      "6 cm",
+      "3 cm"
+    ],
+    "answer": "18 cm",
+    "image": "q-images/5B55M218a_17C_042N.webp"
+  },
+  {
+    "id": "5B55M218a_18C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "樂兒從一塊長方體積木切去兩個長方體後，餘下的部分如右圖所示。餘下部分的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "9 cm",
+      "8 cm",
+      "3 cm"
+    ],
+    "answer": "8 cm",
+    "image": "q-images/5B55M218a_18C_042N.webp"
+  },
+  {
+    "id": "5B55M218a_19C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體可分割或填補成長方體或正方體，這個立體的體積是（ ） cm3。",
+    "options": [
+      "9 cm",
+      "6 cm",
+      "3 cm",
+      "108"
+    ],
+    "answer": "9 cm",
+    "image": "q-images/5B55M218a_19C_042P.webp"
+  },
+  {
+    "id": "5B55M218a_20C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上面的立體可分割或填補成長方體或正方體，這個立體的體積是 （ ） cm3。",
+    "options": [
+      "9 cm",
+      "3 cm",
+      "20 cm",
+      "6 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5B55M218a_21C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "學軒把右面的摺紙圖樣摺成一個正方體紙盒，摺成的紙盒的體積 是 （ ） cm3。",
+    "options": [
+      "108",
+      "9 cm",
+      "6 cm",
+      "3 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B55M218a_22C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "詠欣把右面的摺紙圖樣摺成一個長方體紙盒，摺成的紙盒的體積 是 （ ） cm3。",
+    "options": [
+      "9 cm",
+      "6 cm",
+      "3 cm",
+      "12 cm"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5B55M218a_23C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖是一個正方體紙盒的摺紙圖樣， 摺成的紙盒的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "3 cm",
+      "20 cm",
+      "9 cm"
+    ],
+    "answer": "20 cm"
+  },
+  {
+    "id": "5B55M218a_24C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖是一個長方體紙盒的摺紙圖樣， 摺成的紙盒的體積是 （ ） cm3。",
+    "options": [
+      "6 cm",
+      "9 cm",
+      "3 cm",
+      "24 cm"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5B55M218a_25C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "仲賢有一個邊長是12 cm的正方體盒子，如上圖所示。這個盒子內 最多可放 （ ） 粒邊長是3 cm的正方體膠粒。",
+    "options": [
+      "9 cm",
+      "12 cm",
+      "6 cm",
+      "3 cm"
+    ],
+    "answer": "12 cm"
+  },
+  {
+    "id": "5B55M218a_26C_042N",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "晴雅有一個透明的長方體盒子，如上圖所示。這個盒子內最多可放 （ ） 粒邊長是4 cm的正方體積木。",
+    "options": [
+      "28 cm",
+      "9 cm",
+      "3 cm",
+      "6 cm"
+    ],
+    "answer": "28 cm"
+  },
+  {
+    "id": "5B55M218a_27C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體由3塊大小相同的長方體積木拼砌而成。這個立體的體積是 （ ） cm3。",
+    "options": [
+      "8 cm",
+      "3 cm",
+      "9 cm",
+      "6 cm"
+    ],
+    "answer": "8 cm"
+  },
+  {
+    "id": "5B55M218a_28C_042P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體由5個大小相同的長方體紙盒拼砌而成。這個立體 的體積是 （ ） cm3。",
+    "options": [
+      "9 cm",
+      "3 cm",
+      "24 cm",
+      "6 cm"
+    ],
+    "answer": "24 cm"
+  },
+  {
+    "id": "5B55M218a_29C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割成兩個長方體，它的體積是多少cm3？",
+    "options": [
+      "72 cm3",
+      "288 cm3",
+      "216 cm3",
+      "192 cm3"
+    ],
+    "answer": "288 cm3"
+  },
+  {
+    "id": "5B55M218a_32C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成正方體或長方體，它的體積是多少cm3？",
+    "options": [
+      "1056 cm3",
+      "776 cm3",
+      "1200 cm3",
+      "1344 cm3"
+    ],
+    "answer": "776 cm3"
+  },
+  {
+    "id": "5B55M218a_33C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可分割或填補成正方體或長方體，它的體積是多少cm3？",
+    "options": [
+      "512 cm3",
+      "1448 cm3",
+      "1960 cm3",
+      "2472 cm3"
+    ],
+    "answer": "1448 cm3"
+  },
+  {
+    "id": "5B55M218a_34C_081P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖的立體可填補成長方體，它的體積是多少cm3？",
+    "options": [
+      "896 cm3",
+      "880 cm3",
+      "835 cm3",
+      "960 cm3"
+    ],
+    "answer": "835 cm3"
+  },
+  {
+    "id": "5B55M218a_35C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "右圖是一個長方體的摺紙圖樣，這個長方體的體積是多少cm3？",
+    "options": [
+      "128 cm3",
+      "96 cm3",
+      "160 cm3",
+      "32 cm3"
+    ],
+    "answer": "128 cm3"
+  },
+  {
+    "id": "5B55M218a_62C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體可分割或填補成長方體或正方體。 這個立體的體積是 （ ） cm3。",
+    "options": [
+      "11 cm",
+      "6 cm",
+      "9 cm",
+      "3 cm"
+    ],
+    "answer": "11 cm"
+  },
+  {
+    "id": "5B55M218a_63C_041P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖的立體由5個大小相同的正方體組成。該立體的體積是 （ ） cm3。",
+    "options": [
+      "108",
+      "6 cm",
+      "9 cm",
+      "3 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B55M218a_64C_112P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "把上圖的摺紙圖樣摺成一個正方體紙盒，這個紙盒最多可放多少個邊長是2 cm的正方體？ 答案︰（ ） 個",
+    "options": [
+      "30 cm",
+      "6 cm",
+      "9 cm",
+      "3 cm"
+    ],
+    "answer": "30 cm"
+  },
+  {
+    "id": "5B55M218a_66C_082P",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "頒獎台由4個大小相同的長方體組成，每個長方體的長是 m，闊是 m。如果整個頒獎台的體積是 m3，每個長方體的高是多少m？",
+    "options": [
+      "m",
+      "1 m",
+      "1 m",
+      "m"
+    ],
+    "answer": "m"
+  },
+  {
+    "id": "5B55M218a_68C_122P#a",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖是一個摺紙圖樣。 上圖是一個摺紙圖樣。",
+    "options": [
+      "9 cm",
+      "3 cm",
+      "108",
+      "6 cm"
+    ],
+    "answer": "6 cm"
+  },
+  {
+    "id": "5B55M218a_68C_122P#b",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖是一個摺紙圖樣。 (a) 這個摺紙圖樣可以摺成一個 （ ） 體盒子。",
+    "options": [
+      "3 cm",
+      "108",
+      "9 cm",
+      "6 cm"
+    ],
+    "answer": "9 cm"
+  },
+  {
+    "id": "5B55M218a_68C_122P#c",
+    "grade": 5,
+    "unitKey": "volume",
+    "source": "c_5B55M218a.docx",
+    "topic": "5B55M218a立體圖形的體積",
+    "question": "上圖是一個摺紙圖樣。 (b) 該盒子的體積是 （ ） cm3。",
+    "options": [
+      "108",
+      "9 cm",
+      "6 cm",
+      "3 cm"
+    ],
+    "answer": "3 cm"
+  },
+  {
+    "id": "5B65A219a_16C_112N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "寫出一道包含代數符號S的方程。 方程：（ ）",
+    "options": [
+      "B，E",
+      "A，C",
+      "（或其他合理答案。）",
+      "A，D"
+    ],
+    "answer": "（或其他合理答案。）"
+  },
+  {
+    "id": "5B65A219a_17C_112N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "寫出一道包含代數符號r的方程。 方程：（ ）",
+    "options": [
+      "（或其他合理答案。）",
+      "A，D",
+      "A，C",
+      "B，E"
+    ],
+    "answer": "（或其他合理答案。）"
+  },
+  {
+    "id": "5B65A219a_18C_112N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "寫出一道包含代數符號M的方程。 方程：（ ）",
+    "options": [
+      "A，D",
+      "A，C",
+      "B，E",
+      "（或其他合理答案。）"
+    ],
+    "answer": "（或其他合理答案。）"
+  },
+  {
+    "id": "5B65A219a_19C_112N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "寫出一道包含代數符號y的方程。 方程：（ ）",
+    "options": [
+      "A，C",
+      "A，D",
+      "（或其他合理答案。）",
+      "B，E"
+    ],
+    "answer": "（或其他合理答案。）"
+  },
+  {
+    "id": "5B65A219a_28C_062N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "以上方程的解是 ( 7 / 9 )。",
+    "options": [
+      "A，D",
+      "B，E",
+      "A，C",
+      "e + 8 = 15"
+    ],
+    "answer": "e + 8 = 15"
+  },
+  {
+    "id": "5B65A219a_29C_062N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "以上方程的解是 ( 14 / 16 )。",
+    "options": [
+      "A，C",
+      "B，E",
+      "F – 11 = 3",
+      "A，D"
+    ],
+    "answer": "F – 11 = 3"
+  },
+  {
+    "id": "5B65A219a_30C_062N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "以上方程的解是 ( 7 / 8 )。",
+    "options": [
+      "B，E",
+      "4g = 32",
+      "A，D",
+      "A，C"
+    ],
+    "answer": "4g = 32"
+  },
+  {
+    "id": "5B65A219a_31C_062N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219a.docx",
+    "topic": "5B65A219a  代數式和方程（一步計算）",
+    "question": "以上方程的解是 ( 6 / 15 )。",
+    "options": [
+      "= 5",
+      "B，E",
+      "A，C",
+      "A，D"
+    ],
+    "answer": "= 5"
+  },
+  {
+    "id": "5B65A219b_13C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "k + 8= 9 k=",
+    "options": [
+      "27",
+      "1",
+      "14",
+      "19"
+    ],
+    "answer": "1"
+  },
+  {
+    "id": "5B65A219b_14C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "G + 17= 43 G=",
+    "options": [
+      "14",
+      "27",
+      "19",
+      "26"
+    ],
+    "answer": "26"
+  },
+  {
+    "id": "5B65A219b_15C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "v + 16= 61 v=",
+    "options": [
+      "14",
+      "19",
+      "45",
+      "27"
+    ],
+    "answer": "45"
+  },
+  {
+    "id": "5B65A219b_16C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "17 + M= 21 M=",
+    "options": [
+      "14",
+      "19",
+      "4",
+      "27"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B65A219b_17C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "38 + a= 55 a=",
+    "options": [
+      "19",
+      "17",
+      "14",
+      "27"
+    ],
+    "answer": "17"
+  },
+  {
+    "id": "5B65A219b_18C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "h + 14= 100 h=",
+    "options": [
+      "19",
+      "14",
+      "27",
+      "86"
+    ],
+    "answer": "86"
+  },
+  {
+    "id": "5B65A219b_19C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "C – 24= 50 C=",
+    "options": [
+      "19",
+      "27",
+      "74",
+      "14"
+    ],
+    "answer": "74"
+  },
+  {
+    "id": "5B65A219b_20C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "t – 21= 0 t=",
+    "options": [
+      "19",
+      "21",
+      "14",
+      "27"
+    ],
+    "answer": "21"
+  },
+  {
+    "id": "5B65A219b_21C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "F – 32= 32 F=",
+    "options": [
+      "19",
+      "14",
+      "64",
+      "27"
+    ],
+    "answer": "64"
+  },
+  {
+    "id": "5B65A219b_22C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "g – 46= 64 g=",
+    "options": [
+      "110",
+      "19",
+      "14",
+      "27"
+    ],
+    "answer": "110"
+  },
+  {
+    "id": "5B65A219b_23C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "Z – 11= 77 Z=",
+    "options": [
+      "14",
+      "27",
+      "19",
+      "88"
+    ],
+    "answer": "88"
+  },
+  {
+    "id": "5B65A219b_24C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "h – 38= 88 h=",
+    "options": [
+      "19",
+      "126",
+      "27",
+      "14"
+    ],
+    "answer": "126"
+  },
+  {
+    "id": "5B65A219b_43C_122N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (a)用上面各項組成一道與加法有關的方程。 方程：（ ）",
+    "options": [
+      "f",
+      "驗算",
+      "14",
+      "d + 13"
+    ],
+    "answer": "f"
+  },
+  {
+    "id": "5B65A219b_43C_122N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (b)上面 (a) 部的方程的解是 （ ）。",
+    "options": [
+      "27",
+      "19",
+      "14",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "id": "5B65A219b_44C_122N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (a)用上面各項組成一道與加法有關的方程。 方程：（ ）",
+    "options": [
+      "h",
+      "d + 13",
+      "驗算",
+      "14"
+    ],
+    "answer": "h"
+  },
+  {
+    "id": "5B65A219b_44C_122N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (b)上面 (a) 部的方程的解是 （ ）。",
+    "options": [
+      "27",
+      "19",
+      "14",
+      "11"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B65A219b_45C_122N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (a)用上面各項組成一道與減法有關的方程。 方程：（ ）",
+    "options": [
+      "驗算",
+      "D",
+      "14",
+      "d + 13"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "5B65A219b_45C_122N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (b)上面 (a) 部的方程的解是 （ ）。",
+    "options": [
+      "27",
+      "19",
+      "14",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "id": "5B65A219b_46C_122N#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (a)用上面各項組成一道與減法有關的方程。 方程：（ ）",
+    "options": [
+      "19",
+      "16",
+      "27",
+      "14"
+    ],
+    "answer": "16"
+  },
+  {
+    "id": "5B65A219b_46C_122N#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "方程：（ ） (b)上面 (a) 部的方程的解是 （ ）。",
+    "options": [
+      "–",
+      "驗算",
+      "d + 13",
+      "14"
+    ],
+    "answer": "–"
+  },
+  {
+    "id": "5B65A219b_47C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "20= 6 + k k=",
+    "options": [
+      "27",
+      "19",
+      "14",
+      "51"
+    ],
+    "answer": "14"
+  },
+  {
+    "id": "5B65A219b_48C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A219b.docx",
+    "topic": "5B65A219b  與加法和減法有關的一步方程",
+    "question": "44= t – 28 t=",
+    "options": [
+      "27",
+      "72",
+      "19",
+      "14"
+    ],
+    "answer": "72"
+  },
+  {
+    "id": "5B65A220a_13C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "7B= 91 B=",
+    "options": [
+      "72",
+      "13",
+      "9",
+      "6"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": "5B65A220a_14C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "5c= 170 c=",
+    "options": [
+      "6",
+      "34",
+      "9",
+      "72"
+    ],
+    "answer": "34"
+  },
+  {
+    "id": "5B65A220a_15C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "6n= 108 n=",
+    "options": [
+      "18",
+      "9",
+      "72",
+      "6"
+    ],
+    "answer": "18"
+  },
+  {
+    "id": "5B65A220a_16C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "13y= 117 y=",
+    "options": [
+      "72",
+      "29",
+      "6",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B65A220a_17C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "8P= 200 P=",
+    "options": [
+      "6",
+      "9",
+      "72",
+      "25"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": "5B65A220a_18C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "25h= 300 h=",
+    "options": [
+      "9",
+      "72",
+      "6",
+      "12"
+    ],
+    "answer": "12"
+  },
+  {
+    "id": "5B65A220a_43C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220a.docx",
+    "topic": "5B65A220a  與乘法和除法有關的一步方程",
+    "question": "70= 10a a=",
+    "options": [
+      "7",
+      "9",
+      "72",
+      "6"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B65A220b_13C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 k加48的結果是75。 方程：（ ）k = （ ）",
+    "options": [
+      "25 + m = 40",
+      "k + 48 = 75",
+      "A – 14 = 9",
+      "r – 37 = 18"
+    ],
+    "answer": "k + 48 = 75"
+  },
+  {
+    "id": "5B65A220b_14C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 25加m的結果是40。 方程：（ ）m = （ ）",
+    "options": [
+      "k + 48 = 75",
+      "r – 37 = 18",
+      "A – 14 = 9",
+      "25 + m = 40"
+    ],
+    "answer": "25 + m = 40"
+  },
+  {
+    "id": "5B65A220b_15C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 A減14的結果是9。 方程：（ ）A = （ ）",
+    "options": [
+      "k + 48 = 75",
+      "A – 14 = 9",
+      "27",
+      "25 + m = 40"
+    ],
+    "answer": "A – 14 = 9"
+  },
+  {
+    "id": "5B65A220b_16C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 r減37的結果是18。 方程：（ ）r = （ ）",
+    "options": [
+      "r – 37 = 18",
+      "A – 14 = 9",
+      "k + 48 = 75",
+      "25 + m = 40"
+    ],
+    "answer": "r – 37 = 18"
+  },
+  {
+    "id": "5B65A220b_17C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 N乘以6的結果是108。 方程：（ ）N = （ ）",
+    "options": [
+      "k + 48 = 75",
+      "27",
+      "6N = 108",
+      "25 + m = 40"
+    ],
+    "answer": "6N = 108"
+  },
+  {
+    "id": "5B65A220b_18C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 12乘以x的結果是180。 方程：（ ）x = （ ）",
+    "options": [
+      "25 + m = 40",
+      "27",
+      "k + 48 = 75",
+      "12x = 180"
+    ],
+    "answer": "12x = 180"
+  },
+  {
+    "id": "5B65A220b_19C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 Q的8倍是64。 方程：（ ）Q = （ ）",
+    "options": [
+      "27",
+      "8Q = 64",
+      "25 + m = 40",
+      "k + 48 = 75"
+    ],
+    "answer": "8Q = 64"
+  },
+  {
+    "id": "5B65A220b_20C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 h的12倍是108。 方程：（ ）h = （ ）",
+    "options": [
+      "25 + m = 40",
+      "12h = 108",
+      "27",
+      "k + 48 = 75"
+    ],
+    "answer": "12h = 108"
+  },
+  {
+    "id": "5B65A220b_21C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 D除以4的結果是20。 方程：（ ）D = （ ）",
+    "options": [
+      "= 20",
+      "k + 48 = 75",
+      "25 + m = 40",
+      "27"
+    ],
+    "answer": "= 20"
+  },
+  {
+    "id": "5B65A220b_22C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 u除以9的結果是81。 方程：（ ）u = （ ）",
+    "options": [
+      "27",
+      "25 + m = 40",
+      "= 81",
+      "k + 48 = 75"
+    ],
+    "answer": "= 81"
+  },
+  {
+    "id": "5B65A220b_23C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 安琪原有紫菜v包，媽媽多買9包回來後，家裏共有紫菜22包。 方程：（ ）v = （ ）",
+    "options": [
+      "27",
+      "25 + m = 40",
+      "v + 9 = 22",
+      "k + 48 = 75"
+    ],
+    "answer": "v + 9 = 22"
+  },
+  {
+    "id": "5B65A220b_24C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 漢文買了朱古力C粒，吃了6粒後，還有14粒。 方程：（ ）C = （ ）",
+    "options": [
+      "25 + m = 40",
+      "k + 48 = 75",
+      "C – 6 = 14",
+      "27"
+    ],
+    "answer": "C – 6 = 14"
+  },
+  {
+    "id": "5B65A220b_25C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 筆記簿每本售E元，爸爸購買筆記簿4本，共需付232元。 方程：（ ）E = （ ）",
+    "options": [
+      "k + 48 = 75",
+      "4E = 232",
+      "27",
+      "25 + m = 40"
+    ],
+    "answer": "4E = 232"
+  },
+  {
+    "id": "5B65A220b_26C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "依題意列出方程，並找出未知數的值。 汽水一瓶有s毫升，佩雯把半瓶汽水分給雪兒，雪兒可分得汽水450毫升。 方程：（ ）s = （ ）",
+    "options": [
+      "27",
+      "k + 48 = 75",
+      "25 + m = 40",
+      "= 450"
+    ],
+    "answer": "= 450"
+  },
+  {
+    "id": "5B65A220b_42C_122P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A220b.docx",
+    "topic": "5B65A220b  運用一步計算的方程解數學文字題及應用題",
+    "question": "靜文摺一朵紙玫瑰需時6分鐘，她摺了R朵紙玫瑰，共用了1小時。 (a)以下哪道方程能夠找出靜文摺了紙玫瑰多少朵？ (b)靜文摺了紙玫瑰 （ ） 朵。",
+    "options": [
+      "R = 6",
+      "6R = 1",
+      "6R = 60",
+      "6R = 100"
+    ],
+    "answer": "6R = 100"
+  },
+  {
+    "id": "5B65A221a_01C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "弟弟買4包各售C元的餅乾和1瓶售25元的牛奶。 弟弟共需付（（ ））元。（以代數式作答）",
+    "options": [
+      "150 + 90s",
+      "3j – 28",
+      "4C + 25",
+      "5b – 250"
+    ],
+    "answer": "4C + 25"
+  },
+  {
+    "id": "5B65A221a_02C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "家中原有砂糖150克，媽媽多買s包各重90克的砂糖。 家中現有砂糖（（ ））克。（以代數式作答）",
+    "options": [
+      "3j – 28",
+      "5b – 250",
+      "4C + 25",
+      "150 + 90s"
+    ],
+    "answer": "150 + 90s"
+  },
+  {
+    "id": "5B65A221a_03C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "每瓶涼茶有b毫升。家中原有涼茶5瓶，喝去250毫升。 還餘涼茶（（ ））毫升。（以代數式作答）",
+    "options": [
+      "3j – 28",
+      "4C + 25",
+      "150 + 90s",
+      "5b – 250"
+    ],
+    "answer": "5b – 250"
+  },
+  {
+    "id": "5B65A221a_04C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "每條褲子原來的售價是j元，買3條共可減28元。 林先生買褲子3條，共需付（（ ））元。（以代數式作答）",
+    "options": [
+      "4C + 25",
+      "5b – 250",
+      "3j – 28",
+      "150 + 90s"
+    ],
+    "answer": "3j – 28"
+  },
+  {
+    "id": "5B65A221a_05C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "壽司師傅先做了三文魚壽司U件，再把三文魚壽司每2件放成一碟，然後做了蝦壽司9碟。 壽司師傅共做了三文魚壽司和蝦壽司（（ ））碟。（以代數式作答）",
+    "options": [
+      "150 + 90s",
+      "4C + 25",
+      "+ 9",
+      "5b – 250"
+    ],
+    "answer": "+ 9"
+  },
+  {
+    "id": "5B65A221a_06C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "老師先把p張紅色手工紙平均分給4個學生，剛好可分盡而沒有剩餘。老師再分給每個學生2張金色手工紙。 每個學生共分得手工紙（（ ））張。（以代數式作答）",
+    "options": [
+      "150 + 90s",
+      "5b – 250",
+      "4C + 25",
+      "+ 2"
+    ],
+    "answer": "+ 2"
+  },
+  {
+    "id": "5B65A221a_07C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "媽媽把J個果凍平均分成3份，剛好可分盡而沒有剩餘。妹妹取其中一份果凍，她吃了果凍1個。 妹妹還餘果凍（（ ））個。（以代數式作答）",
+    "options": [
+      "5b – 250",
+      "4C + 25",
+      "150 + 90s",
+      "– 1"
+    ],
+    "answer": "– 1"
+  },
+  {
+    "id": "5B65A221a_08C_041N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "每枝大礦泉水有w毫升，每枝小礦泉水有250毫升。 半枝大礦泉水比一枝小礦泉水多（（ ））毫升。（以代數式作答）",
+    "options": [
+      "5b – 250",
+      "4C + 25",
+      "150 + 90s",
+      "– 250"
+    ],
+    "answer": "– 250"
+  },
+  {
+    "id": "5B65A221a_20C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 c乘以3後加8的結果是26。 方程：（ ）",
+    "options": [
+      "4C + 25",
+      "150 + 90s",
+      "5b – 250",
+      "3c + 8 = 26"
+    ],
+    "answer": "3c + 8 = 26"
+  },
+  {
+    "id": "5B65A221a_21C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 A的7倍減15的結果是13。 方程：（ ）",
+    "options": [
+      "5b – 250",
+      "150 + 90s",
+      "4C + 25",
+      "7A – 15 = 13"
+    ],
+    "answer": "7A – 15 = 13"
+  },
+  {
+    "id": "5B65A221a_22C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 m除以6後加1的結果是4。 方程：（ ）",
+    "options": [
+      "4C + 25",
+      "150 + 90s",
+      "5b – 250",
+      "+ 1 = 4"
+    ],
+    "answer": "+ 1 = 4"
+  },
+  {
+    "id": "5B65A221a_23C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 k除以2後減7的結果是5。 方程：（ ）",
+    "options": [
+      "150 + 90s",
+      "4C + 25",
+      "– 7 = 5",
+      "5b – 250"
+    ],
+    "answer": "– 7 = 5"
+  },
+  {
+    "id": "5B65A221a_24C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 串一條手鏈需用珠子22粒，串一條頸鏈需用珠子54粒。妹妹串了b條手鏈和1條頸鏈，共用去珠子120粒。 方程：（ ）",
+    "options": [
+      "4C + 25",
+      "150 + 90s",
+      "22b + 54 = 120",
+      "5b – 250"
+    ],
+    "answer": "22b + 54 = 120"
+  },
+  {
+    "id": "5B65A221a_25C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 小織籃重60克，籃內放了復活蛋e隻，每隻復活蛋重55克。復活蛋的總重量比小織籃重160克。 方程：（ ）",
+    "options": [
+      "4C + 25",
+      "5b – 250",
+      "150 + 90s",
+      "55e – 60 = 160"
+    ],
+    "answer": "55e – 60 = 160"
+  },
+  {
+    "id": "5B65A221a_26C_111N",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "用方程表示以下題目。 一盒雪糕的原價是x元，現以半價後再額外減3元出售，只售39元。 方程：（ ）",
+    "options": [
+      "– 3 = 39",
+      "5b – 250",
+      "4C + 25",
+      "150 + 90s"
+    ],
+    "answer": "– 3 = 39"
+  },
+  {
+    "id": "5B65A221a_28C_042P#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "一套漫畫分兩冊。 一套漫畫分兩冊。",
+    "options": [
+      "5b – 250",
+      "7n + 20",
+      "150 + 90s",
+      "4C + 25"
+    ],
+    "answer": "7n + 20"
+  },
+  {
+    "id": "5B65A221a_28C_042P#b",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221a.docx",
+    "topic": "5B65A221a  代數式和方程（兩步計算）",
+    "question": "一套漫畫分兩冊。 (a)卓軒每天看n頁第一冊漫畫，一星期後還餘20頁未看。第一冊漫畫共有（（ ））頁。（以代數式作答）",
+    "options": [
+      "– 14",
+      "150 + 90s",
+      "4C + 25",
+      "5b – 250"
+    ],
+    "answer": "– 14"
+  },
+  {
+    "id": "5B65A221b_17C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "4p + 17= 41 p=",
+    "options": [
+      "31",
+      "6",
+      "8",
+      "24"
+    ],
+    "answer": "6"
+  },
+  {
+    "id": "5B65A221b_18C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "5r + 22= 67 r=",
+    "options": [
+      "24",
+      "9",
+      "31",
+      "8"
+    ],
+    "answer": "9"
+  },
+  {
+    "id": "5B65A221b_19C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "26 + 9c= 179 c=",
+    "options": [
+      "31",
+      "24",
+      "8",
+      "17"
+    ],
+    "answer": "17"
+  },
+  {
+    "id": "5B65A221b_20C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "41 + 11D= 338 D=",
+    "options": [
+      "27",
+      "8",
+      "31",
+      "24"
+    ],
+    "answer": "27"
+  },
+  {
+    "id": "5B65A221b_21C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "3E – 14= 31 E=",
+    "options": [
+      "15",
+      "8",
+      "24",
+      "31"
+    ],
+    "answer": "15"
+  },
+  {
+    "id": "5B65A221b_22C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "6f – 60= 60 f=",
+    "options": [
+      "20",
+      "24",
+      "8",
+      "31"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5B65A221b_23C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "8B – 42= 46 B=",
+    "options": [
+      "31",
+      "24",
+      "11",
+      "8"
+    ],
+    "answer": "11"
+  },
+  {
+    "id": "5B65A221b_24C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "13T – 49= 250 T=",
+    "options": [
+      "31",
+      "24",
+      "8",
+      "23"
+    ],
+    "answer": "23"
+  },
+  {
+    "id": "5B65A221b_25C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "+ 3= 4 D=",
+    "options": [
+      "8",
+      "24",
+      "31",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "id": "5B65A221b_26C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "+ 2= 7 Y=",
+    "options": [
+      "31",
+      "25",
+      "24",
+      "8"
+    ],
+    "answer": "25"
+  },
+  {
+    "id": "5B65A221b_27C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "9 + = 14 a=",
+    "options": [
+      "20",
+      "31",
+      "24",
+      "8"
+    ],
+    "answer": "20"
+  },
+  {
+    "id": "5B65A221b_28C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "13 + = 15 f=",
+    "options": [
+      "31",
+      "8",
+      "24",
+      "16"
+    ],
+    "answer": "24"
+  },
+  {
+    "id": "5B65A221b_29C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "– 3= 18 t=",
+    "options": [
+      "31",
+      "24",
+      "126",
+      "8"
+    ],
+    "answer": "126"
+  },
+  {
+    "id": "5B65A221b_30C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "– 4= 1 u=",
+    "options": [
+      "31",
+      "8",
+      "24",
+      "75"
+    ],
+    "answer": "75"
+  },
+  {
+    "id": "5B65A221b_57C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "14= 4a – 2 a=",
+    "options": [
+      "8",
+      "24",
+      "31",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "id": "5B65A221b_58C_051P",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221b.docx",
+    "topic": "5B65A221b  與乘法和除法有關的兩步方程",
+    "question": "15 + = 18 Y=",
+    "options": [
+      "27",
+      "31",
+      "24",
+      "8"
+    ],
+    "answer": "27"
+  },
+  {
+    "id": "5B65A221c_61C_121P#a",
+    "grade": 5,
+    "unitKey": "algebra",
+    "source": "c_5B65A221c.docx",
+    "topic": "5B65A221c  運用兩步計算的方程解數學文字題及應用題",
+    "question": "爸爸買了一罐茶葉，重t g，他把這罐茶葉平均分成15包。 爸爸買了一罐茶葉，重t g，他把這罐茶葉平均分成15包。",
+    "options": [
+      "2y + 11 = 25",
+      "– 16",
+      "5y – 4 = 46",
+      "4y + 7 = 27"
+    ],
+    "answer": "– 16"
+  },
+  {
+    "id": "5A_L01_Q01",
+    "grade": 5,
+    "question": "算柱所表示的數是一個 ______ 位數。",
+    "options": [
+      "五",
+      "六",
+      "七",
+      "八"
+    ],
+    "answer": "六",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q01.png"
+  },
+  {
+    "id": "5A_L01_Q02",
+    "grade": 5,
+    "question": "在這個數中，「5」在 ______ 位，表示 ______ 。",
+    "options": [
+      "百萬；5000000",
+      "十萬；500000",
+      "萬；50000",
+      "千；5000"
+    ],
+    "answer": "十萬；500000",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q02.png"
+  },
+  {
+    "id": "5A_L01_Q03",
+    "grade": 5,
+    "question": "以下算柱所表示的數是  _______________ 。",
+    "options": [
+      "24001250",
+      "2400125",
+      "12000625",
+      "240012500"
+    ],
+    "answer": "24001250",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "short_answer",
+    "image": "q-images/5A_L01_Q03.png"
+  },
+  {
+    "id": "5A_L01_Q04",
+    "grade": 5,
+    "question": "以下算柱所表示的數中，「4」在百萬位，表示 _______________ 。",
+    "options": [
+      "4000000",
+      "2000000",
+      "400000",
+      "40000000"
+    ],
+    "answer": "4000000",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "short_answer",
+    "image": "q-images/5A_L01_Q04.png"
+  },
+  {
+    "id": "5A_L01_Q05",
+    "grade": 5,
+    "question": "「三百一十萬四千七百二十五」是以下哪個數的讀法？",
+    "options": [
+      "301472",
+      "3104725",
+      "314725"
+    ],
+    "answer": "3104725",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q06",
+    "grade": 5,
+    "question": "「七億三千零六萬二千三百零一」是以下哪個數的讀法？",
+    "options": [
+      "730602301",
+      "700362310",
+      "730062301"
+    ],
+    "answer": "730062301",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q07",
+    "grade": 5,
+    "question": "根據以下算柱所表示的數，選擇該數正確的讀法。",
+    "options": [
+      "四十二萬三千五十",
+      "四十萬三千一百五十",
+      "四十萬三千一百五",
+      "四十二萬三千一百五十"
+    ],
+    "answer": "四十二萬三千一百五十",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q07.png"
+  },
+  {
+    "id": "5A_L01_Q08",
+    "grade": 5,
+    "question": "根據以下算柱所表示的數，選擇該數正確的讀法。",
+    "options": [
+      "八千三百二十二萬六",
+      "八千三百二十萬零六",
+      "八千三百二十二萬零六",
+      "八千三百二十萬六"
+    ],
+    "answer": "八千三百二十二萬零六",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q08.png"
+  },
+  {
+    "id": "5A_L01_Q09",
+    "grade": 5,
+    "question": "依規律，選出正確的答案。這是 ______ 。",
+    "options": [
+      "順數",
+      "倒數"
+    ],
+    "answer": "倒數",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q09.png"
+  },
+  {
+    "id": "5A_L01_Q10",
+    "grade": 5,
+    "question": "依規律，選出正確的答案。這是 ______ 。",
+    "options": [
+      "順數",
+      "倒數"
+    ],
+    "answer": "順數",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice",
+    "image": "q-images/5A_L01_Q10.png"
+  },
+  {
+    "id": "5A_L01_Q13",
+    "grade": 5,
+    "question": "選出正確的答案。",
+    "options": [
+      "7320108 > 480560",
+      "7320108 < 480560"
+    ],
+    "answer": "7320108 > 480560",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q14",
+    "grade": 5,
+    "question": "選出正確的答案。",
+    "options": [
+      "35268425 > 39416330",
+      "35268425 < 39416330"
+    ],
+    "answer": "35268425 < 39416330",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L01_Q15",
+    "grade": 5,
+    "question": "把 1200300、210169 和 13450500 由小至大排列出來。",
+    "options": [
+      "1200300 < 210169 < 13450500",
+      "210169 < 1200300 < 13450500",
+      "1200300 < 13450500 < 210169",
+      "210169 < 13450500 < 1200300"
+    ],
+    "answer": "210169 < 1200300 < 13450500",
+    "unitKey": "large_numbers",
+    "topic": "多位數",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "kind": "multiple_choice"
+  },
+  {
+    "id": "5A_L02_Q01",
+    "grade": 5,
+    "question": "用四捨五入法，把 56380125 取近似值至十萬位是 _______________。",
+    "options": [
+      "56400000",
+      "5640000",
+      "564000000",
+      "28200000"
+    ],
+    "answer": "56400000",
+    "unitKey": "large_numbers",
+    "topic": "近似值和大數量的估計",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L02_Q02",
+    "grade": 5,
+    "question": "用四捨五入法，把 320479566 取近似值至千萬位是  _______________。",
+    "options": [
+      "160000000",
+      "320000000",
+      "32000000",
+      "3200000000"
+    ],
+    "answer": "320000000",
+    "unitKey": "large_numbers",
+    "topic": "近似值和大數量的估計",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L02_Q03",
+    "grade": 5,
+    "question": "估計圖中約有圓點多少個。下圖約有圓點  _________ 個。",
+    "options": [
+      "97、90",
+      "192、90",
+      "95、90",
+      "96、90"
+    ],
+    "answer": "96、90",
+    "unitKey": "large_numbers",
+    "topic": "近似值和大數量的估計",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "kind": "short_answer",
+    "image": "q-images/5A_L02_Q03.png"
+  },
+  {
+    "id": "5A_L07_Q01",
+    "grade": 5,
+    "question": "上面平行四邊形的面積是 ______ cm²。",
+    "options": [
+      "47",
+      "49",
+      "96",
+      "48"
+    ],
+    "answer": "48",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q01.png"
+  },
+  {
+    "id": "5A_L07_Q02",
+    "grade": 5,
+    "question": "上面平行四邊形的面積是 ______ m²。",
+    "options": [
+      "1800",
+      "180",
+      "90",
+      "18"
+    ],
+    "answer": "180",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q02.png"
+  },
+  {
+    "id": "5A_L07_Q03",
+    "grade": 5,
+    "question": "平行四邊形的底是 15 米，高是 19 米，它的面積是 _______ 平方米。",
+    "options": [
+      "285",
+      "2850",
+      "28.5",
+      "142.5"
+    ],
+    "answer": "285",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L07_Q04",
+    "grade": 5,
+    "question": "上圖是一個平行四邊形，它的面積是 ______ cm²。",
+    "options": [
+      "132",
+      "13.2",
+      "66",
+      "1320"
+    ],
+    "answer": "132",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q04.png"
+  },
+  {
+    "id": "5A_L07_Q05",
+    "grade": 5,
+    "question": "上圖平行四邊形的面積是 165 m²。以 11 m 為高，對應的底是 ______ m。",
+    "options": [
+      "30",
+      "16",
+      "15",
+      "14"
+    ],
+    "answer": "15",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q05.png"
+  },
+  {
+    "id": "5A_L07_Q06",
+    "grade": 5,
+    "question": "上圖平行四邊形的面積是 54 平方厘米，以 9 厘米為底，對應的高是 ______ 厘米。",
+    "options": [
+      "5",
+      "12",
+      "7",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q06.png"
+  },
+  {
+    "id": "5A_L07_Q07",
+    "grade": 5,
+    "question": "一塊平行四邊形玻璃的底是 50 厘米，高是底的一半，這塊玻璃的面積是 _______ 平方厘米。",
+    "options": [
+      "12500",
+      "1250",
+      "125",
+      "625"
+    ],
+    "answer": "1250",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5A_L07_Q08",
+    "grade": 5,
+    "question": "德輝把 4 個大小相同的平行四邊形拼成一個大平行四邊形，如上圖所示。大平行四邊形的面積是 ______ cm²。",
+    "options": [
+      "676",
+      "6760",
+      "338",
+      "67.6"
+    ],
+    "answer": "676",
+    "unitKey": "area",
+    "topic": "平行四邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 7 課 平行四邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L07_Q08.png"
+  },
+  {
+    "id": "5A_L08_Q01",
+    "grade": 5,
+    "question": "上圖三角形的面積是 ______ 平方厘米。",
+    "options": [
+      "7",
+      "12",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q01.png"
+  },
+  {
+    "id": "5A_L08_Q02",
+    "grade": 5,
+    "question": "上圖三角形的面積是 ______ m²。",
+    "options": [
+      "2160",
+      "21.6",
+      "216",
+      "108"
+    ],
+    "answer": "216",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q02.png"
+  },
+  {
+    "id": "5A_L08_Q03",
+    "grade": 5,
+    "question": "一張三角形手工紙，它的底是 20 cm，高是 16 cm。三角形紙的面積是 ______ cm²。",
+    "options": [
+      "16",
+      "160",
+      "80",
+      "1600"
+    ],
+    "answer": "160",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q03.png"
+  },
+  {
+    "id": "5A_L08_Q04",
+    "grade": 5,
+    "question": "上圖三角形的面積是 ______ cm²。",
+    "options": [
+      "1800",
+      "90",
+      "180",
+      "18"
+    ],
+    "answer": "180",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q04.png"
+  },
+  {
+    "id": "5A_L08_Q05",
+    "grade": 5,
+    "question": "一面三角形彩旗，底是 8 m，高是底的 2 倍，它的面積是 ______ m²。",
+    "options": [
+      "65",
+      "128",
+      "63",
+      "64"
+    ],
+    "answer": "64",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q05.png"
+  },
+  {
+    "id": "5A_L08_Q06",
+    "grade": 5,
+    "question": "家欣把上圖的三角形沿虛線剪成三個小三角形，每個小三角形的底的長度相等。每個小三角形的面積是 ______ cm²。",
+    "options": [
+      "90",
+      "180",
+      "91",
+      "89"
+    ],
+    "answer": "90",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q06.png"
+  },
+  {
+    "id": "5A_L08_Q07",
+    "grade": 5,
+    "question": "可瑩用四塊圖一的三角形瓷磚拼砌出一個平行四邊形，如圖二所示。圖二的面積是 ______ cm²。",
+    "options": [
+      "600",
+      "60",
+      "300",
+      "6000"
+    ],
+    "answer": "600",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q07.png"
+  },
+  {
+    "id": "5A_L08_Q08",
+    "grade": 5,
+    "question": "上圖是一張正方形手工紙，從這張手工紙剪出一個最大的三角形，這個三角形的面積是 ______ 平方厘米。",
+    "options": [
+      "98",
+      "99",
+      "196",
+      "97"
+    ],
+    "answer": "98",
+    "unitKey": "area",
+    "topic": "三角形的面積",
+    "source": "第二版 5 上 A 單元三 第 8 課 三角形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L08_Q08.png"
+  },
+  {
+    "id": "5A_L09_Q01",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ cm²。",
+    "options": [
+      "72",
+      "37",
+      "35",
+      "36"
+    ],
+    "answer": "36",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q01.png"
+  },
+  {
+    "id": "5A_L09_Q02",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ m²。",
+    "options": [
+      "150",
+      "30",
+      "3000",
+      "300"
+    ],
+    "answer": "300",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q02.png"
+  },
+  {
+    "id": "5A_L09_Q03",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ 平方米。",
+    "options": [
+      "84",
+      "168",
+      "85",
+      "83"
+    ],
+    "answer": "84",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q03.png"
+  },
+  {
+    "id": "5A_L09_Q04",
+    "grade": 5,
+    "question": "上圖梯形的面積是 ______ 平方厘米。",
+    "options": [
+      "15",
+      "1500",
+      "75",
+      "150"
+    ],
+    "answer": "150",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q04.png"
+  },
+  {
+    "id": "5A_L09_Q05",
+    "grade": 5,
+    "question": "梯形壁報板的上底與下底之和是 500 厘米，高是 2 米。壁報板的面積是 ______ 平方米。",
+    "options": [
+      "4",
+      "6",
+      "10",
+      "5"
+    ],
+    "answer": "5",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q05.png"
+  },
+  {
+    "id": "5A_L09_Q06",
+    "grade": 5,
+    "question": "老師從一張平行四邊形紙剪出一個三角形和一個梯形，如上圖所示。梯形的面積是 ______ cm²。",
+    "options": [
+      "22.4",
+      "2240",
+      "112",
+      "224"
+    ],
+    "answer": "224",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q06.png"
+  },
+  {
+    "id": "5A_L09_Q07",
+    "grade": 5,
+    "question": "上圖由兩塊大小相同的梯形拼砌而成。上圖的面積是 ______ 平方厘米。",
+    "options": [
+      "32",
+      "15",
+      "17",
+      "16"
+    ],
+    "answer": "16",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q07.png"
+  },
+  {
+    "id": "5A_L09_Q08",
+    "grade": 5,
+    "question": "一個梯形花圃的上底和高都是 2 米，下底是 4 米。園丁把花圃的上底加長了 1 米，下底和高不變。花圃擴建後的面積是 ______ 平方米。",
+    "options": [
+      "14",
+      "7",
+      "6",
+      "8"
+    ],
+    "answer": "7",
+    "unitKey": "area",
+    "topic": "梯形的面積",
+    "source": "第二版 5 上 A 單元三 第 9 課 梯形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L09_Q08.png"
+  },
+  {
+    "id": "5A_L10_Q01",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ cm²。",
+    "options": [
+      "306",
+      "3060",
+      "153",
+      "30.6"
+    ],
+    "answer": "306",
+    "unitKey": "area",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q01.png"
+  },
+  {
+    "id": "5A_L10_Q02",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ cm²。",
+    "options": [
+      "288",
+      "2880",
+      "28.8",
+      "144"
+    ],
+    "answer": "288",
+    "unitKey": "area",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q02.png"
+  },
+  {
+    "id": "5A_L10_Q03",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ m²。",
+    "options": [
+      "108",
+      "2160",
+      "216",
+      "21.6"
+    ],
+    "answer": "216",
+    "unitKey": "area",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q03.png"
+  },
+  {
+    "id": "5A_L10_Q04",
+    "grade": 5,
+    "question": "上圖多邊形的面積是 ______ m²。",
+    "options": [
+      "14",
+      "13",
+      "28",
+      "15"
+    ],
+    "answer": "14",
+    "unitKey": "area",
+    "topic": "多邊形的面積",
+    "source": "第二版 5 上 A 單元三 第 10 課 多邊形的面積",
+    "kind": "short_answer",
+    "image": "q-images/5A_L10_Q04.png"
+  },
+  {
+    "id": "5B_L16_Q01",
+    "grade": 5,
+    "question": "縱軸的每大格代表 ______ 元。",
+    "options": [
+      "100",
+      "10000",
+      "500",
+      "1000"
+    ],
+    "answer": "1000",
+    "unitKey": "general",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q01.png"
+  },
+  {
+    "id": "5B_L16_Q02",
+    "grade": 5,
+    "question": "星期六上午的營業額是 ______ 元。",
+    "options": [
+      "3600",
+      "72000",
+      "720",
+      "7200"
+    ],
+    "answer": "7200",
+    "unitKey": "general",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q02.png"
+  },
+  {
+    "id": "5B_L16_Q03",
+    "grade": 5,
+    "question": "過去五天，小食店有 ______ 天上午的營業額比下午的低。",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "1"
+    ],
+    "answer": "2",
+    "unitKey": "general",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q03.png"
+  },
+  {
+    "id": "5B_L16_Q04",
+    "grade": 5,
+    "question": "過去五天，下午的總營業額是 ______ 元。",
+    "options": [
+      "254000",
+      "25400",
+      "2540",
+      "12700"
+    ],
+    "answer": "25400",
+    "unitKey": "general",
+    "topic": "複合棒形圖（一）",
+    "source": "第二版 5 上 B 單元六 第 16 課 複合棒形圖（一）",
+    "kind": "short_answer",
+    "image": "q-images/5B_L16_Q04.png"
+  },
+  {
+    "id": "5DA_L01_Q01",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。根據下圖，線段 _______ 是圓的半徑。",
+    "options": [
+      "AF",
+      "OB",
+      "DF",
+      "EF"
+    ],
+    "answer": "OB",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q01.png"
+  },
+  {
+    "id": "5DA_L01_Q02",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。根據下圖，線段 _______ 是圓的直徑。",
+    "options": [
+      "AD",
+      "AF",
+      "OD",
+      "CE"
+    ],
+    "answer": "AD",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q02.png"
+  },
+  {
+    "id": "5DA_L01_Q03",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。根據下圖，線段 OA 的長度與線段 ________ 的相同。",
+    "options": [
+      "AF",
+      "EF",
+      "OD",
+      "OF"
+    ],
+    "answer": "OD",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q03.png"
+  },
+  {
+    "id": "5DA_L01_Q04",
+    "grade": 5,
+    "question": "在以下的圓中，O 點是圓心。如果這個圓的半徑是 3 cm，它的直徑長 ________ cm。",
+    "options": [
+      "7",
+      "5",
+      "12",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L01_Q04.png"
+  },
+  {
+    "id": "5DA_L01_Q05",
+    "grade": 5,
+    "question": "下圖中，AB 是大圓的直徑，長 20 cm。O 點是大圓的圓心，C 點和 D 點分別是兩個大小相同的小圓的圓心。每個小圓的半徑是多少 cm？",
+    "options": [
+      "10 cm",
+      "5 cm",
+      "4 cm",
+      "2.5 cm"
+    ],
+    "answer": "5 cm",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q05.png"
+  },
+  {
+    "id": "5DA_L01_Q06",
+    "grade": 5,
+    "question": "下圖中，X 點和 Y 點分別是小圓和大圓的圓心，這兩點在同一條線段上。小圓和大圓的直徑分別是 12 cm 和 20 cm，XY 長多少 cm？",
+    "options": [
+      "64 cm",
+      "32 cm",
+      "16 cm",
+      "8 cm"
+    ],
+    "answer": "16 cm",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q06.png"
+  },
+  {
+    "id": "5DA_L01_Q07",
+    "grade": 5,
+    "question": "下圖中，正方形內有一個圓，O 點是圓心。以下哪條線段的長度與正方形的邊長相等？",
+    "options": [
+      "OA",
+      "BD",
+      "CF",
+      "OD"
+    ],
+    "answer": "CF",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q07.png"
+  },
+  {
+    "id": "5DA_L01_Q08",
+    "grade": 5,
+    "question": "下圖由四個大小相同的圓組成，P、Q、R 和 S 四點分別是它們的圓心。如果每個圓的直徑是 6 cm，四邊形 PQRS 的周界是多少 cm？",
+    "options": [
+      "12 cm",
+      "24 cm",
+      "30 cm",
+      "48 cm"
+    ],
+    "answer": "24 cm",
+    "unitKey": "circle",
+    "topic": "圓的認識",
+    "source": "第二版 5 下 A 單元一 第 1 課 圓的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L01_Q08.png"
+  },
+  {
+    "id": "5DA_L03_Q05",
+    "grade": 5,
+    "question": "蛋壽司的數量比蝦壽司的數量是 _________。",
+    "options": [
+      "2 比 5",
+      "2 比 7",
+      "5 比 2",
+      "5 比 7"
+    ],
+    "answer": "2 比 5",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L03_Q05.png"
+  },
+  {
+    "id": "5DA_L03_Q06",
+    "grade": 5,
+    "question": "三文魚壽司的數量比蝦壽司的數量是 _________。",
+    "options": [
+      "2 比 5",
+      "5 比 7",
+      "7 比 2",
+      "7 比 5"
+    ],
+    "answer": "7 比 5",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L03_Q06.png"
+  },
+  {
+    "id": "5DA_L05_Q07",
+    "grade": 5,
+    "question": "做一個繩結需用繩子 3又3／5 m。若希做繩結剛好用去繩子 18 m，她共做了繩結 ______ 個。",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "5",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L05_Q07.png"
+  },
+  {
+    "id": "5DA_L05_Q08",
+    "grade": 5,
+    "question": "侍應把 4又1／2 升檸檬水每 1／4 升分成一杯，然後把檸檬水平均放在 3 個餐盤上，每個餐盤上有檸檬水 ______ 杯。",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L05_Q08.png"
+  },
+  {
+    "id": "5DA_L06_Q07",
+    "grade": 5,
+    "question": "便利店有飲品 28 箱，牛奶佔全部飲品的 1／4，汽水佔全部飲品的 3／7。便利店裏共有牛奶和汽水 ______ 箱。",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": "19",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L06_Q07.png"
+  },
+  {
+    "id": "5DA_L06_Q08",
+    "grade": 5,
+    "question": "5B 班有學生 36 個，戴眼鏡的學生佔全班的 5／9。沒有戴眼鏡的學生有 ______ 個。",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": "16",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L06_Q08.png"
+  },
+  {
+    "id": "5DA_L08_Q01",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "24",
+      "12",
+      "11",
+      "13"
+    ],
+    "answer": "12",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q01.png"
+  },
+  {
+    "id": "5DA_L08_Q02",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "19",
+      "36",
+      "18",
+      "17"
+    ],
+    "answer": "18",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q02.png"
+  },
+  {
+    "id": "5DA_L08_Q03",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q03.png"
+  },
+  {
+    "id": "5DA_L08_Q04",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "7",
+      "16",
+      "9",
+      "8"
+    ],
+    "answer": "8",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q04.png"
+  },
+  {
+    "id": "5DA_L08_Q05",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "5",
+      "12",
+      "7",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q05.png"
+  },
+  {
+    "id": "5DA_L08_Q06",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "10",
+      "9",
+      "8",
+      "18"
+    ],
+    "answer": "9",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q06.png"
+  },
+  {
+    "id": "5DA_L08_Q07",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 個頂點。",
+    "options": [
+      "7",
+      "12",
+      "6",
+      "5"
+    ],
+    "answer": "6",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q07.png"
+  },
+  {
+    "id": "5DA_L08_Q08",
+    "grade": 5,
+    "question": "以下立體圖形有 ______ 條稜。",
+    "options": [
+      "9",
+      "11",
+      "20",
+      "10"
+    ],
+    "answer": "10",
+    "unitKey": "general",
+    "topic": "立體圖形的頂點和稜",
+    "source": "第二版 5 下 A 單元三 第 8 課 立體圖形的頂點和稜",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L08_Q08.png"
+  },
+  {
+    "id": "5DA_L09_Q01",
+    "grade": 5,
+    "question": "下面是一個正方體的摺紙圖樣，這個立體圖形有 ______ 個大小相同的面。",
+    "options": [
+      "7",
+      "12",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q01.png"
+  },
+  {
+    "id": "5DA_L09_Q02",
+    "grade": 5,
+    "question": "下面的立體圖形是一個正方體，它有 __________________。",
+    "options": [
+      "4 個面、6 個頂點和 10 條稜",
+      "6 個面、6 個頂點和 12 條稜",
+      "6 個面、8 個頂點和 10 條稜",
+      "6 個面、8 個頂點和 12 條稜"
+    ],
+    "answer": "6 個面、8 個頂點和 12 條稜",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q02.png"
+  },
+  {
+    "id": "5DA_L09_Q03",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成正方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q03.png"
+  },
+  {
+    "id": "5DA_L09_Q04",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成正方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q04.png"
+  },
+  {
+    "id": "5DA_L09_Q05",
+    "grade": 5,
+    "question": "下圖的摺紙圖樣可以摺成一個 ( 正方體 / 長方體 )，這個立體圖形有 ______ 個面。",
+    "options": [
+      "正方體；6",
+      "正方體；8",
+      "長方體；6",
+      "長方體；8"
+    ],
+    "answer": "長方體；6",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q05.png"
+  },
+  {
+    "id": "5DA_L09_Q06",
+    "grade": 5,
+    "question": "下面的立體圖形是一個長方體，它有 ______ 個面。",
+    "options": [
+      "7",
+      "5",
+      "12",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q06.png"
+  },
+  {
+    "id": "5DA_L09_Q07",
+    "grade": 5,
+    "question": "下面的立體圖形是一個長方體，它有 ______ 個頂點。",
+    "options": [
+      "8",
+      "9",
+      "7",
+      "16"
+    ],
+    "answer": "8",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q07.png"
+  },
+  {
+    "id": "5DA_L09_Q08",
+    "grade": 5,
+    "question": "下面的立體圖形是一個長方體，它有 ______ 條稜。",
+    "options": [
+      "11",
+      "13",
+      "24",
+      "12"
+    ],
+    "answer": "12",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L09_Q08.png"
+  },
+  {
+    "id": "5DA_L09_Q09",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成長方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q09.png"
+  },
+  {
+    "id": "5DA_L09_Q10",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成長方體嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q10.png"
+  },
+  {
+    "id": "5DA_L09_Q11",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q11.png"
+  },
+  {
+    "id": "5DA_L09_Q12",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q12.png"
+  },
+  {
+    "id": "5DA_L09_Q13",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "不可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q13.png"
+  },
+  {
+    "id": "5DA_L09_Q14",
+    "grade": 5,
+    "question": "以下摺紙圖樣可以摺成圓柱嗎？",
+    "options": [
+      "可以",
+      "不可以"
+    ],
+    "answer": "可以",
+    "unitKey": "general",
+    "topic": "正方體、長方體和圓柱",
+    "source": "第二版 5 下 A 單元三 第 9 課 正方體、長方體和圓柱",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L09_Q14.png"
+  },
+  {
+    "id": "5DA_L10_Q01",
+    "grade": 5,
+    "question": "下面是一個球，O 點是球心，A、B 和 C 都是在球上的點。O 點和 B 點的距離是 ______ cm。",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "general",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L10_Q01.png"
+  },
+  {
+    "id": "5DA_L10_Q02",
+    "grade": 5,
+    "question": "下面是一個球，O 點是球心，A、B 和 C 都是在球上的點。O 點和 C 點的距離是 ______ cm。",
+    "options": [
+      "6",
+      "4",
+      "10",
+      "5"
+    ],
+    "answer": "5",
+    "unitKey": "general",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "short_answer",
+    "image": "q-images/5DA_L10_Q02.png"
+  },
+  {
+    "id": "5DA_L10_Q03",
+    "grade": 5,
+    "question": "下圖是球 P 和球 Q。把這兩個球切開，分別得出兩個截面。這兩個截面的形狀都是 ___________。",
+    "options": [
+      "正方形",
+      "圓柱",
+      "圓"
+    ],
+    "answer": "圓",
+    "unitKey": "general",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L10_Q03.png"
+  },
+  {
+    "id": "5DA_L10_Q04",
+    "grade": 5,
+    "question": "下圖是球 P 和球 Q。把這兩個球切開，分別得出兩個截面。這兩個截面的大小 ( 一定 / 不一定 ) 相同。",
+    "options": [
+      "一定",
+      "不一定"
+    ],
+    "answer": "不一定",
+    "unitKey": "general",
+    "topic": "球",
+    "source": "第二版 5 下 A 單元三 第 10 課 球",
+    "kind": "multiple_choice",
+    "image": "q-images/5DA_L10_Q04.png"
+  },
+  {
+    "id": "5DB_L12_Q01",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。0.27 × 10 = ______",
+    "options": [
+      "2.7",
+      "3.7",
+      "5.4",
+      "1.7"
+    ],
+    "answer": "2.7",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q01.png"
+  },
+  {
+    "id": "5DB_L12_Q02",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。1000 × 8.3 = ______",
+    "options": [
+      "83000",
+      "8300",
+      "830",
+      "4150"
+    ],
+    "answer": "8300",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q02.png"
+  },
+  {
+    "id": "5DB_L12_Q03",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。45 × 0.01 = ______",
+    "options": [
+      "0.045",
+      "1.045",
+      "0.0225",
+      "0.09"
+    ],
+    "answer": "0.045",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q03.png"
+  },
+  {
+    "id": "5DB_L12_Q04",
+    "grade": 5,
+    "question": "利用移動小數點的方法，完成以下問題。0.001 × 94 = ______",
+    "options": [
+      "0.188",
+      "0.094",
+      "0.047",
+      "1.094"
+    ],
+    "answer": "0.094",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L12_Q04.png"
+  },
+  {
+    "id": "5DB_L12_Q05",
+    "grade": 5,
+    "question": "4.3 米 = ______ 厘米",
+    "options": [
+      "43",
+      "215",
+      "4300",
+      "430"
+    ],
+    "answer": "430",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L12_Q06",
+    "grade": 5,
+    "question": "0.075 升 = ______ 毫升",
+    "options": [
+      "74",
+      "76",
+      "150",
+      "75"
+    ],
+    "answer": "75",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L12_Q07",
+    "grade": 5,
+    "question": "1.9 cm = ______ mm",
+    "options": [
+      "20",
+      "19",
+      "38",
+      "18"
+    ],
+    "answer": "19",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L12_Q08",
+    "grade": 5,
+    "question": "2.62 kg = ______ g",
+    "options": [
+      "1310",
+      "2620",
+      "262",
+      "26200"
+    ],
+    "answer": "2620",
+    "unitKey": "decimal",
+    "topic": "有趣的乘法",
+    "source": "第二版 5 下 B 單元四 第 12 課 有趣的乘法",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L13_Q01",
+    "grade": 5,
+    "question": "0.8 × 4 = ______",
+    "options": [
+      "6.4",
+      "3.2",
+      "4.2",
+      "2.2"
+    ],
+    "answer": "3.2",
+    "unitKey": "decimal",
+    "topic": "小數乘法（一）",
+    "source": "第二版 5 下 B 單元四 第 13 課 小數乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L13_Q02",
+    "grade": 5,
+    "question": "1.39 × 5 = ______",
+    "options": [
+      "13.9",
+      "7.95",
+      "5.95",
+      "6.95"
+    ],
+    "answer": "6.95",
+    "unitKey": "decimal",
+    "topic": "小數乘法（一）",
+    "source": "第二版 5 下 B 單元四 第 13 課 小數乘法（一）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q01",
+    "grade": 5,
+    "question": "0.7 × 0.5 = ______",
+    "options": [
+      "0.175",
+      "0.35",
+      "1.35",
+      "0.7"
+    ],
+    "answer": "0.35",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q02",
+    "grade": 5,
+    "question": "6.43 × 0.02 = ______",
+    "options": [
+      "0.2572",
+      "0.0643",
+      "1.1286",
+      "0.1286"
+    ],
+    "answer": "0.1286",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q05",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後一個位。0.7 × 0.4 ≈ ______",
+    "options": [
+      "0.15",
+      "1.3",
+      "0.6",
+      "0.3"
+    ],
+    "answer": "0.3",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q05.png"
+  },
+  {
+    "id": "5DB_L14_Q06",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後一個位。2.06 × 5.3 ≈ ______",
+    "options": [
+      "10.9",
+      "21.8",
+      "11.9",
+      "9.9"
+    ],
+    "answer": "10.9",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q06.png"
+  },
+  {
+    "id": "5DB_L14_Q07",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後兩個位。64.2 × 0.08 ≈ ______",
+    "options": [
+      "4.14",
+      "6.14",
+      "10.28",
+      "5.14"
+    ],
+    "answer": "5.14",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q07.png"
+  },
+  {
+    "id": "5DB_L14_Q08",
+    "grade": 5,
+    "question": "計算以下題目，把答案取近似值至小數點後兩個位。0.43 × 0.47 ≈ ______",
+    "options": [
+      "0.1",
+      "0.4",
+      "1.2",
+      "0.20"
+    ],
+    "answer": "0.20",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q08.png"
+  },
+  {
+    "id": "5DB_L14_Q09",
+    "grade": 5,
+    "question": "每瓶蘋果汁有 0.36 升，3 瓶蘋果汁有 ________ 升。",
+    "options": [
+      "0.08",
+      "2.08",
+      "1.08",
+      "2.16"
+    ],
+    "answer": "1.08",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q10",
+    "grade": 5,
+    "question": "媽媽買了下面的甜筒 9 個，共需付 ________ 元。",
+    "options": [
+      "66.5",
+      "135",
+      "67.5",
+      "68.5"
+    ],
+    "answer": "67.5",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L14_Q10.png"
+  },
+  {
+    "id": "5DB_L14_Q11",
+    "grade": 5,
+    "question": "一包麪粉重 1.45 公斤。做一個千層蛋糕需用麪粉 0.2 包，即需用麪粉 _______ 公斤。",
+    "options": [
+      "0.58",
+      "1.29",
+      "0.145",
+      "0.29"
+    ],
+    "answer": "0.29",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L14_Q12",
+    "grade": 5,
+    "question": "綠色絲帶長 2.8 米，橙色絲帶的長度是綠色絲帶的 1.7 倍。橙色絲帶長 _______ 米。",
+    "options": [
+      "5.76",
+      "4.76",
+      "9.52",
+      "3.76"
+    ],
+    "answer": "4.76",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L15_Q03",
+    "grade": 5,
+    "question": "氣球 A 內氣體的體積比氣球 B 內的氣體 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "大",
+    "unitKey": "volume",
+    "topic": "體積的認識",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L15_Q03.png"
+  },
+  {
+    "id": "5DB_L15_Q04",
+    "grade": 5,
+    "question": "杯子 C 內水的體積比杯子 D 內的水 ( 大 / 小 )。",
+    "options": [
+      "大",
+      "小"
+    ],
+    "answer": "小",
+    "unitKey": "volume",
+    "topic": "體積的認識",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L15_Q04.png"
+  },
+  {
+    "id": "5DB_L16_Q01",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "10"
+    ],
+    "answer": "5",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q01.png"
+  },
+  {
+    "id": "5DB_L16_Q02",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "8",
+      "6",
+      "14",
+      "7"
+    ],
+    "answer": "7",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q02.png"
+  },
+  {
+    "id": "5DB_L16_Q03",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "11",
+      "20",
+      "9",
+      "10"
+    ],
+    "answer": "10",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q03.png"
+  },
+  {
+    "id": "5DB_L16_Q04",
+    "grade": 5,
+    "question": "以下的立體由體積是 1 cm³ 的數粒砌成。立體的體積是 ______ cm³。",
+    "options": [
+      "18",
+      "9",
+      "8",
+      "10"
+    ],
+    "answer": "9",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L16_Q04.png"
+  },
+  {
+    "id": "5DB_L16_Q07",
+    "grade": 5,
+    "question": "記錄下圖中手提電話實物的體積時，選用哪個體積單位較合適？",
+    "options": [
+      "立方厘米",
+      "立方米"
+    ],
+    "answer": "立方厘米",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L16_Q07.png"
+  },
+  {
+    "id": "5DB_L16_Q08",
+    "grade": 5,
+    "question": "記錄下圖中渡輪實物的體積時，選用哪個體積單位較合適？",
+    "options": [
+      "立方厘米",
+      "立方米"
+    ],
+    "answer": "立方米",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L16_Q08.png"
+  },
+  {
+    "id": "5DB_L17_Q01",
+    "grade": 5,
+    "question": "以上長方體的體積是 ______ 立方厘米。",
+    "options": [
+      "48",
+      "49",
+      "96",
+      "47"
+    ],
+    "answer": "48",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q01.png"
+  },
+  {
+    "id": "5DB_L17_Q02",
+    "grade": 5,
+    "question": "以上長方體的體積是 ______ m³。",
+    "options": [
+      "33.6",
+      "336",
+      "3360",
+      "168"
+    ],
+    "answer": "336",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q02.png"
+  },
+  {
+    "id": "5DB_L17_Q03",
+    "grade": 5,
+    "question": "一個長方體長 9 cm，闊 4 cm 和高 5 cm。它的體積是 ______ cm³。",
+    "options": [
+      "1800",
+      "90",
+      "18",
+      "180"
+    ],
+    "answer": "180",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q03.png"
+  },
+  {
+    "id": "5DB_L17_Q04",
+    "grade": 5,
+    "question": "一個長方體貨櫃，長 6 米，闊 2.4 米和高 2.5 米。貨櫃的體積是 ______ 立方米。",
+    "options": [
+      "35",
+      "36",
+      "37",
+      "72"
+    ],
+    "answer": "36",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q04.png"
+  },
+  {
+    "id": "5DB_L17_Q05",
+    "grade": 5,
+    "question": "長方體 A 的長是 _______ cm。",
+    "options": [
+      "5",
+      "8",
+      "3",
+      "4"
+    ],
+    "answer": "4",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q05.png"
+  },
+  {
+    "id": "5DB_L17_Q06",
+    "grade": 5,
+    "question": "長方體 B 的闊是 _______ 米。",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "6"
+    ],
+    "answer": "3",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q06.png"
+  },
+  {
+    "id": "5DB_L17_Q07",
+    "grade": 5,
+    "question": "下面長方體的體積是 280 立方厘米，它的長是 _______ 厘米。",
+    "options": [
+      "6",
+      "14",
+      "8",
+      "7"
+    ],
+    "answer": "7",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q07.png"
+  },
+  {
+    "id": "5DB_L17_Q08",
+    "grade": 5,
+    "question": "上面長方體的體積是 504 m³，它的高是 ______ m。",
+    "options": [
+      "13",
+      "11",
+      "12",
+      "24"
+    ],
+    "answer": "12",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q08.png"
+  },
+  {
+    "id": "5DB_L17_Q09",
+    "grade": 5,
+    "question": "這個正方體的體積是 ______ m³。",
+    "options": [
+      "7",
+      "8",
+      "16",
+      "9"
+    ],
+    "answer": "8",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q09.png"
+  },
+  {
+    "id": "5DB_L17_Q10",
+    "grade": 5,
+    "question": "這個正方體的體積是 ______ 立方厘米。",
+    "options": [
+      "512",
+      "256",
+      "5120",
+      "51.2"
+    ],
+    "answer": "512",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q10.png"
+  },
+  {
+    "id": "5DB_L17_Q11",
+    "grade": 5,
+    "question": "一個正方體的邊長是 3 米，正方體的體積是 _______ 立方米。",
+    "options": [
+      "28",
+      "26",
+      "54",
+      "27"
+    ],
+    "answer": "27",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer"
+  },
+  {
+    "id": "5DB_L17_Q12",
+    "grade": 5,
+    "question": "一個正方體盒子的邊長是 10 cm，盒子的體積是 ______ cm³。",
+    "options": [
+      "100",
+      "10000",
+      "1000",
+      "500"
+    ],
+    "answer": "1000",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q12.png"
+  },
+  {
+    "id": "5DB_L17_Q13",
+    "grade": 5,
+    "question": "梓樂用 2 個大小相同的正方體拼砌出一個長方體，如上圖所示。長方體的體積是 ______ cm³。",
+    "options": [
+      "1000",
+      "20000",
+      "200",
+      "2000"
+    ],
+    "answer": "2000",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q13.png"
+  },
+  {
+    "id": "5DB_L17_Q14",
+    "grade": 5,
+    "question": "哥哥用 6 個大小相同的長方體紙盒砌出上圖，上圖的體積是 3000 cm³。如果每個紙盒長 10 cm，闊 10 cm，紙盒高 ______ cm。",
+    "options": [
+      "6",
+      "10",
+      "4",
+      "5"
+    ],
+    "answer": "5",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q14.png"
+  },
+  {
+    "id": "5DB_L17_Q15",
+    "grade": 5,
+    "question": "上面的長方體發泡膠剛好可切成 3 個大小相同的小長方體，每個小長方體的體積是 180 cm³。長方體發泡膠的長是 ______ cm。",
+    "options": [
+      "19",
+      "36",
+      "18",
+      "17"
+    ],
+    "answer": "18",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q15.png"
+  },
+  {
+    "id": "5DB_L17_Q16",
+    "grade": 5,
+    "question": "工人把一塊體積是 48 cm³ 的長方體鐵條沿虛線切割，切去一個邊長是 2 cm 的正方體。餘下部分的體積是 ______ cm³。",
+    "options": [
+      "39",
+      "41",
+      "40",
+      "80"
+    ],
+    "answer": "40",
+    "unitKey": "volume",
+    "topic": "長方體和正方體的體積",
+    "source": "第二版 5 下 B 單元五 第 17 課 長方體和正方體的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L17_Q16.png"
+  },
+  {
+    "id": "5DB_L18_Q01",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ cm³。",
+    "options": [
+      "864",
+      "432",
+      "8640",
+      "86.4"
+    ],
+    "answer": "864",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q01.png"
+  },
+  {
+    "id": "5DB_L18_Q02",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ m³。",
+    "options": [
+      "150",
+      "750",
+      "15000",
+      "1500"
+    ],
+    "answer": "1500",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q02.png"
+  },
+  {
+    "id": "5DB_L18_Q03",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ m³。",
+    "options": [
+      "60",
+      "120",
+      "12",
+      "1200"
+    ],
+    "answer": "120",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q03.png"
+  },
+  {
+    "id": "5DB_L18_Q04",
+    "grade": 5,
+    "question": "以上立體可分割或填補成正方體或長方體，立體的體積是 ______ cm³。",
+    "options": [
+      "45",
+      "46",
+      "47",
+      "92"
+    ],
+    "answer": "46",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q04.png"
+  },
+  {
+    "id": "5DB_L18_Q05",
+    "grade": 5,
+    "question": "佩琳用上面的摺紙圖樣摺成一個正方體盒子，這個盒子的體積是 ______ cm³。",
+    "options": [
+      "2160",
+      "108",
+      "21.6",
+      "216"
+    ],
+    "answer": "216",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q05.png"
+  },
+  {
+    "id": "5DB_L18_Q06",
+    "grade": 5,
+    "question": "天宇用上面的摺紙圖樣摺成一個長方體紙盒，這個紙盒的體積是 ______ cm³。",
+    "options": [
+      "40",
+      "400",
+      "4000",
+      "200"
+    ],
+    "answer": "400",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q06.png"
+  },
+  {
+    "id": "5DB_L18_Q07",
+    "grade": 5,
+    "question": "一個正方體紙盒的邊長是 16 cm。這個紙盒內最多可放 _______ 粒邊長是 2 cm 的正方體膠粒。",
+    "options": [
+      "512",
+      "256",
+      "5120",
+      "51.2"
+    ],
+    "answer": "512",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q07.png"
+  },
+  {
+    "id": "5DB_L18_Q08",
+    "grade": 5,
+    "question": "下圖是一個長方體盒子，這個盒子內最多可放 _______ 粒邊長 3 cm 的正方體朱古力。",
+    "options": [
+      "12",
+      "7",
+      "6",
+      "5"
+    ],
+    "answer": "6",
+    "unitKey": "volume",
+    "topic": "立體圖形的體積",
+    "source": "第二版 5 下 B 單元五 第 18 課 立體圖形的體積",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L18_Q08.png"
+  },
+  {
+    "id": "5DB_L19_Q03",
+    "grade": 5,
+    "question": "根據上圖，以下哪個是方程 P＋2＝5 的解？",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    "answer": "3",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L19_Q03.png"
+  },
+  {
+    "id": "5DB_L19_Q04",
+    "grade": 5,
+    "question": "根據上圖，以下哪個是方程 x－5＝12 的解？",
+    "options": [
+      "5",
+      "7",
+      "12",
+      "17"
+    ],
+    "answer": "17",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L19_Q04.png"
+  },
+  {
+    "id": "5DB_L21_Q03",
+    "grade": 5,
+    "question": "解方程 3e＋12＝24。e＝？",
+    "options": [
+      "4",
+      "3",
+      "8",
+      "5"
+    ],
+    "answer": "4",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q03.png"
+  },
+  {
+    "id": "5DB_L21_Q04",
+    "grade": 5,
+    "question": "解方程 5m－16＝44。m＝？",
+    "options": [
+      "12",
+      "11",
+      "24",
+      "13"
+    ],
+    "answer": "12",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q04.png"
+  },
+  {
+    "id": "5DB_L21_Q07",
+    "grade": 5,
+    "question": "解以下方程。9＋m／4＝13",
+    "options": [
+      "15",
+      "32",
+      "16",
+      "17"
+    ],
+    "answer": "16",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q07.png"
+  },
+  {
+    "id": "5DB_L21_Q08",
+    "grade": 5,
+    "question": "解方程 B／6－5＝13。B＝？",
+    "options": [
+      "1080",
+      "10.8",
+      "54",
+      "108"
+    ],
+    "answer": "108",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "short_answer",
+    "image": "q-images/5DB_L21_Q08.png"
+  },
+  {
+    "id": "5DB_L21_Q09",
+    "grade": 5,
+    "question": "一筒薯片原來售 R 元，買 2 筒共可便宜 4 元。林小姐買薯片 2 筒，用了 20 元。R 的值是多少？",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "24"
+    ],
+    "answer": "12",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L21_Q09.png"
+  },
+  {
+    "id": "5DB_L21_Q10",
+    "grade": 5,
+    "question": "禮謙有手工紙 t 張，其中 1／4 是藍色的。禮謙用了藍色手工紙 3 張後，還餘藍色手工紙 9 張。t 的值是多少？",
+    "options": [
+      "3",
+      "6",
+      "24",
+      "48"
+    ],
+    "answer": "48",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": "q-images/5DB_L21_Q10.png"
+  },
+  {
+    "id": "5A_L03_Q01",
+    "grade": 5,
+    "question": "以下哪個分數較大？",
+    "options": [
+      "3／4",
+      "13／16"
+    ],
+    "answer": "13／16",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L03_Q02",
+    "grade": 5,
+    "question": "以下哪個分數較小？",
+    "options": [
+      "3／7",
+      "2／5"
+    ],
+    "answer": "2／5",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L03_Q03",
+    "grade": 5,
+    "question": "以下哪個分數較大？",
+    "options": [
+      "8／9",
+      "7／12"
+    ],
+    "answer": "8／9",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L03_Q04",
+    "grade": 5,
+    "question": "以下哪個數最小？",
+    "options": [
+      "10／3",
+      "3",
+      "3又1／5"
+    ],
+    "answer": "3",
+    "unitKey": "fraction",
+    "topic": "分數的比較",
+    "source": "第二版 5 上 A 單元二 第 3 課 分數的比較",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q01",
+    "grade": 5,
+    "question": "3／8＋1／2＝？",
+    "options": [
+      "1／4",
+      "7／8",
+      "5／8",
+      "3／8"
+    ],
+    "answer": "7／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q02",
+    "grade": 5,
+    "question": "5又1／6＋3／10＝？",
+    "options": [
+      "4又4／15",
+      "4又7／15",
+      "5又4／15",
+      "5又7／15"
+    ],
+    "answer": "5又7／15",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q03",
+    "grade": 5,
+    "question": "1又1／3＋2又2／9＝？",
+    "options": [
+      "2又4／9",
+      "2又5／9",
+      "3又5／9",
+      "3又4／9"
+    ],
+    "answer": "3又5／9",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q04",
+    "grade": 5,
+    "question": "4又2／5＋1／4＋3＝？",
+    "options": [
+      "7又11／20",
+      "7又13／20",
+      "8又11／20",
+      "8又13／20"
+    ],
+    "answer": "7又13／20",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q05",
+    "grade": 5,
+    "question": "雜菜粒中紅蘿蔔佔1／4、粟米佔1／3，兩者共佔幾分之幾？",
+    "options": [
+      "3／4",
+      "7／12",
+      "1／6",
+      "5／12"
+    ],
+    "answer": "7／12",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q06",
+    "grade": 5,
+    "question": "家中原有花生油3／8升，爸爸多買2又1／2升後，現有多少升？",
+    "options": [
+      "1又5／8",
+      "1又7／8",
+      "2又5／8",
+      "2又7／8"
+    ],
+    "answer": "2又7／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q07",
+    "grade": 5,
+    "question": "紫色絲帶長1又3／5米，比綠色絲帶短1又1／4米。綠色絲帶長多少米？",
+    "options": [
+      "1又11／20",
+      "1又17／20",
+      "2又11／20",
+      "2又17／20"
+    ],
+    "answer": "2又17／20",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L04_Q08",
+    "grade": 5,
+    "question": "媽媽運動：跑步1又5／6小時、瑜伽4小時、游泳2又1／3小時。共用多少小時？",
+    "options": [
+      "6又1／6",
+      "8又5／6",
+      "8又1／6",
+      "6又5／6"
+    ],
+    "answer": "8又1／6",
+    "unitKey": "fraction",
+    "topic": "異分母分數加法",
+    "source": "第二版 5 上 A 單元二 第 4 課 異分母分數加法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q01",
+    "grade": 5,
+    "question": "4／5－3／7＝？",
+    "options": [
+      "11／35",
+      "13／35",
+      "17／35",
+      "19／35"
+    ],
+    "answer": "13／35",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q02",
+    "grade": 5,
+    "question": "1／4－1／12＝？",
+    "options": [
+      "1／2",
+      "1／3",
+      "1／6",
+      "5／6"
+    ],
+    "answer": "1／6",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q03",
+    "grade": 5,
+    "question": "5又7／8－2／3＝？",
+    "options": [
+      "2又5／24",
+      "2又9／24",
+      "5又5／24",
+      "5又9／24"
+    ],
+    "answer": "5又5／24",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q04",
+    "grade": 5,
+    "question": "6又11／12－2又1／6－2＝？",
+    "options": [
+      "1又1／4",
+      "1又3／4",
+      "2又1／4",
+      "2又3／4"
+    ],
+    "answer": "2又3／4",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q05",
+    "grade": 5,
+    "question": "一瓶蘋果汁有1又1／2升，家怡喝去3／8升後還有多少升？",
+    "options": [
+      "1／4",
+      "1／8",
+      "1又1／2",
+      "1又1／8"
+    ],
+    "answer": "1又1／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q06",
+    "grade": 5,
+    "question": "西瓜重3又9／10 kg，菠蘿重4／5 kg。菠蘿比西瓜輕多少 kg？",
+    "options": [
+      "3又1／10 kg",
+      "2又3／10 kg",
+      "2又1／10 kg",
+      "3又3／10 kg"
+    ],
+    "answer": "3又1／10 kg",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q07",
+    "grade": 5,
+    "question": "文軒有25又4／5元，欣澄比文軒少3又1／2元。欣澄有多少元？",
+    "options": [
+      "20又3／10",
+      "20又7／10",
+      "22又3／10",
+      "22又7／10"
+    ],
+    "answer": "22又3／10",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L05_Q08",
+    "grade": 5,
+    "question": "合唱團中小四佔1／12，小五佔2／3，其餘小六。小六佔幾分之幾？",
+    "options": [
+      "1／3",
+      "2／3",
+      "1／6",
+      "1／4"
+    ],
+    "answer": "1／4",
+    "unitKey": "fraction",
+    "topic": "異分母分數減法",
+    "source": "第二版 5 上 A 單元二 第 5 課 異分母分數減法",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q01",
+    "grade": 5,
+    "question": "1／2＋3／7－3／4＝？",
+    "options": [
+      "1／14",
+      "3／28",
+      "5／28",
+      "3／14"
+    ],
+    "answer": "5／28",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q02",
+    "grade": 5,
+    "question": "1又4／9＋3又5／6－2又1／2＝？",
+    "options": [
+      "1又7／9",
+      "2又7／9",
+      "2又5／9",
+      "1又5／9"
+    ],
+    "answer": "2又7／9",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q03",
+    "grade": 5,
+    "question": "4又2／5－2又1／6＋3又2／3＝？",
+    "options": [
+      "6又9／10",
+      "5又9／10",
+      "5又7／10",
+      "6又7／10"
+    ],
+    "answer": "5又9／10",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q04",
+    "grade": 5,
+    "question": "6－（3／8＋1又1／4）＝？",
+    "options": [
+      "5又3／8",
+      "5又5／8",
+      "4又5／8",
+      "4又3／8"
+    ],
+    "answer": "4又3／8",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q05",
+    "grade": 5,
+    "question": "淡奶原有6又4／5箱，用去1又1／3箱後再購入2箱。現有多少箱？",
+    "options": [
+      "5又7／15",
+      "7又7／15",
+      "7又8／15",
+      "5又8／15"
+    ],
+    "answer": "7又7／15",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q06",
+    "grade": 5,
+    "question": "原有42又3／5元，再得15又1／2元，買售25又9／10元玩具車後餘多少元？",
+    "options": [
+      "33又3／5",
+      "32又3／5",
+      "32又1／5",
+      "31又1／5"
+    ],
+    "answer": "32又1／5",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q07",
+    "grade": 5,
+    "question": "三文治18又1／5元、豆奶6又3／10元。付50元應找回多少元？",
+    "options": [
+      "25又1／2",
+      "24又1／2",
+      "23又2／5",
+      "24又1／5"
+    ],
+    "answer": "25又1／2",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L06_Q08",
+    "grade": 5,
+    "question": "閱讀5又2／3小時，比小提琴多1又3／4小時；運動比小提琴多2又5／6小時。運動多少小時？",
+    "options": [
+      "6又3／4",
+      "5又3／4",
+      "5又1／4",
+      "6又1／4"
+    ],
+    "answer": "6又3／4",
+    "unitKey": "fraction",
+    "topic": "異分母分數加減混合運算",
+    "source": "第二版 5 上 A 單元二 第 6 課 異分母分數加減混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q01",
+    "grade": 5,
+    "question": "1／6×5＝？",
+    "options": [
+      "6／5",
+      "1／30",
+      "5／6",
+      "1／3"
+    ],
+    "answer": "5／6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q02",
+    "grade": 5,
+    "question": "2×2／7＝？",
+    "options": [
+      "1／7",
+      "4／7",
+      "3／7",
+      "2／9"
+    ],
+    "answer": "4／7",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q03",
+    "grade": 5,
+    "question": "4／15×3＝？",
+    "options": [
+      "7／15",
+      "2／9",
+      "1／15",
+      "4／5"
+    ],
+    "answer": "4／5",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q04",
+    "grade": 5,
+    "question": "7×2／3＝？",
+    "options": [
+      "2又1／3",
+      "4又2／3",
+      "3又1／3",
+      "2又2／3"
+    ],
+    "answer": "4又2／3",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q05",
+    "grade": 5,
+    "question": "1又1／2×3＝？",
+    "options": [
+      "1又1／2",
+      "3又1／2",
+      "4又1／2",
+      "3／2"
+    ],
+    "answer": "4又1／2",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q06",
+    "grade": 5,
+    "question": "4又2／5×2＝？",
+    "options": [
+      "8又4／5",
+      "6又4／5",
+      "4又4／5",
+      "6又2／5"
+    ],
+    "answer": "8又4／5",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q07",
+    "grade": 5,
+    "question": "1又8／9×4，哪個估計與計算正確？",
+    "options": [
+      "約2×4＝8，得7又5／9",
+      "約1×4＝4，得4又8／9"
+    ],
+    "answer": "約2×4＝8，得7又5／9",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L11_Q08",
+    "grade": 5,
+    "question": "3×2又1／18，哪個估計與計算正確？",
+    "options": [
+      "約3×2＝6，得5又1／6",
+      "約3×2＝6，得6又1／6"
+    ],
+    "answer": "約3×2＝6，得6又1／6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（一）",
+    "source": "第二版 5 上 B 單元四 第 11 課 分數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q01",
+    "grade": 5,
+    "question": "2／3×1／5＝？",
+    "options": [
+      "3／8",
+      "2／15",
+      "1／5",
+      "1／4"
+    ],
+    "answer": "2／15",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q02",
+    "grade": 5,
+    "question": "1／2×3／7＝？",
+    "options": [
+      "3／14",
+      "1／3",
+      "4／9",
+      "1／2"
+    ],
+    "answer": "3／14",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q03",
+    "grade": 5,
+    "question": "7／10×2／5＝？",
+    "options": [
+      "3／5",
+      "7／25",
+      "14／15",
+      "9／50"
+    ],
+    "answer": "7／25",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q04",
+    "grade": 5,
+    "question": "4／9×5／6＝？",
+    "options": [
+      "10／27",
+      "3／5",
+      "1／6",
+      "11／15"
+    ],
+    "answer": "10／27",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q05",
+    "grade": 5,
+    "question": "1又3／4×1／7＝？",
+    "options": [
+      "1／3",
+      "2／3",
+      "1／4",
+      "1又3／4"
+    ],
+    "answer": "1／4",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q06",
+    "grade": 5,
+    "question": "2又1／2×1又2／3＝？",
+    "options": [
+      "3又1／6",
+      "3又1／5",
+      "3又3／5",
+      "4又1／6"
+    ],
+    "answer": "4又1／6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q07",
+    "grade": 5,
+    "question": "5／6×3又1／5，哪個估計與計算正確？",
+    "options": [
+      "約1×3＝3，得2又2／3",
+      "約1×4＝4，得3又2／3"
+    ],
+    "answer": "約1×3＝3，得2又2／3",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L12_Q08",
+    "grade": 5,
+    "question": "5又1／4×6又6／7，哪個估計與計算正確？",
+    "options": [
+      "約5×7＝35，得35",
+      "約5×7＝35，得36"
+    ],
+    "answer": "約5×7＝35，得36",
+    "unitKey": "fraction",
+    "topic": "分數乘法（二）",
+    "source": "第二版 5 上 B 單元四 第 12 課 分數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q01",
+    "grade": 5,
+    "question": "3／5×1／2×3／4＝？",
+    "options": [
+      "1／5",
+      "3／20",
+      "7／40",
+      "9／40"
+    ],
+    "answer": "9／40",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q02",
+    "grade": 5,
+    "question": "4／7×8×7／12＝？",
+    "options": [
+      "2又2／3",
+      "8又1／3",
+      "2又1／3",
+      "3又2／3"
+    ],
+    "answer": "2又2／3",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q03",
+    "grade": 5,
+    "question": "1／4×1又1／2×5／6＝？",
+    "options": [
+      "3／16",
+      "5／12",
+      "5／16",
+      "1又1／4"
+    ],
+    "answer": "5／16",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q04",
+    "grade": 5,
+    "question": "3×7／10×2又6／7＝？",
+    "options": [
+      "5",
+      "6",
+      "5又3／5",
+      "6又3／5"
+    ],
+    "answer": "6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q05",
+    "grade": 5,
+    "question": "每包麵粉重3／4公斤，8包共重多少公斤？",
+    "options": [
+      "4又1／4",
+      "5",
+      "5又1／4",
+      "6"
+    ],
+    "answer": "6",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q06",
+    "grade": 5,
+    "question": "緩跑徑長2又1／4 km，跑了全長的2／5，即跑了多少 km？",
+    "options": [
+      "1又1／10",
+      "9／10",
+      "1又3／10",
+      "2又1／10"
+    ],
+    "answer": "9／10",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q07",
+    "grade": 5,
+    "question": "練習鋼琴5／6小時，家課是其1又3／10倍。家課用了多少小時？",
+    "options": [
+      "1又1／4",
+      "1又1／2",
+      "1又1／12",
+      "1又1／6"
+    ],
+    "answer": "1又1／12",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L13_Q08",
+    "grade": 5,
+    "question": "朱古力每盒價是薯片的6／7；薯片10又1／2元。買2盒朱古力共多少元？",
+    "options": [
+      "18",
+      "18又3／4",
+      "16",
+      "16又1／4"
+    ],
+    "answer": "18",
+    "unitKey": "fraction",
+    "topic": "分數乘法（三）",
+    "source": "第二版 5 上 B 單元四 第 13 課 分數乘法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q02",
+    "grade": 5,
+    "question": "「h×5」可寫成？",
+    "options": [
+      "5＋h",
+      "h＋5",
+      "h－5",
+      "5h"
+    ],
+    "answer": "5h",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q03",
+    "grade": 5,
+    "question": "「12÷Y」可寫成？",
+    "options": [
+      "Y／12",
+      "12／Y",
+      "12Y",
+      "12－Y"
+    ],
+    "answer": "12／Y",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q04",
+    "grade": 5,
+    "question": "布偶有m個和2個，共有多少個？選出正確代數式。",
+    "options": [
+      "m－2",
+      "2m",
+      "m÷2",
+      "m＋2"
+    ],
+    "answer": "m＋2",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q05",
+    "grade": 5,
+    "question": "當A＝2時，6＋A哪個計算正確？",
+    "options": [
+      "6＋A＝6＋2＝8",
+      "6＋A＝6＋1＝7"
+    ],
+    "answer": "6＋A＝6＋2＝8",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q06",
+    "grade": 5,
+    "question": "當c＝10時，c－8哪個計算正確？",
+    "options": [
+      "c－8＝10－8＝2",
+      "c－8＝8－8＝0"
+    ],
+    "answer": "c－8＝10－8＝2",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q07",
+    "grade": 5,
+    "question": "當h＝4時，12h哪個計算正確？",
+    "options": [
+      "12h＝12×2＝24",
+      "12h＝12×4＝48"
+    ],
+    "answer": "12h＝12×4＝48",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L14_Q08",
+    "grade": 5,
+    "question": "當Y＝50時，Y／2哪個計算正確？",
+    "options": [
+      "Y／2＝50÷2＝25",
+      "Y／2＝60÷2＝30"
+    ],
+    "answer": "Y／2＝50÷2＝25",
+    "unitKey": "algebra",
+    "topic": "代數符號（一）",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q01",
+    "grade": 5,
+    "question": "用代數式表示「A加25」。",
+    "options": [
+      "A－25",
+      "25－A",
+      "25÷A",
+      "A＋25"
+    ],
+    "answer": "A＋25",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q02",
+    "grade": 5,
+    "question": "用代數式表示「18減f」。",
+    "options": [
+      "f－18",
+      "18－f",
+      "18÷f",
+      "18＋f"
+    ],
+    "answer": "18－f",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q03",
+    "grade": 5,
+    "question": "草莓有4粒和M粒，共有多少粒？選出正確代數式。",
+    "options": [
+      "(4＋M)",
+      "(4－M)",
+      "4M",
+      "4"
+    ],
+    "answer": "(4＋M)",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q04",
+    "grade": 5,
+    "question": "原有麵粉500克，用去n克，還剩多少克？選出正確代數式。",
+    "options": [
+      "(500＋n)",
+      "(500－n)",
+      "500n",
+      "500"
+    ],
+    "answer": "(500－n)",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q05",
+    "grade": 5,
+    "question": "「y乘以5」可寫成？",
+    "options": [
+      "5y",
+      "y／5",
+      "5＋y",
+      "5／y"
+    ],
+    "answer": "5y",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q06",
+    "grade": 5,
+    "question": "「M除以2」可寫成？",
+    "options": [
+      "2－M",
+      "2M",
+      "2／M",
+      "M／2"
+    ],
+    "answer": "M／2",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q07",
+    "grade": 5,
+    "question": "每包棉花糖有n粒，7包共有多少粒？",
+    "options": [
+      "n／7",
+      "7n",
+      "7＋n",
+      "7／n"
+    ],
+    "answer": "7n",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5B_L15_Q08",
+    "grade": 5,
+    "question": "汽水750毫升，每杯容量C毫升，剛好倒滿多少杯？",
+    "options": [
+      "750C",
+      "750－C",
+      "750／C",
+      "C／750"
+    ],
+    "answer": "750／C",
+    "unitKey": "algebra",
+    "topic": "代數符號（二）",
+    "source": "第二版 5 上 B 單元五 第 15 課 代數符號（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q01",
+    "grade": 5,
+    "question": "6÷10＝？",
+    "options": [
+      "3／5",
+      "2／5",
+      "2／3",
+      "1／4"
+    ],
+    "answer": "3／5",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q02",
+    "grade": 5,
+    "question": "3÷15＝？",
+    "options": [
+      "3／5",
+      "1／5",
+      "2／3",
+      "1／4"
+    ],
+    "answer": "1／5",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q03",
+    "grade": 5,
+    "question": "12÷8＝？",
+    "options": [
+      "2又1／2",
+      "1又2／3",
+      "1又1／2",
+      "2／3"
+    ],
+    "answer": "1又1／2",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q04",
+    "grade": 5,
+    "question": "28÷6＝？",
+    "options": [
+      "4又2／3",
+      "3又2／3",
+      "2又1／4",
+      "3又1／4"
+    ],
+    "answer": "4又2／3",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q07",
+    "grade": 5,
+    "question": "壽司：蛋2、蝦5、三文魚7。蛋壽司數量是三文魚壽司的？",
+    "options": [
+      "2／5",
+      "3／5",
+      "2／7",
+      "5／7"
+    ],
+    "answer": "2／7",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q08",
+    "grade": 5,
+    "question": "壽司：蛋2、蝦5、三文魚7。蝦壽司數量是蛋壽司的幾倍？",
+    "options": [
+      "2又1／2",
+      "1又2／3",
+      "1又1／2",
+      "2／3"
+    ],
+    "answer": "2又1／2",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q09",
+    "grade": 5,
+    "question": "1／4÷5，哪個計算正確？",
+    "options": [
+      "1／4÷5＝1／4×5＝5／4",
+      "1／4÷5＝1／4×1／5＝1／20"
+    ],
+    "answer": "1／4÷5＝1／4×1／5＝1／20",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q10",
+    "grade": 5,
+    "question": "2／7÷3，哪個計算正確？",
+    "options": [
+      "2／7÷3＝2／7×1／3＝2／21",
+      "2／7÷3＝2／7×3＝6／7"
+    ],
+    "answer": "2／7÷3＝2／7×1／3＝2／21",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q11",
+    "grade": 5,
+    "question": "1又1／3÷3，哪個計算正確？",
+    "options": [
+      "1又1／3÷3＝4／3×1／3＝2／9",
+      "1又1／3÷3＝4／3×1／3＝4／9"
+    ],
+    "answer": "1又1／3÷3＝4／3×1／3＝4／9",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L03_Q12",
+    "grade": 5,
+    "question": "4又1／2÷6，哪個計算正確？",
+    "options": [
+      "4又1／2÷6＝9／2×1／6＝3／4",
+      "4又1／2÷6＝9／2×1／6＝1／4"
+    ],
+    "answer": "4又1／2÷6＝9／2×1／6＝3／4",
+    "unitKey": "fraction",
+    "topic": "分數除法（一）",
+    "source": "第二版 5 下 A 單元二 第 3 課 分數除法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q01",
+    "grade": 5,
+    "question": "5÷1／2，哪個計算正確？",
+    "options": [
+      "5÷1／2＝5×2＝10",
+      "5÷1／2＝5×1／2＝2又1／2"
+    ],
+    "answer": "5÷1／2＝5×2＝10",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q02",
+    "grade": 5,
+    "question": "8÷2／3，哪個計算正確？",
+    "options": [
+      "8÷2／3＝8×3／2＝12",
+      "8÷2／3＝8×2／3＝5又1／3"
+    ],
+    "answer": "8÷2／3＝8×3／2＝12",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q03",
+    "grade": 5,
+    "question": "2÷4／7，哪個計算正確？",
+    "options": [
+      "2÷4／7＝2×7／4＝2又1／2",
+      "2÷4／7＝2×7／4＝3又1／2"
+    ],
+    "answer": "2÷4／7＝2×7／4＝3又1／2",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q04",
+    "grade": 5,
+    "question": "10÷5又1／3，哪個計算正確？",
+    "options": [
+      "10÷5又1／3＝10×3／16＝2又1／8",
+      "10÷5又1／3＝10×3／16＝1又7／8"
+    ],
+    "answer": "10÷5又1／3＝10×3／16＝1又7／8",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q05",
+    "grade": 5,
+    "question": "5／8÷3／4，哪個計算正確？",
+    "options": [
+      "5／8÷3／4＝5／8×3／4＝3／4",
+      "5／8÷3／4＝5／8×4／3＝5／6"
+    ],
+    "answer": "5／8÷3／4＝5／8×4／3＝5／6",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q06",
+    "grade": 5,
+    "question": "2／5÷1又1／3，哪個計算正確？",
+    "options": [
+      "2／5÷1又1／3＝2／5×3／4＝3／10",
+      "2／5÷1又1／3＝2／5×4／3＝8／15"
+    ],
+    "answer": "2／5÷1又1／3＝2／5×3／4＝3／10",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q07",
+    "grade": 5,
+    "question": "8又1／8÷1又6／7，哪個估計與計算正確？",
+    "options": [
+      "約8÷2＝4，得4又1／6",
+      "約8÷2＝4，得4又3／8"
+    ],
+    "answer": "約8÷2＝4，得4又3／8",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L04_Q08",
+    "grade": 5,
+    "question": "11又3／5÷4又1／7，哪個估計與計算正確？",
+    "options": [
+      "約12÷4＝3，得2又4／5",
+      "約12÷4＝3，得2又3／5"
+    ],
+    "answer": "約12÷4＝3，得2又4／5",
+    "unitKey": "fraction",
+    "topic": "分數除法（二）",
+    "source": "第二版 5 下 A 單元二 第 4 課 分數除法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q01",
+    "grade": 5,
+    "question": "3／4÷1／2÷9，哪個計算正確？",
+    "options": [
+      "3／4÷1／2÷9＝3／4×2×1／9＝1／6",
+      "3／4÷1／2÷9＝3／4×2×9＝5／6"
+    ],
+    "answer": "3／4÷1／2÷9＝3／4×2×1／9＝1／6",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q02",
+    "grade": 5,
+    "question": "5／8÷7／12÷4／7，哪個計算正確？",
+    "options": [
+      "5／8÷7／12÷4／7＝1又1／4",
+      "5／8÷7／12÷4／7＝1又7／8"
+    ],
+    "answer": "5／8÷7／12÷4／7＝1又7／8",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q03",
+    "grade": 5,
+    "question": "1又1／2÷3÷7／10，哪個計算正確？",
+    "options": [
+      "＝3／2×1／3×10／7＝5／7",
+      "＝5／2×1／3×10／7＝25／21"
+    ],
+    "answer": "＝3／2×1／3×10／7＝5／7",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q04",
+    "grade": 5,
+    "question": "3／10÷1又3／5÷1／4，哪個計算正確？",
+    "options": [
+      "＝3／10×5／8×4＝3／4",
+      "＝3／10×5／8×4＝1／4"
+    ],
+    "answer": "＝3／10×5／8×4＝3／4",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q05",
+    "grade": 5,
+    "question": "5塊積木共重48克，每塊重量相同。每塊重多少克？",
+    "options": [
+      "8又1／5",
+      "8又3／5",
+      "9又1／5",
+      "9又3／5"
+    ],
+    "answer": "9又3／5",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q06",
+    "grade": 5,
+    "question": "果仁3又1／5 kg，平均分成8包，每包重多少kg？",
+    "options": [
+      "1／5",
+      "2／5",
+      "3／5",
+      "4／5"
+    ],
+    "answer": "2／5",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q09",
+    "grade": 5,
+    "question": "6升茶注入7／8升瓶，最多注滿幾個，餘下多少升？",
+    "options": [
+      "5，1／4",
+      "5，3／4",
+      "6，1／4",
+      "6，3／4"
+    ],
+    "answer": "6，3／4",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q10",
+    "grade": 5,
+    "question": "絲帶1又5／8米，每個蝴蝶結用1／5米。最多幾個，餘下多少米？",
+    "options": [
+      "5，1／40",
+      "8，1／40",
+      "5，1／60",
+      "8，1／60"
+    ],
+    "answer": "8，1／40",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q11",
+    "grade": 5,
+    "question": "麵粉1／4 kg，每條卷蛋用1／25 kg。最多幾條，餘下多少kg？",
+    "options": [
+      "5，1／100",
+      "5，1／60",
+      "6，1／100",
+      "6，1／60"
+    ],
+    "answer": "6，1／100",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L05_Q12",
+    "grade": 5,
+    "question": "李老師有40元，原子筆每枝12又1／2元。買最多後餘下多少元？",
+    "options": [
+      "1又1／2",
+      "2又1／2",
+      "1又1／4",
+      "2又1／4"
+    ],
+    "answer": "2又1／2",
+    "unitKey": "fraction",
+    "topic": "分數除法（三）",
+    "source": "第二版 5 下 A 單元二 第 5 課 分數除法（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L06_Q01",
+    "grade": 5,
+    "question": "18÷3／4×5／8，哪個計算正確？",
+    "options": [
+      "＝18×4／3×5／8＝15",
+      "＝18×4／3×5／8＝12"
+    ],
+    "answer": "＝18×4／3×5／8＝15",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L06_Q02",
+    "grade": 5,
+    "question": "2／3＋3又1／2÷1／4，哪個計算正確？",
+    "options": [
+      "得18又2／3",
+      "得14又2／3"
+    ],
+    "answer": "得14又2／3",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L06_Q03",
+    "grade": 5,
+    "question": "5又3／10－2又4／5×1／7，哪個計算正確？",
+    "options": [
+      "得2又1／10",
+      "得4又9／10"
+    ],
+    "answer": "得4又9／10",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L06_Q04",
+    "grade": 5,
+    "question": "1又1／9÷(2／3－1／2)，哪個計算正確？",
+    "options": [
+      "＝10／9÷1／6＝6又2／3",
+      "＝10／9÷1／6＝20"
+    ],
+    "answer": "＝10／9÷1／6＝6又2／3",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L06_Q05",
+    "grade": 5,
+    "question": "軟糖每包10又1／2元，5人合資買2包。每人付多少元？",
+    "options": [
+      "4又1／5",
+      "4又3／5",
+      "3又1／5",
+      "3又3／5"
+    ],
+    "answer": "4又1／5",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DA_L06_Q06",
+    "grade": 5,
+    "question": "豆漿9／10升分給3人；大哥喝去1／5升後，還餘多少升？",
+    "options": [
+      "1／4",
+      "1／5",
+      "1／10",
+      "1／20"
+    ],
+    "answer": "1／10",
+    "unitKey": "fraction",
+    "topic": "分數四則混合運算",
+    "source": "第二版 5 下 A 單元二 第 6 課 分數四則混合運算",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L13_Q03",
+    "grade": 5,
+    "question": "選出正確的計算。",
+    "options": [
+      "7.9×3＝23.7",
+      "7.9×3＝24.7"
+    ],
+    "answer": "7.9×3＝23.7",
+    "unitKey": "decimal",
+    "topic": "小數乘法（一）",
+    "source": "第二版 5 下 B 單元四 第 13 課 小數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L13_Q04",
+    "grade": 5,
+    "question": "選出正確的計算。",
+    "options": [
+      "8×2.04＝16.42",
+      "8×2.04＝16.32"
+    ],
+    "answer": "8×2.04＝16.32",
+    "unitKey": "decimal",
+    "topic": "小數乘法（一）",
+    "source": "第二版 5 下 B 單元四 第 13 課 小數乘法（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L14_Q03",
+    "grade": 5,
+    "question": "選出正確的計算。",
+    "options": [
+      "8.9×5.1＝44.79",
+      "8.9×5.1＝45.39"
+    ],
+    "answer": "8.9×5.1＝45.39",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L14_Q04",
+    "grade": 5,
+    "question": "選出正確的計算。",
+    "options": [
+      "7.05×9.8＝69.09",
+      "7.05×9.8＝68.99"
+    ],
+    "answer": "7.05×9.8＝69.09",
+    "unitKey": "decimal",
+    "topic": "小數乘法（二）",
+    "source": "第二版 5 下 B 單元四 第 14 課 小數乘法（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L16_Q05",
+    "grade": 5,
+    "question": "記錄雪櫃實物體積時，選用哪個體積單位較合適？",
+    "options": [
+      "cm³",
+      "m³"
+    ],
+    "answer": "m³",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L16_Q06",
+    "grade": 5,
+    "question": "記錄罐裝飲品實物體積時，選用哪個體積單位較合適？",
+    "options": [
+      "cm³",
+      "m³"
+    ],
+    "answer": "cm³",
+    "unitKey": "volume",
+    "topic": "體積的量度",
+    "source": "第二版 5 下 B 單元五 第 16 課 體積的量度",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L19_Q01",
+    "grade": 5,
+    "question": "以下哪項是方程？",
+    "options": [
+      "12－y",
+      "18÷3＝6",
+      "25×5",
+      "4b＝40"
+    ],
+    "answer": "4b＝40",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L19_Q02",
+    "grade": 5,
+    "question": "以下哪項是方程？",
+    "options": [
+      "x／8＝10",
+      "15＋17＝32",
+      "6A",
+      "36－17"
+    ],
+    "answer": "x／8＝10",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L19_Q05",
+    "grade": 5,
+    "question": "解P＋10＝32，哪個步驟正確？",
+    "options": [
+      "P＋10＋10＝32＋10，P＝42",
+      "P＋10－10＝32－10，P＝22"
+    ],
+    "answer": "P＋10－10＝32－10，P＝22",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L19_Q06",
+    "grade": 5,
+    "question": "解s－17＝9，哪個步驟正確？",
+    "options": [
+      "s－17＋17＝9＋17，s＝26",
+      "s－17＋17＝9，s＝9"
+    ],
+    "answer": "s－17＋17＝9＋17，s＝26",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L19_Q07",
+    "grade": 5,
+    "question": "解c＋24＝46，哪個步驟正確？",
+    "options": [
+      "c＋24＋24＝46＋24，c＝70",
+      "c＋24－24＝46－24，c＝22"
+    ],
+    "answer": "c＋24－24＝46－24，c＝22",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L19_Q08",
+    "grade": 5,
+    "question": "解R－50＝88，哪個步驟正確？",
+    "options": [
+      "R－50＋50＝88＋50，R＝138",
+      "R－50＋50＝88，R＝88"
+    ],
+    "answer": "R－50＋50＝88＋50，R＝138",
+    "unitKey": "algebra",
+    "topic": "簡易方程（一）",
+    "source": "第二版 5 下 B 單元六 第 19 課 簡易方程（一）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q01",
+    "grade": 5,
+    "question": "解3b＝36，哪個步驟正確？",
+    "options": [
+      "3b＝36／2，b＝18",
+      "3b／3＝36／3，b＝12"
+    ],
+    "answer": "3b／3＝36／3，b＝12",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q02",
+    "grade": 5,
+    "question": "解F／10＝4，哪個步驟正確？",
+    "options": [
+      "F／10×10＝4×10，F＝40",
+      "F／10×10＝4×4，F＝16"
+    ],
+    "answer": "F／10×10＝4×10，F＝40",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q03",
+    "grade": 5,
+    "question": "解9D＝63，哪個步驟正確？",
+    "options": [
+      "9D／9＝63／9，D＝7",
+      "9D／7＝63／7，D＝9"
+    ],
+    "answer": "9D／9＝63／9，D＝7",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q04",
+    "grade": 5,
+    "question": "解g／4＝12，哪個步驟正確？",
+    "options": [
+      "g／4＝12×5，g＝60",
+      "g／4×4＝12×4，g＝48"
+    ],
+    "answer": "g／4×4＝12×4，g＝48",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q05",
+    "grade": 5,
+    "question": "媽媽買雞蛋E隻，吃了11隻後餘9隻。哪道方程正確？",
+    "options": [
+      "E＋9＝11",
+      "E－11＝9",
+      "11E＝9",
+      "E／11＝9"
+    ],
+    "answer": "E－11＝9",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q06",
+    "grade": 5,
+    "question": "五乙班32人，戴眼鏡8人，沒戴有s人。哪道方程正確？",
+    "options": [
+      "8＋s＝32",
+      "s－8＝32",
+      "8s＝32",
+      "s／8＝32"
+    ],
+    "answer": "8＋s＝32",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q07",
+    "grade": 5,
+    "question": "某數乘以4的結果是48。某數是多少？",
+    "options": [
+      "y／3＝48，y＝144",
+      "4y＝48，y＝12"
+    ],
+    "answer": "4y＝48，y＝12",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L20_Q08",
+    "grade": 5,
+    "question": "一包餅乾平均分成3份，每份8塊無剩餘。一包有多少塊？",
+    "options": [
+      "y／3＝8，y＝24",
+      "y／8＝8，y＝64"
+    ],
+    "answer": "y／3＝8，y＝24",
+    "unitKey": "algebra",
+    "topic": "簡易方程（二）",
+    "source": "第二版 5 下 B 單元六 第 20 課 簡易方程（二）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L21_Q01",
+    "grade": 5,
+    "question": "哪道方程表示「y乘以3後加14的結果是20」？",
+    "options": [
+      "y／3－14＝20",
+      "y／3＋14＝20",
+      "3y－14＝20",
+      "3y＋14＝20"
+    ],
+    "answer": "3y＋14＝20",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L21_Q02",
+    "grade": 5,
+    "question": "半包糖果比一包朱古力（85克）重25克。哪道方程找糖果重N？",
+    "options": [
+      "N－85＝25",
+      "N／2－85＝25",
+      "N＋85＝25",
+      "N／2＋85＝25"
+    ],
+    "answer": "N／2－85＝25",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L21_Q05",
+    "grade": 5,
+    "question": "哪道方程表示「k除以3後加1的結果是5」？",
+    "options": [
+      "3k＋1＝5",
+      "3k－1＝5",
+      "k／3＋1＝5",
+      "k／3－1＝5"
+    ],
+    "answer": "k／3＋1＝5",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L21_Q06",
+    "grade": 5,
+    "question": "E張紙均分7人；子賢用3張後餘6張。哪道方程找原有張數？",
+    "options": [
+      "7E＋3＝6",
+      "7E－3＝6",
+      "E／7＋3＝6",
+      "E／7－3＝6"
+    ],
+    "answer": "E／7－3＝6",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L21_Q11",
+    "grade": 5,
+    "question": "某數除以3後加10的結果是21。某數是多少？",
+    "options": [
+      "y／3＋10＝21，y＝33",
+      "y／3－10＝21，y＝93"
+    ],
+    "answer": "y／3＋10＝21，y＝33",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5DB_L21_Q12",
+    "grade": 5,
+    "question": "豆奶3排，喝了10盒後餘8盒。每排有多少盒？",
+    "options": [
+      "3y＋8＝10，y＝2／3",
+      "3y－10＝8，y＝6"
+    ],
+    "answer": "3y－10＝8，y＝6",
+    "unitKey": "algebra",
+    "topic": "簡易方程（三）",
+    "source": "第二版 5 下 B 單元六 第 21 課 簡易方程（三）",
+    "kind": "multiple_choice",
+    "image": null
+  },
+  {
+    "id": "5A_L01_Q11",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "topic": "5A L01 多位數",
+    "question": "選出所有奇數。",
+    "options": [
+      "45667798",
+      "305113",
+      "1400000",
+      "2832227"
+    ],
+    "answer": "305113"
+  },
+  {
+    "id": "5A_L01_Q12",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "topic": "5A L01 多位數",
+    "question": "選出所有偶數。",
+    "options": [
+      "215660",
+      "4222175",
+      "3002508",
+      "576246369"
+    ],
+    "answer": "215660"
+  },
+  {
+    "id": "5A_L01_Q16",
+    "grade": 5,
+    "unitKey": "large_numbers",
+    "source": "第二版 5 上 A 單元一 第 1 課 多位數",
+    "topic": "5A L01 多位數",
+    "question": "把 50120000、105000760 和 24460000 由大至小排列出來。",
+    "options": [
+      "a. 50120000 > 105000760 > 24460000",
+      "b. 24460000 > 105000760 > 50120000",
+      "c. 24460000 > 50120000 > 105000760",
+      "d. 105000760 > 50120000 > 24460000"
+    ],
+    "answer": "d. 105000760 > 50120000 > 24460000"
+  },
+  {
+    "id": "5A_L02_Q04",
+    "grade": 5,
+    "unitKey": "approx_estimate",
+    "source": "第二版 5 上 A 單元一 第 2 課 近似值和大數量的估計",
+    "topic": "5A L02 近似值和大數量的估計",
+    "question": "如果把 124▲190 取近似值至萬位是 1250000，▲ 代表的數字可能是 （ ）。（選出所有正確答案。）",
+    "options": [
+      "4",
+      "9",
+      "1",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "id": "5B_L14_Q01",
+    "grade": 5,
+    "unitKey": "algebra_symbols_1",
+    "source": "第二版 5 上 B 單元五 第 14 課 代數符號（一）",
+    "topic": "5B L14 代數符號（一）",
+    "question": "以下哪些是代數式？選出所有正確的答案。",
+    "options": [
+      "4 − a、14 ÷ 2 = 7、18 × 3",
+      "4 − a、18 × 3、y/4",
+      "4 − a、14 ÷ 2 = 7、Q + 5",
+      "4 − a、Q + 5、y/4"
+    ],
+    "answer": "4 − a、Q + 5、y/4",
+    "image": "q-images/5B_L14_Q01_a.png"
+  },
+  {
+    "id": "5DA_L07_Q01",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q01.png"
+  },
+  {
+    "id": "5DA_L07_Q02",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "c. c.",
+    "image": "q-images/5DA_L07_Q02.png"
+  },
+  {
+    "id": "5DA_L07_Q03",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "a. a.",
+    "image": "q-images/5DA_L07_Q03.png"
+  },
+  {
+    "id": "5DA_L07_Q04",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q04.png"
+  },
+  {
+    "id": "5DA_L07_Q05",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "a. a.",
+    "image": "q-images/5DA_L07_Q05.png"
+  },
+  {
+    "id": "5DA_L07_Q06",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q06.png"
+  },
+  {
+    "id": "5DA_L07_Q07",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "c. c.",
+    "image": "q-images/5DA_L07_Q07.png"
+  },
+  {
+    "id": "5DA_L07_Q08",
+    "grade": 5,
+    "unitKey": "solid_cross_section",
+    "source": "第二版 5 下 A 單元三 第 7 課 立體圖形的截面",
+    "topic": "5DA L07 立體圖形的截面",
+    "question": "把以下立體圖形沿着虛線切開後，可以得到平行於底的截面。下面哪個是立體圖形的截面？",
+    "options": [
+      "a. a.",
+      "b. b.",
+      "c. c."
+    ],
+    "answer": "b. b.",
+    "image": "q-images/5DA_L07_Q08.png"
+  },
+  {
+    "id": "5DB_L15_Q01",
+    "grade": 5,
+    "unitKey": "volume_intro",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "topic": "5DB L15 體積的認識",
+    "question": "選出體積較大的球。",
+    "options": [
+      "a. 較大的灰色球（球面有三個深色小圓）",
+      "b. 較小的線條球"
+    ],
+    "answer": "a. 較大的灰色球（球面有三個深色小圓）",
+    "image": "q-images/5DB_L15_Q01_a.png"
+  },
+  {
+    "id": "5DB_L15_Q02",
+    "grade": 5,
+    "unitKey": "volume_intro",
+    "source": "第二版 5 下 B 單元五 第 15 課 體積的認識",
+    "topic": "5DB L15 體積的認識",
+    "question": "選出體積較小的蛋糕。",
+    "options": [
+      "a. 較高的圓形草莓蛋糕",
+      "b. 較矮的分層草莓蛋糕"
+    ],
+    "answer": "b. 較矮的分層草莓蛋糕",
+    "image": "q-images/5DB_L15_Q02_b.png"
+  }
+];
