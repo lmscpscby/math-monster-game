@@ -294,7 +294,7 @@ const battleNewlyEmpty = battleRows.filter(r => r.before > 0 && r.after === 0).m
 const battleAlreadyEmpty = battleRows.filter(r => r.before === 0 && r.after === 0).map(r => r.id);
 const battleNear = battleRows.filter(r => r.after > 0 && r.after < 3).map(r => r.id);
 assert(battleNewlyEmpty.join(',') === 'g1_u5,g2_u4,g3_u3,g4_u4', 'newly empty battle units changed: ' + battleNewlyEmpty.join(','));
-assert(battleAlreadyEmpty.join(',') === 'g2_u6,g4_u5,g5_u1,g6_u3,g6_u6,g6_u7', 'already empty battle units changed: ' + battleAlreadyEmpty.join(','));
+assert(battleAlreadyEmpty.join(',') === 'g2_u6,g4_u5,g5_u1', 'already empty battle units changed: ' + battleAlreadyEmpty.join(','));
 assert(battleNear.join(',') === 'g3_u6', 'near-empty battle units changed: ' + battleNear.join(','));
 
 ctx.usedWordQuestionIds = new Set();
@@ -312,6 +312,11 @@ battleRows.forEach(row => {
         assert(!drawn.image, row.id + ' drew an image question ' + drawn._bankMeta.id);
         const src = bank.find(q => q.id === drawn._bankMeta.id);
         assert(src && ctx.battleQuestionEligible(src), row.id + ' drew an ineligible question ' + drawn._bankMeta.id);
+        const rule = ctx.UNIT_BANK_RULES[row.id];
+        if (rule && rule.idPrefix) {
+            assert(String(drawn._bankMeta.id).indexOf(rule.idPrefix) === 0, row.id + ' left its lesson: ' + drawn._bankMeta.id);
+            assert(drawn._bankMeta.fallback !== 'grade', row.id + ' fell back to the grade pool');
+        }
     }
 });
 
