@@ -6376,15 +6376,15 @@
                 { id: 'g5_u8', name: '代數符號與簡易代數式' }
             ],
             'G6': [
-                { id: 'g6_u9', name: '小數除法' },
-                { id: 'g6_u1', name: '百分數的應用（折扣、加減與比較）' },
-                { id: 'g6_u2', name: '分數、小數與百分數的互化' },
-                { id: 'g6_u3', name: '速率（m/s, km/h 換算與計算）' },
-                { id: 'g6_u4', name: '圓周長與圓面積計算' },
-                { id: 'g6_u5', name: '排水法測量不規則物件體積（量杯、水缸）' },
-                { id: 'g6_u6', name: '折線圖與統計數據分析及誤用' },
-                { id: 'g6_u7', name: '時間間隔、開始與結束時間計算' },
-                { id: 'g6_u8', name: '簡易方程及應用題' }
+                { id: 'g6_l04', name: '小數和分數互化與比較' },
+                { id: 'g6_l03', name: '小數除法' },
+                { id: 'g6_l02', name: '分數四則混合計算' },
+                { id: 'g6_l01', name: '分數除法' },
+                { id: 'g6_l05', name: '百分數' },
+                { id: 'g6_l06', name: '圓周' },
+                { id: 'g6_l07', name: '圓面積' },
+                { id: 'g6_l09', name: '簡易方程(二)' },
+                { id: 'g6_l08', name: '體積與容量' }
             ]
         };
 
@@ -10251,7 +10251,10 @@
 
         /**
          * 單元 → 題庫篩選（unitKey／id 前綴／topic 關鍵字）。
-         * 池太細先 widen（相關 unitKey），再 fallback 全年級。
+         * G1–G5：池太細先 widen（相關 unitKey），再 fallback 全年級。
+         * G6 一課一關，用 idPrefix + topic 欄，唔靠 unitKey（fraction／circle／decimal 跨課共用）。
+         * 關卡名「簡易方程(二)」係半形括號；題庫 topic 係全形「簡易方程（二）」，對題庫欄位。
+         * 已刪嘅六年級關（速率、時間間隔、折線圖）冇 rule，唔再當成全年級入口。
          */
         const UNIT_BANK_RULES = {
             // —— G1 ——
@@ -10293,20 +10296,26 @@
             g5_u6: { unitKeys: ['volume'], idRe: /^5B55M/, topicRe: /體積|立方厘米|立方米|長方體|正方體的體積/ },
             g5_u7: { unitKeys: [], idRe: /^5B35S/, topicRe: /立體圖形|截面|頂點|摺紙圖樣/ },
             g5_u8: { unitKeys: ['algebra'], idRe: /^5A55A|^5B65A/, topicRe: /代數|代數式/ },
-            // —— G6 ——
-            g6_u9: { unitKeys: ['decimal_division_1','decimal_division_2','interesting_division'], idRe: /^6A16N101|^6A16N102|^6A16N103/, topicRe: /小數除法|有趣的除法|除以10、100|整數\/小數除以|小數除法的應用/ },
-            g6_u1: { unitKeys: ['percent','percent_intro','percent_app_1','percent_app_2'], idRe: /^6A56N311|^6B16N401/, topicRe: /百分數的認識|百分數的應用|折扣|以百分數比較/ },
-            g6_u2: { unitKeys: ['percent_decimal','percent_fraction'], idRe: /^6A56N312|^6A56N313/, topicRe: /互化|百分數和小數|百分數和分數/ },
-            g6_u3: { unitKeys: ['speed','speed_1','speed_2'], idRe: /^6B46M408|^6B46M409|^6B46M410/, topicRe: /速率|路程和時間/ },
-            g6_u4: { unitKeys: ['circle','circumference_1','circumference_2','circle_area_1','circle_area_2'], idRe: /^6B36M|^6B66M/, topicRe: /圓周|圓面積|求圓周|求圓面積/ },
-            g6_u5: { unitKeys: ['volume','capacity_volume','displacement_1','displacement_2'], idRe: /^6A76M/, topicRe: /排水|容量和體積|量杯|水缸/ },
-            g6_u6: { unitKeys: ['stats','journey_graph','pie_chart_1','pie_chart_2','stats_misuse','average_1','average_2'], idRe: /^6A36D|^6A46D|^6B76D/, topicRe: /折線圖|圓形圖|平均數|統計|誤用/ },
-            g6_u7: { unitKeys: ['time'], idRe: /^6B46M407/, topicRe: /時間間隔|時間單位|開始與結束/ },
-            g6_u8: { unitKeys: ['algebra','simple_equation_1','simple_equation_2','equation_word'], idRe: /^6B56A/, topicRe: /方程/ }
+            // —— G6（id 前綴 + topic；唔寫 unitKey）——
+            g6_l04: { idPrefix: '6P_L04_', topic: '小數和分數互化與比較' },
+            g6_l03: { idPrefix: '6P_L03_', topic: '小數除法' },
+            g6_l02: { idPrefix: '6P_L02_', topic: '分數四則混合計算' },
+            g6_l01: { idPrefix: '6P_L01_', topic: '分數除法' },
+            g6_l05: { idPrefix: '6P_L05_', topic: '百分數' },
+            g6_l06: { idPrefix: '6P_L06_', topic: '圓周' },
+            g6_l07: { idPrefix: '6P_L07_', topic: '圓面積' },
+            g6_l09: { idPrefix: '6P_L09_', topic: '簡易方程（二）' },
+            g6_l08: { idPrefix: '6P_L08_', topic: '體積與容量' }
         };
 
         function questionMatchesUnitRule(q, rule) {
             if (!q || !rule) return true;
+            // 六年級一課一關：id 前綴同 topic 欄要一齊中。unitKey 跨課共用，唔可以單獨入池。
+            if (rule.idPrefix) {
+                if (String(q.id || '').indexOf(rule.idPrefix) !== 0) return false;
+                if (rule.topic != null && String(q.topic || '') !== rule.topic) return false;
+                return true;
+            }
             const uk = q.unitKey || '';
             if (rule.unitKeys && rule.unitKeys.length && rule.unitKeys.indexOf(uk) !== -1) return true;
             if (rule.idRe && rule.idRe.test(String(q.id || ''))) return true;
@@ -10330,6 +10339,8 @@
             }
 
             const rule = unitId ? UNIT_BANK_RULES[unitId] : null;
+            // 有關卡 id 但冇對應 rule（已刪嘅六年級關）唔好跌返全年級。
+            if (unitId && !rule) return null;
             let matched = rule ? gradePool.filter(q => questionMatchesUnitRule(q, rule)) : gradePool.slice();
             let pool = filterBattleQuestionPool(matched);
             let fallbackLevel = 'unit';
@@ -10343,6 +10354,8 @@
                 }
             }
             if (!pool.length) {
+                // 六年級課關只可以抽自己嘅 id 前綴，池空就唔抽其他課。
+                if (rule && rule.idPrefix) return null;
                 pool = filterBattleQuestionPool(gradePool);
                 fallbackLevel = pool.length ? 'grade' : 'empty';
             }
@@ -10717,83 +10730,7 @@
                     options = [`${a}y 個`, `y + ${a} 個`, `y / ${a} 個`, `${a} + y 個` ];
                 }
 
-                // ==================== P6 (小六) 題庫 ====================
-                else if (unitId === 'g6_u1') {
-                    let pct = (Math.floor(Math.random() * 4) + 1) * 5;
-                    let orig = 200;
-                    qText = `【${currentUnitObj.name}】某玩具原價 $${orig}，現以 ${100 - pct}% 折扣（減價 ${pct}%）發售，現售價是多少元？`;
-                    correctAns = String(orig * (100 - pct) / 100);
-                    options = [String(orig * (100 - pct) / 100), String(orig - pct), String(orig * pct / 100), String(orig + pct)];
-                }
-                else if (unitId === 'g6_u2') {
-                    qText = `【${currentUnitObj.name}】將分數 3/4 化為百分數是？`;
-                    correctAns = "75%";
-                    options = ["75%", "34%", "0.75%", "7.5%"];
-                }
-                else if (unitId === 'g6_u3') {
-                    qText = `【${currentUnitObj.name}】芷欣跑 300 米需時 50 秒，她跑步的平均速率是多少 m/s？`;
-                    correctAns = "6 m/s";
-                    options = ["6 m/s", "5 m/s", "60 m/s", "15 m/s"];
-                }
-                else if (unitId === 'g6_u4') {
-                    qText = `【${currentUnitObj.name}】已知圓的直徑為 10 cm，圓周率以 3.14 計算，圓周長是多少 cm？`;
-                    correctAns = "31.4 cm";
-                    options = ["31.4 cm", "15.7 cm", "78.5 cm", "62.8 cm"];
-                }
-                else if (unitId === 'g6_u5') {
-                    qText = `【${currentUnitObj.name}】下列哪一種物件「適合」利用排水法來找出它的體積？`;
-                    correctAns = "玻璃彈珠 (波子)";
-                    options = ["玻璃彈珠 (波子)", "乒乓球 (會浮於水)", "紙巾 (會吸水溶化)", "方糖 (會溶於水)"];
-                }
-                else if (unitId === 'g6_u6') {
-                    qText = `【${currentUnitObj.name}】比較兩幅統計折線圖時，若感覺下降幅度受誤導，最常見的原因是什麼？`;
-                    correctAns = "兩圖縱軸每格代表的數量不相同";
-                    options = [
-                        "兩圖縱軸每格代表的數量不相同",
-                        "圖表顏色不同",
-                        "橫軸年份字體不同",
-                        "圖標標題長短不一"
-                    ];
-                }
-                else if (unitId === 'g6_u7') {
-                    qText = `【${currentUnitObj.name}】現在時間是上午 10 時 15 分，4 小時 10 分鐘前是多少時間？`;
-                    correctAns = "上午 6 時 5 分";
-                    options = ["上午 6 時 5 分", "上午 6 時 25 分", "下午 2 時 5 分", "下午 2 時 25 分"];
-                }
-                else if (unitId === 'g6_u8') {
-                    let x = Math.floor(Math.random() * 10) + 2;
-                    let b = Math.floor(Math.random() * 15) + 5;
-                    let sum = x + b;
-                    qText = `【${currentUnitObj.name}】解方程：x + ${b} = ${sum}，求 x 的值？`;
-                    correctAns = String(x);
-                    options = [String(x), String(x + 2), String(sum), String(b)];
-                }
-                else if (unitId === 'g6_u9') { // 小數除法
-                    const mode = Math.floor(Math.random() * 3);
-                    if (mode === 0) {
-                        const n = (Math.floor(Math.random() * 90) + 10) / 10; // 1.0–10.0
-                        const div = [10, 100, 1000][Math.floor(Math.random() * 3)];
-                        const ans = n / div;
-                        qText = `【${currentUnitObj.name}】${n.toFixed(1)} ÷ ${div} = ?`;
-                        correctAns = String(ans);
-                        options = [String(ans), String(n * div), String(n / (div / 10)), String((n / div) * 10)];
-                    } else if (mode === 1) {
-                        const a = (Math.floor(Math.random() * 50) + 10) / 10;
-                        const b = (Math.floor(Math.random() * 8) + 2) / 10;
-                        // keep 1 decimal clean: a/b may be messy — use integers as decimals
-                        const ai = Math.floor(Math.random() * 20) + 5;
-                        const bi = [2, 4, 5][Math.floor(Math.random() * 3)];
-                        qText = `【${currentUnitObj.name}】${(ai / 10).toFixed(1)} ÷ ${(bi / 10).toFixed(1)} = ?`;
-                        correctAns = String(ai / bi);
-                        options = [String(ai / bi), String(ai * bi / 100), String((ai / 10) + (bi / 10)), String(ai / bi + 1)];
-                    } else {
-                        const whole = (Math.floor(Math.random() * 9) + 2) * 10;
-                        const d = [2, 4, 5][Math.floor(Math.random() * 3)];
-                        qText = `【${currentUnitObj.name}】${whole} ÷ ${d} = ?（小數除法：整數 ÷ 整數）`;
-                        correctAns = String(whole / d);
-                        options = [String(whole / d), String(whole * d), String(whole - d), String(whole / d + 1)];
-                    }
-                }
+                // 六年級各關由題庫 id 前綴抽出，唔再行舊程式模板。
 
                 // 備用生成
                 else {

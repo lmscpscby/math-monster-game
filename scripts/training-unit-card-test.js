@@ -76,8 +76,20 @@ assert(units.G3.length === 6 && units.G4.length === 6, 'G3 and G4 have 6 units')
 assert(units.G5.length === 9 && units.G6.length === 9, 'G5 and G6 have 9 units');
 assert(units.G2[6].name.indexOf('時間') >= 0, 'G2 slot 7 title is still its unit name');
 assert(units.G5[8].name.indexOf('代數') >= 0, 'G5 slot 9 title is still its unit name');
-assert(units.G6[6].name.indexOf('折線圖') >= 0, 'G6 slot 7 title is still its unit name');
-assert(units.G6[8].name.indexOf('方程') >= 0, 'G6 slot 9 title is still its unit name');
+assert(units.G6.map(function (u) { return u.name; }).join('\n') === [
+  '小數和分數互化與比較',
+  '小數除法',
+  '分數四則混合計算',
+  '分數除法',
+  '百分數',
+  '圓周',
+  '圓面積',
+  '簡易方程(二)',
+  '體積與容量'
+].join('\n'), 'G6 cards use the nine lesson names in order');
+['速率', '時間間隔', '折線圖', '排水法', '圓周長與圓面積'].forEach(function (label) {
+  assert(units.G6.every(function (u) { return u.name.indexOf(label) === -1; }), 'G6 cards omit ' + label);
+});
 ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'].forEach(function (grade) {
   units[grade].forEach(function (unit) {
     assert(html.includes(unit.name), grade + ' title stays in HTML: ' + unit.name);
