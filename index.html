@@ -3861,6 +3861,19 @@
             text-decoration: underline;
             text-underline-offset: 6px;
         }
+        #view-temple .temple-book.temple-book--pending {
+            cursor: default;
+            opacity: 0.8;
+        }
+        #view-temple .temple-book.temple-book--pending:hover,
+        #view-temple .temple-book.temple-book--pending:focus,
+        #view-temple .temple-book.temple-book--pending:focus-visible {
+            transform: none;
+            outline: none;
+        }
+        #view-temple .temple-book.temple-book--pending:focus-visible .temple-book__title {
+            text-decoration: none;
+        }
         #view-temple .temple-book__art {
             height: min(46vh, 500px);
             width: auto;
@@ -5266,12 +5279,12 @@
                     <span class="temple-book__sub">符文紀元</span>
                     <span class="temple-book__note">10 位英雄編年　可翻閱</span>
                 </button>
-                <button type="button" class="temple-book" onclick="switchView('temple-shanhai')" aria-label="翻閱山海經：神獸志異">
+                <div class="temple-book temple-book--pending">
                     <img class="temple-book__art" src="assets/bg/ui-temple-book-shanhai.png?v=d1a91445" alt="山海經">
                     <span class="temple-book__title">山海經</span>
                     <span class="temple-book__sub">神獸志異</span>
-                    <span class="temple-book__note">故事未到　可先入內查看</span>
-                </button>
+                    <span class="temple-book__note">故事未到</span>
+                </div>
             </div>
         </section>
 

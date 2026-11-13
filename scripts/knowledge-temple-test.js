@@ -1,5 +1,6 @@
 /**
- * 知識聖殿：島嶼牌開門廳，星軌編年 10 人（含沃里克），山海經仍係空卷。
+ * 知識聖殿：島嶼牌開門廳，星軌編年 10 人（含沃里克）。
+ * 山海經封面留喺大廳，故事未到之前唔可以入。空卷頁仍留喺程式入面。
  * 沃里克唔入星軌抽卡池。
  *
  * node scripts/knowledge-temple-test.js
@@ -47,14 +48,25 @@ const star = sliceBetween(html, 'id="view-temple-star" class="temple-chronicle h
 const shan = sliceBetween(html, 'id="view-temple-shanhai" class="temple-chronicle hidden"', '</main>');
 
 assert(hall.includes("switchView('home')") && hall.includes('返回島嶼'), 'hall returns to the map');
-assert(hall.includes("switchView('temple-star')") && hall.includes("switchView('temple-shanhai')"), 'both books open a page');
+assert(hall.includes("switchView('temple-star')"), 'star-trail book opens the chronicle');
+assert(!hall.includes("switchView('temple-shanhai')"), 'shan-hai book does not call switchView');
+assert(!/onclick\s*=\s*["'][^"']*temple-shanhai/.test(hall), 'shan-hai book has no onclick into the empty page');
+assert(!/href\s*=\s*["'][^"']*(?:temple-shanhai|view-temple-shanhai)/.test(hall), 'shan-hai book has no href into the empty page');
 assert(hall.includes('>星軌命途<') && hall.includes('>符文紀元<'), 'star-trail title and subtitle are separate lines');
 assert(hall.includes('>山海經<') && hall.includes('>神獸志異<'), 'shan-hai title and subtitle are separate lines');
 assert(hall.includes('10 位英雄編年　可翻閱'), 'star-trail note counts 10, including Warwick');
 assert(!hall.includes('9 位英雄'), 'hall no longer says 9 heroes');
-assert(hall.includes('故事未到　可先入內查看'), 'shan-hai hall note keeps 故事未到');
+assert(hall.includes('>故事未到<'), 'shan-hai hall note says 故事未到');
+assert(!hall.includes('可先入內查看'), 'shan-hai note does not invite entry');
 assert(hall.includes('ui-temple-hall-bg-1920.jpg') === false, 'hall background is CSS, not an img tag');
 assert(hall.includes('ui-temple-book-star-trail.png?v=') && hall.includes('ui-temple-book-shanhai.png?v='), 'official book filenames');
+
+const shanMark = hall.indexOf('temple-book--pending');
+const shanOpen = hall.slice(hall.lastIndexOf('<', shanMark), hall.indexOf('>', shanMark) + 1);
+const shanBook = hall.slice(shanMark);
+assert(shanMark !== -1 && /^<div\b/.test(shanOpen), 'shan-hai book is visible and is not a button');
+assert(!/\bbutton\b|onclick|href\s*=|tabindex|role\s*=\s*["']button["']|switchView/.test(shanOpen + shanBook), 'shan-hai book does not navigate');
+assert(shanBook.includes('ui-temple-book-shanhai.png?v=') && shanBook.includes('>山海經<') && shanBook.includes('>神獸志異<') && shanBook.includes('>故事未到<'), 'shan-hai cover, title, subtitle, and note stay visible');
 assert(!/尚未上線|備用|肖像生成中|preview-banner/.test(hall + star + shan), 'preview banners and the Warwick placeholder are gone');
 
 assert(star.includes("switchView('temple')") && star.includes('返回知識聖殿選書'), 'chronicle returns to the hall');
@@ -88,6 +100,10 @@ assert(html.includes('family=Cinzel:wght@600;800') && html.includes('family=Cinz
 assert(html.includes('Noto+Serif+TC:wght@400;600;700;900'), 'Noto Serif TC includes the temple weights');
 const templeCss = html.slice(html.indexOf('/* Knowledge Temple.'), html.indexOf('</style>'));
 assert(templeCss.includes('color: #fff0d4') && templeCss.includes('color: #e5b95c') && templeCss.includes('color: #c9b089'), 'locked title, subtitle, and note colors');
+const pendingCss = templeCss.slice(templeCss.indexOf('#view-temple .temple-book.temple-book--pending'));
+assert(pendingCss.startsWith('#view-temple .temple-book.temple-book--pending'), 'pending book has a disabled look');
+assert(/\{\s*cursor:\s*default;\s*opacity:\s*0\.\d+;/.test(pendingCss), 'pending book uses the default cursor and stays slightly dimmed');
+assert(/temple-book--pending:hover[\s\S]*?transform:\s*none/.test(pendingCss), 'pending book does not lift on hover');
 assert(templeCss.includes('Cinzel Decorative') && templeCss.includes('"Noto Serif TC"') && templeCss.includes('"Cinzel"'), 'temple type stacks');
 assert(templeCss.includes("url('assets/bg/ui-temple-hall-bg-1920.jpg?v=") && templeCss.includes('background-size: cover'), 'hall background covers');
 assert(templeCss.includes("url('assets/bg/rune-parchment-bg.jpg?v="), 'parchment backs the chronicle');
