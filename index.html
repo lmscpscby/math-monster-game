@@ -1463,19 +1463,31 @@
         .island-admin-btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.4rem;
-            margin: 0.75rem auto 0;
+            margin: 0.75rem 0 0;
             padding: 0.55rem 0.9rem;
+            min-height: 44px;
             border-radius: 0.9rem;
             border: 1px solid rgba(251, 113, 133, 0.55);
             background: rgba(136, 19, 55, 0.82);
             color: #ffe4e6;
             font-size: 12px;
             font-weight: 800;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
+        .island-admin-btn:hover { filter: brightness(1.08); }
+        .island-admin-btn:focus-visible {
+            outline: 3px solid #f6e2a8;
+            outline-offset: 2px;
+        }
+        .hidden.island-admin-btn { display: none !important; }
         #view-home .island-admin-wrap {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.65rem;
         }
         @media (max-width: 720px) {
             .island-stage {
@@ -2093,6 +2105,117 @@
         }
         @media (prefers-reduced-motion: reduce) {
             .ranked-btn { transition: none; }
+        }
+
+        /* Admin review of every grade. Reuses ranked rows, wood tabs, and the arena skin. */
+        #view-grade-boards.hidden { display: none !important; }
+        .staff-boards {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            width: min(100%, 960px);
+            margin-inline: auto;
+            min-width: 0;
+            color: #3a2412;
+        }
+        .staff-boards__toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.55rem;
+        }
+        .staff-boards__head h2,
+        .staff-boards__panel-head h3 {
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+        }
+        .staff-boards__head h2 {
+            margin: 0;
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 900;
+            line-height: 1.2;
+            color: #3a2412;
+            text-shadow: 0 1px 0 rgba(255, 248, 236, 0.85);
+        }
+        .staff-boards__head p {
+            margin: 0.25rem 0 0;
+            font-size: 13px;
+            font-weight: 700;
+            color: #5c3e24;
+        }
+        .staff-boards__tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.45rem;
+        }
+        .staff-boards__tabs .grade-tab-btn {
+            width: 132px;
+            height: 52px;
+            font-size: 16px;
+        }
+        .staff-grade-count {
+            display: inline-block;
+            min-width: 1.1rem;
+            margin-left: 0.28rem;
+            font-size: 12px;
+            font-weight: 800;
+            color: #6b4320;
+        }
+        .staff-boards__panel {
+            background: rgba(54, 32, 16, 0.94);
+            border: 3px solid rgba(212, 168, 74, 0.75);
+            border-radius: 18px;
+            box-shadow: 0 14px 28px rgba(40, 22, 8, 0.28);
+            padding: 0.8rem 0.85rem 0.9rem;
+        }
+        .staff-boards__panel-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .staff-boards__panel-head h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 18px;
+            font-weight: 900;
+            color: #f8ecd4;
+        }
+        .staff-boards__panel-head h3 i { color: #e6c27a; }
+        #staff-board-status {
+            font-size: 12px;
+            font-weight: 700;
+            color: #f3e4cc;
+        }
+        .staff-board-list {
+            max-height: min(68vh, 720px);
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            scrollbar-width: thin;
+            scrollbar-color: #e6c27a transparent;
+        }
+        .staff-board-list .ranked-row {
+            flex: 0 0 auto;
+            min-height: 48px;
+            padding: 0.35rem 0.55rem;
+            background: rgba(90, 54, 24, 0.38);
+        }
+        .staff-board-list .ranked-row__name { font-size: 15px; }
+        .staff-board-list .ranked-row__score { font-size: 15px; }
+        .staff-board-list .ranked-row__sub,
+        .staff-board-list .ranked-row__title,
+        .staff-board-list .ranked-row__prize { font-size: 12px; }
+        .staff-board-list .ranked-row__avatar {
+            width: 2rem;
+            height: 2rem;
         }
 
         /* Adventure stage select: tower sky + wood frames. Copy stays HTML.
@@ -4743,6 +4866,10 @@
                     <i class="fa-solid fa-chart-user" aria-hidden="true"></i>
                     <span>參加人數統計</span>
                 </button>
+                <button id="admin-grade-boards-card" type="button" onclick="openStaffGradeBoards()" class="hidden island-admin-btn">
+                    <i class="fa-solid fa-ranking-star" aria-hidden="true"></i>
+                    <span>各年級排行榜</span>
+                </button>
             </div>
 
             <div id="admin-stats-panel" class="ui-panel ui-parchment hidden space-y-4">
@@ -4902,6 +5029,35 @@
                     <div id="ranked-leaderboard-status" class="ranked-board__status"></div>
                     <div id="ranked-leaderboard-list" class="ranked-board__list"></div>
                 </aside>
+            </div>
+        </section>
+
+        <!-- VIEW: STAFF GRADE BOARDS (built-in admins only) -->
+        <section id="view-grade-boards" class="hidden staff-boards" aria-label="各年級排行榜">
+            <div class="staff-boards__toolbar">
+                <button type="button" onclick="switchView('home')" class="ranked-btn ranked-btn--secondary">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>返回島嶼
+                </button>
+                <button type="button" onclick="renderStaffGradeBoards()" class="ranked-btn ranked-btn--secondary-alt">重新整理</button>
+            </div>
+            <header class="staff-boards__head">
+                <h2>各年級排行榜</h2>
+                <p id="staff-board-season">管理員檢視 · 小一至小六</p>
+            </header>
+            <div class="staff-boards__tabs" role="tablist" aria-label="選擇年級">
+                <button type="button" id="staff-grade-btn-G1" role="tab" aria-selected="true" aria-label="小一排行榜" onclick="selectStaffBoardGrade('G1')" class="grade-tab-btn is-active">小一<span class="staff-grade-count" id="staff-grade-count-G1"></span></button>
+                <button type="button" id="staff-grade-btn-G2" role="tab" aria-selected="false" aria-label="小二排行榜" onclick="selectStaffBoardGrade('G2')" class="grade-tab-btn">小二<span class="staff-grade-count" id="staff-grade-count-G2"></span></button>
+                <button type="button" id="staff-grade-btn-G3" role="tab" aria-selected="false" aria-label="小三排行榜" onclick="selectStaffBoardGrade('G3')" class="grade-tab-btn">小三<span class="staff-grade-count" id="staff-grade-count-G3"></span></button>
+                <button type="button" id="staff-grade-btn-G4" role="tab" aria-selected="false" aria-label="小四排行榜" onclick="selectStaffBoardGrade('G4')" class="grade-tab-btn">小四<span class="staff-grade-count" id="staff-grade-count-G4"></span></button>
+                <button type="button" id="staff-grade-btn-G5" role="tab" aria-selected="false" aria-label="小五排行榜" onclick="selectStaffBoardGrade('G5')" class="grade-tab-btn">小五<span class="staff-grade-count" id="staff-grade-count-G5"></span></button>
+                <button type="button" id="staff-grade-btn-G6" role="tab" aria-selected="false" aria-label="小六排行榜" onclick="selectStaffBoardGrade('G6')" class="grade-tab-btn">小六<span class="staff-grade-count" id="staff-grade-count-G6"></span></button>
+            </div>
+            <div class="staff-boards__panel">
+                <div class="staff-boards__panel-head">
+                    <h3 id="staff-board-grade-title"><i class="fa-solid fa-crown" aria-hidden="true"></i><span id="staff-board-grade-label">小一榜單</span></h3>
+                    <span id="staff-board-status"></span>
+                </div>
+                <div id="staff-board-list" class="staff-board-list" aria-live="polite"></div>
             </div>
         </section>
 
@@ -8880,7 +9036,9 @@
                 return;
             }
 
-            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked', 'pvp', 'temple', 'temple-star', 'temple-shanhai'];
+            if (viewName === 'grade-boards' && !currentUser.isAdmin) viewName = 'home';
+
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked', 'pvp', 'temple', 'temple-star', 'temple-shanhai', 'grade-boards'];
             const enteringTemple = viewName === 'temple' || viewName === 'temple-star' || viewName === 'temple-shanhai';
             const templeWasOpen = document.body.classList.contains('temple-open');
             views.forEach(v => {
@@ -8890,7 +9048,8 @@
             const target = document.getElementById(`view-${viewName}`);
             if (target) target.classList.remove('hidden');
             document.body.classList.toggle('lobby-open', viewName === 'home');
-            document.body.classList.toggle('ranked-open', viewName === 'ranked');
+            document.body.classList.toggle('ranked-open', viewName === 'ranked' || viewName === 'grade-boards');
+            document.body.classList.toggle('staff-boards-open', viewName === 'grade-boards');
             document.body.classList.toggle('adventure-open', viewName === 'adventure' || viewName === 'training');
             document.body.classList.toggle('battle-open', viewName === 'battle');
             document.body.classList.toggle('gacha-open', viewName === 'gacha');
@@ -8918,6 +9077,7 @@
 
             if (viewName === 'monsters') renderMonsterCollection();
             if (viewName === 'ranked') renderLeaderboard();
+            if (viewName === 'grade-boards') renderStaffGradeBoards();
             if (viewName === 'home') updateAdminUiVisibility();
             if (viewName === 'adventure') renderAdventureScreen();
             if (viewName === 'training') renderStrandsGrid();
@@ -10759,14 +10919,16 @@
             });
         }
 
+        function leaderboardEntryVisible(u) {
+            if (!u) return false;
+            if (u.isAdmin === true) return false;
+            return !isBuiltInAdmin(u.nickname, u.key || ('user_' + (u.nickname || '')));
+        }
+
         function localLeaderboardUsers(targetGrade) {
             const db = getUsersDatabase();
             return Object.values(db)
-                .filter(u => {
-                    if (isBuiltInAdmin(u.nickname, u.key || ('user_' + (u.nickname || '')))) return false;
-                    if (u.isAdmin === true) return false;
-                    return parseGradeFromClass(u.className) === targetGrade;
-                })
+                .filter(u => leaderboardEntryVisible(u) && parseGradeFromClass(u.className) === targetGrade)
                 .sort((a, b) => (b.rankScore || 0) - (a.rankScore || 0));
         }
 
@@ -10788,11 +10950,7 @@
                     if (data && data.ok && Array.isArray(data.entries)) {
                         if (data.season) noteServerSeason(data.season);
                         refreshSeasonBanner();
-                        var entries = data.entries.filter(function (u) {
-                            if (!u) return false;
-                            if (u.isAdmin === true) return false;
-                            return !isBuiltInAdmin(u.nickname, u.key || ('user_' + (u.nickname || '')));
-                        });
+                        var entries = data.entries.filter(leaderboardEntryVisible);
                         paintLeaderboardEntries(container, entries);
                         if (statusEl) {
                             const ep = data.season && data.season.epoch > 0 ? ` · 第 ${data.season.epoch} 賽季` : '';
@@ -10819,13 +10977,169 @@
 
         function updateAdminUiVisibility() {
             const card = document.getElementById('admin-stats-card');
+            const boardsBtn = document.getElementById('admin-grade-boards-card');
             const panel = document.getElementById('admin-stats-panel');
             const isAdmin = !!(currentUser && currentUser.isAdmin);
-            if (card) {
-                if (isAdmin) card.classList.remove('hidden');
-                else card.classList.add('hidden');
-            }
+            [card, boardsBtn].forEach(function (el) {
+                if (!el) return;
+                if (isAdmin) el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
             if (panel && !isAdmin) panel.classList.add('hidden');
+            if (!isAdmin) closeStaffGradeBoards();
+        }
+
+        var STAFF_BOARD_GRADES = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'];
+        var STAFF_GRADE_LABELS = { 'G1':'小一', 'G2':'小二', 'G3':'小三', 'G4':'小四', 'G5':'小五', 'G6':'小六' };
+        var staffBoardGrade = 'G1';
+        var staffBoardRequestId = 0;
+        var staffBoardCache = {};
+
+        function openStaffGradeBoards() {
+            if (!currentUser || !currentUser.isAdmin) return;
+            switchView('grade-boards');
+        }
+
+        function closeStaffGradeBoards() {
+            const boards = document.getElementById('view-grade-boards');
+            if (!boards || boards.classList.contains('hidden')) return;
+            boards.classList.add('hidden');
+            document.body.classList.remove('staff-boards-open');
+            document.body.classList.remove('ranked-open');
+            const home = document.getElementById('view-home');
+            if (home) home.classList.remove('hidden');
+            document.body.classList.add('lobby-open');
+        }
+
+        function selectStaffBoardGrade(grade) {
+            if (!currentUser || !currentUser.isAdmin) return;
+            if (STAFF_BOARD_GRADES.indexOf(grade) === -1) return;
+            staffBoardGrade = grade;
+            paintStaffBoardTabs();
+            if (staffBoardCache[grade]) paintStaffBoardGrade(grade);
+        }
+
+        function paintStaffBoardTabs() {
+            STAFF_BOARD_GRADES.forEach(function (g) {
+                const btn = document.getElementById('staff-grade-btn-' + g);
+                if (!btn) return;
+                const on = g === staffBoardGrade;
+                btn.classList.toggle('is-active', on);
+                btn.setAttribute('aria-selected', on ? 'true' : 'false');
+                const countEl = document.getElementById('staff-grade-count-' + g);
+                const cached = staffBoardCache[g];
+                if (countEl) countEl.textContent = cached ? String(cached.entries.length) : '';
+            });
+        }
+
+        function staffSeasonLabel(season) {
+            if (season && Number(season.epoch) > 0) return '第 ' + Math.floor(Number(season.epoch)) + ' 賽季 · ';
+            return '';
+        }
+
+        function paintStaffBoardGrade(grade) {
+            const listEl = document.getElementById('staff-board-list');
+            const statusEl = document.getElementById('staff-board-status');
+            const titleEl = document.getElementById('staff-board-grade-label');
+            const seasonEl = document.getElementById('staff-board-season');
+            const label = STAFF_GRADE_LABELS[grade] || grade;
+            const cached = staffBoardCache[grade] || { entries: [], season: null, source: 'local' };
+            const entries = cached.entries || [];
+            if (titleEl) titleEl.textContent = label + '榜單';
+            if (listEl) {
+                listEl.setAttribute('data-staff-grade', grade);
+                paintLeaderboardEntries(listEl, entries);
+            }
+            const ep = cached.season && Number(cached.season.epoch) > 0
+                ? ' · 第 ' + Math.floor(Number(cached.season.epoch)) + ' 賽季'
+                : '';
+            let sourceText = '全服榜';
+            if (cached.source === 'offline') sourceText = '本機榜（未設定雲端）';
+            else if (cached.source === 'local') sourceText = '未能載入全服榜，暫顯示本機紀錄';
+            if (statusEl) {
+                statusEl.textContent = entries.length
+                    ? label + ' ' + sourceText + ' · 共 ' + entries.length + ' 人' + ep
+                    : label + '暫無排位紀錄' + (cached.source === 'cloud' ? ep : ' · ' + sourceText);
+            }
+            if (seasonEl) {
+                var season = cached.season;
+                if (!season) {
+                    STAFF_BOARD_GRADES.some(function (g) {
+                        if (staffBoardCache[g] && staffBoardCache[g].season) {
+                            season = staffBoardCache[g].season;
+                            return true;
+                        }
+                        return false;
+                    });
+                }
+                seasonEl.textContent = staffSeasonLabel(season) + '管理員檢視 · 小一至小六';
+            }
+        }
+
+        async function renderStaffGradeBoards() {
+            if (!currentUser || !currentUser.isAdmin) return;
+            const listEl = document.getElementById('staff-board-list');
+            const statusEl = document.getElementById('staff-board-status');
+            const reqId = ++staffBoardRequestId;
+            paintStaffBoardTabs();
+            if (statusEl) statusEl.textContent = '正在載入各年級排行榜…';
+            if (listEl && !staffBoardCache[staffBoardGrade]) {
+                listEl.innerHTML = '<div class="ranked-board-empty"><i class="fa-solid fa-spinner fa-spin mr-1"></i>載入排行榜…</div>';
+            }
+
+            function rememberLocal(source) {
+                const next = {};
+                STAFF_BOARD_GRADES.forEach(function (g) {
+                    next[g] = { entries: localLeaderboardUsers(g), season: null, source: source };
+                });
+                staffBoardCache = next;
+            }
+
+            if (!SHEET_REPORT_URL) {
+                rememberLocal('offline');
+                if (reqId !== staffBoardRequestId) return;
+                paintStaffBoardTabs();
+                paintStaffBoardGrade(staffBoardGrade);
+                return;
+            }
+
+            try {
+                const results = await Promise.all(STAFF_BOARD_GRADES.map(function (g) {
+                    return callBridge({ action: 'leaderboard', grade: g }).then(function (data) {
+                        return { grade: g, data: data };
+                    }).catch(function () {
+                        return { grade: g, data: null };
+                    });
+                }));
+                if (reqId !== staffBoardRequestId) return;
+                const next = {};
+                results.forEach(function (res) {
+                    const data = res.data;
+                    if (data && data.ok && Array.isArray(data.entries)) {
+                        if (data.season) noteServerSeason(data.season);
+                        next[res.grade] = {
+                            entries: data.entries.filter(leaderboardEntryVisible),
+                            season: data.season || null,
+                            source: 'cloud'
+                        };
+                    } else {
+                        next[res.grade] = {
+                            entries: localLeaderboardUsers(res.grade),
+                            season: null,
+                            source: 'local'
+                        };
+                    }
+                });
+                staffBoardCache = next;
+                try { refreshSeasonBanner(); } catch (e) {}
+                paintStaffBoardTabs();
+                paintStaffBoardGrade(staffBoardGrade);
+            } catch (err) {
+                if (reqId !== staffBoardRequestId) return;
+                rememberLocal('local');
+                paintStaffBoardTabs();
+                paintStaffBoardGrade(staffBoardGrade);
+            }
         }
 
         function openAdminStatsPanel() {
