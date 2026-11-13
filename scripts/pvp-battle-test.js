@@ -357,7 +357,10 @@ Object.keys(islandLinks).forEach(function (cls) {
 assert(islandButton('spring').includes('>星靈覺醒泉<'), 'spring plaque says 星靈覺醒泉');
 assert(!islandButton('spring').includes('圖鑑'), 'spring control does not say 圖鑑');
 assert(!islandButton('temple').includes("switchView('monsters')") && !islandButton('temple').includes('enterAdventure'), '知識聖殿 does not open the codex or adventure');
-['recreation', 'darkforest', 'sunkencity', 'desert', 'ocean', 'temple'].forEach(function (cls) {
+assert(islandButton('temple').includes("switchView('temple')"), '知識聖殿 opens the book hall');
+assert(!islandButton('temple').includes('island-hotspot--locked') && !islandButton('temple').includes('showIslandLockedTip'), '知識聖殿 plate is open');
+assert(islandButton('temple').includes('>知識聖殿<') && !islandButton('temple').includes('未開放'), 'temple plaque drops 未開放');
+['recreation', 'darkforest', 'sunkencity', 'desert', 'ocean'].forEach(function (cls) {
     const btn = islandButton(cls);
     assert(btn.includes('island-hotspot--locked') && btn.includes('showIslandLockedTip(this)') && btn.includes('data-locked-tip="未開放"'), cls + ' is a locked no-op');
     assert(!btn.includes("switchView(") && !btn.includes('enterAdventure') && !btn.includes('enterTraining'), cls + ' does not navigate');
@@ -366,7 +369,6 @@ assert(islandButton('recreation').includes('>小小休憩區（未開放）<'), 
 assert(islandButton('darkforest').includes('>幽暗密林（未開放）<'), 'forest copy is 密林');
 assert(islandButton('desert').includes('>黃金荒漠（未開放）<'), 'desert plaque is present');
 assert(islandButton('ocean').includes('>遠洋海域（未開放）<'), 'ocean plaque is present');
-assert(islandButton('temple').includes('>知識聖殿（未開放）<'), 'temple plaque is present');
 assert(islandButton('sunkencity').includes('>沉沒古城（未開放）<'), 'sunken plaque is present');
 assert(html.includes('.island-hotspot--training { --x: 50%; --y: 62%;'), '訓練場 sits on the tents');
 assert(html.includes('.island-hotspot--temple { --x: 85%; --y: 86.5%;'), '知識聖殿 sits on the book tower');

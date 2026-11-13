@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@400;600;700;900&family=Cinzel:wght@600;800&family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pvp-peer.css">
 
     <style>
@@ -1337,7 +1337,7 @@
         .island-hotspot--sunkencity { --x: 54.5%; --y: 91.5%; --delay: 1.25s; --bob-dur: 2.7s; } /* 沉沒古城（未開放） */
         .island-hotspot--desert { --x: 10.5%; --y: 17.5%; --delay: 0.4s; --bob-dur: 2.6s; } /* 黃金荒漠（未開放） */
         .island-hotspot--ocean { --x: 63%; --y: 54.5%; --delay: 0.8s; --bob-dur: 2.5s; } /* 遠洋海域（未開放） */
-        .island-hotspot--temple { --x: 85%; --y: 86.5%; --delay: 1.1s; --bob-dur: 2.8s; } /* 知識聖殿（未開放） */
+        .island-hotspot--temple { --x: 85%; --y: 86.5%; --delay: 1.1s; --bob-dur: 2.8s; } /* 知識聖殿 */
         .island-hotspot {
             position: absolute;
             left: var(--x);
@@ -3708,6 +3708,583 @@
             .gacha-summon:hover { transform: none; }
         }
 
+        /* Knowledge Temple. Titles stay HTML overlays. ?v= is the sha256 prefix. */
+        html:has(body.temple-open) {
+            height: auto;
+            min-height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        body.temple-open {
+            height: auto;
+            min-height: 100%;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+        body.temple-hall {
+            background-color: #0d0806;
+            background-image:
+                linear-gradient(180deg, rgba(8, 5, 3, 0.55) 0%, rgba(8, 5, 3, 0.15) 28%, rgba(8, 5, 3, 0.2) 62%, rgba(8, 5, 3, 0.72) 100%),
+                url('assets/bg/ui-temple-hall-bg-1920.jpg?v=2d0df6d1');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        body.temple-hall > header.glass-panel,
+        body.temple-read > header.glass-panel {
+            background: rgba(12, 8, 6, 0.78);
+            border-bottom-color: rgba(229, 185, 92, 0.38);
+        }
+        body.temple-hall > main {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body.temple-hall > footer { display: none; }
+        body.temple-read {
+            background-color: #0d0806;
+            background-image:
+                radial-gradient(circle at 50% 20%, rgba(255, 140, 0, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 50% 80%, rgba(132, 24, 24, 0.15) 0%, transparent 60%);
+            background-attachment: fixed;
+        }
+        body.temple-read > main { max-width: 1120px; }
+        body.temple-read > footer {
+            background: rgba(13, 8, 6, 0.9);
+            border-top-color: rgba(229, 185, 92, 0.28);
+            color: #c9b089;
+        }
+        #view-temple.hidden,
+        #view-temple-star.hidden,
+        #view-temple-shanhai.hidden { display: none !important; }
+
+        #view-temple.temple-hall {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: calc(100vh - 4.25rem);
+            padding: 22px 20px 40px;
+            color: #f7e7c4;
+            font-family: "Noto Serif TC", serif;
+        }
+        .temple-back-row {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        .temple-back-row--end { margin-top: 36px; margin-bottom: 0; }
+        .temple-back {
+            display: inline-block;
+            color: #f7e7c4;
+            background: rgba(36, 20, 14, 0.85);
+            border: 1px solid #e5b95c;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-family: "Cinzel", "Noto Serif TC", serif;
+            font-weight: 600;
+            font-size: 0.92rem;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            line-height: 1.4;
+        }
+        .temple-back:hover { background: #e5b95c; color: #2b1408; }
+        .temple-back:focus-visible {
+            outline: 2px solid #fff0d4;
+            outline-offset: 3px;
+        }
+        #view-temple .temple-hall__head {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        #view-temple .temple-hall__ministry {
+            font-family: "Cinzel", serif;
+            font-weight: 600;
+            color: #e5b95c;
+            letter-spacing: 0.35em;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(229, 185, 92, 0.3);
+        }
+        #view-temple .temple-hall__title {
+            margin: 0 0 10px;
+            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+            font-weight: 900;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            color: #fff0d4;
+            letter-spacing: 0.18em;
+            text-shadow: 0 0 22px rgba(255, 157, 59, 0.45), 0 4px 18px rgba(0, 0, 0, 0.8);
+            line-height: 1.2;
+        }
+        #view-temple .temple-hall__sub {
+            margin: 0;
+            color: #c9b089;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            letter-spacing: 0.18em;
+        }
+        #view-temple .temple-books {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: clamp(36px, 7vw, 120px);
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1100px;
+            margin-top: auto;
+            padding-top: 12px;
+        }
+        #view-temple .temple-book {
+            appearance: none;
+            -webkit-appearance: none;
+            background: transparent;
+            border: 0;
+            color: inherit;
+            cursor: pointer;
+            font: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: min(320px, 86vw);
+            padding: 0;
+            transition: transform 0.28s ease;
+        }
+        #view-temple .temple-book:hover,
+        #view-temple .temple-book:focus-visible {
+            transform: translateY(-14px);
+            outline: none;
+        }
+        #view-temple .temple-book:focus-visible .temple-book__title {
+            text-decoration: underline;
+            text-underline-offset: 6px;
+        }
+        #view-temple .temple-book__art {
+            height: min(46vh, 500px);
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.75));
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        #view-temple .temple-book__title {
+            display: block;
+            margin-top: 18px;
+            text-align: center;
+            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: #fff0d4;
+            letter-spacing: 0.12em;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+            line-height: 1.35;
+        }
+        #view-temple .temple-book__sub {
+            display: block;
+            margin-top: 6px;
+            text-align: center;
+            font-family: "Cinzel", "Noto Serif TC", serif;
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: #e5b95c;
+            letter-spacing: 0.18em;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+            line-height: 1.35;
+        }
+        #view-temple .temple-book__note {
+            display: block;
+            margin-top: 6px;
+            text-align: center;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 400;
+            font-size: 0.88rem;
+            color: #c9b089;
+            letter-spacing: 0.08em;
+            line-height: 1.45;
+        }
+        @media (max-width: 720px) {
+            #view-temple.temple-hall { padding: 16px 12px 28px; min-height: calc(100vh - 7.5rem); }
+            #view-temple .temple-hall__ministry { letter-spacing: 0.08em; font-size: 0.68rem; }
+            #view-temple .temple-book__art { height: min(34vh, 320px); }
+            #view-temple .temple-books { gap: 22px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #view-temple .temple-book { transition: none; }
+        }
+
+        #view-temple-star,
+        #view-temple-shanhai {
+            font-family: "Noto Serif TC", serif;
+            color: #22150b;
+            padding: 8px 0 56px;
+        }
+        #view-temple-star .archive-header,
+        #view-temple-shanhai .archive-header {
+            text-align: center;
+            max-width: 960px;
+            margin: 0 auto 40px;
+            padding: 18px 20px 30px;
+            border-bottom: 2px solid rgba(229, 185, 92, 0.4);
+            color: #f7e7c4;
+        }
+        #view-temple-star .ministry-label,
+        #view-temple-shanhai .ministry-label {
+            font-family: "Cinzel", serif;
+            font-weight: 600;
+            color: #e5b95c;
+            letter-spacing: 0.28em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            text-shadow: 0 0 10px rgba(229, 185, 92, 0.3);
+        }
+        #view-temple-star .main-title,
+        #view-temple-shanhai .main-title {
+            margin: 0 0 12px;
+            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+            font-weight: 900;
+            font-size: 2.8rem;
+            color: #fff0d4;
+            text-shadow: 0 0 20px rgba(255, 157, 59, 0.6), 0 0 40px rgba(132, 24, 24, 0.8);
+            letter-spacing: 0.12em;
+            line-height: 1.25;
+        }
+        #view-temple-star .main-title .series-sub,
+        #view-temple-shanhai .main-title .series-sub {
+            display: block;
+            font-size: 0.62em;
+            letter-spacing: 0.2em;
+            margin-top: 0.35em;
+            font-weight: 700;
+            color: #e5b95c;
+        }
+        #view-temple-star .sub-title,
+        #view-temple-shanhai .sub-title {
+            color: #c9b089;
+            font-size: 1.05rem;
+            letter-spacing: 0.12em;
+            font-weight: 400;
+        }
+        #view-temple-star .hero-nav {
+            max-width: 1050px;
+            margin: 0 auto 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        #view-temple-star .nav-btn {
+            color: #f7e7c4;
+            background: rgba(36, 20, 14, 0.85);
+            border: 1px solid #e5b95c;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-family: "Cinzel", "Noto Serif TC", serif;
+            font-weight: 600;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        #view-temple-star .nav-btn:hover,
+        #view-temple-star .nav-btn:focus-visible {
+            background: #e5b95c;
+            color: #2b1408;
+            transform: translateY(-2px);
+            outline: none;
+        }
+        #view-temple-star .heroes-container {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+        #view-temple-star .hero-scroll {
+            position: relative;
+            scroll-margin-top: 5.5rem;
+            background-image:
+                linear-gradient(rgba(246, 237, 218, 0.88), rgba(240, 225, 196, 0.92)),
+                url('assets/bg/rune-parchment-bg.jpg?v=ecde0c6a');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            padding: 55px 45px;
+            border: 2px solid #8e6231;
+            box-shadow:
+                0 0 0 5px #26140b,
+                0 0 0 8px #e5b95c,
+                0 20px 45px rgba(0, 0, 0, 0.8),
+                inset 0 0 50px rgba(92, 45, 11, 0.3);
+        }
+        #view-temple-star .scroll-inner-frame {
+            border: 1px solid rgba(142, 98, 49, 0.6);
+            padding: 35px 30px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        #view-temple-star .corner-decor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #b8860b;
+        }
+        #view-temple-star .top-left { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+        #view-temple-star .top-right { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+        #view-temple-star .bottom-left { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+        #view-temple-star .bottom-right { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+        #view-temple-star .classification-tag {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid rgba(142, 98, 49, 0.4);
+            padding-bottom: 12px;
+            margin-bottom: 28px;
+            font-size: 0.85rem;
+            font-family: "Cinzel", "Noto Serif TC", serif;
+            font-weight: 700;
+            color: #6d4218;
+            letter-spacing: 0.08em;
+        }
+        #view-temple-star .stamp-pill {
+            background: #841818;
+            color: #ffe6ba;
+            padding: 3px 12px;
+            border-radius: 4px;
+            border: 1px dashed #ffe6ba;
+            font-weight: 700;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+        }
+        #view-temple-star .hero-header-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 35px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        #view-temple-star .portrait-box {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 6px solid #4a2810;
+            box-shadow:
+                0 0 0 3px #e5b95c,
+                0 10px 20px rgba(0, 0, 0, 0.4),
+                inset 0 0 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            background: #1a0f0a;
+        }
+        #view-temple-star .portrait-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.5s ease;
+        }
+        #view-temple-star .portrait-box:hover .portrait-img { transform: scale(1.05); }
+        #view-temple-star .hero-titles h2 {
+            margin: 0 0 8px;
+            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+            font-weight: 700;
+            font-size: 2.3rem;
+            color: #841818;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+        #view-temple-star .hero-titles .epithet {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #7b4b1a;
+            margin-bottom: 14px;
+            display: inline-block;
+            border-bottom: 1px solid #c89d53;
+            padding-bottom: 4px;
+        }
+        #view-temple-star .motto-scroll {
+            background: rgba(132, 24, 24, 0.08);
+            border-left: 4px solid #841818;
+            border-right: 4px solid #841818;
+            padding: 16px 20px;
+            margin: 18px 0;
+            border-radius: 4px;
+        }
+        #view-temple-star .motto-scroll blockquote {
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #841818;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        #view-temple-star .motto-author {
+            font-size: 0.8rem;
+            color: #8c5d2e;
+            letter-spacing: 0.12em;
+            margin-top: 5px;
+            font-family: "Cinzel", serif;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        #view-temple-star .section-entry { margin-bottom: 26px; }
+        #view-temple-star .section-entry h3 {
+            margin: 0 0 10px;
+            font-family: "Cinzel", "Noto Serif TC", serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #4b220d;
+            border-bottom: 1px solid rgba(184, 134, 11, 0.5);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #view-temple-star .section-entry h3::before {
+            content: "✧";
+            color: #c59b27;
+            font-size: 1.1rem;
+        }
+        #view-temple-star .section-entry p {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.85;
+            color: #2b190c;
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 12px 18px;
+            border-radius: 5px;
+            border: 1px solid rgba(184, 134, 11, 0.25);
+        }
+        #view-temple-star .bonds-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        #view-temple-star .bond-item {
+            background: rgba(255, 255, 255, 0.55);
+            border-left: 3px solid #8e6231;
+            border-radius: 4px;
+            padding: 12px 16px;
+            border: 1px solid rgba(142, 98, 49, 0.3);
+        }
+        #view-temple-star .bond-item:hover {
+            background: rgba(255, 255, 255, 0.85);
+            border-left-color: #841818;
+        }
+        #view-temple-star .bond-name {
+            font-weight: 700;
+            color: #841818;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+        #view-temple-star .bond-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            background: #73451e;
+            color: #fff;
+            padding: 1px 7px;
+            border-radius: 3px;
+            margin-left: 6px;
+            font-weight: 400;
+        }
+        #view-temple-star .bond-desc {
+            font-size: 0.96rem;
+            line-height: 1.65;
+            color: #3b2413;
+            font-weight: 400;
+        }
+        #view-temple-star .scroll-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px dashed rgba(142, 98, 49, 0.5);
+            padding-top: 20px;
+            margin-top: 35px;
+            font-size: 0.85rem;
+            color: #633f1b;
+        }
+        #view-temple-star .wax-seal {
+            width: 58px;
+            height: 58px;
+            flex: 0 0 auto;
+            background: radial-gradient(circle at 30% 30%, #a31c1c, #4c0e0e);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f7d288;
+            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            border: 2px solid #360707;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+            transform: rotate(-6deg);
+        }
+        #view-temple-shanhai .temple-scroll {
+            max-width: 760px;
+            margin: 0 auto;
+            background-image:
+                linear-gradient(rgba(246, 237, 218, 0.88), rgba(240, 225, 196, 0.92)),
+                url('assets/bg/rune-parchment-bg.jpg?v=ecde0c6a');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #8e6231;
+            border-radius: 10px;
+            padding: 48px 40px;
+            box-shadow: 0 0 0 5px #26140b, 0 0 0 8px #e5b95c, 0 20px 45px rgba(0, 0, 0, 0.8);
+        }
+        #view-temple-shanhai .temple-scroll h2 {
+            margin: 0 0 16px;
+            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+            font-weight: 700;
+            color: #841818;
+            font-size: 1.8rem;
+            text-align: center;
+            letter-spacing: 0.12em;
+        }
+        #view-temple-shanhai .temple-scroll p {
+            margin: 0;
+            font-size: 1.08rem;
+            font-weight: 400;
+            line-height: 1.9;
+            text-align: justify;
+            color: #2b190c;
+        }
+        @media (max-width: 820px) {
+            #view-temple-star .hero-header-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            #view-temple-star .portrait-box {
+                max-width: 300px;
+                margin: 0 auto;
+                height: 380px;
+            }
+            #view-temple-star .hero-scroll { padding: 30px 18px; }
+            #view-temple-star .scroll-inner-frame { padding: 20px 14px; }
+            #view-temple-star .main-title,
+            #view-temple-shanhai .main-title { font-size: 2rem; }
+            #view-temple-star .ministry-label,
+            #view-temple-shanhai .ministry-label { letter-spacing: 0.12em; font-size: 0.72rem; }
+            #view-temple-star .classification-tag { justify-content: center; }
+            #view-temple-star .scroll-footer { gap: 16px; }
+            #view-temple-shanhai .temple-scroll { padding: 32px 18px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #view-temple-star .portrait-img,
+            #view-temple-star .nav-btn { transition: none; }
+            #view-temple-star .portrait-box:hover .portrait-img { transform: none; }
+        }
+
     </style>
 </head>
 <body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100">
@@ -4138,10 +4715,10 @@
                             <span class="island-hotspot__plate-label">遠洋海域（未開放）</span>
                         </span>
                     </button>
-                    <button type="button" class="island-hotspot island-hotspot--temple island-hotspot--locked" data-locked-tip="未開放" onclick="showIslandLockedTip(this)" aria-label="知識聖殿（未開放）">
+                    <button type="button" class="island-hotspot island-hotspot--temple" onclick="switchView('temple')" aria-label="知識聖殿，進入典籍">
                         <span class="island-hotspot__bob">
                             <img src="assets/bg/ui-scroll-plate-blank-178.png?v=f22a2191" alt="">
-                            <span class="island-hotspot__plate-label">知識聖殿（未開放）</span>
+                            <span class="island-hotspot__plate-label">知識聖殿</span>
                         </span>
                     </button>
                 </div>
@@ -4671,6 +5248,702 @@
 
                 <p class="pvp-footnote">對戰訊息經加密 WebSocket（wss，443）送到中繼伺服器，再轉去同一間房嘅對手，唔使兩部機直接連線。未填中繼網址，或者連唔上伺服器，畫面會直接講明。</p>
             </div>
+        </section>
+
+        <section id="view-temple" class="temple-hall hidden" aria-label="知識聖殿">
+            <div class="temple-back-row">
+                <button type="button" class="temple-back" onclick="switchView('home')">← 返回島嶼</button>
+            </div>
+            <header class="temple-hall__head">
+                <div class="temple-hall__ministry">Archival Division of Star-Orbit Runes</div>
+                <h2 class="temple-hall__title">知識聖殿</h2>
+                <p class="temple-hall__sub">請選擇要翻閱的典籍</p>
+            </header>
+            <div class="temple-books">
+                <button type="button" class="temple-book" onclick="switchView('temple-star')" aria-label="翻閱星軌命途：符文紀元">
+                    <img class="temple-book__art" src="assets/bg/ui-temple-book-star-trail.png?v=fb52de86" alt="星軌命途">
+                    <span class="temple-book__title">星軌命途</span>
+                    <span class="temple-book__sub">符文紀元</span>
+                    <span class="temple-book__note">10 位英雄編年　可翻閱</span>
+                </button>
+                <button type="button" class="temple-book" onclick="switchView('temple-shanhai')" aria-label="翻閱山海經：神獸志異">
+                    <img class="temple-book__art" src="assets/bg/ui-temple-book-shanhai.png?v=d1a91445" alt="山海經">
+                    <span class="temple-book__title">山海經</span>
+                    <span class="temple-book__sub">神獸志異</span>
+                    <span class="temple-book__note">故事未到　可先入內查看</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="view-temple-star" class="temple-chronicle hidden" aria-label="星軌命途：符文紀元">
+            <div class="temple-back-row">
+                <button type="button" class="temple-back" onclick="switchView('temple')">← 返回知識聖殿選書</button>
+            </div>
+<header class="archive-header">
+    <div class="ministry-label">Archival Division of Star-Orbit Runes</div>
+    <h1 class="main-title">星軌命途<span class="series-sub">符文紀元</span></h1>
+    <div class="sub-title">觀星議會與古代文獻司機密英雄編年史錄</div>
+  </header>
+
+  <!-- 英雄快速跳轉導覽 -->
+  <nav class="hero-nav">
+    <a class="nav-btn" href="#elijah">伊利亞</a>
+    <a class="nav-btn" href="#selina">席琳娜</a>
+    <a class="nav-btn" href="#serafina">賽拉菲娜</a>
+    <a class="nav-btn" href="#malakor">馬爾科斯</a>
+    <a class="nav-btn" href="#elden">艾爾德</a>
+    <a class="nav-btn" href="#warwick">沃里克</a>
+    <a class="nav-btn" href="#fey">菲雅</a>
+    <a class="nav-btn" href="#lucia">露西亞</a>
+    <a class="nav-btn" href="#noah">諾亞</a>
+    <a class="nav-btn" href="#thorin">索倫</a>
+  </nav>
+
+  <div class="heroes-container">
+
+    <!-- 1. 念力主宰：伊利亞 -->
+    <article class="hero-scroll" id="elijah">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 古代遺跡超感念能司</span>
+          <span class="stamp-pill">超限覺醒</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-elijah.jpg?v=ae37d4f2" alt="念力主宰：伊利亞">
+          </div>
+          <div class="hero-titles">
+            <h2>伊利亞（Elijah）</h2>
+            <div class="epithet">念力主宰・虛空念刃之環</div>
+            <div class="motto-scroll">
+              <blockquote>「心念所至之處，萬物皆為我刃，廢墟亦能化為殿堂。」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            伊利亞幼時在崩塌的神殿神壇邊被發現，額生神秘紫光念印，天生便擁有着超越血肉極限的意念操縱力。當星軌符文失控引發大崩塌時，他以一人之念凌空托起崩塌的十二根古代石柱，護送族人撤離。自此，他懸浮於虛空之中閉目冥思，以神念化為環繞周身的紫晶念刃，於無聲處平息凡間戰火。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            超然冷靜、古井無波，長年的冥想讓他擁有着看透心智的深邃洞察力。他極少主動開口，常以意念傳音，對世俗權力毫無執念；然而一旦目睹暴行摧毀無辜生靈，其閉合的雙眸睜開之際，便是萬劫念刃撕裂天地之時。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">席琳娜 <span class="bond-badge">心智與星盤・真理共鳴</span></div>
+              <div class="bond-desc">席琳娜推演的星象軌跡常與伊利亞的冥想感應不謀而合，兩人無需言語即可跨越千里透過意念推導符文平衡。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">馬爾科斯 <span class="bond-badge">念魂相斥・審視契約</span></div>
+              <div class="bond-desc">伊利亞的純淨精神力對死靈幽魂有著強大的壓制力，他時刻警惕著馬爾科斯的冥界亡靈，但亦默許了其守護妹妹的執念。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-PSI-0001<br>典藏司：古代心智研究所</div>
+          <div class="wax-seal">念</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 2. 星穹魔導士：席琳娜 -->
+    <article class="hero-scroll" id="selina">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 浮空星塔觀星議會</span>
+          <span class="stamp-pill">星軌秘法</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-selina.jpg?v=d9e9fa29" alt="星穹魔導士：席琳娜">
+          </div>
+          <div class="hero-titles">
+            <h2>席琳娜（Selina）</h2>
+            <div class="epithet">秘法星軌・群星推演大導師</div>
+            <div class="motto-scroll">
+              <blockquote>「群星已繪定宿命，而我負責替凡人修正偏差。」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            席琳娜自幼被遺棄在常年失重的浮空星塔之巔，以群星為伴長大，是觀星議會數百年來最年輕的大導師。在日復一日推演宇宙運行中，其雙眸被浩瀚星雲染成湛藍，靈魂甚至能感應到億萬光年外的星體生滅。當星軌原石碎裂引發天穹異變，她觀測到了文明覆滅的殘酷預兆，毅然走下星塔介入塵世命局。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            清冷出塵、知性理性，舉手投足間帶著與凡俗格格不入的神秘疏離感。她看待世事如俯瞰棋局，極少顯露喜怒哀樂，習慣用冰冷的星象機率精準計算眾人生死；但在這份超然理智之下，深藏著她不惜顛覆星軌天命也要挽救世界生靈的隱秘溫柔。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">索倫 <span class="bond-badge">命運預言・逆命抗拒</span></div>
+              <div class="bond-desc">她在星象中預見到索倫終將被狂暴天雷噬魂自毀的死局，數次出面冷靜警告，卻屢遭狂妄的索倫以雷槍斥退，形成了哲學衝突。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">菲雅 <span class="bond-badge">求真同盟</span></div>
+              <div class="bond-desc">為尋求隱匿於世界樹深處的上古星盤，席琳娜以精準星圖指引菲雅避開森林暗影，兩位知性冷靜的女性結成了相互信賴的智囊同盟。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-AST-0102<br>典藏司：觀星法師塔典藏庫</div>
+          <div class="wax-seal">星</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 3. 紅蓮熾舞姬：賽拉菲娜 -->
+    <article class="hero-scroll" id="serafina">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 古代烈陽神廟炎鳳司</span>
+          <span class="stamp-pill">涅槃業火</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-serafina.jpg?v=8a43702b" alt="紅蓮熾舞姬：賽拉菲娜">
+          </div>
+          <div class="hero-titles">
+            <h2>賽拉菲娜（Serafina）</h2>
+            <div class="epithet">紅蓮熾舞姬・朱雀炎羽之主</div>
+            <div class="motto-scroll">
+              <blockquote>「在業火燃盡前起舞吧，這將是洗禮靈魂的盛宴！」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            賽拉菲娜出身於隱居在古代烈陽沙漠深處的炎鳳神廟，世代以祭祀之舞引導地火生生不息。當天災降臨沙漠、神殿被流沙與地火暴走吞噬時，年僅十六歲的她毅然躍入熾熱祭壇，在業火焚身之中完成了鳳凰涅槃儀式，自此雙手持「朱雀炎羽扇」，踏著滿天烈火蓮花出巡，以焚盡罪孽之火維護天地平衡。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            明豔耀眼、熱情奔放，如盛夏的驕陽般不可直視。她性情剛烈直接、敢愛敢恨，對虛情假意深惡痛絕，在戰場上戰鬥對她而言是一場盛大的死亡獨舞；雖然看似傲然刁蠻，實則對困境中的弱者有著難以掩飾的俠骨柔情。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">沃里克 <span class="bond-badge">部族血仇・歡喜冤家</span></div>
+              <div class="bond-desc">初見沃里克誓斬此狂戰士雪恥，血戰三天三夜未分勝負，反而被彼此永不服輸的血性打動，成為互踩尾巴卻生死相護的夥伴。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">菲雅 <span class="bond-badge">風火雙姬</span></div>
+              <div class="bond-desc">並稱「風火雙姬」，最喜歡出言調侃菲雅的嚴肅古板，作戰時風助火勢、火借風威，極具默契。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">馬爾科斯 <span class="bond-badge">靈魂盟友</span></div>
+              <div class="bond-desc">不死鳥涅槃需要極為純粹的靈魂引導，她與死靈師簽署互惠契約，是極少數敢直視其幽魂而不懼怕的人。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：ARC-SOL-0916<br>典藏司：神聖烈焰檔案室</div>
+          <div class="wax-seal">鳳</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 4. 冥界死靈師：馬爾科斯 -->
+    <article class="hero-scroll" id="malakor">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 幽魂死境守界司</span>
+          <span class="stamp-pill">靈魂契約</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-malakor.jpg?v=20eddef1" alt="冥界死靈師：馬爾科斯">
+          </div>
+          <div class="hero-titles">
+            <h2>馬爾科斯（Malakor）</h2>
+            <div class="epithet">幽魂擺渡者・枯骨契約之主</div>
+            <div class="motto-scroll">
+              <blockquote>「死亡並非終結，唯有未了的執念才令人作嘔。」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            馬爾科斯曾是沒落神聖貴族的長子與典籍學者，與年幼的妹妹相依為命。多年前滅門慘劇降臨，為了在漫天追殺中保全重傷瀕死的妹妹，他隻身踏入冥府深處與死神簽訂賣魂契約，強行將活人之軀轉化為幽魂擺渡者。他暗中將妹妹送至修道院收養並封印其殘酷記憶，自己則永墜陰影枯塚，以枯骨法杖維繫著殘破大陸的生死循環。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            俊美邪魅、冷峻毒舌，舉止間滿是頹廢優雅的貴族氣息。他習慣用冷嘲熱諷掩飾內心的千瘡百孔，對偽善的正道充滿譏誚；然而他從不濫殺無辜，甚至對徘徊陽間的哀怨亡靈懷有一種隱秘而莊嚴的同情。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">露西亞 <span class="bond-badge">血脈相連・孿生兄妹</span></div>
+              <div class="bond-desc">聖泉司祭露西亞是他捨命守護的親妹妹，是他無盡黑暗中唯一的人性錨點，寧可背負萬劫死咒也絕不讓黑暗侵染妹妹分毫。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">艾爾德 <span class="bond-badge">暗中審視</span></div>
+              <div class="bond-desc">厭惡艾爾德一身刺眼的聖光，但看到艾爾德用生命捍衛妹妹露西亞時，內心深處默認了這位騎士的守護資格。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-NEC-0666<br>典藏司：冥河幽魂引渡所</div>
+          <div class="wax-seal">魂</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 5. 聖堂勇士：艾爾德 -->
+    <article class="hero-scroll" id="elden">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 晨曦聖堂近衛軍團</span>
+          <span class="stamp-pill">永恆堅壁</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-elden.jpg?v=68505143" alt="聖堂勇士：艾爾德">
+          </div>
+          <div class="hero-titles">
+            <h2>艾爾德（Elden）</h2>
+            <div class="epithet">晨曦壁壘・光翼聖盾持有者</div>
+            <div class="motto-scroll">
+              <blockquote>「只要破曉仍會到來，吾身便是永不傾頹的壁壘。」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            艾爾德出身於晨曦聖堂直屬的榮耀衛士世家，自幼便立志成為守護人間的堅壁。在「破曉之災」中，狂暴天災撕裂了聖殿，艾爾德率領殘存衛士在崩塌的彩繪玻璃前死守，以肉身化為最後防線，換取了全城難民與修道院孤兒的生機。那一役的漫天流火在他鎧甲上烙下無數傷痕，也促使他手持「光翼聖盾」踏上征途，誓死尋回遺落於大陸各處的星軌符文，重築人間結界。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            沉穩如萬丈堅岩，目光中常透著如晨曦般冷澈卻溫柔的光芒。他極少宣洩私慾，行事自律得近乎嚴苛，但骨子裡對生命懷有極致的敬畏。面對強敵時他寡言沉著，卻會本能地把身軀擋在所有人身前，是整個隊伍中最讓人安心的定海神針。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">露西亞 <span class="bond-badge">青梅竹馬・守護誓言</span></div>
+              <div class="bond-desc">兩人在修道院共同長大，艾爾德將守護露西亞視作靈魂誓言，而露西亞的聖泉甘霖也是撫平他身軀創傷的唯一溫柔。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">索倫 <span class="bond-badge">昔日同袍・宿命死敵</span></div>
+              <div class="bond-desc">曾並稱帝國「光雷雙壁」，後因理念徹底決裂，艾爾德痛惜索倫沉溺於暴虐殺戮，誓要以巨盾親手砸醒這位走入歧途的摯友。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-PAL-0771<br>典藏司：聖堂最高騎士院</div>
+          <div class="wax-seal">盾</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 6. 熔岩狂戰士：沃里克 -->
+    <article class="hero-scroll" id="warwick">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 焦土部族地脈遺血</span>
+          <span class="stamp-pill">地火狂怒</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-warwick.jpg?v=bf26d636" alt="熔岩狂戰士：沃里克">
+          </div>
+          <div class="hero-titles">
+            <h2>沃里克（Warwick）</h2>
+            <div class="epithet">滅燼血斧・焦土熔岩行者</div>
+            <div class="motto-scroll">
+              <blockquote>「疼痛是弱者的喪鐘，但只會成為老子劈開天地的磨刀石！」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            沃里克生於地脈撕裂的焦土部族，年幼時故鄉在烈焰魔潮與異族圍剿下化為焦黑煉獄，全族無一生還。為了在極致的絕望中復仇，他隻身跳入沸騰的火山口，引滾燙地火灌注周身經脈，將熔岩戰紋強行刻入骨血。他憑藉這股近乎自殘的血怒之力斬盡仇敵，從此淪為在焦土廢墟中徘徊的嗜血行者。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            狂妄乖張、暴躁嗜血，笑聲如雷鳴般滾過戰場。他崇尚純粹的肉體力量，極度反感文縐縐的繁文縟節與道德說教；但在粗野暴戾的外表下，卻保留著對部族亡魂最深沉的悼念與男人的血性擔當，只要得到他的認可，他便敢為戰友將整座山脈劈成兩半。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">艾爾德 <span class="bond-badge">過命兄弟</span></div>
+              <div class="bond-desc">普天之下只有艾爾德的巨盾能毫髮無損擋下他的全力躍擊，戰場上他敢將毫無防備的後背完全託付給艾爾德。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">諾亞 <span class="bond-badge">嘴硬護短</span></div>
+              <div class="bond-desc">視諾亞的發明為弱者玩具，但在諾亞加固戰斧握柄後，嘴硬的他悄悄塞給了諾亞一顆地脈高熱火晶作為回禮。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-BER-0404<br>典藏司：荒原部族盟會</div>
+          <div class="wax-seal">斧</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 7. 翡翠巡林客：菲雅 -->
+    <article class="hero-scroll" id="fey">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 世界樹遠古林海巡守司</span>
+          <span class="stamp-pill">疾風羽翼</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-fey.jpg?v=539f081a" alt="翡翠巡林客：菲雅">
+          </div>
+          <div class="hero-titles">
+            <h2>菲雅（Fey）</h2>
+            <div class="epithet">疾風羽翼・世界樹的神木射手</div>
+            <div class="motto-scroll">
+              <blockquote>「我的箭矢與疾風同速，你逃不出風的視線。」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            菲雅生於遠古世界樹深處的精靈王族旁支，天生具備聆聽萬木低語與御風而行的血脈天賦。當符文墜落引發枯竭暗影侵蝕母樹，長老們選擇封閉森林避世，菲雅卻無法坐視生靈家園慢慢腐朽。她手持世界樹神木雕刻的長弓，毅然打破精靈族古老禁令踏入人間，化身穿梭於林海邊陲的疾風斥候。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            矯健靈動、高傲敏銳，猶如林間不可馴服的野鹿與蒼鷹。她嘴硬心軟，面對外族人時總是擺出一副冷若冰霜的防衛姿態，說話辛辣直率；但只要看到受傷的小動物或遭踐踏的草木，便會毫不猶豫地挺身相護。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">諾亞 <span class="bond-badge">嫌棄與依賴</span></div>
+              <div class="bond-desc">初痛斥其為褻瀆自然的害蟲；但在諾亞打造高精密度符文滑輪弓後，她一邊警告「別弄髒我的羽毛」，一邊默契協同作戰。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">席琳娜 <span class="bond-badge">引路嚮導</span></div>
+              <div class="bond-desc">敬佩席琳娜博大精深的星軌智慧，自願成為她在危險密林探尋星盤時最信任的領路斥候。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-RNF-0888<br>典藏司：綠蔭密林長老會</div>
+          <div class="wax-seal">羽</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 8. 聖泉祈求者：露西亞 -->
+    <article class="hero-scroll" id="lucia">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 修道院甘霖救贖所</span>
+          <span class="stamp-pill">無垢聖體</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-lucia.jpg?v=806a8e89" alt="聖泉祈求者：露西亞">
+          </div>
+          <div class="hero-titles">
+            <h2>露西亞（Lucia）</h2>
+            <div class="epithet">生命甘霖・聖泉銀杯持有者</div>
+            <div class="motto-scroll">
+              <blockquote>「願聖泉的甘霖，撫平世間一切苦痛與創痕。」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            露西亞在襁褓中被遺棄在修道院神聖泉眼邊，自幼沐浴在純淨的聖水與禱詞中長大。她擁有能感知他人痛苦並以甘霖撫平創傷的無垢聖體。在星軌崩解的大災難中，她不顧修女嬤嬤的勸阻，毅然走出修道院庇護所，手捧純銀聖杯行走於戰火狼煙之間，以血肉之軀為流離失所的生靈提供最後的救贖淨土。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            慈悲聖潔、純淨溫柔，宛如晨曦甘露般沁人心脾。她性格看似柔弱甚至有些膽小，但一旦涉及無辜者的生死，她會爆發出無比堅韌的神性勇氣，敢於在千軍萬馬前張開治癒水幕，甚至願以自身的生命力換取同伴的生還。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">馬爾科斯 <span class="bond-badge">宿命牽引・親生妹妹</span></div>
+              <div class="bond-desc">記憶被抹除，但每次面對神秘陰森的馬爾科斯時，內心總會泛起奇異悲傷，嘗試用溫暖之水化解對方眼中的千年寒冰。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">沃里克 <span class="bond-badge">耐心感化</span></div>
+              <div class="bond-desc">唯獨露西亞能以無條件的溫柔撫平沃里克的暴走狂怒，是暴躁狂戰士唯一不敢大聲吼叫的同伴。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-PRI-0312<br>典藏司：聖詠修道院庇護所</div>
+          <div class="wax-seal">泉</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 9. 符文發明家：諾亞 -->
+    <article class="hero-scroll" id="noah">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 皇家機械工坊異端司</span>
+          <span class="stamp-pill">齒輪符文</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-noah.jpg?v=ff2bf61e" alt="符文機工士：諾亞">
+          </div>
+          <div class="hero-titles">
+            <h2>諾亞（Noah）</h2>
+            <div class="epithet">科技符文・跨時代機械異端</div>
+            <div class="motto-scroll">
+              <blockquote>「魔法終會枯竭，但齒輪與火藥將永遠為你轟鳴！」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            諾亞曾是帝國皇家鍊金工坊裡最被看好的天才學徒，卻因提出「將高貴的符文魔法普及化、機械化」的異端學說而被逐出學院。他不服命運，在貧民窟地底建立了雜亂無章的個人工坊，憑藉著發條、齒輪、黑火藥與報廢符文碎片，硬生生拼湊出跨時代的機械外骨骼與多管充能槍，誓要向學院證明凡人的智慧能與神祇並肩。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            瘋狂跳脫、樂天話癆的技術狂徒。只要遇到精密的機械或未知的能量反應，他就會雙眼放光、喋喋不休，甚至在生死關頭還在興奮地記錄爆炸數據；但他心底純良無比，研發武器的初衷是為了讓毫無魔法天賦的平民也能在亂世中保護家人。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">索倫 <span class="bond-badge">狂熱偷能・歡喜冤家</span></div>
+              <div class="bond-desc">將索倫的天雷視為終極新能源，成天扛著避雷針偷電，被暴怒的索倫追殺得抱頭鼠竄卻依舊樂此不疲。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">艾爾德 <span class="bond-badge">後勤改造</span></div>
+              <div class="bond-desc">視艾爾德為最值得尊敬的長輩，經常主動為艾爾德的光翼聖盾進行精密符文拋光與減震改造。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-MEC-1090<br>典藏司：地下機械鍊金學社</div>
+          <div class="wax-seal">械</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 10. 雷霆召喚者：索倫 -->
+    <article class="hero-scroll" id="thorin">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 萬仞雷霆尖塔裁決司</span>
+          <span class="stamp-pill">萬劫天雷</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/bg/ui-temple-portrait-thorin.jpg?v=a53eb0a0" alt="雷霆召喚者：索倫">
+          </div>
+          <div class="hero-titles">
+            <h2>索倫（Thorin）</h2>
+            <div class="epithet">萬劫雷罰・九天裂天雷槍</div>
+            <div class="motto-scroll">
+              <blockquote>「唯有毀滅性的天雷，能滌淨這片腐朽的大陸！」</blockquote>
+              <div class="motto-author">— Combat Creed / 作戰信條</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>背景故事</h3>
+          <p>
+            索倫曾是王國天之驕子，與艾爾德並稱「帝國光雷雙壁」。在邊疆保衛戰中，他目睹因防守被動而導致全軍將士在眼前慘遭屠戮，極度的無力感徹底扭曲了他的正義觀。為了獲得能瞬間抹平敵陣的絕對力量，他孤身登上萬仞雷霆尖塔，引九天萬劫神雷強行淬鍊肉身。他以痛苦換來毀天滅地的雷罰神威，同時也徹底割裂了對舊體制的忠誠。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性格特質</h3>
+          <p>
+            孤傲自負、凌厲殘酷，神情如雷雲翻湧般陰鷙威嚴。他深信「軟弱與仁慈是文明的毒瘤」，唯有以絕對暴力施加的毀滅才能終結混亂。他不屑於陰謀詭計，戰鬥時正面轟殺一切，行事霸道至極，任何阻擋他裁決世界者皆被視為軟弱螻蟻。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>羈絆情感</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">艾爾德 <span class="bond-badge">昔日戰友・宿命死敵</span></div>
+              <div class="bond-desc">曾立誓並肩作戰，如今各執極端信念。他嘲諷艾爾德的巨盾是懦夫龜殼，但內心深處唯一渴望擊潰的也是艾爾德。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">席琳娜 <span class="bond-badge">逆命抗拒</span></div>
+              <div class="bond-desc">蔑視席琳娜「群星已定」的預言理論，狂傲宣稱要用裂天雷槍將宿命連同星辰一同擊碎。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：DOC-THU-9901<br>典藏司：天階雷神殿檔案庫</div>
+          <div class="wax-seal">雷</div>
+        </footer>
+      </div>
+    </article>
+
+              </div>
+            <div class="temple-back-row temple-back-row--end">
+                <button type="button" class="temple-back" onclick="switchView('temple')">← 返回知識聖殿選書</button>
+            </div>
+        </section>
+
+        <section id="view-temple-shanhai" class="temple-chronicle hidden" aria-label="山海經：神獸志異">
+            <div class="temple-back-row">
+                <button type="button" class="temple-back" onclick="switchView('temple')">← 返回知識聖殿選書</button>
+            </div>
+            <header class="archive-header">
+                <div class="ministry-label">Classic Bestiary of Mountains and Seas</div>
+                <h2 class="main-title">山海經</h2>
+                <div class="sub-title">神獸編年　故事尚未送到</div>
+            </header>
+            <article class="temple-scroll">
+                <h2>卷宗尚未入庫</h2>
+                <p>此翼典籍已開立，同事嘅山海經故事同圖卡尚未送到。送到之後，會用同星軌命途一樣嘅羊皮紙卷軸來翻閱每一隻神獸嘅背景、性格同羈絆。</p>
+            </article>
         </section>
 
     </main>
@@ -6211,6 +7484,7 @@
 
         // 星軌命途：符文紀元。能力值同山海經核心同一檔。圖鑑「星軌命途」分頁只列出已擁有。
         // 主視覺備用 assets/bg/promo-star-trail-1920.png?v=4e4c82ab（唔係走馬燈、唔係抽卡橫幅）。
+        // 沃里克只收喺知識聖殿編年，唔入呢個抽卡池、圖鑑解鎖、戰鬥名單。
         const STAR_TRAIL_BEASTS = [
             { id: 'st_elden', name: '艾爾德', element: 'holy', title: '聖堂勇士：艾爾德', color: '#fde047', hp: 270, atk: 102, def: 108, spd: 70, skillText: '聖堂聖盾衝鋒！', imgKey: 'st_elden', desc: '聖堂先鋒肩負符文聖盾，以聖輝衝鋒壓住星軌裂隙。' },
             { id: 'st_elijah', name: '伊利亞', element: 'psy', title: '念力主宰：伊利亞', color: '#818cf8', hp: 185, atk: 116, def: 74, spd: 126, skillText: '念力主宰壓制！', imgKey: 'st_elijah', desc: '念力主宰扭曲星軌軌道，把敵方攻勢按在半空粉碎。' },
@@ -7593,7 +8867,9 @@
                 return;
             }
 
-            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked', 'pvp'];
+            const views = ['home', 'gacha', 'monsters', 'adventure', 'training', 'battle', 'ranked', 'pvp', 'temple', 'temple-star', 'temple-shanhai'];
+            const enteringTemple = viewName === 'temple' || viewName === 'temple-star' || viewName === 'temple-shanhai';
+            const templeWasOpen = document.body.classList.contains('temple-open');
             views.forEach(v => {
                 const el = document.getElementById(`view-${v}`);
                 if (el) el.classList.add('hidden');
@@ -7605,6 +8881,18 @@
             document.body.classList.toggle('adventure-open', viewName === 'adventure' || viewName === 'training');
             document.body.classList.toggle('battle-open', viewName === 'battle');
             document.body.classList.toggle('gacha-open', viewName === 'gacha');
+            document.body.classList.toggle('temple-open', enteringTemple);
+            document.body.classList.toggle('temple-hall', viewName === 'temple');
+            document.body.classList.toggle('temple-read', viewName === 'temple-star' || viewName === 'temple-shanhai');
+            if (enteringTemple || templeWasOpen) {
+                if (viewName !== 'temple-star' && location.hash) {
+                    var hashed = document.getElementById(location.hash.slice(1));
+                    if (hashed && hashed.closest && hashed.closest('#view-temple-star')) {
+                        history.replaceState(null, '', location.pathname + location.search);
+                    }
+                }
+                window.scrollTo(0, 0);
+            }
 
             // 進出戰鬥切換 BGM／背景短片（互不干擾）
             if (viewName === 'battle') {
