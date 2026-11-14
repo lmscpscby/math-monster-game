@@ -53,9 +53,10 @@ assert(hall.includes("switchView('temple-star')"), 'star-trail book opens the ch
 assert(hall.includes("switchView('temple-shanhai')"), 'shan-hai book opens the chronicle');
 assert(hall.includes('>星軌命途<') && hall.includes('>符文紀元<'), 'star-trail title and subtitle are separate lines');
 assert(hall.includes('>山海經<') && hall.includes('>神魔異獸<'), 'shan-hai title and subtitle are separate lines');
-assert(hall.includes('10 位英雄編年　可翻閱'), 'star-trail note counts 10, including Warwick');
+assert(hall.includes('>10 位英雄編年<'), 'star-trail note is exactly 10 位英雄編年');
 assert(!hall.includes('9 位英雄'), 'hall no longer says 9 heroes');
-assert(hall.includes('>11 則神獸編年　可翻閱<'), 'shan-hai note says the eleven scrolls can be read');
+assert(hall.includes('>11 則神獸編年<'), 'shan-hai note is exactly 11 則神獸編年');
+assert(!html.includes('可翻閱'), '可翻閱 is absent from the shipped site');
 assert(!hall.includes('故事未到') && !hall.includes('可先入內查看'), 'shan-hai note does not say the stories are missing');
 assert(!hall.includes('temple-book--pending'), 'shan-hai book is not pending');
 assert(hall.includes('ui-temple-hall-bg-1920.jpg') === false, 'hall background is CSS, not an img tag');
@@ -63,7 +64,7 @@ assert(hall.includes('ui-temple-book-star-trail.png?v=') && hall.includes('ui-te
 
 const shanBtn = hall.match(/<button[^>]*onclick="switchView\('temple-shanhai'\)"[^>]*>[\s\S]*?<\/button>/);
 assert(shanBtn, 'shan-hai book is a clickable button');
-assert(shanBtn && shanBtn[0].includes('ui-temple-book-shanhai.png?v=') && shanBtn[0].includes('>山海經<') && shanBtn[0].includes('>神魔異獸<') && shanBtn[0].includes('>11 則神獸編年　可翻閱<'), 'shan-hai cover, title, subtitle, and note stay visible');
+assert(shanBtn && shanBtn[0].includes('ui-temple-book-shanhai.png?v=') && shanBtn[0].includes('>山海經<') && shanBtn[0].includes('>神魔異獸<') && shanBtn[0].includes('>11 則神獸編年<'), 'shan-hai cover, title, subtitle, and note stay visible');
 assert(shanBtn && shanBtn[0].includes('aria-label="翻閱山海經：神魔異獸"'), 'shan-hai book aria-label uses the new subtitle');
 assert(!/尚未上線|備用|肖像生成中|preview-banner/.test(hall + star + shan), 'preview banners and the Warwick placeholder are gone');
 
