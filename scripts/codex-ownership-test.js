@@ -56,7 +56,7 @@ const SHAN = {
   sh10: '朱厭',
   sh11: '畢方',
   sh12: '白澤',
-  sh13: '蘡'
+  sh13: '夔牛'
 };
 const ELEMENTAL = {
   fire_base: '火寶寶',
@@ -264,8 +264,10 @@ assert(!view.includes('st_elden') && !view.includes('艾爾德') && !view.includ
 
 const game = loadGame();
 const api = game.__test;
-assert(api.shanhai.some(function (b) { return b.id === 'sh13' && b.name === '蘡'; }), 'sh13 display name stays 蘡');
-assert(!api.shanhai.some(function (b) { return /夔|薕/.test(b.name + b.skillText + b.title + b.desc); }), 'sh13 copy is neither 夔 nor 薕');
+assert(api.shanhai.some(function (b) { return b.id === 'sh13' && b.name === '夔牛' && b.skillText === '夔牛鼓聲震五百里！'; }), 'sh13 display name is 夔牛');
+assert(!api.shanhai.some(function (b) {
+  return /夔|薕/.test((b.name + b.skillText + b.title + b.desc).split('夔牛').join(''));
+}), 'sh13 copy is 夔牛, not a bare 夔 or 薕');
 assert(api.star.map(function (b) { return b.id; }).join(',') === Object.keys(STAR).join(','), 'star-trail roster order st_elden … st_thorin');
 
 const hiddenChrome = ['未解鎖', 'grayscale', 'opacity-40', 'fa-lock', '尚未發現：'];
@@ -324,7 +326,7 @@ assertVisible(allOwned, '全部', '艾爾德', 'st_elden');
 assertVisible(allOwned, '全部', '菲雅', 'st_fey');
 assertVisible(allOwned, '全部', '索倫', 'st_thorin');
 assertVisible(allOwned, '全部', '聖光麒麟', 'season_kirin');
-assert(allOwned.indexOf('蘡') !== -1 && allOwned.indexOf('夔') === -1 && allOwned.indexOf('薕') === -1, 'owned sh13 renders as 蘡');
+assert(allOwned.indexOf('夔牛') !== -1 && allOwned.split('夔牛').join('').indexOf('夔') === -1 && allOwned.indexOf('薕') === -1, 'owned sh13 renders as 夔牛');
 assert(allOwned.indexOf('ui-shan-kui.png') !== -1, 'sh13 keeps the kui asset filename');
 assertHidden(
   allOwned,
@@ -338,7 +340,7 @@ ownedIds.forEach(function (id) {
 });
 
 const shanTab = paint(owns(ownedIds), 'mythic');
-['青龍', '窮奇', '應龍', '朱厭', '畢方', '白澤', '蘡', '聖光麒麟'].forEach(function (name) {
+['青龍', '窮奇', '應龍', '朱厭', '畢方', '白澤', '夔牛', '聖光麒麟'].forEach(function (name) {
   assert(shanTab.indexOf(name) !== -1, '山海經 tab shows owned ' + name);
 });
 assertHidden(shanTab, '山海經', ['火寶寶', '艾爾德', '菲雅', '索倫', '帝江'], ['fire_base', 'st_elden', 'st_fey', 'st_thorin', 'sh2']);
@@ -352,13 +354,13 @@ assert(starTab.split('openCardZoomModal').length - 1 === 6, 'star tab has one ar
 assertHidden(
   starTab,
   '星軌',
-  ['青龍', '應龍', '蘡', '火寶寶', '聖光麒麟', '伊利亞', '露西亞', '馬爾科斯', '諾亞', '席琳娜', '賽拉菲娜'],
+  ['青龍', '應龍', '夔牛', '火寶寶', '聖光麒麟', '伊利亞', '露西亞', '馬爾科斯', '諾亞', '席琳娜', '賽拉菲娜'],
   ['sh1', 'sh9', 'sh13', 'fire_base', 'season_kirin', 'st_elijah', 'st_lucia', 'st_malakor', 'st_noah', 'st_selina', 'st_serafina']
 );
 
 const elementalTab = paint(owns(ownedIds), 'elemental');
 assert(elementalTab.indexOf('火寶寶') !== -1, '八屬性 tab shows the owned line');
-assertHidden(elementalTab, '八屬性', ['青龍', '應龍', '蘡', '艾爾德', '水滴龜'], ['sh1', 'sh9', 'sh13', 'st_elden', 'water_base']);
+assertHidden(elementalTab, '八屬性', ['青龍', '應龍', '夔牛', '艾爾德', '水滴龜'], ['sh1', 'sh9', 'sh13', 'st_elden', 'water_base']);
 
 const wiped = paint(null, 'all');
 assert(wiped.trim() === '尚未發現任何怪獸', 'logging out to guest clears previously rendered names');

@@ -46,7 +46,7 @@ function grabFunction(name) {
 
 assert(fs.existsSync(path.join(root, '.nojekyll')), '.nojekyll stays');
 assert(!html.includes('對六'), 'grade labels use 小六, not 對六');
-assert(html.includes("{ id: 'sh13', name: '蘡'"), 'sh13 display name stays 蘡');
+assert(html.includes("{ id: 'sh13', name: '夔牛'"), 'sh13 display name is 夔牛');
 
 const wrap = sliceBetween(html, 'class="island-admin-wrap"', 'id="admin-stats-panel"');
 assert(wrap.includes('id="admin-stats-card"') && wrap.includes('>參加人數統計<'), 'stats entry stays beside the new control');

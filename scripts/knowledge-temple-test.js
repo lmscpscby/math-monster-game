@@ -94,7 +94,7 @@ const roster = html.slice(html.indexOf('const STAR_TRAIL_BEASTS = ['), html.inde
 const ids = roster.match(/id: '(st_[a-z]+)'/g).map(function (s) { return s.slice(5, -1); });
 assert(ids.join(',') === 'st_elden,st_elijah,st_fey,st_lucia,st_malakor,st_noah,st_selina,st_serafina,st_thorin', 'gacha pool stays the nine summonable heroes, got ' + ids.join(','));
 assert(!roster.includes('warwick') && !roster.includes('沃里克') && !html.includes("id: 'st_warwick'"), 'Warwick is not a gacha id');
-assert(html.includes("{ id: 'sh13', name: '蘡'"), 'sh13 display name stays 蘡');
+assert(html.includes("{ id: 'sh13', name: '夔牛'"), 'sh13 display name is 夔牛');
 
 assert(html.includes('family=Cinzel:wght@600;800') && html.includes('family=Cinzel+Decorative:wght@700;900'), 'Cinzel and Cinzel Decorative are loaded');
 assert(html.includes('Noto+Serif+TC:wght@400;600;700;900'), 'Noto Serif TC includes the temple weights');
