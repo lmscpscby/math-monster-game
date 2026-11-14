@@ -3868,10 +3868,27 @@
         body.temple-hall > footer { display: none; }
         body.temple-read {
             background-color: #0d0806;
-            background-image:
-                radial-gradient(circle at 50% 20%, rgba(255, 140, 0, 0.12) 0%, transparent 60%),
-                radial-gradient(circle at 50% 80%, rgba(132, 24, 24, 0.15) 0%, transparent 60%);
             background-attachment: fixed;
+        }
+        body.temple-read.temple-read--star {
+            background-color: #0d0806;
+            background-image:
+                linear-gradient(rgba(13, 8, 6, 0.52), rgba(13, 8, 6, 0.70)),
+                url('assets/bg/ui-star-trail-story-bg-1920.jpg?v=babd844e');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        body.temple-read.temple-read--shanhai {
+            background-color: #090503;
+            background-image:
+                linear-gradient(rgba(9, 5, 3, 0.52), rgba(9, 5, 3, 0.70)),
+                url('assets/bg/ui-shanhai-story-bg-1920.jpg?v=bbc7038f');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
         body.temple-read > main { max-width: 1120px; }
         body.temple-read > footer {
@@ -4365,35 +4382,271 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
             transform: rotate(-6deg);
         }
-        #view-temple-shanhai .temple-scroll {
-            max-width: 760px;
+        #view-temple-shanhai .hero-nav {
+            max-width: 1050px;
+            margin: 0 auto 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        #view-temple-shanhai .nav-btn {
+            color: #f7e7c4;
+            background: rgba(28, 19, 14, 0.9);
+            border: 1px solid #ba8e55;
+            padding: 8px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 600;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        #view-temple-shanhai .nav-btn:hover,
+        #view-temple-shanhai .nav-btn:focus-visible {
+            background: #ba8e55;
+            color: #1c130e;
+            box-shadow: 0 0 15px rgba(186, 142, 85, 0.45);
+            transform: translateY(-2px);
+            outline: none;
+        }
+        #view-temple-shanhai .heroes-container {
+            max-width: 1050px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+        #view-temple-shanhai .hero-scroll {
+            position: relative;
+            scroll-margin-top: 5.5rem;
+            background-color: #f5eedf;
             background-image:
-                linear-gradient(rgba(246, 237, 218, 0.88), rgba(240, 225, 196, 0.92)),
-                url('assets/bg/rune-parchment-bg.jpg?v=ecde0c6a');
+                linear-gradient(rgba(245, 238, 223, 0.86), rgba(239, 228, 207, 0.90)),
+                url('assets/bg/ui-shanhai-scroll-parchment.jpg?v=0d1b2eda');
             background-size: cover;
             background-position: center;
-            border: 2px solid #8e6231;
+            background-repeat: no-repeat;
             border-radius: 10px;
-            padding: 48px 40px;
-            box-shadow: 0 0 0 5px #26140b, 0 0 0 8px #e5b95c, 0 20px 45px rgba(0, 0, 0, 0.8);
+            padding: 55px 45px;
+            border: 2px solid #734e26;
+            box-shadow:
+                0 0 0 5px #1c130e,
+                0 0 0 8px #ba8e55,
+                0 20px 45px rgba(0, 0, 0, 0.8),
+                inset 0 0 50px rgba(92, 45, 11, 0.25);
         }
-        #view-temple-shanhai .temple-scroll h2 {
-            margin: 0 0 16px;
-            font-family: "Cinzel Decorative", "Noto Serif TC", serif;
+        #view-temple-shanhai .scroll-inner-frame {
+            border: 1px solid rgba(115, 78, 38, 0.5);
+            padding: 35px 30px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(1px);
+        }
+        #view-temple-shanhai .corner-decor {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 3px solid #ba8e55;
+        }
+        #view-temple-shanhai .top-left { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+        #view-temple-shanhai .top-right { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+        #view-temple-shanhai .bottom-left { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+        #view-temple-shanhai .bottom-right { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+        #view-temple-shanhai .classification-tag {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            border-bottom: 2px solid rgba(115, 78, 38, 0.3);
+            padding-bottom: 12px;
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+            font-family: "Noto Serif TC", serif;
+            color: #5c3c1e;
             font-weight: 700;
-            color: #841818;
-            font-size: 1.8rem;
-            text-align: center;
-            letter-spacing: 0.12em;
+            letter-spacing: 1.5px;
         }
-        #view-temple-shanhai .temple-scroll p {
+        #view-temple-shanhai .stamp-pill {
+            background: #9c1f1f;
+            color: #ffe6ba;
+            padding: 4px 14px;
+            border-radius: 4px;
+            border: 1px dashed #ffe6ba;
+            font-weight: 700;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+        }
+        #view-temple-shanhai .hero-header-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 35px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        #view-temple-shanhai .portrait-box {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 6px solid #362215;
+            box-shadow:
+                0 0 0 3px #ba8e55,
+                0 10px 20px rgba(0, 0, 0, 0.4),
+                inset 0 0 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            background: #0d0502;
+        }
+        #view-temple-shanhai .portrait-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+        #view-temple-shanhai .portrait-box:hover .portrait-img { transform: scale(1.05); }
+        #view-temple-shanhai .hero-titles h2 {
+            margin: 0 0 8px;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            color: #9c1f1f;
+            letter-spacing: 3px;
+            line-height: 1.25;
+        }
+        #view-temple-shanhai .hero-titles .epithet {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #5c3c1e;
+            margin-bottom: 14px;
+            display: inline-block;
+            border-bottom: 1px solid #ba8e55;
+            padding-bottom: 4px;
+        }
+        #view-temple-shanhai .motto-scroll {
+            background: rgba(156, 31, 31, 0.08);
+            border-left: 4px solid #9c1f1f;
+            border-right: 4px solid #9c1f1f;
+            padding: 16px 20px;
+            margin: 18px 0;
+            border-radius: 4px;
+        }
+        #view-temple-shanhai .motto-scroll blockquote {
             margin: 0;
-            font-size: 1.08rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #9c1f1f;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        #view-temple-shanhai .motto-author {
+            font-size: 0.85rem;
+            color: #734e26;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 600;
+        }
+        #view-temple-shanhai .section-entry { margin-bottom: 26px; }
+        #view-temple-shanhai .section-entry h3 {
+            margin: 0 0 10px;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: #362215;
+            border-bottom: 1px solid rgba(186, 142, 85, 0.5);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #view-temple-shanhai .section-entry h3::before {
+            content: "❈";
+            color: #ba8e55;
+            font-size: 1.1rem;
+        }
+        #view-temple-shanhai .section-entry p {
+            margin: 0;
+            font-size: 1.05rem;
             font-weight: 400;
             line-height: 1.9;
+            color: #1c130e;
             text-align: justify;
-            color: #2b190c;
+            background: rgba(255, 255, 255, 0.45);
+            padding: 12px 18px;
+            border-radius: 5px;
+            border: 1px solid rgba(186, 142, 85, 0.25);
+        }
+        #view-temple-shanhai .bonds-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        #view-temple-shanhai .bond-item {
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 3px solid #734e26;
+            border-radius: 4px;
+            padding: 12px 16px;
+            border: 1px solid rgba(115, 78, 38, 0.25);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #view-temple-shanhai .bond-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            border-left-color: #9c1f1f;
+            transform: translateX(4px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #view-temple-shanhai .bond-name {
+            font-weight: 700;
+            color: #9c1f1f;
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+        #view-temple-shanhai .bond-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            background: #5c3c1e;
+            color: #ffe6ba;
+            padding: 1px 8px;
+            border-radius: 3px;
+            margin-left: 6px;
+            font-weight: 600;
+        }
+        #view-temple-shanhai .bond-desc {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: #2b1d15;
+            font-weight: 400;
+        }
+        #view-temple-shanhai .scroll-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px dashed rgba(115, 78, 38, 0.5);
+            padding-top: 20px;
+            margin-top: 35px;
+            font-size: 0.85rem;
+            color: #5c3c1e;
+            font-weight: 600;
+        }
+        #view-temple-shanhai .wax-seal {
+            width: 60px;
+            height: 60px;
+            flex: 0 0 auto;
+            background: radial-gradient(circle at 30% 30%, #9c1f1f, #4a0d0d);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f7d288;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            border: 2px solid #2e0505;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+            transform: rotate(-6deg);
         }
         @media (max-width: 820px) {
             #view-temple-star .hero-header-grid {
@@ -4413,12 +4666,30 @@
             #view-temple-shanhai .ministry-label { letter-spacing: 0.12em; font-size: 0.72rem; }
             #view-temple-star .classification-tag { justify-content: center; }
             #view-temple-star .scroll-footer { gap: 16px; }
-            #view-temple-shanhai .temple-scroll { padding: 32px 18px; }
+            #view-temple-shanhai .hero-header-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            #view-temple-shanhai .portrait-box {
+                max-width: 300px;
+                margin: 0 auto;
+                height: 380px;
+            }
+            #view-temple-shanhai .hero-scroll { padding: 30px 18px; }
+            #view-temple-shanhai .scroll-inner-frame { padding: 20px 14px; }
+            #view-temple-shanhai .classification-tag { justify-content: center; }
+            #view-temple-shanhai .scroll-footer { gap: 16px; }
         }
         @media (prefers-reduced-motion: reduce) {
             #view-temple-star .portrait-img,
             #view-temple-star .nav-btn { transition: none; }
             #view-temple-star .portrait-box:hover .portrait-img { transform: none; }
+            #view-temple-shanhai .portrait-img,
+            #view-temple-shanhai .nav-btn,
+            #view-temple-shanhai .bond-item { transition: none; }
+            #view-temple-shanhai .portrait-box:hover .portrait-img,
+            #view-temple-shanhai .nav-btn:hover,
+            #view-temple-shanhai .bond-item:hover { transform: none; }
         }
 
     </style>
@@ -5435,12 +5706,12 @@
                     <span class="temple-book__sub">符文紀元</span>
                     <span class="temple-book__note">10 位英雄編年　可翻閱</span>
                 </button>
-                <div class="temple-book temple-book--pending">
+                <button type="button" class="temple-book" onclick="switchView('temple-shanhai')" aria-label="翻閱山海經：神魔異獸">
                     <img class="temple-book__art" src="assets/bg/ui-temple-book-shanhai.png?v=d1a91445" alt="山海經">
                     <span class="temple-book__title">山海經</span>
-                    <span class="temple-book__sub">神獸志異</span>
-                    <span class="temple-book__note">故事未到</span>
-                </div>
+                    <span class="temple-book__sub">神魔異獸</span>
+                    <span class="temple-book__note">11 則神獸編年　可翻閱</span>
+                </button>
             </div>
         </section>
 
@@ -6100,19 +6371,699 @@
             </div>
         </section>
 
-        <section id="view-temple-shanhai" class="temple-chronicle hidden" aria-label="山海經：神獸志異">
+        <section id="view-temple-shanhai" class="temple-chronicle hidden" aria-label="山海經：神魔異獸">
             <div class="temple-back-row">
                 <button type="button" class="temple-back" onclick="switchView('temple')">← 返回知識聖殿選書</button>
             </div>
-            <header class="archive-header">
-                <div class="ministry-label">Classic Bestiary of Mountains and Seas</div>
-                <h2 class="main-title">山海經</h2>
-                <div class="sub-title">神獸編年　故事尚未送到</div>
-            </header>
-            <article class="temple-scroll">
-                <h2>卷宗尚未入庫</h2>
-                <p>此翼典籍已開立，同事嘅山海經故事同圖卡尚未送到。送到之後，會用同星軌命途一樣嘅羊皮紙卷軸來翻閱每一隻神獸嘅背景、性格同羈絆。</p>
-            </article>
+<header class="archive-header">
+    <div class="ministry-label">Classic of Mountains and Seas Imperial Bestiary</div>
+    <h1 class="main-title">山海經<span class="series-sub">神魔異獸</span></h1>
+    <div class="sub-title">大荒及內外經上古卷宗・仙靈惡獸秘錄</div>
+  </header>
+
+  <!-- 頂部快速跳轉導覽列 -->
+  <nav class="hero-nav">
+    <a class="nav-btn" href="#qinglong">青龍</a>
+    <a class="nav-btn" href="#dijiang">帝江</a>
+    <a class="nav-btn" href="#zhulong">燭龍</a>
+    <a class="nav-btn" href="#taotie">饕餮</a>
+    <a class="nav-btn" href="#jiuweihu">九尾狐</a>
+    <a class="nav-btn" href="#qiongqi">窮奇</a>
+    <a class="nav-btn" href="#yinglong">應龍</a>
+    <a class="nav-btn" href="#zhuyan">朱厭</a>
+    <a class="nav-btn" href="#bifang">畢方</a>
+    <a class="nav-btn" href="#baize">白澤</a>
+    <a class="nav-btn" href="#kuiniu">夔牛</a>
+  </nav>
+
+  <div class="heroes-container">
+
+    <!-- 1. 青龍 -->
+    <article class="hero-scroll" id="qinglong">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【東方星宿・木德之帝】</span>
+          <span class="stamp-pill">天之四靈</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/青龍.jpg" alt="青龍">
+          </div>
+          <div class="hero-titles">
+            <h2>青龍</h2>
+            <div class="epithet">東方天之四靈・蒼龍之首</div>
+            <div class="motto-scroll">
+              <blockquote>「澤被東方，春雷萬物生；行雲布雨，蒼龍耀九霄。」</blockquote>
+              <div class="motto-author">— 《淮南子・天文訓》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            青龍為東方七宿之總名，其形似蛇、角似鹿、爪似鷹、鱗似魚。於五行屬木，司掌春季與生機，乃是守護東方、號令群雨的至高神獸，亦是人世祥瑞、社稷穩固的帝王神聖象徵。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            威嚴高貴、慈心仁厚。祂以雷霆雨露潤澤萬民，平日深居於東荒之極的雲海碧潭中。當四方有動亂或妖邪出世時，祂便會乘風雷而出，以浩瀚龍威震懾世間邪祟，平息天下戰亂。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">應龍 <span class="bond-badge">龍族雙壁</span></div>
+              <div class="bond-desc">應龍乃助黃帝征戰的上古翼龍，青龍與其同為龍族至尊，彼此氣息相通，一司天象東方，一鎮大地江河。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">白澤 <span class="bond-badge">神道同德</span></div>
+              <div class="bond-desc">白澤通曉天下鬼神之事，亦曾與青龍探討天地靈氣的流轉軌跡，彼此皆為守護大地的神聖祥瑞。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-EAST-0001<br>典藏司：東荒青帝雲海司</div>
+          <div class="wax-seal">龍</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 2. 帝江 -->
+    <article class="hero-scroll" id="dijiang">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【西山經・天山神祇】</span>
+          <span class="stamp-pill">混沌無面</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/帝江.jpg" alt="帝江">
+          </div>
+          <div class="hero-titles">
+            <h2>帝江</h2>
+            <div class="epithet">天山混沌神鳥・歌舞之靈</div>
+            <div class="motto-scroll">
+              <blockquote>「其狀如黃囊，赤如丹火，六足四翼，渾敦無面目。」</blockquote>
+              <div class="motto-author">— 《山海經・西山經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            帝江居住於西方的天山之上。祂外觀宛如一個巨大的黃色口袋，全身散發著如丹火般耀眼的紅光，生有六隻腳和四隻翅膀，卻沒有眼耳鼻口等五官面目。儘管無眼無耳，但祂卻極通歌舞音律，拍擊羽翼便能合乎天地間最優美的節律。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            自由純真、活潑靈動。祂不因沒有視覺與聽覺而感到困擾，反而以靈性之軀感應虛空中的萬物脈動。在長風中起舞、與九天雷鳴唱和是祂最大的樂趣，對世俗的紛爭與恩怨毫不在意。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">畢方 <span class="bond-badge">風火合鳴</span></div>
+              <div class="bond-desc">畢方同樣是奇異的單足神鳥，其鳴叫清脆高亢，與帝江那富有節奏的翅膀拍擊聲常在荒野中化作最和諧的天籟之音。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">饕餮 <span class="bond-badge">對立混沌</span></div>
+              <div class="bond-desc">同為上古混沌所生的異相，帝江代表純真與藝術的混沌，而饕餮則是欲望的混沌，兩者一舞一食，性格迥異。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-WEST-0023<br>典藏司：天山靈音司</div>
+          <div class="wax-seal">渾</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 3. 燭龍 -->
+    <article class="hero-scroll" id="zhulong">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【海外北經・鐘山之神】</span>
+          <span class="stamp-pill">創世之息</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/image_2.jpg" alt="燭龍">
+          </div>
+          <div class="hero-titles">
+            <h2>燭龍</h2>
+            <div class="epithet">鐘山之神・日月司掌者</div>
+            <div class="motto-scroll">
+              <blockquote>「視為晝，瞑為夜；吹為冬，呼為夏。不飲，不食，不息。」</blockquote>
+              <div class="motto-author">— 《山海經・海外北經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            燭龍（又稱燭九陰）盤踞於北方極寒的鐘山之上。祂人面蛇身，通體赤紅，身長千里。祂的神威震古爍今：雙眼一睜天下便為白晝，雙眼一閉世界即入黑夜；吹出一口氣便寒冬降臨，呼出一口氣則烈日炎炎，以呼吸支配著天地的季節更替。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            冷靜孤傲、古井無波。祂是高於一切凡塵生靈的創世古神，無需飲食也無需睡眠，恆久地俯瞰著時間的洪流。祂極少介入凡間的神魔征伐，唯有天地失序、乾坤顛倒時才會降臨不可思議之神力。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">青龍 <span class="bond-badge">神威守護</span></div>
+              <div class="bond-desc">同為巨龍法身，燭龍的存在更接近於宇宙自然法則，青龍對其敬重有加，視其為宇宙天道之顯形。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">窮奇 <span class="bond-badge">逆理懲戒</span></div>
+              <div class="bond-desc">窮奇喜好逆天理、獎惡人，其作風曾引發鐘山氣候異動，燭龍微睜一目降下極晝之光，令窮奇狼狽逃竄。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-NORTH-0009<br>典藏司：鐘山玄冥極陰司</div>
+          <div class="wax-seal">燭</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 4. 饕餮 -->
+    <article class="hero-scroll" id="taotie">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【北山經・鉤吾之山】</span>
+          <span class="stamp-pill">無盡貪婪</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/image_3.jpg" alt="饕餮">
+          </div>
+          <div class="hero-titles">
+            <h2>饕餮</h2>
+            <div class="epithet">四凶之一・無盡吞噬之口</div>
+            <div class="motto-scroll">
+              <blockquote>「其狀如羊身人面，目在腋下，虎齒人爪，其音如嬰兒。」</blockquote>
+              <div class="motto-author">— 《山海經・北山經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            饕餮棲息於鉤吾之山，這裡蘊藏著豐富的玉石與金屬礦藏。祂擁有羊的身軀和人的面孔，雙目長在腋下，滿口利齒如猛虎，四爪如人手。祂天生懷有無法填滿的食欲，能吞噬世間一切有形無形之物，相傳最後因過度貪食而將自己的身軀也吞噬殆盡，僅剩一首。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            貪婪暴虐、執著狂熱。對於靈氣與血食有著近乎偏執的追求。在洪荒戰場上，祂能將對手的法術、兵刃甚至靈魄直接吸入巨腹之中，化為自身的蠻荒妖力，是令萬靈膽寒的凶煞。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">窮奇 <span class="bond-badge">凶獸同盟</span></div>
+              <div class="bond-desc">同列上古四凶，窮奇的奸惡與饕餮的食欲一拍即合。兩者曾聯手席捲荒古部族，所過之處生機斷絕。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">夔牛 <span class="bond-badge">雷音震懾</span></div>
+              <div class="bond-desc">饕餮極度渴望吞食夔牛那富含純陽雷霆的皮肉，但夔牛發出的怒雷巨響常令其耳鳴目眩、只得退避三舍。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-FOUR-0002<br>典藏司：鉤吾幽谷飢渴司</div>
+          <div class="wax-seal">吞</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 5. 九尾狐 -->
+    <article class="hero-scroll" id="jiuweihu">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【南山經・青丘之山】</span>
+          <span class="stamp-pill">青丘九尾</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/九尾狐.jpg" alt="九尾狐">
+          </div>
+          <div class="hero-titles">
+            <h2>九尾狐</h2>
+            <div class="epithet">青丘瑞獸・幻化九靈之仙</div>
+            <div class="motto-scroll">
+              <blockquote>「青丘之山有獸焉，其狀如狐而九尾，其音如嬰兒，能食人。」</blockquote>
+              <div class="motto-author">— 《山海經・南山經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            九尾狐居住在水草豐美的青丘之山。祂擁有九條蓬鬆的尾巴，象徵著九種不同的造化生機與不滅靈魂。在古老的傳說中，祂既是能以幻術魅惑凡心、食人的危險妖獸，也是象徵多子多孫、世道祥瑞的仙靈，其現世往往預示著世間將迎來命運的重大轉折。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            聰慧狡黠、亦正亦邪。祂擅長操縱人心的欲望與夢境，幻化無常。祂對凡世懷抱著強烈的好奇心，時而化為絕代佳人遊戲紅塵，時而化為智者隱士指點迷津，行事全憑自身喜好與因緣。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">白澤 <span class="bond-badge">天書留名</span></div>
+              <div class="bond-desc">白澤的《精怪圖》中詳細記載了九尾狐的幻化之術與弱點，這讓九尾狐對白澤既敬佩又忌憚，常與之鬥智鬥勇。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">朱厭 <span class="bond-badge">兵燹避諱</span></div>
+              <div class="bond-desc">朱厭一出天下大亂，而九尾狐喜愛繁華太平的紅塵，因此九尾狐經常暗中施展幻術，試圖干擾朱厭的戰火擴張。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-SOUTH-0012<br>典藏司：青丘幻世雲鄉</div>
+          <div class="wax-seal">媚</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 6. 窮奇 -->
+    <article class="hero-scroll" id="qiongqi">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【西山經・邽山之神】</span>
+          <span class="stamp-pill">逆天伐善</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/image_5.jpg" alt="窮奇">
+          </div>
+          <div class="hero-titles">
+            <h2>窮奇</h2>
+            <div class="epithet">四凶之一・懲善揚惡之翼</div>
+            <div class="motto-scroll">
+              <blockquote>「其狀如虎，有翼，食人從首始。毀信惡忠，崇飾惡言。」</blockquote>
+              <div class="motto-author">— 《山海經・西山經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            窮奇外觀如同一隻長著雙翼的斑斕巨虎，吼叫如狗吠。祂最惡名昭彰的行徑便是「抑善揚惡」——若見人爭執，祂會去咬掉有理正直的一方；聽說有人忠信老實，祂便去吃掉人家的鼻子；而得知有人作惡多端，祂反而會捕殺野獸送給惡人作為獎勵。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            狡詐任性、乖張殘忍。祂是天生的反秩序者，以顛覆道德倫理為樂。在征戰時，祂能拍動雙翼颳起混亂的惡風沙塵，並以刺耳的虎嘯蠱惑人心，使戰陣將士墮入狂亂與自相殘殺的深淵。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">饕餮 <span class="bond-badge">惡德共鳴</span></div>
+              <div class="bond-desc">窮奇喜好策劃各種陰謀與戰端，而饕餮則負責吞噬戰場上的殘骸與生魂，兩者分工明確，為禍四方。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">白澤 <span class="bond-badge">宿敵對立</span></div>
+              <div class="bond-desc">白澤致力於指引人類趨吉避凶、尊崇善道，這與窮奇懲善揚惡的行徑背道而馳，兩者是永難妥協的宿敵。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-FOUR-0004<br>典藏司：邽山惡風煉獄</div>
+          <div class="wax-seal">逆</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 7. 應龍 -->
+    <article class="hero-scroll" id="yinglong">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【大荒東經・上古龍祖】</span>
+          <span class="stamp-pill">黃帝神將</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/ui-shan-yinglong.png?v=925c313f" alt="應龍">
+          </div>
+          <div class="hero-titles">
+            <h2>應龍</h2>
+            <div class="epithet">黃帝神將・雙翼創世之龍</div>
+            <div class="motto-scroll">
+              <blockquote>「應龍蓄水，斬蚩尤與夸父，逐凶除惡，劃地成河。」</blockquote>
+              <div class="motto-author">— 《山海經・大荒東經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            應龍是龍族中極為罕見、長有雙翼的真龍，也是傳說中的龍族始祖。祂曾作為黃帝麾下的首席戰神，在逐鹿之戰中蓄水重創蚩尤聯軍，並親手斬殺蚩尤與夸父。隨後在大禹治水時期，祂以巨尾劃地導引洪水入海，為華夏文明開拓奠定了萬世根基。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            剛毅沉穩、忠勇無雙。身為守護大地與秩序的戰神，祂行事光明磊落，意志堅韌不拔。祂平日隱居在南方大荒的深谷蓄水修行，唯有神州面臨滔天浩劫之時，祂才會再度展翼出淵，雷霆出擊。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">青龍 <span class="bond-badge">同族至尊</span></div>
+              <div class="bond-desc">青龍主管天道星宿運轉，應龍則在大地上征戰開河，兩者一天一地，互為龍族的文武雙壁。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">夔牛 <span class="bond-badge">戰鼓之緣</span></div>
+              <div class="bond-desc">黃帝曾用夔牛的皮製作天威戰鼓震懾蚩尤，而應龍正是該戰役的先鋒，對這股伴隨自己破陣的雷霆鼓音記憶猶新。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-WILD-0005<br>典藏司：大荒逐鹿神將府</div>
+          <div class="wax-seal">翼</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 8. 朱厭 -->
+    <article class="hero-scroll" id="zhuyan">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【西山經・小次之山】</span>
+          <span class="stamp-pill">戰火兵燹</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/ui-shan-zhuyan.png?v=8fcda412" alt="朱厭">
+          </div>
+          <div class="hero-titles">
+            <h2>朱厭</h2>
+            <div class="epithet">戰爭先兆・赤足白首之猿</div>
+            <div class="motto-scroll">
+              <blockquote>「其狀如猿，而白首赤足，名曰朱厭，見則大兵。」</blockquote>
+              <div class="motto-author">— 《山海經・西山經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            朱厭棲息於多白玉與赤銅礦的小次之山。祂的外形像一隻碩大的古猿，長著雪白的頭部與鮮紅如血的雙足。祂是上古神話中最著名的戰爭之兆，只要祂在人間現蹤，天下諸侯便會興起兵戎大戰，生靈塗炭。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            狂暴好戰、桀驁不馴。祂對殺戮與兵刃交擊的金石之氣極具感知力，戰場便是祂力量的源泉。祂力大無比，能徒手撕裂玄鐵盾甲，其赤足踏足之處，大地草木焦枯，無名戰火蔓延。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">畢方 <span class="bond-badge">烽火連天</span></div>
+              <div class="bond-desc">朱厭引發人世戰火，而畢方火鳥則常隨戰亂現身，以詭異怪火焚燒城塞，兩者同被凡人視為浩劫之兆。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">青龍 <span class="bond-badge">雷霆鎮壓</span></div>
+              <div class="bond-desc">朱厭散播的戰禍常導致蒼生蒙難，青龍屢次降下甘霖與雷霆洗滌戰場煞氣，將朱厭逼退回小次山中。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-WEST-0081<br>典藏司：小次山赤銅魔域</div>
+          <div class="wax-seal">戰</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 9. 畢方 -->
+    <article class="hero-scroll" id="bifang">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【西山經・章莪之山】</span>
+          <span class="stamp-pill">兆火精靈</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/ui-shan-bifang.png?v=0f2921a0" alt="畢方">
+          </div>
+          <div class="hero-titles">
+            <h2>畢方</h2>
+            <div class="epithet">木精兆火獸・單足赤文神鳥</div>
+            <div class="motto-scroll">
+              <blockquote>「其狀如鶴，一足，赤文青質而白喙，見則其邑有訛火。」</blockquote>
+              <div class="motto-author">— 《山海經・西山經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            畢方居住於寸草不生的章莪之山。祂的外形像一隻清臒的丹頂鶴，但僅生有一隻長足。祂全身羽毛青翠，間雜著鮮艷的赤色斑紋，長著潔白的鳥喙。祂是木之靈氣凝聚化生的火之精靈，其鳴叫如呼其名，每逢出現必伴隨離奇的荒野大火。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            孤僻高傲、神出鬼沒。祂既非單純的暴虐凶獸，亦非聽令於世俗的祥瑞。祂極度迷戀烈焰的力量，常在深夜銜著星火掠過山林。祂無視凡間律法，唯有純粹的五行靈力激盪能引起祂的興致。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">帝江 <span class="bond-badge">歌舞知音</span></div>
+              <div class="bond-desc">帝江以六足四翼在虛空中隨風起舞，畢方則以單足立於絕壁引頸高鳴，兩者在荒蕪的天山共享片刻的自然韻律。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">朱厭 <span class="bond-badge">烽火相隨</span></div>
+              <div class="bond-desc">朱厭現身點燃戰火，畢方最喜在狼煙滾滾的戰場廢墟中汲取兵火靈性，兩者常形影相隨於動盪之世。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-WEST-0034<br>典藏司：章莪山青木火精司</div>
+          <div class="wax-seal">火</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 10. 白澤 -->
+    <article class="hero-scroll" id="baize">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【東望山・崑崙神獸】</span>
+          <span class="stamp-pill">萬世辟邪</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/ui-shan-baize.png?v=11c78fbb" alt="白澤">
+          </div>
+          <div class="hero-titles">
+            <h2>白澤</h2>
+            <div class="epithet">崑崙祥瑞・萬物精怪之師</div>
+            <div class="motto-scroll">
+              <blockquote>「通達物情，知天下鬼神萬物之名，能辟除人間百邪。」</blockquote>
+              <div class="motto-author">— 《抱朴子・白澤圖》古籍記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            白澤是棲息於崑崙仙境或東望山的至高祥瑞。祂渾身如雪，頭生雙角，通曉天下所有語言。祂擁有辨識世間一萬一千五百二十種精怪鬼神真名、形貌與克制法門的無上智慧。黃帝巡狩海濱時得見白澤，命人圖寫其貌並傳播天下，以護佑黎民不受邪祟所侵。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            博古通今、溫潤如玉。祂擁有極致的智慧與護佑眾生的慈悲。祂舉止優雅從容，言談中滿含天地哲理，世間任何邪祟幻術在祂的法眼前皆無所遁形，是天地間最令人敬仰的智慧神獸。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>天地大荒羈絆</h3>
+          <div class="bonds-container">
+            <div class="bond-item">
+              <div class="bond-name">九尾狐 <span class="bond-badge">看破真身</span></div>
+              <div class="bond-desc">白澤一眼便能識破九尾狐的百般幻化與九命本源，兩者在崑崙山下品茗清談，探討人世變遷。</div>
+            </div>
+            <div class="bond-item">
+              <div class="bond-name">窮奇 <span class="bond-badge">邪正不兩立</span></div>
+              <div class="bond-desc">白澤撰寫《精怪圖》教導世人遠離妖邪、揚善抑惡，直接破壞了窮奇縱惡逆理的企圖，二者水火不容。</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="scroll-footer">
+          <div>卷宗編號：SHJ-KUNLUN-0001<br>典藏司：崑崙天書藏經閣</div>
+          <div class="wax-seal">澤</div>
+        </footer>
+      </div>
+    </article>
+
+    <!-- 11. 夔牛 -->
+    <article class="hero-scroll" id="kuiniu">
+      <div class="scroll-inner-frame">
+        <div class="corner-decor top-left"></div>
+        <div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div>
+        <div class="corner-decor bottom-right"></div>
+
+        <div class="classification-tag">
+          <span>CLASSIFIED / 【東海・流波之山】</span>
+          <span class="stamp-pill">雷霆震天</span>
+        </div>
+
+        <div class="hero-header-grid">
+          <div class="portrait-box">
+            <img class="portrait-img" src="assets/monsters/classic/ui-shan-kui.png?v=2d370d44" alt="夔牛">
+          </div>
+          <div class="hero-titles">
+            <h2>夔牛</h2>
+            <div class="epithet">東海雷獸・一足震天之聲</div>
+            <div class="motto-scroll">
+              <blockquote>「其狀如牛，蒼身而無角，一足。出入水則必風雨，其光如日月，其聲如雷。」</blockquote>
+              <div class="motto-author">— 《山海經・大荒東經》古卷記載</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-entry">
+          <h3>神獸起源</h3>
+          <p>
+            夔牛生活在東海深處的流波山。祂的外貌如同一隻青黑色的巨牛，頭上無角，且唯有一隻單足。每當祂踏入水中，海天之間便立即狂風大作、暴雨傾盆。祂渾身散發的光輝如同日月交輝，其怒吼之聲化作九天雷鳴，聲動五百里，威震神州。
+          </p>
+        </section>
+
+        <section class="section-entry">
+          <h3>性靈與神威</h3>
+          <p>
+            性情剛烈勇猛、狂放不羈。祂是純陽風雷之力的天地顯化，長年居於驚濤駭浪之間。其雷霆怒吼具備驅散陰霾瘴氣、震碎諸般陰邪鬼魄的破邪神威。
+          </p>
+        </section>
+      </div>
+    </article>
+  </div>
+            <div class="temple-back-row temple-back-row--end">
+                <button type="button" class="temple-back" onclick="switchView('temple')">← 返回知識聖殿選書</button>
+            </div>
         </section>
 
     </main>
@@ -9056,10 +10007,14 @@
             document.body.classList.toggle('temple-open', enteringTemple);
             document.body.classList.toggle('temple-hall', viewName === 'temple');
             document.body.classList.toggle('temple-read', viewName === 'temple-star' || viewName === 'temple-shanhai');
+            document.body.classList.toggle('temple-read--star', viewName === 'temple-star');
+            document.body.classList.toggle('temple-read--shanhai', viewName === 'temple-shanhai');
             if (enteringTemple || templeWasOpen) {
-                if (viewName !== 'temple-star' && location.hash) {
+                if (location.hash) {
                     var hashed = document.getElementById(location.hash.slice(1));
-                    if (hashed && hashed.closest && hashed.closest('#view-temple-star')) {
+                    var inStar = hashed && hashed.closest && hashed.closest('#view-temple-star');
+                    var inShan = hashed && hashed.closest && hashed.closest('#view-temple-shanhai');
+                    if ((inStar && viewName !== 'temple-star') || (inShan && viewName !== 'temple-shanhai')) {
                         history.replaceState(null, '', location.pathname + location.search);
                     }
                 }
