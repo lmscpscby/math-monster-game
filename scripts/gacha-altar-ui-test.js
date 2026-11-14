@@ -412,16 +412,16 @@ const NEW_SHAN = {
   sh10: { name: '朱厭', element: 'fight', file: 'assets/monsters/classic/ui-shan-zhuyan.png' },
   sh11: { name: '畢方', element: 'fire', file: 'assets/monsters/classic/ui-shan-bifang.png' },
   sh12: { name: '白澤', element: 'holy', file: 'assets/monsters/classic/ui-shan-baize.png' },
-  sh13: { name: '蘡', element: 'thunder', file: 'assets/monsters/classic/ui-shan-kui.png' }
+  sh13: { name: '夔牛', element: 'thunder', file: 'assets/monsters/classic/ui-shan-kui.png' }
 };
 Object.keys(NEW_SHAN).forEach(function (id) {
   const spec = NEW_SHAN[id];
   const beast = api.shanhai.find(function (b) { return b.id === id; });
   assert(beast && beast.name === spec.name && beast.element === spec.element && beast.imgKey === id, id + ' roster row');
   ['name', 'title', 'skillText', 'desc'].forEach(function (field) {
-    assert(String(beast[field]).indexOf('夔') === -1, id + ' ' + field + ' does not say 夔');
+    assert(String(beast[field]).split('夔牛').join('').indexOf('夔') === -1, id + ' ' + field + ' does not say 夔 alone');
   });
-  if (id === 'sh13') assert(beast.name === '蘡' && beast.skillText.indexOf('蘡') !== -1, 'sh13 name and skill copy say 蘡');
+  if (id === 'sh13') assert(beast.name === '夔牛' && beast.skillText === '夔牛鼓聲震五百里！', 'sh13 name and skill copy say 夔牛');
   assert(beast.hp >= 160 && beast.hp <= 300 && beast.atk >= 95 && beast.atk <= 125 && beast.def >= 70 && beast.def <= 110 && beast.spd >= 60 && beast.spd <= 130, id + ' stats stay in the sh1–sh6 band');
   const bytes = fs.readFileSync(path.join(root, spec.file));
   const sha = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
@@ -525,14 +525,14 @@ STAR_IDS.forEach(function (id) {
 });
 assert(allHtml.includes('ui-star-card-elden.png?v=' + STAR_CARD_SHA.st_elden), 'collection renders the cache-busted full scene');
 assert(allHtml.includes('monster-art-frame'), 'collection art sits in a clipping frame');
-['應龍', '朱厭', '畢方', '白澤', '蘡', '青龍'].forEach(function (name) {
+['應龍', '朱厭', '畢方', '白澤', '夔牛', '青龍'].forEach(function (name) {
   assert(!allHtml.includes(name), 'unowned shan hai ' + name + ' stays out of 全部');
 });
 api.setFilter('mythic');
 api.renderCollection();
 const mythicHtml = cardHtml('monster-collection-grid');
 assert(mythicHtml.includes('尚未發現此系列'), 'mythic tab is empty when only a star-trail card is owned');
-assert(!mythicHtml.includes('艾爾德') && !mythicHtml.includes('青龍') && !mythicHtml.includes('蘡'), 'mythic tab does not list star-trail or unowned shan hai');
+assert(!mythicHtml.includes('艾爾德') && !mythicHtml.includes('青龍') && !mythicHtml.includes('夔牛'), 'mythic tab does not list star-trail or unowned shan hai');
 api.setFilter('star-trail');
 api.renderCollection();
 const starHtml = cardHtml('monster-collection-grid');
