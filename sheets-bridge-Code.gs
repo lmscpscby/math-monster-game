@@ -32,12 +32,14 @@ var SEASON_STATE = '賽季狀態';
 var SEASON_LENGTH_DAYS = 21;
 var SEASON_START_UTC_MS = Date.UTC(2026, 9, 25, 16, 0, 0, 0);
 var SEASON_MS = SEASON_LENGTH_DAYS * 24 * 60 * 60 * 1000;
-// 頭10名：聖光麒麟。索引 0 不用；1…10 對名次。第 11 名起 rewardForRank_ 回傳空。
+// 頭10名限定獸睇 SEASON_REWARD_MONSTER_BY_EPOCH。索引 0 不用；1…10 對名次。第 11 名起 rewardForRank_ 回傳空。
 // 第1名 4000 金／300 EXP，第2名 3300／230，第3名 3000／230，第4–10名 2000／100。
 // 已擁有唔再入一隻，改發 DUPLICATE_MONSTER_EXP。
 var SEASON_REWARD_GOLD = [0, 4000, 3300, 3000, 2000, 2000, 2000, 2000, 2000, 2000, 2000];
 var SEASON_REWARD_EXP = [0, 300, 230, 230, 100, 100, 100, 100, 100, 100, 100];
-var SEASON_REWARD_MONSTER_ID = 'season_kirin';
+// 賽季 → 限定獸。第 1 季聖光麒麟、第 2 季聖光龍王・奧瑞利安。
+// 未列明嘅未來賽季唔好再發麒麟。已結算賽季靠 K 欄跳過，唔會改發。
+var SEASON_REWARD_MONSTER_BY_EPOCH = { 1: 'season_kirin', 2: 'season_aurelion' };
 var SEASON_KIRIN_MAX_RANK = 10;
 var DUPLICATE_MONSTER_EXP = 5;
 var SEASON_GRADES = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6'];
@@ -585,7 +587,7 @@ function seasonPublicInfo_(now) {
     startMs: bounds.startMs,
     endMs: bounds.endMs,
     serverNowMs: n.getTime(),
-    monsterId: SEASON_REWARD_MONSTER_ID,
+    monsterId: seasonRewardMonsterId_(shown),
     kirinMaxRank: SEASON_KIRIN_MAX_RANK,
     duplicateExp: DUPLICATE_MONSTER_EXP,
     goldByRank: SEASON_REWARD_GOLD.slice(1),
@@ -593,14 +595,20 @@ function seasonPublicInfo_(now) {
   };
 }
 
-function rewardForRank_(rank) {
+function seasonRewardMonsterId_(epoch) {
+  var ep = Math.floor(Number(epoch) || 0);
+  var id = SEASON_REWARD_MONSTER_BY_EPOCH[ep];
+  return id ? String(id) : '';
+}
+
+function rewardForRank_(rank, epoch) {
   var r = Math.floor(Number(rank) || 0);
-  // 頭10名：聖光麒麟。1…SEASON_KIRIN_MAX_RANK 各得 SEASON_REWARD_MONSTER_ID 一隻；第 11 名起唔發。
+  // 1…SEASON_KIRIN_MAX_RANK 各得該季限定獸一隻；第 11 名起唔發。未列明嘅賽季只有金幣／EXP。
   if (r < 1 || r > SEASON_KIRIN_MAX_RANK) return { gold: 0, exp: 0, monsterId: '' };
   return {
     gold: SEASON_REWARD_GOLD[r] || 0,
     exp: SEASON_REWARD_EXP[r] || 0,
-    monsterId: SEASON_REWARD_MONSTER_ID
+    monsterId: seasonRewardMonsterId_(epoch)
   };
 }
 
@@ -784,7 +792,7 @@ function compareNickname_(a, b) {
 }
 
 /** 各年級積分 > 0 嘅頭 10。同分用暱稱升序（同排行榜）。 */
-function rankGradeTop10_(players) {
+function rankGradeTop10_(players, epoch) {
   var byGrade = {};
   SEASON_GRADES.forEach(function (g) { byGrade[g] = []; });
   (Array.isArray(players) ? players : []).forEach(function (p) {
@@ -810,7 +818,7 @@ function rankGradeTop10_(players) {
         className: p.className || '',
         classNo: p.classNo != null ? p.classNo : '',
         rankScore: p.rankScore,
-        reward: rewardForRank_(rank)
+        reward: rewardForRank_(rank, epoch)
       });
     });
   });
@@ -948,14 +956,16 @@ function patchAccountForSettlement_(sheet, rowNumber, epoch, rewardOrNull) {
   return { granted: granted, reset: reset };
 }
 
-function winnersFromSnapshot_(rows) {
+function winnersFromSnapshot_(rows, epoch) {
+  var fallback = seasonRewardMonsterId_(epoch);
   return (rows || []).map(function (r) {
     var rank = Math.floor(Number(r.rank) || 0);
     var monsterId = isSafeMonsterId_(r.monsterId) ? r.monsterId : '';
-    // 舊快照可能只記第 1 名怪獸。頭10名：聖光麒麟，未記 id 的 1…10 補上。
+    // 舊快照可能只記第 1 名怪獸。未記 id 的 1…10 補該季限定獸。
+    // 第 1 季仍然補聖光麒麟；第 2 季補聖光龍王・奧瑞利安。已寫入嘅 id 唔改。
     // 該賽季若已寫入 K 欄，applySeasonRewardToCells_ 會跳過，唔會重複發。
-    if (!monsterId && rank >= 1 && rank <= SEASON_KIRIN_MAX_RANK) {
-      monsterId = SEASON_REWARD_MONSTER_ID;
+    if (!monsterId && fallback && rank >= 1 && rank <= SEASON_KIRIN_MAX_RANK) {
+      monsterId = fallback;
     }
     return {
       key: r.key,
@@ -985,13 +995,13 @@ function settleOneEpochUnlocked_(epoch, now) {
   var snap = readEpochSnapshot_(ep);
   var winners;
   if (snap.rows.length) {
-    winners = winnersFromSnapshot_(snap.rows);
+    winners = winnersFromSnapshot_(snap.rows, ep);
   } else {
     var eligibleForRank = table.list.filter(function (p) {
       if (isAdminProfile(p.profile, p.key)) return false;
       return effectiveScoreEpoch_(p.profile) <= ep;
     });
-    var computed = rankGradeTop10_(eligibleForRank);
+    var computed = rankGradeTop10_(eligibleForRank, ep);
     if (computed.length) {
       var logRows = computed.map(function (w) {
         return [
@@ -1137,7 +1147,7 @@ function seasonPreviewUnlocked_(data) {
     var pool = table.list.filter(function (p) {
       return effectiveScoreEpoch_(p.profile) <= previewEpoch;
     });
-    var winners = rankGradeTop10_(pool);
+    var winners = rankGradeTop10_(pool, previewEpoch);
     var grades = {};
     SEASON_GRADES.forEach(function (g) { grades[g] = []; });
     winners.forEach(function (w) {
