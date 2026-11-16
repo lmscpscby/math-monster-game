@@ -285,7 +285,7 @@ function paint(user, filter) {
   assert(rendered.indexOf(emptyCopy) !== -1, 'guest ' + filter + ' uses ' + emptyCopy);
   assert(rendered.indexOf(otherCopy) === -1, 'guest ' + filter + ' does not use the other empty line');
   assert(rendered.trim() === emptyCopy, 'guest ' + filter + ' is only the empty state');
-  assertHidden(rendered, 'guest ' + filter, Object.values(STAR).concat(Object.values(SHAN), Object.values(ELEMENTAL), ['聖光麒麟']), Object.keys(STAR).concat(Object.keys(SHAN), NEW_SHAN_IDS));
+  assertHidden(rendered, 'guest ' + filter, Object.values(STAR).concat(Object.values(SHAN), Object.values(ELEMENTAL), ['聖光麒麟', '聖光龍王・奧瑞利安', '凱薩爾']), Object.keys(STAR).concat(Object.keys(SHAN), NEW_SHAN_IDS, ['season_aurelion']));
   hiddenChrome.forEach(function (token) {
     assert(rendered.indexOf(token) === -1, 'guest ' + filter + ' has no locked chrome ' + token);
   });
@@ -354,9 +354,17 @@ assert(starTab.split('openCardZoomModal').length - 1 === 6, 'star tab has one ar
 assertHidden(
   starTab,
   '星軌',
-  ['青龍', '應龍', '夔牛', '火寶寶', '聖光麒麟', '伊利亞', '露西亞', '馬爾科斯', '諾亞', '席琳娜', '賽拉菲娜'],
-  ['sh1', 'sh9', 'sh13', 'fire_base', 'season_kirin', 'st_elijah', 'st_lucia', 'st_malakor', 'st_noah', 'st_selina', 'st_serafina']
+  ['青龍', '應龍', '夔牛', '火寶寶', '聖光麒麟', '聖光龍王・奧瑞利安', '伊利亞', '露西亞', '馬爾科斯', '諾亞', '席琳娜', '賽拉菲娜'],
+  ['sh1', 'sh9', 'sh13', 'fire_base', 'season_kirin', 'season_aurelion', 'st_elijah', 'st_lucia', 'st_malakor', 'st_noah', 'st_selina', 'st_serafina']
 );
+
+const aurelionStar = paint(owns(['season_aurelion']), 'star-trail');
+assertVisible(aurelionStar, '星軌', '聖光龍王・奧瑞利安', 'season_aurelion');
+assert(aurelionStar.indexOf('賽季神獸 · S2') !== -1, 'owned aurelion card is marked S2');
+assert(aurelionStar.indexOf('凱薩爾') === -1, 'codex card keeps the poster name, not the manuscript name');
+const aurelionMythic = paint(owns(['season_aurelion']), 'mythic');
+assert(aurelionMythic.trim() === '尚未發現此系列', 'aurelion is not filed under 山海經');
+assert(!api.star.some(function (b) { return b.id === 'season_aurelion' || b.name === '聖光龍王・奧瑞利安'; }), 'aurelion is not in the star-trail gacha roster');
 
 const elementalTab = paint(owns(ownedIds), 'elemental');
 assert(elementalTab.indexOf('火寶寶') !== -1, '八屬性 tab shows the owned line');

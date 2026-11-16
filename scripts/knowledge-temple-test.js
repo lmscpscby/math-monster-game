@@ -40,9 +40,15 @@ assert(templeBtn.includes("switchView('temple')"), 'map plate opens the hall');
 assert(templeBtn.includes('>知識聖殿<'), 'map plate says 知識聖殿');
 assert(!templeBtn.includes('未開放') && !templeBtn.includes('island-hotspot--locked'), 'map plate is not locked');
 assert(!templeBtn.includes("switchView('monsters')") && !templeBtn.includes('enterAdventure'), 'temple is not the codex or adventure');
-['recreation', 'darkforest', 'sunkencity', 'desert', 'ocean'].forEach(function (cls) {
+['recreation', 'darkforest', 'sunkencity', 'desert'].forEach(function (cls) {
   assert(islandButton(cls).includes('（未開放）'), cls + ' stays locked copy');
 });
+const oceanBtn = islandButton('ocean');
+assert(oceanBtn.includes('>海上商人<') && oceanBtn.includes("switchView('shop')"), 'ocean plate is the sea merchant');
+assert(!oceanBtn.includes('未開放') && !oceanBtn.includes('island-hotspot--locked') && !oceanBtn.includes('showIslandLockedTip'), 'sea merchant plate is unlocked');
+assert(oceanBtn.includes('ui-scroll-plate-blank-178.png?v=f22a2191'), 'sea merchant keeps the blank scroll');
+assert(html.includes('.island-hotspot--ocean { --x: 63%; --y: 54.5%;'), 'sea merchant stays at 63% / 54.5%');
+assert(html.includes('font-size: calc(100cqh * 67 / 160);'), 'unlocked plates use the 67/160 size');
 
 const hall = sliceBetween(html, 'id="view-temple" class="temple-hall hidden"', 'id="view-temple-star" class="temple-chronicle hidden"');
 const star = sliceBetween(html, 'id="view-temple-star" class="temple-chronicle hidden"', 'id="view-temple-shanhai" class="temple-chronicle hidden"');

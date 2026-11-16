@@ -94,18 +94,18 @@ const carouselStart = html.indexOf('id="lobby-carousel"');
 const carouselEnd = html.indexOf('class="island-hub"');
 assert(carouselStart >= 0 && carouselEnd > carouselStart, 'lobby carousel markers');
 const carousel = html.slice(carouselStart, carouselEnd);
-assert((carousel.match(/data-lobby-slide="/g) || []).length === 3, 'carousel has exactly 3 slides');
-assert((carousel.match(/data-lobby-dot="/g) || []).length === 3, 'carousel has exactly 3 dots');
-assert(!carousel.includes('data-lobby-slide="3"') && !carousel.includes('data-lobby-dot="3"'), 'carousel has no fourth slide or dot');
+assert((carousel.match(/data-lobby-slide="/g) || []).length === 4, 'carousel has exactly 4 slides');
+assert((carousel.match(/data-lobby-dot="/g) || []).length === 4, 'carousel has exactly 4 dots');
+assert(carousel.includes('data-lobby-slide="3"') && carousel.includes('data-lobby-dot="3"'), 'carousel has a fourth slide and dot');
 assert(carousel.includes('ui-lobby-carousel-shanhai-1920.png?v=6d207644'), 'shan-hai slide uses the 1920×720 plate');
 assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=c000865c'), 'star-trail slide uses the 1920×720 plate');
 assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=3a503e37'), 'brand slide reuses the ranked enter plate');
 assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
 assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a large title class');
 assert(!carousel.includes('前往抽卡'), 'poster slides do not keep 前往抽卡');
-assert(!carousel.includes('進入排位賽'), 'poster slides do not keep 進入排位賽');
-assert(!carousel.includes('積分爭霸') && !carousel.includes('進入積分爭霸'), 'carousel does not keep a ranked slide');
-assert(!carousel.includes("switchView('ranked')"), 'carousel does not open ranked');
+assert(carousel.includes('進入排位賽'), 'S2 slide CTA is 進入排位賽');
+assert(!carousel.includes('積分爭霸') && !carousel.includes('進入積分爭霸'), 'carousel does not keep a ranked title slide');
+assert((carousel.match(/switchView\('ranked'\)/g) || []).length === 1, 'only the S2 slide opens ranked');
 function carouselSlide(id) {
   const token = 'data-lobby-slide="' + id + '"';
   const start = carousel.indexOf(token);
@@ -114,8 +114,9 @@ function carouselSlide(id) {
   return carousel.slice(start, next === -1 ? carousel.length : next);
 }
 const brandSlide = carouselSlide('0');
-const shanSlide = carouselSlide('1');
-const starSlide = carouselSlide('2');
+const s2Slide = carouselSlide('1');
+const shanSlide = carouselSlide('2');
+const starSlide = carouselSlide('3');
 assert(brandSlide.includes('無限召喚・數理之王'), 'brand kicker is the approved line');
 assert(brandSlide.includes('踏入訓練場，分單元挑戰'), 'brand subtitle points at training');
 assert(brandSlide.includes('>訓練場<') && brandSlide.includes("enterTraining()") && brandSlide.includes('aria-label="訓練場，分單元挑戰"') && brandSlide.includes('lobby-hero-cta'), 'brand slide wood CTA enters 訓練場');
@@ -136,8 +137,8 @@ assert(html.includes('font-size: 0.8rem') && html.includes('letter-spacing: 0.14
 assert(html.includes('font-size: 1.1rem') && html.includes('color: #fff8ec'), 'plate subtitle is the larger warm white');
 assert(html.includes('text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85)'), 'plate lines share the deeper shadow');
 assert(html.includes('left: 3.5%') && html.includes('gap: 0.4rem'), 'plate copy sits inset with the art gap');
-assert(html.includes('.lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__copy') && html.includes('bottom: 25%'), 'shan-hai copy is lifted off the baked title');
-assert(html.includes('.lobby-carousel__slide--plate[data-lobby-slide="1"] .lobby-carousel__plate-cta') && html.includes('bottom: 23%'), 'shan-hai CTA stays raised');
+assert(html.includes('.lobby-carousel__slide--plate[data-lobby-slide="2"] .lobby-carousel__copy') && html.includes('bottom: 25%'), 'shan-hai copy is lifted off the baked title');
+assert(html.includes('.lobby-carousel__slide--plate[data-lobby-slide="2"] .lobby-carousel__plate-cta') && html.includes('bottom: 23%'), 'shan-hai CTA stays raised');
 assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__scrim[^{]*\{[^}]*display:\s*none/.test(html), 'plate scrim is not force-hidden');
 assert(html.includes('.lobby-carousel__slide--plate .lobby-carousel__copy h2'), 'plate h2 hide selector remains');
 assert(!/\.lobby-carousel__slide--plate \.lobby-carousel__copy\s*\{[^}]*display:\s*none/.test(html), 'plate copy block is not force-hidden');
@@ -149,7 +150,12 @@ assert(!brandSlide.includes('<h2') && !shanSlide.includes('<h2') && !starSlide.i
 assert(!brandSlide.includes('lobby-carousel__title') && !shanSlide.includes('lobby-carousel__title') && !starSlide.includes('lobby-carousel__title'), 'poster slides do not overlay a large title');
 assert(shanSlide.includes("switchView('temple')") && !shanSlide.includes('openGachaSeries'), 'shan-hai slide opens the book hall');
 assert(starSlide.includes("switchView('temple')") && !starSlide.includes('openGachaSeries'), 'star-trail slide opens the book hall');
-assert(carousel.includes('data-lobby-dot="0"') && carousel.includes('data-lobby-dot="1"') && carousel.includes('data-lobby-dot="2"'), 'carousel dots cover the three slides');
+assert(carousel.includes('data-lobby-dot="0"') && carousel.includes('data-lobby-dot="1"') && carousel.includes('data-lobby-dot="2"') && carousel.includes('data-lobby-dot="3"'), 'carousel dots cover the four slides');
+assert(s2Slide.includes('ui-lobby-carousel-s2-1920.png?v=e5336197'), 'S2 slide uses the official 1920×720 poster');
+assert(s2Slide.includes("switchView('ranked')") && s2Slide.includes('>進入排位賽<') && s2Slide.includes('lobby-hero-cta'), 'S2 slide CTA enters ranked');
+assert(!s2Slide.includes('lobby-carousel__kicker') && !s2Slide.includes('lobby-carousel__sub') && !s2Slide.includes('<h2'), 'S2 slide overlays only the CTA');
+assert(s2Slide.includes('聖光龍王・奧瑞利安') && !s2Slide.includes('聖光麒麟'), 'S2 slide names Aurelion and not the S1 kirin');
+assert(/\.lobby-carousel__slide--s2 \.lobby-carousel__plate-cta\s*\{[^}]*left:\s*3\.2%[^}]*right:\s*auto/.test(html), 'S2 CTA sits on the left, clear of the badge');
 assert(html.includes('island-hotspot--arena') && html.includes("switchView('ranked')"), 'ranked stays reachable from the island map');
 assert(!view.includes('ui-parchment'), 'gacha view leaves the parchment frame');
 
