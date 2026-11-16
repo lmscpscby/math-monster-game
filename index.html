@@ -749,6 +749,15 @@
             cursor: help;
         }
 
+        /* HUD 本身 pointer-events: none，而且會繼承。藥水鈕唔重設做 auto，
+           睇得到都點／撳唔到，事件會落到競技場。 */
+        #pokemon-battle-arena.neon-stage.poke-stage #battle-potion-btn {
+            pointer-events: auto;
+            position: relative;
+            z-index: 4;
+            touch-action: manipulation;
+        }
+
         @media (max-width: 640px) {
             #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-enemy,
             #pokemon-battle-arena.neon-stage.poke-stage .neon-hud-player {
@@ -1564,9 +1573,13 @@
             font-size: 0.72rem;
             line-height: 1.2;
             cursor: pointer;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
             text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
         }
         .battle-potion-btn:hover { filter: brightness(1.06); }
+        .battle-potion-btn:active { filter: brightness(1.12); transform: translateY(1px); }
         #card-zoom-modal .ui-modal.is-lore {
             max-width: 56rem;
             text-align: left;
