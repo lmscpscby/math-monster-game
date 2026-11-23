@@ -728,9 +728,85 @@ function mergeOwnedMonsterLists_(listA, listB) {
   return Object.keys(map).map(function (k) { return map[k]; });
 }
 
+/** 只比較兩邊都有嘅怪獸。一邊等級／經驗嚴格領先、另一邊冇領先先算贏。 */
+function sharedMonsterProgressWinner_(listA, listB) {
+  var mapA = {};
+  var mapB = {};
+  function put(map, list) {
+    (Array.isArray(list) ? list : []).forEach(function (m) {
+      if (!m || m.id == null) return;
+      map[String(m.id)] = {
+        level: Math.max(0, Math.floor(Number(m.level) || 0)),
+        exp: Math.max(0, Math.floor(Number(m.exp) || 0))
+      };
+    });
+  }
+  put(mapA, listA);
+  put(mapB, listB);
+  var aWins = 0;
+  var bWins = 0;
+  Object.keys(mapA).forEach(function (id) {
+    if (!mapB[id]) return;
+    var a = mapA[id];
+    var b = mapB[id];
+    if (a.level > b.level || (a.level === b.level && a.exp > b.exp)) aWins++;
+    else if (b.level > a.level || (b.level === a.level && b.exp > a.exp)) bWins++;
+  });
+  if (aWins > 0 && bWins === 0) return 'a';
+  if (bWins > 0 && aWins === 0) return 'b';
+  return 'tie';
+}
+
+var TRAINING_QUESTION_WINDOW_ = 35;
+
+function sanitizeTrainingQuestionKey_(value) {
+  var s = String(value == null ? '' : value).replace(/[\u0000-\u001f]/g, '').trim();
+  if (!s) return '';
+  if (s.length > 300) s = s.slice(0, 300);
+  return s;
+}
+
+function normalizeTrainingQuestionWindow_(list) {
+  var arr = Array.isArray(list) ? list : [];
+  var seen = {};
+  var out = [];
+  var i;
+  for (i = arr.length - 1; i >= 0; i--) {
+    var key = sanitizeTrainingQuestionKey_(arr[i]);
+    if (!key || seen[key]) continue;
+    seen[key] = true;
+    out.push(key);
+  }
+  out.reverse();
+  if (out.length > TRAINING_QUESTION_WINDOW_) out = out.slice(out.length - TRAINING_QUESTION_WINDOW_);
+  return out;
+}
+
+/** 較新 updatedAt 放窗尾；空清單唔好抹走另一邊。 */
+function mergeTrainingQuestionWindow_(stored, incoming) {
+  var sTs = Date.parse(stored && stored.updatedAt) || 0;
+  var iTs = Date.parse(incoming && incoming.updatedAt) || 0;
+  var incomingNewer = iTs >= sTs;
+  var primary = normalizeTrainingQuestionWindow_(incomingNewer ? incoming && incoming.trainingRecentQuestions : stored && stored.trainingRecentQuestions);
+  var secondary = normalizeTrainingQuestionWindow_(incomingNewer ? stored && stored.trainingRecentQuestions : incoming && incoming.trainingRecentQuestions);
+  if (!primary.length) return secondary;
+  if (!secondary.length) return primary;
+  var seen = {};
+  primary.forEach(function (k) { seen[k] = true; });
+  var prefix = [];
+  secondary.forEach(function (k) {
+    if (!seen[k]) prefix.push(k);
+  });
+  var merged = prefix.concat(primary);
+  if (merged.length > TRAINING_QUESTION_WINDOW_) merged = merged.slice(merged.length - TRAINING_QUESTION_WINDOW_);
+  return merged;
+}
+
 /**
  * 儲存時保護賽季重置：雲端 epoch 較高就跟雲端積分。
  * 同一個 epoch 積分取較大（只升唔跌）。怪獸聯集，避免舊客戶端蓋走已發放嘅限定怪。
+ * 經驗包：若儲存檔怪獸領先而來檔包數更多，就係另一部 iPad 帶住升級前嘅包數，唔好補返。
+ * 訓練場最近 35 題一併合併，空清單唔覆蓋。
  */
 function reconcileSavedProfile_(stored, incoming) {
   var next = incoming && typeof incoming === 'object' && !Array.isArray(incoming) ? incoming : {};
@@ -746,7 +822,18 @@ function reconcileSavedProfile_(stored, incoming) {
     next.rankScore = Math.max(sRank, iRank);
     next.leaderboardEpoch = sEp;
   }
+  var storedPacks = Math.max(0, Math.floor(Number(base.expPacks) || 0));
+  var incomingPacks = Math.max(0, Math.floor(Number(next.expPacks) || 0));
+  var progressWinner = sharedMonsterProgressWinner_(base.ownedMonsters, next.ownedMonsters);
+  if (progressWinner === 'a' && storedPacks < incomingPacks) next.expPacks = storedPacks;
+  else if (progressWinner === 'b' && incomingPacks < storedPacks) next.expPacks = incomingPacks;
   next.ownedMonsters = mergeOwnedMonsterLists_(base.ownedMonsters, next.ownedMonsters);
+  if (normalizeTrainingQuestionWindow_(base.trainingRecentQuestions).length
+      || normalizeTrainingQuestionWindow_(next.trainingRecentQuestions).length
+      || Object.prototype.hasOwnProperty.call(base, 'trainingRecentQuestions')
+      || Object.prototype.hasOwnProperty.call(next, 'trainingRecentQuestions')) {
+    next.trainingRecentQuestions = mergeTrainingQuestionWindow_(base, next);
+  }
   return next;
 }
 

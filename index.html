@@ -8044,11 +8044,49 @@
         }
 
         /**
+         * 兩邊都有嘅怪獸：一邊等級／經驗嚴格領先、另一邊冇任何領先先算贏。
+         * 各有領先或者打和就唔當餵包消費（避免兩邊各自升級時誤用較少嗰邊包數）。
+         */
+        function sharedMonsterProgressWinner(localList, cloudList) {
+            var mapL = {};
+            var mapC = {};
+            (Array.isArray(localList) ? localList : []).forEach(function (m) {
+                if (!m || m.id == null) return;
+                mapL[String(m.id)] = {
+                    level: Math.max(0, Math.floor(Number(m.level) || 0)),
+                    exp: Math.max(0, Math.floor(Number(m.exp) || 0))
+                };
+            });
+            (Array.isArray(cloudList) ? cloudList : []).forEach(function (m) {
+                if (!m || m.id == null) return;
+                mapC[String(m.id)] = {
+                    level: Math.max(0, Math.floor(Number(m.level) || 0)),
+                    exp: Math.max(0, Math.floor(Number(m.exp) || 0))
+                };
+            });
+            var localWins = 0;
+            var cloudWins = 0;
+            Object.keys(mapL).forEach(function (id) {
+                if (!mapC[id]) return;
+                var a = mapL[id];
+                var b = mapC[id];
+                if (a.level > b.level || (a.level === b.level && a.exp > b.exp)) localWins++;
+                else if (b.level > a.level || (b.level === a.level && b.exp > a.exp)) cloudWins++;
+            });
+            if (localWins > 0 && cloudWins === 0) return 'local';
+            if (cloudWins > 0 && localWins === 0) return 'cloud';
+            return 'tie';
+        }
+
+        /**
          * 兩份存檔合併：
          * - 金幣／EXP包：以較新 updatedAt 為準（避免消費後被舊雲端 Math.max「回血」）；
          *   若雲端 stamp 較新但金幣同 EXP 都低過本機 → 當過期／中毒 stamp，經濟跟本機
+         * - 餵包升級：一邊怪獸等級／經驗嚴格領先，而且經驗包更少 → 包數跟領先嗰邊
+         *   （另一部 iPad 就算 stamp 較新、包數較多，都唔好把升級前嘅包數補返）
          * - 積分：取較大（只升唔跌）；雲端 leaderboardEpoch 較高＝季節重置跟雲端
          * - 怪獸：按 id 保留較高等級／經驗
+         * - 訓練場最近 35 題：兩邊合併，空清單唔好抹走另一邊
          * - 大廳頭像：跟較新嗰邊（preferCloud 則跟雲端）；空字串當明確清除，缺欄先先保留另一邊
          * - preferCloudProgress／progressEpoch／起步雲端 vs 富本機：跟雲端（老師清戶後）
          * grantsGold／grantsExp：老師剛發放、已寫入 cloud 數值時唔好重複加；若合併選咗本機，就要補加。
@@ -8088,6 +8126,11 @@
                     if (cloud.accountEpoch != null) baseCloud.accountEpoch = Math.max(0, Math.floor(Number(cloud.accountEpoch) || 0));
                 }
                 baseCloud.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
+                if (Object.prototype.hasOwnProperty.call(cloud, 'trainingRecentQuestions')) {
+                    baseCloud.trainingRecentQuestions = normalizeTrainingQuestionWindow(cloud.trainingRecentQuestions);
+                } else if (Object.prototype.hasOwnProperty.call(local, 'trainingRecentQuestions')) {
+                    baseCloud.trainingRecentQuestions = normalizeTrainingQuestionWindow(local.trainingRecentQuestions);
+                }
                 // 頭像：雲端有就跟雲端；雲端未有先留本機（舊存檔冇欄唔好清走自訂圖）
                 // grants 已在雲端數值內（login applyPendingGrants）；唔重複加
                 applyResolvedAvatar(baseCloud, cloud, local);
@@ -8139,18 +8182,25 @@
                 economyLocalNewer = true;
             }
 
+            // 兩部 iPad：一部餵包升級（等級高、包少），另一部未用但 stamp 較新（包多、等級低）。
+            // 等級／經驗嚴格領先而且包數更少，先鎖定消費。打和就維持 updatedAt，唔好退回 Math.max。
+            var progressWinner = sharedMonsterProgressWinner(local.ownedMonsters, cloud.ownedMonsters);
+            var packsFollowLocal = economyLocalNewer;
+            if (progressWinner === 'local' && localPacks < cloudPacks) packsFollowLocal = true;
+            else if (progressWinner === 'cloud' && cloudPacks < localPacks) packsFollowLocal = false;
+
             var base = Object.assign({}, localNewer ? cloud : local, localNewer ? local : cloud);
 
-            // 老師發放已加喺 cloud 數值；若最終用本機，要補上 grants
+            // 老師發放已加喺 cloud 數值；若最終用本機，要補上 grants。藥水唔跟包數嗰條例外。
             if (economyLocalNewer) {
                 base.gold = localGold + grantG;
-                base.expPacks = localPacks + grantX;
                 base.hpPotions = localHasPotions ? localPotions : cloudPotions;
             } else {
                 base.gold = cloudGold;
-                base.expPacks = cloudPacks;
                 base.hpPotions = cloudHasPotions ? cloudPotions : localPotions;
             }
+            if (packsFollowLocal) base.expPacks = localPacks + grantX;
+            else base.expPacks = cloudPacks;
             if (!isFinite(base.gold) || base.gold < 0) base.gold = 0;
             if (!isFinite(base.expPacks) || base.expPacks < 0) base.expPacks = 0;
             if (!isFinite(base.hpPotions) || base.hpPotions < 0) base.hpPotions = 0;
@@ -8175,6 +8225,12 @@
                 base.progressEpoch = Math.max(cloudEpProg, localEpProg);
             }
             base.lastDailyClaimDate = laterDailyClaimDate(local.lastDailyClaimDate, cloud.lastDailyClaimDate);
+            var mergedTrainingWindow = mergeTrainingQuestionWindow(local.trainingRecentQuestions, cloud.trainingRecentQuestions, localNewer);
+            if (mergedTrainingWindow.length
+                || Object.prototype.hasOwnProperty.call(local, 'trainingRecentQuestions')
+                || Object.prototype.hasOwnProperty.call(cloud, 'trainingRecentQuestions')) {
+                base.trainingRecentQuestions = mergedTrainingWindow;
+            }
             applyResolvedAvatar(base, localNewer ? local : cloud, localNewer ? cloud : local);
             applyAdventureClimbMax(base, local, cloud);
             base.adventureProgress = maxAdventureProgress(local.adventureProgress, cloud.adventureProgress);
@@ -8251,6 +8307,7 @@
             if (storedClimbFloor(a) !== storedClimbFloor(b)) return true;
             if (readClimbBest(a) !== readClimbBest(b)) return true;
             if (adventureProgressFingerprint(a) !== adventureProgressFingerprint(b)) return true;
+            if (trainingWindowFingerprint(a) !== trainingWindowFingerprint(b)) return true;
             return false;
         }
 
@@ -8326,7 +8383,8 @@
                 avatarId: currentUser.avatarId,
                 avatarData: currentUser.avatarData,
                 ownedMonsters: currentUser.ownedMonsters,
-                adventureProgress: currentUser.adventureProgress
+                adventureProgress: currentUser.adventureProgress,
+                trainingRecentQuestions: currentUser.trainingRecentQuestions
             };
             var merged = mergeProgressProfiles(currentUser, profile, {
                 grantedGold: grantG,
@@ -10119,6 +10177,7 @@
             if (!isFinite(Number(currentUser.rankScore)) || Number(currentUser.rankScore) < 0) currentUser.rankScore = 0;
             currentUser.gold = Math.floor(Number(currentUser.gold) || 0);
             currentUser.expPacks = Math.floor(Number(currentUser.expPacks) || 0);
+            currentUser.trainingRecentQuestions = normalizeTrainingQuestionWindow(currentUser.trainingRecentQuestions);
             normalizeHpPotions(currentUser);
             currentUser.rankScore = Math.floor(Number(currentUser.rankScore) || 0);
             normalizeAdventureClimb(currentUser);
@@ -12901,7 +12960,8 @@
             battleSettled = false;
             battleRewardGranted = false;
             
-            /* 2. 重置同一場戰鬥的題目紀錄，防止同場對決出現相同題目 */
+            /* 2. 重置同一場戰鬥的題目紀錄，防止同場對決出現相同題目。
+               訓練場跨場 35 題窗口（trainingRecentQuestions）唔好喺度清。 */
             usedQuestionsMap.clear();
             usedWordQuestionIds.clear();
             lastQuestionTypeIndex = -1;
@@ -13314,6 +13374,115 @@
             return false;
         }
 
+        /** 訓練場最近出過嘅題：跨戰鬥保留，滑動窗口 35。冒險／排位／PvP 唔用。 */
+        const TRAINING_QUESTION_WINDOW = 35;
+
+        function sanitizeTrainingQuestionKey(value) {
+            var s = String(value == null ? '' : value).replace(/[\u0000-\u001f]/g, '').trim();
+            if (!s) return '';
+            if (s.length > 300) s = s.slice(0, 300);
+            return s;
+        }
+
+        function normalizeTrainingQuestionWindow(list) {
+            var arr = Array.isArray(list) ? list : [];
+            var seen = {};
+            var out = [];
+            var i;
+            for (i = arr.length - 1; i >= 0; i--) {
+                var key = sanitizeTrainingQuestionKey(arr[i]);
+                if (!key || seen[key]) continue;
+                seen[key] = true;
+                out.push(key);
+            }
+            out.reverse();
+            if (out.length > TRAINING_QUESTION_WINDOW) out = out.slice(out.length - TRAINING_QUESTION_WINDOW);
+            return out;
+        }
+
+        /**
+         * 較新嗰邊放窗尾。較新邊係空清單就保留另一邊，避免一部未練過嘅 iPad 抹走最近 35 題。
+         */
+        function mergeTrainingQuestionWindow(localList, cloudList, localNewer) {
+            var primary = normalizeTrainingQuestionWindow(localNewer ? localList : cloudList);
+            var secondary = normalizeTrainingQuestionWindow(localNewer ? cloudList : localList);
+            if (!primary.length) return secondary;
+            if (!secondary.length) return primary;
+            var seen = {};
+            primary.forEach(function (k) { seen[k] = true; });
+            var prefix = [];
+            secondary.forEach(function (k) {
+                if (!seen[k]) prefix.push(k);
+            });
+            var merged = prefix.concat(primary);
+            if (merged.length > TRAINING_QUESTION_WINDOW) merged = merged.slice(merged.length - TRAINING_QUESTION_WINDOW);
+            return merged;
+        }
+
+        function trainingWindowFingerprint(p) {
+            return normalizeTrainingQuestionWindow(p && p.trainingRecentQuestions).join('\n');
+        }
+
+        function isTrainingQuestionBattle() {
+            if (typeof isRankedMode !== 'undefined' && isRankedMode) return false;
+            if (typeof isClimbMode !== 'undefined' && isClimbMode) return false;
+            return true;
+        }
+
+        function currentTrainingQuestionWindow() {
+            if (typeof currentUser === 'undefined' || !currentUser) return [];
+            return normalizeTrainingQuestionWindow(currentUser.trainingRecentQuestions);
+        }
+
+        function trainingWindowHas(key) {
+            var stored = sanitizeTrainingQuestionKey(key);
+            if (!stored) return false;
+            var list = currentTrainingQuestionWindow();
+            for (var i = 0; i < list.length; i++) {
+                if (list[i] === stored) return true;
+            }
+            return false;
+        }
+
+        function trainingBankQuestionKey(q) {
+            var id = q && (q.id || (q._bankMeta && q._bankMeta.id));
+            if (!id) return '';
+            return sanitizeTrainingQuestionKey('id:' + id);
+        }
+
+        function trainingTemplateQuestionKey(qText) {
+            return sanitizeTrainingQuestionKey('tpl:' + String(qText || ''));
+        }
+
+        /** 出題當下就記低，中途退出都唔好下一題即刻再中同一題。 */
+        function noteTrainingQuestionServed(key) {
+            if (!isTrainingQuestionBattle()) return;
+            var stored = sanitizeTrainingQuestionKey(key);
+            if (!stored) return;
+            if (typeof currentUser === 'undefined' || !currentUser) return;
+            var list = normalizeTrainingQuestionWindow(currentUser.trainingRecentQuestions);
+            var idx = list.lastIndexOf(stored);
+            if (idx !== -1) list.splice(idx, 1);
+            list.push(stored);
+            if (list.length > TRAINING_QUESTION_WINDOW) list = list.slice(list.length - TRAINING_QUESTION_WINDOW);
+            currentUser.trainingRecentQuestions = list;
+            if (typeof saveCurrentUserData === 'function') {
+                try { saveCurrentUserData(); } catch (e) {}
+            }
+        }
+
+        function preferFreshTrainingCandidates(candidates) {
+            if (!isTrainingQuestionBattle() || !candidates || !candidates.length) return candidates;
+            var fresh = [];
+            for (var i = 0; i < candidates.length; i++) {
+                var key = trainingBankQuestionKey(candidates[i]);
+                if (key && trainingWindowHas(key)) continue;
+                fresh.push(candidates[i]);
+            }
+            // 呢個單元已經冇窗外出過嘅題（池細過 30，或者 35 題窗口包晒）先准重複。唔好改抽別單元。
+            return fresh.length ? fresh : candidates;
+        }
+
         function pickWordBankQuestion(unitId) {
             const bank = (typeof window !== 'undefined' && window.WORD_QUESTION_BANK) ? window.WORD_QUESTION_BANK : null;
             if (!bank || !bank.length) return null;
@@ -13352,9 +13521,10 @@
             if (!pool.length) return null;
 
             let candidates = pool.filter(q => battleQuestionEligible(q) && !usedWordQuestionIds.has(q.id));
+            candidates = preferFreshTrainingCandidates(candidates);
             if (!candidates.length) {
                 usedWordQuestionIds.clear();
-                candidates = pool.filter(battleQuestionEligible);
+                candidates = preferFreshTrainingCandidates(pool.filter(battleQuestionEligible));
             }
             if (!candidates.length) return null;
 
@@ -13368,6 +13538,7 @@
             }
             const qText = String(item.question || '').replace(/^【[^】]{0,80}】\s*/, '');
             usedQuestionsMap.add(qText);
+            noteTrainingQuestionServed(trainingBankQuestionKey(item));
             return {
                 question: qText,
                 options: opts,
@@ -13399,6 +13570,7 @@
             let correctAns = "";
             let attemptCount = 0;
             let options = [];
+            let templateRepeat = null;
 
             const unitId = currentUnitObj.id;
 
@@ -13731,9 +13903,26 @@
                     options = [String(a + b), String(a + b + 1), String(a + b - 1), String(a + b + 2)];
                 }
 
-            } while (usedQuestionsMap.has(qText) && attemptCount < 50);
+                var templateKey = trainingTemplateQuestionKey(qText);
+                var seenThisBattle = usedQuestionsMap.has(qText);
+                var seenInTrainingWindow = isTrainingQuestionBattle() && trainingWindowHas(templateKey);
+                if (!seenThisBattle && seenInTrainingWindow && !templateRepeat) {
+                    templateRepeat = { qText: qText, correctAns: correctAns, options: options.slice() };
+                }
+                if (!seenThisBattle && !seenInTrainingWindow) break;
+                // 單元得一兩條模板、又已經喺窗口入面：唔好空轉 50 次，准重複。
+                if (templateRepeat && !seenThisBattle && qText === templateRepeat.qText && attemptCount >= 6) break;
+
+            } while (attemptCount < 50);
+
+            if (templateRepeat && (usedQuestionsMap.has(qText) || (isTrainingQuestionBattle() && trainingWindowHas(trainingTemplateQuestionKey(qText))))) {
+                qText = templateRepeat.qText;
+                correctAns = templateRepeat.correctAns;
+                options = templateRepeat.options;
+            }
 
             usedQuestionsMap.add(qText);
+            noteTrainingQuestionServed(trainingTemplateQuestionKey(qText));
 
             const shuffled = [...options].sort(() => Math.random() - 0.5);
 
