@@ -321,4 +321,43 @@ const cleared = context.publicEntryFromProfile('清', JSON.stringify({
 }), '');
 assert(cleared.avatarId === '' && cleared.avatarData === '' && cleared.grade === 'G5' && cleared.rankScore === 40, 'explicit clear stays empty and rank is unchanged');
 
+const staleDevice = context.reconcileSavedProfile_(
+  {
+    expPacks: 4,
+    gold: 80,
+    ownedMonsters: [{ id: 'fire_base', level: 8, exp: 10 }],
+    trainingRecentQuestions: ['id:q1', 'id:q2'],
+    updatedAt: '2026-11-01T00:00:00.000Z'
+  },
+  {
+    expPacks: 14,
+    gold: 10,
+    ownedMonsters: [{ id: 'fire_base', level: 3, exp: 0 }],
+    trainingRecentQuestions: [],
+    updatedAt: '2026-11-23T00:00:00.000Z'
+  }
+);
+assert(staleDevice.expPacks === 4, 'later stale save does not restore exp packs, got ' + staleDevice.expPacks);
+assert(staleDevice.gold === 10, 'pack correction does not rewrite incoming gold');
+assert(staleDevice.ownedMonsters.some((m) => m.id === 'fire_base' && m.level === 8), 'merged level stays 8');
+assert(staleDevice.trainingRecentQuestions.join(',') === 'id:q1,id:q2', 'empty training list does not wipe the stored window');
+
+const fedIncoming = context.reconcileSavedProfile_(
+  { expPacks: 14, gold: 80, ownedMonsters: [{ id: 'fire_base', level: 3, exp: 0 }] },
+  { expPacks: 4, gold: 80, ownedMonsters: [{ id: 'fire_base', level: 8, exp: 0 }] }
+);
+assert(fedIncoming.expPacks === 4 && fedIncoming.ownedMonsters[0].level === 8, 'incoming feed keeps the lower pack count');
+
+const sameMonsters = context.reconcileSavedProfile_(
+  { expPacks: 4, ownedMonsters: [{ id: 'fire_base', level: 3, exp: 0 }] },
+  { expPacks: 14, ownedMonsters: [{ id: 'fire_base', level: 3, exp: 0 }] }
+);
+assert(sameMonsters.expPacks === 14, 'same monsters keep an incoming pack increase (grant / daily / shop)');
+
+const shopSave = context.reconcileSavedProfile_(
+  { expPacks: 1, gold: 250, ownedMonsters: [{ id: 'fire_base', level: 2, exp: 0 }] },
+  { expPacks: 6, gold: 50, ownedMonsters: [{ id: 'fire_base', level: 2, exp: 0 }] }
+);
+assert(shopSave.expPacks === 6 && shopSave.gold === 50, 'incoming shop purchase keeps the extra packs and the spent gold');
+
 if (!process.exitCode) console.log('season-epoch-test: ok');
