@@ -25,7 +25,7 @@ function fileHash(rel) {
 }
 
 [
-  ['assets/bg/ui-lobby-carousel-s2-1920.png', 'e5336197'],
+  ['assets/bg/ui-lobby-carousel-s2-1920.jpg', '41e323e0'],
   ['assets/monsters/season_aurelion.jpg', '14a637b1'],
   ['assets/shop/shop-merchant.png', 'e49e24f0'],
   ['assets/shop/shop-potion.png', '5a574984'],
