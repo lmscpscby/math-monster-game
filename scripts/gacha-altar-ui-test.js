@@ -32,9 +32,9 @@ function assert(cond, msg) {
 const SERIES_ART = {
   'assets/bg/ui-gacha-banner-shanhai-1920.png': 'ae623e9b',
   'assets/bg/ui-gacha-banner-star-trail-1920.png': 'cbe7d30f',
-  'assets/bg/ui-lobby-carousel-shanhai-1920.png': '6d207644',
-  'assets/bg/ui-lobby-carousel-star-trail-1920.png': 'c000865c',
-  'assets/bg/ui-lobby-carousel-ranked-enter-1920.png': '3a503e37',
+  'assets/bg/ui-lobby-carousel-shanhai-1920.jpg': '580b3324',
+  'assets/bg/ui-lobby-carousel-star-trail-1920.jpg': '245ae291',
+  'assets/bg/ui-lobby-carousel-ranked-enter-1920.jpg': '6799c4dd',
   'assets/bg/promo-star-trail-1920.png': '4e4c82ab'
 };
 
@@ -97,9 +97,10 @@ const carousel = html.slice(carouselStart, carouselEnd);
 assert((carousel.match(/data-lobby-slide="/g) || []).length === 4, 'carousel has exactly 4 slides');
 assert((carousel.match(/data-lobby-dot="/g) || []).length === 4, 'carousel has exactly 4 dots');
 assert(carousel.includes('data-lobby-slide="3"') && carousel.includes('data-lobby-dot="3"'), 'carousel has a fourth slide and dot');
-assert(carousel.includes('ui-lobby-carousel-shanhai-1920.png?v=6d207644'), 'shan-hai slide uses the 1920×720 plate');
-assert(carousel.includes('ui-lobby-carousel-star-trail-1920.png?v=c000865c'), 'star-trail slide uses the 1920×720 plate');
-assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.png?v=3a503e37'), 'brand slide reuses the ranked enter plate');
+assert(carousel.includes('ui-lobby-carousel-shanhai-1920.jpg?v=580b3324'), 'shan-hai slide uses the 1920×720 plate');
+assert(carousel.includes('ui-lobby-carousel-star-trail-1920.jpg?v=245ae291'), 'star-trail slide uses the 1920×720 plate');
+assert(carousel.includes('ui-lobby-carousel-ranked-enter-1920.jpg?v=6799c4dd'), 'brand slide reuses the ranked enter plate');
+assert(!carousel.includes('ui-lobby-carousel-shanhai-1920.png') && !carousel.includes('ui-lobby-carousel-star-trail-1920.png') && !carousel.includes('ui-lobby-carousel-ranked-enter-1920.png') && !carousel.includes('ui-lobby-carousel-s2-1920.png'), 'carousel no longer references the uncompressed png plates');
 assert(!carousel.includes('ui-gacha-stage-mystic-1920.png'), 'shan-hai slide no longer uses the gacha stage plate');
 assert(!carousel.includes('lobby-carousel__title'), 'poster slides do not overlay a large title class');
 assert(!carousel.includes('前往抽卡'), 'poster slides do not keep 前往抽卡');
@@ -151,7 +152,7 @@ assert(!brandSlide.includes('lobby-carousel__title') && !shanSlide.includes('lob
 assert(shanSlide.includes("switchView('temple')") && !shanSlide.includes('openGachaSeries'), 'shan-hai slide opens the book hall');
 assert(starSlide.includes("switchView('temple')") && !starSlide.includes('openGachaSeries'), 'star-trail slide opens the book hall');
 assert(carousel.includes('data-lobby-dot="0"') && carousel.includes('data-lobby-dot="1"') && carousel.includes('data-lobby-dot="2"') && carousel.includes('data-lobby-dot="3"'), 'carousel dots cover the four slides');
-assert(s2Slide.includes('ui-lobby-carousel-s2-1920.png?v=e5336197'), 'S2 slide uses the official 1920×720 poster');
+assert(s2Slide.includes('ui-lobby-carousel-s2-1920.jpg?v=41e323e0'), 'S2 slide uses the official 1920×720 poster');
 assert(s2Slide.includes("switchView('ranked')") && s2Slide.includes('>進入排位賽<') && s2Slide.includes('lobby-hero-cta'), 'S2 slide CTA enters ranked');
 assert(!s2Slide.includes('lobby-carousel__kicker') && !s2Slide.includes('lobby-carousel__sub') && !s2Slide.includes('<h2'), 'S2 slide overlays only the CTA');
 assert(s2Slide.includes('聖光龍王・奧瑞利安') && !s2Slide.includes('聖光麒麟'), 'S2 slide names Aurelion and not the S1 kirin');
