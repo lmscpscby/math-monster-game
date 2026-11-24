@@ -1,5 +1,6 @@
 /**
- * Classroom iPad pass: error contrast, login gate a11y, 44px hit boxes, hover.
+ * Classroom iPad pass: error contrast, login gate a11y, 44px hit boxes, hover,
+ * top-bar Chinese names, parchment placeholder contrast, island plaque px fallback.
  * node scripts/ipad-usability-test.js
  */
 const fs = require('fs');
@@ -60,6 +61,55 @@ labelled.forEach(function (pair) {
   assert(html.includes('for="' + pair[0] + '"'), 'label for ' + pair[0]);
   assert(html.includes('id="' + pair[1] + '"'), 'control id ' + pair[1]);
 });
+
+const headerStart = html.indexOf('<header');
+const headerEnd = html.indexOf('</header>', headerStart);
+const header = html.slice(headerStart, headerEnd);
+const headerNames = [
+  ['header-avatar-btn', '更換大廳頭像'],
+  ['element-chart-btn', '屬性相克'],
+  ['fullscreen-btn', '切換全畫面'],
+  ['bgm-btn', '切換背景音樂'],
+  ['logout-btn', '登出']
+];
+headerNames.forEach(function (pair) {
+  const idAt = header.indexOf('id="' + pair[0] + '"');
+  assert(idAt !== -1, 'header control ' + pair[0]);
+  const tagStart = header.lastIndexOf('<button', idAt);
+  const tagEnd = header.indexOf('>', idAt);
+  const tag = header.slice(tagStart, tagEnd);
+  assert(tag.includes('aria-label="' + pair[1] + '"'), pair[0] + ' aria-label is ' + pair[1]);
+});
+assert(header.includes('>屬性相克</span>'), 'element chart keeps the visible 屬性相克 label');
+assert(header.includes('>換頭像</button>'), 'avatar text button keeps 換頭像');
+assert(header.includes('>每日打卡</span>'), 'daily claim keeps 每日打卡');
+assert(!header.includes('全畫面 toggle'), 'fullscreen tooltip is no longer mixed English');
+assert(!/aria-label="[^"]*[A-Za-z][^"]*"/.test(header), 'header aria-labels stay Traditional Chinese');
+
+assert(/\.ui-field::placeholder\s*\{[^}]*color:\s*rgba\(90,\s*58,\s*28,\s*0\.82\)/.test(css), 'placeholder color is rgba(90, 58, 28, 0.82)');
+assert(/\.ui-field::placeholder\s*\{[^}]*opacity:\s*1/.test(css), 'placeholder opacity stays 1');
+assert(/\.ui-field\s*\{[^}]*color:\s*#3a2412/.test(css), 'typed field color stays #3a2412');
+assert(!/\.ui-field::placeholder\s*\{[^}]*0\.55/.test(css), 'faint 0.55 placeholder alpha is gone');
+
+function fontSizes(selector) {
+  const at = css.indexOf(selector);
+  assert(at !== -1, 'selector ' + selector);
+  const end = css.indexOf('}', at);
+  const body = css.slice(at, end);
+  const sizes = [];
+  const re = /font-size:\s*([^;]+);/g;
+  let match;
+  while ((match = re.exec(body))) sizes.push(match[1].trim());
+  return sizes;
+}
+const openPlate = fontSizes('.island-hotspot__plate-label {');
+const lockedPlate = fontSizes('.island-hotspot--locked .island-hotspot__plate-label {');
+const recreationPlate = fontSizes('.island-hotspot--recreation .island-hotspot__plate-label {');
+assert(openPlate[0] === '12px' && openPlate[1] === 'calc(100cqh * 67 / 160)', 'open plate px fallback then 67/160 cqh (' + openPlate.join(' | ') + ')');
+assert(lockedPlate[0] === '8px' && lockedPlate[1] === 'calc(100cqh * 41 / 160)', 'locked plate px fallback then 41/160 cqh (' + lockedPlate.join(' | ') + ')');
+assert(recreationPlate[0] === '7px' && recreationPlate[1] === 'calc(100cqh * 37 / 160)', 'recreation plate px fallback then 37/160 cqh (' + recreationPlate.join(' | ') + ')');
+assert(css.includes('height: calc(100% * 52 / 830)'), 'plaque height recipe stays');
+assert(css.includes('--x: 45%'), 'island hotspot coordinates stay');
 
 assert(html.includes('function showAuthOverlay'), 'showAuthOverlay exists');
 assert(html.includes('function hideAuthOverlay'), 'hideAuthOverlay exists');
@@ -313,6 +363,33 @@ async function runBrowser(port) {
         inertSupported: 'inert' in HTMLElement.prototype
       };
     })()`);
+    const chromeNames = await evalJs(`(() => {
+      const nick = document.getElementById('login-nickname');
+      const ph = getComputedStyle(nick, '::placeholder');
+      const typed = getComputedStyle(nick);
+      const reg = getComputedStyle(document.getElementById('reg-nickname'), '::placeholder');
+      const pvp = getComputedStyle(document.getElementById('pvp-join-code'), '::placeholder');
+      const labelOf = (id) => document.getElementById(id).getAttribute('aria-label');
+      return {
+        placeholder: ph.color,
+        opacity: ph.opacity,
+        typed: typed.color,
+        reg: reg.color,
+        pvp: pvp.color,
+        avatar: labelOf('header-avatar-btn'),
+        chart: labelOf('element-chart-btn'),
+        full: labelOf('fullscreen-btn'),
+        bgm: labelOf('bgm-btn'),
+        logout: labelOf('logout-btn'),
+        chartVisible: document.querySelector('#element-chart-btn span').textContent
+      };
+    })()`);
+    assert(chromeNames.placeholder === 'rgba(90, 58, 28, 0.82)', 'computed placeholder is rgba(90, 58, 28, 0.82) (' + chromeNames.placeholder + ')');
+    assert(chromeNames.opacity === '1', 'computed placeholder opacity is 1 (' + chromeNames.opacity + ')');
+    assert(chromeNames.typed === 'rgb(58, 36, 18)', 'computed typed color stays #3a2412 (' + chromeNames.typed + ')');
+    assert(chromeNames.reg === chromeNames.placeholder && chromeNames.pvp === chromeNames.placeholder, 'register and room-code placeholders share the field hint');
+    assert(chromeNames.avatar === '更換大廳頭像' && chromeNames.chart === '屬性相克' && chromeNames.full === '切換全畫面' && chromeNames.bgm === '切換背景音樂' && chromeNames.logout === '登出', 'header accessible names (' + JSON.stringify(chromeNames) + ')');
+    assert(chromeNames.chartVisible === '屬性相克', 'element chart visible word stays 屬性相克');
     assert(gate.role === 'dialog' && gate.modal === 'true' && gate.labelled === 'auth-modal-title', 'dialog semantics in the document');
     assert(gate.err === 'rgb(136, 19, 55)' && gate.regErr === 'rgb(136, 19, 55)', 'computed error color is #881337 (' + gate.err + ')');
     assert(gate.first === 'login-nickname', 'first field focused on show (' + gate.first + ')');
@@ -419,11 +496,58 @@ async function runBrowser(port) {
       mobile: true
     });
     const portrait = await evalJs(`(() => {
+      const measure = (sel) => {
+        const el = document.querySelector(sel);
+        const label = el.querySelector('.island-hotspot__plate-label');
+        const r = el.getBoundingClientRect();
+        return { h: r.height, fs: parseFloat(getComputedStyle(label).fontSize) };
+      };
       const hot = document.querySelector('.island-hotspot--training');
       const r = hot.getBoundingClientRect();
-      return { hitH: r.height + 20, hitW: r.width + 20, h: r.height };
+      return {
+        hitH: r.height + 20,
+        hitW: r.width + 20,
+        h: r.height,
+        open: measure('.island-hotspot--training'),
+        locked: measure('.island-hotspot--desert'),
+        recreation: measure('.island-hotspot--recreation')
+      };
     })()`);
     assert(portrait.hitH >= 44, 'island plaque plus inset clears 44px on iPad portrait (' + portrait.hitH.toFixed(1) + ')');
+    function nearPlate(actual, height, ratio, fallback, msg) {
+      const expected = height * ratio;
+      assert(Math.abs(actual - expected) <= 0.8, msg + ' follows cqh (' + actual.toFixed(2) + ' vs ' + expected.toFixed(2) + ')');
+      if (Math.abs(expected - fallback) > 1.25) {
+        assert(Math.abs(actual - fallback) > 0.6, msg + ' is not stuck on the ' + fallback + 'px fallback (' + actual.toFixed(2) + ')');
+      }
+    }
+    nearPlate(portrait.open.fs, portrait.open.h, 67 / 160, 12, 'portrait open plate');
+    nearPlate(portrait.locked.fs, portrait.locked.h, 41 / 160, 8, 'portrait locked plate');
+    nearPlate(portrait.recreation.fs, portrait.recreation.h, 37 / 160, 7, 'portrait recreation plate');
+
+    await pageClient.send('Emulation.setDeviceMetricsOverride', {
+      width: 1280,
+      height: 800,
+      deviceScaleFactor: 1,
+      mobile: false
+    });
+    const desktopPlate = await evalJs(`(() => {
+      const measure = (sel) => {
+        const el = document.querySelector(sel);
+        const label = el.querySelector('.island-hotspot__plate-label');
+        return { h: el.getBoundingClientRect().height, fs: parseFloat(getComputedStyle(label).fontSize), text: label.textContent };
+      };
+      return {
+        open: measure('.island-hotspot--training'),
+        locked: measure('.island-hotspot--desert'),
+        recreation: measure('.island-hotspot--recreation')
+      };
+    })()`);
+    nearPlate(desktopPlate.open.fs, desktopPlate.open.h, 67 / 160, 12, 'desktop open plate');
+    nearPlate(desktopPlate.locked.fs, desktopPlate.locked.h, 41 / 160, 8, 'desktop locked plate');
+    nearPlate(desktopPlate.recreation.fs, desktopPlate.recreation.h, 37 / 160, 7, 'desktop recreation plate');
+    assert(desktopPlate.open.text === '訓練場' && desktopPlate.locked.text === '黃金荒漠（未開放）' && desktopPlate.recreation.text === '小小休憩區（未開放）', 'plate copy stays');
+    console.log('plates', JSON.stringify({ portrait: portrait.open, desktop: desktopPlate.open }));
 
     await pageClient.send('Emulation.setDeviceMetricsOverride', {
       width: 700,
