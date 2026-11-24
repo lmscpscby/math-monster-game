@@ -472,7 +472,7 @@
         #pokemon-battle-arena.neon-stage {
             /* Fallback parchment plate. A battle entry replaces this with one pool stage. */
             background-color: #f6e2c4;
-            background-image: url('assets/bg/ui-battle-stage-bg-1920.png?v=20261110');
+            background-image: url('assets/bg/ui-battle-stage-bg-1920.jpg?v=600b35cd');
             background-size: cover;
             background-position: center 72%;
             background-repeat: no-repeat;
@@ -5893,7 +5893,7 @@
             <!-- Arena clusters stay diagonal: enemy UR (plate|sprite), player LL (sprite|plate). -->
             <div id="pokemon-battle-arena" class="neon-stage poke-stage relative w-full overflow-hidden h-[42vh] md:h-[48vh] max-h-[500px] min-h-[280px]">
                 <!-- Hidden and inert. Poster is updated to the stage chosen for this battle. Crystal-cave sources stay unwired. -->
-                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline preload="none" poster="assets/bg/ui-battle-stage-bg-1920.png?v=20261110" style="display:none" aria-hidden="true"></video>
+                <video id="battle-bg-video" class="battle-bg-video" loop muted playsinline preload="none" poster="assets/bg/ui-battle-stage-bg-1920.jpg?v=600b35cd" style="display:none" aria-hidden="true"></video>
                 <div class="neon-dotgrid absolute inset-0 pointer-events-none" aria-hidden="true"></div>
                 <div id="battle-stage-ring" aria-hidden="true"></div>
                 <div id="battle-vfx-layer" aria-hidden="true"></div>
@@ -9663,9 +9663,12 @@
 
         // One plate per non-ranked battle entry. Parchment plus four thematic plates.
         // 積分爭霸賽 water/fire/grass/thunder 唔入呢個池。
+        // Parchment is the quality-90 4:4:4 JPEG. Its ?v= is that file's sha256 prefix.
+        // The other four plates stay PNG and keep the shared date key.
         const BATTLE_STAGE_BG_VERSION = '20261110';
+        const BATTLE_STAGE_PARCHMENT_VERSION = '600b35cd';
         const BATTLE_STAGE_BACKGROUNDS = [
-            'assets/bg/ui-battle-stage-bg-1920.png',
+            'assets/bg/ui-battle-stage-bg-1920.jpg',
             'assets/bg/ui-battle-stage-bg-forest-1920.png',
             'assets/bg/ui-battle-stage-bg-beach-1920.png',
             'assets/bg/ui-battle-stage-bg-volcano-1920.png',
@@ -9729,8 +9732,11 @@
         }
         /* RANKED_ATTRIBUTE_STAGE_BG_END */
 
-        function battleStageBackgroundUrl(path) {
-            return path + '?v=' + BATTLE_STAGE_BG_VERSION;
+        function battleStageBackgroundUrl(filePath) {
+            const version = filePath === 'assets/bg/ui-battle-stage-bg-1920.jpg'
+                ? BATTLE_STAGE_PARCHMENT_VERSION
+                : BATTLE_STAGE_BG_VERSION;
+            return filePath + '?v=' + version;
         }
 
         function applyBattleStageBackground(url) {
