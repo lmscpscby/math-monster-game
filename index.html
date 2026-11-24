@@ -1432,7 +1432,9 @@
             animation-delay: var(--delay, 0s);
         }
         /* Blank 178×52 scroll. Open type is 67/160 of the plate (~21.8px on the 1296 map).
-           Noto's em box sits low, so lift about 8% of the font-size. */
+           Noto's em box sits low, so lift about 8% of the font-size.
+           px comes first so older iPad Safari, which drops cqh, still gets a readable
+           size near the portrait plate (~12px / ~7px / ~7px). Supporting browsers use cqh. */
         .island-hotspot__plate-label {
             position: absolute;
             left: 50%;
@@ -1447,15 +1449,18 @@
             line-height: 1;
             font-family: "Noto Sans TC", "Noto Sans CJK TC", sans-serif;
             font-weight: 700;
+            font-size: 12px;
             font-size: calc(100cqh * 67 / 160);
             color: #fff8e6;
             text-shadow: 2px 3px 0 rgba(28, 16, 8, 0.86);
             letter-spacing: 0;
         }
         .island-hotspot--locked .island-hotspot__plate-label {
+            font-size: 8px;
             font-size: calc(100cqh * 41 / 160);
         }
         .island-hotspot--recreation .island-hotspot__plate-label {
+            font-size: 7px;
             font-size: calc(100cqh * 37 / 160);
         }
         .island-hotspot__bob img {
@@ -3607,7 +3612,11 @@
             min-height: 48px;
             padding: 0 0.4rem;
         }
-        .ui-field::placeholder { color: rgba(90, 58, 28, 0.55); }
+        /* Same brown as the hint, darker on the medium-panel fill (~#f1cb95): about 4.5:1, still lighter than typed #3a2412. */
+        .ui-field::placeholder {
+            color: rgba(90, 58, 28, 0.82);
+            opacity: 1;
+        }
         .ui-field:focus,
         .ui-select:focus {
             outline: 2px solid rgba(201, 146, 62, 0.9);
@@ -5266,7 +5275,7 @@
             <div id="player-dashboard" class="flex flex-wrap items-center justify-end gap-2 sm:gap-3 min-w-0 flex-1 basis-full sm:basis-auto sm:flex-initial">
                 <div class="ui-nameplate">
                     <button type="button" id="header-avatar-btn" onclick="openAvatarPicker()" class="ui-icon ui-icon--circle ui-icon--avatar" title="撳一下換大廳頭像" aria-label="更換大廳頭像" aria-haspopup="dialog">
-                        <i id="header-avatar-fallback" class="fa-solid fa-user-astronaut"></i>
+                        <i id="header-avatar-fallback" class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
                         <img id="header-avatar-img" alt="" class="hidden">
                     </button>
                     <button type="button" id="header-avatar-change-btn" onclick="openAvatarPicker()" class="ui-btn ui-btn--secondary-alt ui-btn--compact" title="更換大廳頭像" aria-haspopup="dialog">換頭像</button>
@@ -5298,21 +5307,21 @@
                     <span id="daily-claim-label">每日打卡</span>
                 </button>
 
-                <button onclick="toggleElementChartModal()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs" title="屬性相克表">
-                    <i class="fa-solid fa-bolt text-yellow-400"></i>
+                <button type="button" id="element-chart-btn" onclick="toggleElementChartModal()" class="ui-btn ui-btn--secondary ui-btn--compact text-xs" title="屬性相克表" aria-label="屬性相克">
+                    <i class="fa-solid fa-bolt text-yellow-400" aria-hidden="true"></i>
                     <span class="hidden md:inline">屬性相克</span>
                 </button>
 
-                <button onclick="toggleFullScreen()" id="fullscreen-btn" class="ui-icon ui-icon--square" title="全畫面 toggle">
-                    <i class="fa-solid fa-expand" id="fullscreen-icon"></i>
+                <button type="button" onclick="toggleFullScreen()" id="fullscreen-btn" class="ui-icon ui-icon--square" title="切換全畫面" aria-label="切換全畫面">
+                    <i class="fa-solid fa-expand" id="fullscreen-icon" aria-hidden="true"></i>
                 </button>
 
-                <button onclick="toggleAudio()" id="bgm-btn" class="ui-icon ui-icon--square" title="切換背景音樂">
-                    <i class="fa-solid fa-volume-xmark" id="bgm-icon"></i>
+                <button type="button" onclick="toggleAudio()" id="bgm-btn" class="ui-icon ui-icon--square" title="切換背景音樂" aria-label="切換背景音樂">
+                    <i class="fa-solid fa-volume-xmark" id="bgm-icon" aria-hidden="true"></i>
                 </button>
 
-                <button onclick="logout()" id="logout-btn" class="ui-icon ui-icon--square ui-icon--danger hidden" title="登出">
-                    <i class="fa-solid fa-right-from-bracket"></i>
+                <button type="button" onclick="logout()" id="logout-btn" class="ui-icon ui-icon--square ui-icon--danger hidden" title="登出" aria-label="登出">
+                    <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
