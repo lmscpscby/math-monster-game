@@ -54,7 +54,16 @@ const pool = html.slice(poolStart, poolEnd);
 Object.keys(EXPECTED).forEach(function (elementId) {
   assert(!pool.includes(path.basename(EXPECTED[elementId].file)), 'random pool excludes ' + elementId);
 });
-assert(pool.includes('ui-battle-stage-bg-1920.png'), 'random pool keeps parchment');
+assert(pool.includes('ui-battle-stage-bg-1920.jpg'), 'random pool keeps parchment');
+assert(!pool.includes('ui-battle-stage-bg-1920.png'), 'random pool drops the parchment png');
+const parchmentFile = 'assets/bg/ui-battle-stage-bg-1920.jpg';
+const parchmentSha = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, parchmentFile))).digest('hex');
+const parchmentUrl = parchmentFile + '?v=' + parchmentSha.slice(0, 8);
+assert(html.includes("background-image: url('" + parchmentUrl + "')"), '#pokemon-battle-arena.neon-stage uses ' + parchmentUrl);
+assert(html.includes('poster="' + parchmentUrl + '"'), '#battle-bg-video poster uses ' + parchmentUrl);
+assert(html.includes("const BATTLE_STAGE_PARCHMENT_VERSION = '" + parchmentSha.slice(0, 8) + "'"), 'parchment cache key matches sha256');
+assert(html.includes("const BATTLE_STAGE_BG_VERSION = '20261110'"), 'thematic plates keep the shared cache key');
+assert(!html.includes('ui-battle-stage-bg-1920.png'), 'parchment png is no longer referenced');
 assert(pool.includes('ui-battle-stage-bg-forest-1920.png'), 'random pool keeps forest');
 assert(pool.includes('ui-battle-stage-bg-beach-1920.png'), 'random pool keeps beach');
 assert(pool.includes('ui-battle-stage-bg-volcano-1920.png'), 'random pool keeps volcano');
