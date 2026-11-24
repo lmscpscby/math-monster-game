@@ -537,7 +537,7 @@
             margin: 0;
             padding: 0;
             text-align: right;
-            font-size: 10px;
+            font-size: 12px;
             line-height: 1.15;
         }
         #pokemon-battle-arena.neon-stage .neon-nameplate > .flex {
@@ -563,7 +563,9 @@
             right: 16%;
             top: 68%;
             margin: 0;
-            font-size: 10px;
+            /* 12px keeps HP readable at classroom distance. line-height 1 holds the ink inside the parchment; 1.5 would drop the numerals into the lower carving. */
+            font-size: 12px;
+            line-height: 1;
         }
 
         #pokemon-battle-arena.neon-stage .neon-nameplate-boss {
@@ -593,6 +595,8 @@
         #pokemon-battle-arena.neon-stage #enemy-name {
             color: #3a2412;
             text-shadow: 0 1px 0 rgba(255, 248, 236, 0.65);
+            font-size: 12px;
+            line-height: 1.15;
         }
 
         #pokemon-battle-arena.neon-stage #player-hp-text,
@@ -767,7 +771,7 @@
                 max-width: 12rem;
             }
             #pokemon-battle-arena.neon-stage.poke-stage .neon-nameplate > .neon-name-corner {
-                font-size: 9px;
+                font-size: 12px;
             }
             #pokemon-battle-arena.neon-stage.poke-stage .neon-sprite-enemy,
             #pokemon-battle-arena.neon-stage.poke-stage .neon-sprite-player {
@@ -1056,7 +1060,8 @@
                 top: 74%;
                 left: 12%;
                 right: 16%;
-                font-size: 9px;
+                /* 12px sits on the lower carving of this stacked plate. 11px stays inside the parchment. */
+                font-size: 11px;
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -5888,15 +5893,15 @@
                 <div class="neon-cluster-enemy">
                     <div class="neon-hud-enemy neon-sprite-col">
                         <div class="neon-nameplate neon-nameplate-boss w-full">
-                            <span id="enemy-level-tag" class="neon-name-corner shrink-0 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
+                            <span id="enemy-level-tag" class="neon-name-corner shrink-0 text-[12px] px-1.5 py-0.5 rounded font-bold">Boss Lv.10</span>
                             <div class="flex items-center gap-1 mb-0.5 min-w-0 pr-14 sm:pr-16">
                                 <span id="enemy-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-blue-500 text-white">水</span>
-                                <span id="enemy-name" class="font-black text-[9px] sm:text-[11px] truncate" title="關卡守護獸">關卡守護獸</span>
+                                <span id="enemy-name" class="font-black text-[12px] truncate" title="關卡守護獸">關卡守護獸</span>
                             </div>
                             <div class="neon-hp-track w-full">
                                 <div id="enemy-hp-bar" class="h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
                             </div>
-                            <div class="text-[9px] mt-0.5 flex justify-between font-mono">
+                            <div class="text-[12px] mt-0.5 flex justify-between font-mono">
                                 <span>HP</span>
                                 <span id="enemy-hp-text">100 / 100</span>
                             </div>
@@ -5934,15 +5939,15 @@
                     </div>
                     <div class="neon-hud-player neon-sprite-col">
                         <div class="neon-nameplate w-full">
-                            <span id="player-team-slot-badge" class="neon-name-corner shrink-0 text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
+                            <span id="player-team-slot-badge" class="neon-name-corner shrink-0 text-[12px] px-1.5 py-0.5 rounded font-bold">第 1 隻</span>
                             <div class="flex items-center gap-1 mb-0.5 min-w-0 pr-14 sm:pr-16">
                                 <span id="player-elem-badge" class="shrink-0 px-1 py-0.5 text-[8px] rounded font-black bg-red-500 text-white">火</span>
-                                <span id="player-monster-name" class="font-black text-[9px] sm:text-[11px] truncate" title="己方怪獸">己方怪獸</span>
+                                <span id="player-monster-name" class="font-black text-[12px] truncate" title="己方怪獸">己方怪獸</span>
                             </div>
                             <div class="neon-hp-track w-full">
                                 <div id="player-hp-bar" class="h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
                             </div>
-                            <div class="text-[9px] mt-0.5 flex justify-between font-mono">
+                            <div class="text-[12px] mt-0.5 flex justify-between font-mono">
                                 <span>HP</span>
                                 <span id="player-hp-text">100 / 100</span>
                             </div>
