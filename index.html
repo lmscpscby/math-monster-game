@@ -45,10 +45,12 @@
             transition: all 0.25s ease;
         }
 
-        .glass-card:hover {
-            transform: translateY(-4px) scale(1.02);
-            border-color: rgba(201, 146, 62, 0.75);
-            box-shadow: 0 12px 30px -5px rgba(141, 90, 40, 0.45);
+        @media (hover: hover) and (pointer: fine) {
+            .glass-card:hover {
+                transform: translateY(-4px) scale(1.02);
+                border-color: rgba(201, 146, 62, 0.75);
+                box-shadow: 0 12px 30px -5px rgba(141, 90, 40, 0.45);
+            }
         }
 
         /* 圖鑑角標：S1 賽季神獸（聖光麒麟）。字喺 HTML，唔燒入 PNG。 */
@@ -999,9 +1001,11 @@
             cursor: pointer;
             transition: filter 0.15s ease, transform 0.15s ease;
         }
-        #view-battle #quiz-options-grid > button:hover {
-            background-color: transparent;
-            filter: brightness(1.08);
+        @media (hover: hover) and (pointer: fine) {
+            #view-battle #quiz-options-grid > button:hover {
+                background-color: transparent;
+                filter: brightness(1.08);
+            }
         }
         #view-battle #quiz-options-grid > button:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -1212,9 +1216,11 @@
             right: auto;
             bottom: 8%;
         }
-        .lobby-carousel__hit:hover .lobby-hero-cta,
-        .lobby-carousel__hit:hover .ranked-btn {
-            filter: brightness(1.06);
+        @media (hover: hover) and (pointer: fine) {
+            .lobby-carousel__hit:hover .lobby-hero-cta,
+            .lobby-carousel__hit:hover .ranked-btn {
+                filter: brightness(1.06);
+            }
         }
         .lobby-carousel__kicker {
             font-size: 0.75rem;
@@ -1260,7 +1266,9 @@
             cursor: pointer;
             pointer-events: auto;
         }
-        #view-home .lobby-hero-cta:hover { filter: brightness(1.06); }
+        @media (hover: hover) and (pointer: fine) {
+            #view-home .lobby-hero-cta:hover { filter: brightness(1.06); }
+        }
         #view-home .lobby-hero-cta:active { transform: translateY(1px); }
         .lobby-carousel__nav {
             display: flex;
@@ -1395,15 +1403,18 @@
             position: absolute;
             inset: -10px;
         }
-        .island-hotspot:hover,
         .island-hotspot:focus-visible {
             z-index: 4;
             transform: translate(-50%, -50%) scale(1.075);
-        }
-        .island-hotspot:focus-visible {
             outline: 3px solid #fff7d6;
             outline-offset: 4px;
             border-radius: 1rem;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .island-hotspot:hover {
+                z-index: 4;
+                transform: translate(-50%, -50%) scale(1.075);
+            }
         }
         .island-hotspot__bob {
             display: block;
@@ -1459,9 +1470,13 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
         }
-        .island-hotspot:hover .island-hotspot__bob,
         .island-hotspot:focus-visible .island-hotspot__bob {
             filter: brightness(1.05) drop-shadow(0 10px 14px rgba(8, 40, 24, 0.4));
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .island-hotspot:hover .island-hotspot__bob {
+                filter: brightness(1.05) drop-shadow(0 10px 14px rgba(8, 40, 24, 0.4));
+            }
         }
         .island-hotspot:active .island-hotspot__bob {
             animation: none;
@@ -1578,7 +1593,9 @@
             -webkit-tap-highlight-color: transparent;
             text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
         }
-        .battle-potion-btn:hover { filter: brightness(1.06); }
+        @media (hover: hover) and (pointer: fine) {
+            .battle-potion-btn:hover { filter: brightness(1.06); }
+        }
         .battle-potion-btn:active { filter: brightness(1.12); transform: translateY(1px); }
         #card-zoom-modal .ui-modal.is-lore {
             max-width: 56rem;
@@ -1659,7 +1676,9 @@
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
         }
-        .island-admin-btn:hover { filter: brightness(1.08); }
+        @media (hover: hover) and (pointer: fine) {
+            .island-admin-btn:hover { filter: brightness(1.08); }
+        }
         .island-admin-btn:focus-visible {
             outline: 3px solid #f6e2a8;
             outline-offset: 2px;
@@ -1743,7 +1762,9 @@
             -webkit-tap-highlight-color: transparent;
             transition: filter 0.15s ease, transform 0.15s ease;
         }
-        .ranked-btn:hover { filter: brightness(1.08); }
+        @media (hover: hover) and (pointer: fine) {
+            .ranked-btn:hover { filter: brightness(1.08); }
+        }
         .ranked-btn:active { transform: translateY(1px); }
         .ranked-btn:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -2448,7 +2469,9 @@
             -webkit-tap-highlight-color: transparent;
             transition: filter 0.15s ease, transform 0.15s ease;
         }
-        .adventure-back:hover { filter: brightness(1.06); }
+        @media (hover: hover) and (pointer: fine) {
+            .adventure-back:hover { filter: brightness(1.06); }
+        }
         .adventure-back:active { transform: translateY(1px); }
         .adventure-back:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -2549,7 +2572,9 @@
             background-image: url('assets/bg/ui-adventure-grade-tab-active.png');
             color: #3a220c;
         }
-        .grade-tab-btn:hover { filter: brightness(1.05); }
+        @media (hover: hover) and (pointer: fine) {
+            .grade-tab-btn:hover { filter: brightness(1.05); }
+        }
         .grade-tab-btn:active { transform: translateY(1px); }
         .grade-tab-btn:focus-visible {
             outline: 3px solid #e6c27a;
@@ -2710,7 +2735,9 @@
             font-size: clamp(0.625rem, 1.85cqi, 0.75rem);
             font-weight: 800;
         }
-        .adventure-card__cta:hover { filter: brightness(1.08); }
+        @media (hover: hover) and (pointer: fine) {
+            .adventure-card__cta:hover { filter: brightness(1.08); }
+        }
         .adventure-card__cta:active { transform: translateY(1px); }
         .adventure-card__cta:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -2906,7 +2933,9 @@
             cursor: pointer;
             text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
         }
-        .adventure-floor__go:hover { filter: brightness(1.06); }
+        @media (hover: hover) and (pointer: fine) {
+            .adventure-floor__go:hover { filter: brightness(1.06); }
+        }
         .adventure-floor__go:disabled {
             filter: grayscale(0.45) brightness(0.86);
             cursor: not-allowed;
@@ -3012,7 +3041,9 @@
             .battle-quiz--tower .battle-quiz__options { top: 36%; bottom: 5%; }
         }
         .adventure-banner h2 span.is-off { display: none; }
-        .adventure-tower-card:hover .adventure-tower-card__frame { filter: brightness(1.06); }
+        @media (hover: hover) and (pointer: fine) {
+            .adventure-tower-card:hover .adventure-tower-card__frame { filter: brightness(1.06); }
+        }
         .adventure-tower-card:active { transform: translateY(1px); }
         .adventure-tower-card:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -3120,7 +3151,9 @@
             -webkit-tap-highlight-color: transparent;
             transition: filter 0.15s ease, transform 0.15s ease;
         }
-        .climb-start:hover { filter: brightness(1.06); }
+        @media (hover: hover) and (pointer: fine) {
+            .climb-start:hover { filter: brightness(1.06); }
+        }
         .climb-start:active { transform: translateY(1px); }
         .climb-start:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -3379,6 +3412,12 @@
         .ui-parchment .text-slate-400 {
             color: #3d2914;
         }
+        /* Parchment is #f4e4c8. text-rose-400 is about 2.15:1; #881337 is about 7.6:1.
+           Color only — size, weight, and placement stay on the utility classes. */
+        #login-error,
+        #reg-error {
+            color: #881337;
+        }
         .ui-parchment input[type="radio"] {
             accent-color: #a87420;
         }
@@ -3436,7 +3475,9 @@
             -webkit-tap-highlight-color: transparent;
             transition: filter 0.15s ease, transform 0.15s ease;
         }
-        .ui-btn:hover { filter: brightness(1.08); }
+        @media (hover: hover) and (pointer: fine) {
+            .ui-btn:hover { filter: brightness(1.08); }
+        }
         .ui-btn:active { transform: translateY(1px); }
         .ui-btn:focus-visible {
             outline: 3px solid #f6e2a8;
@@ -3514,7 +3555,9 @@
             cursor: pointer;
             line-height: 1;
         }
-        .ui-icon:hover { filter: brightness(1.1); }
+        @media (hover: hover) and (pointer: fine) {
+            .ui-icon:hover { filter: brightness(1.1); }
+        }
         .ui-icon:focus-visible {
             outline: 3px solid #f6e2a8;
             outline-offset: 3px;
@@ -3734,7 +3777,9 @@
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
             -webkit-tap-highlight-color: transparent;
         }
-        .gacha-back:hover { filter: brightness(1.08); }
+        @media (hover: hover) and (pointer: fine) {
+            .gacha-back:hover { filter: brightness(1.08); }
+        }
         .gacha-back:active { transform: translateY(1px); }
         .gacha-back:focus-visible {
             outline: 3px solid #ffe9a8;
@@ -3808,7 +3853,9 @@
             color: #fff8ec;
             text-shadow: 0 1px 1px rgba(42, 20, 6, 0.85);
         }
-        .gacha-series-tab:hover { filter: brightness(1.05); }
+        @media (hover: hover) and (pointer: fine) {
+            .gacha-series-tab:hover { filter: brightness(1.05); }
+        }
         .gacha-series-tab:focus-visible {
             outline: 3px solid #ffe9a8;
             outline-offset: 3px;
@@ -3973,7 +4020,9 @@
             color: #ffffff;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
         }
-        .gacha-summon:hover { filter: brightness(1.06); transform: translateY(-2px); }
+        @media (hover: hover) and (pointer: fine) {
+            .gacha-summon:hover { filter: brightness(1.06); transform: translateY(-2px); }
+        }
         .gacha-summon:active { transform: translateY(1px); }
         .gacha-summon:focus-visible {
             outline: 3px solid #ffe9a8;
@@ -4424,7 +4473,9 @@
             object-position: top center;
             transition: transform 0.5s ease;
         }
-        #view-temple-star .portrait-box:hover .portrait-img { transform: scale(1.05); }
+        @media (hover: hover) and (pointer: fine) {
+            #view-temple-star .portrait-box:hover .portrait-img { transform: scale(1.05); }
+        }
         #view-temple-star .hero-titles h2 {
             margin: 0 0 8px;
             font-family: "Cinzel Decorative", "Noto Serif TC", serif;
@@ -4687,7 +4738,9 @@
             object-position: center;
             transition: transform 0.5s ease;
         }
-        #view-temple-shanhai .portrait-box:hover .portrait-img { transform: scale(1.05); }
+        @media (hover: hover) and (pointer: fine) {
+            #view-temple-shanhai .portrait-box:hover .portrait-img { transform: scale(1.05); }
+        }
         #view-temple-shanhai .hero-titles h2 {
             margin: 0 0 8px;
             font-family: "Noto Serif TC", serif;
@@ -4874,6 +4927,63 @@
             #view-temple-shanhai .bond-item:hover { transform: none; }
         }
 
+        /* Coarse pointers: grow the hit box, not the drawing.
+           Island plaques already use ::after { inset: -10px }. On a classroom
+           iPad that clears 44px (portrait plate ~30px + 20px inset), so the
+           1296×830 percentages stay. Dot and nav gaps open up so the 44px
+           boxes do not touch each other or the arrows. */
+        @media (pointer: coarse) {
+            .lobby-carousel__nav {
+                gap: 20px;
+                padding: 18px 0.2rem;
+            }
+            .lobby-carousel__dots { gap: 40px; }
+            .lobby-carousel__dot,
+            .lobby-carousel__arrow,
+            button.ui-icon,
+            .ui-btn--compact,
+            .battle-potion-btn,
+            #view-battle #quiz-options-grid > button {
+                position: relative;
+            }
+            .lobby-carousel__dot::before,
+            button.ui-icon::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 44px;
+                height: 44px;
+                transform: translate(-50%, -50%);
+            }
+            .lobby-carousel__arrow::before,
+            .ui-btn--compact::before,
+            .battle-potion-btn::before,
+            #view-battle #quiz-options-grid > button::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                height: 44px;
+                transform: translateY(-50%);
+            }
+        }
+        @media (pointer: coarse) and (max-width: 720px) {
+            .battle-quiz__options { gap: 0.45rem 0.55rem; }
+        }
+        /* Tailwind hover:scale-105 sticks after a tap. Keep it for a real mouse. */
+        .hover\:scale-105:hover {
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .hover\:scale-105:hover {
+                --tw-scale-x: 1.05;
+                --tw-scale-y: 1.05;
+            }
+        }
+
         /* first-party-room-hide: rooms and dialogs that toggle class "hidden".
            !important beats same-element display:flex (especially .ranked-view)
            when the Tailwind Play CDN is blocked, slow, or injected later.
@@ -4917,13 +5027,13 @@
     </audio>
 
     <!-- AUTH MODAL OVERLAY -->
-    <div id="auth-modal-overlay" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4">
+    <div id="auth-modal-overlay" class="ui-modal-overlay fixed inset-0 z-50 flex justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
         <div class="ui-modal ui-parchment w-full max-w-lg my-auto">
             <div class="text-center mb-5">
                 <div class="ui-icon ui-icon--ornate ui-icon--lg mx-auto mb-3" aria-hidden="true">
                     <i class="fa-solid fa-square-root-variable"></i>
                 </div>
-                <h1 class="text-2xl md:text-3xl font-black">
+                <h1 id="auth-modal-title" class="text-2xl md:text-3xl font-black">
                     無限召喚：數理之王
                 </h1>
                 <p class="text-xs md:text-sm mt-1">請登入或註冊帳號以開始遊戲</p>
@@ -4942,12 +5052,12 @@
                 <div class="flex items-center justify-between text-xs text-slate-300 px-1">
                     <span>登入方式：</span>
                     <div class="space-x-3">
-                        <label class="inline-flex items-center cursor-pointer">
-                            <input type="radio" name="login-mode" value="nickname" checked onchange="toggleLoginMode('nickname')" class="text-pink-600 focus:ring-0">
+                        <label class="inline-flex items-center cursor-pointer" for="login-mode-nickname-radio">
+                            <input type="radio" id="login-mode-nickname-radio" name="login-mode" value="nickname" checked onchange="toggleLoginMode('nickname')" class="text-pink-600 focus:ring-0">
                             <span class="ml-1 text-slate-200">個人別號</span>
                         </label>
-                        <label class="inline-flex items-center cursor-pointer">
-                            <input type="radio" name="login-mode" value="school" onchange="toggleLoginMode('school')" class="text-pink-600 focus:ring-0">
+                        <label class="inline-flex items-center cursor-pointer" for="login-mode-school-radio">
+                            <input type="radio" id="login-mode-school-radio" name="login-mode" value="school" onchange="toggleLoginMode('school')" class="text-pink-600 focus:ring-0">
                             <span class="ml-1 text-slate-200">學校/班別</span>
                         </label>
                     </div>
@@ -4955,7 +5065,7 @@
 
                 <div id="login-mode-nickname" class="space-y-3">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname)</label>
+                        <label for="login-nickname" class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname)</label>
                         <div class="ui-field-wrap">
                             <i class="fa-solid fa-user"></i>
                             <input type="text" id="login-nickname" class="ui-field" placeholder="請輸入個人別號">
@@ -4965,12 +5075,12 @@
 
                 <div id="login-mode-school" class="space-y-3 hidden">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱</label>
+                        <label for="login-school" class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱</label>
                         <input type="text" id="login-school" class="ui-field" placeholder="例如: 培正小學">
                     </div>
                     <div class="grid grid-cols-2 gap-3">
                         <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1">班別</label>
+                            <label for="login-class" class="block text-xs font-semibold text-slate-300 mb-1">班別</label>
                                                         <select id="login-class" class="ui-select">
                                 <option value="">請選擇班別</option>
                             <option value="1A">1A</option>
@@ -4994,7 +5104,7 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-1">學號</label>
+                            <label for="login-class-no" class="block text-xs font-semibold text-slate-300 mb-1">學號</label>
                             <select id="login-class-no" class="ui-select">
                                 <option value="">請選擇學號</option>
                             <option value="1">1</option>
@@ -5033,14 +5143,14 @@
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">密碼</label>
+                    <label for="login-password" class="block text-xs font-semibold text-slate-300 mb-1">密碼</label>
                     <div class="ui-field-wrap">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" id="login-password" required class="ui-field" placeholder="請輸入密碼">
                     </div>
                 </div>
 
-                <div id="login-error" class="text-rose-400 text-xs text-center min-h-[1rem]"></div>
+                <div id="login-error" class="text-rose-400 text-xs text-center min-h-[1rem]" aria-live="polite"></div>
 
                 <button type="submit" class="ui-btn ui-btn--lg text-sm">
                     <span>登入冒險</span>
@@ -5050,12 +5160,12 @@
 
             <form id="form-register" onsubmit="handleRegister(event)" class="space-y-3 hidden">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱 <span class="text-rose-400">*</span></label>
+                    <label for="reg-school" class="block text-xs font-semibold text-slate-300 mb-1">中文學校名稱 <span class="text-rose-400">*</span></label>
                     <input type="text" id="reg-school" required class="ui-field" placeholder="全稱或簡稱 (例如: 培正小學)">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">班別 <span class="text-rose-400">*</span></label>
+                        <label for="reg-class" class="block text-xs font-semibold text-slate-300 mb-1">班別 <span class="text-rose-400">*</span></label>
                                                 <select id="reg-class" required class="ui-select">
                             <option value="" disabled selected>請選擇班別</option>
                             <option value="1A">1A</option>
@@ -5079,7 +5189,7 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">學號 <span class="text-rose-400">*</span></label>
+                        <label for="reg-class-no" class="block text-xs font-semibold text-slate-300 mb-1">學號 <span class="text-rose-400">*</span></label>
                         <select id="reg-class-no" required class="ui-select">
                             <option value="" disabled selected>請選擇學號</option>
                             <option value="1">1</option>
@@ -5116,15 +5226,15 @@
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname) <span class="text-rose-400">*</span></label>
+                    <label for="reg-nickname" class="block text-xs font-semibold text-slate-300 mb-1">個人別號 (Nickname) <span class="text-rose-400">*</span></label>
                     <input type="text" id="reg-nickname" required class="ui-field" placeholder="用於顯示與快捷登入">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">設定密碼 <span class="text-rose-400">*</span></label>
+                    <label for="reg-password" class="block text-xs font-semibold text-slate-300 mb-1">設定密碼 <span class="text-rose-400">*</span></label>
                     <input type="password" id="reg-password" required minlength="4" class="ui-field" placeholder="至少 4 位數">
                 </div>
 
-                <div id="reg-error" class="text-rose-400 text-xs text-center min-h-[1rem]"></div>
+                <div id="reg-error" class="text-rose-400 text-xs text-center min-h-[1rem]" aria-live="polite"></div>
 
                 <button type="submit" class="ui-btn ui-btn--lg text-sm">
                     <span>建立帳號並登入</span>
@@ -5224,7 +5334,7 @@
                         </button>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate lobby-carousel__slide--s2" data-lobby-slide="1" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="switchView('ranked')" aria-label="進入排位賽，聖光龍王・奧瑞利安">
+                        <button type="button" class="lobby-carousel__hit" tabindex="-1" onclick="switchView('ranked')" aria-label="進入排位賽，聖光龍王・奧瑞利安">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-s2-1920.jpg?v=41e323e0" alt="S2賽季限定卡片登場：聖光龍王・奧瑞利安" loading="lazy" fetchpriority="low">
                             <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__plate-cta">
@@ -5233,7 +5343,7 @@
                         </button>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="2" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="switchView('temple')" aria-label="進入知識聖殿，山海經">
+                        <button type="button" class="lobby-carousel__hit" tabindex="-1" onclick="switchView('temple')" aria-label="進入知識聖殿，山海經">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-shanhai-1920.jpg?v=580b3324" alt="山海經：神獸之戰" loading="lazy" fetchpriority="low">
                             <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__copy">
@@ -5246,7 +5356,7 @@
                         </button>
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate" data-lobby-slide="3" aria-hidden="true">
-                        <button type="button" class="lobby-carousel__hit" onclick="switchView('temple')" aria-label="進入知識聖殿，星軌命途">
+                        <button type="button" class="lobby-carousel__hit" tabindex="-1" onclick="switchView('temple')" aria-label="進入知識聖殿，星軌命途">
                             <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-star-trail-1920.jpg?v=245ae291" alt="星軌命途：符文紀元" loading="lazy" fetchpriority="low">
                             <span class="lobby-carousel__scrim"></span>
                             <span class="lobby-carousel__copy">
@@ -7815,10 +7925,7 @@
         function claimDailyReward() {
             if (!currentUser) {
                 showSyncToast('請先登入再打卡');
-                try {
-                    var overlay = document.getElementById('auth-modal-overlay');
-                    if (overlay) overlay.classList.remove('hidden');
-                } catch (e) {}
+                try { showAuthOverlay(); } catch (e) {}
                 return;
             }
             if (dailyClaimInFlight) return;
@@ -8831,10 +8938,7 @@
         function openAvatarPicker() {
             if (!currentUser) {
                 try { showSyncToast('請先登入，再揀大廳頭像'); } catch (e) {}
-                try {
-                    var overlay = document.getElementById('auth-modal-overlay');
-                    if (overlay) overlay.classList.remove('hidden');
-                } catch (e2) {}
+                try { showAuthOverlay(); } catch (e2) {}
                 return;
             }
             refreshLobbyAvatarModal();
@@ -9813,11 +9917,196 @@
             } catch(e){}
         }
 
+        /* 登入閘保持現有 overlay。唔轉原生 dialog，因為 Esc／返回手勢會關掉。
+           點外面亦唔可以關閉。inert 只係加強；舊 iPad 靠 tabindex="-1" 同 Tab 焦點圈。 */
+        var authReturnFocus = null;
+        var authTabTrapBound = false;
+        var authInertOk = typeof HTMLElement !== 'undefined' && 'inert' in HTMLElement.prototype;
+
+        function authOverlayEl() {
+            return document.getElementById('auth-modal-overlay');
+        }
+
+        function authPanelIsOff(el) {
+            var overlay = authOverlayEl();
+            var node = el;
+            while (node && node !== overlay) {
+                if (node.classList && node.classList.contains('hidden')) return true;
+                node = node.parentElement;
+            }
+            return false;
+        }
+
+        function setAuthPanelInactive(el, inactive) {
+            if (!el) return;
+            if (authInertOk) el.inert = !!inactive;
+            var nodes = el.querySelectorAll('a[href], button, input, select, textarea');
+            for (var i = 0; i < nodes.length; i++) {
+                var node = nodes[i];
+                if (inactive) {
+                    if (!node.hasAttribute('data-auth-tabindex')) {
+                        node.setAttribute('data-auth-tabindex', node.hasAttribute('tabindex') ? node.getAttribute('tabindex') : '');
+                    }
+                    node.setAttribute('tabindex', '-1');
+                } else if (node.hasAttribute('data-auth-tabindex')) {
+                    var prev = node.getAttribute('data-auth-tabindex');
+                    if (prev) node.setAttribute('tabindex', prev);
+                    else node.removeAttribute('tabindex');
+                    node.removeAttribute('data-auth-tabindex');
+                }
+            }
+        }
+
+        function syncAuthOffMode() {
+            var loginForm = document.getElementById('form-login');
+            var regForm = document.getElementById('form-register');
+            var nickBox = document.getElementById('login-mode-nickname');
+            var schoolBox = document.getElementById('login-mode-school');
+            setAuthPanelInactive(loginForm, authPanelIsOff(loginForm));
+            setAuthPanelInactive(regForm, authPanelIsOff(regForm));
+            setAuthPanelInactive(nickBox, authPanelIsOff(nickBox));
+            setAuthPanelInactive(schoolBox, authPanelIsOff(schoolBox));
+        }
+
+        function authFocusable(root) {
+            var nodes = root.querySelectorAll('a[href], button, input, select, textarea');
+            var out = [];
+            for (var i = 0; i < nodes.length; i++) {
+                var el = nodes[i];
+                if (el.disabled) continue;
+                if (el.tabIndex < 0) continue;
+                if (el.closest('[inert]')) continue;
+                if (el.closest('.hidden')) continue;
+                out.push(el);
+            }
+            return out;
+        }
+
+        function firstAuthField() {
+            var regForm = document.getElementById('form-register');
+            var loginForm = document.getElementById('form-login');
+            var form = (regForm && !regForm.classList.contains('hidden')) ? regForm : loginForm;
+            if (!form) return null;
+            var nodes = form.querySelectorAll('input, select, textarea');
+            for (var i = 0; i < nodes.length; i++) {
+                var el = nodes[i];
+                if (el.disabled || el.type === 'radio' || el.type === 'hidden' || el.type === 'file') continue;
+                if (el.tabIndex < 0) continue;
+                if (el.closest('.hidden') || el.closest('[inert]')) continue;
+                return el;
+            }
+            var all = authFocusable(form);
+            return all.length ? all[0] : null;
+        }
+
+        function focusAuthFirstField(force) {
+            var overlay = authOverlayEl();
+            if (!overlay || overlay.classList.contains('hidden')) return;
+            var active = document.activeElement;
+            if (!force && active && overlay.contains(active) && active !== overlay) return;
+            var field = firstAuthField();
+            if (field) {
+                try { field.focus(); } catch (e) {}
+            }
+        }
+
+        function setAuthBackgroundInert(on) {
+            if (!authInertOk) return;
+            var overlay = authOverlayEl();
+            var kids = document.body ? document.body.children : [];
+            for (var i = 0; i < kids.length; i++) {
+                var child = kids[i];
+                if (child === overlay) continue;
+                var tag = child.tagName;
+                if (tag === 'SCRIPT' || tag === 'AUDIO' || tag === 'LINK') continue;
+                child.inert = !!on;
+            }
+        }
+
+        function isShownFocusTarget(el) {
+            if (!el || !el.isConnected || el.disabled) return false;
+            if (el.closest('.hidden') || el.closest('[inert]')) return false;
+            var style = window.getComputedStyle(el);
+            return style.display !== 'none' && style.visibility !== 'hidden';
+        }
+
+        function showAuthOverlay() {
+            var overlay = authOverlayEl();
+            if (!overlay) return;
+            var wasHidden = overlay.classList.contains('hidden');
+            if (wasHidden) {
+                var active = document.activeElement;
+                if (active && active !== document.body && active !== document.documentElement && !overlay.contains(active)) {
+                    authReturnFocus = active;
+                }
+                overlay.classList.remove('hidden');
+            }
+            syncAuthOffMode();
+            setAuthBackgroundInert(true);
+            focusAuthFirstField(false);
+        }
+
+        function hideAuthOverlay() {
+            var overlay = authOverlayEl();
+            if (!overlay || overlay.classList.contains('hidden')) return;
+            overlay.classList.add('hidden');
+            setAuthBackgroundInert(false);
+            var back = authReturnFocus;
+            authReturnFocus = null;
+            if (isShownFocusTarget(back)) {
+                try { back.focus(); } catch (e) {}
+                return;
+            }
+            var landing = document.getElementById('lobby-carousel');
+            if (landing) {
+                try { landing.focus(); } catch (e2) {}
+            }
+        }
+
+        function onAuthTabKey(e) {
+            if (e.key !== 'Tab') return;
+            var overlay = authOverlayEl();
+            if (!overlay || overlay.classList.contains('hidden')) return;
+            var items = authFocusable(overlay);
+            if (!items.length) return;
+            var first = items[0];
+            var last = items[items.length - 1];
+            var active = document.activeElement;
+            if (e.shiftKey) {
+                if (active === first || !overlay.contains(active)) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else if (active === last || !overlay.contains(active)) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+
+        function bindAuthTabTrap() {
+            if (authTabTrapBound) return;
+            authTabTrapBound = true;
+            document.addEventListener('keydown', onAuthTabKey);
+        }
+
+        function initAuthGate() {
+            bindAuthTabTrap();
+            syncAuthOffMode();
+            var overlay = authOverlayEl();
+            if (overlay && !overlay.classList.contains('hidden')) {
+                setAuthBackgroundInert(true);
+                focusAuthFirstField(false);
+            }
+        }
+
         function switchAuthTab(tab) {
             const loginForm = document.getElementById('form-login');
             const regForm = document.getElementById('form-register');
             const loginBtn = document.getElementById('tab-btn-login');
             const regBtn = document.getElementById('tab-btn-register');
+            var active = document.activeElement;
+            var leaving = tab === 'login' ? regForm : loginForm;
+            var moveFocus = !!(active && leaving && leaving.contains(active));
 
             if (tab === 'login') {
                 loginForm.classList.remove('hidden');
@@ -9830,11 +10119,16 @@
                 regBtn.className = "ui-btn ui-btn--primary flex-1 text-sm";
                 loginBtn.className = "ui-btn ui-btn--secondary flex-1 text-sm";
             }
+            syncAuthOffMode();
+            if (moveFocus) focusAuthFirstField(true);
         }
 
         function toggleLoginMode(mode) {
             const nickBox = document.getElementById('login-mode-nickname');
             const schoolBox = document.getElementById('login-mode-school');
+            var active = document.activeElement;
+            var leaving = mode === 'nickname' ? schoolBox : nickBox;
+            var moveFocus = !!(active && leaving && leaving.contains(active));
             if (mode === 'nickname') {
                 nickBox.classList.remove('hidden');
                 schoolBox.classList.add('hidden');
@@ -9842,6 +10136,8 @@
                 nickBox.classList.add('hidden');
                 schoolBox.classList.remove('hidden');
             }
+            syncAuthOffMode();
+            if (moveFocus) focusAuthFirstField(true);
         }
 
         function getUsersDatabase() {
@@ -10154,9 +10450,9 @@
 
             localStorage.setItem('math_monster_active_session', currentUser.nickname);
 
-            document.getElementById('auth-modal-overlay').classList.add('hidden');
             document.getElementById('logout-btn').classList.remove('hidden');
             document.getElementById('logout-btn').classList.add('flex');
+            hideAuthOverlay();
 
             updateUserDashboardUI();
             updateAdminUiVisibility();
@@ -10181,7 +10477,7 @@
             activeUserKey = null;
             lastCloudProfile = null;
             localStorage.removeItem('math_monster_active_session');
-            document.getElementById('auth-modal-overlay').classList.remove('hidden');
+            showAuthOverlay();
             document.getElementById('logout-btn').classList.add('hidden');
             document.getElementById('logout-btn').classList.remove('flex');
             document.getElementById('user-display-name').innerText = "未登入";
@@ -10261,11 +10557,27 @@
 
             function show(i) {
                 index = (i + slides.length) % slides.length;
+                var focusedInside = false;
+                slides.forEach(function (slide) {
+                    if (slide.contains(document.activeElement)) focusedInside = true;
+                });
                 slides.forEach(function (slide, n) {
                     const on = n === index;
                     slide.classList.toggle('is-active', on);
                     slide.setAttribute('aria-hidden', on ? 'false' : 'true');
+                    if (authInertOk) slide.inert = !on;
+                    var hit = slide.querySelector('.lobby-carousel__hit');
+                    if (hit) {
+                        if (on) hit.removeAttribute('tabindex');
+                        else hit.setAttribute('tabindex', '-1');
+                    }
                 });
+                if (focusedInside) {
+                    var activeHit = slides[index] && slides[index].querySelector('.lobby-carousel__hit');
+                    if (activeHit) {
+                        try { activeHit.focus(); } catch (e) {}
+                    }
+                }
                 dots.forEach(function (dot, n) {
                     const on = n === index;
                     dot.classList.toggle('is-active', on);
@@ -10372,6 +10684,7 @@
                             clearLocalUserAccount(sessionKey);
                             activePassword = null;
                             activeUserKey = null;
+                            try { showAuthOverlay(); } catch (e) {}
                             try {
                                 var errLogin = document.getElementById('login-error');
                                 if (errLogin) {
@@ -10379,9 +10692,6 @@
                                         ? '帳戶已重置，請重新註冊。'
                                         : '雲端密碼不正確，請重新登入。';
                                 }
-                            } catch (e) {}
-                            try {
-                                document.getElementById('auth-modal-overlay').classList.remove('hidden');
                             } catch (e) {}
                             return;
                         }
@@ -10482,7 +10792,7 @@
 
         function switchView(viewName) {
             if (!currentUser) {
-                document.getElementById('auth-modal-overlay').classList.remove('hidden');
+                showAuthOverlay();
                 return;
             }
 
@@ -10648,8 +10958,7 @@
 
         function openGachaSeries(series) {
             if (!currentUser) {
-                const overlay = document.getElementById('auth-modal-overlay');
-                if (overlay) overlay.classList.remove('hidden');
+                showAuthOverlay();
                 return;
             }
             activeGachaSeries = series === 'star-trail' ? 'star-trail' : 'shanhaijing';
@@ -12044,7 +12353,7 @@
 
         function startAdventureFloor(floorIndex) {
             if (!currentUser) {
-                document.getElementById('auth-modal-overlay').classList.remove('hidden');
+                showAuthOverlay();
                 return;
             }
             const tower = ADVENTURE_TOWERS[adventureTowerId];
@@ -14523,6 +14832,7 @@
         /* PVP_ROSTER_END */
 
         /* PVP 對決喺 pvp-peer.js（WebSocket 房間中繼）。呢度只提供獸鑑同出題，唔改單人戰鬥流程。 */
+        try { initAuthGate(); } catch (e) {}
     </script>
 </body>
 </html>
