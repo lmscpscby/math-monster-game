@@ -4874,6 +4874,32 @@
             #view-temple-shanhai .bond-item:hover { transform: none; }
         }
 
+        /* first-party-room-hide: rooms and dialogs that toggle class "hidden".
+           !important beats same-element display:flex (especially .ranked-view)
+           when the Tailwind Play CDN is blocked, slow, or injected later.
+           Not a global .hidden rule — hidden sm:block / hidden md:inline /
+           hidden sm:inline must stay overridable by Tailwind responsive utilities. */
+        #view-home.hidden,
+        #view-ranked.hidden,
+        .ranked-view.hidden,
+        #view-shop.hidden,
+        #view-monsters.hidden,
+        #view-pvp.hidden,
+        #auth-modal-overlay.hidden,
+        #login-mode-nickname.hidden,
+        #login-mode-school.hidden,
+        #form-login.hidden,
+        #form-register.hidden,
+        #header-avatar-img.hidden,
+        #header-avatar-fallback.hidden,
+        #adventure-result-modal.hidden,
+        #card-zoom-modal.hidden,
+        #element-chart-modal.hidden,
+        #avatar-picker-modal.hidden,
+        #team-select-modal.hidden {
+            display: none !important;
+        }
+
     </style>
 </head>
 <body class="lobby-open min-h-screen flex flex-col justify-between relative text-slate-100">
