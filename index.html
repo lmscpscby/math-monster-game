@@ -1166,9 +1166,11 @@
         .lobby-carousel__slide--plate[data-lobby-slide="2"] .lobby-carousel__scrim {
             background: linear-gradient(180deg, rgba(12, 8, 4, 0.02) 20%, rgba(12, 8, 4, 0.14) 55%, rgba(12, 8, 4, 0.42) 100%);
         }
-        /* S2 poster already bakes the title and the badge. Scrim stays on the left so the wood CTA can sit there. */
+        /* S2 titles are HTML over the looping plate. Left scrim holds the wood CTA; right scrim holds the gold lines. */
         .lobby-carousel__slide--s2 .lobby-carousel__scrim {
-            background: linear-gradient(90deg, rgba(12, 8, 4, 0.38) 0%, rgba(12, 8, 4, 0.1) 24%, rgba(12, 8, 4, 0) 46%);
+            background:
+                linear-gradient(90deg, rgba(12, 8, 4, 0.42) 0%, rgba(12, 8, 4, 0.12) 22%, rgba(12, 8, 4, 0) 42%),
+                linear-gradient(270deg, rgba(12, 8, 4, 0.55) 0%, rgba(12, 8, 4, 0.22) 36%, rgba(12, 8, 4, 0) 64%);
         }
         .lobby-carousel__slide--plate .lobby-carousel__copy {
             position: absolute;
@@ -1186,7 +1188,65 @@
             bottom: 25%;
             width: min(36%, 16rem);
         }
-        .lobby-carousel__slide--s2 .lobby-carousel__copy { display: none; }
+        .lobby-carousel__s2-copy {
+            position: absolute;
+            z-index: 2;
+            right: 4.2%;
+            top: 11%;
+            width: min(44%, 26rem);
+            text-align: center;
+            pointer-events: none;
+        }
+        .lobby-carousel__s2-line,
+        .lobby-carousel__s2-name,
+        .lobby-carousel__s2-hint {
+            display: block;
+        }
+        .lobby-carousel__s2-line {
+            margin: 0;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 900;
+            line-height: 1.14;
+            letter-spacing: 0.08em;
+            color: #f3cc5a;
+            -webkit-text-stroke: 1.6px #5c1830;
+            paint-order: stroke fill;
+            text-shadow: 0 2px 0 #3a1020, 0 4px 10px rgba(0, 0, 0, 0.55);
+        }
+        .lobby-carousel__s2-kicker { font-size: clamp(1.35rem, 3.3vw, 2.35rem); }
+        .lobby-carousel__s2-title { font-size: clamp(1.85rem, 4.5vw, 3.15rem); margin-top: 0.06em; }
+        .lobby-carousel__s2-name {
+            margin: 0.55rem 0 0;
+            font-family: "Noto Serif TC", serif;
+            font-weight: 900;
+            font-size: clamp(1rem, 2.05vw, 1.4rem);
+            letter-spacing: 0.14em;
+            color: #f8e7b0;
+            text-shadow: 0 1px 0 #4a1230, 0 2px 8px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__s2-hint {
+            margin: 0.4rem 0 0;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: clamp(0.68rem, 1.25vw, 0.86rem);
+            letter-spacing: 0.16em;
+            color: #efe0b8;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+        }
+        .lobby-carousel__s2-hint::before,
+        .lobby-carousel__s2-hint::after { content: " ◆ "; color: #e0c56a; }
+        .lobby-carousel__s2-badge {
+            position: absolute;
+            z-index: 2;
+            right: 1.1%;
+            bottom: 2.2%;
+            width: auto;
+            height: auto;
+            max-width: min(15.5%, 8.4rem);
+            max-height: 34%;
+            pointer-events: none;
+            user-select: none;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+        }
         .lobby-carousel__slide--plate .lobby-carousel__kicker {
             color: #ffe9a8;
             font-size: 0.8rem;
@@ -1326,6 +1386,13 @@
             .lobby-carousel__plate-cta { right: 2.5%; bottom: 4%; }
             .lobby-carousel__slide--plate[data-lobby-slide="2"] .lobby-carousel__plate-cta { bottom: 22%; }
             .lobby-carousel__slide--s2 .lobby-carousel__plate-cta { left: 2.5%; right: auto; bottom: 6%; }
+            .lobby-carousel__s2-copy { top: 4%; right: 20%; width: min(52%, 10.5rem); }
+            .lobby-carousel__s2-line { -webkit-text-stroke-width: 0.8px; }
+            .lobby-carousel__s2-kicker { font-size: 0.72rem; letter-spacing: 0.02em; }
+            .lobby-carousel__s2-title { font-size: 0.92rem; margin-top: 0; }
+            .lobby-carousel__s2-name { margin-top: 0.06rem; font-size: 0.58rem; letter-spacing: 0.04em; }
+            .lobby-carousel__s2-hint { margin-top: 0.02rem; font-size: 0.5rem; letter-spacing: 0.02em; }
+            .lobby-carousel__s2-badge { right: 1%; bottom: 5%; max-width: 2.7rem; max-height: 32%; }
             .lobby-carousel__plate-cta .ranked-btn--primary {
                 min-width: 0;
                 min-height: 40px;
@@ -1626,6 +1693,11 @@
             box-shadow: 0 0 0 3px #c9a15b;
             border-radius: 0.5rem;
             background: #1a120c;
+        }
+        .season-lore__portrait--cover {
+            display: block;
+            object-fit: cover;
+            object-position: center center;
         }
         .season-lore h3 {
             margin: 0 0 0.35rem;
@@ -3964,7 +4036,8 @@
             overflow: hidden;
             flex: 0 0 auto;
         }
-        .monster-art-frame > img.monster-art {
+        .monster-art-frame > img.monster-art,
+        .monster-art-frame > video.monster-art {
             position: absolute;
             inset: 0;
             display: block;
@@ -3975,6 +4048,13 @@
             object-fit: contain;
             object-position: center;
             box-sizing: border-box;
+        }
+        /* Aurelion codex clip is 16:9. Cover crops the sides and keeps the crown. */
+        .monster-art-frame > img.monster-art.monster-art--cover,
+        .monster-art-frame > video.monster-art.monster-art--cover {
+            object-fit: cover;
+            object-position: center center;
+            pointer-events: none;
         }
         .gacha-controls {
             width: 100%;
@@ -5349,8 +5429,15 @@
                     </div>
                     <div class="lobby-carousel__slide lobby-carousel__slide--plate lobby-carousel__slide--s2" data-lobby-slide="1" aria-hidden="true">
                         <button type="button" class="lobby-carousel__hit" tabindex="-1" onclick="switchView('ranked')" aria-label="進入排位賽，聖光龍王・奧瑞利安">
-                            <img class="lobby-carousel__bg" src="assets/bg/ui-lobby-carousel-s2-1920.jpg?v=41e323e0" alt="S2賽季限定卡片登場：聖光龍王・奧瑞利安" loading="lazy" fetchpriority="low">
+                            <video class="lobby-carousel__bg" width="1920" height="720" muted playsinline webkit-playsinline loop preload="none" disablepictureinpicture disableremoteplayback poster="assets/monsters/season_aurelion_poster.jpg?v=50ddf4a6" data-src="assets/monsters/season_aurelion.mp4?v=982656ff" data-aurelion-motion="lobby" aria-hidden="true"></video>
                             <span class="lobby-carousel__scrim"></span>
+                            <span class="lobby-carousel__s2-copy">
+                                <span class="lobby-carousel__s2-line lobby-carousel__s2-kicker">S2賽季限定</span>
+                                <span class="lobby-carousel__s2-line lobby-carousel__s2-title">卡片登場</span>
+                                <span class="lobby-carousel__s2-name">聖光龍王・奧瑞利安</span>
+                                <span class="lobby-carousel__s2-hint">參與賽季挑戰解鎖專屬獎勵</span>
+                            </span>
+                            <img class="lobby-carousel__s2-badge" src="assets/bg/ui-lobby-s2-badge.png?v=6220ebd8" alt="" width="260" height="260" decoding="async">
                             <span class="lobby-carousel__plate-cta">
                                 <span class="lobby-hero-cta"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i><span>進入排位賽</span></span>
                             </span>
@@ -8778,6 +8865,10 @@
             season_aurelion: 'assets/monsters/season_aurelion.jpg?v=14a637b1'
         };
 
+        // 圖鑑卡、故事放大、大廳 S2 走馬燈先用。戰鬥／組隊仍然讀 BEAST_IMAGES.season_aurelion。
+        const AURELION_MOTION_SRC = 'assets/monsters/season_aurelion.mp4?v=982656ff';
+        const AURELION_MOTION_POSTER = 'assets/monsters/season_aurelion_poster.jpg?v=50ddf4a6';
+
         const SEASON_LIMITED_BEASTS = [
             {
                 id: 'season_kirin',
@@ -10064,6 +10155,7 @@
             syncAuthOffMode();
             setAuthBackgroundInert(true);
             focusAuthFirstField(false);
+            try { syncAurelionMotion(); } catch (e) {}
         }
 
         function hideAuthOverlay() {
@@ -10071,6 +10163,7 @@
             if (!overlay || overlay.classList.contains('hidden')) return;
             overlay.classList.add('hidden');
             setAuthBackgroundInert(false);
+            try { syncAurelionMotion(); } catch (e) {}
             var back = authReturnFocus;
             authReturnFocus = null;
             if (isShownFocusTarget(back)) {
@@ -10603,6 +10696,7 @@
                     dot.classList.toggle('is-active', on);
                     dot.setAttribute('aria-selected', on ? 'true' : 'false');
                 });
+                try { syncAurelionMotion(); } catch (e) {}
             }
             function start() {
                 stop();
@@ -10632,7 +10726,14 @@
             document.addEventListener('visibilitychange', function () {
                 if (document.hidden) stop();
                 else start();
+                try { syncAurelionMotion(); } catch (e) {}
             });
+            if (window.matchMedia) {
+                var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+                var onMotionPref = function () { try { syncAurelionMotion(); } catch (e) {} };
+                if (motionQuery.addEventListener) motionQuery.addEventListener('change', onMotionPref);
+                else if (motionQuery.addListener) motionQuery.addListener(onMotionPref);
+            }
             root.addEventListener('keydown', function (e) {
                 if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); start(); }
                 if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); start(); }
@@ -10743,6 +10844,143 @@
             return `<div class="w-full h-full rounded-2xl bg-purple-900 border border-amber-400 flex items-center justify-center font-bold text-xs text-amber-300 p-2 text-center">${nameStr || '魔王Boss'}</div>`;
         }
 
+        var aurelionMotionObserver = null;
+
+        function lockAurelionMuted(video) {
+            if (!video) return;
+            try {
+                video.muted = true;
+                video.defaultMuted = true;
+                video.volume = 0;
+                if (typeof video.setAttribute === 'function') video.setAttribute('muted', '');
+                if ('playsInline' in video) video.playsInline = true;
+            } catch (e) {}
+            if (video._muteLock) return;
+            video._muteLock = true;
+            if (typeof video.addEventListener !== 'function') return;
+            video.addEventListener('volumechange', function () {
+                if (video._lockingMute) return;
+                if (video.muted && video.volume === 0) return;
+                video._lockingMute = true;
+                try {
+                    video.muted = true;
+                    video.volume = 0;
+                } catch (err) {}
+                video._lockingMute = false;
+            });
+        }
+
+        function aurelionMotionHostActive(video) {
+            var kind = video.getAttribute('data-aurelion-motion');
+            if (kind === 'lobby') {
+                var slide = video.closest ? video.closest('[data-lobby-slide]') : null;
+                var home = document.getElementById('view-home');
+                var slideOn = !!(slide && slide.classList && slide.classList.contains('is-active'));
+                var homeOn = !!(home && home.classList && !home.classList.contains('hidden'));
+                return slideOn && homeOn;
+            }
+            if (kind === 'lore') {
+                var modal = document.getElementById('card-zoom-modal');
+                var monsters = document.getElementById('view-monsters');
+                var modalOn = !!(modal && modal.classList && !modal.classList.contains('hidden'));
+                var codexOn = !!(monsters && monsters.classList && !monsters.classList.contains('hidden'));
+                return modalOn && codexOn;
+            }
+            if (kind === 'codex') {
+                var view = document.getElementById('view-monsters');
+                var loreModal = document.getElementById('card-zoom-modal');
+                if (!view || !view.classList || view.classList.contains('hidden')) return false;
+                if (loreModal && loreModal.classList && !loreModal.classList.contains('hidden')) return false;
+                if (video.closest && video.closest('[inert]')) return false;
+                if (video.dataset && video.dataset.inview === '0') return false;
+                return true;
+            }
+            return false;
+        }
+
+        function showAurelionPoster(video) {
+            if (!video.getAttribute('src')) return;
+            try { video.pause(); } catch (e) {}
+            if (typeof video.removeAttribute === 'function') video.removeAttribute('src');
+            try { video.load(); } catch (e2) {}
+        }
+
+        function syncAurelionMotion(root) {
+            var scope = root && typeof root.querySelectorAll === 'function' ? root : document;
+            var nodes;
+            try {
+                nodes = scope.querySelectorAll('video[data-aurelion-motion]');
+            } catch (e) {
+                return;
+            }
+            if (!nodes || !nodes.length) return;
+            var reduce = prefersReducedMotion();
+            for (var i = 0; i < nodes.length; i++) {
+                var video = nodes[i];
+                if (!video || typeof video.pause !== 'function') continue;
+                lockAurelionMuted(video);
+                if (video.closest && video.closest('[inert]')) {
+                    try { video.pause(); } catch (e) {}
+                    continue;
+                }
+                var active = !reduce && !document.hidden && aurelionMotionHostActive(video);
+                if (!active) {
+                    try { video.pause(); } catch (e2) {}
+                    if (reduce) showAurelionPoster(video);
+                    continue;
+                }
+                if (!video.getAttribute('src')) {
+                    var src = video.getAttribute('data-src');
+                    if (!src) continue;
+                    try { video.src = src; } catch (e3) {
+                        video.setAttribute('src', src);
+                    }
+                }
+                try {
+                    var playPromise = video.play();
+                    if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(function () {});
+                } catch (e4) {}
+            }
+        }
+
+        function observeAurelionCodex(root) {
+            if (!root || typeof root.querySelectorAll !== 'function') return;
+            if (typeof IntersectionObserver !== 'function') return;
+            var videos;
+            try {
+                videos = root.querySelectorAll('video[data-aurelion-motion="codex"]');
+            } catch (e) {
+                return;
+            }
+            if (!videos || !videos.length) {
+                if (aurelionMotionObserver) aurelionMotionObserver.disconnect();
+                return;
+            }
+            if (!aurelionMotionObserver) {
+                aurelionMotionObserver = new IntersectionObserver(function (entries) {
+                    for (var i = 0; i < entries.length; i++) {
+                        var video = entries[i].target;
+                        if (video && video.dataset) video.dataset.inview = entries[i].isIntersecting ? '1' : '0';
+                    }
+                    syncAurelionMotion();
+                }, { root: null, rootMargin: '240px 0px', threshold: 0.01 });
+            } else {
+                aurelionMotionObserver.disconnect();
+            }
+            for (var n = 0; n < videos.length; n++) {
+                if (videos[n].dataset) videos[n].dataset.inview = '0';
+                aurelionMotionObserver.observe(videos[n]);
+            }
+        }
+
+        function aurelionMotionTag(kind, className, width, height, alt) {
+            var safeAlt = String(alt || '聖光龍王・奧瑞利安').replace(/"/g, '');
+            if (prefersReducedMotion()) {
+                return '<img class="' + className + '" src="' + AURELION_MOTION_POSTER + '" alt="' + safeAlt + '" width="' + width + '" height="' + height + '" decoding="async" loading="lazy">';
+            }
+            return '<video class="' + className + '" width="' + width + '" height="' + height + '" muted playsinline webkit-playsinline loop preload="none" disablepictureinpicture disableremoteplayback poster="' + AURELION_MOTION_POSTER + '" data-src="' + AURELION_MOTION_SRC + '" data-aurelion-motion="' + kind + '" aria-label="' + safeAlt + '"></video>';
+        }
+
         function seasonLoreHtml(runtimeData) {
             const lore = runtimeData && runtimeData.lore;
             if (!lore) return '';
@@ -10752,9 +10990,12 @@
                 return '<li><strong>' + (bond && bond.name ? bond.name : '') + badge + '</strong> ' + (bond && bond.text ? bond.text : '') + '</li>';
             }).join('');
             const img = BEAST_IMAGES[runtimeData.imgKey] || '';
+            const portrait = runtimeData.id === 'season_aurelion'
+                ? aurelionMotionTag('lore', 'season-lore__portrait season-lore__portrait--cover', 576, 576, runtimeData.name)
+                : `<img class="season-lore__portrait" src="${img}" alt="${runtimeData.name}" loading="lazy">`;
             return `
                 <div class="season-lore">
-                    <img class="season-lore__portrait" src="${img}" alt="${runtimeData.name}" loading="lazy">
+                    ${portrait}
                     <div>
                         <h3>${runtimeData.name}</h3>
                         <div class="season-lore__epithet">${runtimeData.title || ''}</div>
@@ -10779,6 +11020,7 @@
             if (runtimeData.lore) {
                 content.innerHTML = seasonLoreHtml(runtimeData);
                 document.getElementById('card-zoom-modal').classList.remove('hidden');
+                try { syncAurelionMotion(); } catch (e) {}
                 return;
             }
 
@@ -10808,6 +11050,7 @@
 
         function closeCardZoomModal() {
             document.getElementById('card-zoom-modal').classList.add('hidden');
+            try { syncAurelionMotion(); } catch (e) {}
         }
 
         function switchView(viewName) {
@@ -10875,6 +11118,7 @@
             } else {
                 try { if (window.MmgPvp) MmgPvp.onLeaveView(); } catch (e) {}
             }
+            try { syncAurelionMotion(); } catch (e) {}
         }
 
         /**
@@ -11175,7 +11419,9 @@
                         </div>
 
                         <div onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})" class="monster-art-frame w-28 h-28 mx-auto my-2 overflow-hidden rounded-2xl cursor-pointer hover:scale-105 transition-transform" title="點擊放大觀看">
-                            ${renderMonsterElement(runtimeData.imgKey, runtimeData.name, { lazy: true })}
+                            ${runtimeData.id === 'season_aurelion'
+                                ? aurelionMotionTag('codex', 'monster-art monster-art--cover w-full h-full rounded-2xl border-2 border-amber-400/80 shadow-md bg-slate-950/40', 576, 576, runtimeData.name)
+                                : renderMonsterElement(runtimeData.imgKey, runtimeData.name, { lazy: true })}
                         </div>
 
                         <div class="font-black text-sm text-white text-center cursor-pointer" onclick="openCardZoomModal('${runtimeData.id}', ${monLevel})">
@@ -11243,6 +11489,8 @@
                 empty.innerHTML = currentFilter === 'all' ? '尚未發現任何怪獸' : '尚未發現此系列';
                 container.appendChild(empty);
             }
+            try { observeAurelionCodex(container); } catch (e) {}
+            try { syncAurelionMotion(container); } catch (e) {}
         }
 
         let feedExpBusy = false;
