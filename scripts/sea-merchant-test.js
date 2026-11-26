@@ -25,7 +25,6 @@ function fileHash(rel) {
 }
 
 [
-  ['assets/bg/ui-lobby-carousel-s2-1920.jpg', '41e323e0'],
   ['assets/monsters/season_aurelion.jpg', '14a637b1'],
   ['assets/shop/shop-merchant.png', 'e49e24f0'],
   ['assets/shop/shop-potion.png', '5a574984'],
@@ -34,6 +33,18 @@ function fileHash(rel) {
   assert(fileHash(pair[0]) === pair[1], pair[0] + ' hash');
   assert(html.includes(pair[0] + '?v=' + pair[1]), pair[0] + ' cache-bust');
 });
+
+assert(fileHash('assets/bg/ui-lobby-carousel-s2-1920.jpg') === '41e323e0', 'baked S2 plate file stays');
+assert(!html.includes('ui-lobby-carousel-s2-1920.jpg'), 'live page no longer references the baked S2 title plate');
+[
+  ['assets/monsters/season_aurelion.mp4', '982656ff'],
+  ['assets/monsters/season_aurelion_poster.jpg', '50ddf4a6'],
+  ['assets/bg/ui-lobby-s2-badge.png', '6220ebd8']
+].forEach(function (pair) {
+  assert(fileHash(pair[0]) === pair[1], pair[0] + ' hash');
+  assert(html.includes(pair[0] + '?v=' + pair[1]), pair[0] + ' cache-bust');
+});
+assert(html.includes("season_aurelion: 'assets/monsters/season_aurelion.jpg?v=14a637b1'"), 'battle image map stays on the official jpg');
 
 assert(html.includes('100 金幣／1 瓶'), 'potion price');
 assert(html.includes('100 金幣／2 個'), 'exp 2-pack price');
